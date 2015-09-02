@@ -1,0 +1,1020 @@
+﻿\documentclass[twoside]{book}
+
+\usepackage{extarrows}%用于添加等号上内容
+\usepackage{mathrsfs}%用于花体
+\usepackage{amsmath}
+\usepackage{psfig}
+\usepackage{picinpar}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{cases}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{bibentry}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage[CJKbookmarks=true]{hyperref}
+\usepackage{url}
+\usepackage{ulem}
+\hypersetup{colorlinks,
+	linkcolor = red,
+	filecolor = black,
+	urlcolor = blue,
+	citecolor = green
+}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{verbatim}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+
+\renewcommand{\sectionmark}[1]%
+{\markright{\chaptername \ #1}{}}
+\renewcommand{\sectionmark}[1]%
+{\markright{\thesection \ #1}{}}
+
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+
+\makeatletter % `@' now normal 'letter'
+\@addtoreset{equation}{section}
+\makeatother % `@' is restored as 'non-letter'
+\makeatletter % `@' now normal 'letter'
+\@addtoreset{footnote}{page}
+\makeatother % `@' is restored as 'non-letter'
+\makeatletter % `@' now normal 'letter'
+\@addtoreset{figure}{chapter}
+\makeatother % `@' is restored as 'non-letter'
+\renewcommand\thefootnote{%
+\oldstylenums{\arabic{footnote}}}
+\renewcommand\theequation{\oldstylenums{\thesection}-\oldstylenums{\arabic{equation}}}
+\renewcommand\thefigure{\oldstylenums{\thechapter}%
+.\oldstylenums{\arabic{figure}}}
+\renewcommand\thetable{\oldstylenums{\thechapter}%
+.\oldstylenums{\arabic{table}}}
+
+\numberwithin{equation}{section}
+
+\usepackage{geometry}
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm}
+
+\usepackage{calc}
+\fancyheadoffset[LE,RO]{\marginparsep+\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\fancypagestyle{plain}{%
+   \fancyhead{} % get rid of headers
+   \renewcommand{\headrulewidth}{0pt} % and the line
+}
+
+\begin{document}
+
+\title{Quantum Statistical Physics}
+\author{Dr. Ryuichi Shindou\footnote{mail:\href{mailto:rshindou@pku.edu.cn}{rshindou@pku.edu.cn}}}
+\maketitle
+
+\pagenumbering{Roman}
+
+\tableofcontents
+
+\input{disclaim}
+
+
+\chapter{General Introduction}
+\pagenumbering{arabic}
+
+\section{General Introduction}
+
+
+We begin with a simple math problem.
+
+Suppose that an operator $a$ satisfy the relation:
+
+\[\left[a,\,a^{\dagger}\right] = 1 \]
+
+The problem is to find all eigenvalues and eigenvectors of a Hermitian operator $a^{\dagger}a$.
+
+We first note that all the eigenvalues are positive.
+
+If $|\alpha\rangle$ is a normalized eigenvector,
+
+\[a^{\dagger}a|\alpha\rangle = \alpha|\alpha\rangle \]
+
+its eigenvalue $\alpha$ is always positive
+
+\[\alpha = \langle\alpha| a^{\dagger}a|\alpha\rangle = ||a|\alpha\rangle||^2 \ge 0 \]
+
+We next note that
+
+\[\begin{split}
+&\left[a^{\dagger}a,\,a\right] = \left[a^{\dagger},\, a\right]a = -a \\
+&\left[a^{\dagger}a,\,a^{\dagger}\right] = a^{\dagger}\left[a,\,a^{\dagger}\right] = a^{\dagger}
+\end{split} \]
+
+For this, we see that $a|\alpha\rangle$ is an eigenvector with eigenvalue $\alpha - 1$
+
+\[\begin{split}
+(a^{\dagger}a)\,a|\alpha\rangle &= \left(aa^{\dagger}a -a\right)|\alpha\rangle \\
+&=(\alpha - 1)a|\alpha\rangle
+\end{split}\]
+
+Similar, $a^{\dagger}|\alpha\rangle$ is an eigenvector with eigenvalue $\alpha + 1$
+
+\[\begin{split}
+(a^{\dagger}a)\,a^{\dagger}|\alpha\rangle &= \left(a^{\dagger}a^{\dagger}a -a^{\dagger}\right)|\alpha\rangle \\
+&=(\alpha + 1)a^{\dagger}|\alpha\rangle
+\end{split}\]
+
+The norm of $a|\alpha\rangle$ is $\alpha$,
+
+\[||a|\alpha\rangle||^2 = \langle\alpha|a^{\dagger}a|\alpha\rangle = \alpha \]
+
+Similar,
+
+\[||a^{\dagger}|\alpha\rangle||^2 = \langle\alpha|aa^{\dagger}|\alpha\rangle = \alpha + 1 \]
+
+By repeating application of $a$ `$n$' times, we can produce an eigenvector with eigenvalue $\alpha - n$.
+
+\[a^{\dagger}a a^n|\alpha\rangle = (\alpha - n)a^n|\alpha\rangle \]
+
+But, when $n$ becomes larger than $\alpha$, the eigenvalue becomes negative, which contradicts the non-negativeness of eigenvalues of $a^{\dagger}a$.
+
+This means that a given $|\alpha\rangle$ has some integer `$n$', which satisfies
+
+\[a^n|\alpha\rangle \neq 0,\quad a^{n+1}|\alpha\rangle = 0 \]
+
+The latter equation means
+
+\[\begin{split}
+0 &= \langle\alpha|(a^{\dagger})^n \cdot a^{\dagger}a\cdot a^n|\alpha\rangle\\
+&=(\alpha - n)\langle\alpha|(a^{\dagger})^n a^n|\alpha\rangle
+\end{split} \]
+
+The former means that this:
+
+\[\langle\alpha|(a^{\dagger})^n a^n|\alpha\rangle \]
+
+is not zero.
+
+Thus, $\alpha = n$.
+
+This shows that the eigenvalues of $a^{\dagger}a$ must be non-negative integers and there is a ``vacuum state'' $|0\rangle$ such that
+
+\[a|0\rangle = 0 \]
+
+By repeatedly applying $a^{\dagger}$ to vacuum state, we see that $(a^{\dagger})^n|0\rangle$ is an eigenvector with eigenvalue $n$.
+
+\[a^{\dagger}a(a^{\dagger})^n|0\rangle = n(a^{\dagger})^n|0\rangle \]
+
+The norm of this eigenvector is the factorial of $n$.
+
+\[\begin{split}
+\langle 0|(a)^n(a^{\dagger})^n|0\rangle &=  \langle 0|a^{n-1}\cdot \underset{1+a^{\dagger}a}{aa^{\dagger}}\cdot(a^{\dagger})^{n-1}|0\rangle\\
+&= (n-1+1)\cdot\langle 0|(a)^{n-1}(a^{\dagger})^{n-1}|0\rangle\\
+&= n\cdot(n-1)\cdot\langle 0|(a)^{n-2}(a^{\dagger})^{n-2}|0\rangle\\
+&= n\cdot(n-1)\cdot(n-2)\cdots 2 \langle 0|aa^{\dagger}|0\rangle = n!
+\end{split}\]
+
+The normalized eigenvector with eigenvalue `$n$' is
+
+\begin{equation}
+|n\rangle = \frac{1}{\sqrt{n!}}(a^{\dagger})^n|0\rangle
+\end{equation}
+
+with this definition, the $|n\rangle$ are orthonormal and satisfy:
+
+\begin{equation}\label{1.1.2}
+a^{\dagger}|n\rangle = \sqrt{n+1}|n+1\rangle
+\end{equation}
+\begin{equation}\label{1.1.3}
+\begin{split}
+a|n\rangle &= \frac{1}{\sqrt{n!}}a(a^{\dagger})^n|0\rangle\\
+&=\frac{1}{\sqrt{n!}}(a^{\dagger}a+1)(a^{\dagger})^{n-1}|0\rangle\\
+&=\frac{1}{\sqrt{n!}}n(a^{\dagger})^{n-1}|0\rangle\\
+&=\sqrt{n}\cdot\frac{1}{\sqrt{(n-1)!}}(a^{\dagger})^{n-1}|0\rangle\\
+&=\sqrt{n}|n-1\rangle
+\end{split}
+\end{equation}
+
+\[a^{\dagger}a|n\rangle = n|n\rangle \]
+
+The operator $a^{\dagger}$ and $a$ are called ``rasing'' and ``lowering'' operators respectively, because the raise and lower the eigenvalue or $a^{\dagger}a$.
+In the later application, $a^{\dagger}$ and $a$ are called ``creation'' and ``annihilation'' operators respectively.
+
+You might be afraid that the ground state ``$|0\rangle$'' is not necessarily unique, so that the state do not exhaust all the possible eigenstates of $a^{\dagger}a$.
+
+\[|0\rangle_1\underset{\rightarrow b}{,\ |}0\rangle_2,\ |0\rangle_3,\ \cdots \]
+
+In such a case, however, we can define some other operators, which commute $a$ and $a^{\dagger}$ and which connect the ground states.
+
+Thus, we can further classify these ground states according to the eigenvalues of these other operators\footnote{like:
+\[\begin{split}|n\rangle|\beta\rangle &\overset{def}{\equiv}\frac{1}{\sqrt{n!}}(a^{\dagger})^n|0\rangle|\beta\rangle \\
+b|\beta\rangle &= \beta|\beta\rangle
+\end{split}\]}.
+
+
+
+\section{Linear Harmonic Oscillator}
+
+
+Our first application of the general argument is a one-dimensional harmonic oscillator which has a Hamiltonian as this form:
+
+\begin{equation}
+H = \frac{p^2}{2m}+\frac{m\omega^2}{2m}x^2
+\end{equation}
+
+$x$ and $p$ are the position and the momentum operator of a particle whose mass is `$m$'.
+
+$x,\ p$ satisfies
+
+\[[x, p] = i\hbar \]
+
+\[\begin{split}
+H &= \frac{\hbar\omega}{2}\left[\frac{p^2}{m\omega\hbar}+\frac{m\omega}{\hbar}x^2\right]\\
+&\equiv\frac{\hbar\omega}{2}[P^2+X^2]
+\end{split} \]
+
+\[[X, P] = i \]
+
+By factorizing an energy unit, the Hamiltonian has a quadratic form of these two dimensionless quantities. 
+
+They satisfy this commutation relation. 
+
+In terms of these two hermitian operators, let us define a following non-hermitian operator:
+
+\[a = \frac{1}{\sqrt{2}}[X+iP] \]
+\[a^\dagger = \frac{1}{\sqrt{2}}[X-iP] \]
+
+Frin this, we see
+
+\[[a,a^\dagger] = 1 \]
+
+while the Hamiltonian takes this form:
+
+\[\begin{split}
+H &= \frac{\hbar\omega}{2}\left[\frac{1}{2}(X-iP)(X+iP)+\frac{1}{2}(X+iP)(X-iP)\right]\\
+&=\frac{\hbar\omega}{2}[a^\dagger a+a a^\dagger]\\
+&=\hbar\omega\left[a^\dagger a+\frac{1}{2}\right]
+\end{split} \]
+
+Now we know how to obtain eigenvalues and eigenvectors of $a^\dagger a$ for any given non-hermitian operator $a$. 
+
+Thus, the eigen energy of $H$ is given by this
+
+\[H|n\rangle = \hbar\omega\left(n+\frac{1}{2}\right)|n\rangle \]
+
+while the eigenstate $|n\rangle$ is obtained from a repeated application of the operator $a$ onto the `ground state'. 
+
+The ground state $|0\rangle$ satisfies this, 
+
+\[a|0\rangle = \frac{1}{\sqrt{2}}\left[XD+i\left(-i\frac{\partial}{\partial X}\right)\right]|0\rangle = \frac{1}{\sqrt{2}}\left[X+\frac{\partial}{\partial X}\right]|0\rangle = 0 \]
+
+\[|0\rangle = \frac{1}{N}e^{-X^2/2} \]
+
+Thus, the eigenstate with eigen energy $(n+1/2)$ takes this form
+
+\[|n\rangle \propto \left(X-\frac{\partial}{\partial X}\right)^n e^{-\frac{X^2}{2}} = e^{-\frac{X^2}{2}}\times\text{ Hermite polynominals} \]
+
+which is expressed in terms of Herminite polynominal with integer index $n$. 
+
+
+
+
+\section{Many Harmonic Oscillator}
+
+Our next application is a system of many harmonic oscillators, which consists of many particles with different mass. 
+
+\begin{align}
+H = \sum_i \frac{1}{2m_i}P_i^2+\sum_{i,j}V_{ij}Q_iQ_j
+\end{align}
+
+where $Q_i$ and $P_i$ are canonical coordinates and momenta
+
+\[\begin{cases}
+[Q_i,Q_j] = [P_i,P_j] = 0\\
+\ \\
+[Q_i,P_j] = i\hbar\delta_{ij}
+\end{cases}\]
+
+Since these two momentum operators can be exchanged freely, we can regard that $V_{ij}$ is real symmetric
+
+\[V_{ij} = V_{ji}\text{ real } \]
+
+We normalize these coordinates and momenta by differen mass
+
+\[q_i \equiv\sqrt{m_i}Q_i,\ p_i \equiv \frac{P_i}{\sqrt{m_i}} \]
+
+\[H = \frac{1}{2}\sum_{i}p_i^2+\frac{1}{2}\sum_{ij}v_{ij}q_iq_j \]
+
+\[(v_{ij} \equiv \frac{V_{ij}}{\sqrt{m_jm_j}} )\]
+
+To obtain eigenstates and eigen energy of $H$, we first diagonalize this real symmetric matrix by an orthogonal matrix. 
+
+\[\mathbb{C}^T \mathbb{V}\mathbb{C} = \mathbb{W} \]
+
+We assume that eigenvalues of $\mathbb{V}$ are all positive
+
+\[c_{\alpha_i}c_{\beta_j}v_{ij} = \omega_{\alpha}^2\delta_{\alpha\beta} \]
+
+In terms of this new basis, the Hamiltonian takes the following form:
+
+\[H = \frac{1}{2}\sum_{\alpha}(\tilde{p}_{\alpha}^2+\omega_{\alpha}^2\tilde{q}_{\alpha}^2 \]
+
+where $\tilde{p}_{\alpha}$ and $\tilde{q}_{\alpha}$ are canonical momenta and coordinates:
+
+\[\tilde{q}_{\alpha}\equiv \sum_i c_{\alpha_i}q_i \]
+\[\tilde{p}_{\alpha}\equiv \sum_i c_{\alpha_i}p_i \]
+
+\[[\tilde{q}_{\alpha},\tilde{q}_{\beta}] = [\tilde{p}_{\alpha},\tilde{p}_{\beta}] = 0 \]
+\[[\tilde{q}_{\alpha},\tilde{p}_{\beta}] = i\hbar\delta_{\alpha\beta} \]
+
+Thanks to the basis change, we have a system of decouple linear harmonic oscillators, each of which can be separately solved. 
+
+Namely, we form lowering and raising operators for each mode:
+
+\[a_{\alpha} = \frac{1}{\sqrt{2\hbar}}\left[\sqrt{\omega_{\alpha}}\tilde{q}_{\alpha}+\frac{i}{\sqrt{\omega_{\alpha}}}\tilde{p}_{\alpha}\right] \]
+\[a_{\alpha}^\dagger = \frac{1}{\sqrt{2\hbar}}\left[\sqrt{\omega_{\alpha}}\tilde{q}_{\alpha}-\frac{i}{\sqrt{\omega_{\alpha}}}\tilde{p}_{\alpha}\right] \]
+
+which satisfy
+
+\begin{align}
+\begin{split}
+[a_{\alpha},a_{\beta}] & = [a_\alpha^\dagger, a_\beta^\dagger] = 0\\
+[a_\alpha,a_\beta^\dagger] &= \delta_{\alpha\beta}
+\end{split}
+\end{align}
+
+and
+
+\[H = \sum_\alpha \hbar\omega_\alpha(a^\dagger_\alpha a_\alpha + \frac{1}{2}) \]
+
+The eigenstates of $H$ are described by a set of non-negative integers defined fro each decoupled mode. 
+
+\[H|n_1,n_2,\cdots\rangle = \sum_\alpha \hbar\omega_\alpha(n_\alpha+\frac{1}{2})|n_1,n_2\cdots\rangle \]
+
+The integer for a mode $\alpha,n_\alpha$, is an eigenvalue of $a^\dagger_\alpha a_\alpha$. 
+
+\[\text{for }\forall \alpha,\quad a^\dagger_\alpha a_\alpha = |n_1,n_2,\cdots,n_\alpha,\cdots\rangle = n_\alpha|n_1,n_2\cdots,n_\alpha,\cdots\rangle \]
+
+These eigenstates can be constructed for the `ground state'
+
+\[|n_1,n_2,\cdots\rangle = \left[\prod_\alpha\frac{(a^\dagger_\alpha)^{n_\alpha}}{\sqrt{n_\alpha !}}\right]|0.0,\cdots\rangle \]
+
+where the ground state is defined by
+
+\[a_\alpha|0,0,\cdots\rangle = 0, \text{ for }\forall \alpha \]
+
+Corresponding to \eqref{1.1.2} and \eqref{1.1.3}, we have
+
+%\begin{align}
+\begin{numcases}{}
+a_\alpha^\dagger|n_1,n_2,\cdots,n_\alpha,\cdots\rangle = \sqrt{n_\alpha+1}|n_1,n_2,\cdots, n_\alpha+1,\cdots\rangle\\
+a_\alpha|n_1,n_2,\cdots,n_\alpha,\cdots\rangle = \sqrt{n_\alpha}|n_1,n_2,\cdots, n_\alpha-1,\cdots\rangle
+\end{numcases}
+%\end{align}
+
+
+\section{Field Quantization}
+
+Our final application is a system with infinitely many degrees of freedom. 
+
+The system is described by what we call a `field' $\phi_x$. 
+
+\begin{figure}[h]
+\includegraphics[width = 10cm]{1-1.png}
+\end{figure}
+
+An example of the system is a drumhead vibration. Here is a picture of drum:
+
+\begin{figure}[h]
+\includegraphics[width = 8cm]{1-2.png}
+\end{figure}
+
+Every spatial point in the drumhead can have a finite displacement poerpendicular to the flat drumhead. 
+
+We can define $\varphi$ of $x$ ($\varphi(x)$) as a dispalcement at $x$ point. 
+
+Namely, a given $\varphi$ of $x$ specifies how the drumhead is deformed from the flat drum head. 
+
+Let us consider $\varphi$ of $x$ whose motion is described by the following Lagragian
+
+\begin{align}
+L(\varphi,\dot{\varphi}) = \frac{1}{2}\int d^2 x\dot{\varphi}(x)\dot{\varphi}(x) - \frac{1}{2}\int d^2 x \int d^2 x' K(x-x')\varphi(x)\varphi(x')\text{ with }K(x-x') = K(x'-x)
+\end{align}
+
+The corresponding equation of motion is
+
+\begin{equation}
+0 = \frac{\partial}{\partial t}\frac{\delta L}{\delta \dot{\varphi}(x)} - \frac{\delta\dot{L}}{\delta \varphi(x)} = \ddot{\varphi}(x)+\int d^2 x' K(x-x')\varphi(x')
+\end{equation}
+
+When the interaction between fields is spatially local like this
+
+\[K(x-x') = -c^2\Delta^2\delta(x-x'), \]
+
+the equation of motion becomes the usual wave equation
+
+\[\nabla^2\varphi(x) - \frac{1}{c^2}\ddot{\varphi}(x) = 0 \]
+
+\hrule
+
+\ 
+
+If we regard that $\varphi(x)$ is a coordinate variable for each $x$, the conjugate momentu to $\varphi$ is
+
+\[\Pi(x) = \frac{\delta L}{\delta \dot{\varphi}(x)} = \dot{\varphi}(x) \]
+
+The Hamiltonian is then 
+
+\begin{align}
+H = \int d^2 x \Pi(x) \dot{\varphi}(x) - L = \frac{1}{2}\int d^2 x \Pi(x)\Pi(x)+\frac{1}{2}\int d^2 x \int d^2 x' K(x-x') \varphi(x)\varphi(x')
+\end{align}
+
+To quantize the system, we suppose that $\varphi(x)$ and $\Pi(x)$ are Hermitian operators, which satisfy
+
+\begin{align}
+\begin{split}
+[\varphi(x),\varphi(x')] &= [\Pi(x),\Pi(x')] = 0\\
+[\varphi(x),\Pi(\varphi')] &= i\hbar\delta^2(x-x')
+\end{split}
+\end{align}
+
+In such a case, it is helpful to express the field in the momentum representation, 
+
+\[\tilde{\varphi}(k) = \int d^2 x\varphi(x)e^{-ikx} \]
+
+\[\tilde{\Pi}(x) = \int d^2 x \Pi(x) e^{-ikx} \]
+
+where the inverse transformation is 
+
+\[\varphi(x) = \int\frac{d^2 k}{(2\pi)^2} \tilde{\varphi}(k)e^{ikx} \]
+
+with
+
+\begin{align}
+\int \frac{d^2 k}{(2\pi)^2}e^{-ikx} = \delta^2(x)
+\end{align}
+
+Since $\varphi(x)$ and $\Pi(x)$ are hermitian, we have
+
+\[\phi^\dagger(k) = \phi(-k) \]
+
+\[\Pi^\dagger(k) = \Pi(-k) \]
+
+The commutation relations are
+
+\begin{align}
+\begin{split}
+[\tilde{\varphi}(k), \tilde{\varphi}(k')] &= [\tilde{\Pi}(k), \tilde{\Pi}(k')] = 0\\
+[\tilde{\varphi}(k),\tilde{\Pi}(k')] = i\hbar(2\pi)^2\delta^2(k+k')
+\end{split}
+\end{align}
+
+Now let us introduce 
+
+\[\omega^2(k) = \int d^2x K(x)e^{-ikx} \]
+
+Since $K(x) = K(-x)$, $\omega(k)$ is real and even function in $k$. 
+
+\[\omega^*(k) = \omega(k) = \omega(-k) \]
+
+Let uis again assume that $\omega(k)$ are non-negative for all $k$, so that we replace this by $\omega^2(k)$. 
+
+Rewriting the Hamiltonian in terms of these fields and functions, we obtain
+
+\begin{align}
+H = \frac{1}{2}\int\frac{d^2 k}{(2\pi)^2}\left[\tilde{\Pi}(-k)\tilde(k)+\omega^2(k)\tilde{\phi}(-k)\tilde{\phi}(k)\right] = \frac{1}{2}\int\frac{d^2 k}{(2\pi)^2}\left[\tilde{\Pi}^\dagger (k)\tilde(k)+\omega^2(k)\tilde{\phi}^\dagger(k)\tilde{\phi}(k)\right]
+\end{align}
+
+We next define annihilation and creation operators as follows, 
+
+\begin{align}
+\begin{split}
+a(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\phi}(k)+\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]\\
+a^\dagger(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\phi}(k)-\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]
+\end{split}
+\end{align}
+
+Their commutation relations are calculated as follows, 
+
+\[\begin{split}
+[a(k),a(k')] &= \frac{1}{2\hbar}\left[\sqrt{\omega_k}\tilde{\phi}(k)+\frac{i}{\sqrt{\omega_k}} \tilde{\Pi}(k), \sqrt{\omega_{k'}}\tilde{\phi}(k')+\frac{i}{\sqrt{\omega_{k'}}}\tilde{\Pi}(k')\right] \\
+&= \frac{1}{2\hbar}\sqrt{\frac{\omega_k}{\omega_{k'}}}i[\tilde{\phi}(k),\tilde{\Pi}(k')] + \frac{1}{2\hbar}\sqrt{\frac{\omega_{k'}}{\omega_k}}i[\tilde{\Pi}(k),\tilde{\phi}(k')] \\
+&=(-1)(2\pi)^2\delta^2(k+k')+(2\pi)^2\delta^2(k+k')= 0 
+\end{split}\]
+
+\[[a^\dagger(k),a^\dagger(k')] = 0 \]
+
+\begin{align}\begin{split}
+[a(k),a^\dagger(k')] &= \frac{1}{2\hbar}\left[\sqrt{\omega_k}\tilde{\phi}(k)+\frac{i}{\sqrt{\omega_k}}, \sqrt{\omega_{k'}}\tilde{\phi}(-k') - \frac{i}{\sqrt{\omega_{k'}}}\tilde{\Pi}(-k')\right] \\
+&= \frac{-i}{2\hbar}\sqrt{\frac{\omega_k}{\omega_{k'}}} [\tilde{\phi}(k),\tilde{\Pi}(-k')] + \frac{i}{2\hbar}[\tilde{\Pi}(k),\tilde{\phi}(-k')] \\
+&= (2\pi)^2\delta^2(k-k')
+\end{split}\end{align}
+
+If we wrtie $H$ in terms of $a \& a^\dagger$, we obtain
+
+\begin{align}
+H = \frac{1}{2}\int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)[a^\dagger(k)a(k)+a(k)a^\dagger(k)] = \frac{1}{2}\int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)a^\dagger(k)a(k)+C
+\end{align}
+
+
+
+
+
+
+
+\section{System of indistinguishable particles}
+\section{Creation operator \& destruction operator}
+\section{Hamiltonian and other operators of creation and destruction operators}
+\section{Degenerate electron gas}
+
+
+
+\chapter{Green's function and field theory at zero temperature}
+
+\section{Schrodinger, Heisenberg \& interaction picture}
+\section{Adiabatic switching \& Gell-Mann \& Low Theorem}
+\section{Green's function}
+\section{Wick's theorem}
+\section{Diagrammatic analysis of perturbation theory (Fermion Case)}
+\input{SHIZHEN}
+
+
+\chapter{Field theory at finite temperature}
+
+\section{Temperature (Matsubora) Green's function}
+\section{Temperature Green's function in the interaction picture}
+\section{Wick's theorem for the temperature Green's function}
+\section{Feynman's rule for the temperature Green's function}
+\section{Dyson's equation \& Hartree-Fock approximation}
+\section{Specific heat of an imperfect Fermi gas at low-temperature}
+\section{Real-time Green's function and generalized Lehmann representation}
+\section{Linear response at finite temperature}
+\section{Screening effect \& plasma oscillation in an electron gas at finite (or high) temperature}
+
+
+\chapter{Application to electron-phonon systems}
+
+\section{Non-interacting phonon system and Debye theory of specific heat}
+\section{Electron-phonon interaction} \label{se5-2}
+
+\chapter{Application to superconductivity}
+
+
+In this chapter, we will study superconductivity which is one of the most remarkable physical phenomenon.
+
+We first review the fundamental physical properties of superconductors.
+
+We then introduce the BCS theory, which is one of the most successful application of quantum many-body techniques.
+
+In terms of the BCS theory, we will see how all the fundamental superconducting properties can be understood from the microscopic point of views.
+
+
+
+\section{Superconducting properties and thermodynamics relations}
+
+
+Resistivity in metals decreases when the temperature goes down (See Fig{\ref{Fig6.1}}).
+
+\begin{figure}
+\begin{center}
+\includegraphics[width = 8cm]{6-1.png}\label{Fig6.1}\includegraphics[width = 8cm]{6-2.png}\label{Fig6.2}
+\caption{Resistivity $\rho$ vs. Temperature $T$ by $\rho = \rho_{res} + aT^2$ where `res' denotes residual resistivity. } \caption{Resistivity of superconductor's $\rho$ vs. Temperature $T$ by $\rho = \rho_{res} + aT^2$ where `res' denotes residual resistivity. } 
+\end{center}
+\end{figure}
+The temperature dependence always exhibits $T^2$ behavior while the resistivity at the zero temperature remains finite, which we call residual resistivity $\rho_{res}$.
+    
+This residual resistivity stems from the scattering of conduction electron due to randomly distributed impurity and lattice defects. 
+    
+On the other hand, $T^2$-dependence of the resistivity comes from the scattering of conduction electrons due to electron-phonon interaction and electron-electron interactions. 
+    
+But, in some cases, metals exhibits an electronic phase transition at lower temperatures and resistivity becomes zero. 
+
+The low-temperature phase with zero resistivity is called superconductor, or ``superconducting phase''. 
+
+Simple-substance metals that exhibits superconductivity at lower temperature or under high pressure are shown in the following periodic table, where ``black-shaded'' simple substance metals show superconductivity (at lower temperature, $\blacksquare$ , while at lower temperature and under higher pressure, $\blacktriangle$ )
+
+You might as well regard that in a sufficiently clean metal, the resistivity goes to zero at the zero-temperature, which we call ``perfect conductor'' instead of ``superconductor'', the electric conductivity diverges, so that the electric field $\mathscr{E}$ vanish inside the materials 
+
+\noindent $(\bm{j} = \sigma \bm{E}) $
+
+Then, the Maxwell equation tells us that the magnetic field {\uuline{subsequently}} applied after the system reach the zero-temperature will remains zero inside the material. 
+
+\[\frac{\partial \bm{B}}{\partial t} = -c\ \text{rot}\bm{E} \]
+
+because, during the application of the external fields, the electric field $\bm{E}$ remains zero inside the materials. 
+
+Accordingly, both the perfect conductor at the zero-temperature and the superconductor ``expels'' the external magnetic field, when the fields are applied {\uuline{subsequently}} after the system reaches the zero-temperature. 
+
+Remember that his is the case when the field is applied, after the temperature reaches zero-temperature. 
+
+But, when we reduces the temperature under a finite external magnetic field, this is {\uuline{no longer}} the case for the ``perfect conductor'', while, this is still the case for the ``superconductor''. 
+
+Namely: 
+
+This exclusive of the magnetic field in the {\uuline{field-cooled superconductor}} s called as ``Meissner effect'', which is more essential ``\uwave{defining property}'' of superconductors than ``the zero-resistivity''. 
+
+The ``Meissner effect'' can be understood from a phenomenological equation called London equation: 
+
+\[\bm{j} = -\frac{ne^2}{mc}\bm{A} \]
+
+where $\bm{j}$ is the current density and $\bm{A}$ is the vector potential. 
+
+This equation can be roughly understtod by the following argument. 
+
+In the superconductor, the electric current flow {\uuline{without any resistivity}}, so that we might as well begin with the newton's equation {\uuline{without dissipation}}: 
+
+\[m\ddot{\bm{r}} = -e\bm{E} \]
+
+Now that the current density is proportional to the velocity of electron
+
+\[\bm{j} = -ne\dot{\bm{r}} \]
+
+we might as well naively relate the time-derivative of the current with the electric field: 
+
+\[\frac{d\bm{j}}{dt} = -\frac{ne^2}{m}\bm{E} = -\frac{ne^2}{mc}\frac{d\bm{A}}{dt} \]
+
+Now that the electric field is given by the time-derivative of the vector potential, we might as well regard that the current is proportional to the vector potential
+
+\[\bm{j} = -\frac{ne^2}{mc}\bm{A} \]
+
+This London equation is, however, more or less a phenomenological equationand we will later see more microscopic derivation of this equation based on the BCS theory. 
+
+Thereby, we will see that this equation holds true for a so-called Cooper pair, which is composed of two electrons, so that, the electron number density ``$n$'' is replaced by superelectron number density ``$n_s$''. 
+
+\[\bm{j} = -\rho\cdot 2e \cdot\dot{\bm{r}} = -n_s e \dot{\bm{r}}\quad \text{where $\rho$ is the number of cooper pairs. } \]
+
+In any case, this single phenomenological equation captures many important electromagnetic properties including Meissner effect. 
+
+For example, the Meissner effect can be derived from the London equation as follows: 
+
+From the Maxwell equation: 
+
+\[\text{rot} \bm{B} = \frac{1}{c}\frac{\partial \bm{E}}{\partial t} + \frac{4\pi}{c}\bm{j} \]
+
+we consider the temporally static situation: 
+
+\[\text{rot}\bm{B} = \frac{4\pi}{c}\bm{j} = -\frac{4\pi ne^2}{mc^2}\bm{A}^t \]
+
+Now $\bm{B} = \text{rot}\bm{A}$, we have
+
+\[\text{rot\ rot}\bm{B} = -\frac{4\pi ne^2}{mc^2}\text{rot}\bm{A}^t \]
+\[-\left(\nabla^2\vec{\bm{B}} - \nabla (\underset{=0}{\nabla \cdot \vec{\bm{B}}})\right) = -\frac{4\pi ne^2}{mc^2}\vec{\bm{b}} \]
+
+\begin{align} \tag{A}
+\Rightarrow \nabla^2 \bm{B} = \frac{4\pi ne^2}{mc^2}\bm{B} = \frac{1}{\lambda^2}\bm{B},\quad \lambda \equiv \sqrt{\frac{mc^2}{4\pi ne^2}} 
+\end{align}
+
+In order to solve this equation, let us consider a specific geometry of the superconducting material, so that we can define the boundary condition: 
+
+Consider that the system is the salb geometry which has two parallel planes boundaries at $x = -L/2$ and at $x = L/2$. For simplicity, we assume that the system is infinitely large along $y,\, z$ -direction. We suppose $L$ to be very large. 
+
+We apply the external field along $z$ direction: 
+
+\[\begin{split}
+\bm B\left(x < -\frac{L}{2}\right) &= B\hat{e}_z\\
+\bm B\left(x > \frac{L}{2}\right) &= B\hat{e}_z
+\end{split} \]
+
+Now that the tangential component of $\bm{B}$ should be continuous at the two boundaries (at $x = \pm L/2$)
+
+
+
+
+
+
+
+\section{BCS theory, Cooper pairing and Gap equation}
+
+\subsection{BCS(Bardeen Copper Schrieffer) Hamiltonian}
+
+
+
+Based on the experimental observation of the isotope effect, many people in 1950s had worked on the effect of electron-phonon interaction. 
+
+As we have seen in the Section {\ref{se5-2}}, the electron-phonon coupled field theory is equivalent to the electron system with the attractive electron-electron interaction, so that we begin with the following simplified Hamiltonian called as the BCS Hamiltonian: 
+
+\[\begin{split}
+\hat{K} =& \hat{K}_0 + \hat{V} = \int d^3 \bm{x} \psi^{\dagger}_{\alpha}(\bm{x})\left[\frac{1}{2m}\left(-i\hbar \nabla + \frac{e\bm{A}(\bm{x})}{c}\right)^2-\mu\right]\psi_{\alpha}(\bm{x})\\
+&-\frac{g}{2}\int d^3\bm{x}\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})
+\end{split} \]
+
+where $\bm{A}(\bm{x})$ is a vector potential. 
+
+Prior to the BCS theory, Cooper had considered two-electrons problem, which are introduced into a Fermi sea and which are interacting with each other via the attractive interaction. 
+
+Without the attractive interaction, the energy cost we need to pay forr these creations is 
+
+\[\Delta E = \frac{\hbar k_1^2}{2m} + \frac{\hbar k_2^2}{2m}-2\mu > 0 \]
+
+which is positive (so that the metal is stable). 
+
+Cooper showed that, once the {\uuline{small}} attractive interaction between these two are introduced, the energy ``\uuline{cost}'' for the creating this pari of fermions near the Fermi surface becomes ``\uuline{negative}'', due to the binding energy. 
+
+between these two particles, 
+
+\[\Delta E = \frac{\hbar k_1^2}{2m} + \frac{\hbar k_2^2}{2m}-2\mu < 0 \]
+
+This means that, once the attractive interaction are introduced near the Fermi surface, which is indeed the case with the ``effective'' BCS Hamiltonian, the Fermi sea (the ground state wave function for notmal metal) is \uuline{stable} toward the formations of many pairs of fermions which are bound together by the attractive interaction. 
+
+However, Cooper also showed that a finite binding energy between the two fermions comes from the Pauli exculsion due to the background Fermi-sea state. 
+
+Therefore, the ``true'' ground state which we would obtain from the Fermi-sea state is NOT just a pure state of many bound pairs. 
+
+Instead, the true ground state is \uwave{a linear superposition of those states having different number of the bound pairs}. 
+
+\begin{align}\tag{A} \label{eqA}
+|\Psi\rangle = |N-\text{particle}\rangle + |(N+2)-\text{particle}\rangle + |(N+4)-\text{particle}\rangle + \cdots + |(N+2m)-\text{particle}\rangle + \cdots \end{align}
+
+Contrary to the ground state wavefunction for the normal phase, such a wave function gives a finite expection value of the squre of the creation fields: 
+
+\[\begin{split}
+\langle \Psi|\psi^{\dagger}\psi^{\dagger}|\Psi\rangle =& \langle (N+2)-\text{particle}|\psi^{\dagger}\psi^{\dagger}|N-\text{particle}\rangle \\ &+ \langle(N+4)-\text{particle}|\psi^{\dagger}\psi^{\dagger}|(N+2)-\text{particle}\rangle\\ & + \cdots \neq 0 \end{split}\]
+
+In fact, we will see that the BCS ground state wavefunction is given by this type linear superposition where each of these multiparticle states have a phase coherence
+
+\[|\Psi\rangle = e^{i\phi_N}|N-\text{particle}\rangle + e^{i\phi_{N+2}}|(N+2)-\text{particle}\rangle + e^{i\phi_{N+4}}|(N+4)-\text{particle}\rangle + \cdots  \]
+
+where $\phi_M$ are \uline{not} randomly distributed in $M$. 
+
+Based on this observation, BCS regards $\langle\psi^{\dagger}\psi^{\dagger}\rangle$ (or $\langle \psi\psi\rangle$) as an order-parameter for the superconductivity, and construct the Mean-field theory for $\langle \psi^{\dagger}\psi^{\dagger}\rangle$. 
+
+The BCS Hamiltonian reads 
+
+\[\begin{split}\hat{K}& = \int d^3 \bm{x}\psi^{\dagger}_{\alpha}(\bm{x})\left(-\frac{\hbar^2\nabla^2}{2m} - \mu\right)\psi_{\alpha}(\bm{x})\\
+&-\frac{1}{2} \int d^3\bm{x} \hat{\psi}_{\alpha}^{\dagger}(\bm{x}) \hat{\psi}_{\beta}^{\dagger}(\bm{x}) \hat{\psi}_{\beta}(\bm{x})\hat{\psi}_{\alpha}(\bm{x}) \end{split}\]
+
+where the interaction part can be rewritten into 
+
+\[\begin{split}\psi_{\alpha}^{\dagger}(\bm{x})\psi_{\beta}^{\dagger}(\bm{x})&\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\\
+ &=  \left(\langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle + \psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) - \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\right)\\
+&\times \left(\langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle + \psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x}) - \langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle\right)
+\end{split}\]
+
+Suppose that the fluctuation from the mean-field ($\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) - \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle$) is small; we ignore the quadratic in the fluctuation: 
+
+\[\begin{split}
+\left(\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) - \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\right)\\
+\times \left(\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x}) - \langle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x})\rangle\right) \rightarrow 0\end{split}\]
+
+The other terms are summarized as 
+
+\[\begin{split}
+ =&\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\langle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x})\rangle\\
+& + \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x}) - \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\langle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x})\rangle \end{split} \]
+
+from which we obtain a mean-field Hamiltonian 
+
+\[\begin{split}\hat{K}_{eff} =& \hat{K}_0 - \frac{g}{2} \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x}) +\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) \langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle\right\} + \text{const}\\
+=& \hat{K}_0 - \frac{g}{2} \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x})\rangle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x}) +\langle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\rangle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x}) \right\} + \text{const}\\
+ =&\hat{K}_0 - g\int d^3\bm{x} \left\{\langle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\rangle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x}) +\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\langle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x})\rangle \right\}\\
+&+g\int d^3 \bm{x} \langle\psi^{\dagger}_{\downarrow}(\bm{x})\psi^{\dagger}_{\uparrow}(\bm{x})\rangle \langle\psi_{\uparrow}(\bm{x})\psi_{\downarrow}(\bm{x})\rangle
+ \end{split}\]
+
+In order to make the theory self-consistent, we assume that the mean-field is given by the expectation value of the product of the creation fields, \uwave{calculated with respect to the ground state wavefuynction for mean-field Hamiltonian}:
+
+\[\langle\psi_{\downarrow}^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \equiv \langle\Phi_0|\psi_\uparrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})|\Phi_0\rangle \]
+
+where $|\Phi_0\rangle$ is the ground state w.f for $\hat{K}_{eff}$. 
+
+\[
+\begin{split}
+\hat{K}_{eff}&=\int d^3\bm{x}\psi_\alpha^\dagger(\bm{x})\left(-\frac{\hbar^2\nabla_{\bm{x}}^2}{2m}-\mu\right)\psi_\alpha(\bm{x})\\
+&-g\int d^3\bm{x}\{\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\\
+&\quad+\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x}) \langle\psi_\uparrow^\dagger(\bm{x})\psi_\downarrow^\dagger(\bm{x})\rangle\}\\
+&+g\int d^3\bm{x}\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \underset{-\Delta(\bm{x})}{\uwave{\langle\psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\rangle}}
+\end{split}
+ \]
+
+Provided that the ground state wavefunction does not break the translational symmetry spotaneously, we can regard that the mean-field does not dependes on the space coordinate. 
+
+\[g\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \equiv-\Delta^*\equiv|\Delta|e^{-i\theta} \]
+
+With this in mind, the mean-field Hamiltonian is readily diagonalized:
+
+\[\begin{split}
+\hat{K}_{eff} &=\sum_{\bm{k}, \alpha}\left(\overset{\xi_{\bm{k}}}{\frac{\hbar^2\bm{k}^2}{2m}}-\mu\right)c_{\bm{k},\alpha}^\dagger c_{\bm{k},\alpha}\\
+&+\Delta^* \sum_{\bm{k}} c_{\bm{k}\uparrow}c_{-\bm{k}\downarrow}+ \Delta\sum_{\bm{k}}c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger - \Delta\sum_{\bm{k}}\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\\
+&=\sum_{\bm{k}}\left\{(c_{\bm{k}\uparrow}^\dagger\  c_{-\bm{k}\downarrow}) \left(\begin{matrix}
+\xi_{\bm{k}} & -e^{i\theta}|\Delta|\\
+-e^{-i\theta}|\Delta| & -\xi_{\bm{k}}
+\end{matrix}\right)
+\left(\begin{matrix}
+c_{\bm{k}\uparrow}\\
+c_{-\bm{k}\downarrow}^\dagger
+\end{matrix}\right)+\xi_{\bm{k}}\right\}-\Delta\sum_{\bm{k}}\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle
+\end{split} \]
+
+A unitary transformation gives
+
+\[
+\left(\begin{matrix}
+c_{\bm{k}\uparrow}\\
+\ \\
+c_{-\bm{k}\downarrow}^\dagger
+\end{matrix}\right) 
+= \left(\begin{matrix}
+u_k & e^{i\theta}v_k\\
+\ & \ \\
+-e^{-i\theta}v_k & u_k
+\end{matrix}\right) \left(\begin{matrix}
+\alpha_{\bm{k}}\\
+\ \\
+\beta_{-\bm{k}}^\dagger
+\end{matrix}\right)  \]
+
+with
+
+\[
+\begin{cases}
+2u_{\bm{k}}v_{\bm{k}} &= \displaystyle\frac{|\Delta|}{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}}\\
+\ & \ \\
+u_{\bm{k}}^2-v_{\bm{k}}^2 &= \displaystyle\frac{\xi_{\bm{k}}}{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}}
+\end{cases}\]
+
+Or equivalently
+
+\[
+\begin{cases}
+u_{\bm{k}} &= \displaystyle\frac{1}{\sqrt{2}}\left(1+\frac{\xi_{\bm{k}}}{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}}\right)^{1/2}\\
+\ & \ \\
+v_{\bm{k}} &= \displaystyle\frac{1}{\sqrt{2}}\left(1-\frac{\xi_{\bm{k}}}{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}}\right)^{1/2}
+\end{cases}
+\]
+
+In terms of this, we have
+
+\[\begin{split}
+\hat{K}_{eff}&=\sum_{\bm{k}}\left\{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}(\alpha_{\bm{k}}^\dagger(\alpha_{\bm{k}}-\beta_{-\bm{k}}\beta_{-\bm{k}}^\dagger)+\xi_{\bm{k}}\right\}- \Delta\sum_{\bm{k}}\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\\
+&= V+\sum_{\bm{k}}\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}(\alpha_{\bm{k}}^\dagger\alpha_{\bm{k}}+\beta_{\bm{k}}^\dagger\beta_{\bm{k}}
+\end{split}\]
+
+where
+
+\[V \equiv\sum_{\bm{k}}\{\xi_{\bm{k}}-\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}-\Delta\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\} \]
+
+Now that $\hat{K}_{eff}$ is given by a quadrotic form in the creation fields $(\alpha_{\bm{k}}^\dagger, \beta_{\bm{k}}^\dagger)$ and annihilation fields $(\alpha_{\bm{k}}, \beta_{\bm{k}})$, the eigen state of $\hat{K}_{eff}$ is given by a multi particle state of these new quastic particle. 
+
+Noting that these fields as well as the original fields $(c_{\bm{k},\sigma}, c_{\bm{k},\sigma}^\dagger)$ are fermion fields, the eigen state is given by 
+
+\[|(\bm{k}_1,\alpha_1),\cdots,(\bm{k}_n\beta)\rangle = \alpha_{\bm{k}_1}^\dagger \cdots \beta_{\bm{k}_n}^\dagger|\Phi_0\rangle \]
+
+where $|\Phi_0\rangle$ denotes the vacuum of $\alpha$-particle and $\beta$-particle (called as Bogoliubov particles). 
+
+\[\begin{cases}
+\alpha_{\bm{k}}|\Phi_0\rangle &= 0\\
+\ & \ \\
+\beta_{\bm{k}}|\Phi_0\rangle &= 0
+\end{cases}\]
+
+Since creating the Bogoliubov particles is always accompanied by a positive energy $(\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}>0$, the vaccum is nothing but the ground state wavefunction of $\hat{K}_{eff}$, whose energy is $V$. 
+
+\[\hat{K}_{eff}|\Phi_0\rangle = \overset{\sum_{\bm{k}}\xi_{\bm{k}}-\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}-\Delta\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle}{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad V}|\Phi_0\rangle \]
+
+A group of the lowest excited states is given by ``one-particle'' state of the Budoliubov particle
+
+\[\begin{split}
+\alpha_{\bm{k}}^\dagger|\Phi_0\rangle &= |(\bm{k},\alpha\rangle\\
+\beta_{\bm{k}}^\dagger|\Phi_0\rangle &= |(\bm{k}, \beta\rangle
+\end{split}\]
+
+\[\hat{K}_{eff} \alpha_{\bm{k}}^\dagger|\Phi_0\rangle = (V+\sqrt{\xi_{\bm{k}}^2+|\Delta|^2})\alpha_{\bm{k}}^\dagger|\Phi_0\rangle \]
+
+which is a \uline{gapped} excitation (See Fig. \ref{Fig6.3}) because of $\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}\ge|\Delta|$. 
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\draw [red] (0,0.9) -- (4,0.9);
+\draw [dashed] (0,1.9) -- (2,1.9);
+\draw (0,3) arc [start angle=-150, end angle=-30, radius=2.2];
+\draw [->](-0.3,0) -- (4,0);
+\draw (4.5,0) node {$k$};
+\draw [->](0, -0.3) -- (0,3.3);
+\draw (0,3.8) node {$E$};
+\draw (-0.5,1) node {$V$};
+\draw (-1, 2) node {$V+|\Delta|$};
+\draw [dashed] (2,1.9) -- (2,0);
+\draw (2,-0.5) node {$k_0 = {\bf{k}}-k_F$};
+\end{tikzpicture}
+\end{center}
+\caption{Excited spectrum; red line for ground BCS state, and solid line for single excited state; $k_0$ stands for $\xi_{k_0} = 0$. }\label{Fig6.3}
+\end{figure}
+
+This gapped behaviour of the one-particle excitation of the Bogoliubov particle is the origin of the thermal activation form of the low-temperatire specific heat in superconductors. (see later)
+
+To see the mean-field ground state wavefunction thut introduced indeed take the form of eq. \ref{eqA}, let us construct the $|\Phi_0\rangle$ in terms of the original (electron) creation and annihilation operators: 
+
+Now that $\alpha_{\bm{k}}$ and $\beta_{\bm{k}}$ are given by a linear combination of $c_{\bm{k}\uparrow}$ and $c_{-\bm{k}\downarrow}^\dagger$
+
+\[
+\left(\begin{matrix}
+\alpha_{\bm{k}}\\
+\ \\
+\beta_{-\bm{k}}^\dagger
+\end{matrix}\right) = \left(\begin{matrix}
+u_{\bm{k}} & -e^{i\theta}v_{\bm{k}}\\
+\ & \ \\
+e^{-i\theta}v_{\bm{k}} & u_{\bm{k}}
+\end{matrix}\right) \left(\begin{matrix}
+c_{\bm{k}\uparrow}\\
+\ \\
+c_{-\bm{k}\downarrow}^\dagger
+\end{matrix}\right) 
+ \]
+
+or
+
+\[\alpha_{\bm{k}} = u_{\bm{k}}c_{\bm{k}\uparrow} - e^{i\theta}v_{\bm{k}}c_{-\bm{k}\downarrow}^\dagger \]
+\[\beta_{-\bm{k}} = e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger + u_{\bm{k}}c_{-\bm{k}\downarrow} \]
+\[(\beta_{\bm{k}} = e^{i\theta}v_{\bm{k}}c_{-\bm{k}\uparrow}^\dagger+u_{\bm{k}}c_{\bm{k}\downarrow}) \]
+
+This vacuum of such Bogoliubov particles given by: \footnote{This solution is derived based on guess, not rigorous calculation. The following shows some check for this solution. }
+
+\[|\Phi_0\rangle = \prod_{\bm{k}}(u_{\bm{k}}+e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger c_{-\bm{k}\downarrow}^\dagger)|vac\rangle \]
+
+where $|vac\rangle$ denotes the vacuum of the original electrons ($c_{\bm{k}\sigma}|vac\rangle = 0$ for $\forall\ \bm{k},\sigma$) and the product over $\bm{k}$ is taken over all momentum. 
+
+In fact, one can see that 
+
+\[
+\begin{split}
+\alpha_{\bm{k}'}|\Phi_0\rangle &= \prod_{\bm{k} \neq \bm{k}'} (u_{\bm{k}}+e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger c_{-\bm{k}\downarrow}^\dagger)\times( u_{\bm{k}'}c_{\bm{k}'\uparrow} - e^{i\theta}v_{\bm{k}'}c_{-\bm{k}'\downarrow}^\dagger)(u_{\bm{k}'}+e^{i\theta}v_{\bm{k}'}c_{\bm{k}'\uparrow}^\dagger c_{-\bm{k}'\downarrow}^\dagger)|vac\rangle \\
+&=\prod_{\bm{k}\neq\bm{k}'}(u_{\bm{k}}+e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger c_{-\bm{k}\downarrow}^\dagger)\\
+&\ \ \times (u_{\bm{k}'}^2c_{\bm{k}'\uparrow}+e^{i\theta}u_{\bm{k}'}v_{\bm{k}'}(1-c_{\bm{k}'\uparrow}^\dagger c_{\bm{k}'\uparrow})c_{-\bm{k}'\downarrow}^\dagger\\
+&\quad\quad -e^{i\theta}u_{\bm{k}'}v_{\bm{k}'}c_{-\bm{k}'\downarrow}^\dagger + e^{i\theta}v_{\bm{k}'}^2c_{\bm{k}'\uparrow}^\dagger(c_{-\bm{k}'\downarrow}^\dagger)^2)|vac\rangle\\
+&=0
+\end{split}\]
+
+Similar for applying $\beta_{\bm{k}'}$ on this and obviously derive a $0$ as well. 
+
+Then, the many body wavefunction is given by ``a linear superposition of those states having different but even numbers of electrons''. 
+
+\[|\Phi_0\rangle = |vac\rangle + |2-\text{particle}\rangle + |4-\text{particle}\rangle+\cdots \]
+
+so that the expectation value of the product of two creation fields can be finite. 
+
+To calculate $\langle\psi_{\downarrow}(\bf{x})^\dagger\psi_{\downarrow}(\bf{x})^\dagger\rangle$, notice first that $|\Phi_0\rangle$ is already normalized
+
+\[\begin{split}
+\langle\Phi_0|\Phi_0\rangle &= \langle vac| \prod_{\bm{k}}\{(u_{\bm{k}}+e^{-i\theta}v_{\bm{k}}c_{-\bm{k}\downarrow}c_{\bm{k}\uparrow})(u_{\bm{k}}+e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger c_{-\bm{k}\downarrow}^\dagger)\}|vac\rangle\\
+&= \langle vac|\prod\{u_{\bm{k}}^2+v_{\bm{k}}^2c_{-\bm{k}\downarrow}\underset{=1-c_{\bm{k}\uparrow}^\dagger c_{\bm{k}\uparrow}}{c_{\bm{k}\uparrow}c_{\bm{k}\uparrow}^\dagger} c_{-\bm{k}\downarrow}^\dagger\}|vac\rangle\\
+&=\langle vac|vac\rangle = 1
+\end{split}\]
+
+Thus the mean-field is readily calculated as follows: %Page 952
+
+\[\begin{split}
+\langle\psi_{\downarrow}(\bm{x})^\dagger\psi_{\uparrow}(\bm{x})^\dagger\rangle &= \frac{1}{V}\int d^3 \bm{x} \langle\psi_{\downarrow}(\bm{x})^\dagger\psi_{\uparrow}(\bm{x})^\dagger\rangle = \frac{1}{V} \sum_{\bm{k}}\langle\Phi_0|c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger|\Phi_0\rangle \\
+&\quad\text{left hand side is independent of }\bm{x}\\
+&= \frac{1}{V}\sum_{\bm{k}}\langle vac|(u_{\bm{k}}+e^{-i\theta}v_{\bm{k}}c_{-\bm{k}\downarrow}c_{\bm{k}\uparrow})c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger (u_{\bm{k}}+e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger c_{-\bm{k}\downarrow}^\dagger)|vac\rangle\\
+&= -\frac{1}{V}e^{-i\theta}\sum_{\bm{k}}v_{\bm{k}}u_{\bm{k}}
+\end{split}\]
+
+Multuply $g$ and substitue the expressions for $u_{\bm{k}}, v_{\bm{k}}$ in terms of $\Delta$, we obtain
+
+\[|\Delta| = \frac{g}{2}\int \frac{d^3 \bm{k}}{(2\pi)^3}\frac{|\Delta|}{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}} \]
+
+which is called a ``gap equation'', determing $|\Delta|$. 
+
+Remember that the attraction interaction in the BCS Hamiltonian applies for those two electrons which are lying within an energy shell of the thickness $\hbar \omega_D$ from the Fermi surface (see previous argument).
+
+This restriction tells us that $\hat{K}_{eff}$ with finite $|\Delta|$ holds true only for those momentum $\bm{k}$, which satisfy
+
+\[|\xi_{\bm{k}}| \equiv |\frac{\hbar^2 \bm{k}^2}{2m}-\mu|<\hbar \omega_D \]
+
+For the other $\bm{k}$, the off-diagonal term connecting $c_{\bm{k}\uparrow}$ and $c_{-\bm{k}\downarrow}$ should be set to zero:
+
+\[\hat{K}_{eff}=\sum_{\bm{k},\alpha}\xi_{\bm{k}}c_{\bm{k}\alpha}^\dagger c_{\bm{k}\alpha}+\Delta^* \sum_{\bm{k},|\xi_{\bm{k}}|<\hbar\omega_D}c_{\bm{k}\uparrow}c_{-\bm{k}\downarrow}+\Delta\sum_{\bm{k},|\xi_{\bm{k}}|<\hbar\omega_D}c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger \]
+
+which leads to
+
+\[\begin{cases}
+ (u_{\bm{k}},v_{\bm{k}}) = (1,0)\text{ for }\xi_{\bm{k}}>\hbar\omega_D\\
+\ \\
+(u_{\bm{k}},v_{\bm{k}}) = (0,1)\text{ for }\xi_{\bm{k}}<-\hbar\omega_D
+\end{cases}\]
+
+Thus, the right hand side acquires a cut off:
+
+\[|\Delta|=\frac{g}{2}\underset{|\xi_{\bm{k}}|\le\hbar\omega_D}{\int}\frac{d^3 \bm{k}}{(2\pi)^3}\frac{|\Delta|}{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}} \]
+
+
+\section{Electromagnetic property of superconductors}
+\section{Microscopic derivation of the Ginzburg Landau equations}
+
+\newpage
+
+\chapter*{Work Distribution}
+SiZhen-Wang works for chapter 2 section 6 to 8 and chapter 3. ZeYang-Li works for chapter 1 and chapter 6. 
+
+\end{document}

@@ -466,7 +466,7 @@ with
 
 Since $\varphi(x)$ and $\Pi(x)$ are hermitian, we have
 
-\[\phi^\dagger(k) = \phi(-k) \]
+\[\varphi^\dagger(k) = \varphi(-k) \]
 
 \[\Pi^\dagger(k) = \Pi(-k) \]
 
@@ -475,7 +475,7 @@ The commutation relations are
 \begin{align}
 \begin{split}
 [\tilde{\varphi}(k), \tilde{\varphi}(k')] &= [\tilde{\Pi}(k), \tilde{\Pi}(k')] = 0\\
-[\tilde{\varphi}(k),\tilde{\Pi}(k')] = i\hbar(2\pi)^2\delta^2(k+k')
+[\tilde{\varphi}(k),\tilde{\Pi}(k')] &= i\hbar(2\pi)^2\delta^2(k+k')
 \end{split}
 \end{align}
 
@@ -492,31 +492,31 @@ Let uis again assume that $\omega(k)$ are non-negative for all $k$, so that we r
 Rewriting the Hamiltonian in terms of these fields and functions, we obtain
 
 \begin{align}
-H = \frac{1}{2}\int\frac{d^2 k}{(2\pi)^2}\left[\tilde{\Pi}(-k)\tilde(k)+\omega^2(k)\tilde{\phi}(-k)\tilde{\phi}(k)\right] = \frac{1}{2}\int\frac{d^2 k}{(2\pi)^2}\left[\tilde{\Pi}^\dagger (k)\tilde(k)+\omega^2(k)\tilde{\phi}^\dagger(k)\tilde{\phi}(k)\right]
+H = \frac{1}{2}\int\frac{d^2 k}{(2\pi)^2}\left[\tilde{\Pi}(-k)\tilde(k)+\omega^2(k)\tilde{\varphi}(-k)\tilde{\varphi}(k)\right] = \frac{1}{2}\int\frac{d^2 k}{(2\pi)^2}\left[\tilde{\Pi}^\dagger (k)\tilde(k)+\omega^2(k)\tilde{\varphi}^\dagger(k)\tilde{\varphi}(k)\right]
 \end{align}
 
 We next define annihilation and creation operators as follows, 
 
 \begin{align}
 \begin{split}
-a(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\phi}(k)+\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]\\
-a^\dagger(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\phi}(k)-\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]
+a(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\varphi}(k)+\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]\\
+a^\dagger(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\varphi}(k)-\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]
 \end{split}
 \end{align}
 
 Their commutation relations are calculated as follows, 
 
 \[\begin{split}
-[a(k),a(k')] &= \frac{1}{2\hbar}\left[\sqrt{\omega_k}\tilde{\phi}(k)+\frac{i}{\sqrt{\omega_k}} \tilde{\Pi}(k), \sqrt{\omega_{k'}}\tilde{\phi}(k')+\frac{i}{\sqrt{\omega_{k'}}}\tilde{\Pi}(k')\right] \\
-&= \frac{1}{2\hbar}\sqrt{\frac{\omega_k}{\omega_{k'}}}i[\tilde{\phi}(k),\tilde{\Pi}(k')] + \frac{1}{2\hbar}\sqrt{\frac{\omega_{k'}}{\omega_k}}i[\tilde{\Pi}(k),\tilde{\phi}(k')] \\
+[a(k),a(k')] &= \frac{1}{2\hbar}\left[\sqrt{\omega_k}\tilde{\varphi}(k)+\frac{i}{\sqrt{\omega_k}} \tilde{\Pi}(k), \sqrt{\omega_{k'}}\tilde{\varphi}(k')+\frac{i}{\sqrt{\omega_{k'}}}\tilde{\Pi}(k')\right] \\
+&= \frac{1}{2\hbar}\sqrt{\frac{\omega_k}{\omega_{k'}}}i[\tilde{\varphi}(k),\tilde{\Pi}(k')] + \frac{1}{2\hbar}\sqrt{\frac{\omega_{k'}}{\omega_k}}i[\tilde{\Pi}(k),\tilde{\varphi}(k')] \\
 &=(-1)(2\pi)^2\delta^2(k+k')+(2\pi)^2\delta^2(k+k')= 0 
 \end{split}\]
 
 \[[a^\dagger(k),a^\dagger(k')] = 0 \]
 
 \begin{align}\begin{split}
-[a(k),a^\dagger(k')] &= \frac{1}{2\hbar}\left[\sqrt{\omega_k}\tilde{\phi}(k)+\frac{i}{\sqrt{\omega_k}}, \sqrt{\omega_{k'}}\tilde{\phi}(-k') - \frac{i}{\sqrt{\omega_{k'}}}\tilde{\Pi}(-k')\right] \\
-&= \frac{-i}{2\hbar}\sqrt{\frac{\omega_k}{\omega_{k'}}} [\tilde{\phi}(k),\tilde{\Pi}(-k')] + \frac{i}{2\hbar}[\tilde{\Pi}(k),\tilde{\phi}(-k')] \\
+[a(k),a^\dagger(k')] &= \frac{1}{2\hbar}\left[\sqrt{\omega_k}\tilde{\varphi}(k)+\frac{i}{\sqrt{\omega_k}}, \sqrt{\omega_{k'}}\tilde{\varphi}(-k') - \frac{i}{\sqrt{\omega_{k'}}}\tilde{\Pi}(-k')\right] \\
+&= \frac{-i}{2\hbar}\sqrt{\frac{\omega_k}{\omega_{k'}}} [\tilde{\varphi}(k),\tilde{\Pi}(-k')] + \frac{i}{2\hbar}[\tilde{\Pi}(k),\tilde{\varphi}(-k')] \\
 &= (2\pi)^2\delta^2(k-k')
 \end{split}\end{align}
 
@@ -526,13 +526,120 @@ If we wrtie $H$ in terms of $a \& a^\dagger$, we obtain
 H = \frac{1}{2}\int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)[a^\dagger(k)a(k)+a(k)a^\dagger(k)] = \frac{1}{2}\int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)a^\dagger(k)a(k)+C
 \end{align}
 
+Thus, eigenstate of $H$ is given by the repeated application of $a^\dagger(k)$ onto the ground state\footnote{Regarding these energy units as particles respectively, we can think of these excited states as one-particle state, two-particle state, and so on. }
 
+\[|k_1\rangle = a^\dagger(k_1)|0\rangle,\quad (E=\omega(k_1)) \]
+\[|k_1,k_2\rangle = a^\dagger(k_1)a^\dagger(k_2)|0\rangle,\quad (E=\omega(k_1)+\omega(k_2)) \]
 
+while the ground state satisfies
 
+\[a(k)|0\rangle = 0,\quad\text{for}\forall k \]
 
+To characterize these multi-particle states, let us consider the following operators, 
+
+\begin{align}
+\mathbb{P} \equiv\int\frac{d^2 k}{(2\pi)^2}\hbar{k}a^\dagger({k})a({k})
+\end{align}
+
+which satisfies
+
+\[[\mathbb{P},a^\dagger({k})] = \hbar {k}a^\dagger(k) \]
+\[[\mathbb{P},a(k)] = -\hbar ka(k) \]
+
+so that
+
+\[\begin{split}
+\mathbb{P}|k_1,k_2,\cdots\rangle &= \mathbb{P}a^\dagger(k_1)a^\dagger(k_2)\cdots|0\rangle  = a^\dagger(k_1)(\hbar k_1+\mathbb{P})a^\dagger(k_2)\cdots|0\rangle\\
+&= \hbar k_1 |k_1,k_2,\cdots\rangle + a^\dagger(k_1)\mathbb{P}a^\dagger(k_2)\cdots|0\rangle\\
+&= \hbar k_1|k_1,k_2,\cdots\rangle + a^\dagger(k_1)a^\dagger(k_2)(\hbar k_2+\mathbb{P})\cdots|0\rangle\\
+&=\cdots\\
+&=\hbar(k_1+k_2+\cdots)|k_1,k_2,\cdots\rangle
+\end{split}\]
+
+we can also see that
+
+\[\begin{split}
+[\mathbb{P},\varphi(x)] &= \left[\mathbb{P},\int\frac{d^2k}{(2\pi)^2}\sqrt{\frac{\hbar}{2\omega(k)}}\left(a(k)e^{ik\cdot x}+a^\dagger(k)e^{-ik\cdot x}\right)\right]\\
+&= \int\frac{d^2 k}{(2\pi)^2}\sqrt{\frac{\hbar}{2\omega(k)}}\left\{(-\hbar k)a(k)e^{ik\cdot x}+(\hbar k)a^\dagger(k)e^{-ik\cdot x}\right\}\\
+&= i\hbar\frac{\partial}{\partial x}\left\{\int\frac{d^2 k}{(2\pi)^2}\sqrt{\frac{\hbar}{2\omega(k)}}\left(a(k)e^{ik\cdot x}+a^\dagger(k)e^{-ik\cdot x}\right)\right\}\\
+&=i\hbar\frac{\partial}{\partial x}\varphi(x)
+\end{split}\]
+
+Similarly
+
+\[[\mathbb{P},\Pi(x)] = i\hbar\cdot\frac{\partial}{\partial x}\Pi(x) \]
+
+Using these relations, one can show that 
+
+\[e^{a\cdot\mathbb{P}/i\hbar}\varphi(x)e^{-a\cdot\mathbb{P}/i\hbar} = \varphi(x+a) \]
+\[e^{a\cdot\mathbb{P}/i\hbar}\Pi(x)e^{-a\cdot\mathbb{P}/i\hbar} = \Pi(x+a) \]
+
+Namely, taking a derivative of r.h.s with respect to $a$, we have
+
+\[\begin{split}
+\frac{\partial}{\partial a}\left[e^{a\cdot\mathbb{P}/i\hbar}\varphi(x)e^{-a\cdot\mathbb{P}/i\hbar}\right]&=\frac{1}{i\hbar}e^{a\cdot\mathbb{P}/i\hbar}[\mathbb{P},\varphi(x)]e^{-a\cdot\mathbb{P}/i\hbar}\\
+&= e^{a\cdot\mathbb{P}/i\hbar}\frac{\partial}{\partial x}\varphi(x)e^{-a\cdot\mathbb{P}/i\hbar}\\
+&=\frac{\partial}{\partial x}\left\{e^{a\cdot\mathbb{P}/i\hbar}\varphi(x)e^{-a\cdot\mathbb{P}/i\hbar}\right\}
+\end{split}\]
+
+This means that
+
+\[e^{a\cdot\mathbb{P}/i\hbar}\varphi(x)e^{-a\cdot\mathbb{P}/i\hbar} = f(x+a) \]
+
+while $f$ should be $\phi$ when $a=0$, thus we have
+
+\begin{align}
+e^{a\cdot\mathbb{P}/i\hbar}\varphi(x)e^{-a\cdot\mathbb{P}/i\hbar} = \varphi(x+a)
+\end{align}
+
+Similar we have
+
+\[e^{a\cdot\mathbb{P}/i\hbar}\Pi(x)e^{-a\cdot\mathbb{P}/i\hbar} = \Pi(x+a)
+\]
+
+These two relations means that $\mathbb{P}$ is a generator of the spatial translation and is therefore the momentum operator. 
 
 
 \section{System of indistinguishable particles}
+
+In the preceding sections, we consider the quantum states of an oscillator  system as multiparticle states, where each particle has an energy unit and is often called a ``phonon''. In this section, we follow a different line of reasoning. We will start with a space of states describing a single particle, which is either Bose particle or Fermi particle. We then construct the multiple-particle states based on standard methods. 
+
+For the Bose particle case, we will arrive at a system of states and operators, that is mathematically equivalent to that found previously for a systen of oscillators. Thereby, this shows that the interpretation of oscillator states as many-phonon states is consistent with the usual description of many-particle systems with Bose statistics. 
+
+We will develop a formalism with Fermi-Dirac statistics, for which the states do not resemble those of a harmonic-oscillator system. 
+
+Consider first the case of distinguishable particles. 
+
+A $n$-particle state is given by a simple product of one-particle states
+
+\[|\psi\rangle = |\psi_1\rangle|\psi_2\rangle\cdots|\psi_n\rangle \]
+
+You can also weite this in the coordinate representation as 
+
+\[\psi(x_1,\cdots,x_n) = \psi_1(x_1)\psi_2(x_2)\cdots\psi_n(x_n) \]
+
+where $x_j$ denotes the coordinate of $j$-th particle and $\langle x_j|\psi_j\rangle = \psi_j(x_j)$. 
+
+Please notice that these $n$-particles are all distinguishable from one another. 
+
+Namely, each particle has its own coordinate $x$, and we can distinguish $j$-th particle from $m$-th particle, because they belong to different one-particle states
+
+\[\psi_j(x) \neq \psi_m(x),\quad \text{for }j\neq m \]
+
+\hrule
+
+\ 
+
+Let us next consider indistinguishable particles. 
+
+To make up a many-particle wavefunction for indistinguishable particles out of this, we need to make any pair of particles cannot be distinguished from each other. 
+
+There is two-ways of doing this, one way is to ``symmetrize'' this with respect to all the possible permutations of $n$ particles:
+
+\[ \]
+
+
+
 \section{Creation operator \& destruction operator}
 \section{Hamiltonian and other operators of creation and destruction operators}
 \section{Degenerate electron gas}

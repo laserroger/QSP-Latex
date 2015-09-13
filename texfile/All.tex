@@ -61,7 +61,7 @@
 \numberwithin{equation}{section}
 
 \usepackage{geometry}
-\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm}
+\geometry{left=3.2cm,right=3.2cm,top=4cm,bottom=4cm}
 
 \usepackage{calc}
 \fancyheadoffset[LE,RO]{\marginparsep+\marginparwidth}
@@ -683,6 +683,251 @@ An indistinguishable particle in a symmetrized many-particle wavefunction is cal
 
 The other way of making wavefunctions for indistinguishable particles is ``antesymmetrize'' the wavefunction for distinguishable particles. %page41
 
+\[\Psi_F(x_1,\cdots,x_n) = \frac{1}{\sqrt{n!}}\sum_P(-1)^P\psi_{P(1)}(x_1)\cdot\psi_{P(2)}(x_2)\cdot\cdots\cdot\psi_{P(n)}(x_n) \]
+
+Here $P$ us again in a permutation among $n$-particles, but, at this time, we have $(-1)^P$ ($(-1)$ to the power of $P$). This factor takes $+1$, if the permutation $P$ is given by a product of even-number of transpositions, where a transposition is an exchange between a pair of two particle. 
+
+For example, 
+
+\[
+\left(\begin{matrix}
+1 & 2 & 3\\ 2 & 3 & 1
+\end{matrix}\right) = 
+\left(\begin{matrix}
+1 & 2 & 3\\ 2 & 1 & 3
+\end{matrix}\right)
+\cdot
+\left(\begin{matrix}
+1 & 2 & 3\\ 1 & 3 & 2
+\end{matrix}\right)
+\]
+
+\[((1,2,3)\rightarrow(2,1,3)\rightarrow(2,3,1) \]
+
+this permutation is given by a product of two transpositions, so that
+
+\[(-1)^{\left(\begin{matrix}
+1 & 2 & 3\\ 2 & 3 & 1
+\end{matrix}\right)} = +1 \]
+
+This factor takes $-1$, if the permutation $p$ is given by a product of odd-numbers of transpositions. 
+
+For example, 
+
+\[
+\left(\begin{matrix}
+1 & 2 & 3 & 4\\ 2 & 3 & 4 & 1
+\end{matrix}\right)=
+\left(\begin{matrix}
+1 & 2 & 3 & 4\\ 2 & 1 & 3 & 4
+\end{matrix}\right)
+\cdot
+\left(\begin{matrix}
+1 & 2 & 3 & 4\\ 1 & 3 & 2 & 4
+\end{matrix}\right)
+\cdot
+\left(\begin{matrix}
+1 & 2 & 3 & 4\\ 1 & 2 & 4 & 3
+\end{matrix}\right)
+\]
+
+this permutation is given by a product of three transpositions, so that 
+
+\[(-1)^{\left(\begin{matrix}
+1 & 2 & 3 & 4\\ 2 & 3 & 4 & 1
+\end{matrix}\right)}  = -1\]
+
+Under a permutation among $n$ particles, this many-body wavefunction is unchanged, apart from the phase factor, which is $(-1)$ to the power of $Q$. 
+
+ \[\begin{split}
+&\psi_F(x_{Q(1)},x_{Q(2)},\cdots,x_{Q(m)}) \\
+&=\frac{1}{\sqrt{n!}}\sum_P(-1)^P\psi_{P(1)}(x_{Q(1)})\cdot\cdots\cdot\psi_{P(n)}(x_{Q(n)})\\
+&=\frac{1}{\sqrt{n!}}\sum_P(-1)^P\psi_{P\cdot Q^{-1}(1)}(x_1)\cdot\cdots\cdot\psi_{P\cdot Q^{-1}(n)}(x_n)\\
+&\quad\quad P\cdot Q^{-1}=1\\
+&=(-1)^Q\frac{1}{\sqrt{n!}}\sum_{P'}(-1)^{P'}]psi_{P'(1)}(x_1)\cdot\cdots\cdot\psi_{P'(n)}(x_n)\\
+&=(-1)^Q\psi_F(x_1,\cdots,x_n)
+\end{split}\]
+
+Because of this, asymmetrized property, $n$-particle in the wavefunction are essentially indistinguishable from one another. 
+
+An indistinguishable particle in an antisymmetrized many-particle wavefunction is called as ``fermion''. 
+
+To summarize so far, we have two way of making many-particle wavefunctions for indistinguishable particles. 
+
+\begin{align}
+|\psi\rangle &= \frac{1}{\sqrt{n!}}\sum_P\xi^P|\psi_{P(1)}\rangle|\psi_{P(2)}\rangle\cdots|\psi_{P(n)}\rangle\\
+\psi(x_1,\cdots,x_n) &= \frac{1}{\sqrt{n!}}\sum_P\xi^P\psi_{P(1)}(x_1)\psi_{P(2)}(x_2)\cdot\cdots\cdot\psi_{P(n)}(x_n) = \frac{1}{\sqrt{n!}}\sum_P\xi^P\psi_1(x_{P(1)})\psi_2(x_{P(2)})\cdot\cdots\cdot\psi_n(x_{P(n)}) \end{align}
+
+where $\xi = \pm1$ for boson and fermion. 
+
+We will write this as $|\psi_1,\psi_2,\psi_n,\cdots\psi_n\rangle$. 
+
+Let us show an example:
+
+Suppose that $|\psi_1\rangle$ and $|\psi_2\rangle$ are two orthonormal single-particle states. 
+
+For bose particles, we can make three many-particle wavefunctions out of them. One is this, and the other is
+
+\[\begin{split}
+|\Psi_a\rangle &= \frac{1}{\sqrt{2!}}(|\psi_1\rangle|\psi_2\rangle + |\psi_2\rangle|\psi_1\rangle)\\
+|\Psi_b\rangle &= \frac{1}{\sqrt{2!}}(|\psi_1\rangle|\psi_1\rangle + |\psi_1\rangle|\psi_1\rangle) = \sqrt{2}|\psi_1\rangle|\psi_1\rangle\\
+|\Psi_c\rangle &= \frac{1}{\sqrt{2!}}(\psi_2\rangle|\psi_2\rangle + \psi_2\rangle|\psi_2\rangle) = \sqrt{2}\psi_2\rangle|\psi_2\rangle
+\end{split} \]
+
+For fermi particles, we can make only one many-particle wavefunctions, 
+
+\[\begin{split}
+|\Psi_a\rangle &= \frac{1}{\sqrt{2!}}(|\psi_1\rangle|\psi_2\rangle - |\psi_2\rangle|\psi_1\rangle) \\
+|\Psi_b\rangle &= \frac{1}{\sqrt{2!}}(|\psi_1\rangle|\psi_1\rangle - |\psi_1\rangle|\psi_1\rangle) = 0 \\
+|\Psi_b\rangle &= \frac{1}{\sqrt{2!}}(|\psi_2\rangle|\psi_2\rangle - |\psi_2\rangle|\psi_2\rangle) = 0 
+\end{split}\] 
+
+This two dictates that, due to the antisymmetric character, two fermi particles cannot occupy the same state. 
+
+The inner product of two of these $n$-particle states are given by a determinent or permanent of a $n\times n$ matrix, which is composed by the inner products of single particle states. 
+
+\begin{align}
+\langle\varphi_1,\cdots,\varphi_n|\psi_1,\cdots,\psi_n\rangle = \begin{vmatrix}
+\langle \varphi_1|\psi_1\rangle & \langle \varphi_1|\psi_2\rangle & \cdots & \langle \varphi_1|\psi_n\rangle\\
+\langle \varphi_2|\psi_1\rangle & \langle \varphi_2|\psi_2\rangle & \cdots & \langle \varphi_2|\psi_n\rangle\\
+\cdots & \cdots & \cdots & \cdots\\
+\langle \varphi_n|\psi_1\rangle & \langle \varphi_n|\psi_2\rangle & \cdots & \langle \varphi_n|\psi_n\rangle
+\end{vmatrix}
+\end{align}
+
+where 
+
+\[\langle\varphi_j|\psi_m\rangle = \int d^d {\bf x}\varphi_j^*({\bf x})\psi_m({\bf x}) \]
+
+and
+
+\[|{\bf A}|_{\xi} = \sum_{P}\xi^P {\bf A}_{1P(1)}\cdots{\bf A}_{nP(n)} \]
+
+with $n\times n$ matrix ${\bf A} = ({\bf A}_{ij})$
+
+Namely, $|{\bf A}|$ is a determinant of ${\bf A}$ while ${\bf A}_+$ is a permanent of ${\bf A}$. 
+
+\hrule
+
+\ 
+
+One can prove this straightforwardly, %48
+
+\[\begin{split}
+&\langle\varphi_1,\cdots,\varphi_n|\psi_1,\cdots,\psi_n\rangle =\frac{1}{n!}\sum_P\sum_Q\xi^P\xi^Q\langle\varphi_{P(1)}|\psi_{Q(1)}\rangle\cdots\langle\varphi_{P(n)}|\psi_{Q(n)}\rangle \\
+& = \frac{1}{n!}\sum_{P}\sum_{Q}\xi^P\xi^Q\langle\varphi_1|\psi_{QP^{-1}(1)}\rangle\cdots\langle\varphi_n|\psi_{QP^{-1}(n)}\rangle\\
+&\quad (\xi^P)^{-1} = \xi^P,\quad R\equiv Q\cdot P^{-1}\\
+&= \frac{1}{n!} \sum_P\sum_Q\xi^R\langle\varphi_1|\psi_{R(1)}\rangle\cdots\langle\varphi_n|\psi_{R(n)}\rangle
+\end{split}\]
+
+\[\sum_P\sum_Q = \sum_P\sum_{QP^{-1}}=\sum_P\sum_R \]
+
+Now that the summation is free from $P$, the summation over $P$ just gives us a factor $n!$, which set off this. 
+
+Thus, we have
+
+\[\langle\varphi_1,\cdots,\varphi_n|\psi_1,\cdots,\psi_n\rangle = \sum_R\xi^R\langle\varphi_1|\psi_{R(1)}\rangle\cdots\langle\varphi_n|\psi_{R(n)}\rangle = |(\langle\varphi_i|\psi_j\rangle)|_\xi \]
+
+Suppose that $\{|1\rangle,|2\rangle,\cdots\}$ is a complete orthonormal set of single-particle states:
+
+\[\alpha|\beta\rangle = \delta_{\alpha\beta},\quad\sum_{\alpha}|\alpha\rangle\langle\alpha| = 1 \]
+
+A complete set of $n$-particle states consists of $|\alpha_1,\alpha_2,\cdots,\alpha_n\rangle$ where $\alpha_1\le\cdots\le\alpha_n$ in the Bose case, and $\alpha_1<\alpha_2<\cdots<\alpha_n$ in the fermion case. 
+
+These states are orthogonal to one another, but not always normalized in the Bose case. 
+
+Using this, one can show that a complete orthonormal set of $n$-particle states consist of
+
+\begin{align}\begin{cases}
+\displaystyle\frac{|\alpha_1,\alpha_2,\cdots,\alpha_n\rangle}{\sqrt{n_1!n_2!\cdots}} \quad (\alpha_1\le\cdots\le\alpha_n) \ \text{for boson}\\
+\ \\
+|\alpha_1,\alpha_2,\cdots\alpha_n\rangle \quad (\alpha_1<\alpha_2<\cdots<\alpha_n)\ \text(for fermion)
+\end{cases}\end{align}
+
+where $n_j$ denotes the number of times that $j$ occurs in the sequence of $\alpha_1,\cdots,\alpha_n$. 
+
+For either boson case or fermion case, the completeness relation in the $n$-particles space can be weitten in the following simple form. 
+
+\begin{align}
+\frac{1}{n!}\sum_{\alpha_1}\cdots\sum_{\alpha_n}|\alpha_1,\cdots,\alpha_n\rangle\langle\alpha)_1,\cdots,\alpha_n| = 1
+\end{align}
+
+where the sum of each $\alpha_j$ is taken over all single-particle states. 
+
+The duplication of $n$-particle states are set off by the $1/n!$ (one over the factorial of $n$) and the normalization. 
+
+To see that this equality holds true for both boson and fermion cases, let us apply the left side to a $n$-particle state $|\beta_1,\cdots,\beta_n\rangle$ where $|\beta_j\rangle$ is from $\{|1\rangle,|2\rangle,\cdots,\}$ the single-particle states considered. \\
+
+{\Huge 1. }When all these $\beta_j$ are distict from one another, 
+
+\[\begin{split}
+&\frac{1}{n!}\sum_{\alpha_1}\cdots\sum_{\alpha_n}|\alpha_1,\cdots,\alpha_n\rangle\langle\alpha_1,\cdots,\alpha_n|\beta_1,\cdots,\beta_n\rangle\\
+&=\frac{1}{n!}\sum_P|P(\beta_1),P(\beta_2),\cdots,P(\beta_n)\rangle\langle P(\beta_1),P(\beta_2),\cdots,P(\beta_n)|\beta_1,\cdots,\beta_n\rangle\\
+&=\frac{1}{n!}\sum_P\xi^P|P(\beta_1),P(\beta_2),\cdots,P(\beta_n)\rangle\\
+&=\frac{1}{n!}\sum_P|\beta_1,\cdots,\beta_n\rangle = |\beta_1,\cdots,\beta_n\rangle
+\end{split}\]
+
+{\Huge 2. }When some of these $\beta_j$ are identical, which can be the case with bose particles, 
+
+\[\begin{split}
+&\frac{1}{n!}\sum_{\alpha_1}\cdots\sum_{\alpha_n}|\alpha_1,\cdots,\alpha_n\rangle\langle\alpha_1,\cdots,\alpha_n|\beta_1,\cdots,\beta_n\rangle \\
+&= \frac{1}{n!}{\color{red}{\tilde{\sum_P}}}|P(\beta_1),P(\beta_2),\cdots,P(\beta_n)\rangle\langle P(\beta_1),P(\beta_2),\cdots,P(\beta_n)|\beta_1,\cdots,\beta_n\rangle \end{split}\]
+
+Here the {\color{red}{summation}} of $P$ is taken over all possible permutations of $n$-objects with duplications being excluded. 
+
+Namely, $\tilde{\sum_P}$ does count the following permutations separately. It counts one of them once and doesn't count the others. 
+
+\[
+\begin{split}
+&P_1(\beta_j) = P_2(\beta_j) = P_3(\beta_j)=\cdots=P_m(\beta_j), \text{ for }\forall j = 1,\cdots,n\\ 
+&=\frac{1}{n!}\tilde{\sum_P}|P(\beta_1),\cdots,P(\beta_n)\rangle\times(n_1!\cdot n_2!\cdots)
+\end{split}\]
+
+where $n_j$ denotes the number of times that ``$j$'' occurs in the sequence of $\beta_1,\cdots,\beta_n$. 
+
+Now that 
+
+\[|P(\beta_1),\cdots,P(\beta_n)\rangle = |\beta_1,\cdots,\beta_n\rangle \]
+
+and
+
+\[\tilde{\sum_P} = \frac{n!}{n_1!\cdot n_2!\cdot\cdots} \]
+
+the right hand side is
+
+\[=|\beta_1,\beta_2,\cdots,\beta_n\rangle \]
+
+\ 
+
+These two ({\Huge 1, 2}) prove that this completeness relation holds true for both boson case and fermion case. \\
+
+\hrule
+
+\ 
+
+In actual physical process, the number of particles is not constant in time. Particles can be constructed and destroyed. To describe such process, we need a Hilbert space that contains states of varying number of particles. To get such a space, we simply combine all the $n$-particle spaces into one big space that we call the ``multiparticle space''. 
+
+A general state in the multiparticle space is of the from of 
+
+\[|\psi\rangle = |\psi^{(0)}\rangle + |\psi^{(1)}\rangle + |\psi^{(2)}\rangle + \cdots \]
+
+where $|\psi^{(n)}\rangle$ is an $n$-particle state and $|\psi^{(0)}\rangle$ is just a vacuum state
+
+\[|\psi^{(0)}\rangle = |var\rangle \]
+
+States of differemt numbers of particles are defined to be orthogonal to each other, so that
+
+\[\langle\varphi|\psi\rangle = \langle\varphi^{(0)}|\psi^{(0)}\rangle + \langle\varphi^{(1)}|\psi^{(1)}\rangle  \]
+
+where
+
+\[|\varphi\rangle = |\varphi^{(0)}\rangle + |\varphi^{(1)}\rangle + \cdots \]
+
+The completeness relation in the multiparticle is given as follows, 
+
+\begin{align}
+\sum_{n=1}^{\infty}\frac{1}{n!}\sum_{\alpha_1}\cdots\sum_{\alpha_n}|\alpha_1,\cdots,\alpha_n\rangle\langle \alpha_1,\cdots,\alpha_n| = 1
+\end{align}
 
 
 
@@ -854,10 +1099,147 @@ A complete orthogonal sets of states in the multiparticle space can be construct
 
 \[|{\bf p_1},{\bf p_2},\cdots,{\bf p_n}\rangle = a^\dagger({\bf p_1})\cdots a^\dagger({\bf p_n})|vac\rangle \]
 
-If we use a basis of position eigenstates $|\bf{x}\rangle$
+If we use a basis of position eigenstates $|\bf{x}\rangle$ with $\langle {\bf x}|{\bf x'}\rangle = \delta^3({\bf x} - {\bf x'})$
 
+\begin{align}
+[a({\bf x}),a^\dagger({\bf x'})] = \delta^3({\bf x} - {\bf x'})
+\end{align}
+
+\[|{\bf x}_1,\cdots,{\bf x}_n\rangle = a^\dagger({\bf x}_1)\cdots a^\dagger({\bf x}_n)|vac\rangle \]
+
+When we change a basis for one-particle states, the creation operators ``transform'' like ket state, while the destruction operators ``transform'' like bra state. 
+
+\[|{\bf x}\rangle = \alpha|\psi\rangle + \beta|\varphi\rangle \]
+\[\langle{\bf x}| = \langle\psi|\alpha^* + \langle\varphi|\beta^* \]
+
+\[\begin{cases}
+a^\dagger({\bf x}) &= \alpha a^\dagger(\psi)+\beta a^\dagger(\varphi)\\
+a({\bf x}) &= \alpha^* a(\psi) + \beta^* a(\varphi)
+\end{cases}\]
+
+Notice: for $\forall \psi_1,\cdots$
+
+\[a^\dagger({\bf x})|\psi_1,\cdots\rangle = |\alpha\psi+\beta\varphi,\psi\cdots\rangle = \alpha|\psi,\psi_1,\cdots\rangle + \beta|\varphi,\psi_1,\cdots\rangle = \alpha a^\dagger(\psi)|\psi,\cdots\rangle + \beta a^\dagger(\varphi)|\psi_1\cdots\rangle \]
+
+Now if we change from position representation to momentum representation:
+
+\[\begin{split}
+|{\bf p}\rangle = \int d^3{\bf x} |{\bf x}\rangle\langle{\bf x}|{\bf p}\rangle = \int d^3{\bf x}|{\bf x}\rangle e^{i{\bf p}\cdot{\bf x}}\\
+|{\bf x}\rangle = \int d^3{\bf p} |{\bf p}\rangle\langle{\bf p}|{\bf x}\rangle = \int d^3{\bf p}|{\bf p}\rangle e^{-i{\bf p}\cdot{\bf x}}
+\end{split}\]
+
+The respective creation operators are related to each other as 
+
+\begin{align}
+\begin{split}
+a^\dagger({\bf p}) = \int d^3{\bf x} a^\dagger({\bf x}) e^{i{\bf p}\cdot{\bf x}}\\
+a^\dagger({\bf x}) = \int d^3{\bf p} a^\dagger({\bf p}) e^{-i{\bf p}\cdot{\bf x}}
+\end{split}
+\end{align}
 
 \section{Hamiltonian and other operators of creation and destruction operators}
+
+So far, we developed a method of describing systems containing many Bose or Fermi particles, and define creation \& destruction operators. In the following, we will see that these operators have other use than merely creating or annihilating particles. 
+
+Suppose that $A^{(1)}$ is an operator that acts on one-particle states
+
+\begin{align}
+\begin{split}
+\hat{A}^{(1)}({\bf x},{\bf p})|\psi\rangle = |\psi'\rangle \\
+\text{or}\\
+\hat{A}^{(1)}\left({\bf x},-i\frac{\partial}{\partial {\bf x}}\right)\psi({\bf x}) = \psi'({\bf x})
+\end{split}
+\end{align}
+
+In many-particle systems, we often want to deal with an operator that represents the ``sum of $A^{(1)}$ over all of the particles. ''
+
+\begin{align}
+\hat{A}\overset{def}{\equiv}\sum_j\hat{A}^{(1)}({\bf x}_j,{\bf p}_j)
+\end{align}
+
+Thus, we want to represent $\hat{A}$ in terms of the creation and destruction operators. 
+
+To do this, we fiesr describe this, we first describe this single-particle operator $\hat{A}^{(1)}$ in terms of a complete orthonormal set of one-particle states: $\{|\alpha\rangle\} = \{|1\rangle,|2\rangle,\cdots\}$
+
+\begin{align}
+\hat{A}^{(1)}({\bf \hat{x}, \hat{p}}) \equiv \sum_{\alpha,\beta}|\alpha\rangle\langle\alpha| \hat{A}^{(1)}|\beta\rangle\langle\beta| = \alpha_{\alpha,\beta}\hat{A}^{(1)}_{\alpha\beta}|\alpha\rangle\langle\beta
+\end{align}
+
+with
+
+\begin{align}
+\begin{split}
+\hat{A}^{(1)}_{\alpha\beta} &\equiv\langle\alpha|\hat{A}^{(1)}({\bf \hat{x},\hat{p}})|\beta\rangle \\
+&=\int d{\bf x} \langle\alpha|{\bf x}\rangle\hat{A}^{(1)}({\bf x}, -i\frac{\partial}{\partial{\bf x}})\langle{\bf x}|\beta\rangle
+\end{split}
+\end{align}
+
+With this, let us apply $\hat{A}$ to an arbitray state in the multiparticle space
+
+\[\begin{split}
+&\hat{A}\langle x_1,\cdots,x_n|\psi_1,\cdots,\psi_n\rangle \\
+&=\hat{A}\frac{1}{\sqrt{n!}}\sum_P\xi^P\langle x_{P(1)}|\psi_1\rangle\cdot\langle x_{P(2)}|\psi_2\rangle\cdot\cdots\cdot\langle x_{P(n)}|\psi_n\rangle\\
+&=\frac{1}{\sqrt{n!}}\sum_P\xi^P\{\hat{A}\langle x_{P(1)}|\psi_1\rangle\}\cdot\langle x_{P(2)}|\psi_2\rangle\cdot\cdots\cdot\langle x_{P(n)}|\psi_n\rangle \\
+&\quad + \frac{1}{\sqrt{n!}}\sum_P\xi^P\langle x_{P(1)}|\psi_1\rangle\cdot\{\hat{A}\langle x_{P(2)}|\psi_2\rangle\}\cdot\cdots\cdot\langle x_{P(n)}|\psi_n\rangle + \cdots
+\end{split}\]
+
+Now that we can calculate each term in the single-particle space
+
+\[\begin{split}
+&\hat{A}_1(x_{P(j)},-i\frac{\partial}{\partial x_{P(j)}}\langle x_{P(j)}|\psi_j\rangle = \sum_{\alpha,\beta}\langle x_{P(j)}|\alpha\rangle A^{(1)}_{\alpha\beta}\langle\beta|\psi_j\rangle \\
+&= \sum_{\alpha,\beta}A^{(1)}_{\alpha\beta}\cdot\frac{1}{\sqrt{n1}}\sum_P\xi^P \times \\
+&\Big\{\langle x_{P(1)}|\alpha\rangle\langle\beta|\psi_1\rangle\langle x_{P(2)}|\psi_2\rangle\cdot\cdots\cdot\langle x_{P(n)}|\psi_n\rangle\\
+&\quad +\langle x_{P(1)}|\psi_1\rangle\langle x_{P(2)}|\alpha\rangle\beta|\psi_2\rangle\cdot\cdots\cdot\langle x_{P(n)}|\psi_n\rangle + \cdots\Big\}\\
+&=\sum_{\alpha,\beta}A_{\alpha\beta}^{(1)}\times\\
+&\Big\{\langle\beta|\psi_1\rangle\langle x_1,\cdots,x_n|\alpha,\psi_2,\cdots,\psi_n\rangle\\
+&\quad +\langle\beta|\psi_2\rangle\langle x_1,\cdots,x_n|\psi_1,\alpha,\cdots,\psi_n\rangle + \cdots\Big\}
+\end{split}\]
+
+Now that
+
+\[\begin{split}
+&a^\dagger(\alpha) a(\beta)|\psi_1,\psi_2,\cdots,\psi_n\rangle \\
+&= \sum_{k=1}^n\xi^{k-1}\langle \beta|\psi_k\rangle|\alpha,\psi_1,\cdots,\psi_{k-1},\psi_{k+1},\cdots,\psi_n\rangle\\
+&=\sum_{k=1}^n\langle\beta|\psi_k\rangle|\psi_1,\psi_2,\cdots,\psi_{k-1},\alpha,\psi_{k+1},\cdots,\psi_n\rangle
+\end{split}\]
+
+Thus
+
+\[=\sum_{\alpha,\beta}A_{\alpha\beta}^{(1)}\langle x_1,\cdots,x_n|a^\dagger(\alpha)a(\beta)|\psi_1,\cdots,\psi_n\rangle \]
+
+To summarize, we have
+
+\begin{align}
+\hat{A}\langle x_1,\cdots,x_n|\psi_1,\cdots,\psi_n\rangle = \langle x_1,\cdots,x_n|\sum_{\alpha,\beta}A_{\alpha\beta}^{(1)}a^\dagger(\alpha)a(\beta)|\psi_1,\cdots,\psi_n\rangle
+\end{align}
+
+From this, we can write the sum of the single-particle operator over all particles in terms of creation \& destruction operators as 
+
+\[\hat{A} = \sum_j\hat{A}^{(1)}({\bf x}_j,-i\frac{\partial}{\partial {\bf x}_j}) \]
+
+\begin{align}
+\rightarrow \hat{A} = \sum_{\alpha,\beta} A^{(1)}_{\alpha\beta}a^\dagger(\alpha)a(\beta)
+\end{align}
+
+where
+
+\[A^{(1)}_{\alpha\beta} = \int d{\bf x} \langle\alpha|{\bf x}\rangle\hat{A}^{(1)}({\bf x}, -i\frac{\partial}{\partial{\bf x}})\langle{\bf x}|\beta\rangle\]
+
+\hrule
+\smallskip
+\hrule
+
+
+\ 
+
+As a first example, we consider $A^{(1)} = 1$ (identity operator in the single-particle space) the sum of this over all particles can be expressed by the creation \& destruction operators as 
+
+\[\hat{A} = \sum_j \hat{1}\]
+\begin{align}
+\rightarrow\hat{A} = \sum_{\alpha,\beta}\langle\alpha|\hat{1}|\beta\rangle a^\dagger(\alpha)a(\beta) = \sum_{\alpha,\beta}\delta_{\alpha\beta}a^\dagger(\alpha)a(\beta) = \sum_\alpha a^\dagger(\alpha)a(\alpha)
+\end{align}%page78
+
+
 \section{Degenerate electron gas}
 
 

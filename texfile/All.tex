@@ -811,7 +811,7 @@ Namely, $|{\bf A}|$ is a determinant of ${\bf A}$ while ${\bf A}_+$ is a permane
 
 \ 
 
-One can prove this straightforwardly, %48
+One can prove this straightforwardly, 
 
 \[\begin{split}
 &\langle\varphi_1,\cdots,\varphi_n|\psi_1,\cdots,\psi_n\rangle =\frac{1}{n!}\sum_P\sum_Q\xi^P\xi^Q\langle\varphi_{P(1)}|\psi_{Q(1)}\rangle\cdots\langle\varphi_{P(n)}|\psi_{Q(n)}\rangle \\
@@ -1237,11 +1237,219 @@ As a first example, we consider $A^{(1)} = 1$ (identity operator in the single-p
 \[\hat{A} = \sum_j \hat{1}\]
 \begin{align}
 \rightarrow\hat{A} = \sum_{\alpha,\beta}\langle\alpha|\hat{1}|\beta\rangle a^\dagger(\alpha)a(\beta) = \sum_{\alpha,\beta}\delta_{\alpha\beta}a^\dagger(\alpha)a(\beta) = \sum_\alpha a^\dagger(\alpha)a(\alpha)
-\end{align}%page78
+\end{align}
 
+Using other basis, we can rewrite this into
+
+\begin{align}
+\begin{split} 
+&=\int d^3{\bf x}\int d^3{\bf x'}\underset{\delta^3(\bf x-x')}{\langle\bf x|x'\rangle}a^\dagger({\bf x})a({\bf x})\\
+&=\int d^3{\bf x}a^\dagger{\bf x}a({\bf x'})
+\end{split}\\
+\begin{split}
+&=\int \frac{d^3{\bf p}}{(2\pi)^3}\int \frac{d^3\bf p'}{(2\pi)^3}\underset{(2\pi)^3\delta^3(\bf p - p')}{\langle\bf p|p'\rangle}a^\dagger({\bf p})a({\bf p'})\\
+&=\int \frac{d^3\bf p}a^\dagger({\bf p})a({\bf p})
+\end{split}
+\end{align}
+
+Next consider the momentum operator in the single-particle space
+
+\[{\bf P}^{(1)} = \int \frac{d^3\bf p}{\bf p|p\rangle\langle p|} = \int d^3{\bf x}|{\bf x}\rangle(-i)\frac{\partial}{\partial{\bf x}}\langle\bf x|  \]
+
+We have for the total momentum
+
+\begin{align}
+\begin{split}
+{\bf P} &=  \int \frac{d^3\bf p}{\bf p}a^\dagger({\bf p})a({\bf p})\\& = \int d^3{\bf x}a^\dagger({\bf x})\frac{\partial}{i\partial\bf x}a(\bf x)
+\end{split}
+\end{align}
+
+Finally, consider the Hamiltonian for a single particle:
+
+\[H^{(1)}=\frac{\bf p^2}{2m}+V(\bf x) \]
+
+In the coordinate representation, this is given by
+
+\[\langle{\bf x}|H^{(1)}|{\bf x'}\rangle = -\frac{1}{2m}\nabla_{\bf x}^2\delta({\bf x-x'})+V({\bf x})\delta(\bf x - x') \]
+
+Thus, the sum of this over all particles are given by the creation \& destruction operators in this way
+
+\begin{align}
+\begin{split}
+H &= \int d^3{\bf x}d^3{\bf x'}a^\dagger({\bf x})\left[-\frac{\nabla_{\bf x}^2}{2m}\delta({\bf x-x'})+V({\bf x})\delta({\bf x - x'})\right]a(\bf x')\\
+&=\int d^3{\bf x}a^\dagger({\bf x})\left[-\frac{\nabla_{\bf x}^2}{2m}+V({\bf x})\right]a(\bf x)
+\end{split}
+\end{align}
+
+In the momentum representation, it takes the form of
+
+\begin{align}
+=\int\frac{d^3\bf p}{(2\pi)^3} \frac{\bf p^2}{2m}a^\dagger({\bf p})a({\bf p})+\int\frac{d^3\bf p}{(2\pi)^3}\int\frac{d^3\bf q}{(2\pi)^3}\tilde{V}({\bf q})a^\dagger({\bf p+q})a({\bf p})
+\end{align}
+
+where 
+
+\[\tilde{V}({\bf q}) \equiv\int d^3{\bf x} V({\bf x})e^{-i\bf q\cdot x} \]
+
+If we use a basis of eigenstate of $H^{(1)}$
+
+\[\langle\alpha|H^{(1)}|\beta\rangle = E_\alpha\delta_{\alpha\beta} \]
+
+it takes the form of
+
+\begin{align}
+=\sum_\alpha E_\alpha a^\dagger(\alpha)a(\alpha)
+\end{align}
+
+The density of particles per unit volume at the point $\bf x$ is defined as 
+
+\[\hat{\rho}({\bf x}) = \sum_j\delta({\bf x - x}_j),\quad j\text{, the particle index} \]
+
+In terms of the creation \& annihilation operators in the coordinate representation, 
+
+\[\hat{\rho}({\bf x}) = \int d^3{\bf y}\int d^3{\bf y'}a^\dagger({\bf y})a({\bf y'})\times\langle{\bf y}|\hat{\rho}(\bf x)|y'\rangle \]
+
+where
+
+\begin{align}
+\begin{split}
+&\langle {\bf y}|\hat{\rho}({\bf x})|{\bf y'}\rangle\\
+&=\int d^3{\bf y''}\delta^3({\bf y - y''})\delta^3){\bf y'-y''})'delta(\bf x - y'')\\
+&=\delta^3({\bf y - x})\delta^3(\bf y' - x)\\
+&=a^\dagger({\bf x})a(\bf x)
+\end{split}
+\end{align}
+
+In fact, total number of particles is defined as the integral of this over ${\bf x}_j$
+
+\begin{align}
+\hat{N}=\int d^3{\bf x}\hat{\rho}({\bf x}) = \int d^3{\bf x}a^\dagger({\bf x})a(\bf x)
+\end{align}
+
+which is consistant with the previous expression for $\hat{N}$
+
+In terms of this density operator, the $2$nd term in equation can be given as the integral of the potential energy weighted by the density
+
+\[V = \int d^3{\bf x}V({\bf x})\hat{\rho}(\bf x) \]
+
+So far, we have described a system of independent particles, where two or more particles are not influencing one another. 
+
+In the following, we will develop how interactions between particles are described in the $2$nd quantization language. 
+
+\begin{wrapfigure}{l}{6cm}%????????
+\includegraphics[width = 4.5cm]{1-3.png}
+\end{wrapfigure}
+
+As the simplest but likely the most relevant situation, suppose that any pair of two indistinguishable particles are interacting with each other in terms of ``two-body'' interaction potential
+
+\begin{align}
+\hat{V} \overset{def}{\equiv}\sum_{i<j}V^{(2)}({\bf x}_i,{\bf x}_j)
+\end{align}
+
+with
+
+\[V^{(2)}({\bf x,y}) = V^{(2)}({\bf y,x}) \]
+
+We assume that the interaction potential depends only on the spatial coordinates of two particles. 
+
+\begin{align}
+\begin{split}
+\hat{V}|{\bf x}_1,\cdots,{\bf x}_n\rangle &= \sum_{i<j}V^{(2)}({\bf x}_i,{\bf x}_j)|{\bf x_1},\cdots,{\bf x}_n\rangle\\
+&=\frac{1}{2}\sum_{i,j}V^{(2)}({\bf x}_i,{\bf x}_j)|{\bf x_1},\cdots,{\bf x}_n\rangle
+\end{split}
+\end{align}
+
+Here is a multiparticle states for $5$ indistinguishable particles, which are located at ${\bf x}_1,{\bf x}_2,{\bf x}_3,{\bf x}_4,{\bf x}_5$, and represented by$|{\bf x}_1,{\bf x}_2,{\bf x}_3,{\bf x}_4,{\bf x}_5\rangle$
+
+In terms of creation \& annihilation operators, this is given as follow
+
+\begin{align}
+V = \frac{1}{2}\int d^3{\bf x}\int d^3{\bf y}V^{(2)}({\bf x,y})a^\dagger({\bf x})a^\dagger({\bf y})a({\bf y})a({\bf x})
+\end{align}
+
+This can be verified by applying $V$ to $|{\bf x}_1,\cdots,{\bf x}_n\rangle$. 
+
+\[\begin{split}
+&a({\bf y})a({\bf x})|{\bf x}_1,\cdots,{\bf x}_n\rangle\\
+&=a({\bf y})\sum_{k=1}^n\xi^{k-1}\delta^3({\bf x - x}_k)|{\bf x}_1,\cdots,{\bf x}_{k-1}{\bf x}_{k+1},\cdots,{\bf x}_n\rangle
+\end{split}\]
 
 \section{Degenerate electron gas}
 
+So far, we have reviewed the $2$nd quantization. From the nextt weeks, we will study interacting fermi systems using $2$nd quantization Language. More specifically, we will often study a simple model that provides a first approximation to a metal. This system is an interacting electron gas placed in a uniformly distributed positive background. Because of the positive background, the total system is ensured to be neutral. In a real metal, the positive charge is localized in the ionic cores, whose dynamical motion must also be included in the calculation. 
+
+However, these positive ions are usually much heavier than the electrons, so that it is permissible to neglect to ionic motions entirely. In contrast, the assumption of a uniform background is more drastic. In this sense, the present model can provide only a qualitative account of real metals in solids. 
+
+We are interested in the properties of the bulk medium. Thus, it is convenient to enclose the system in a large cubic box with sides of length ``$L$''. The limit $L\rightarrow\infty$ will be taken at the end of the calculation. 
+
+In a uniform infinite medium, all the physical properties must be invariant under spatial translation. This observation suggests the use of periodic boundary condition on the single-particle state;
+
+\begin{align}
+psi_{k,\lambda}({\bf x}) = \frac{1}{\sqrt{V}}e^{i\bf k\cdot x}\eta_{\lambda}
+\end{align}
+
+$V(\equiv L^3)$ is the volume of the box, $\eta_\lambda$ with $\lambda = \uparrow,\downarrow$ are the two spin functions for spin-up and spin-down
+
+\begin{align}
+\eta_\uparrow = \left(\begin{matrix}1\\0\end{matrix}\right),\eta_\downarrow = \left(\begin{matrix}0\\1\end{matrix}\right)
+\end{align}
+
+The periodic boundary condition determines the allowed wavelengths as
+
+\begin{align}
+{\bf k} = \frac{2\pi}{L}(n_x,n_y,n_z)
+\end{align}
+
+with $n_x,n_y,n_x = 0,\pm1,\pm2,\cdots,\pm\frac{L}{2}$. 
+
+The total Hamiltonian of the system consists of three terms:
+
+\begin{align}
+H = H_el+H_b+H_{el-b}
+\end{align}
+
+where $H_{el}$ is the hamiltonian for the electrons:
+
+\begin{align}
+H_{el} = \sum_{i=1}^N\frac{P_i^2}{2m}+\frac{e^2}{2}\sum_{i\neq j}^N\frac{e^{-\mu|{\bf r}_i - {\bf r}_j|}}{|{\bf r}_i - {\bf r}_j|}
+\end{align}
+
+$H_b$ is the energy of the positive background whose particle density is $n(\bf x)$
+
+\begin{align}
+H_b = \frac{e^2}{2}\iint d^3{\bf x}d^3{\bf x'}\frac{n({\bf x})n({\bf x'})e^{-\mu|\bf x-x'|}}{|\bf x-x'|}
+\end{align}
+
+$H_{el-b}$ is the interaction energy between the electrons and the positively charged background
+
+\begin{align}
+H_{el-b} = -e^2\sum_{i=1}^N\int d^3{\bf x}\frac{n({\bf x})e^{-\mu|{\bf x-r}_i|}}{|{\bf x - r}_i|}
+\end{align}
+
+We have inserted an exponential convergence factor $\mu$ to define the integrals and this $\mu$ will be taken to be zero in the very end of the analysis. Because of the long-range nature of the coulomb interaction, these three terms ``individually'' diverge in the thermodynamics limit
+
+($N\rightarrow\infty, V\rightarrow\infty$ with $n = N/V$ fixed)
+
+However, the entire system is electrically neutral, so that the sum of these three terms must remains finite and meaningful in this limit. 
+
+The convergence factor $\mu$ allows us to make this cancellation explicitly. 
+
+Thus, our limiting procedure is firstly take the thermodynamic limit 
+
+($N\rightarrow\infty, V\rightarrow\infty$ with $n = N/V$ fixed)
+
+and then take $\mu\rightarrow0$. 
+
+Equivalently, we can assume that $\mu^{-1}\ll L$ at each step of our following calculation. 
+
+Now that the positive background $n(\bf x)$ is static, $H_b$ is a pure $c$-number, which can be easily evaluated for a uniform distribution of $n({\bf x})\equiv\frac{N}{V}$
+
+\begin{align}
+\begin{split}
+H_b &=\frac{e^2}{2}\left(\frac{N}{V}\right)^2\iint d^3{\bf x}d^3{\bf x'}\frac{e^{-\mu|\bf x-x'|}}{|\bf x-x'|}\\
+&=\frac{e^2}{2}\left(\frac{N}{V}\right)^2\int d^3{\bf x}\int d^3{\bf x}\frac{e^{-\mu|\bf z|}}{|\bf x|}
+\end{split}
+\end{align}%page99
 
 
 \chapter{Green's function and field theory at zero temperature}
@@ -1456,9 +1664,75 @@ Notice that
 
 Under the $2$nd condition of rotation-free, the Lagrangian can be rewritten into the following:
 
-\[L_0 = \frac{1}{2}\sum_{i,j}\int d^3\bm{x}\int dt \left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_i}\frac{\partial d_j}{\partial x_j}\right] (=\int dt \tilde{L}_0 \]
+\[L_0 = \frac{1}{2}\sum_{i,j}\int d^3\bm{x}\int dt \left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_i}\frac{\partial d_j}{\partial x_j}\right] (=\int dt \tilde{L}_0) \]
 
 To see this, let us begin with the following identity:
+
+\[(\nabla\times\vec{d})\cdot(\nabla\times\vec{d}) = 0 \]
+
+\[\epsilon_{ijk}\partial_j d_k\epsilon_{ilm}\partial_l d_m = 0 \]
+
+\[(\delta_{il}\delta_{km} - \delta_{jm}\delta_{kl})\partial_j d_k\partial_l d_m = 0 \]
+
+\[\sum_{i,j = 1,2,3} \partial_j d_i \partial_j d_i - \sum_{i,j}\partial_j d_i \partial_i d_j = 0 \]
+
+Under the space integral, we can take a partial integral of the $2$nd term in the left hand side
+
+\[\sum_{i,j}\int d^3{\bf x}[\partial_j d_i\partial_j d_i+(\partial_j\partial_i d_i)d_j] = 0 \]
+
+\[\sum_{i,j}\int d^3{\bf x}[(\partial_j d_i)(\partial_j d_i) - (\partial_i d_i)(\partial_j d_j)] = 0 \]
+
+The final identity allows us to rewrite this into this
+
+\hrule
+
+\ 
+
+So far, we have treated the classical action. To second-quantize this classical degree's of freedom, we follow the exactly the same procedure we formulated in chapter 1. 
+
+Namely, we first introduce a momentum variable which is conjugate the displacement field
+
+\[\Pi_j = \frac{\delta L_0}{\delta \dot{d}_j} = \rho_m\dot{d}_j \]
+
+Or equivalently 
+
+\[\tilde{\Pi}_j\equiv\frac{1}{\sqrt{\rho_m}}\Pi_j,\quad \tilde{d}_j\equiv\sqrt{\rho_m}d_j \]
+
+with 
+
+\[\tilde{\Pi}_j = \frac{\delta L_0}{\delta\dot{\tilde{d}}_j} = \dot{\tilde{d}}_j \]
+
+Then the Hamiltonian is given by 
+
+\[\begin{split}
+H_0 &= \int d^3{\bf x}\tilde{\Pi}_j\dot{\tilde{d}}_j - \tilde{L}_0\\
+ &=\frac{1}{2}\int d^3{\bf x}\tilde{\Pi}_j({\bf x})\tilde{\Pi}_j({\bf x}) + \frac{1}{2}\int d^3{\bf x}\frac{B}{\rho_m}(\nabla\cdot\tilde{\bf d}{\bf(x)})^2\\
+ & \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \frac{B}{\rho_m} = c^2
+\end{split}\]
+
+To quantize these field operators we suppose that $\tilde{\bf d}(\bf x)$ and $\tilde{\Pi}(\bf x)$ are hermite operators, which satisfy the following commutation relation
+
+\[[\tilde{\Pi}_j({\bf x}),\tilde{\Pi}_m({\bf x'})] = [\tilde{\bf d}_j({\bf x}),\tilde{\bf d}_m({\bf x'})] = 0 \]
+
+\[[\tilde{\bf d}_j({\bf x}), \tilde{\Pi}_m({\bf x'})] = i\hbar\delta_{jm}\delta^3(\bf x-x') \]
+
+As we did in the chapter 1, it is much useful to introduce their Fourier series:
+
+\[\begin{cases}
+\tilde{\bf d}_j({\bf k}) &= \displaystyle\int d^3{\bf x}\tilde{\bf d}_j({\bf x}) e^{-i\bf k\cdot x}\\
+\ & \\
+\tilde{\Pi}_j({\bf k}) &= \displaystyle\int d^3 {\bf x} \tilde{\Pi}_j({\bf x}) e^{-i\bf k\cdot x}
+\end{cases}\]
+
+where the inverse is
+
+\[\begin{cases}
+\tilde{\bf d}_j({\bf x}) &= \displaystyle\int d^3{\bf k}\tilde{\bf d}_j({\bf k}) e^{i\bf k\cdot k}\\
+\ & \\
+\tilde{\Pi}_j({\bf x}) &= \displaystyle\int d^3 {\bf k} \tilde{\Pi}_j({\bf k}) e^{i\bf k\cdot k}
+\end{cases}\]
+
+%page848
 \section{Electron-phonon interaction} \label{se5-2}
 
 \chapter{Application to superconductivity}

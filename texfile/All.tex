@@ -15,6 +15,7 @@
 \usepackage{bibentry}
 \usepackage{multirow}
 \usepackage{tikz}
+\usepackage{cancel}
 \usepackage[CJKbookmarks=true]{hyperref}
 \usepackage{url}
 \usepackage{ulem}
@@ -1371,8 +1372,87 @@ This can be verified by applying $V$ to $|{\bf x}_1,\cdots,{\bf x}_n\rangle$.
 
 \[\begin{split}
 &a({\bf y})a({\bf x})|{\bf x}_1,\cdots,{\bf x}_n\rangle\\
-&=a({\bf y})\sum_{k=1}^n\xi^{k-1}\delta^3({\bf x - x}_k)|{\bf x}_1,\cdots,{\bf x}_{k-1}{\bf x}_{k+1},\cdots,{\bf x}_n\rangle
+&=a({\bf y})\sum_{k=1}^n\xi^{k-1}\delta^3({\bf x - x}_k)|{\bf x}_1,\cdots,{\bf x}_{k-1}{\bf x}_{k+1},\cdots,{\bf x}_n\rangle\\
+&=\sum_{k=1}^n\xi^{k-1}\delta^3({\bf x-x}_k)\sum_{j=1,j\neq k}^n\eta_{jk}\delta^3({\bf y-x}_j)|{\bf x}_1,\cdots,(\text{no }{\bf x}_j\text{ and no }{\bf x}_k),\cdots,{\bf x}_n\rangle
 \end{split}\]
+
+where
+
+\[\eta_{jk}=\begin{cases}
+\xi^{j-1},\ \text{if }j<k\\
+\ \\
+\xi^{j-1},\ \text{if }j<k\\
+\end{cases} \]
+
+Then
+
+\begin{align}
+\begin{split}
+&a^\dagger({\bf x})a^\dagger({\bf y})a({\bf y})a({\bf x})|{\bf x}_1,\cdots,{\bf x}_n\rangle\\
+&=\sum_{j\neq k}\xi^{k-1}\eta_{jk}\delta^3({\bf x - x}_k)\delta^3({\bf y - x}_j)|\underset{{\bf x}_k}{\xout{\bf x}},\underset{{\bf x}_j}{\xout{\bf y}},{\bf x}_1,\cdots,(\text{no }{\bf x}_j,{\bf x}_k),\cdots,{\bf x}_n\rangle\\
+&=\sum_{j\neq k}\delta^3({\bf x-x}_k)\delta^3({\bf y - x}_j)|{\bf x}_1,\cdots,{\bf x}_n\rangle
+\end{split}
+\end{align}
+
+Multiplying by $\frac{1}{2}V^{(2)}(\bf x,y)$ and integrate over $\bf x$ and $\bf y$, we obtain this, so that this is correct. 
+
+We might expect that the mutal interaction could also be described in terms of the particle density by
+
+\begin{align}
+V'=\frac{1}{2}\int d^3{\bf x}\int d^3{\bf y}V^{(2)}({\bf x,y})\hat{\rho}({\bf x})\hat{\rho}(\bf y)
+\end{align}
+
+with $\hat{\rho}({\bf x}) = a^\dagger({\bf x})a(\bf x)$
+
+However, $V'$ is not quite the same as $V$ since 
+
+\[\begin{split}
+\rho({\bf x})\rho({\bf y}) &= a^\dagger({\bf x})a({\bf x})a^\dagger({\bf y})a({\bf y})\\
+&=\xi a^\dagger({\bf x})a^\dagger({\bf y})a({\bf x})a({\bf y}) + \delta^3({\bf x-y})a^\dagger({\bf x})a({\bf y})\\
+&= a^\dagger({\bf x})a^\dagger({\bf y})a({\bf y})a({\bf x}) + \delta^3({\bf x-y})a^\dagger({\bf x})a({\bf y})
+\end{split}\]
+
+so that
+
+\[V' = V+\frac{1}{2}\int d^3{\bf x}V^{(2)}({\bf x,x})\hat{\rho}(\bf x) \]
+
+Namely, $V'$ differs from $V$ by this extra term, which contributes to energy even when there is only one particle present. 
+
+The true mutal interaction, which is $\hat{V}$, is zero unless there are two or more particles. 
+
+We want only the mutal interaction, because this extra term can be included into the potential energy term appearing in the single-particle Hamiltonian. 
+
+Moreover, for many physically relevant two-body interaction potentials, such as coulomb potential, $V'$ is infinite and is not what we would consider to be the true energy. 
+
+\hrule
+
+\ 
+
+When we assume the two-body interaction potential depends only on spatial distance between two particles, 
+
+\[V^{(2)}({\bf x,y}) = V({\bf x-y}) = V({\bf y-x}) \]
+
+We can rewrite this mutual interaction part in terms of momentum representation
+
+\begin{align}
+\hat{V} = \frac{1}{2}\int\frac{d\bf q}{(2\pi)^3}\frac{d\bf p}{(2\pi)^3}\frac{d\bf p'}{(2\pi)^3}\tilde{V}({\bf q})a^\dagger({\bf p+q})a^\dagger({\bf p'-q})a({\bf p'})a({\bf p})
+\end{align}
+
+\begin{wrapfigure}{r}{5.5cm}
+\includegraphics[width = 4.6cm]{1-4.png}
+\end{wrapfigure}
+
+where
+
+\[\tilde{V}({\bf q})\equiv\int d^3{\bf x}V({\bf x})e^{_i\bf q\cdot x} \]
+
+Note that this adds momentum $\bf q$ to one particle while substracts the same momentum $\bf q$ from the other with the amplitude of $\tilde{V}({\bf q})$
+
+\begin{align}
+\hat{V}|{\bf p}_1,{\bf p}_2\rangle = \frac{d\bf q}{(2\pi)^3}\tilde{V}({\bf q})|{\bf p}_1+{\bf q,p}_2-{\bf q}\rangle
+\end{align}
+
+This process is denoted by this diagram which is often called as Feynman diagram. 
 
 \section{Degenerate electron gas}
 
@@ -1462,24 +1542,14 @@ H_b &=\frac{e^2}{2}\left(\frac{N}{V}\right)^2\iint d^3{\bf x}d^3{\bf x'}\frac{e^
 \input{SHIZHEN}
 
 
-\chapter{Field theory at finite temperature}
-
-\section{Temperature (Matsubora) Green's function}
-\section{Temperature Green's function in the interaction picture}
-\section{Wick's theorem for the temperature Green's function}
-\section{Feynman's rule for the temperature Green's function}
-\section{Dyson's equation \& Hartree-Fock approximation}
-\section{Specific heat of an imperfect Fermi gas at low-temperature}
-\section{Real-time Green's function and generalized Lehmann representation}
-\section{Linear response at finite temperature}
-\section{Screening effect \& plasma oscillation in an electron gas at finite (or high) temperature}
+\input{PP}
 
 
 \chapter{Application to electron-phonon systems}
 
 \section{Non-interacting phonon system and Debye theory of specific heat}
 
-\begin{wrapfigure}{l}{5.5cm}%????????
+\begin{wrapfigure}{l}{5.5cm}
 \includegraphics[width = 5cm]{5-1.png}
 \end{wrapfigure}
 
@@ -1733,7 +1803,38 @@ where the inverse is
 \end{cases}\]
 
 %page848
+
+Since $\tilde{\bf d}_j({\bf x})$ \& $\tilde{\Pi}_j({\bf x})$ are both Hermite operators, we have
+
+\[\begin{cases}
+\tilde{\bf d}_j({\bf k}) &= \tilde{\bf d}_j({-\bf k})\\
+\ & \\
+\tilde{\Pi}_j({\bf k}) = \tilde{\Pi}_j(-\bf k)
+\end{cases}\]
+
+In terms of these Fourier series, the Hamiltonian can be partially diagonalized. 
+
+\[\begin{split}
+\hat{H}_0 &= \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k}) + \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3} c^2({\bf k}_j\tilde{\bf d}_j({\bf k}))({\bf k}_m\tilde{\bf d}_m(-{\bf k})\\
+&=\int\frac{d^3{\bf k}}{(2\pi)^3}[\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k})+\underset{\omega_{\bf k}^2}{c^2{\bf k}^2}(\hat{\bf k}_j\tilde{\bf d}_j({\bf k}))(\hat{\bf k}_m\tilde{\bf d}_m(-{\bf k}))
+\end{split}\]
+
+where $\hat{\bf k}_j \equiv {\bf k}_j/k,\quad k\equiv|\bf k|$. 
+
+Note that
+
+\[\tilde{\Pi}_j({\bf x}) = \partial_t\tilde{\bf d}_j(\bf x) \]
+
+So that the conjugate momentum as well as the displacement field is rotation free, 
+
+%page850
+
 \section{Electron-phonon interaction} \label{se5-2}
+
+So far, we have studied how the acoustic waves are second-quantized into a quadratic boson Hamiltonian. We next study the interaction between the longitudinal acoustic phonon and electron
+
+
+
 
 \chapter{Application to superconductivity}
 
@@ -2183,6 +2284,6 @@ Thus, the right hand side acquires a cut off:
 \newpage
 
 \chapter*{Work Distribution}
-SiZhen-Wang works for chapter 2 section 6 to 8 and chapter 3. ZeYang-Li works for chapter 1, chapter 5 section 1 and chapter 6. 
+SiZhen-Wang works for chapter 2 section 6 to 8 and chapter 3. ZeYang-Li works for chapter 1, chapter 5 section 1 and chapter 6. Pai Peng works for chapter 4. 
 
 \end{document}

@@ -1,0 +1,1701 @@
+\chapter{Field theory at finite temperature}
+Field theory at zero-temperature uses single-particle Green's function, which provides us both ground state properties and excitation state properties.
+
+Field theory at finite temperature also extensively use analogous single-particle Green's function, which is, however, more complicated that that at the zero temperature.
+
+More specifically. we first define what we called "temperature Green's function".
+
+For this "temperature Green's function", we can employ a simple perturbation expansion, which has a quite similar structure as that of the zero-temperature.
+
+This function allow us to evaluate equilibrium thermodynamic properties.
+
+We next introduce what we called "real-time Green's function", which describes linear response of the system subjected under an external perturbation.
+
+Contrary to the "temperature Green's function", we cannot employ a simple perturbation expansion for the "real-time Green's function".
+
+However, as we did for the zero-temperature case, these two Green's functions are related to each other, by what we called "generalized Lehmann representation".
+
+Therefore, the linear response of the system can be also calculated from the temperature-Green's function, with the help of this representation.
+
+Using a couple of weeks, we will learn these concepts and study important physical properties of the degenerate electron gas and imperfect Fermi gas at a finite temperature.
+\vspace{1cm}
+
+\begin{tabular*}{15cm}[t]{p{5.5cm}p{4.3cm}p{5cm}}
+\textbf{``temperature Green's func.''} & \multirow{3}{5cm}{$$\xlongleftrightarrow{generalized\ Lehmann\ rep.}$$ }& \textbf{``real-time Green's func.''}\\
+
+simple perturbation expansion & &\multirow{2}{5cm}{linear response to an external perturbation}\\
+
+equilibrium therodynamic property &\\
+
+\end{tabular*}
+\vspace{1cm}
+
+%p610
+\section{Temperature (Matsubora) Green's function}
+
+We use the grand canonical ensemble.
+%\begin{equation}
+$$\hat{K}=\hat{H}-\mu\hat{N}$$
+%\end{equation}
+where $\mu$ denote the chemical potential.
+The partition function and statistical density operator is given by
+%\begin{equation}
+\begin{align}
+Z_{G} & =e^{\beta\Omega}=Tr[e^{\beta \hat{K}}] \\
+\rho_{G} & =Z_{G}e^{\beta\hat{K}}=Tr[e^{\beta (\Omega-\hat{K})}]
+\end{align}
+%\end{equation}
+Where $\beta \equiv 1/k_{B}T$ with T being temperature.
+Trace here is taken over all possible states, in the Hilbert space, which ranges over subspaces of different total number of particles.
+Suppose that $\hat{O}_{s}(\mathbf{x})$ denotes any operator in the Schrodinger picture.
+%p611
+Field theory at finite temperature begins with the Heisenberg picture in the "imaginary-time" coordinate $\tau$
+\begin{equation}
+\hat{O}_{K}(\mathbf{x},\tau)\equiv e^{\frac{K\tau}{\hbar}}\hat{O}_s(\mathbf{x})e^{-\frac{K\tau}{\hbar}}
+\end{equation}
+If $\tau$ is interpreted as a pure imaginary value $\tau=it$ (t : real), the resulting operator is formally identical to the usual Heisenberg picture.
+$$\hat{O}_{K}(\mathbf{x},\tau=it)= e^{i\frac{Kt}{\hbar}}\hat{O}_s(\mathbf{x})e^{-i\frac{Kt}{\hbar}}$$
+For this reason, we often call $\tau$ as "imaginary-time", and call this operator as imaginary time operator.
+\uuline{But} we always treat this $\tau$ as a real-valued quantity. Unless we dictate explicitly $\tau=it$
+%p612
+In this Heisenberg picture, the creation \& annihilation operator are no longer adjoint to each other.
+\begin{equation}
+\left\{
+\begin{aligned}
+\psi^{\dagger}_{\mathbf{K},\alpha}(\mathbf{x},\tau) &=e^{\hat{K}\tau/\hbar}\psi^{\dagger}_{\alpha}(\mathbf{x})e^{-\hat{K}\tau/\hbar}\\
+\psi_{\mathbf{K},\alpha}(\mathbf{x},\tau) &=e^{\hat{K}\tau/\hbar}\psi_{\alpha}(\mathbf{x})e^{-\hat{K}\tau/\hbar}\\
+\end{aligned}
+\right.
+\end{equation}
+$$(\psi_{\mathbf{K},\alpha}(\mathbf{x},\tau))^{\dagger}=e^{-\hat{K}\tau/\hbar}\psi_{\alpha}^{\dagger}(\mathbf{x})e^{\hat{K}\tau/\hbar}
+\not=\psi^{\dagger}_{\mathbf{K},\alpha}(\mathbf{x},\tau)$$
+($\because \tau : real$)
+In terms of these imaginary-time operators, the single-particle temperature Green's function is defined as follows.
+%p613
+\begin{equation}
+g(\mathbf{x},\tau;\mathbf{x'},\tau')\equiv-Tr[\hat{\rho}_{G}T_{\tau}\{\hat{\psi}_{K\alpha}(\mathbf{x},\tau)\hat{\psi}_{K\alpha}^{\dagger}(\mathbf{x'},\tau')\}]
+\end{equation}
+where $\rho_{G}$ is the statistical density operator.
+Both $\tau\ \&\ \tau'$ are defined to range from $0$ to $\beta\hbar$; $0\leq\tau\tau'\leq\beta\hbar$
+The symbol $T_{\tau}$ is the time ordered operator.
+$$
+{T_{\tau}\{\hat{\psi}_{K\alpha}(\mathbf{x},\tau)\hat{\psi}_{K\alpha}^{\dagger}(\mathbf{x'},\tau')\}=}
+\begin{cases}
+\hat{\psi}_{K\alpha}(\mathbf{x},\tau)\hat{\psi}_{K\alpha}^{\dagger}(\mathbf{x'},\tau') , &\beta\hbar\geq\tau\tau'\geq 0, \\
+\pm\hat{\psi}_{K\alpha}^{\dagger}(\mathbf{x'},\tau')\hat{\psi}_{K\alpha}(\mathbf{x},\tau) , &\beta\hbar\geq\tau'\tau\geq 0.
+\end{cases}
+$$
+where "+" is for boson fields and "-" is for fermion fields.
+More generally, this time-order operator includes the sign factor associated with the number of permutations of fermion fields
+$$
+\begin{aligned}
+&T_{\tau}\{\psi(\tau_{1})\psi(\tau_{2})...\psi(\tau_{N})\}=(\pm1)^{P}\psi(\tau_{p(1)})\psi(\tau_{p(2)})...\psi(\tau_{p(N)})\\
+&for\ \beta\hbar\ge\tau_{p(1)}ge\tau_{p(2)}...\ge\tau_{p(N)}\ge0
+\end{aligned}
+$$
+%614
+When the Hamiltonian has no explicit time dependence, the temperature Green's function thus defines depens only on $\tau-\tau'$, instead of on $\tau$ and $\tau'$ separately.
+\begin{equation}
+\begin{aligned}
+&g(\mathbf{x},\tau;\mathbf{x'},\tau')\\
+&=-\theta(\tau-\tau')\frac{1}{Z_{G}}Tr[e^{-\beta\hat{K}}e^{\hat{K}\tau/\hbar}\psi_{\alpha}(\mathbf{x})
+e^{-\hat{K}(\tau-\tau')/\hbar}\psi_{\beta}^{\dagger}(\mathbf{x'})e^{-\hat{K}\tau'/\hbar}]\\
+&\quad\mp\theta(\tau'-\tau)\frac{1}{Z_{G}}Tr[e^{-\beta\hat{K}}e^{\hat{K}\tau'/\hbar}\psi_{\beta}^{\dagger}(\mathbf{x'})
+e^{-\hat{K}(\tau'-\tau)/\hbar}\psi_{\alpha}(\mathbf{x})e^{-\hat{K}\tau/\hbar}]\\
+&=-\theta(\tau-\tau') \frac{1}{Z_{G}} Tr[e^{-\beta\hat{K}} e^{\hat{K}(\tau-\tau')/\hbar}\psi_{\alpha}(\mathbf{x})
+e^{-\hat{K}(\tau-\tau')/\hbar}\psi_{\beta}^{\dagger}(\mathbf{x'})]\\
+&\quad\mp\theta(\tau'-\tau)\frac{1}{Z_{G}}Tr[e^{-\beta\hat{K}}e^{\hat{K}(\tau'-\tau)/\hbar}\psi_{\beta}^{\dagger}(\mathbf{x'})
+e^{-\hat{K}(\tau'-\tau)/\hbar}\psi_{\alpha}(\mathbf{x})]
+\end{aligned}
+\end{equation}
+%p615
+As in the zero-temperature field theory, the ensemble average of any one-body operator is given by the single-particle temperature Green's function.
+For example, the ensemble average of the density operator at $\mathbf{x}$ is calculated as
+\begin{equation}\label{eq4.1.7}
+\begin{aligned}
+\langle\hat{n}(\mathbf{x})\rangle&\equiv\frac{1}{Z_{G}}\sum_{\alpha}Tr[e^{-\beta\hat{K}}\psi_{\alpha}^{\dagger}(\mathbf{x})\psi_{\alpha}(\mathbf{x})]\\
+&=\mp\sum_{\alpha}g_{\alpha\alpha}(\mathbf{x},\tau;\mathbf{x},\tau+)\\
+&=\mp\uline{tr}{g}_{\alpha\alpha}(\mathbf{x},\tau;\mathbf{x},\tau+)
+\end{aligned}
+\end{equation}
+where $\tau+$ means a time slightly larger than $\tau$. The trace mark with small letter t is the trace over the spin index $\alpha$, while the trace marked with capital letter T is taken over all possible states in the Hilbert space.\\
+%p616
+Similarly, ensemble average of the current operator is given by
+\begin{equation}
+\begin{aligned}
+\langle\hat{j}(\mathbf{x})\rangle& \equiv Tr[\hat{\rho}_{G}\hat{j}(\mathbf{x})]\\
+&=\sum_{\alpha\beta}Tr[\hat{\rho}_{G}\hat{\psi}_{\beta}^{\dagger}(\mathbf{x})\mathbf{J}_{\beta\alpha}(\mathbf{x})\hat{\psi}_{\alpha}(\mathbf(x))]\\
+&=\sum_{\alpha\beta}\lim_{\mathbf{x'}\rightarrow\mathbf{x}}\mathbf{J}_{\beta\alpha}(\mathbf{x})Tr[\hat{\rho}_{G}\hat{\psi}_{\beta}^{\dagger}(\mathbf{x})\hat{\psi}_{\alpha}(\mathbf(x))]\\
+&=\mp\sum_{\alpha\beta}\lim_{\mathbf{x'}\rightarrow\mathbf{x}}\mathbf{J}_{\beta\alpha}(\mathbf{x}) {g}_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x'},\tau+)\\
+&=\mp\lim_{\mathbf{x'}\rightarrow\mathbf{x}}tr[\mathbf{J}(\mathbf{x}) {g}(\mathbf{x},\tau;\mathbf{x'},\tau+)]
+\end{aligned}
+\end{equation}
+Similarly, ensemble average of the kinetic energy is given by
+\begin{equation}
+\begin{aligned}
+\langle\hat{T}\rangle & \equiv Tr\left[\hat{\rho}_{G}\int d^{3}\mathbf{x} \hat{\psi}_{\alpha}^{\dagger}(\mathbf{x}) \left(-\frac{\hbar^{2}\nabla^{2}}{2m}\right) \hat{\psi}_{\alpha}(\mathbf{x})\right]\\
+&=\mp\int d^{3}\mathbf{x} \lim_{\mathbf{x'}\rightarrow\mathbf{x}} \left(-\frac{\hbar^{2}\nabla^{2}_{\mathbf{x}}}{2m}\right) tr[ {g}(\mathbf{x},\tau;\mathbf{x'},\tau+)]
+\end{aligned}
+\end{equation}
+%p617
+In order to calculate an ensemble average of the hamiltonian, which is just an internal energy, we need also calculate that of the interaction potential:
+\begin{equation}
+\begin{aligned}
+\hat{H}&\equiv \hat{T}+\hat{V}\\
+\hat{T}&\equiv \sum_{\alpha}\int d^{3}\mathbf{x} \hat{\psi}_{\alpha}^{\dagger}(\mathbf{x}) \left(-\frac{\hbar^{2}\nabla^{2}}{2m}\right) \hat{\psi}_{\alpha}(\mathbf{x})\\
+\hat{V}&\equiv\frac{1}{2}\sum_{\alpha,\beta}\int d^{3}\mathbf{x} d^{3}\mathbf{x'} \hat{\psi}_{\alpha}^{\dagger}(\mathbf{x}) \hat{\psi}_{\beta}^{\dagger}(\mathbf{x'}) V(\mathbf{x}-\mathbf{x'}) \hat{\psi}_{\beta}(\mathbf{x'}) \hat{\psi}_{\alpha}(\mathbf{x})
+\end{aligned}
+\end{equation}
+$$\langle\hat{H}\rangle=\langle\hat{T}\rangle+\langle\hat{V}\rangle$$
+As we did in the zero-temperature field theory, the ensemble average of two-body interaction potential can be related to a time-derivative of the temperature Green's function.
+%p618
+To see this, let us begin with an equation of motion of "imaginary-time" operator
+$$
+\begin{aligned}
+\hbar\frac{\partial}{\partial\tau}\hat{\psi}_{K,\alpha}(\mathbf{x},\tau)&=\hbar \frac{\partial}{\partial\tau} \left[e^{\hat{K}\tau/\hbar} \hat{\psi}_\alpha(\mathbf{x})e^{-\hat{K}\tau/\hbar}\right]\\
+&=\left[\hat{K},\hat{\psi}_{K\alpha}(\mathbf{x},\tau)\right]
+\end{aligned}
+$$
+with
+\begin{equation}
+\begin{aligned}
+\hat{K}&=\hat{H}-\mu\hat{N}=\hat{T}+\hat{V}-\mu\hat{N}\\
+\hat{N}&\equiv\sum_{\alpha}\int d^{3}\mathbf{x}\hat{\psi}_{\alpha}^{\dagger}(\mathbf{x})\hat{\psi}_{\alpha}(\mathbf{x})
+\end{aligned}
+\end{equation}
+With this in mind, we have
+\begin{equation}
+\hbar\partial_{\tau}\hat{\psi}_{K,\alpha}(\mathbf{x},\tau)=\frac{\hbar^{2}\nabla^{2}}{2m}\hat{\psi}_{K}(\mathbf{x},\tau)+\mu\hat{\psi}_{K}(\mathbf{x},\tau) - \sum_{\gamma}\int d^{3}\mathbf{x'}\hat{\psi}_{K\gamma}^{\dagger}(\mathbf{x'},\tau)\hat{\psi}_{K\gamma}(\mathbf{x'},\tau)V(\mathbf{x'}-\mathbf{x})\hat{\psi}_{K\alpha}(\mathbf{x},\tau)
+\end{equation}
+%p619
+Using this, we can calculate the time-derivative of single-particle temperature Green's function.
+$$
+\begin{aligned}
+\lim_{\tau'\rightarrow\tau+}\hbar\partial_{\tau} g(\mathbf{x},\tau;\mathbf{x'},\tau')&=\mp Tr\left[\rho_{G} \hat{\psi}_{K\beta}^{\dagger}(\mathbf{x'},\tau) \hbar\partial_{\tau} \hat{\psi}_{K\alpha}(\mathbf{x'},\tau)\right]\\
+&=\mp Tr\left[\rho_{G} \left\{ \hat{\psi}_{K\beta}^{\dagger}(\mathbf{x'},\tau) \left(\frac{\hbar^{2}\nabla^{2}}{2m}+\mu\right) \hat{\psi}_{K\alpha}(\mathbf{x'},\tau)\right.\right.\\
+& \left.\left. \quad -\sum_{\gamma}\int d^{3}\mathbf{x''}\hat{\psi}_{K\gamma}^{\dagger}(\mathbf{x'},\tau)\hat{\psi}_{K\gamma}^{\dagger}(\mathbf{x''},\tau) \hat{\psi}_{K\gamma}(\mathbf{x''},\tau) V(\mathbf{x}-\mathbf{x''}) \hat{\psi}_{K\alpha}(\mathbf{x},\tau) \right\} \right]
+\end{aligned}
+$$
+Accordingly we have
+$$
+\int d^{3}\mathbf{x}\lim_{\tau'\rightarrow\tau+}\hbar \partial_{\tau} tr[g(\mathbf{x},\tau;\mathbf{x'},\tau')]=\mp \left(-\langle\hat{T}\rangle +\mu \langle\hat{N}\rangle -2\langle\hat{V}\rangle\right)
+$$
+%p620
+Thus, the ensemble average of the two-body interaction potential is given by the temperature Green's function in the following way,
+\begin{equation} \label{eq1}
+\begin{aligned}
+\langle V\rangle&=\pm\frac{1}{2} \int d^{3} \mathbf{x} \lim_{\tau'\rightarrow\tau+} \hbar \frac{\partial}{\partial\tau} tr[g(\mathbf{x},\tau;\mathbf{x},\tau')] -\frac{1}{2}\langle\hat{T}\rangle + \frac{1}{2}\mu\langle\hat{N}\rangle\\
+&=\pm\frac{1}{2} \int d^{3} \mathbf{x} \lim_{\tau'\rightarrow\tau+} \lim_{\mathbf{x}'\rightarrow\mathbf{x}}\left(\hbar\partial_{\tau}-\frac{\hbar^{2}\nabla_{\mathbf{x}}^{2}}{2m}-\mu\right) tr[g(\mathbf{x},\tau;\mathbf{x},\tau')]
+\end{aligned}
+\end{equation}
+Accordingly, the internal energy $E$ is given by
+\begin{equation}\label{eq4.1.14}
+\begin{aligned}
+\langle E\rangle & =\langle \hat{T}+\hat{V} \rangle\\
+&=\pm\frac{1}{2} \int d^{3} \mathbf{x} \lim_{\tau'\rightarrow\tau+} \lim_{\mathbf{x}'\rightarrow\mathbf{x}}\left(\hbar\partial_{\tau}+\frac{\hbar^{2}\nabla_{\mathbf{x}}^{2}}{2m}-\mu\right)
+\end{aligned}
+\end{equation}
+At finite temperature, we also have grand-canonical thermodynamic potential $\Omega$.
+\begin{equation}
+\Omega=-\frac{1}{\beta}ln\ Tr\left[e^{-\beta K}\right]
+\end{equation}
+from which we can obtain many equilibrium thermodynamic properties.
+In order to relate the thermodynamic potential with the single-particle temperature Green's function, let us interpolate between the Hamiltonian with two-body interaction potential and that without the interaction potential.
+$$\hat{H}(\lambda)=\hat{T}+\lambda \hat{V}\qquad \lambda\in[0,1]$$
+Or equivalently
+$$\hat{K}(\lambda)=\hat{T}-\mu\hat{N}+\lambda\hat{V}$$
+%p622
+In terms of $K(\lambda)$, the thermodynamics potential is given as a function of $\lambda$
+\[
+\Omega(\lambda)=-\frac{1}{\beta}ln\ Tr\left[e^{-\beta K(\lambda)}\right] \tag{$4.1.15^\prime$}
+\]
+Let us take a $\lambda$-derivative of $\Omega(\lambda)$.
+\begin{equation}
+\frac{\partial\Omega}{\partial\lambda}=\frac{Tr\left[\frac{\partial\hat{K}}{\partial\lambda}e^{-\beta\hat{K}}(\lambda)\right]} {e^{-\beta\hat{K}}(\lambda)} \equiv \langle V\rangle_{\lambda}
+\end{equation}
+where
+$$
+\left\{
+\begin{aligned}
+\langle\hat{O}\rangle_{\lambda} & =Tr\left[\hat{\rho}_{G}(\lambda)\hat{O}\right]\\
+\hat{\rho}_{G}(\lambda) & \equiv Z^{-1}_{G}(\lambda)e^{\beta\hat{K}(\lambda)}
+\end{aligned}
+\right.
+$$
+Now that ensemble average of $\lambda V$ is given by a single-particle temperature Green's function as in (\ref{eq1})
+%p623
+We have
+$$
+\begin{aligned}
+\frac{\partial\Omega(\lambda)}{\partial\lambda} & =\lambda^{-1}\langle\lambda V\rangle\\
+&=\pm\frac{1}{2}\lambda^{-1}\int d^{3}\mathbf{x}\lim_{\mathbf{x'}\rightarrow\mathbf{x}}\lim_{\tau'\rightarrow\tau+}\left[\hbar\partial_{\tau}-\frac{\hbar^{2}\nabla^{2}_{\mathbf{x}}}{2m}-\mu\right] tr[g^{\lambda}(\mathbf{x},\tau;\mathbf{x'},\tau')]
+\end{aligned}
+$$
+where $g^{\lambda}$ denotes the temperature Green's function evaluated at $\hat{K}(\lambda)$.
+\begin{equation}
+g^{\lambda}(\mathbf{x},\tau;\mathbf{x'},\tau')\equiv-Tr\left[\hat{\rho}_{G}(\lambda)T_{\tau}\left\{\psi_{j(\lambda)\alpha}(\mathbf{x},\tau) \psi^{\dagger}_{j(\lambda)\alpha}(\mathbf{x'},\tau')\right\}\right]
+\end{equation}
+Interacting this equation with respect to $\lambda$ from 0 to 1, we have finally obtain
+\begin{equation}\label{eq4.1.18}
+\Omega(\lambda=1)=\Omega(\lambda=0)\pm\frac{1}{2}\int_{0}^{1}\lambda^{-1}d\lambda \int d^{3}\mathbf{x}\lim_{\mathbf{x'}\rightarrow\mathbf{x}} \lim_{\tau'\rightarrow\tau} \left[\hbar\partial_{\tau}-\frac{\hbar^{2}\nabla^{2}_{\mathbf{x}}}{2m}-\mu\right] tr\left[g^{\lambda}(\mathbf{x},\tau;\mathbf{x'},\tau')\right]
+\end{equation}
+%p624
+Where $\Omega(\lambda=1)$ is the thermodynamic potential we want to know, while $\Omega(\lambda=0)$ is the thermodynamic potential in the non-interacting limit.\\
+\rule{\textwidth}{1mm}
+As a simple example, it is useful to compute the temperature Green's function for the non-interacting system.
+For simplicity, we consider a spatially homogeneous system $\hat{H}=\hat{T}$, where the field operators can be expanded in place waves.
+\begin{equation}
+\left\{
+\begin{aligned}
+\hat{\psi}_{\alpha}(\mathbf{x})&=\frac{1}{\sqrt{V}}\sum_{\mathbf{K}}e^{i\mathbf{k}\cdotp\mathbf{x}}\hat{a}_{\mathbf{k},\alpha}\\
+\hat{\psi}_{\alpha}^{\dagger}(\mathbf{x})&=\frac{1}{\sqrt{V}}\sum_{\mathbf{K}}e^{-i\mathbf{k}\cdotp\mathbf{x}}\hat{a}_{\mathbf{k},\alpha}
+\end{aligned}
+\right.
+\end{equation}
+%p625
+Corresponding imaginary-time operators are given by
+\begin{equation}
+\left\{
+\begin{aligned}
+&\hat{\psi}_{\mathbf{k}}(\mathbf{x},\tau)=\frac{1}{\sqrt{V}}\sum_{\mathbf{K}}e^{i\mathbf{k}\cdotp\mathbf{x}} \hat{a}_{\mathbf{k},\alpha}(\tau) =\frac{1}{\sqrt{V}}\sum_{\mathbf{K}}e^{i\mathbf{k}\cdotp\mathbf{x}} e^{K_{0}\tau/\hbar} \hat{a}_{\mathbf{k},\alpha} e^{-K_{0}\tau/\hbar} \\
+&\hat{\psi}_{\mathbf{k}}^{\dagger}(\mathbf{x},\tau)=\frac{1}{\sqrt{V}}\sum_{\mathbf{K}}e^{-i\mathbf{k}\cdotp\mathbf{x}} \hat{a}_{\mathbf{k},\alpha}^{\dagger}(\tau) =\frac{1}{\sqrt{V}}\sum_{\mathbf{K}}e^{-i\mathbf{k}\cdotp\mathbf{x}} e^{K_{0}\tau/\hbar} \hat{a}_{\mathbf{k},\alpha}^{\dagger} e^{-K_{0}\tau/\hbar}
+\end{aligned}
+\right.
+\end{equation}
+where
+\begin{equation}
+\begin{aligned}
+\hat{K}_{0}&=\hat{T}-\mu\hat{N}\\
+&=\sum_{\mathbf{k,\alpha}}\left(\frac{\hbar^{2}k^{2}}{2m}-\mu\right) a_{\mathbf{k},\alpha}^{\dagger}a_{\mathbf{k},\alpha}\\
+&\xlongequal{def} \sum_{\mathbf{k,\alpha}}\left(\epsilon_{\mathbf{k}}^{0}-\mu\right) a_{\mathbf{k},\alpha}^{\dagger}a_{\mathbf{k},\alpha}
+\end{aligned}
+\end{equation}
+To calculate this part, let us take a $\tau$-derivative of $a_{\mathbf{k},\alpha}(\tau)$.
+$$
+\begin{aligned}
+\hbar\partial_{\tau}a_{\mathbf{k},\alpha}(\tau) & = e^{K_{0}\tau/\hbar} [\hat{K}_{0},\hat{a}_{\mathbf{k},\alpha}] e^{-K_{0}\tau/\hbar}\\
+&=-(\epsilon_{\mathbf{k}}^{0}-\mu) e^{K_{0}\tau/\hbar} \hat{a}_{\mathbf{k},\alpha} e^{-K_{0}\tau/\hbar}\\
+&=-(\epsilon_{\mathbf{k}}^{0}-\mu)\hat{a}_{\mathbf{k},\alpha}(\tau)
+\end{aligned}
+$$
+%p626
+As such we obtain
+\begin{equation} \label{4.1.A}
+\hat{a}_{\mathbf{k},\alpha}(\tau)=\hat{a}_{\mathbf{k},\alpha}e^{\frac{(\epsilon_{\mathbf{k}}^{0}-\mu)}{\hbar}\tau}
+\end{equation}
+which is consistent with $\hat{a}_{\mathbf{k},\alpha}(\tau=0)=\hat{a}_{\mathbf{k},\alpha}$.
+Similarly, we have
+\[ \label{4.1.B}
+\hat{a}_{\mathbf{k},\alpha}^{\dagger}(\tau)=\hat{a}_{\mathbf{k},\alpha}^{\dagger}e^{\frac{(\epsilon_{\mathbf{k}}^{0}-\mu)}{\hbar}\tau} \tag{$4.1.22^\prime$}
+\]
+(notice that the exponential part is not minus, so that these two are not hermite adjoint).
+The single-particle temperature Green's function in the non-interacting limit is given by
+%The following equation was not numbered in the original version, but was referred. So it is numbered here by PP.
+\begin{equation}\label{eq2}
+\begin{aligned}
+g_{\alpha\beta}^{0}(\mathbf{x},\tau;\mathbf{x'},\tau')&=-e^{\beta\Omega_{0}}Tr\left[e^{-\beta\hat{K}_{0}} T_{\tau}\{\hat{\psi}_{K_{0},\beta}(\mathbf{x'},\tau') \hat{\psi}_{K_{0},\alpha}^{\dagger}(\mathbf{x},\tau)\}\right]\\
+&=-\{\theta(\tau-\tau')\langle\hat{\psi}_{K_{0},\alpha}(\mathbf{x},\tau)\hat{\psi}_{K_{0},\beta}^{\dagger}(\mathbf{x'},\tau')\rangle_{0} \pm\theta(\tau'-\tau)\langle\hat{\psi}_{K_{0},\beta}^{\dagger}(\mathbf{x'},\tau')\rangle_{0}\hat{\psi}_{K_{0},\alpha}(\mathbf{x},\tau)\}
+\end{aligned}
+\end{equation}
+%p627
+where
+$$
+\langle\cdots\rangle_{0}\xlongequal{def} e^{-\beta\Omega_{0}}Tr[e^{-\beta\hat{K}_{0}}\cdots]
+$$
+Then, substituting these expressions into the right hand side, we obtain
+$$
+right=-\frac{1}{V}\sum_{\mathbf{k}}\sum_{\mathbf{k'}}e^{i\mathbf{k}\cdotp\mathbf{x}-i\mathbf{k'}\cdotp\mathbf{x'}} e^{-\frac{\epsilon_{k}^{0}-\mu}{\hbar}\tau\pm\frac{\epsilon_{k'}^{0}-\mu}{\hbar}\tau'} \{\theta(\tau-\tau') \uline{\langle a_{\mathbf{k}\alpha} a_{\mathbf{k'}\beta}^{\dagger}\rangle_{0}} \pm\theta(\tau'-\tau) \uline{\langle a_{\mathbf{k'}\beta}^{\dagger} a_{\mathbf{k}\alpha}\rangle_{0}}\}
+$$
+Using the cyclic nature of the trace, we can calculate the underlined parts as follows
+$$
+\begin{aligned}
+\langle a_{\mathbf{k}\alpha} a_{\mathbf{k'}\beta}^{\dagger}\rangle_{0}&=e^{-\beta\Omega_{0}} Tr \left[ e^{-\beta\hat{K}_{0}} a_{\mathbf{k}\alpha } a_{\mathbf{k'}\beta}^{\dagger} \right]\\
+&\left(
+\begin{aligned}
+e^{-\beta\hat{K}_{0}}a_{\mathbf{k}\alpha}e^{\beta\hat{K}_{0}}& \equiv a_{\mathbf{k}\alpha}(-\beta\hbar) =a_{\mathbf{k}\alpha}e^{\beta(\epsilon_{k}^{0}-\mu)}\\
+\therefore e^{-\beta\hat{K}_{0}}a_{\mathbf{k}\alpha}&= a_{\mathbf{k}\alpha} e^{-\beta\hat{K}_{0}} e^{\beta(\epsilon_{k}^{0}-\mu)}
+\end{aligned}
+\right)\\
+&=e^{\beta(\epsilon_{k}^{0}-\mu)}e^{-\beta\Omega_{0}} Tr \left[a_{\mathbf{k}\alpha } e^{-\beta\hat{K}_{0}} a_{\mathbf{k'}\beta}^{\dagger} \right]\\
+&=e^{\beta(\epsilon_{k}^{0}-\mu)}e^{-\beta\Omega_{0}} Tr \left[e^{-\beta\hat{K}_{0}} a_{\mathbf{k'}\beta}^{\dagger} a_{\mathbf{k}\alpha}\right]\\
+&\left(
+\begin{aligned}
+&a_{1}a_{2}^{\dagger}-a_{2}^{\dagger}a_{1}=\delta_{12}\qquad(boson)\\
+&a_{1}a_{2}^{\dagger}+a_{2}^{\dagger}a_{1}=\delta_{12}\qquad(fermion)\\
+\end{aligned}
+\right)\\
+&=e^{\beta(\epsilon_{k}^{0}-\mu)}e^{-\beta\Omega_{0}} Tr \left[e^{-\beta\hat{K}_{0}} \left( \mp\delta_{\mathbf{k},\mathbf{k'}}\delta_{\alpha,\beta}\pm a_{\mathbf{k}\alpha } a_{\mathbf{k'}\beta}^{\dagger} \right)\right]\\
+&=\mp\delta_{\mathbf{k},\mathbf{k'}}\delta_{\alpha,\beta} e^{\beta(\epsilon_{k}^{0}-\mu)} \pm e^{\beta(\epsilon_{k}^{0}-\mu)}
+\langle a_{\mathbf{k}\alpha} a_{\mathbf{k'}\beta}^{\dagger}\rangle_{0}
+\end{aligned}
+$$
+%p628
+This equation can be solved in favor of the left hand side:
+\begin{equation}
+\begin{aligned}
+\langle a_{\mathbf{k}\alpha} a_{\mathbf{k'}\beta}^{\dagger}\rangle_{0}&=\frac{\mp e^{\beta(\epsilon_{k}^{0})-\mu}}{1\mp e^{\beta(\epsilon_{k}^{0})-\mu}} \delta_{\mathbf{k},\mathbf{k'}}\delta_{\alpha,\beta}
+&=(1\pm n_{k}^{0})\delta_{\mathbf{k},\mathbf{k'}}\delta_{\alpha,\beta}
+\end{aligned}
+\end{equation}
+where upper(lower) signs are for boson(fermion) respectively.
+%p629
+For each of these two cases, $n_{k}^{0}$ denote bose distribution function and fermi distribution function respectively.
+$$
+n_{k}^{0}\equiv\frac{1}{e^{\beta(\epsilon_{k}^{0})-\mu}\mp1}
+$$
+Similarly, we obtain
+\[
+\langle a_{\mathbf{k'}\beta}^{\dagger} a_{\mathbf{k}\alpha} \rangle_{0}=n_{k}^{0}\delta_{\mathbf{k},\mathbf{k'}}\delta_{\alpha,\beta} \tag{$4.1.24^\prime$}
+\]
+Substituting these two into \ref{eq2}
+\begin{equation}\label{4.1.C}
+g^{0}(\mathbf{x},\tau;\mathbf{x'},\tau')=-\frac{1}{V}\sum_{\mathbf{k}}e^{i\mathbf{k}\cdotp(\mathbf{x}-\mathbf{x'})-\frac{\epsilon_{k}^{0}-\mu}{\hbar}(\tau-\tau')}
+\left\{\theta(\tau-\tau')(1\pm n_{k}^{0})\pm\theta(\tau'-\tau)n_{k}^{0}\right\}
+\end{equation}
+
+
+\section{Temperature Green's function in the interaction picture}
+
+%p630
+The temperature Green's functions for interacting systems can be calculated based on a simple perturbation theory.
+The perturbation theory has a similar structure as that for the Green's function at the zero-temperature.
+Namely, we first introduce an imaginary-time operator in the interaction picture.
+\begin{equation}
+\hat{O}_{I}(\tau) \equiv e^{K_{0} \tau/\hbar}\hat{O}_{s}e^{-K_0\tau/\hbar}
+\end{equation}
+Such an operator is related to the imaginary-time operator in the Heisenberg picture.
+%p631
+\begin{equation}
+\begin{aligned}
+\hat{O}_{K}(\tau)& \xlongequal{def} e^{K\tau/\hbar}\hat{O}_{s}e^{-K\tau/\hbar}\\
+&=e^{K\tau/\hbar}e^{-K_0\tau/\hbar}\hat{O}_{I}(\tau)e^{K_0\tau/\hbar}e^{-K\tau/\hbar}
+\end{aligned}
+\end{equation}
+As in the field theory at the zero-temperature, we define an operator which describe a time evolution.
+\begin{equation}
+u(\tau_1,\tau_2)\equiv e^{K_0\tau_1/\hbar}e^{-K(\tau_1-\tau_2)/\hbar}e^{-K_0\tau_2/\hbar}
+\end{equation}
+which corresponds to a unitary operator defined in eq.(2.1.6) at the zero-temperature.
+contrary to the operator at the zero-temperature this time-evolution operator is not a unitary operator, because $\tau_1$ and $\tau_2$ are all real-valued.
+%p632
+In terms of this, the interaction picture and Heisenberg picture are related to each other by this equation
+\begin{equation}
+\hat{O}_{k}(\tau)=\hat{u}(0,\tau)\hat{O}_{I}(\tau)\hat{U}(\tau,0)
+\end{equation}
+Equation of motion for this time-evolution operator is obtained in the following way,
+\begin{equation}
+\begin{aligned}
+\hbar\frac{\partial}{\partial\tau}\hat{U}(\tau,\tau')&=e^{K_0\tau/\hbar} \hat{K}_0 e^{-\hat{K}(\tau-\tau')/\hbar} e^{-K_0\tau'/\hbar} -e^{K_0\tau/\hbar} \hat{K} e^{-\hat{K}(\tau-\tau')/\hbar} e^{-K_0\tau'/\hbar}\\
+&=e^{K_0\tau/\hbar}(\hat{K}_0-\hat{k}) e^{-K_0\tau/\hbar} e^{K_0\tau/\hbar} e^{-\hat{K}(\tau-\tau')/\hbar} e^{-\hat{K}(\tau-\tau')/\hbar} e^{-K_0\tau'/\hbar}-\hat{H}_1(or V)\\
+&=-\hat{H}_1(\tau)\hat{u}(\tau,\tau')
+\end{aligned}
+\end{equation}
+with
+\begin{equation}
+\hat{H}_1(\tau)=e^{K_0\tau/\hbar}\hat{H}_1 e^{-K_0\tau/\hbar}
+\end{equation}
+%p633
+As we did in eq(2.1.6'') \& eq(2.1.7), we can solve this equation of motion iteratively:
+\begin{equation}
+\begin{aligned}
+\hat{u}(\tau,\tau')&\equiv 1+\sum_{n=1}^{+\infty}\left(-\frac{1}{\hbar}\right)^{n} \int_{\tau'}^{\tau} d\tau_1 \int_{\tau'}^{\tau_1} d\tau_2 \cdots \int_{\tau'}^{\tau_{n-1}} d\tau_n \hat{H}_1(\tau_1) \hat{H}_1(\tau_2) \cdots \hat{H}_1(\tau_n)\\
+&=\sum_{n=0}^{+\infty}\left(-\frac{1}{\hbar}\right)^{n} \int_{\tau'}^{\tau} d\tau_1 \int_{\tau'}^{\tau} d\tau_2 \cdots \int_{\tau'}^{\tau} d\tau_n T_\tau \{\hat{H}_1(\tau_1)\cdots \hat{H}_1(\tau_n)\}
+\end{aligned}
+\end{equation}
+With these analogies in mind, let us rewrite the single-particle temperature Green's function in the interaction picture:
+$$
+\begin{aligned}
+g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x'},\tau') &\equiv -e^{-\beta\Omega} Tr\left[ e^{-\beta K}T_\tau\{\hat{\psi}_{k\alpha}(\mathbf{x},\tau) \hat{\psi}_{k\beta}^{\dagger}(\mathbf{x'},\tau')\} \right]\\
+&=-e^{\beta\Omega}\{\theta(\tau-\tau') Tr\left[e^{-\beta K}\hat{\psi}_{k\alpha}(\mathbf{x},\tau) \hat{\psi}_{k\beta}^{\dagger}(\mathbf{x'},\tau')\right] \pm \theta(\tau'-\tau) Tr\left[e^{-\beta K} \hat{\psi}_{k\beta}^{\dagger}(\mathbf{x'},\tau')\hat{\psi}_{k\alpha}(\mathbf{x},\tau) \right]\}\\
+&\left( e^{-K \tau/\hbar} = e^{-K_{0} \tau/\hbar} \hat{u} (\tau,0) \right)\\
+&=-e^{\beta\Omega}\left\{\theta(\tau-\tau') Tr\left[e^{-\beta K_0}\hat{u}(\beta\hbar,0) \left(\hat{u}(0,\tau)\hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{u}(\tau,0)\right) \left(\hat{u}(0,\tau')\hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau') \hat{u}(\tau',0)\right)\right]\right.\\
+&\qquad\qquad\left.\pm\theta(\tau'-\tau) Tr\left[e^{-\beta K_0}\hat{u}(\beta\hbar,0) \left(\hat{u}(0,\tau')\hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau') \hat{u}(\tau',0)\right) \left(\hat{u}(0,\tau)\hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{u}(\tau,0)\right) \right]\right\}
+\end{aligned}
+$$
+As is clear from its definition, the time-evolution operator has a group property
+$$
+\hat{u}(\tau_1,\tau_2)\hat{u}(\tau_2,\tau_3)=\hat{u}(\tau_1,\tau_3)
+$$
+%p635
+Thus, we can rewrite the right hand side int the following
+$$
+\begin{aligned}
+right=-e^{-\beta\Omega} & \left\{\uline{\theta(\tau-\tau')} Tr \left[ e^{-\beta K_0} \uline{\hat{u}(\beta\hbar,\tau) \hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{u}(\tau,\tau') \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau') \hat{u}(\tau',0)} \right] \right.\\
+&\left.\pm \uline{\theta(\tau'-\tau)} Tr\left[e^{-\beta K_0} \uline{\hat{u}(\beta\hbar,\tau') \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau') \hat{u}(\tau',\tau) \hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{u}(\tau,0)}\right] \right\}
+\end{aligned}
+$$
+As in the zero-temperature field theory, we can unify the underlined parts into a following form.
+%p636
+$$
+\begin{aligned}
+&\theta(\tau-\tau') \hat{u}(\beta\hbar,\tau) \hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{u}(\tau,\tau') \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau') \hat{u}(\tau',0)\\
+&\pm \theta(\tau'-\tau) \hat{u}(\beta\hbar,\tau') \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau') \hat{u}(\tau',\tau) \hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{u}(\tau,0)\\
+&=\sum_{\nu=0}^{\infty}\left(-\frac{1}{\hbar}\right)^{\nu}\frac{1}{\nu!}\int_{0}^{\beta\hbar}d\tau_1 \cdots \int_{0}^{\beta\hbar}d\tau_\nu T_\tau \left[\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu)\hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau')\right]
+\end{aligned}
+$$
+Namely, the single-particle temperature Green's function is given by
+\begin{equation}
+\begin{aligned}
+g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x'},\tau')&=-e^{\beta\Omega}\\
+&Tr\left[e^{-\beta K_0} \sum_{\nu=0}^{\infty}\left(-\frac{1}{\hbar}\right)^{\nu}\frac{1}{\nu!}\int_{0}^{\beta\hbar}d\tau_1 \cdots \int_{0}^{\beta\hbar}d\tau_\nu T_\tau \left\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu)\hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau')\right\}\right]
+\end{aligned}
+\end{equation}
+%p637
+The partition function appearing in the factor can be also expressed in terms of the interaction picture.%The "prefector" in the original version was replaced by factor. Edited by PP.
+\begin{equation}
+\begin{aligned}
+e^{\beta\Omega}&=Tr\left[e^{-\beta K}\right]\\
+&=Tr\left[e^{-\beta K_0}\hat{u}(\beta\hbar,0)\right]\\
+&=Tr\left[e^{-\beta K_0}\sum_{\nu=0}^{\infty}\left(-\frac{1}{\hbar}\right)^{\nu}\frac{1}{\nu!}\int_{0}^{\beta\hbar}d\tau_1 \cdots \int_{0}^{\beta\hbar}d\tau_\nu T_\tau \left\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu)\right\}\right]
+\end{aligned}
+\end{equation}
+To summarize, we have
+\begin{equation}\label{4.2.A}
+\begin{aligned}
+&g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x'},\tau')=\\
+&\frac{Tr\left[e^{-\beta K_0} \sum\limits_{\nu=0}^{\infty}\left(-\frac{1}{\hbar}\right)^{\nu}\frac{1}{\nu!}\int_{0}^{\beta\hbar}d\tau_1 \cdots \int_{0}^{\beta\hbar}d\tau_\nu T_\tau \left\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu)\hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau')\right\}\right]}
+{Tr\left[e^{-\beta K_0}\sum\limits_{\nu=0}^{\infty}\left(-\frac{1}{\hbar}\right)^{\nu}\frac{1}{\nu!}\int_{0}^{\beta\hbar}d\tau_1 \cdots \int_{0}^{\beta\hbar}d\tau_\nu T_\tau \left\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu)\right\}\right]}
+\end{aligned}
+\end{equation}
+
+\section{Wick's theorem for the temperature Green's function}
+
+As in the zero-temperature field theory, the denominator plays role of eliminating all disconnected Feynman diagrams.
+To see this situation, let us introduce Wick's theorem for the finite-temperature field theory.
+General terms in the perturbation expansion typically contains the following term.
+\begin{equation}
+Tr\left[e^{\beta\Omega-\beta k_0}T_\tau\{\hat{A_1}\hat{A_2}\cdots\hat{A_M}\}\right]=\langle T_\tau\{\hat{A_1}\hat{A_2}\cdots\hat{A_M}\}\rangle_0
+\end{equation}
+where these operators are creation operator or annihilation operator in the interaction picture,
+%p639
+Since $\hat{K_0}$ here commutes with $\hat{N}$, this trace vanishes unless the ser $\hat{A}_1,\cdots,\hat{A}_1$ contains an equal number of creaction operators and annihilation operators.
+This means that the total numbers of the field operators must be even ($M$ = even = $2m$).
+To explain the Wick's theorem at finite temperature, let us first define a contraction.
+\begin{equation}\label{4.3.A}
+\begin{aligned}
+\hat{A}_{1}^\cdotp \hat{A}_{2}^\cdot & \equiv \langle T_{\tau} \hat{A}_{1} \hat{A}_{2} \rangle_{0}\\
+&=Tr[\rho_G^0\hat{A}_1\hat{A}_2]
+\end{aligned}
+\end{equation}
+For example,
+\begin{equation}
+\psi_{I\alpha}^{\cdotp}(\mathbf{x},\tau) \psi_{I\beta}^{\dagger\cdotp}(\mathbf{x'},\tau')=-g_{\alpha\beta}^0(\mathbf{x},\tau;\mathbf{x'},tau')
+\end{equation}
+%p640
+The Wick's theorem at finite temperature dictates that the right hand side of this equation is equal to the sum over all possible fully contracted forms:
+\begin{equation}
+\begin{aligned}
+&\langle T_\tau\{ \hat{A}_1\hat{A}_2\hat{A}_3\hat{A}_4\cdots \hat{A}_{2m-1}\hat{A}_{2m}\}\rangle_0\\
+&=\left[\hat{A}_1^{\cdot} \hat{A}_2^{\cdot} \hat{A}_3^{\cdot\cdot} \hat{A}_4^{\cdot\cdot} \cdots \hat{A}_{2m-1}^{\cdots} \hat{A}_{2m}^{\cdots} \right]\\
+&+\uline{\left[\hat{A}_1^\cdot\hat{A}_2^{\cdot\cdot}\hat{A}_3^\cdot\hat{A}_4^{\cdot\cdot}\cdots\hat{A}_{2m-1}^{\cdots}\hat{A}_{2m}^{\cdots}\right]}\\
+&+\cdots\cdots
+\end{aligned}
+\end{equation}
+where the underlined part is interpreted as this way
+$$
+\pm\left[\hat{A}_1^{\cdot} \hat{A}_3^{\cdot} \hat{A}_2^{\cdot\cdot} \hat{A}_4^{\cdot\cdot} \cdots \hat{A}_{2m-1}^{\cdots} \hat{A}_{2m}^{\cdots}\right]
+$$
+Here + is for boson field and - sign is for the fermion field, which comes from the exchange between these two fields.
+%p641
+For example, we have
+$$
+\begin{aligned}
+&\langle T_\tau\{A_1A_2A_3A_4\}\rangle_0\\
+&=\left[A_1^\cdot A_2^\cdot A_3^{\cdot\cdot} A_4^{\cdot\cdot}\right] + \left[A_1^\cdot A_2^{\cdot\cdot} A_3^\cdot A_4^{\cdot\cdot}\right] +
+\left[A_1^\cdot A_2^{\cdot\cdot} A_3^{\cdot\cdot} A_4^\cdot\right]\\
+&=\left[A_1^\cdot A_2^\cdot A_3^{\cdot\cdot} A_4^{\cdot\cdot}\right]\pm\left[A_1^\cdot A_3^\cdot A_2^{\cdot\cdot} A_4^{\cdot\cdot}\right]
++\left[A_1^\cdot A_4^\cdot A_3^{\cdot\cdot} A_3^{\cdot\cdot}\right]
+\end{aligned}
+$$
+Since the contractions are defined to be c-number in \ref{4.3.A}, we have
+$$
+\begin{aligned}
+&\langle T_\tau\{A_1A_2A_3A_4\}\rangle_0\\
+&=\langle T_\tau\{A_1A_2\}\rangle_0\langle T_\tau\{A_3A_4\}\rangle_0\pm\langle T_\tau\{A_1A_3\}\rangle_0\langle T_\tau\{A_2A_4\}\rangle_0
++\langle T_\tau\{A_1A_4\}\rangle_0\langle T_\tau\{A_2A_3\}\rangle_0
+\end{aligned}
+$$
+For the following term, we have 5 times 3 ways of making pairs of two operators, so that the right hand side consists of 15 terms.
+$$
+\langle T_\tau\{A_1A_2A_3A_4A_5A_6\}\rangle_0=(15 terms)
+$$
+These 15 terms contain, for example, the following fully contracted term:
+%p642
+$$
++\left[A_1^{\cdot}A_2^{\cdot\cdot}A_3^{\cdots}A_4^{\cdot}A_5^{\cdot\cdot}A_6^{\cdot}\right]
+$$
+We then rearrange these operators in such a way that any pair of contracted two operators come together.
+If this rearrangement requires odd number of permutation of the operator, we put $\pm1$ sign as an overall factor (where + is for boson and - is for fermion)
+$$
+\begin{aligned}
+&+\left[A_1^{\cdot}A_2^{\cdot\cdot}A_3^{\cdots}A_4^{\cdot}A_5^{\cdot\cdot}A_1^{\cdot}\right]\\
+&=+A_1^{\cdot}A_4^{\cdot}A_2^{\cdot\cdot}A_3^{\cdots}A_5^{\cdot\cdot}A_6^{\cdot}\\
+&=\pm A_1^{\cdot}A_4^{\cdot}A_2^{\cdot\cdot}A_5^{\cdot\cdot}A_3^{\cdots}A_6^{\cdot}\\
+&=\pm\langle T_\tau\{A_1A_4\}\rangle_0 \langle T_\tau \{A_2A_5\}\rangle_0 \langle T_\tau \{A_3A_6\}\rangle_0
+\end{aligned}
+$$
+%p643
+We can perform a same precess for the other terms, which always result in a product of three contraction terms.
+We can generalize this into higher-order term, where the Wick's theorem can be also given by
+\[
+\langle T_\tau\{ \hat{A}_1\hat{A}_2\hat{A}_3\hat{A}_4 \cdots \hat{A}_{2m-1}\hat{A}_{2m}\}\rangle_0
+={\sum_{\sigma}}' sng(\sigma)\langle T_\tau \{A_{\sigma(1)}A_{\sigma(2)}\}\rangle_0 \cdots \langle T_\tau\{A_{\sigma(2m-1)}A_{\sigma(2m)}\}\rangle_0 \tag{$4.3.4^\prime$}
+\]
+where the summation over $\sigma$ denotes the sum of all possible permutation among 2m operators, under the following condition.
+\[
+\left\{
+\begin{aligned}
+&\sigma(2j-1)<\sigma(2j)\qquad(j=1,\cdots,m)\\
+&\sigma(1)<\sigma(3)<\cdots<\sigma(2m-1)
+\end{aligned}\tag{$4.3.4^{\prime\prime}$}
+\right.
+\]
+%p644
+To prove this theorem, it is sufficient to prove this for the case that these 2m operators are already in the proper time order.
+Namely, if they are not, we can reorder them into the proper time order, which leads to same addition signs on both side of this equation.
+Thus, we focus only on the case with $\tau_1>\tau_2>\cdots>\tau_{2m}$, and prove the following
+\[ \label{4.3.B}
+\langle A_1A_2\cdots A_{2m}\rangle_0=[A_1^{\cdot} A_2^{\cdot} A_3^{\cdot\cdot} A_4^{\cdot\cdot} \cdots A_{2m-1}^{\cdots}A_{2m}^{\cdots}]
++[A_1^{\cdot} A_2^{\cdot\cdot} A_3^{\cdot} A_4^{\cdot\cdot} \cdots A_{2m-1}^{\cdots}A_{2m}^{\cdots}]+\cdots \tag{$4.3.4^{\prime\prime\prime}$}
+\]
+%p645
+To prove this algebraic identity, it is helpful to expand each field operator in terms of eigen modes of non-interacting Hamiltonian.
+Namely, any non-interacting Hamiltonian can be generally diagonalized with a proper basis, so that we have
+\begin{equation}
+\hat{K}_0=\hat{H}_0-\mu\hat{N}=\sum_j (\epsilon_j^0-\mu) a_j^\dagger a_j
+\end{equation}
+When $\hat{H}_0=\hat{T}$, the index $j$ reduces to momentum $\mathbf{k}$ and spin index $\alpha$.
+In terms of this basis, the field operators are expanded as follows:
+\begin{equation}
+\left\{
+\begin{aligned}
+\psi(\mathbf{x})=\sum_j \psi_j^0(\mathbf{x})a_j\\
+\psi^\dagger(\mathbf{x})=\sum_j \psi_j^{0*}(\mathbf{x})a_j^\dagger
+\end{aligned}
+\right.
+\end{equation}
+In the interaction picture, we have
+\begin{equation}
+\begin{aligned}
+\hat{\psi}_I(\mathbf{x},\tau)&\equiv e^\frac{K_0\tau}{\hbar}\hat{\psi}_I(\mathbf{x})e^\frac{-K_0\tau}{\hbar}\\
+&=\sum_j\psi_j^0(\mathbf{x})e^\frac{K_0\tau}{\hbar} \hat{a}_j e^\frac{-K_0\tau}{\hbar}\\
+&=\sum_j\psi_j^0(\mathbf{x}) e^\frac{e_j^0\tau}{\hbar} \hat{a}_j^\dagger
+\end{aligned}
+\end{equation}
+where $e_j^0=\epsilon_j^0-\mu$ and we used \ref{4.1.A} and \ref{4.1.B}.
+These $2m$ field operators are either creation operator or annihilation operator in the interaction picture.
+Thus, they can be expanded in terms of $\hat{a}_j$ or $\hat{a}_j^\dagger$.
+$$
+\begin{aligned}
+If \hat{A}_n &\equiv \hat{\psi}_I(\mathbf{x}_n,\tau_n)\\
+\hat{A}_n&=\sum_j \psi_j^0(\mathbf{x}_n) e^{-\frac{\epsilon_j^0\tau_n}{\hbar} \hat{a}_j}\\
+If \hat{A}_n &\equiv \hat{\psi}^\dagger_I(\mathbf{x}_n,\tau_n)\\
+\hat{A}_n&=\sum_j \psi_j^{0*}(\mathbf{x}_n) e^\frac{\epsilon_j^0\tau_n}{\hbar} \hat{a}_j^\dagger
+\end{aligned}
+$$
+%p647
+For simplicity of notation, we will rewrite these two expression in this way
+$$
+\hat{A}_n=\sum_\alpha \chi_b\hat{\alpha}_b
+$$
+where $\hat{\alpha}_b$ is either $\hat{a}$ or $\hat{a}^\dagger$.
+The summation in the right hand side is taken over eigenbasis of $\hat{K}_0$.
+With this notation, the left hand side of \ref{4.3.B} is given by
+\begin{equation}\label{4.3.C}
+\langle\hat A_1 \hat A_2 \cdots \hat A_{2m}\rangle_0=\sum_{b_1}\sum_{b_2}\cdots\sum_{b_{2m}} \chi_{b_1}\chi_{b_2}\cdots\chi_{b_{2m}}Tr[\hat{\rho}_G^0\hat{\alpha}_{b_1} \hat{\alpha}_{b_2} \cdots \hat{\alpha}_{b_{2m}}]
+\end{equation}
+%This equation was not originally numbered but referred. PP numbered it.
+Let us commute $\alpha_{b_1}$ successively to the right:
+$$
+\begin{aligned}
+&Tr[\rho_G^0\alpha_{b_1}\alpha_{b_2}\alpha_{b_3}\alpha_{b_4}\cdots\alpha_{b_{2m}}]\\
+&=Tr[\rho_G^0[\alpha_{b_1}\alpha_{b_2}]_\mp\alpha_{b_3}\alpha_{b_4}\cdots\alpha_{b_{2m}}]\\
+&\pm Tr[\rho_G^0\alpha_{b_1}[\alpha_{b_2}\alpha_{b_3}]_\mp\alpha_{b_4}\cdots\alpha_{b_{2m}}]\\
+&+Tr[\rho_G^0\alpha_{b_1}\alpha_{b_2}[\alpha_{b_3}\alpha_{b_4}]\mp\cdots\alpha_{b_{2m}}]\\
+&+\cdots\\
+&+Tr[\rho_G^0\alpha_{b_2}\alpha_{b_3}\alpha_{b_4}\alpha_{b_5}\cdots[\alpha_{b_1}\alpha_{b_{2m}}]_\mp]\\
+&\mp Tr[\rho_G^0\alpha_{b_2}\alpha_{b_3}\alpha_{b_4}\cdots\alpha_{b_{2m}}\alpha_{b_1}]
+\end{aligned}
+$$
+where upper sign is for boson and lower sign is for the fermion.
+%p649
+Thanks to the cyclic nature of the trace, we can rewrite the last term into
+\begin{equation}
+\begin{aligned}
+&\pm Tr[\rho_G^0\alpha_{b_2}\alpha_{b_3}\alpha_{b_4}\cdots\alpha_{b_{2m}}\alpha_{b_1}]\\
+&=\pm Tr[\alpha_{b_1}\rho_G^0\alpha_{b_2}\alpha_{b_3}\alpha_{b_4}\cdots\alpha_{b_{2m}}]\\
+&=\pm e^{\lambda_{b_1}\beta e_{b_1}^0}Tr[\rho_G^0\alpha_{b_1}\alpha_{b_2}\alpha_{b_3}\alpha_{b_4}\cdots\alpha_{b_{2m}}]
+\end{aligned}
+\end{equation}
+where we use
+\begin{equation}
+e^{\beta K_0}\alpha_{b_1}e^{-\beta K_0}=\alpha_{b_1}e^{\lambda_{b_1}\beta e_{b_1}^0}
+\end{equation}
+from \ref{4.1.A} and \ref{4.1.B}\\
+Here\\
+$$
+\lambda_b=\left\{
+\begin{aligned}
+&+1\qquad(when\ \alpha_b\ is\ creation\ operator)\\
+&-1\qquad(when\ \alpha_b\ is\ annihilation\ operator)
+\end{aligned}
+\right.
+$$
+%650
+Then, by moving the last term into the left hand side, we obtain
+\begin{equation}\label{4.3.D}
+\begin{aligned}
+&Tr[\hat{\rho}_G^0\hat A_{b_1} \hat A_{b_2} \hat A_{b_3} \hat A_{b_4} \hat A_{b_5} \cdots \hat A_{b_{2m}}]\\
+&=\frac{[\hat A_{b_1},\hat A_{b_2}]_\mp}{1\mp e^{\lambda_{b_1}\beta e_{b_1}}} Tr[\hat{\rho}_G^0 \hat A_{b_3}\hat A_{b_4}\cdots \hat A_{b_{2m}}]\\
+&\pm\frac{[\hat A_{b_1},\hat A_{b_3}]_\mp}{1\mp e^{\lambda_{b_1}\beta e_{b_1}}} Tr[\hat{\rho}_G^0 \hat A_{b_2}\hat A_{b_4}\cdots \hat A_{b_{2m}}]\\
+&+\frac{[\hat A_{b_1},\hat A_{b_4}]_\mp}{1\mp e^{\lambda_{b_1}\beta e_{b_1}}} Tr[\hat{\rho}_G^0 \hat A_{b_2}\hat A_{b_3}\cdots \hat A_{b_{2m}}]\\
+&\cdots\\
+&+\frac{[\hat A_{b_1},\hat A_{b_{2m}}]_\mp}{1\mp e^{\lambda_{b_1}\beta e_{b_1}}} Tr[\hat{\rho}_G^0 \hat A_{b_2}\hat A_{b_3}\cdots \hat A_{b_{2m-1}}]
+\end{aligned}
+\end{equation}
+when $2m=1$, this reduces to
+\begin{equation}
+\begin{aligned}
+Tr[\hat{\rho}_G^0\hat\alpha_{b_1}\hat\alpha_{b_1}]&=\frac{[\hat\alpha_{b_1},\hat\alpha_{b_2}]_\mp}{1\mp e^{\lambda_{b_1}\beta e_{b_1}}}\\
+&=\langle Tr[\hat\alpha_{b_1} \hat\alpha_{b_2}]\rangle_0\\
+&=\hat\alpha_{b_1}^{\cdot}\hat\alpha_{b_2}^{\cdot}
+\end{aligned}
+\end{equation}
+%p651
+Thus, we can rewrite \ref{4.3.D} into
+\begin{equation}
+\begin{aligned}
+&Tr[\hat{\rho}_G^0\hat \alpha_{b_1} \hat \alpha_{b_2} \hat \alpha_{b_3} \hat \alpha_{b_4} \hat \alpha_{b_5} \cdots \hat \alpha_{b_{2m}}]\\
+&=\hat \alpha_{b_1}^\cdot \hat \alpha_{b_2}^\cdot Tr[\hat{\rho}_G^0 \hat \alpha_{b_3}\hat \alpha_{b_4}\cdots \hat \alpha_{b_{2m}}]\\
+&\pm \hat \alpha_{b_1}^\cdot \hat \alpha_{b_3}^\cdot Tr[\hat{\rho}_G^0 \hat \alpha_{b_2}\hat \alpha_{b_4}\cdots \hat \alpha_{b_{2m}}]\\
+&+hat \alpha_{b_1}^\cdot \hat \alpha_{b_4}^\cdot Tr[\hat{\rho}_G^0 \hat \alpha_{b_2}\hat \alpha_{b_3}\cdots \hat \alpha_{b_{2m}}]\\
+&\cdots\\
+&+\hat \alpha_{b_1}^\cdot \hat \alpha_{b_{2m}}^{\cdot} Tr[\hat{\rho}_G^0 \hat \alpha_{b_2}\hat \alpha_{b_3}\cdots \hat \alpha_{b_{2m-1}}]
+\end{aligned}
+\end{equation}
+Substituting this back into \ref{4.3.C}, we have
+\begin{equation}
+\begin{aligned}
+\langle\hat A_1 \hat A_2 \cdots \hat A_{2m}\rangle_0&=\sum_{b_1}\sum_{b_2}\cdots\sum_{b_{2m}} \chi_{b_1}\chi_{b_2}\cdots\chi_{b_{2m}}Tr[\hat{\rho}_G^0\hat{\alpha}_{b_1} \hat{\alpha}_{b_2} \cdots \hat{\alpha}_{b_{2m}}]\\
+&=\hat A_{b_1}^\cdot \hat A_{b_2}^\cdot Tr[\hat{\rho}_G^0 \hat A_{b_3}\hat A_{b_4}\cdots \hat A_{b_{2m}}]\\
+&\pm \hat A_{b_1}^\cdot \hat A_{b_3}^\cdot Tr[\hat{\rho}_G^0 \hat A_{b_2}\hat A_{b_4}\cdots \hat A_{b_{2m}}]\\
+&+hat A_{b_1}^\cdot \hat A_{b_4}^\cdot Tr[\hat{\rho}_G^0 \hat A_{b_2}\hat A_{b_3}\cdots \hat A_{b_{2m}}]\\
+&\cdots\\
+&+\hat A_{b_1}^\cdot \hat A_{b_{2m}}^{\cdot} Tr[\hat{\rho}_G^0 \hat A_{b_2}\hat A_{b_3}\cdots \hat A_{b_{2m-1}}]
+\end{aligned}
+\end{equation}
+%p652
+Repeating the same argument each of these trace, we can continue reducing the number of the field operators.
+This leads to
+\begin{equation}
+\begin{aligned}
+\langle\hat A_1 \hat A_2 \cdots \hat A_{2m}\rangle_0&={\sum_\sigma}'sgn(\sigma)A_{\sigma(1)}^\cdot A_{\sigma(2)}^\cdot \cdots A_{\sigma(2m-1)}^{\cdot\cdot} A_{\sigma(2m)}^{\cdot\cdot}\\
+&={\sum_\sigma}'sgn(\sigma) \langle T_\tau\{A_{\sigma(1)}A_{\sigma(2)}\}\rangle_0 \cdots \langle T_\tau\{A_{\sigma(2m-1)}A_{\sigma(2m)}\}\rangle_0
+\end{aligned}
+\end{equation}
+With this Wick's theorem in mind, let us consider perturbation expansion of the temperature Green's function given in \ref{4.2.A}.
+$$
+\begin{aligned}
+&g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x'},\tau')=\\
+&\frac{Tr\left[e^{-\beta K_0} \sum\limits_{\nu=0}^{\infty}\left(-\frac{1}{\hbar}\right)^{\nu}\frac{1}{\nu!}\int_{0}^{\beta\hbar}d\tau_1 \cdots \int_{0}^{\beta\hbar}d\tau_\nu T_\tau \left\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu)\hat{\psi}_{I\alpha}(\mathbf{x},\tau) \hat{\psi}_{I\beta}^{\dagger}(\mathbf{x'},\tau')\right\}\right]}
+{Tr\left[e^{-\beta K_0}\sum\limits_{\nu=0}^{\infty}\left(-\frac{1}{\hbar}\right)^{\nu}\frac{1}{\nu!}\int_{0}^{\beta\hbar}d\tau_1 \cdots \int_{0}^{\beta\hbar}d\tau_\nu T_\tau \left\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu)\right\}\right]}
+\end{aligned}
+$$
+where each $\hat{H}_1(\tau)$ is given by two creation fields and two annihilation fields
+\[
+\hat{H}_1(\tau_n)=\sum_{\alpha_n}\sum_{\beta_n}\int d\mathbf{x}_n d\mathbf{x}_n' V(\mathbf{x}_n-\mathbf{x}_n') \psi^\dagger_{I\alpha_n}(\mathbf{x}_n,\tau_n) \psi^\dagger_{I\beta_n}(\mathbf{x}_n',\tau_n) \psi_{I\beta_n}(\mathbf{x}_n',\tau_n) \psi_{I\alpha_n}(\mathbf{x}_n,\tau_n) \tag{$4.2.10^\prime$}
+\]
+So that, for example, we have three creation fields and three annihilation fields in the first order term in the numerator,
+%p654
+$$
+\begin{aligned}
+&(numberator)\\
+&=Tr\left[\rho_G^0 T_\tau\{\psi_\alpha(\mathbf{x},\tau) \psi_\alpha^\dagger(\mathbf{x'},\tau')\}\right]\\
+&+\frac{1}{\hbar}\int_0^\beta\hbar d\tau_1\int d^3 \mathbf{x}_1 d^3\mathbf{x}_1' V(\mathbf{x}_1-\mathbf{x}_1') Tr\left[\rho_G^0 T_\tau \{\psi_{\alpha_1}^\dagger (\mathbf{x}_1,\tau_1) \psi_{\beta_1}^\dagger (\mathbf{x}_1',\tau_1) \psi_{\beta_1} (\mathbf{x}_1',\tau_1) \psi_{\alpha_1} (\mathbf{x}_1,\tau_1)\}\psi_\alpha(\mathbf{x},\tau) \psi_\beta^\dagger(\mathbf{x'},\tau')\right]\\
+&+\cdots
+\end{aligned}
+$$
+where we have omitted subscript "I" from the field operators, because in the following, we always use the interaction picture.
+Clearly, the first term is the non-interacting single-particle Green's function given by \ref{4.1.C}.
+%p655
+For the 2nd term in the numerator, we can employ finite-temperature Wick's theorem.
+Notice that any contraction between two destruction fields reduces to zero, because $\hat{K}_0$ in the single-underlined part dose not change the total number of particles, while the double-underlined part changes it:
+$$
+\psi^\cdot(1)\psi^\cdot(2)=e^{\beta\Omega_0} Tr\left[e^{-\beta\hat{K}_0}T_\tau{\psi(1)\psi(2)}\right]=0
+$$
+Similarly, any contraction between two creation fields reduces to zero:
+$$
+\psi^{\dagger\cdot}(1)\psi^{\dagger\cdot}(2)=e^{\beta\Omega_0} Tr\left[e^{-\beta\hat{K}_0}T_\tau{\psi^\dagger(1)\psi^\dagger(2)}\right]=0
+$$
+%p656
+Accordingly, when applying the Wick's theorem onto the 2nd term, we have only 6 terms.
+$$
+\begin{aligned}
+&Tr\left[\rho_G^0 T_\tau \{\psi_{\alpha_1}^\dagger (\mathbf{x}_1,\tau_1) \psi_{\beta_1}^\dagger (\mathbf{x}_1',\tau_1) \psi_{\beta_1} (\mathbf{x}_1',\tau_1) \psi_{\alpha_1} (\mathbf{x}_1,\tau_1) \psi_\alpha(\mathbf{x},\tau) \psi_\beta^\dagger(\mathbf{x'},\tau')\}\right]\\
+&=\psi_{\alpha_1}^{\dagger\cdot} (\mathbf{x}_1,\tau_1) \psi_{\alpha_1}^{\cdot} (\mathbf{x}_1,\tau_1) \psi_{\beta_1}^{\dagger\cdot\cdot} (\mathbf{x}_1',\tau_1) \psi_{\beta_1}^{\cdot\cdot} (\mathbf{x}_1',\tau_1) \psi_{\alpha}^{\cdots} (\mathbf{x},\tau) \psi_{\beta}^{\dagger\cdots} (\mathbf{x'},\tau')\\
+&-\psi_{\alpha_1}^{\dagger\cdot} (\mathbf{x}_1,\tau_1) \psi_{\beta_1}^{\cdot} (\mathbf{x}_1',\tau_1) \psi_{\beta_1}^{\dagger\cdot\cdot} (\mathbf{x}_1',\tau_1) \psi_{\alpha1}^{\cdot\cdot} (\mathbf{x}_1,\tau_1) \psi_\alpha^{\cdots}(\mathbf{x},\tau) \psi_\beta^{\dagger\cdots}(\mathbf{x'},\tau')\\
+&-\psi_{\alpha_1}^{\dagger\cdot} (\mathbf{x}_1,\tau_1) \psi_{\alpha}^{\cdot} (\mathbf{x},\tau) \psi_{\beta_1}^{\dagger\cdot\cdot} (\mathbf{x}_1',\tau_1) \psi_{\beta_1}^{\cdot\cdot} (\mathbf{x}_1',\tau_1) \psi_{\alpha_1}^{\cdots}(\mathbf{x}_1,\tau_1) \psi_\beta^{\dagger\cdots}(\mathbf{x'},\tau')\\
+&+\psi_{\alpha_1}^{\dagger\cdot} (\mathbf{x}_1,\tau_1) \psi_{\alpha}^{\cdot} (\mathbf{x},\tau) \psi_{\beta_1}^{\dagger\cdot\cdot} (\mathbf{x}_1',\tau_1) \psi_{\alpha_1}^{\cdot\cdot} (\mathbf{x}_1,\tau_1) \psi_{\beta_1}^{\cdots}(\mathbf{x}_1',\tau_1) \psi_\beta^{\dagger\cdots}(\mathbf{x'},\tau')\\
+&-\psi_{\alpha_1}^{\dagger\cdot} (\mathbf{x}_1,\tau_1) \psi_{\beta_1}^{\cdot} (\mathbf{x}_1',\tau_1) \psi_{\beta_1}^{\dagger\cdot\cdot} (\mathbf{x}_1',\tau_1) \psi_{\alpha}^{\cdot\cdot} (\mathbf{x},\tau) \psi_{\beta_1}^{\cdots}(\mathbf{x}_1',\tau_1) \psi_\beta^{\dagger\cdots}(\mathbf{x'},\tau')\\
+\end{aligned}
+$$
+%p657
+As in the zero-temperature field theory, we can express these algebraic expressions in terms of Feynman diagrams.
+In this diagrammatic description, field operators comprise points, and two field operators contracted by Wick's theorem are connected by solid lines.
+%p658
+A solid line has an arrow from a destruction field to creation field.
+Four fields from a two -body interaction potential is given by this diagram.
+$$
+\begin{aligned}
+V(\mathbf{x}_1-\mathbf{x}_1') \overset{\textcircled{1}}{\psi_{\alpha_1}^\dagger (\mathbf{x}_1,\tau_1)} \overset{\textcircled{2}}{\psi_{\beta_1}^\dagger (\mathbf{x}_1',\tau_1)} \overset{\textcircled{3}}{\psi_{\beta_1}(\mathbf{x}_1',\tau_1)} \overset{\textcircled{5}}{\psi_{\alpha_1}(\mathbf{x}_1,\tau_1)}
+\end{aligned}
+$$
+\begin{center}
+\includegraphics[width=5cm]{fig4-3-1.png}
+\end{center}
+where the four legs correspond to the four fields respectively, while the wavy line stands for the interaction potential.\\
+With this in mind, these 6 terms can be given by these 6 Feynman diagrams respectively
+%p659
+\begin{center}
+\includegraphics[height=22cm]{fig4-3-2.png}
+\end{center}
+%p660
+We especially call that solid line which connects $\mathbf{x},\tau,\alpha$ and $\mathbf{x}',\tau',\beta$ as ``an external line''.
+We call those Feynman diagram in which all the interaction potential are connected to the external line as ``connected Feynman diagram''.
+%p661
+For this example, the last 4 diagrams above are all connected Feynman diagram, while the first two are not.
+Especially, we call these parts, which are not connected to external line, as disconnected Feynman diagram.
+With this background in mind, let us go back to \ref{4.2.A}.
+The $\nu-th$ order term in the numerator of \ref{4.2.A} can be rewritten as follows
+%p662
+$$
+\begin{aligned}
+\tilde{g}^{(\nu)}_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x}',\tau')&\equiv \left(-\frac{1}{\hbar}\right)^\nu \frac{1}{\nu!} \int_0^{\beta\hbar}d\tau_1\cdots \int_0^{\beta\hbar}d\tau_\nu Tr\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_\nu) \psi_\alpha(\mathbf{x},\tau) \psi_\beta^\dagger(\mathbf{x}',\tau')\}\right]\\
+&=\left(-\frac{1}{\hbar}\right)^\nu \frac{1}{\nu!} \sum_{n=0}^\nu \frac{\nu!}{n!(\nu-n)!} \int_0^{\beta\hbar}d\tau_1\cdots \int_0^{\beta\hbar}d\tau_\nu Tr\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_n)\}\right]\\
+&\times Tr\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_{n+1}) \cdots \hat{H}_1(\tau_\nu) \psi_\alpha(\mathbf{x},\tau) \psi_\beta^\dagger(\mathbf{x}',\tau')\}\right]_{connected}
+\end{aligned}
+$$
+This subscript ``connected'' means that, when taking the contraction here, we retain only those terms in which any of these interaction potentials are connected to external lines by wavy lines or solid lines.
+%p663
+Namely, we divide this into a product between a sum of all disconnected Feynman diagrams and a sum of all connected Feynman diagrams.
+We have $\nu!/n!(n-\nu)!$ ways of dividing $\nu$ into $n$ and $n-\nu$, so that we put this factor.
+When take the sum over $\nu$ from zero to infinity, we can rewrite this into.
+$$
+\begin{aligned}
+&\sum_{\nu=0}^{+\infty}\tilde{g}^{(\nu)}_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x}',\tau')\\
+&=\sum_{\nu=0}^{+\infty}\left(-\frac{1}{\hbar}\right)^\nu \frac{1}{\nu!} \sum_{n=0}^\nu \frac{\nu!}{n!(\nu-n)!} \int_0^{\beta\hbar}d\tau_1\cdots \int_0^{\beta\hbar}d\tau_\nu Tr\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_n)\}\right]\\
+&\times Tr\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_{n+1}) \cdots \hat{H}_1(\tau_\nu) \psi_\alpha(\mathbf{x},\tau) \psi_\beta^\dagger(\mathbf{x}',\tau')\}\right]_{connected}\\
+&=\sum_{n=0}^{+\infty}\left(-\frac{1}{\hbar}\right)^n \frac{1}{n!} \int_0^{\beta\hbar}d\tau_1\cdots \int_0^{\beta\hbar}d\tau_n Tr\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_n)\}\right]\\
+&\times\sum_{m=0}^{+\infty}\left(-\frac{1}{\hbar}\right)^m \frac{1}{m!} \int_0^{\beta\hbar}d\tau_1\cdots \int_0^{\beta\hbar}d\tau_m Tr\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_1) \cdots \hat{H}_1(\tau_n) \psi_\alpha(\mathbf{x},\tau) \psi_\beta^\dagger(\mathbf{x}',\tau')\}\right]_{connected}
+\end{aligned}
+$$
+when substituting this into \ref{4.2.A}, the former disconnected parts are cancelled by the denominator, so that we finally obtain.
+\begin{equation}\label{4.3.E}
+\begin{aligned}
+&g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x}',\tau')=\sum_{m=0}^{+\infty} \left(-\frac{1}{\hbar}\right)^m \frac{1}{m!} \int_0^{\beta\hbar} d\tau_1 \cdots \int_0^{\beta\hbar} d\tau_m\\
+&r\left[\rho_G^0 T_\tau\{\hat{H}_1(\tau_1)\cdots\hat{H}_1(\tau_m)\psi_\alpha(\mathbf{x},\tau)\psi_\beta^\dagger(\mathbf{x}',\tau')\}\right]_{connected}
+\end{aligned}
+\end{equation}
+
+\section{Feynman's rule for the temperature Green's function}
+
+Comparing the argument so far and \ref{4.3.E}, with the zero-temperature field theory, one can see that the perturbation expansion of the temperature Green's function has the same structure as that of the zero-temperature time-ordered Green's function.
+As a result, the detailed derivation of the Feynman rule is also unchanged, so that we simply summarize the Feynman rule for the single-particle temperature Green's function.\\
+%p666
+\uline{Fenman rule in coordinate space}
+
+Draw all topologically distinct diagrams containing $n$ interaction lines (wavy lines) and $(2n+1)$ directed solid lines.
+Assign a non-interacting temperature Green's function $g_{\alpha\beta}^0(1,2)$ for each directed solid lines. \includegraphics[height=0.7cm]{fig4-4-1.png}
+Assign a factor $V(\mathbf{x}_1-\mathbf{x}_2)\delta(\tau_1-\tau_2)$ for each interaction line.\\
+\includegraphics[height=1cm]{fig4-4-2.png}
+Integrate all the internal variables $(\mathbf{x}_i,\tau_i)\ (i=1,\cdots,2n): \prod\limits_{i=1}^{2n} \int d^3 \mathbf{x}_i \int_0^{\beta\hbar} d\tau_i$
+Take the sum over spin indices for internal variables: $\prod\limits_{i=1}^{2n} \sum\limits_{\alpha_i=\uparrow,\downarrow}$
+Multiply each m-th-order Feynman diagram by $\left(-\frac{1}{\hbar}\right)^n (\pm1)^F$, where F is the number of closed loops formed only by solid lines. (+ is for boson and - is for fermion)
+Interpret any temperature Green's function at equal time variable as
+
+%p667
+$$
+g_{\alpha\beta}^0(\mathbf{x}_1,\tau_1'\mathbf{x}_2,\tau_1)=\lim_{\tau_2\rightarrow\tau_1+}g_{\alpha\beta}^0(\mathbf{x}_1,\tau_1'\mathbf{x}_2,\tau_2)
+$$
+\rule{\textwidth}{1mm}
+For example, zero-th and 1st-order contribution to the single-particle temperature Green's function are given by these Feynman diagrams
+\begin{center}
+\includegraphics[height=3cm]{fig4-4-3.png}
+\end{center}
+%p668
+According to the Feynman's rule, corresponding algebraic expression are given by
+\begin{equation}
+\begin{aligned}
+&g_{\alpha\beta}(1,2)=g_{\alpha\beta}^0(1,2)\\
+&-\hbar^{-1}\int d^3 \mathbf{x}_3 \int d^4 \mathbf{x} \int_0^{\beta\hbar} d\tau_3 \int_0^{\beta\hbar} d\tau_4
+\left[\pm g_{\alpha\lambda}^0(1.3) g_{\lambda\beta}(3,2) V_0(3,4) g_{\mu\mu}^0(4,4)+ g_{\alpha\lambda}(1,3) g_{\lambda\mu}^0(3,4) g_{\mu\beta}^0(4,2) V_0(3,4)\right]\\
+&+\cdots
+\end{aligned}
+\end{equation}
+where the sign $(\pm)$ here comes from the closed loop in this diagram.
+For spin-$1/2$ fermion case with spin rotational symmetry, we have
+$$
+g_{\alpha\beta}^0(1,2)=g^0 (1,2) \delta_{\alpha\beta}
+$$
+where $g^0$ is given by \ref{4.1.C}.
+%p669
+In such case, we have
+\begin{equation}
+\begin{aligned}
+g_{\alpha\beta}(1,2)=&\delta_{\alpha\beta}\left\{g^0(1,2)-\hbar^{-1}\int d^3\mathbf{x}_3 \int d^3\mathbf{x}_4 \int_0^{\beta\hbar} d\tau_2 \int_0^{\beta\hbar} d\tau_4 \right.\\
+& \left. \left[-2g^0(1,3)g^0(3,2)V_0(3,4)g^0(4,4)+g^0(1,3)g^0(3,4)g^0(4,2)V_0(3,4)\right]+\cdots\right\}
+\end{aligned}
+\end{equation}
+According to the item 7 in the Feynman's rule, $g^0(4,4)$ should be interpreted as $g^0(4,4+)$, which reduces to a particle density:
+\begin{equation}
+\begin{aligned}
+g_{\alpha\beta}^0(4,4+)&=g_{\alpha\beta}^0(\mathbf{x}_4,\tau_4;\mathbf{x}_4,\tau_4+)\\
+&=-\delta_{\alpha\beta}\langle\hat{n}_\alpha(\mathbf{x}_4)\rangle_0\\
+&=-\delta_{\alpha\beta} \frac{1}{2} \sum_{\alpha=\uparrow,\downarrow} \langle\hat{n}_\alpha(\mathbf{x}_4)\rangle_0\\
+&=-\frac{1}{2}\delta_{\alpha\beta}\langle\hat{n}(\mathbf{x}_4)\rangle_0
+\end{aligned}
+\end{equation}
+so that we can replace this by $-\frac{1}{2}\langle\hat{n}(\mathbf{x}_4)\rangle_0$
+%p670
+As in the zero-temperature field theory, it is useful to introduce the momentum space representation.
+Namely, in a spatially homogenous system, the single-particle temperature Green's function depends only on the relative distance betweent two coordinates.
+\begin{equation}
+g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x}',\tau')=g_{\alpha\beta}(\mathbf{x}-\mathbf{x}',\tau-\tau')
+\end{equation}
+Thus, we can take the Fourier transformation to introduce the momentum representation.
+But remember that we define $\tau$ and $\tau'$ to be within $0$ to $\beta\hbar$ $0\leq\tau,\tau'\leq\beta\hbar$, so that
+\begin{equation}
+-\beta\hbar\leq\tau,\tau'\leq\beta\hbar
+\end{equation}
+%p671
+Interestingly, the temperature Green's function automatically satisfies the periodic boundary condition.
+To see this, notice first that
+\begin{equation}
+\begin{aligned}
+g_{\alpha\beta}(\mathbf{x},\beta\hbar;\mathbf{x}',\tau')&=-\frac{1}{Z_G}Tr\left[\cancel{e^{-\beta K} e^{\beta K}} e^{-K\tau'/\hbar}\psi_\alpha(\mathbf{x})e^{-\beta K} e^{K \tau'/\hbar} \psi_\beta^\dagger(\mathbf{x}')\right]\\
+&=-\frac{1}{Z_G} Tr\left[e^{-\beta K} e^{K \tau'/\hbar} \psi_\beta^\dagger(\mathbf{x}')e^{-K \tau'/\hbar}\psi_\alpha(\mathbf{x})\right]\\
+&=\mp g_{\alpha\beta} (\mathbf{x},0;\mathbf{x}',\tau')
+\end{aligned}
+\end{equation}
+Similarly, we can prove that
+\begin{equation}
+\begin{aligned}
+g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x}',\beta\hbar)&=\mp \frac{1}{Z_G} Tr\left[\cancel{e^{-\beta K} e^{\beta K}} e^{-K\tau/\hbar}\psi^\dagger_\beta(\mathbf{x}')e^{-\beta K} e^{K \tau/\hbar} \psi_\alpha (\mathbf{x})\right]\\
+&=\mp\frac{1}{Z_G}Tr\left[e^{-\beta K} e^{K\tau/\hbar}\psi_\alpha(\mathbf{x}) e^{-K\tau/\hbar} \psi_\beta^\dagger(\mathbf{x}')\right]\\
+&=\pm g_{\alpha\beta}(\mathbf{x},tau;\mathbf{x}',0)
+\end{aligned}
+\end{equation}
+%p672
+These two suggest that
+\begin{equation}
+g_{\alpha\beta}(\mathbf{x}-\mathbf{x}',-\beta\hbar\le\tau-\tau'\le0)=\pm g_{\alpha\beta}(\mathbf{x}-\mathbf{x}',0\le\tau-\tau'+\beta\hbar\le\beta\hbar)
+\end{equation}
+where ``+'' sign is for boson and ``-'' sign is for fermion.
+This means that we can assume that the Green's function is periodic over range of $2\beta\hbar$: for both statistics.
+\begin{equation}
+g_{\alpha\beta}(\mathbf{x}-\mathbf{x}',\tau-\tau')=\pm g_{\alpha\beta}(\mathbf{x}-\mathbf{x}',\tau-\tau'+\beta\hbar)= g_{\alpha\beta}(\mathbf{x}-\mathbf{x}',\tau-\tau'+2\beta\hbar)
+\end{equation}
+With this boundary condition in mind, we will Fourier-expand the temperature Green's function as follows:
+%p673
+\begin{equation}
+g_{\alpha\beta}(\mathbf{x}-\mathbf{x}',\tau-\tau')=\int\frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar}\sum_n e^{i\mathbf{k}\cdot(\mathbf{x}-\mathbf{x}')} e^{-i\omega_n(\tau-\tau')} g_{\alpha\beta}(\mathbf{k},\omega_n)
+\end{equation}
+where
+\begin{equation}
+\omega_n =\frac{2n\pi}{2\beta\hbar}
+\end{equation}
+arbitrary integer $n$
+Corresponding inverse transformation is given by
+\begin{equation}
+g_{\alpha\beta}(\mathbf{k},\omega_n)=\int d^3\mathbf{x}\frac{1}{2} \int_{-\beta\hbar}^{\beta\hbar} d\tau e^{-i\mathbf{k}\cdot\mathbf{x}} e^{i\omega_n\tau} g_{\alpha\beta} (\mathbf{x},\tau)
+\end{equation}
+Using this boundary condition, we can further rewrite this into this form.
+\[
+\begin{aligned}
+g_{\alpha\beta}(\mathbf{k},\omega_n)&=\int d^3\mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}} \frac{1}{2} \left(\int_{-\beta\hbar}^0 d\tau+\int_0^{\beta\hbar} d\tau\right) e^{i\omega_n\tau} g_{\alpha\beta}(\mathbf{x},\tau)\\
+&=\int d^3 \mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}} \frac{1}{2} \int_0^{\beta\hbar} d\tau \left\{e^{i\omega_n(\tau-\beta\hbar)}g_{\alpha\beta}(\mathbf{x},\tau-\beta\hbar)+e^{i\omega_n\tau}g_{\alpha\beta}(\mathbf{x},\tau)\right\}\\
+&=\int d^3\mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}}\frac{1}{2} \int_0^{\beta\hbar} d\tau \left\{\pm e^{in\pi}+1\right\}e^{i\omega_n\tau}g_{\alpha\beta}(\mathbf{x},\tau)
+\end{aligned} \tag{$4.4.12^\prime$}
+\]
+This suggests that, for boson case, the Fourier coefficient becomes non-zero only when $n$ is even integer, while for fermion case, the coefficient becomes non-zero only when $n$ is odd integer.\\
+\uline{boson}
+$$
+g_{\alpha\beta}(\mathbf{k},\omega_n)=
+\begin{cases}
+\int d^3 \mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}}\int_0^{\beta\hbar} d\tau e^{i\omega_n\tau} g_{\alpha\beta}(\mathbf{x},\tau)&(n=even)\\
+0&(n=odd)
+\end{cases}
+$$
+\uline{fermion}
+$$
+g_{\alpha\beta}(\mathbf{k},\omega_n)=
+\begin{cases}
+\int d^3 \mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}}\int_0^{\beta\hbar} d\tau e^{i\omega_n\tau} g_{\alpha\beta}(\mathbf{x},\tau)&(n=odd)\\
+0&(n=even)
+\end{cases}
+$$
+To summarize, the Fourier series of the temperature Green's function is given by
+\begin{equation}
+g_{\alpha\beta}(\mathbf{k},\omega_n)=\int d^3\mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}} int_0^{\beta\hbar} e^{i\omega_n\tau}g_{\alpha\beta}(\mathbf{x},\tau)
+\end{equation}
+\begin{equation}
+\omega_n\equiv
+\begin{cases}
+\frac{2n\pi}{\beta\hbar} &(boson)\\
+\frac{(2n+1)\pi}{\beta\hbar} &(fermion)
+\end{cases}
+\end{equation}
+\begin{equation}
+g_{\alpha\beta}(\mathbf{x},\tau)=\int \frac{d^3\mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_m e^{i\mathbf{k}\cdot\mathbf{x}} e^{-i\omega_m\tau}g_{\alpha\beta}(\mathbf{k},\omega_m)
+\end{equation}
+This discrete frequency is often called as Matsubara frequency.
+%p676
+As an example, let us consider Fourier series of the non-interacting temperature Green's function.
+\begin{equation}
+\begin{aligned}
+g^0(\mathbf{k},\omega_n)&\equiv \int d^3\mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}} \int_0^{\beta\hbar} d\tau e^{i\omega_n\tau} g^0(\mathbf{x},\tau)\\
+&=-\frac{1}{V}\sum_{\mathbf{k}'} \int d^3\mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}} \int_0^{\beta\hbar} d\tau e^{i\omega_n\tau} e^{i\mathbf{k}'\cdot\mathbf{x}-\frac{\epsilon^0_{k'}-\mu}{\hbar}} \left(1\pm n_{k'}^0\right)\\
+&=-\sum_{\mathbf{k}'} \delta_{\mathbf{k},\mathbf{k}'} \frac{1}{i\omega_n-\frac{\epsilon^0_{k'}-\mu}{\hbar}}\left[e^{i\omega_n-\frac{\epsilon^0_{k'}-\mu}{\hbar}}\right]_{\tau=0}^{\tau=\beta\hbar}(1\pm n_{k'}^0)\\
+&=-\frac{1}{i\omega_n-\frac{\epsilon^0_{k'}-\mu}{\hbar}}\left[\cancelto{\pm1}{e^{i\omega_n\beta\hbar}} e^{-(\epsilon_k^0-\mu)\beta}-1\right] (1\pm n_k^0)\\
+&=-\frac{1}{i\omega_n-\frac{\epsilon^0_{k'}-\mu}{\hbar}}\left[\pm1 e^{-(\epsilon_k^0-\mu)\beta}-1\right] \frac{e^{-(\epsilon_k^0-\mu)\beta}}{e^{-(\epsilon_k^0-\mu)\beta\mp1}}\\
+&=\frac{1}{i\omega_n-\frac{\epsilon^0_{k'}-\mu}{\hbar}}
+\end{aligned}
+\end{equation}
+%p677
+With these preliminaries in mind, it is now straightforward to derive the Feynman rules in the momentum space.
+The derivation goes exactly in parallel with the zero-temperature field theory, so that I will describe only the results in the following.
+Feynman rules for the n-th order contribution to $g_{\alpha\beta}(\mathbf{k},\omega_n)$.
+Draw all topologically distinct connected graphs with n interaction lines (wavy lines) and (2n+1) directed particle lines (solid lines).
+%p678
+Assign a direction to each interaction line. Associate a wave vector and discrete Matsubara frequency with each interaction line and particle line and conserve momentum and frequency at each vertex\\
+\begin{center}
+\includegraphics[height=3cm]{fig4-4-4.png}
+\end{center}
+$$
+\left\{
+\begin{aligned}
+&\mathbf{k}'=\mathbf{k}+\mathbf{q}\\
+&\omega_n'=\omega_n+\epsilon_m
+\end{aligned}
+\right.
+$$
+For each particle line (solid line), assign a non-interacting temperature Green's function
+\[
+g_{\alpha\beta}^0(\mathbf{}k,\omega_n)=\frac{\delta_{\alpha\beta}}{i\omega_n-\hbar^{-1}(\epsilon_k^0-\mu)}
+\]
+where $\omega_n=\frac{2n\pi}{\beta\hbar}$ for boson, while $\omega_n=\frac{(2n+1)\pi}{\beta\hbar}$
+For an interaction line, assign $V(\mathbf{q})$ (free from frequency)
+Now we have n independent internal wave vectors and frequencies
+\[
+\underset{\#(particl\ lines)}{(2n+1)}+\underset{\#(interaction\ lines)}{n}-\underset{\begin{aligned}&\#(vertex)\\&=\#(conservation)\end{aligned}}{2n}-\underset{\begin{aligned}&external\ momentum\\&and\ frequency\end{aligned}}{1}=n
+\]
+Integrate over all the n independent internal wave vectors and frequencies:
+\[
+\prod_{j=1}^{n}\left(\int d^3\mathbf{k}_j\sum_{\omega_j}\right)
+\]
+Spin indices of the Green's function for a matrix product along any continuous particle lines which share a same vertex should be taken to be same. Under this condition, take the sum over all spin indices.
+Multiply by $\left(-\frac{1}{\hbar}\cdot\frac{1}{\beta\hbar}\cdot\frac{1}{(2\pi)^3}\right)(\pm1)^F$, where F is the number of closed loops formed by continuous particle lines (+ is for boson, - is for fermion)
+%p680
+When a particle line closes on itself \includegraphics[height=0.7cm]{fig4-4-5.png} or a particle line joined by the same interaction line\includegraphics[height=1cm]{fig4-4-6.png}, assign a convergence factor $e^{i\omega_m\eta}$ for particle line.\\
+\rule{\textwidth}{1mm}
+
+As an example, consider again the zero-th and first order contribution to the single-particle temperature Green's function.
+\begin{center}
+\includegraphics[height=3cm]{fig4-4-7.png}
+\end{center}
+\begin{equation}
+\begin{aligned}
+g_{\alpha\beta}(\mathbf{k},\omega_n)&=g_{\alpha\beta}^0(\mathbf{k},\omega_n)-\frac{1}{\hbar}\int\frac{d\mathbf{k}'}{(2\pi)^3}\frac{1}{\beta\hbar} \sum_{\omega_n'} e^{i\omega_n'\eta}\\
+&\times\left\{\pm g_{\alpha\mu}(\mathbf{k},\omega_n)g_{\mu\beta}(\mathbf{k},\omega_n) V(0) g_{\lambda\lambda}(\mathbf{k}',\omega_n')+ g_{\alpha\mu}(\mathbf{k},\omega_n) g_{\mu\lambda}(\mathbf{k}',\omega_n') g_{\lambda\beta}(\mathbf{k},\omega_n) V(\mathbf{k}-\mathbf{k}')\right\}\\
+&+\cdots
+\end{aligned}
+\end{equation}
+%p681
+For spin $-1/2$ fermion case with spin rotational symmetry, we can take
+\[
+g_{\alpha\beta}^0(\mathbf{k},\omega_n)=\delta_{\alpha\beta}^0(\mathbf{k},\omega_n)
+\]
+so that we have
+\[
+g_{\alpha\beta}(\mathbf{k},\omega_n)=\delta(\mathbf{k},\omega_n)
+\]
+\begin{equation}
+\begin{aligned}
+g(\mathbf{k},\omega_n)&=g^0(\mathbf{k},\omega_n)-\frac{1}{\hbar}\int\frac{d\mathbf{k}'}{(2\pi)^3}\frac{1}{\beta\hbar} \sum_{\omega_n'} e^{i\omega_n'\eta}\\
+&\times\left\{-2\left[g(\mathbf{k},\omega_n)\right]^2 V(0) g(\mathbf{k}',\omega_n')+ \left[g(\mathbf{k},\omega_n)\right]^2 V(\mathbf{k}-\mathbf{k}') g(\mathbf{k}',\omega_n) \right\}\\
+&+\cdots
+\end{aligned}
+\end{equation}
+where we took `-' sign for the fermion.
+The factor `2' comes from the summation over spin index $(\lambda)$.
+As in the zero-temperature field theory,$g(\mathbf{k},\omega_n)$ can be expressed in terms of self energy
+%p682
+\begin{equation}
+g(\mathbf{k},\omega_n)=g^0(\mathbf{k},\omega_n)+g^0(\mathbf{k},\omega_n)\sigma (\mathbf{k},\omega_n) g^0(\mathbf{k},\omega_n)
+\end{equation}
+where the first order contribution to the self-energy is given by
+\begin{equation}
+\Sigma^{(1)}(\mathbf{k},\omega_n)=-\frac{1}{\hbar}\int \frac{d\mathbf{k}'}{(2\pi)^3} \uline{\frac{1}{\beta\hbar} \sum_{\omega_n'} e^{i\omega_n\eta} g^0(\mathbf{k},\omega_n)}\cdot\left(-2V(0)+V(\mathbf{k}-\mathbf{k}')\right)
+\end{equation}
+Frequency summation in the underlined part is a typical summation, which we will encounter in finite-temperature field theory.
+Thus, we will demonstrate how to take this discrete sum, for the fermion case.
+\begin{equation}
+\frac{1}{\beta\hbar} \sum_{\omega_n'} e^{i\omega_n\eta} \frac{1}{i\omega_n'-\hbar^{-1}(\epsilon_k^0-\mu)}
+\end{equation}
+For simplicity, we take this real-value quantity $\hbar^{-1}(\epsilon^{0}_{k'}-\mu)$ to be x and replace $\omega^{\prime}_n$ by $\omega_n$.
+\[
+\frac{1}{\beta\hbar}\sum_{\omega_n}e^{i\omega_n\eta} \frac{1}{i\omega_n-x} \tag{$4.4.21^\prime$}
+\]
+%p683
+Now that this single-particle temperature Green's function is for fermion, $\omega_n$ is restricted to be $(2n+1)\pi/\beta\hbar$
+\[
+\omega_b=\frac{(2n+1)\pi}{\beta\hbar}\qquad(n:integer)
+\]
+To evaluate this sum we introduce a complex variable $z$, which corresponds to $i\omega_n$. Then, the sum over $\omega_n$ can be generally given by
+\begin{equation}
+\frac{1}{\beta\hbar}\sum_{\omega_n}f(i\omega_n)=-\oint\frac{dz}{2\pi i}\frac{1}{e^{\beta\hbar z}+1}f(z)
+\end{equation}
+where the contour integral in the right hand side is taken along a loop which encloses the imaginary axis in the complex z-plane.
+%p683
+\[
+Im\ z\ \Gamma\ \frac{\pi i}{\beta\hbar}\ \frac{3\pi i}{\beta\hbar}\ \frac{5\pi i}{\beta\hbar}\ \frac{7\pi i}{\beta\hbar}\ \frac{-\pi i}{\beta\hbar}\ \frac{-3\pi i}{\beta\hbar}\ Re\ z
+\]
+\begin{center}
+\includegraphics[height=4cm]{fig4-4-8.png}
+\end{center}
+To see this formula, notice first that $\frac{1}{e^{\beta\hbar z}+1}$ has a pole at $z=\frac{(2n+1)\pi}{\beta\hbar}i$ where $n$ is arbitrary integer.
+Therefore, when $f(z)$ has no pole inside this closed loop, we can split this closed loop into a infinite number of small loops, each of which encloses each of these poles.
+%p685
+\begin{center}
+\includegraphics[height=4cm]{fig4-4-9.png}
+\end{center}
+\[
+\begin{aligned}
+&-\oint_\Gamma \frac{dz}{2\pi i} \frac{1}{e^{\beta\hbar z}+1}f(z)\\
+&=-\sum_n \oint \frac{d\Delta z}{2\pi i} \frac{f(i\omega_n)}{e^{\beta\hbar(i\omega_n+\Delta z)}+1}\\
+&=\frac{1}{\beta\hbar} \sum_n \oint_{\Gamma_n} \frac{d\Delta z}{2\pi i} \frac{1}{\Delta z} f(i\omega_n)\\
+&=\frac{1}{\beta\hbar}\sum_n f(i\omega_n) \frac{1}{e^{\beta\hbar(i\omega_n+\Delta z)}+1}\\
+&=\frac{1}{e^{(2n+1)\pi+\beta\hbar\Delta z}+1}\\
+&=\frac{1}{-e^{\beta\hbar z}+1}\\
+&=\frac{1}{\beta\hbar z}
+\end{aligned}
+\]
+From this derivation, one might also notice that this function $\frac{1}{e^{\beta\hbar z}+1}$ can be replaced by other functions which have poles at $z=i\omega_n$.
+For example, we can also express this sum by this complex integral.
+\[
+\frac{1}{\beta\hbar}\sum_{\omega_n}f(i\omega_n)=\oint_\Gamma \frac{dz}{2\pi i} \frac{1}{1+e^{-\beta\hbar z}}f(z) \tag{$4.4.22^\prime$}
+\]
+Whether we should choose this or the other depends on an asymptotic behavior of a function f(z) in $|z|\rightarrow+\infty$
+In the present situation, f(z) is given by this
+\[
+f(z)=\frac{e^{z\eta}}{z-x}
+\]
+which reduces to zero for $Re\ z\rightarrow-\infty$ while diverges for $Re\ z\rightarrow+\infty$ because $\eta$ is an infinitesimally small positive value.
+In such case, we choose the former one, because the underlined integrand reduces to zero both for $Re\ z\rightarrow-\infty$ and $Re\ z\rightarrow+\infty$
+\[
+\frac{1}{\beta\hbar}\sum_{\omega_n}f(i\omega_n)=-\oint_\Gamma\frac{dz}{2\pi i} \uline{\frac{1}{1+e^{\beta\hbar z}}\frac{e^{z\eta}}{z-x}}
+\]
+where
+\[
+\begin{cases}
+\frac{1}{1+e^{\beta\hbar z}}\frac{e^{z\eta}}{z-x}\rightarrow 0 & Re\ z\rightarrow+\infty\quad(\beta\hbar\gg\eta> 0)\\
+\frac{1}{1+e^{\beta\hbar z}}\frac{e^{z\eta}}{z-x}\rightarrow 0 & Re\ z\rightarrow-\infty
+\end{cases}
+\]
+%o688
+This asymptotic behavior allows us to put two infinitely large contours: one is in the region of $Re\ z> 0$ and the other is in the region of $Re\ z< 0$.
+\begin{center}
+\includegraphics[height=4cm]{fig4-4-10.png}
+\end{center}
+Now that the integrand has a pole only on the real axis, we can deform in this way
+\begin{center}
+\includegraphics[height=4cm]{fig4-4-11.png}
+\end{center}
+%p689
+Correspondingly, this integral is evaluated as follows
+\begin{equation}
+-\oint_\Gamma\frac{dz}{2\pi i} \frac{1}{1+e^{\beta\hbar z}}\frac{e^{z\eta}}{z-x}=\frac{1}{e^{\beta\hbar x}+1}
+\end{equation}
+Namely, we have
+\[
+\frac{1}{\beta\hbar}\sum_{\omega_n} e^{i\omega_n\eta} \frac{1}{i\omega_n-\hbar^{-1}(\epsilon_k^0-\mu)}=\frac{1}{e^{\beta(\epsilon_k^0-\mu)}+1}=n_k^0\ (fermi distribution function) \tag{$4.4.23^\prime$}
+\]
+using this evaluation, the first-order self energy is now simplified into.
+\begin{equation}
+\Sigma^{(1)} (\mathbf{k},\omega_n)=-\frac{1}{\hbar} \int \frac{d^3\mathbf{k}}{(2\pi)^3} n_{k'}^0 \left(-2V(0)+V(\mathbf{k}-\mathbf{k}')\right)
+\end{equation}
+At the zero-temperature, this reduces to 2.5.9, because $n_{k'}^0=\theta(k_F-|\mathbf{k}|)$
+
+\section{Dyson's equation \& Hartree-Fock approximation}
+\subsection{Dyson equations for the temperature Green's function}
+
+Temperature Green's function consists of an identical set of Feynman diagram as the zero-temperature Green's function.
+Thus, it is quite natural that the same Dyson's equation holds true for the temperature Green's function.
+In coordinate space, the single-particle temperature Green's function always has the form:
+\begin{equation}
+g(1,2)=g^0(1,2)+\int d3\int d4 g^0(1,3)\Sigma(3,4)g^0(4,2)
+\end{equation}
+where the integral contains not only the integral over the space coordinate but also the sum over spin index and the time integration over $0$ to $\beta\hbar$
+%p691
+\[
+\int d3=\int d^3 \mathbf{x}_3 \int_0^{\beta\hbar} \sum_{\alpha_3}
+\]
+This defines the total self-energy $\Sigma(3,4)$.
+As in the zero-temperature field theory, it is also useful to define the `proper' self-energy $\Sigma^\star(3,4)$, which consistes of all self-energy diagram, that cannot be decomposed into two parts by cutting only one particle lines $g^0$.
+When a self-energy diagram is decomposed into several parts like this.
+\[
+\tilde{\Sigma}(1,2)=\int d3\cdots\int d7 \Sigma_a^\star(1,3)g^0(3,4)\Sigma_b^\star(4,5)\cdots g^0(6,7)\tilde{\Sigma}_c^\star(7,2)
+\]
+the factor $(-1/\hbar)^n(\pm1)^F$ appearing in the item 6 of the Feynman rule can be also decomposed into each of these proper self-energy.
+%p692
+\[
+(-1/\hbar)^n(\pm1)^F=(-1/\hbar)^{n_a}(\pm1)^{F_a}\cdot(-1/\hbar)^{n_b}(\pm1)^{F_b}\cdots\cdot(-1/\hbar)^{n_c}(\pm1)^{F_c}
+\]
+\[
+with
+\left(
+\begin{aligned}
+n&=n_a+n_b+\cdots+n_c\\
+F&=F_a+F_b+\cdots+F_c
+\end{aligned}
+\right)
+\]
+As such, the exact single-particle temperature Green's function is given only by the proper self-energy as follows
+\begin{equation}
+\begin{aligned}
+g(1,2)&=g^0(1,2)+\int d3\int d4 g^0(1,3) \Sigma^\star(3,4) g^0(4,2) +\int d3 d4 d5 d6 g^0(1,3)\Sigma^\star(3,4) g^0(4,5) \Sigma^\star(5,6) g^0(6,2)+\cdots\\
+&=g^0(1,2) +\int d3 d4 g^0(1,3)\Sigma^\star(3,4) g(4,2)
+\end{aligned}
+\end{equation}
+%p693
+which we call Dyson's equation.
+As in the zero-temperature field theory, the Dyson's equation reduces to an algebraic equation in the momentum-frequency representation:
+\begin{equation}
+g(\mathbf{k},\omega_n)=g^0(\mathbf{k},\omega_n)+g^0(\mathbf{k},\omega_n)\Sigma^\star(\mathbf{k},\omega_n)g(\mathbf{k},\omega_n)
+\end{equation}
+where we assume the spin rotational symmetry for simplicity.
+Here the Fourier series of the self-energy is defined as
+\begin{equation}
+\Sigma^\star(\mathbf{k},i\omega_n)=\int_0^{\beta\hbar} d\tau \int d^3\mathbf{x} e^{-i\mathbf{k}\cdot\mathbf{x}+i\omega_n\tau}\Sigma^\star(\mathbf{x},\tau)
+\end{equation}
+where the self-energy depends only on the relative coordinate for spatially homogeneous system,
+\[
+\left.
+\begin{aligned}
+\Sigma^\star(\mathbf{x},\tau)&\equiv\Sigma^\star(\mathbf{x}_3,\tau_3;\mathbf{x}_4,\tau_4)\\
+with\ \mathbf{x}&\equiv\mathbf{x}_3-\mathbf{x}_4\\
+\tau&\equiv\tau_3-\tau_4
+\end{aligned}
+\right\}\tag{$4.5.4^\prime$}
+\]
+This algebraic equation can be explicitly solved for the Green'f function
+\begin{equation}
+g(\mathbf{k},\omega_n)=\frac{1}{g^0(\mathbf{k},\omega_n)-\Sigma^\star(\mathbf{k},\omega_n)}
+\end{equation}
+or equivalently, we have
+\[
+g(\mathbf{k},\omega_n)=\frac{\delta_{\alpha\beta}}{i\omega_n-\hbar^{-1}(\epsilon_k^0-\mu)-\Sigma^\star(\mathbf{k},\omega_n)}\tag{$4.5.5^\prime$}
+\]
+$\star$ Hatree-Fock approximation
+Self-consistent Hatree-Fock approximation at the zero-temperature field theory can be also generalized into the finite-temperature field theory.
+We begin with the first order perturbation to the proper self-energy
+\begin{center}
+\includegraphics[height=2cm]{fig4-5-1.png}
+\end{center}
+%p695
+in which these internal particle lines are non-interacting Green's function.
+In the (self-consistent) Hatree-Fock approximation, we replace these non-interacting Green's functions by the exact Green's function.
+\begin{center}
+\includegraphics[height=2cm]{fig4-5-2.png}
+\end{center}
+To concretize this approximation, let us consider a system in a static spin-independent external potential $U(\mathbf{x})$.
+\begin{equation}
+\left\{
+\begin{aligned}
+\hat{K}_0&=\int d^3 \mathbf{x} \hat{\psi}_\alpha^\dagger(\mathbf{x}) \left[-\frac{\hbar^2\nabla_x^2}{2m}+U_0(\mathbf{x})-\mu\right] \hat{\psi}_\alpha(\mathbf{x})\\
+\hat{H}_1&=\int d^3 \mathbf{x} \int d^3 \mathbf{x}' \hat{\psi}_\alpha^\dagger(\mathbf{x}) \hat{\psi}_\beta^\dagger(\mathbf{x}') V(\mathbf{x}-\mathbf{x}') \hat{\psi}_\beta(\mathbf{x}')\hat{\psi}_\alpha(\mathbf{x})
+\end{aligned}
+\right.
+\end{equation}
+%p696
+For simplicity, we assume the spin-rotational symmetry, so that the Green's function is diagonal with respect to the spin index.
+\begin{equation}
+g_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x}',\tau')\equiv\delta_{\alpha\beta}g(\mathbf{x},\tau;\mathbf{x}',\tau')
+\end{equation}
+The Dyson equation for the Green's function is given by
+\begin{equation}
+\begin{aligned}
+g(\mathbf{x},\tau;\mathbf{x}',\tau')=&g^0(\mathbf{x},\tau;\mathbf{x}',\tau')\\&+\int d^3 \mathbf{x}_1 \int d^3 \mathbf{x}_1' \int_0^{\beta\hbar}d\tau_1 \int_0^{\beta\hbar}d\tau_1' g^0(\mathbf{x},\tau;\mathbf{x}_1,\tau_1) \Sigma^\star(\mathbf{x}_1,\tau_1;\mathbf{x}_1',\tau_1') g(\mathbf{x}_1',\tau_1';\mathbf{x}',\tau')
+\end{aligned}
+\end{equation}
+According to the Feynman's rule, the first-order perturbational contribution to the proper self-energy is given by
+%p697
+\begin{equation}
+\begin{aligned}
+\Sigma^\star(\mathbf{x}_1,\tau_1;\mathbf{x}_1',\tau_1')=&-\frac{1}{\hbar}\left[\pm(2s+1)\delta^3(\mathbf{x}_1-\mathbf{x}_1')\delta(\tau_1-\tau_1')\int d^3 \mathbf{x}_2 V(\mathbf{x}_1-\mathbf{x}_2) g(\mathbf{x}_2,\tau_1;\mathbf{x}_2,\tau_1+)\right.\\
+&\left.+\delta(\tau_1-\tau_1') g(\mathbf{x}_1,\tau_1;\mathbf{x}_1',\tau_1+) V(\mathbf{x}_1-\mathbf{x}_2)\right]
+\end{aligned}
+\end{equation}
+\rule{\textwidth}{1mm}
+\[
+\begin{aligned}
+\because &\int d^3 \mathbf{x}_1 \int d^3 \mathbf{x}_1' \int_0^{\beta\hbar} d\tau_1 \int_0^{\beta\hbar} d\tau_1' g^0(\mathbf{x},\tau;\mathbf{x}_1,\tau_1) \Sigma^\star(\mathbf{x}_1,\tau_1;\mathbf{x}_1',\tau_1') g^0(\mathbf{x}_1',\tau_1';\mathbf{x}',\tau')\\
+&=-\frac{1}{\hbar} \left[\pm(2s+1)\int d^3 \mathbf{x}_1 \int_0^{\beta\hbar} d\tau_1 g^0(\mathbf{x},\tau;\mathbf{x}_1,\tau_1) g^0(\mathbf{x},\tau;\mathbf{x}',\tau')\times\int d^3 \mathbf{x}_2 V(\mathbf{x}_1-\mathbf{x}_2) g^0(\mathbf{x}_2,\tau_1;\mathbf{x}_2,\tau_1+)\right]\\
+&\quad-\frac{1}{\hbar} \int d^3 \mathbf{x}_1 \int d^3 \mathbf{x}_1' \int_0^{\beta\hbar} d\tau_1 \int_0^{\beta\hbar} d\tau_1' g^0(\mathbf{x},\tau;\mathbf{x}_1,\tau_1) g^0(\mathbf{x}_1,\tau_1;\mathbf{x}_1',\tau_1') \delta(\tau_1-\tau_1') V(\mathbf{x}_1-\mathbf{x}_2) g^0(\mathbf{x}_1',\tau_1';\mathbf{x}',\tau')
+\end{aligned}
+\]
+\rule{\textwidth}{1mm}\\
+Within the Hatree-Fock approximation, we replace these non-interacting Green's function by the exact Green's function.
+%p698
+Irrespective of the presence of homogeneous external potential $U(\mathbf{x})$, we can still Fourier transform the time variable into Matsubara frequency.
+\begin{equation}
+g(\mathbf{x},\tau;\mathbf{x}',\tau')=g(\mathbf{x},\mathbf{x}';\tau-\tau')=\frac{1}{\beta\hbar}\sum_n e^{-i\omega_n(\tau-\tau')} g(\mathbf{x},\mathbf{x}';\omega_n)
+\end{equation}
+where
+$
+\omega_n=
+\begin{cases}
+\frac{2n\pi}{\beta\hbar} & (for\ boson)\\
+\frac{(2n+1)\pi}{\beta\hbar} & (for\ fermion)
+\end{cases}
+$
+The same fourier transformation is applicable to the self-energy, so that we have
+\begin{equation}
+\Sigma^\star(\mathbf{x},\tau;\mathbf{x}',\tau')=\frac{1}{\beta\hbar}\sum_n e^{-i\omega_n(\tau-\tau')} \Sigma^\star(\mathbf{x},\mathbf{x}';\omega_n)
+\end{equation}
+with $
+\omega_n=
+\begin{cases}
+\frac{2n\pi}{\beta\hbar} & (for\ boson)\\
+\frac{(2n+1)\pi}{\beta\hbar} & (for\ fermion)
+\end{cases}
+$\\
+%p699
+Under this transformation, the Dyson equation and self-consistent Hatree-Fock equation become as follows respectively.
+\[
+\begin{aligned}
+g(\mathbf{x},\mathbf{x}';\omega_n)=&g^0(\mathbf{x},\mathbf{x}';\omega_n)+\int_0^{\beta\hbar} d(\tau-\tau') e^{i\omega_n(\tau-\tau')} \int d^3\mathbf{x}_1 \int d^3\mathbf{x}_1' \int_0^{\beta\hbar} d\tau_1 \int_0^{\beta\hbar} d\tau_1'\\
+&\frac{1}{\beta\hbar}\sum_{\omega_1} e^{-i\omega_1(\tau-\tau_1)} g^0(\mathbf{x},\mathbf{x}_1;\omega_1)\\
+&\times\frac{1}{\beta\hbar}\sum_{\omega_2} e^{-i\omega_2(\tau_1-\tau_1')} \Sigma^\star(\mathbf{x}_1,\mathbf{x}_1';\omega_2)\\
+&\times\frac{1}{\beta\hbar}\sum_{\omega_3} e^{-i\omega_3(\tau_1'-\tau')} g^0(\mathbf{x}_1',\mathbf{x}';\omega_3)
+\end{aligned}
+\]
+Note that
+\[
+\int_0^{\beta\hbar} d\tau_1 e^{i(\omega_1-\omega_2)\tau_1}=\beta\hbar\delta_{n_1,n_2}
+\]
+\[
+\int_0^{\beta\hbar} d\tau_1' e^{i(\omega_2-\omega_3)\tau_1'}=\beta\hbar\delta_{n_2,n_3}
+\]
+\[
+\int_0^{\beta\hbar} d(\tau-\tau') e^{i(\omega_n-\omega_1)(\tau-\tau')}=\beta\hbar\delta_{n,n_1}\\
+\]
+%p700
+\[
+g(\mathbf{x},\mathbf{x}';\omega_n)=g^0(\mathbf{x},\mathbf{x}';\omega_n)+\int d^3\mathbf{x}_1\int d^3\mathbf{x}_1' g(\mathbf{x},\mathbf{x}_1;\omega_n) \Sigma^\star(\mathbf{x}_1,\mathbf{x}_1';\omega_n) g(\mathbf{x}_1',\mathbf{x}';\omega_n)
+\]
+\begin{equation}\label{eq4.5.12}
+\begin{aligned}
+\Sigma^\star(\mathbf{x}_1,\mathbf{x}_1';\omega_n)=&-\frac{1}{\hbar}\Big [\pm(2s+1)\delta^3(\mathbf{x}_1-\mathbf{x}-1')\\
+&\times\int d^3\mathbf{x}_2 V(\mathbf{x}_1-\mathbf{x}_2)\frac{1}{\beta\hbar} \sum_{\omega_m} g(\mathbf{x}_1,\mathbf{x}_2;\omega_m)e^{i\omega_m\eta}\\
+&+\frac{1}{\beta\hbar}\sum_{\omega_m}g(\mathbf{x}_1,\mathbf{x}_1';\omega_m)e^{i\omega_m\eta}V(\mathbf{x}_1-\mathbf{x}_1')\Big ]
+\end{aligned}
+\end{equation}
+where the self-energy is independent of the Matsubara frequency, so that we simply rewrite it as:
+\[
+\Sigma^\star(\mathbf{x}_1,\mathbf{x}_1';\omega_n)=\Sigma^\star(\mathbf{x}_1,\mathbf{x}_1')
+\]
+The non-interacting Green's function can be expanded in terms of the eigen wavefunction of single-particle Hamiltonian.
+%p701
+Suppose that the single-particle Hamiltonian is diagonalized by $\psi_j^0(\mathbf{x})$ with its eigen value $\epsilon_j^0$.
+\begin{equation}
+\left[-\frac{\hbar^2\nabla^2}{2m}+U(\mathbf{x})-\mu\right]\psi_j^0(\mathbf{x})=(\epsilon_j^0-\mu)\psi_j^0(\mathbf{x})
+\end{equation}
+In terms of this single-particle basis, the field operator is expanded as follows
+\begin{equation}
+\left\{
+\begin{aligned}
+\psi_\alpha(\mathbf{x})&=\sum_j\psi_j^0(\mathbf{x})a_{j,\alpha}\\
+\psi_\alpha^\dagger(\mathbf{x})&=\sum_j\psi_j^{0*}(\mathbf{x})a^\dagger_{j,\alpha}
+\end{aligned}
+\right.
+\end{equation}
+where the completeness of the basis is represented by the following equation:
+\begin{equation}\label{eq4.5.16}
+\sum_j\psi_j^0(\mathbf{x})\psi_j^{0*}(\mathbf{x})=\delta^3(\mathbf{x}-\mathbf{x}')
+\end{equation}
+while the orthogonality is represented by
+\begin{equation}
+\int d^3\mathbf{x} \psi_j^{0*}(\mathbf{x})\psi_m^0(\mathbf{x}) \delta_{j,m}
+\end{equation}
+%p702
+In terms of this basis, $\hat{K_0}$ is given by
+\begin{equation}
+\hat{K_0}=\sum_{j,\alpha}(\epsilon_j^0-\mu)a_{j,\alpha}^\dagger a_{j,\alpha}
+\end{equation}
+Non-interacting temperature Green's function is given by
+\[
+\begin{aligned}
+g_{\alpha\beta}^0(\mathbf{x},\tau;\mathbf{x}',\tau')&=-e^{\beta\Omega_0}Tr\left[e^{-\beta\hat{K}_0} T_\tau\{\hat{\psi}_{K_0\alpha}(\mathbf{x},\tau) \hat{\psi}_{K_0\beta}^\dagger(\mathbf{x}',\tau')\}\right]\\
+&=-\left\{\theta(\tau-\tau')\langle\hat{\psi}_{K_0\alpha}(\mathbf{x},\tau)\hat{\psi}_{K_0\beta}^\dagger(\mathbf{x}',\tau')\right\}
+\end{aligned}
+\]
+where 
+\[
+\begin{aligned}
+\hat{\psi}_{k_0\alpha}(\mathbf{x},\tau) & \equiv e^{\hat{k_0}\tau/\hbar} \hat{\psi}_\alpha(\mathbf{x}) e^{-\hat{k_0}\tau/\hbar}\\
+&=\sum_j e^{-(\epsilon^0_j-\mu)\tau/\hbar} \phi^0_j(\mathbf{x}) a_{j,\alpha}\\
+\hat{\psi}_{k_0\beta}^\dag(\mathbf{x}',\tau')&=\sum_j e^{(\epsilon^0_j-\mu)\tau'/\hbar} \phi^{0\star}_j(\mathbf{x}') a_{j,\alpha}
+\end{aligned}
+\]
+%p703
+Using these two, we have
+\[
+\langle \hat{\psi}_{k_0\alpha}(\mathbf{x},\tau) \hat{\psi}_{k_0\beta}^\dag(\mathbf{x}',\tau')\rangle_0
+=\sum_{j,m}e^{-(\epsilon^0_j-\mu)\tau/\hbar} e^{(\epsilon^0_m-\mu)\tau'/\hbar} \phi_j^0(\mathbf{x})\phi_m^{0\star}(\mathbf{x}) \langle a_{j,\alpha}a^\dag_{m,\beta}\rangle_0
+\]
+
+\[
+\begin{aligned}
+\langle a_{j,\alpha}a^\dag_{m,\beta}\rangle_0&=\delta_{j,m}\delta_{\alpha\beta} \langle a_{j,\alpha}a^\dag_{j,\alpha}\rangle_0\\
+&=\delta_{j,m}\delta_{\alpha\beta}(1\pm \langle a^\dag_{j,\alpha}a_{j,\alpha}\rangle_0\\
+&=\delta_{j,m}\delta_{\alpha\beta} (1\pm n^0_{j,\alpha})
+\end{aligned}
+\]
+
+\[
+\langle \hat{\psi}_{k_0\alpha}(\mathbf{x},\tau) \hat{\psi}_{k_0\beta}^\dag(\mathbf{x}',\tau')\rangle_0
+=\sum_{j}e^{-(\epsilon^0_j-\mu)(\tau-\tau')/\hbar} \phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x}') \delta_{\alpha\beta} (1\pm n^0_{j,\alpha})
+\]
+Similarly, we have
+\[
+\langle \hat{\psi}_{k_0\beta}^\dag(\mathbf{x}',\tau') \hat{\psi}_{k_0\alpha}(\mathbf{x},\tau)\rangle_0
+=\sum_{j}e^{-(\epsilon^0_j-\mu)(\tau-\tau')/\hbar} \phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x}')\delta_{\alpha\beta} n^0_{j,\alpha}
+\]
+%p704
+Using these two, we have
+\begin{equation}
+g_{\alpha\beta}^0(\mathbf{x},\tau;\mathbf{x}',\tau')=-\delta_{\alpha\beta}\sum_j e^{-(\epsilon^0_j-\mu)(\tau-\tau')/\hbar} \phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x}') \left\{ \theta(\tau-\tau') (1 \pm n^0_{j,\alpha}) \pm \theta(\tau'-\tau)n_{j,\alpha}^0 \right\}
+\end{equation}
+whose Fourier series is given by
+\[
+g_{\alpha\beta}^0(\mathbf{x},\mathbf{x}';\omega_n)=\delta_{\alpha\beta}g^0(\mathbf{x},\mathbf{x}';\omega_n)
+\]
+\[
+\begin{aligned}
+g^0(\mathbf{x},\mathbf{x}';\omega_n)&=\int^{\beta\hbar}_0 d(\tau-\tau')e^{i\omega_n(\tau-\tau')}g^0_{\alpha\beta}(\mathbf{x},\tau;\mathbf{x}',\tau')\\
+&=-\sum_j \phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x}') \int^{\beta\hbar}_0 d\tau e^{(i\omega_n-(\epsilon-\mu)/\hbar) \tau} (1\pm n^0_{j,\alpha})\\
+&=-\sum_j \phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x}') \frac{\pm e^{(-\epsilon_j^0-\mu)\beta}-1}{i\omega_n-(\epsilon-\mu)/\hbar } (1\pm n^0_{j,\alpha})
+\end{aligned}
+\]
+%p705
+\[
+1\pm n^0_{j,\alpha}=\frac{ e^{(-\epsilon_j^0-\mu)\beta}\mp1 \pm 1}{ e^{(-\epsilon_j^0-\mu)\beta}\mp1}=\frac{1}{ 1\mp e^{(-\epsilon_j^0-\mu)\beta}}
+\]
+\begin{equation}
+g^0(\mathbf{x},\mathbf{x}';\omega_n)=\sum_j \frac{\phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x}')}{i\omega_n-(\epsilon_j-\mu)/\hbar}
+\end{equation}
+In a similar way, let us assume that the interacting temperature Green's function can be also expanded in terms of a certain single-particle basis, which will be justified as posteriori within the self-consistent Hartree-Fock approximation,
+\begin{equation}\label{eq4.5.21}
+g(\mathbf{x},\mathbf{x}';\omega_n)=\sum_j \frac{\phi_j(\mathbf{x})\phi_j^{\star}(\mathbf{x}')}{i\omega_n-(\epsilon_j-\mu)/\hbar}
+\end{equation}
+where we remove the superscript ``0''.
+%p706
+Substituting this form into eq.(\ref{eq4.5.12}) , we have the proper self-energy within the Hartree-Fock approximation as follows:
+\[
+\begin{aligned}
+\hbar \Sigma^\star(\mathbf{x}_1,\mathbf{x}_1')
+=&\mp (2s+1)\delta^3 (\mathbf{x}_1,\mathbf{x}_1') \int d^3\mathbf{x}_2 V(\mathbf{x}_1-\mathbf{x}_2)\frac{1}{\beta\hbar} \sum_{\omega_m} e^{i\omega_m\eta}\sum_j \frac{\phi_j(\mathbf{x_1})\phi_j^{\star}(\mathbf{x_2})}{i\omega_m-(\epsilon_j-\mu)/\hbar}\\
+&+V(\mathbf{x}_1-\mathbf{x}_1')\frac{1}{\beta\hbar} \sum_{\omega_m} e^{i\omega_m\eta}\sum_j \frac{\phi_j(\mathbf{x_1})\phi_j^{\star}(\mathbf{x_1'})}{i\omega_m-(\epsilon_j-\mu)/\hbar}
+\end{aligned}
+\]
+where ``-'' sign is for boson and ``+\\ sign is for fermion.
+For each case, the Matsubara frequency is defined as follows
+\[
+\omega_m=\left\{
+\begin{aligned}
+&\frac{2m\pi}{\beta\hbar}\qquad (boson)\\
+&\frac{(2m+1)\pi}{\beta\hbar}\qquad (fermion)
+\end{aligned}
+\right.
+\]
+%p707
+In either case, we can evaluate this summation by the complex integral as we didi for fermion case before.
+The result becomes as follows
+\[
+\frac{1}{\beta\hbar} \sum_{\omega_m} e^{i\omega_m\eta} \frac{1}{i\omega_m-(\epsilon_j-\mu)/\hbar}=\mp \frac{1}{e^{\beta(\epsilon_j-\mu)}\mp1}\equiv \mp n_j
+\]
+where $\eta > 0$
+Substituting this into these two parts, we finally reach the following expression for the proper self-energy:
+\begin{equation}\label{eq4.5.22}
+\hbar \Sigma^\star(\mathbf{x}_1,\mathbf{x}_1')
+=\mp (2s+1)\delta^3 (\mathbf{x}_1,\mathbf{x}_1') \int d^3\mathbf{x}_2 V(\mathbf{x}_1-\mathbf{x}_2) \sum_j |\phi_j(\mathbf{x})|^2n_j\mp V(\mathbf{x}_1-\mathbf{x}_1')\sum_j \phi_j(\mathbf{x_1})\phi_j^{\star}(\mathbf{x_1'})n_j
+\end{equation}
+%p708
+To justify that the interacting Green's function can be expanded in terms of a certain single-particle basis, let us apply the following differential operator onto the Dyson's equation from the left hand side:
+\begin{equation}
+\mathscr{L}_1(x,\nabla x)=\i\hbar \omega_n - \left( -\frac{\hbar^2\nabla^2_\mathbf{x}}{2m}+U(\mathbf{x}-\mu)\right)
+\end{equation}
+\[
+\mathscr{L}_1(x,\nabla x) g(\mathbf{x},\mathbf{x}';\omega_n)=\mathscr{L}_1(x,\nabla x) \left[ g^0(\mathbf{x},\mathbf{x}';\omega_n)+\int d^3\mathbf{x}_1 \int d^3\mathbf{x}_1' g^0(\mathbf{x},\mathbf{x}_1;\omega_n)\Sigma^\star (\mathbf{x}_1,\mathbf{x}_1')g(\mathbf{x}_1',\mathbf{x}';\omega_n)\right]
+\]
+Note that
+%p709
+\begin{equation}\label{eq4.5.24}
+\begin{aligned}
+\mathscr{L}_1(x,\nabla x) g^0(\mathbf{x},\mathbf{x}';\omega_n)
+&=\left[i\hbar \omega_n - \left( -\frac{\hbar^2\nabla^2_\mathbf{x}}{2m}+U(\mathbf{x}-\mu)\right) \right] \sum_j \frac{\phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x'})}{i\omega_m-(\epsilon_j^0-\mu)/\hbar}\\
+&=\hbar sum_j \phi_j^0(\mathbf{x})\phi_j^{0\star}(\mathbf{x'})=\hbar \delta^3 (\mathbf{x}-\mathbf{x}')
+\end{aligned}
+\end{equation}
+where we use $\left( -\frac{\hbar^2\nabla^2_\mathbf{x}}{2m}+U(\mathbf{x}-\mu)\right)\phi_j^0 (\mathbf{x})=(\epsilon_j^0-\mu) \phi_j^0(\mathbf{x})$, the completeness of $\{ \phi_j^0\}$ and eq.(\ref{eq4.5.16}) in the final line.\\
+Using this, we can rewrite this into
+\begin{equation}
+\mathscr{L}_1(x,\nabla x) g(\mathbf{x},\mathbf{x}';\omega_n)=\hbar \delta^3(\mathbf{x}-\mathbf{x}')+\int d^3\mathbf{x}_1\int d^3\mathbf{x}_1'\hbar \delta^3(\mathbf{x}-\mathbf{x}_1)\Sigma^\star (\mathbf{x}_1,\mathbf{x}_1')g(\mathbf{x}_1',\mathbf{x}';\omega_n)
+\end{equation}
+By transferring the 2nd term into the left hand side, we have
+%p710
+\begin{equation}\label{eq4.5.26}
+\left[i\hbar \omega_n - \left( -\frac{\hbar^2\nabla^2_\mathbf{x}}{2m}+U(\mathbf{x}-\mu)\right) \right] g(\mathbf{x},\mathbf{x}';\omega_n)+\int d \mathbf{x}^{\prime \prime} \Sigma^\star (\mathbf{x},\mathbf{x}^{\prime\prime})g(\mathbf{x}^{\prime\prime},\mathbf{x}';\omega_n)=\hbar \delta^3(\mathbf{x}-\mathbf{x}')
+\end{equation}
+Such an equation is satisfied by eq.(\ref{eq4.5.21}), if and only if the single-particle basis is an eigen wavefunction of the following linear operator:
+\begin{equation}\label{eq4.5.27}
+\int d^3 \mathbf{x}' \mathscr{L}(\mathbf{x},\mathbf{x}')\phi_j(\mathbf{x}')=\epsilon_j\phi_j(\mathbf{x}')
+\end{equation}
+where
+\begin{equation}\label{eq4.5.28}
+\mathscr{L}(\mathbf{x},\mathbf{x}')=\delta^3(\mathbf{x}-\mathbf{x}')\left[ -\frac{\hbar^2\nabla^2_\mathbf{x}}{2m}+U(\mathbf{x}) \right]+ \Sigma^\star (\mathbf{x},\mathbf{x}')
+\end{equation}
+Generally speaking, we can expect that such an eigen wavefunction constitutes a complete set; so that we have 
+\begin{equation}\label{eq4.5.29}
+\sum_j\phi_j(\mathbf{x}) \phi_j^\star(\mathbf{x}')=\delta^3(\mathbf{x}-\mathbf{x}')
+\end{equation}
+%p711
+Then using eq.(\ref{eq4.5.27}), eq.(\ref{eq4.5.28}) and eq.(\ref{eq4.5.29}), we can prove eq.(\ref{eq4.5.26}) exactly in the same way as we did in eq.(\ref{eq4.5.24}).
+To summerize, eq(\ref{4.5.22}) and eq(\ref{eq4.5.27},\ref{eq4.5.28}) comprise a set of self-consistent equation for unknown set of functions $\{ \phi_j(\mathbf{x})\}$ and unknown set of eigenvalues $\{ \epsilon_j\}$.
+This set of equation is a generalisation of Hartree-Fock approximation at finite temperature.
+In a spatially homogeneous system, where $U(\mathbf{x})=0$, this set of self consistent equation becomes simplified.
+%p712
+In such a case, the self-energy depends only on the relative coordinate
+\[
+\Sigma^\star(\mathbf{x},\mathbf{x}')=\Sigma^\star(\mathbf{x}-\mathbf{x}')
+\]
+Thus, we have only to choose the plane wave for $\phi_j(\mathbf{x})$
+\[
+\phi_j(\mathbf{x})\rightarrow \frac{1}{\sqrt{V}}e^{i\mathbf{k} \cdot \mathbf{x}}
+\]
+Then eq.(\ref{eq4.5.28}) reduces to 
+\begin{equation}
+\frac{\hbar^2 \mathbf{k}^2}{2m}+\Sigma^\star (\mathbf{k})=\epsilon_{\mathbf{k}}
+\end{equation}
+with $\Sigma^\star (\mathbf{k})=\int d^3(\mathbf{x}-\mathbf{x}') e^{-i\mathbf{k}\cdot (\mathbf{x}-\mathbf{x'})} \Sigma^\star (\mathbf{x}-\mathbf{x}')$
+On the other hand, eq(\ref{eq4.5.22}) reduces to 
+\begin{equation}
+\hbar \Sigma^\star (\mathbf{k})=(2s+1)V(0)\int \frac{d^3\mathbf{k}'}{(2\pi)^3} n'_\mathbf{k}\mp\int \frac{d^3\mathbf{k}'}{(2\pi)^3} V(\mathbf{k}-\mathbf{k}') n'_k
+\end{equation}
+%p713
+with 
+\begin{equation}\tag{4.5.30$^\prime$}
+n_k=\frac{1}{e^{\beta(\epsilon_k-\mu)}+1}
+\end{equation}
+Namely, we have only to solve the following self-consistent equation
+\begin{equation}\label{eq4.5.31}
+\left\{
+\begin{aligned}
+\epsilon_k&=\frac{\hbar^2 k^2}{2m}+\hbar\Sigma^\star(\mathbf{k})\\
+\hbar \Sigma^\star(\mathbf{k})&=(2s+1)V(0)\int\frac{d^3\mathbf{k}'}{(2\pi)^3}n_k'\mp\int\frac{d^3\mathbf{k}'}{(2\pi)^3}V(\mathbf{k}-\mathbf{k}')n_k'
+\end{aligned}
+\right.
+\end{equation}
+%
+
+
+
+
+\section{Specific heat of an imperfect Fermi gas at low-temperature}
+%
+As an example of the Hartree-Fock approximation, let us evaluate the entropy and specific heat of an imperfect Fermi gas in the low-temperature limit.
+%p714
+In the grand canonical ensemble, the thermodynamic potential is given as a function of temperature, volume and chemical potential.
+\begin{equation}
+\Omega(T,V,\mu)=E(T,V,\mu)-TS(T,V,\mu)-\mu N(T,V,\mu)
+\end{equation}
+where
+\begin{equation}\label{eq4.6.2}
+S(T,V,\mu)=-\left( \frac{\partial\Omega}{\partial T}\right)_{V,\mu}
+\end{equation}
+\begin{equation}
+N(T,V,\mu)=-\left( \frac{\partial\Omega}{\partial \mu}\right)_{V,T}
+\end{equation}
+Solving the latter equation inversely, we can express the chemical potential as a function of $T,V$ and $N$
+\[
+N=N(T,V,\mu)
+\]
+\[
+\rightarrow \mu=\mu(T,V,N)
+\]
+Substituting this into the former equation, the entropy is given as a function of $T,V \& N$
+\[
+S(T,V,\mu)=S(T,V,\mu(T,V,N))
+\]
+%p715
+from which we can evaluate the specific heat as 
+\begin{equation}
+C-V=T\left(\frac{\partial S}{\partial T}\right)_{V,N}
+\end{equation}
+To obtain the total number of fermions as a function of $T,\ V$ and $\mu$ microscopically, we go back to eq.(\ref{eq4.1.7})
+\begin{equation}\label{eq4.6.5}
+\begin{aligned}
+N(T,V,\mu)&=\int d^3 \mathbf{x} \langle n(\mathbf{x})\rangle\\
+&=\int d^3 \mathbf{x} tr[g(\mathbf{x},\tau,\mathbf{x},\tau+)]\\
+&=V\int \frac{d^3\mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar}\sum_n e^{i\omega_n\eta} tr[g(\mathbf{k},\omega_n)]
+\end{aligned}
+\end{equation}
+To obtain the entropy as a function of $T,\ V$ and $\mu$, we need to calculate the thermodynamic potential $\Omega$ in terms of Green's function.
+In fact, eq(\ref{eq4.1.18}) gives the thermodynamic potential in terms of the single particle temperature Green's function.
+%p716
+However, such an evaluation requires an integral over an auxiliary parameter $\lambda$, which is a bit cumbersome.
+On the one hand, eq.(\ref{eq4.1.14}), let us first define a following ``thermodynamic function'' $K$ as a function of $T,\ V$ and $A$
+\begin{equation}
+K(T,V,\mu)=E(T,V,\mu)-\mu N(T,V,\mu)=\Omega(T,V,\mu)+TS(T,V,\mu)
+\end{equation}
+%p717
+The first derivative of $K$ with respect to temperature with fixed $V$ and $\mu$ is calculated as follows:
+\[
+\left( \frac{\partial K}{\partial T}\right)_{V,\mu}=\left( \frac{\partial \Omega}{\partial T}\right)_{V,\mu}+S(T,V,\mu)+T\left( \frac{\partial S}{\partial T}\right)_{V,\mu}
+\]
+Using eq.(\ref{eq4.6.2}), the first two terms in R.H.S vanish.\\
+So that we have
+\begin{equation}
+\left( \frac{\partial K}{\partial T}\right)_{V,\mu}=T\left( \frac{\partial s}{\partial T}\right)_{V,\mu}
+\end{equation}
+Accordingly, by integrating this equation with respect to the temperature with fixed $V$ and $\mu$, we have the entropy as a function of $V$ \& $\mu$
+\begin{equation}
+s(T,V,\mu)=\cancelto{0}{S(T=0,V,\mu)}+\int_0^T\frac{1}{T'}\left( \frac{\partial K}{\partial T'}\right)_{V,\mu} dT'
+\end{equation}
+%p718
+Thus, the remaining task is to evaluate the thermodynamic function $K$ as a function of $T,\ V$ \& $\mu$.
+eq.(\ref{4.1.14}) suggests that the internal energy is given by
+\[
+\langle E \rangle=-\frac{1}{2}\int d^3\mathbf{x} \lim_{\tau'\to \tau+} \lim_{\mathbf{x}'\to\mathbf{x}}\left(\hbar \partial_\tau +\frac{\hbar^2\nabla^2_\mathbf{x}}{2m}-\mu\right) Tr[g(\mathbf{x},\tau;\mathbf{x}',\tau')]
+\]
+with $g(\mathbf{x},\tau;\mathbf{x}',\tau')\equiv\int \frac{d^3\mathbf{k}}{(2\pi)^3}\frac{1}{\beta\hbar}\sum_n e^{i\mathbf{k}\cdot(\mathbf{x}-\mathbf{x}')-i\omega_n(\tau-\tau')}g(\mathbf{k},\omega_n)$
+we have 
+\begin{equation}\label{eq4.6.9}
+\begin{aligned}
+\langle E \rangle&=-\frac{1}{2}\int d^3 \mathbf{x} \lim_{\tau'\to \tau+} \lim_{\mathbf{x}'\to\mathbf{x}} \int \frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_n e^{i\omega_n \eta}\left(-i\hbar\omega_n-\frac{\hbar^2\mathbf{k}^2}{2m}-\mu\right)g(\mathbf{k},\omega_n)\\
+&=-\frac{V}{2} \int \frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_n e^{i\omega_n \eta}\left(-i\hbar\omega_n-\frac{\hbar^2\mathbf{k}^2}{2m}-\mu\right)g(\mathbf{k},\omega_n)\\
+&=\frac{V}{2} \int \frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_n e^{i\omega_n \eta}\left(i\hbar\omega_n+\frac{\hbar^2\mathbf{k}^2}{2m}+\mu\right)g(\mathbf{k},\omega_n)
+\end{aligned}
+\end{equation}
+%p719
+Summing eq(\ref{eq4.6.9}) and eq(\ref{eq4.6.5}) we have the thermodynamic function $K$ in terms of Green's fn.
+\begin{equation}\label{eq4.6.10}
+\langle K \rangle=\langle E \rangle-\mu\langle N \rangle=\frac{V}{2} \int \frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_n e^{i\omega_n \eta}\left(i\hbar\omega_n+\epsilon_K^0-\mu\right)Tr g(\mathbf{k},\omega_n)
+\end{equation}
+Within the Hartree-Fock approximation, the temperature Green's function $g(\mathbf{k},\omega_n)$ is given by
+\begin{equation}
+g(\mathbf{k},\omega_n)=\frac{1}{i\omega_n-\hbar^{-1}(\epsilon_k-\mu)}
+\end{equation}
+where 
+\[
+n_k=\frac{1}{e^{\beta(\epsilon_k-\mu)}+1}
+\]
+and
+\[
+\begin{aligned}
+\epsilon_k&=\frac{\hbar^2 k^2}{2m}+\hbar\Sigma^\star(\mathbf{k})\\
+\hbar \Sigma^\star(\mathbf{k})&=2V(0)\int\frac{d^3\mathbf{k}'}{(2\pi)^3}n_k'-\int\frac{d^3\mathbf{k}'}{(2\pi)^3}V(\mathbf{k}-\mathbf{k}')n_k'
+\end{aligned}
+\]
+%p720
+Such a green's function depends on temperature through $\omega_n$, because $\omega=\frac{(2n+1)\pi}{\beta\hbar}$.
+But it also depends on temperature through $\epsilon_k$, because the Hartree-Fock self-energy $\Sigma^\star(\mathbf{k})$ depends on the temperature through the Fermi distribution function.
+In order to distinguish these two temperature dependence from each other, we put another argument to the Green's function
+\[
+g(\mathbf{k},\omega_n)\to g(\mathbf{k},\omega_n,\uline{T})
+\]
+where this (underlined) temperature-dependence comes only from that of $\epsilon_k$.
+For example,
+%p721
+\begin{equation}
+g(\mathbf{k},\omega_n,\uline{T})=\frac{1}{i\omega_n-\hbar^{-1}(\epsilon_k-\mu)}
+\end{equation}
+with
+\begin{equation}\tag{4.6.13$^\prime$}
+\left\{
+\begin{aligned}
+\epsilon_k&=\epsilon_k^0+\hbar\Sigma^\star(\mathbf{k})\\
+\hbar \Sigma^\star(\mathbf{k})&=2V(0)\int\frac{d^3\mathbf{k}'}{(2\pi)^3} \theta(k_F-|\mathbf{k}'|)-\int\frac{d^3\mathbf{k}'}{(2\pi)^3}V(\mathbf{k}-\mathbf{k}') \theta(k_F-|\mathbf{k}'|)
+\end{aligned}
+\right.
+\end{equation}
+With this notation in mind, let us evaluate the right-hand-side of eq(\ref{eq4.6.10}), using the low-temperature expansion.
+\begin{equation}\tag{4.3.10}
+\langle K \rangle=\langle E \rangle-\mu\langle N \rangle=\frac{V}{2} \int \frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_n e^{i\omega_n \eta}\left(i\hbar\omega_n+\epsilon_K^0-\mu\right)Tr g(\mathbf{k},\omega_n,T)
+\end{equation}
+where
+\[
+\begin{aligned}
+g^{-1}(\mathbf{k},\omega_n,T)&=i\omega_n -\hbar^{-1} (\epsilon_k(T)-\mu)\\
+&=i\omega_n -\hbar^{-1} (\epsilon_k^0-\mu) - \Sigma^\star(\mathbf{k},T)\\
+&=g^{0-1}(\mathbf{k},\omega_n)-\Sigma^\star(\mathbf{k},T=0)+(\Sigma^\star(\mathbf{k},T)- \Sigma^\star(\mathbf{k},T=0))\\
+&=g^{-1}(\mathbf{k},\omega_n,T=0)+(\Sigma^\star(\mathbf{k},T)-\Sigma^\star(\mathbf{k},T=0))
+\end{aligned}
+\]
+%722
+Equivalently, we have
+\begin{equation}
+g(\mathbf{k},\omega_n,T)=g(\mathbf{k},\omega_n,T=0)+g(\mathbf{k},\omega_n,T=0) (\Sigma^\star(\mathbf{k},T)-\Sigma^\star(\mathbf{k},T=0)) g(\mathbf{k},\omega_n,T)
+\end{equation}
+For sufficiently low-temperature, we can expand this T-dependence, iteratively in small $\Sigma^\star(\mathbf{k},T)-\Sigma^\star(\mathbf{k},T=0)$
+\begin{equation}\label{eq4.6.15}
+g(\mathbf{k},\omega_n,T)=g(\mathbf{k},\omega_n,T=0)+g(\mathbf{k},\omega_n,T=0) (\uline{\Sigma^\star(\mathbf{k},T)-\Sigma^\star(\mathbf{k},T=0)}) g(\mathbf{k},\omega_n,T)+O(T^2)
+\end{equation}
+%p723
+In the following, we will evaluate the leading order T-dependence in this underlined part.
+According to eq.(\ref{eq4.5.31}) the self-energy is given by a self consistent equation
+\begin{equation}\label{eq4.6.16}
+\begin{aligned}
+\Sigma^\star(\mathbf{k})&=2V(0)\int\frac{d^3\mathbf{k}'}{(2\pi)^3}n_k'-\int\frac{d^3\mathbf{k}'}{(2\pi)^3}V(\mathbf{k}-\mathbf{k}')n_k'\\
+n_k&=\frac{1}{e^{\beta(\epsilon_k-\mu)}+1}
+\end{aligned}
+\end{equation}
+with
+\begin{equation}
+\epsilon_k(T)=\epsilon_k^0+\hbar \Sigma^\star (\mathbf{k},T)
+\end{equation}
+Thus, the temperature dependence of the self-energy comes not only from ($\beta$) but also from the \uline{the temperature dependence of $\epsilon_k$}, latter of which is nothing but the temperature dependence of the self-energy itself.
+%p724
+To distinguish these two temperature dependence from each other, let us define
+\begin{equation}
+\epsilon_k(0) = \epsilon_k^0+\hbar \Sigma^\star (\mathbf{k},T=0)
+\end{equation}
+Then we can formally expand $n_k$ around $\epsilon_k(T)=\epsilon_k(0)+\hbar( \Sigma^\star (\mathbf{k},T)-\Sigma^\star (\mathbf{k},T=0))$
+Namely, we have
+\begin{equation}
+n_k=n_k(T) + \frac{\partial n_k(T)}{\partial \epsilon_k} \hbar ( \Sigma^\star (\mathbf{k},T)-\Sigma^\star (\mathbf{k},T=0))+O(T^2)
+\end{equation}
+Here we define $n_k(T)$, which is different from $n_k$, because its temperature dependence stems only from $\beta$, while $\epsilon_k$ is evaluated at $T=0$.
+Substituting this into eq.(\ref{eq4.6.16}), we have
+%p725
+\begin{equation}
+\begin{aligned}
+\hbar \Sigma^\star (\mathbf{k},T)&=\int \frac{d^3 \mathbf{q}}{(2\pi)^3} [2V(0)-V(\mathbf{k}-\mathbf{q})] n_q\\
+&\approx \int \frac{d^3 \mathbf{q}}{(2\pi)^3} [2V(0)-V(\mathbf{k}-\mathbf{q})]\left\{ n_q(T)+\frac{\partial n_q(T)}{\partial \epsilon_q} \hbar ( \Sigma^\star (\mathbf{q},T)-\Sigma^\star (\mathbf{q},0))\right\}
+\end{aligned}
+\end{equation}
+Subtracting this by its $T=0$ evaluation, we reach a self-consistent integral eq. for $\Sigma^\star (\mathbf{k},T)-\Sigma^\star (\mathbf{k},T=0)$
+\begin{equation}
+\Sigma^\star (\mathbf{k},T)-\Sigma^\star (\mathbf{k},0)\approx \int \frac{d^3 \mathbf{q}}{(2\pi)^3} [2V(0)-V(\mathbf{k}-\mathbf{q})]\left\{ (n_q(T)-n_q(0)) +\frac{\partial n_q(T)}{\partial \epsilon_q} \hbar ( \Sigma^\star (\mathbf{q},T)-\Sigma^\star (\mathbf{q},0))\right\}
+\end{equation}
+where
+\begin{equation}
+\hbar \Sigma ^\star (\mathbf{k},0)=\int \frac{d^3 \mathbf{q}}{(2\pi)^3} [2V(0)-V(\mathbf{k}-\mathbf{q})]n_k(0)
+\end{equation}
+%p726
+The thermodynamic function $K(T,V,\mu)$ can be obtained by the substitution of eq(\ref{eq4.6.15}) into eq(\ref{eq4.6.10}) 
+\begin{equation}
+\langle K\rangle=V\int \frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_n e^{i\omega_n \eta} (i\hbar \omega_n+\epsilon_k^0-\mu)\left\{ g(\mathbf{k},\omega_n,T=0) +g^2(\mathbf{k},\omega_n,T=0) \int \frac{d^3 \mathbf{q}}{(2\pi)^3} [2V(0)-V(\mathbf{k}-\mathbf{q})]\right\}
+\end{equation}
+As we did before, the summations over the Matsubara frequency are evaluated in terms of the complex integrals.

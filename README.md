@@ -1,8 +1,15 @@
 # QSP-Latex
 
-## 0. Why is this unfinished?
+## 0. Why is this unfinished & what's current status?
 
 Well that's a long story; but don't worry about it, our group will still work on it to match your schedule. 
+
+#### Chap 1. All done
+#### Chap 2. Section 6-8 done
+#### Chap 3. All done
+#### Chap 4. Section 1-5 done, 6 on work
+#### Chap 5. Section 1 on work 
+#### Chap 6. Section 1 done, 2 on work, 3-4 lost manuscript
 
 ## 1. What's this project
 

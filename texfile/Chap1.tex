@@ -513,7 +513,7 @@ These two relations means that $\mathbb{P}$ is a generator of the spatial transl
 
 In the preceding sections, we consider the quantum states of an oscillator  system as multiparticle states, where each particle has an energy unit and is often called a ``phonon''. In this section, we follow a different line of reasoning. We will start with a space of states describing a single particle, which is either Bose particle or Fermi particle. We then construct the multiple-particle states based on standard methods. 
 
-For the Bose particle case, we will arrive at a system of states and operators, that is mathematically equivalent to that found previously for a systen of oscillators. Thereby, this shows that the interpretation of oscillator states as many-phonon states is consistent with the usual description of many-particle systems with Bose statistics. 
+For the Bose particle case, we will arrive at a system of states and operators, that is mathematically equivalent to that found previously for a system of oscillators. Thereby, this shows that the interpretation of oscillator states as many-phonon states is consistent with the usual description of many-particle systems with Bose statistics. 
 
 We will develop a formalism with Fermi-Dirac statistics, for which the states do not resemble those of a harmonic-oscillator system. 
 
@@ -523,7 +523,7 @@ A $n$-particle state is given by a simple product of one-particle states
 
 \[|\psi\rangle = |\psi_1\rangle|\psi_2\rangle\cdots|\psi_n\rangle \]
 
-You can also weite this in the coordinate representation as 
+You can also write this in the coordinate representation as 
 
 \[\psi(x_1,\cdots,x_n) = \psi_1(x_1)\psi_2(x_2)\cdots\psi_n(x_n) \]
 
@@ -590,7 +590,7 @@ Because of this symmetrized property, $n$-particles in this wavefunction are ind
 
 An indistinguishable particle in a symmetrized many-particle wavefunction is called as ``boson''. 
 
-The other way of making wavefunctions for indistinguishable particles is ``antesymmetrize'' the wavefunction for distinguishable particles. %page41
+The other way of making wavefunctions for indistinguishable particles is ``antisymmetrize'' the wavefunction for distinguishable particles. %page41
 
 \[\Psi_F(x_1,\cdots,x_n) = \frac{1}{\sqrt{n!}}\sum_P(-1)^P\psi_{P(1)}(x_1)\cdot\psi_{P(2)}(x_2)\cdot\cdots\cdot\psi_{P(n)}(x_n) \]
 
@@ -675,7 +675,7 @@ Let us show an example:
 
 Suppose that $|\psi_1\rangle$ and $|\psi_2\rangle$ are two orthonormal single-particle states. 
 
-For bose particles, we can make three many-particle wavefunctions out of them. One is this, and the other is
+For Bose particles, we can make three many-particle wavefunctions out of them. One is this, and the other is
 
 \[\begin{split}
 |\Psi_a\rangle &= \frac{1}{\sqrt{2!}}(|\psi_1\rangle|\psi_2\rangle + |\psi_2\rangle|\psi_1\rangle)\\
@@ -693,7 +693,7 @@ For fermi particles, we can make only one many-particle wavefunctions,
 
 This two dictates that, due to the antisymmetric character, two fermi particles cannot occupy the same state. 
 
-The inner product of two of these $n$-particle states are given by a determinent or permanent of a $n\times n$ matrix, which is composed by the inner products of single particle states. 
+The inner product of two of these $n$-particle states are given by a determinant or permanent of a $n\times n$ matrix, which is composed by the inner products of single particle states. 
 
 \begin{align}
 \langle\varphi_1,\cdots,\varphi_n|\psi_1,\cdots,\psi_n\rangle = \begin{vmatrix}
@@ -755,7 +755,7 @@ Using this, one can show that a complete orthonormal set of $n$-particle states 
 
 where $n_j$ denotes the number of times that $j$ occurs in the sequence of $\alpha_1,\cdots,\alpha_n$. 
 
-For either boson case or fermion case, the completeness relation in the $n$-particles space can be weitten in the following simple form. 
+For either boson case or fermion case, the completeness relation in the $n$-particles space can be written in the following simple form. 
 
 \begin{align}
 \frac{1}{n!}\sum_{\alpha_1}\cdots\sum_{\alpha_n}|\alpha_1,\cdots,\alpha_n\rangle\langle\alpha)_1,\cdots,\alpha_n| = 1
@@ -767,7 +767,7 @@ The duplication of $n$-particle states are set off by the $1/n!$ (one over the f
 
 To see that this equality holds true for both boson and fermion cases, let us apply the left side to a $n$-particle state $|\beta_1,\cdots,\beta_n\rangle$ where $|\beta_j\rangle$ is from $\{|1\rangle,|2\rangle,\cdots,\}$ the single-particle states considered. \\
 
-{\Huge 1. }When all these $\beta_j$ are distict from one another, 
+{\Huge 1. }When all these $\beta_j$ are distinct from one another, 
 
 \[\begin{split}
 &\frac{1}{n!}\sum_{\alpha_1}\cdots\sum_{\alpha_n}|\alpha_1,\cdots,\alpha_n\rangle\langle\alpha_1,\cdots,\alpha_n|\beta_1,\cdots,\beta_n\rangle\\
@@ -776,7 +776,7 @@ To see that this equality holds true for both boson and fermion cases, let us ap
 &=\frac{1}{n!}\sum_P|\beta_1,\cdots,\beta_n\rangle = |\beta_1,\cdots,\beta_n\rangle
 \end{split}\]
 
-{\Huge 2. }When some of these $\beta_j$ are identical, which can be the case with bose particles, 
+{\Huge 2. }When some of these $\beta_j$ are identical, which can be the case with Bose particles, 
 
 \[\begin{split}
 &\frac{1}{n!}\sum_{\alpha_1}\cdots\sum_{\alpha_n}|\alpha_1,\cdots,\alpha_n\rangle\langle\alpha_1,\cdots,\alpha_n|\beta_1,\cdots,\beta_n\rangle \\
@@ -824,7 +824,7 @@ where $|\psi^{(n)}\rangle$ is an $n$-particle state and $|\psi^{(0)}\rangle$ is 
 
 \[|\psi^{(0)}\rangle = |var\rangle \]
 
-States of differemt numbers of particles are defined to be orthogonal to each other, so that
+States of different numbers of particles are defined to be orthogonal to each other, so that
 
 \[\langle\varphi|\psi\rangle = \langle\varphi^{(0)}|\psi^{(0)}\rangle + \langle\varphi^{(1)}|\psi^{(1)}\rangle  \]
 
@@ -842,7 +842,7 @@ The completeness relation in the multiparticle is given as follows,
 
 \section{Creation operator \& destruction operator}
 
-So far, we have constructed a complete orthonormal set of states in the multiparticle space. With these constructions in hand, we are now ready to define creation and destruction operators. These operators change the number of particles, so that they connect states of different numbers of particles. We will see that allthe physical operators are expressed in terms of creation and destruction operators. 
+So far, we have constructed a complete orthonormal set of states in the multiparticle space. With these constructions in hand, we are now ready to define creation and destruction operators. These operators change the number of particles, so that they connect states of different numbers of particles. We will see that all the physical operators are expressed in terms of creation and destruction operators. 
 
 Let $|\varphi\rangle$ be any one-particle state. We define $a^\dagger$ of $\varphi$ to be that linear operator which satisfies this, for any n-particle states $|\psi_1, \cdots,\psi_n\rangle$. 
 
@@ -931,7 +931,7 @@ and
 &= \sum_{k=1}^n\xi^{k-1}\langle \varphi_1|\psi_k\rangle |\varphi_2,\psi_k\rangle|\varphi_2,\psi_1,\cdots,\psi_{k-1},\psi_{k+1},\cdots,\psi_n\rangle\\
 \end{split}\]
 
-Multiply this by $\xi$ and substract it from the former one, we see that
+Multiply this by $\xi$ and subtract it from the former one, we see that
 
 \[[a(\varphi_1)a^\dagger(\varphi_2) - \xi a^\dagger(\varphi_2)a(\varphi_2)]|\psi_1,\cdots,\psi_n\rangle = \langle \varphi_1|\varphi_2\rangle |\psi_1,\cdots,\psi_n\rangle \]
 
@@ -949,13 +949,13 @@ These three relations are the fundamental ``commutation relations'' for creation
 
 Where one-particle states $|\alpha\rangle$ and $|\beta\rangle$ are from a complete orthonormal set of one-particle states, $\{|1\rangle,|2\rangle,\cdots\}$
 
-Let us next compare these commutation relations with raising and lowering operators for linear harmonic osciallators. 
+Let us next compare these commutation relations with raising and lowering operators for linear harmonic oscillators. 
 
 For boson case, we further define an orthonormal basis for the multiparticle space as 
 
 \begin{align}|n_1,n_2,\cdots\rangle = \frac{|\overset{n_1}{1,\cdots,1},\overset{n_2}{2,\cdots,2},\cdots\rangle}{\sqrt{n_1! n_2!,\cdots}} \end{align}
 
-Where we use $\{|1\rangle,|2\rangle,\cdots\}$ as a complete orthonormal set of one-particle states and $n_{\alpha}$ is the number of times $\alpha$ appear in the ket state in the right hand side. In terms of this orthornormal basis, eqs \eqref{Eqs1.6.1}, \eqref{Eqs1.6.2} reduce to the followings:
+Where we use $\{|1\rangle,|2\rangle,\cdots\}$ as a complete orthonormal set of one-particle states and $n_{\alpha}$ is the number of times $\alpha$ appear in the ket state in the right hand side. In terms of this orthonormal basis, eqs \eqref{Eqs1.6.1}, \eqref{Eqs1.6.2} reduce to the followings:
 
 \begin{align}
 a^\dagger(\alpha)|n_1,n_2,\cdots,n_{\alpha},\cdots\rangle = \sqrt{n_\alpha+1}|n_1,n_2,\cdots,n_{\alpha}+1,\cdots\rangle\\
@@ -1068,7 +1068,7 @@ In many-particle systems, we often want to deal with an operator that represents
 
 Thus, we want to represent $\hat{A}$ in terms of the creation and destruction operators. 
 
-To do this, we fiesr describe this, we first describe this single-particle operator $\hat{A}^{(1)}$ in terms of a complete orthonormal set of one-particle states: $\{|\alpha\rangle\} = \{|1\rangle,|2\rangle,\cdots\}$
+To do this, we first describe this, we first describe this single-particle operator $\hat{A}^{(1)}$ in terms of a complete orthonormal set of one-particle states: $\{|\alpha\rangle\} = \{|1\rangle,|2\rangle,\cdots\}$
 
 \begin{align}
 \hat{A}^{(1)}({\bf \hat{x}, \hat{p}}) \equiv \sum_{\alpha,\beta}|\alpha\rangle\langle\alpha| \hat{A}^{(1)}|\beta\rangle\langle\beta| = \alpha_{\alpha,\beta}\hat{A}^{(1)}_{\alpha\beta}|\alpha\rangle\langle\beta
@@ -1083,7 +1083,7 @@ with
 \end{split}
 \end{align}
 
-With this, let us apply $\hat{A}$ to an arbitray state in the multiparticle space
+With this, let us apply $\hat{A}$ to an arbitrary state in the multiparticle space
 
 \[\begin{split}
 &\hat{A}\langle x_1,\cdots,x_n|\psi_1,\cdots,\psi_n\rangle \\
@@ -1223,7 +1223,7 @@ where
 \begin{align}
 \begin{split}
 &\langle {\bf y}|\hat{\rho}({\bf x})|{\bf y'}\rangle\\
-&=\int d^3{\bf y''}\delta^3({\bf y - y''})\delta^3){\bf y'-y''})'delta(\bf x - y'')\\
+&=\int d^3{\bf y''}\delta^3({\bf y - y''})\delta^3){\bf y'-y''})\delta(\bf x - y'')\\
 &=\delta^3({\bf y - x})\delta^3(\bf y' - x)\\
 &=a^\dagger({\bf x})a(\bf x)
 \end{split}
@@ -1235,7 +1235,7 @@ In fact, total number of particles is defined as the integral of this over ${\bf
 \hat{N}=\int d^3{\bf x}\hat{\rho}({\bf x}) = \int d^3{\bf x}a^\dagger({\bf x})a(\bf x)
 \end{align}
 
-which is consistant with the previous expression for $\hat{N}$
+which is consistent with the previous expression for $\hat{N}$
 
 In terms of this density operator, the $2$nd term in equation can be given as the integral of the potential energy weighted by the density
 
@@ -1245,7 +1245,7 @@ So far, we have described a system of independent particles, where two or more p
 
 In the following, we will develop how interactions between particles are described in the $2$nd quantization language. 
 
-\begin{wrapfigure}{l}{6cm}%????????
+\begin{wrapfigure}{l}{6cm}
 \includegraphics[width = 4.5cm]{1-3.png}
 \end{wrapfigure}
 
@@ -1304,7 +1304,7 @@ Then
 
 Multiplying by $\frac{1}{2}V^{(2)}(\bf x,y)$ and integrate over $\bf x$ and $\bf y$, we obtain this, so that this is correct. 
 
-We might expect that the mutal interaction could also be described in terms of the particle density by
+We might expect that the mutual interaction could also be described in terms of the particle density by
 
 \begin{align}
 V'=\frac{1}{2}\int d^3{\bf x}\int d^3{\bf y}V^{(2)}({\bf x,y})\hat{\rho}({\bf x})\hat{\rho}(\bf y)
@@ -1326,9 +1326,9 @@ so that
 
 Namely, $V'$ differs from $V$ by this extra term, which contributes to energy even when there is only one particle present. 
 
-The true mutal interaction, which is $\hat{V}$, is zero unless there are two or more particles. 
+The true mutual interaction, which is $\hat{V}$, is zero unless there are two or more particles. 
 
-We want only the mutal interaction, because this extra term can be included into the potential energy term appearing in the single-particle Hamiltonian. 
+We want only the mutual interaction, because this extra term can be included into the potential energy term appearing in the single-particle Hamiltonian. 
 
 Moreover, for many physically relevant two-body interaction potentials, such as coulomb potential, $V'$ is infinite and is not what we would consider to be the true energy. 
 
@@ -1354,7 +1354,7 @@ where
 
 \[\tilde{V}({\bf q})\equiv\int d^3{\bf x}V({\bf x})e^{_i\bf q\cdot x} \]
 
-Note that this adds momentum $\bf q$ to one particle while substracts the same momentum $\bf q$ from the other with the amplitude of $\tilde{V}({\bf q})$
+Note that this adds momentum $\bf q$ to one particle while subtracts the same momentum $\bf q$ from the other with the amplitude of $\tilde{V}({\bf q})$
 
 \begin{align}
 \hat{V}|{\bf p}_1,{\bf p}_2\rangle = \frac{d\bf q}{(2\pi)^3}\tilde{V}({\bf q})|{\bf p}_1+{\bf q,p}_2-{\bf q}\rangle
@@ -1364,7 +1364,7 @@ This process is denoted by this diagram which is often called as Feynman diagram
 
 \section{Degenerate electron gas}
 
-So far, we have reviewed the $2$nd quantization. From the nextt weeks, we will study interacting fermi systems using $2$nd quantization Language. More specifically, we will often study a simple model that provides a first approximation to a metal. This system is an interacting electron gas placed in a uniformly distributed positive background. Because of the positive background, the total system is ensured to be neutral. In a real metal, the positive charge is localized in the ionic cores, whose dynamical motion must also be included in the calculation. 
+So far, we have reviewed the $2$nd quantization. From the next weeks, we will study interacting fermi systems using $2$nd quantization Language. More specifically, we will often study a simple model that provides a first approximation to a metal. This system is an interacting electron gas placed in a uniformly distributed positive background. Because of the positive background, the total system is ensured to be neutral. In a real metal, the positive charge is localized in the ionic cores, whose dynamical motion must also be included in the calculation. 
 
 However, these positive ions are usually much heavier than the electrons, so that it is permissible to neglect to ionic motions entirely. In contrast, the assumption of a uniform background is more drastic. In this sense, the present model can provide only a qualitative account of real metals in solids. 
 
@@ -1469,7 +1469,7 @@ We now rewrite $H_{el}$ in terms of the $2$nd quantization language. We use a ba
 
 with $\lambda=\uparrow$ or $\downarrow$ \& ${\bf k}=\frac{2\pi}{L}(n_x,n_y,n_z)$
 
-Correspongding creation \& annihilation operator has momentum \& spin indies, 
+Corresponding creation \& annihilation operator has momentum \& spin indies, 
 
 \[
 \left.\begin{matrix}
@@ -1562,11 +1562,11 @@ In a sub-Hilbert space of fixed number of electrons, we can replace this by a $c
 
 \[\text{second term}=\frac{e^2}{2}\frac{N^2}{V}\frac{4\pi}{\mu^2}-\frac{e^2}{2}\frac{N}{V}\frac{4\pi}{\mu^2}\]
 
-putting this into eq. \eqref{1.8.13} abd substituting eqs. \eqref{eq1.8.13} \& \eqref{eq1.8.11} into eq. \eqref{eq1.8.10}, we finally have
+putting this into eq. \eqref{1.8.13} and substituting eqs. \eqref{eq1.8.13} \& \eqref{eq1.8.11} into eq. \eqref{eq1.8.10}, we finally have
 
 \[\hat{H}=-\frac{e^2}{2}\frac{N^2}{V}\frac{4\pi}{\mu^2}+\sum_{{\bf k},\lambda}\frac{\hbar^2\bf k^2}{2m}a^\dagger_{{\bf k},\lambda}a_{{\bf k},\lambda}+\frac{e^2}{2V}\sum_{\bf k,p} \sum_{{\bf q}\neq0}\sum_{\lambda_1,\lambda_2}\frac{4\pi}{{\bf q^2}+\mu^2}a^\dagger_{{\bf k+q},\lambda_1}a^\dagger_{{\bf p-q},\lambda_2}a_{{\bf p},\lambda_2}a_{{\bf k},\lambda_1} + \frac{e^2}{2}\frac{N^2}{V}\frac{4\pi}{\mu^2}-\frac{e^2}{2}\frac{N}{V}\frac{4\pi}{\mu^2} \]
 
-The last term represents an energy per particlem $-\displaystyle\frac{e^2}{2}\frac{4\pi}{V\mu^2}$, which vanished in the thermodynamic limit with $\mu^{-1}\ll L$. 
+The last term represents an energy per particle $-\displaystyle\frac{e^2}{2}\frac{4\pi}{V\mu^2}$, which vanished in the thermodynamic limit with $\mu^{-1}\ll L$. 
 
 Therefore, it is now clear that these two terms, each of which diverges in the limit of $\mu\to0$ respectively, cancel each other, so that the entire Hamiltonian has no trivially diverging term. This comes from the electric neutrality of the entire system. 
 

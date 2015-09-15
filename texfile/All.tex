@@ -4,6 +4,7 @@
 \usepackage{mathrsfs}%用于花体
 \usepackage{amsmath}
 \usepackage{psfig}
+\usepackage{arydshln}
 \usepackage{picinpar}
 \usepackage{wrapfig}
 \usepackage{graphicx}
@@ -1029,7 +1030,7 @@ Multiply this by $\xi$ and substract it from the former one, we see that
 
 Equivalently, we have
 
-\begin{align}
+\begin{align}\label{eqs1.6.5}
 [a(\varphi_1),a^\dagger(\varphi_2)] _{-\xi} = \langle\varphi_1|\varphi_2\rangle
 \end{align}
 
@@ -1218,7 +1219,7 @@ From this, we can write the sum of the single-particle operator over all particl
 
 \[\hat{A} = \sum_j\hat{A}^{(1)}({\bf x}_j,-i\frac{\partial}{\partial {\bf x}_j}) \]
 
-\begin{align}
+\begin{align}\label{eqs1.7.6}
 \rightarrow \hat{A} = \sum_{\alpha,\beta} A^{(1)}_{\alpha\beta}a^\dagger(\alpha)a(\beta)
 \end{align}
 
@@ -1323,7 +1324,7 @@ where
 
 In fact, total number of particles is defined as the integral of this over ${\bf x}_j$
 
-\begin{align}
+\begin{align}\label{eqs1.7.15}
 \hat{N}=\int d^3{\bf x}\hat{\rho}({\bf x}) = \int d^3{\bf x}a^\dagger({\bf x})a(\bf x)
 \end{align}
 
@@ -1364,7 +1365,7 @@ Here is a multiparticle states for $5$ indistinguishable particles, which are lo
 
 In terms of creation \& annihilation operators, this is given as follow
 
-\begin{align}
+\begin{align}\label{eqs1.7.18}
 V = \frac{1}{2}\int d^3{\bf x}\int d^3{\bf y}V^{(2)}({\bf x,y})a^\dagger({\bf x})a^\dagger({\bf y})a({\bf y})a({\bf x})
 \end{align}
 
@@ -1531,6 +1532,155 @@ H_b &=\frac{e^2}{2}\left(\frac{N}{V}\right)^2\iint d^3{\bf x}d^3{\bf x'}\frac{e^
 \end{split}
 \end{align}%page99
 
+Here we shifted the origin of the integration in the second line, which is allowed since $\mu^{-1}\ll L$. 
+
+$N^{-1}\cdot H_b$ diverges in the limit of $\mu\to +0$, which represents the long-range nature of the coulomb interaction. 
+
+$H_{el-b}$ is a one-particle operator for electron for static background $n({\bf x})$. 
+
+For the uniform distribution, we may again use the translation invariant to estimate this as a $c$-number:
+
+\begin{align}
+\begin{split}
+H_{el-b}&=-e^2\sum_{i=1}^N\frac{N}{V}\int d^3{\bf x}\frac{e^{-\mu|{\bf x-r}_i|}}{|{\bf x-r}_i|}\\
+&=-e^2\sum_{i=1}^N\frac{N}{V}\int d^3{\bf x}\frac{e^{-\mu|{\bf x}}}{|{\bf x}|}\\
+&=-e^2\frac{N^2}{V}\frac{4\pi}{\mu^2}
+\end{split}
+\end{align}
+
+Thus the total Hamiltonian becomes 
+
+\begin{align}\label{eq1.8.10}
+\hat{H}=-\frac{e^2}{2}\frac{N^2}{V}\frac{4\pi}{\mu^2}+\hat{H}_{el}
+\end{align}
+
+so that all of the interacting physical effects are contained in $\hat{H}_{el}$. 
+
+We now rewrite $H_{el}$ in terms of the $2$nd quantization language. We use a basis of momentum eigenstate with spin degree of freedom:
+
+\[\psi_{{\bf k},\lambda}({\bf x})=\frac{1}{\sqrt{V}}e^{i\bf k\cdot x}\eta_\lambda \]
+
+with $\lambda=\uparrow$ or $\downarrow$ \& ${\bf k}=\frac{2\pi}{L}(n_x,n_y,n_z)$
+
+Correspongding creation \& annihilation operator has momentum \& spin indies, 
+
+\[
+\left.\begin{matrix}
+a^\dagger_{{\bf k},\lambda} \\
+\ \\
+\underset{\text{momentum,spin}\quad}{a^\dagger_{{\bf k},{\lambda}}}
+\end{matrix}\right\}\longrightarrow\psi_{{\bf k},\lambda}({\bf x})=\frac{1}{\sqrt{V}}e^{i\bf k\cdot x}\eta_\lambda 
+\]
+
+Moreover, the inner product between these `single-particle states' is given by
+
+\[\begin{split}
+\langle {\bf k},\lambda|{\bf k'},\lambda\rangle&\equiv\frac{1}{V}\int_V d^3{\bf x}\psi_{{\bf k},\lambda}^*({\bf x})\psi_{{\bf k'},\lambda'}({\bf x}) \\
+&=\delta_{\lambda,\lambda'}\frac{1}{V}\int_V d^3{\bf x}e^{-i\bf (k-k')\cdot x}\\
+&=\delta_{\lambda,\lambda'}\delta_{\bf k,k'}
+\end{split}\]
+
+with $\delta_{\bf k,k'}\equiv\delta_{n_x,n_x'}\delta_{n_y,n_y'}\delta_{n_z,n_z'}$
+
+so that eq. \eqref{eqs1.6.5} tells that
+
+\[[a_{{\bf k},\lambda},a^\dagger_{{\bf k'},\lambda}]\equiv\delta_{\lambda,\lambda'}\delta{\bf k,k'} \]
+
+\dotfill
+
+\ 
+
+On the one hand, eq. \eqref{eqs1.7.6} suggests that the kinetic energy part is given by
+
+\[\hat{T}\equiv\sum_{{\bf k}\lambda}\sum_{{\bf k'},\lambda'}a^\dagger_{{\bf k}\lambda} a_{{\bf k'},\lambda'}\langle{\bf k}\lambda|T|{\bf k'},\lambda'\rangle\]
+
+where
+
+\begin{align}\label{eq1.8.11}
+\begin{split}
+\langle{\bf k}\lambda|T|{\bf k'},\lambda'\rangle&\equiv\frac{\delta_{\lambda,\lambda'}}{V}\int d^3{\bf x}e^{-i\bf k\cdot x}\left(-\frac{\hbar^2\nabla^2}{2m}\right)e^{i\bf k'\cdot x}\\
+&=\frac{\hbar^2 k^2}{2m}\delta_{\bf k,k'}\delta_{\lambda,\lambda'}\\
+&\equiv\sum_{{\bf k},\lambda}\frac{\hbar^2\bf k^2}{2m}a^\dagger_{{\bf k}\lambda}a_{{\bf k}\lambda}
+\end{split}
+\end{align}
+
+The two-particle interaction part can be evaluated from eq. \eqref{eqs1.7.18} as
+
+\[\begin{split}
+V=&\frac{e^2}{2}\int_V d^3{\bf x}\int_V d^3{\bf y}\sum_{\tau,\tau'}\frac{e^{-\mu|\bf x-y|}}{|\bf x-y|}\left( \sum_{{\bf k}_1,\lambda_1}\psi^*_{{\bf k}_1,\lambda_1}({\bf x},\tau)a_{{\bf k}_1,\lambda_1}^\dagger\right)\times\left( \sum_{{\bf k}_2,\lambda_2}\psi^*_{{\bf k}_2,\lambda_2}({\bf y},\tau')a_{{\bf k}_2,\lambda_2}^\dagger\right)\\
+&\times\left( \sum_{{\bf k}_4,\lambda_4}a_{{\bf k}_4,\lambda_4}\psi_{{\bf k}_4,\lambda_4}({\bf y},\tau')\right)\times\left( \sum_{{\bf k}_3,\lambda_3}a_{{\bf k}_3,\lambda_3}\psi_{{\bf k}_3,\lambda_3}({\bf x},\tau)\right)
+\end{split}\]
+
+Since we consider a spinful fermion here, 
+
+\[\int d^3{\bf x}\int d^3{\bf y}a^\dagger({\bf x})a^\dagger({\bf y})a({\bf y})a({\bf x})V^{(2)}({\bf x,y})\to\sum_\tau \sum_{\tau'}\int d^3{\bf x},\tau)a^\dagger({\bf y},\tau')a({\bf y},\tau')a({\bf x},\tau)\times V^{(2)}(\bf x,y)\]
+
+We changed the single particle basis from coordinate to momentum
+
+\[\begin{cases}
+a^\dagger({\bf x},\tau)&=\sum_{{\bf k}\lambda}\psi_{{\bf k},\lambda}^*({\bf x},\tau)a^\dagger_{{\bf k},\lambda}\\
+\ & \\
+a({\bf x},\tau)&=\sum_{{\bf k'}\lambda'}\psi_{{\bf k'},\lambda'}({\bf x},\tau)a_{{\bf k'},\lambda'}
+\end{cases}\]
+
+\[V=\frac{1}{2}\sum_{{\bf k}_1,\sim,{\bf k}_4}\sum_{\lambda_1,\sim,\lambda_4}\langle{\bf k}_1,\lambda_1,{\bf k}_2,\lambda_2|V|{\bf k}_4,\lambda_4,{\bf k}_3,\lambda_3\rangle\times a^\dagger_{{\bf k}_1,\lambda_1}a^\dagger_{{\bf k}_2,\lambda_2}a_{{\bf k}_4,\lambda_4}a_{{\bf k}_3,\lambda_3}\]
+
+where
+
+\[\begin{split}
+\langle{\bf k}_1,\lambda_1,{\bf k}_2,\lambda_2|V|{\bf k}_4,\lambda_4,{\bf k}_3,\lambda_3\rangle &=\frac{e^2}{V}\iint d^3{\bf x}d^3{\bf y}\sum_{\tau}\sum_{\tau'}e^{-i{\bf k}_1\cdot\bf x}\eta_{\lambda_1}^\dagger(\tau)e^{_i{\bf k}_2\cdot\bf y}\eta_{\lambda_2}^\dagger(\tau')\frac{e^{-\mu|\bf x-y|}}{|\bf x-y|}e^{-{\bf k}_4\cdot\bf y}\eta_{\lambda_4}(\tau')e^{i{\bf k}_3\cdot\bf x}\eta_{\lambda_3}(\tau)\\
+&=\frac{e^2}{V^2}\int d^3{\bf y}e^{-i({\bf k}_1 + {\bf k}_2 - {\bf k}_3 - {\bf k}_4)\cdot\bf y}\times\int d^3{\bf x}e^{i({\bf k}_3-{\bf k}_1)\cdot\bf x}\frac{e^{-\mu|\bf x|}}{|\bf x|}\delta_{\lambda_1,\lambda_3}\delta_{\lambda_2,\lambda_4}\\
+&=\frac{e^2}{V}\delta_{\lambda_1,\lambda_3}\delta_{\lambda_2,\lambda_4}\delta_{{\bf k}_1 + {\bf k}_2,{\bf k}_3 + {\bf k}_4}\times\frac{4\pi}{({\bf k}_1 - {\bf k}_3)^2+\mu^2}
+\end{split}\]
+
+Thus, with ${\bf k}_1 - {\bf k}_3 = \bf q$, we have
+
+\begin{align}
+\hat{V}=\frac{e^2}{2V}\sum_{\bf k,p,q}\sum_{\lambda_1,\lambda_2}\frac{4\pi}{{\bf q^2}+\mu^2}a^\dagger_{{\bf k+q},\lambda_1}a^\dagger_{{\bf p-q},\lambda_2}a_{{\bf p},\lambda_2}a_{{\bf k},\lambda_1}
+\end{align}
+
+It is convenient to separate the summation over $\bf q$ into two parts
+
+\begin{align}\label{eq1.8.13}
+V=\frac{e^2}{2V}\sum_{\bf k,p}\sum_{{\bf q}\neq0}\sum_{\lambda_1,\lambda_2}\frac{4\pi}{{\bf q^2}+\mu^2}a^\dagger_{{\bf k+q},\lambda_1}a^\dagger_{{\bf p-q},\lambda_2}a_{{\bf p},\lambda_2}a_{{\bf k},\lambda_1} + \frac{e^2}{2V}\sum_{\bf k,p}\sum_{\lambda_1,\lambda_2}\frac{4\pi}{\mu^2}a^\dagger_{{\bf k},\lambda_1}a^\dagger_{{\bf p},\lambda_2}a_{{\bf p},\lambda_2}a_{{\bf k},\lambda_1}
+\end{align}
+
+where the first term refers to $\bf q\neq0$ while the second term refers to $\bf q=0$. The second term can be further evaluated as 
+
+\[\text{second term}= \frac{e^2}{2V}\sum_{\bf k,p}\sum_{\lambda_1,\lambda_2}\frac{4\pi}{\mu^2}a^\dagger_{{\bf k},\lambda_1}a_{{\bf k},\lambda_1}(a^\dagger_{{\bf p},\lambda_2}a_{{\bf p},\lambda_2}-\delta_{\bf k,p}\delta_{\lambda_1,\lambda_2}) = \frac{e^2}{2V}\frac{4\pi}{\mu^2}(\hat{N}^2-\hat{V})\]
+
+where $\hat{N}\equiv\sum_{{\bf k}\lambda}a_{{\bf k},\lambda}^\dagger a_{{\bf k},\lambda}$ is an operator representing the total number of electrons (see eq. \eqref{eqs1.7.15} also). 
+
+In a sub-Hilbert space of fixed number of electrons, we can replace this by a $c$-number $N$ so that the $2$nd term reduces to a $c$-number
+
+\[\text{second term}=\frac{e^2}{2}\frac{N^2}{V}\frac{4\pi}{\mu^2}-\frac{e^2}{2}\frac{N}{V}\frac{4\pi}{\mu^2}\]
+
+putting this into eq. \eqref{1.8.13} abd substituting eqs. \eqref{eq1.8.13} \& \eqref{eq1.8.11} into eq. \eqref{eq1.8.10}, we finally have
+
+\[\hat{H}=-\frac{e^2}{2}\frac{N^2}{V}\frac{4\pi}{\mu^2}+\sum_{{\bf k},\lambda}\frac{\hbar^2\bf k^2}{2m}a^\dagger_{{\bf k},\lambda}a_{{\bf k},\lambda}+\frac{e^2}{2V}\sum_{\bf k,p} \sum_{{\bf q}\neq0}\sum_{\lambda_1,\lambda_2}\frac{4\pi}{{\bf q^2}+\mu^2}a^\dagger_{{\bf k+q},\lambda_1}a^\dagger_{{\bf p-q},\lambda_2}a_{{\bf p},\lambda_2}a_{{\bf k},\lambda_1} + \frac{e^2}{2}\frac{N^2}{V}\frac{4\pi}{\mu^2}-\frac{e^2}{2}\frac{N}{V}\frac{4\pi}{\mu^2} \]
+
+The last term represents an energy per particlem $-\displaystyle\frac{e^2}{2}\frac{4\pi}{V\mu^2}$, which vanished in the thermodynamic limit with $\mu^{-1}\ll L$. 
+
+Therefore, it is now clear that these two terms, each of which diverges in the limit of $\mu\to0$ respectively, cancel each other, so that the entire Hamiltonian has no trivially diverging term. This comes from the electric neutrality of the entire system. 
+
+Furthermore, it is now permissible to set $\mu=0$ here, because this summation excludes $\bf q=0$ and the summand is always well defined even at $\mu =0$. 
+
+We thus reach the final Hamiltonian for a bulk electron gas in a uniformly distributed positively-charged background. 
+
+\begin{align}
+\hat{H}=\sum_{{\bf k},\lambda}\frac{\hbar^2\bf k^2}{2m}a^\dagger_{{\bf k},\lambda}a_{{\bf k},\lambda} + \frac{e^2}{2V}\sum_{\bf k,p} \sum_{{\bf q}\neq0}\sum_{\lambda_1,\lambda_2}\frac{4\pi}{{\bf q^2}}a^\dagger_{{\bf k+q},\lambda_1}a^\dagger_{{\bf p-q},\lambda_2}a_{{\bf p},\lambda_2}a_{{\bf k},\lambda_1}
+\end{align}
+
+where the limit $N\to\infty, V\to\infty$ with $N/V=n=$constant is implicitly assumed. 
+
+We often call this model as a model of degenerate electron gas or a model for Fermi gas with long-range Coulomb interaction. This model is a prototype model for studying the physical properties of a metal in solids. 
+
+\dotfill
+
+\ 
+
+From the next class, I will go to $\cdots$ general theory framework for many-body systems, especially focusing on interacting fermion systems. 
+
 
 \chapter{Green's function and field theory at zero temperature}
 
@@ -1539,9 +1689,8 @@ H_b &=\frac{e^2}{2}\left(\frac{N}{V}\right)^2\iint d^3{\bf x}d^3{\bf x'}\frac{e^
 \section{Green's function}
 \section{Wick's theorem}
 \section{Diagrammatic analysis of perturbation theory (Fermion Case)}
+
 \input{SHIZHEN}
-
-
 \input{PP}
 
 

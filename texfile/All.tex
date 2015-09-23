@@ -98,6 +98,81 @@
 
 \section{Schrodinger, Heisenberg \& interaction picture}
 \section{Adiabatic switching \& Gell-Mann \& Low Theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%133
+
+When ``$t_0$'' approaches - infinity, $\hat{H}$ become $\hat{H}_0$, the state vector in the Schrödinger picture reduces to
+
+\[|\Psi_S(t_0)\rangle = e^{-i E_0 t_0/\hbar}|\Phi_0\rangle \]
+
+where $|\Psi_0\rangle$ is time-independent stationary eigenstate of the unperturbed Hamiltonian
+
+\[|H_0|\Psi_0\rangle = E_0|\Phi_0\rangle\]
+
+Then, corresponding state vector in the interaction becomes interaction becomes 
+
+\[\lim_{t_0\to-\infty}|\Psi_I(t_0)\rangle = e^{i H_0t_0/\hbar}|\Psi_S(t_0)\rangle = |\Phi_0\rangle \]
+
+Using eq. (i), we obtain
+
+\[|\Psi_I(0)\rangle = U_\epsilon (0,-\infty)|\Psi_0\rangle \]
+
+Gell-Mann and Low Theorem suggests that this state is an exact eigenstate of the interacting system. 
+
+More accurately, the theorem is stated as follows. 
+
+If this quantity exists to all orders in perturbation theory
+
+\[\lim_{\epsilon\to0}\frac{\hat{U}_\epsilon(0,-\infty)|\Phi_0\rangle}{\langle\Phi_0|\hat{U}_\epsilon(0,-\infty)|\Phi_0\rangle \equiv \frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle \]
+
+then, this state is a eigenstate of $H$
+
+\begin{align}
+H\frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle} = E\frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle}
+\end{align}
+
+An essential point of the theorem is that the numerator and the denominator of this equation do not separately exists in the limit of $\epsilon\to0$. 
+
+In this limit, the phase of the numerator diverges like $\epsilon^{-1}$ and the denominator also does so as to set off the infinite phase in the numerator. 
+
+Namely, the theorem stats that, if the ratio exists (does not contain any infinite phase), the eigenstate is well-defined and has the eigenvalue of the interacting system. 
+
+To prove this statement, consider first the expression
+
+\[(\hat{H}_0-E_0)|\Psi_0(\epsilon)\rangle = (\hat{H}_0-E_0)\hat{U}_\epsilon(0,-\infty)|\Phi_0\rangle = \left\{\hat{H}_0\hat{U}_\epsilon(0,-\infty)-\hat{U}_\epsilon(0,-\infty)\hat{H}_0\right\}|\Phi_0\rangle \]
+
+To evaluate the commutator, consider the $n$-th term in equation \eqref{2-2-2} for $\hat{U}_\epsilon$ and pick up an arbitrary time ordering of the $n$-time indices. 
+
+The associated commutator is given by this
+
+\[\begin{split}
+&\quad[H_0,\hat{H}_1(t_i)\cdot\hat{H}_1(t_j)\cdot\cdots\cdot\hat{H}_1(t_k)]\\
+&=[\hat{H}_0,\hat{H}_1(t_i)]\cdot\hat{H}_1(t_j)\cdot\cdots\cdot\hat{H}_1(t_k)\\
+&\ +\hat{H}_1(t_i)\cdot[\hat{H}_0,\hat{H}_1(t_j)]\cdot\cdots\cdot\hat{H}(t_k)\\
+&\ +\cdots+\hat{H}_1(t_1)hat{H}_1(t_j)\cdot\cdots\cdot[\hat{H}_0,\hat{H}_1(t_k)]
+\end{split}\]
+
+since
+
+\[\frac{\hbar}{i}\frac{\partial}{\partial t}\hat{H}_1(t)=[\hat{H}_0,\hat{H}_1(t)] \]
+
+we obtain%137
+
+
+
+
 \section{Green's function}
 \section{Wick's theorem}
 \section{Diagrammatic analysis of perturbation theory (Fermion Case)}

@@ -5,7 +5,7 @@
 Well that's a long story; but don't worry about it, our group will still work on it to match your schedule. 
 
 #### Chap 1. All done
-#### Chap 2. Section 6-8 done
+#### Chap 2. All done except Section 5
 #### Chap 3. All done
 #### Chap 4. Section 1-5 done, 6 on work
 #### Chap 5. Section 1 on work 

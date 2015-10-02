@@ -7,7 +7,7 @@ Well that's a long story; but don't worry about it, our group will still work on
 #### Chap 1. All done
 #### Chap 2. All done except Section 5
 #### Chap 3. All done
-#### Chap 4. Section 1-5 done, 6 on work
+#### Chap 4. All done
 #### Chap 5. Section 1 on work 
 #### Chap 6. Section 1 done, 2 on work, 3-4 lost manuscript
 

@@ -552,8 +552,8 @@ I next introduce the concept of a Green's function, which play a fundamental rol
 
 The single particle Green's function is defined as
 \begin{equation}\label{2.3.1}
-\mathrm{i}G_{\alpha\beta}(x,t;x',t')=\frac{\langle\Psi_0|\mathrm{T}[\hat \psi^{
-\dagger}_{H,\alpha}(x,t)\hat \psi_{H,\beta} (x',t')]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}
+\mathrm{i}G_{\alpha\beta}(x,t;x',t')=\frac{\langle\Psi_0|\mathrm{T}[\hat \psi
+_{H,\alpha}(x,t)\hat \psi^{\dagger}_{H,\beta} (x',t')]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}
 \end{equation}
 
 where $|\Psi_0\rangle$ is the ground state of the interacting system;
@@ -561,11 +561,11 @@ where $|\Psi_0\rangle$ is the ground state of the interacting system;
 \hat{H}|\Psi_0\rangle=E|\Psi_0\rangle \nonumber
 \end{equation}
 and $\hat \psi^{
-\dagger}_{H_{\alpha}}(x,t)$ is a creation operator in the Heisenberg picture.
+\dagger}_{H_{\beta}}(x,t)$ is a creation operator in the Heisenberg picture.
 \begin{equation}
 \hat \psi^{
-\dagger}_{H_{\alpha}}(x,t) \equiv e^{\mathrm{i}\hat{H}t/\hbar}\hat \psi^{
-\dagger}_{\alpha}(x)e^{-\mathrm{i}\hat{H}t/\hbar} \nonumber
+\dagger}_{H_{\beta}}(x,t) \equiv e^{\mathrm{i}\hat{H}t/\hbar}\hat \psi^{
+\dagger}_{\beta}(x)e^{-\mathrm{i}\hat{H}t/\hbar} \nonumber
 \end{equation}
 $\alpha \& \beta$ label the components of the field operators.
 
@@ -576,9 +576,8 @@ For spin-zero boson case, the field operator is described by one-component field
 The time-order product here represents a generalization of that in .....
 
 \begin{equation}
-\mathrm{T}[\hat \psi^{
-\dagger}_{H_{\alpha}}(x,t)\hat \psi_{H_{\beta}}(x',t')]=\begin{cases}
-\hat \psi^{\dagger}_{H,\alpha}(x,t)\hat \psi_{H,\beta}(x',t') &t>t' \cr  \pm \hat \psi_{H,\beta}(x',t')\hat \psi^{\dagger}_{H,\alpha}(x,t) &t<t'
+\mathrm{T}[\hat \psi_{H_{\alpha}}(x,t)\hat \psi^{\dagger}_{H_{\beta}}(x',t')]=\begin{cases}
+\hat \psi_{H,\alpha}(x,t)\hat \psi^{\dagger}_{H,\beta}(x',t') &t>t' \cr  \pm \hat \psi^{\dagger}_{H,\beta}(x',t')\hat \psi_{H,\alpha}(x,t) &t<t'
 \end{cases}\nonumber
 \end{equation}
 

@@ -765,12 +765,11 @@ a^{\dagger}_{H,k,\alpha}(t)=e^{\mathrm{i}\omega_{k}t}a^{\dagger}_{k,\alpha} \non
 or equivalently, we have 
 \begin{align}\label{2.3.5}
 \hat{\psi_{H,\alpha}^{\dagger}}(x',t')=\frac{1}{\sqrt{V}}\sum_{k}e^{-\mathrm{i}kx'+\mathrm{i}\omega_kt'}a^{\dagger}_{k,\alpha}(t) \nonumber \\
-\hat{\psi_{H,\alpha}}(x,t)=\frac{1}{\sqrt{V}}\sum_{k}e^{-\mathrm{i}kx+\mathrm{i}\omega_kt}a_{k,\alpha}(t)
+\hat{\psi_{H,\alpha}}(x,t)=\frac{1}{\sqrt{V}}\sum_{k}e^{\mathrm{i}kx-\mathrm{i}\omega_kt}a_{k,\alpha}(t)
 \end{align}
 Using these two; we can calculate the non-interacting fermion green's function as
 \begin{align}
-\mathrm{i}G^0_{\alpha\beta}(x,t;x',t')&=\frac{\langle\Phi_0|\mathrm{T}[\hat \psi^{
-\dagger}_{H,\alpha}(x,t)\hat \psi_{H,\beta} (x',t')]|\Phi_0\rangle}{\langle\Phi_0|\Phi_0\rangle} \nonumber \\
+\mathrm{i}G^0_{\alpha\beta}(x,t;x',t')&=\frac{\langle\Phi_0|\mathrm{T}[\hat \psi}_{H,\alpha}(x,t)\hat \psi^{\dagger_{H,\beta} (x',t')]|\Phi_0\rangle}{\langle\Phi_0|\Phi_0\rangle} \nonumber \\
 &=\theta(t-t')\langle\Phi_0|\hat \psi_{H,\alpha}(x,t)\hat \psi^{
 \dagger}_{H,\beta} (x',t')|\Phi_0\rangle \nonumber \\
 & \ \ \ -\theta(t'-t)\langle\Phi_0|\hat \psi^{

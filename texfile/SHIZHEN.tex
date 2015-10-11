@@ -1,4 +1,4 @@
-\section{(Self-Consist) Hatree-Fock Approximation}%wsz 2-6
+\section{(Self-Consist) Hartree-Fock Approximation}%wsz 2-6
 
 The first approximation scheme is the self-consistant Hartree-Fock approximation, which begins with the 1st order approximation for the proper selfenergy.
 \begin{center}
@@ -19,13 +19,13 @@ To this end, we will consider a spin$=\frac{1}{2}$ fermion system in a static sp
 \end{split}\]
 Here we assumed the spin-independent interaction potential for simplicity.
 
-Within the self-consistent Hatree-Fock approximation, the Dyson equation is given by these two equations:
+Within the self-consistent Hartree-Fock approximation, the Dyson equation is given by these two equations:
 \[ \left \{ \begin{split}
 G(x,y)&= G^{0}(x,y) + \int \mathrm{d}^{4}x_{1} \mathrm{d}^{4}x_{1}^{'} \ G^{0}(x,x_{1}) \Sigma^{\bigstar}% a star character
 (x_{1},x_{1}^{'})G(x_{1}^{'},y)\\
 \hbar \Sigma^{\bigstar}
 (x_{1},x_{1}^{'})&= -\imath \delta(t_{1}-t_{1}^{'}) \times 
-\left[ \delta(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \ 2 \int \mathrm{d}^{3}x_{2} G(\mathbf{x}_{2},t_{2};\mathbf{x}_{2},t_{2}+0) V(\mathbf{x}_{1}-\mathbf{x}_{2}) - G(\mathbf{x}_{1},t_{1};\mathbf{x}_{1}^{'},t_{1}+0) V(\mathbf{x}_{1}-\mathbf{x}_{1}^{'})
+\left[ \delta(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \ 2 \int \mathrm{d}^{3}x_{2} G(\mathbf{x}_{2},t_{2};\mathbf{x}_{2},t_{2}^{+}) V(\mathbf{x}_{1}-\mathbf{x}_{2}) - G(\mathbf{x}_{1},t_{1};\mathbf{x}_{1}^{'},t_{1}^{+}) V(\mathbf{x}_{1}-\mathbf{x}_{1}^{'})
 \right]
 \end{split}\right. \]
 Where the factor $2$ comes from the spin summations.
@@ -56,7 +56,7 @@ In terms of  this eigenfunctions, the field operator in the interaction represen
 where we used \[\mathrm{e}^{+\imath\frac{H_{0}t}{\hbar}}c_{j}\mathrm{e}^{-\imath\frac{H_{0}t}{\hbar}}=\mathrm{e}^{-\imath\frac{\epsilon_{j}t}{\hbar}}c_{j}\]
 In terms of them, the non-interacting Green's function can be calculated as
 \[ \begin{split}
-\imath G^{0}(\mathbf{x},t;\mathbf{x}^{'},t^{'})=& \langle \Phi_{0} | \Gamma [ \psi_{I}(\mathbf{x},t) \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) ] | \Phi_{0} \rangle\\
+\imath G^{0}(\mathbf{x},t;\mathbf{x}^{'},t^{'})=& \langle \Phi_{0} | T [ \psi_{I}(\mathbf{x},t) \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) ] | \Phi_{0} \rangle\\
 =& \  \theta(t-t^{'}) \  \langle \Phi_{0} | \psi_{I}(\mathbf{x},t) \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) | \Phi_{0} \rangle \\
 &-\theta(t^{'}-t) \  \langle \Phi_{0} | \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) \psi_{I}(\mathbf{x},t) | \Phi_{0} \rangle \\
 =& \ \theta(t-t^{'}) \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-\imath\frac{\epsilon_{j}}{\hbar}(t-t^{'})}

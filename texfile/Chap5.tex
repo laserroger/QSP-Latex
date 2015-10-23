@@ -1,0 +1,287 @@
+\chapter{Application to electron-phonon systems}
+
+\section{Non-interacting phonon system and Debye theory of specific heat}
+
+\begin{wrapfigure}{l}{5.5cm}
+\includegraphics[width = 5cm]{5-1.png}
+\end{wrapfigure}
+
+In a usual metal, such as alkali metals of column I, outer shell valence electrons are completely separated from their ion cores and form a nearly free electron gas. 
+
+In the section 1-8, we have treated the positively charged ion cores as temporally-static and uniformly-distributed positively-charged background. 
+
+Thereby, the only play role of ensuring the electrical neutrality of the whole system. 
+
+In this section, we will study the dynamics of the positively charged backgrounds, and their effect on the electron gas. 
+
+In real metals, the ionic background form a lattice structure, so that it is not exactly the uniformly distributed positive charges. 
+
+But, when it comes to the acoustic mode, in which all the ion cores are moving in the same `phase', the discreet lattice structure is irrelevant and we can treat them as a positively charged continuous elastic media. 
+
+To describe the accoustic wave, let us first define a three-dimensional vector field $\bm d$ as a function of the spatial coordinate $\bm x$, which we call displacement vector:
+
+\[\bm{d}(\bm{x}):\quad\text{displacement vector} \]
+
+Physically, $\bm{d(x)}$ denotes how the ionic core at position $\bm x$ is displaced:
+
+\[\bm{u(x) - \langle u(x)\rangle \equiv d(x)} \]
+
+Compared to the displacement field $\varphi$ introduced in section 1-4, such a quantity is characterized by three component real-valued vector in a $3$-dimensional elastic media
+
+\[\bm{d(x) = (d_1(x),d_2(x),d_3(x))} \]
+
+According to the Helmholtz-Hodge's decomposition theorem, any vector field in $3$0dimensional space can be decomposed into divergence-free vector and a rotation-free vector
+
+\[\bm{d(x)} = \nabla\phi + \nabla\times\vec{\bm{A}} \]
+
+Although we always have ambiguity when decomposing into the two, let us temporally denote the rotation-free part as $\bm{d'(x)}$ and the divergence-free parts as $\bm{d''(x)}$ so that
+
+\[\begin{cases}
+\nabla\times\bm{d'} = 0\\
+\nabla\cdot\bm{d''} = 0
+\end{cases}\]
+
+Corresponding to this decomposition, the acoustic waves are composed of two different kinds. 
+
+One is called the longitudinal acoustic wave, which is described only by the rotation-free vector field $\bm{d'}$ (To be precise, $\nabla\cdot \bm{d'} = \nabla\cdot\bm{d}$): longitudinal(compressional) acoustic wave. 
+
+The other is called the transverse acoustic waves, which are described only by the divergence-free part $\bm{d''}$ (to be precise, $\nabla\times\bm{d''} = \nabla\times\bm{d}$): transverse(shear) acoustic waves. 
+
+$\nabla\cdot \vec{\bm{d}}$ is nothing but the charge density modulation in a positively charged background
+
+\[\nabla\cdot\vec{\bm{d}} = -\frac{\delta\rho_{inoic}}{\rho_0}\]
+
+\begin{wrapfigure}{l}{5.5cm}
+\includegraphics[width = 5cm]{5-2.png}
+\end{wrapfigure}
+One can easily see this, by drawing a configuration of the displacement vector, which has a finite divergence. 
+
+Namely, when these ionic charges are displaced like in this picture, we have effectively a negative charge in the middle. 
+
+On the one hand, $\nabla\times\bm{d}$ is accompanied by the shear deformation in the positively charged ionic background, e.g.,
+
+\begin{figure}
+\end{figure}
+\begin{wrapfigure}{l}{6.5cm}
+\includegraphics[width = 6cm]{5-3.png}
+\end{wrapfigure}
+
+which is not accompanied by any charge density modulation. 
+
+Since electrons and positively charged background are coupled with each other by electrostatic Coulomb interaction, we usually regard that the longitudinal acoustic waves are strongly coupled with electrons, while the transverse waves are not. 
+
+For this reasoning, we will focus only on the longitudinal (compressional acoustic wave, where we enforce the displacement vector is rotation-free
+
+\[\nabla\times\vec{\bm{d}}(\bm{x},t) = 0,\forall\bm{x},t \]
+
+In order to introduce the equation of motion for the charge density modulation
+
+\[\nabla\cdot\vec{\bm{d}}(\bm{x},t) = \delta\rho_{ion}(\bm{x},t) \]
+
+Let us begin with the Newton's equation of motion for a fluid element
+
+\[\frac{D\vec{p}}{Dt} = \vec{f} \]
+
+Here $\bm{p}(\bm{x},t)$ is the momentum density field at position $\bm{x}$ at a given time $t$ which is given by a product between mass density field and velocity field
+
+\[\bm{p}(\bm{x},t) = \rho(\bm{x},t)\bm{v}(\bm{x},t) \]
+
+The temporal derivative in the right hand side is a Legendre derivative often used int the course of fluid mechanics. 
+
+\[\frac{D\bm{p}}{Dt} \overset{def}{\equiv}\lim_{\Delta\rightarrow0}\frac{1}{\Delta t} \left\{\bm{p}(\bm{x}+\bm{v}\Delta t,t+\Delta t) - \bm{p}(\bm{x},t)\right\} = \frac{\partial\bm{p}}{\partial t}+(\bm{v}\cdot\nabla)\bm{p} \]
+
+The force acting on the fluid element is a restoring force which comes from the spatial gradient of the pressure:
+
+\[\frac{\partial}{\partial t}(\rho\bm{v})+(\bm{v}\cdot\nabla)(\rho\bm{v}) = -\nabla P \]
+
+In the equilibrium, we don't have any velocity field and the mass density is uniformly distributed and static
+
+\[\left.\begin{split}
+\rho(\bm{x},t) &= \rho_0\\
+\ & \ \\
+\bm{v}(\bm{x},t) &= 0
+\end{split}\right\}\text{\quad equilibrium} \]
+
+Out of the equilibrium, we have finite velocity field and mass density is spatially and temporally dependent:
+
+\[\left.\begin{split}
+\rho(\bm{x},t) &= \rho_0 + \delta\rho(\bm{x},t)\\
+\ & \ \\
+\bm{v}(\bm{x},t) &\neq 0
+\end{split}\right\}\text{\quad out of equilibrium} \]
+
+When linearizing this equation of motion for a small derivation from the equilibrium, we can regard that the $2^{\text{nd}}$ term in the right hand side is the $2^{\text{nd}}$ order in $\delta\rho$ and thus negligible:
+
+\[\frac{\partial}{\partial t}\left((\rho_0+\delta\rho)\bm{v}\right) + (\bm{v}\cdot\nabla)\left((\rho_0+\delta\rho)\bm{v}\right) = -\nabla P \]
+
+\[\rho_0\frac{\partial\bm{V}}{\partial t} + {\color{red}{O((\delta\rho)^2)}}= -\nabla p \]
+
+,\footnote{The red part is omit-able. }
+
+In addition to this Newton's equation of motion, the mass density field and velocity field must satisfy the continuity equation: 
+
+\[\frac{\partial \rho}{\partial t}+\nabla\cdot(\rho\bm{v}) = 0 \]
+
+When linearized with respect to a small $\delta \rho$, we have
+
+\[\frac{\partial\delta\rho}{\partial t} = -\rho_0(\nabla\cdot\bm{v}) \]
+
+Combining these two linearized equation, we have
+
+\[\frac{\partial^2\delta\rho}{\partial t^2}= -\rho_0(\nabla\cdot\frac{\partial\vec{\bm{v}}}{\partial t} = \nabla^2 P \]
+
+A pressure of a given fluid element is determined by the mass density of the element, so that it is quite natural to assume that the pressure depends on the spatial coordinate $\bm{x}$ only through $\rho$. 
+
+\[\nabla^2 P = \nabla^2 P(\rho_0+\delta\rho(\bm{x},t),\cdots) \approx\left(\frac{\partial P}{\partial\rho}\right)_{\rho_0}\nabla^2\delta\rho \]
+
+This leads to the following closed equation of motion for the density fluctuation:
+
+\[\frac{\partial^2\delta\rho}{\delta t^2} = \left(\frac{\partial P}{\partial \rho}\right)_{\rho_0}\nabla^2\delta\rho \]
+
+For many elastic continuous media, we can define (adiabatic) bulk modulus. 
+
+\[\begin{split}
+B &= -B\left(\frac{\partial O}{\partial V}\right)_{equilibrium}\\
+&\quad\quad \rho = \frac{M}{V},\ \quad \frac{d\rho}{dV} = M\left(-\frac{1}{V^2}\right)\\
+&= -V\left(\frac{\partial P}{\partial\rho}\right)M\left(-\frac{1}{V^2}\right)\\ &= \frac{M}{V}\left(\frac{\partial P}{\partial \rho}\right)_{eq} \overset{def}{\equiv}\rho_m\left(\frac{\partial P}{\partial\rho}\right)_{eq}
+\end{split} \]
+
+In terms of the bulk modulus, the coefficient of the right hand side is given by 
+
+\[\frac{\partial^2\delta\rho}{\partial t^2} = \frac{B}{\rho_m}\cdot\nabla^2\delta\rho \equiv c^2\nabla^2\delta_\rho \]
+
+Here $c$ is nothing but a velocity, with which the density fluctuation propagates in space as time passes by, and which is often called as the ``sound velocity'' of the longitudinal acoustic wave. 
+
+As explained already, the density fluctuation is given by the divergence of the displacement field, the equation of motion for the displacement field is given by 
+
+\[\frac{\partial}{\partial t}(\nabla\cdot\vec{\bm{d}}) = c^2\nabla^2(\nabla\cdot\vec{\bm{d}}) \]
+
+\[\nabla\cdot\left(\frac{\partial \vec{\bm{d}}}{\partial t} - \nabla^2\vec{\bm{d}}\right) = 0 \]
+
+Remember again that we are interested only in the longitudinal acoustic wave, so that the displacement field is rotation free at any space and time. 
+
+\[\nabla\times\vec{\bm{d}} \equiv\vec{0} \]
+
+The latter condition ensures that
+
+\[\nabla\times\left(\frac{\partial \vec{\bm{d}}}{\partial t} - \nabla^2\vec{\bm{d}}\right) = 0\]
+
+because $\nabla\times$ and $\partial_t$ or $\nabla^2$ commute with each other. 
+
+From these two, we have a pair of equation which is satisfies by the displacement field $\bm{d}$. 
+
+\[\begin{cases}
+\frac{\partial\bm{d}}{\partial t} - c^2\nabla^2\bm{d} &= 0\\
+\ &\ \\
+\nabla\times\bm{d} &= 0
+\end{cases}\]
+
+So far, we just describing a classical equation of motion for the displacement field; in order to second-quantize this classical field, let us first introduce the Lagrangian which leads to this equation of motion:
+
+\[L_0 = \frac{1}{2}\sum_{i,j=1,2,3}\int d^3\bm{x}\int dt\left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_j}\frac{\partial d_i}{\partial x_j}\right]\]
+
+Notice that
+
+\[\int \left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_j}\frac{\partial d_i}{\partial x_j}\right] = \delta L_0\]
+\[\rho_m\delta d_i\left[\frac{\partial^2 d_i}{\partial t^2} - c^2\sum_{j = 1,2,3}\frac{\partial^2 d_i}{\partial x_j^2}\right] = \delta L_0 \]
+
+Under the $2$nd condition of rotation-free, the Lagrangian can be rewritten into the following:
+
+\[L_0 = \frac{1}{2}\sum_{i,j}\int d^3\bm{x}\int dt \left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_i}\frac{\partial d_j}{\partial x_j}\right] (=\int dt \tilde{L}_0) \]
+
+To see this, let us begin with the following identity:
+
+\[(\nabla\times\vec{d})\cdot(\nabla\times\vec{d}) = 0 \]
+
+\[\epsilon_{ijk}\partial_j d_k\epsilon_{ilm}\partial_l d_m = 0 \]
+
+\[(\delta_{il}\delta_{km} - \delta_{jm}\delta_{kl})\partial_j d_k\partial_l d_m = 0 \]
+
+\[\sum_{i,j = 1,2,3} \partial_j d_i \partial_j d_i - \sum_{i,j}\partial_j d_i \partial_i d_j = 0 \]
+
+Under the space integral, we can take a partial integral of the $2$nd term in the left hand side
+
+\[\sum_{i,j}\int d^3{\bf x}[\partial_j d_i\partial_j d_i+(\partial_j\partial_i d_i)d_j] = 0 \]
+
+\[\sum_{i,j}\int d^3{\bf x}[(\partial_j d_i)(\partial_j d_i) - (\partial_i d_i)(\partial_j d_j)] = 0 \]
+
+The final identity allows us to rewrite this into this
+
+\hrule
+
+\ 
+
+So far, we have treated the classical action. To second-quantize this classical degree's of freedom, we follow the exactly the same procedure we formulated in chapter 1. 
+
+Namely, we first introduce a momentum variable which is conjugate the displacement field
+
+\[\Pi_j = \frac{\delta L_0}{\delta \dot{d}_j} = \rho_m\dot{d}_j \]
+
+Or equivalently 
+
+\[\tilde{\Pi}_j\equiv\frac{1}{\sqrt{\rho_m}}\Pi_j,\quad \tilde{d}_j\equiv\sqrt{\rho_m}d_j \]
+
+with 
+
+\[\tilde{\Pi}_j = \frac{\delta L_0}{\delta\dot{\tilde{d}}_j} = \dot{\tilde{d}}_j \]
+
+Then the Hamiltonian is given by 
+
+\[\begin{split}
+H_0 &= \int d^3{\bf x}\tilde{\Pi}_j\dot{\tilde{d}}_j - \tilde{L}_0\\
+ &=\frac{1}{2}\int d^3{\bf x}\tilde{\Pi}_j({\bf x})\tilde{\Pi}_j({\bf x}) + \frac{1}{2}\int d^3{\bf x}\frac{B}{\rho_m}(\nabla\cdot\tilde{\bf d}{\bf(x)})^2\\
+ & \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \frac{B}{\rho_m} = c^2
+\end{split}\]
+
+To quantize these field operators we suppose that $\tilde{\bf d}(\bf x)$ and $\tilde{\Pi}(\bf x)$ are hermite operators, which satisfy the following commutation relation
+
+\[[\tilde{\Pi}_j({\bf x}),\tilde{\Pi}_m({\bf x'})] = [\tilde{\bf d}_j({\bf x}),\tilde{\bf d}_m({\bf x'})] = 0 \]
+
+\[[\tilde{\bf d}_j({\bf x}), \tilde{\Pi}_m({\bf x'})] = i\hbar\delta_{jm}\delta^3(\bf x-x') \]
+
+As we did in the chapter 1, it is much useful to introduce their Fourier series:
+
+\[\begin{cases}
+\tilde{\bf d}_j({\bf k}) &= \displaystyle\int d^3{\bf x}\tilde{\bf d}_j({\bf x}) e^{-i\bf k\cdot x}\\
+\ & \\
+\tilde{\Pi}_j({\bf k}) &= \displaystyle\int d^3 {\bf x} \tilde{\Pi}_j({\bf x}) e^{-i\bf k\cdot x}
+\end{cases}\]
+
+where the inverse is
+
+\[\begin{cases}
+\tilde{\bf d}_j({\bf x}) &= \displaystyle\int d^3{\bf k}\tilde{\bf d}_j({\bf k}) e^{i\bf k\cdot k}\\
+\ & \\
+\tilde{\Pi}_j({\bf x}) &= \displaystyle\int d^3 {\bf k} \tilde{\Pi}_j({\bf k}) e^{i\bf k\cdot k}
+\end{cases}\]
+
+%page848
+
+Since $\tilde{\bf d}_j({\bf x})$ \& $\tilde{\Pi}_j({\bf x})$ are both Hermite operators, we have
+
+\[\begin{cases}
+\tilde{\bf d}_j({\bf k}) &= \tilde{\bf d}_j({-\bf k})\\
+\ & \\
+\tilde{\Pi}_j({\bf k}) = \tilde{\Pi}_j(-\bf k)
+\end{cases}\]
+
+In terms of these Fourier series, the Hamiltonian can be partially diagonalized. 
+
+\[\begin{split}
+\hat{H}_0 &= \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k}) + \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3} c^2({\bf k}_j\tilde{\bf d}_j({\bf k}))({\bf k}_m\tilde{\bf d}_m(-{\bf k})\\
+&=\int\frac{d^3{\bf k}}{(2\pi)^3}[\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k})+\underset{\omega_{\bf k}^2}{c^2{\bf k}^2}(\hat{\bf k}_j\tilde{\bf d}_j({\bf k}))(\hat{\bf k}_m\tilde{\bf d}_m(-{\bf k}))]
+\end{split}\]
+
+where $\hat{\bf k}_j \equiv {\bf k}_j/k,\quad k\equiv|\bf k|$. 
+
+Note that
+
+\[\tilde{\Pi}_j({\bf x}) = \partial_t\tilde{\bf d}_j(\bf x) \]
+
+So that the conjugate momentum as well as the displacement field is rotation free, 
+
+%page850
+
+\section{Electron-phonon interaction} \label{se5-2}
+
+So far, we have studied how the acoustic waves are second-quantized into a quadratic boson Hamiltonian. We next study the interaction between the longitudinal acoustic phonon and electron

@@ -1,5 +1,9 @@
 # QSP-Latex
 
+## -1. Contact
+
+For any issues about this note, contact <a href="mailto:heinsius@pku.edu.cn">Zhao-Yu Han</a>
+
 ## 0. Why is this unfinished & what's current status?
 
 Well that's a long story; but don't worry about it, our group will still work on it to match your schedule. 

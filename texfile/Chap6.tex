@@ -506,11 +506,78 @@ Using the equations of motion for $\hat{\psi}_{k\uparrow}({\bf x},\tau)$, we can
 \hbar\frac{\partial }{\partial t}g({\bf x},\tau;{\bf x'},\tau') &= -\hbar\delta(\tau-\tau')\langle\{\hat{\psi}_{k\uparrow}({\bf x},\tau),\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\}\rangle - \langle \trace\left\{\hbar\frac{\partial \hat{\psi}_{k\uparrow}({\bf x},\tau)}{\partial \tau}\cdot\hat{\psi}_{k\uparrow}({\bf x}',\tau')^\dagger\right\}\rangle\\
 &=-\hbar\delta(\tau-\tau')\langle\{\hat{\psi}_{k\uparrow}({\bf x},\tau),\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\}\rangle + \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\langle\trace\{\hat{\psi}_{k\uparrow}({\bf x},\tau)\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\}\rangle\\
 &\phantom{=\ } + g\langle\psi_\uparrow({\bf x})\psi_{\downarrow}({\bf x})\langle\trace\{\hat{\psi}_{k\downarrow}({\bf x},\tau)\hat{\psi}^\dagger_{k\downarrow}({\bf x}',\tau')\}\rangle\\
-&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x}')
+&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x}') + \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\langle T_\tau \{\psi_{k\uparrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle\\
+&\quad + g\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle\langle T_\tau \{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle \\
+&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) - \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]g({\bf x},\tau;{\bf x'},\tau') - \underset{\Rightarrow\Delta({\bf x})}{\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle}\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')
 \end{split}\]
 
-%958
+where we define new function, which we often call as ``anomalous'' Green's functions; 
 
+\[\mathcal{F}({\bf x},\tau;{\bf x'},\tau') \overset{\text{def}}{\equiv}-\langle T_\tau\{\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle \]
+\[\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau') \overset{\text{def}}{\equiv}-\langle T_\tau\{\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle \]
+
+Equation of motion for the anomalous Green's function and that for the (normal) Green's function comprise a \uuline{closed} coupled equations of motion:
+
+\[\begin{split}
+\hbar\frac{\partial}{\partial\tau}\mathcal{F}({\bf x},\tau;{\bf x'},\tau') &= -\langle T_\tau\{\{\hbar\frac{\partial\psi_{k\uparrow}({\bf x},\tau)}{\partial\tau}\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
+&= \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\langle T_\tau \{\psi_{k\uparrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle\\
+&\quad + g\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle\langle T_\tau \{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle
+\end{split}\]
+
+Namely, we assume that the Zeeman coupling between applied magnetic field and electron spin is negligible, so that
+
+\[\langle T_\tau\{\psi_{k\downarrow}^\dagger({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle = \langle T_\tau\{\psi_{k\uparrow}^\dagger({\bf x},\tau)\psi_{k\uparrow}({\bf x'},\tau')\}\rangle  \]
+
+With this assumption in mind, we have
+
+\[\begin{split}
+\hbar\frac{\partial}{\partial\tau}\mathcal{F}({\bf x},\tau;{\bf x'},\tau') 
+&= \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\mathcal{F}({\bf x},\tau;{\bf x'},\tau') \\
+&\quad + \underset{\Rightarrow-\Delta({\bf x})}{\sout{g\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle}} \underset{\langle T_\tau\{\psi_{k\downarrow}^\dagger({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle}{\quad g({\bf x},\tau;{\bf x'},\tau') \quad}
+\end{split}\]
+
+Similar, we have
+
+%961 <-
+
+%965 ->
+
+In the remaining part of this section, we will study this Gorkov equation in several limiting case.
+
+\begin{description}
+\item[1] \hfill
+\begin{itemize}
+\item Thermodynamics of an infinitely large bulk superconductor without external magnetic field ($\bf A=0$), from which we obtain a finite temperature gap equation for the order parameter. 
+\item Solving this gap equation, we will obtain the superconducting transition temperature ($T_c$) as a function of the density of the state, the attractive interaction strength ($g$), the Debye frequency. 
+\item Solving this gap equation, we will also obtain how the order parameter $\Delta$ behaves as a function of the temperature ($T<T_c$). 
+\end{itemize}
+\end{description}
+
+Without the magnetic field (vector potential), 
+
+\[
+\begin{cases}
+\left(-\hbar\partial_\tau + \frac{\hbar^2\nabla_x^2}{2m}+\mu\right)g({\bf x},\tau;{\bf x'},\tau')+\Delta({\bf x})\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau') = \hbar\delta(\tau-\tau')\delta^3({\bf x}-{\bf x}')\\
+\ \\
+\Delta^*({\bf x})g({\bf x},\tau;{\bf x'},\tau') + \left(-\hbar\partial_\tau + \frac{\hbar^2\nabla_x^2}{2m}+\mu\right)\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')  = 0
+\end{cases}
+\]
+
+with
+
+\[\Delta({\bf x}) \equiv g\langle\psi_\downarrow({\bf x})\psi_\uparrow({\bf x})\rangle = g{F}^\dagger({\bf x},\tau+;{\bf x},\tau) \]
+
+the system becomes translationally symmetric, so that both Green's functions depend only on the relative coordinates:
+
+\[\begin{split}
+g({\bf x},\tau;{\bf x'},\tau')&\rightarrow g({\bf x-x'},\tau-\tau')\\
+\mathcal{F}({\bf x},\tau;{\bf x'},\tau')&\rightarrow\mathcal{F}(({\bf x-x'},\tau-\tau')\\
+\Delta({\bf x})&\rightarrow\Delta\equiv g\mathcal{F}(0,0+)
+\end{split} \]
+
+Fourier series of these functions are introduced as
+
+%967 <-
 
 %982
 

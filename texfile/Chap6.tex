@@ -207,7 +207,7 @@ The other terms are summarized as
 
 from which we obtain a mean-field Hamiltonian 
 
-\[\begin{split}\hat{K}_{eff} =& \hat{K}_0 - \frac{g}{2} \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x}) +\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) \langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle\right\} + \text{const}\\
+\[\begin{split}\hat{K}_{\text{eff}} =& \hat{K}_0 - \frac{g}{2} \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x}) +\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) \langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle\right\} + \text{const}\\
 =& \hat{K}_0 - \frac{g}{2} \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x})\rangle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x}) +\langle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\rangle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x}) \right\} + \text{const}\\
  =&\hat{K}_0 - g\int d^3\bm{x} \left\{\langle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\rangle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x}) +\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\langle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x})\rangle \right\}\\
 &+g\int d^3 \bm{x} \langle\psi^{\dagger}_{\downarrow}(\bm{x})\psi^{\dagger}_{\uparrow}(\bm{x})\rangle \langle\psi_{\uparrow}(\bm{x})\psi_{\downarrow}(\bm{x})\rangle
@@ -217,11 +217,11 @@ In order to make the theory self-consistent, we assume that the mean-field is gi
 
 \[\langle\psi_{\downarrow}^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \equiv \langle\Phi_0|\psi_\uparrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})|\Phi_0\rangle \]
 
-where $|\Phi_0\rangle$ is the ground state w.f for $\hat{K}_{eff}$. 
+where $|\Phi_0\rangle$ is the ground state w.f for $\hat{K}_{\text{eff}}$. 
 
 \[
 \begin{split}
-\hat{K}_{eff}&=\int d^3\bm{x}\psi_\alpha^\dagger(\bm{x})\left(-\frac{\hbar^2\nabla_{\bm{x}}^2}{2m}-\mu\right)\psi_\alpha(\bm{x})\\
+\hat{K}_{\text{eff}}&=\int d^3\bm{x}\psi_\alpha^\dagger(\bm{x})\left(-\frac{\hbar^2\nabla_{\bm{x}}^2}{2m}-\mu\right)\psi_\alpha(\bm{x})\\
 &-g\int d^3\bm{x}\{\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\\
 &\quad+\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x}) \langle\psi_\uparrow^\dagger(\bm{x})\psi_\downarrow^\dagger(\bm{x})\rangle\}\\
 &+g\int d^3\bm{x}\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \underset{-\Delta(\bm{x})}{\uwave{\langle\psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\rangle}}
@@ -235,7 +235,7 @@ Provided that the ground state wavefunction does not break the translational sym
 With this in mind, the mean-field Hamiltonian is readily diagonalized:
 
 \[\begin{split}
-\hat{K}_{eff} &=\sum_{\bm{k}, \alpha}\left(\overset{\xi_{\bm{k}}}{\frac{\hbar^2\bm{k}^2}{2m}}-\mu\right)c_{\bm{k},\alpha}^\dagger c_{\bm{k},\alpha}\\
+\hat{K}_{\text{eff}} &=\sum_{\bm{k}, \alpha}\left(\overset{\xi_{\bm{k}}}{\frac{\hbar^2\bm{k}^2}{2m}}-\mu\right)c_{\bm{k},\alpha}^\dagger c_{\bm{k},\alpha}\\
 &+\Delta^* \sum_{\bm{k}} c_{\bm{k}\uparrow}c_{-\bm{k}\downarrow}+ \Delta\sum_{\bm{k}}c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger - \Delta\sum_{\bm{k}}\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\\
 &=\sum_{\bm{k}}\left\{(c_{\bm{k}\uparrow}^\dagger\  c_{-\bm{k}\downarrow}) \left(\begin{matrix}
 \xi_{\bm{k}} & -e^{i\theta}|\Delta|\\
@@ -287,15 +287,15 @@ v_{\bm{k}} &= \displaystyle\frac{1}{\sqrt{2}}\left(1-\frac{\xi_{\bm{k}}}{\sqrt{\
 In terms of this, we have
 
 \[\begin{split}
-\hat{K}_{eff}&=\sum_{\bm{k}}\left\{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}(\alpha_{\bm{k}}^\dagger(\alpha_{\bm{k}}-\beta_{-\bm{k}}\beta_{-\bm{k}}^\dagger)+\xi_{\bm{k}}\right\}- \Delta\sum_{\bm{k}}\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\\
-&= V+\sum_{\bm{k}}\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}(\alpha_{\bm{k}}^\dagger\alpha_{\bm{k}}+\beta_{\bm{k}}^\dagger\beta_{\bm{k}}
+\hat{K}_{\text{eff}}&=\sum_{\bm{k}}\left\{\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}(\alpha_{\bm{k}}^\dagger\alpha_{\bm{k}}-\beta_{-\bm{k}}\beta_{-\bm{k}}^\dagger)+\xi_{\bm{k}}\right\}- \Delta\sum_{\bm{k}}\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\\
+&= V+\sum_{\bm{k}}\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}(\alpha_{\bm{k}}^\dagger\alpha_{\bm{k}}+\beta_{\bm{k}}^\dagger\beta_{\bm{k}})
 \end{split}\]
 
 where
 
 \[V \equiv\sum_{\bm{k}}\{\xi_{\bm{k}}-\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}-\Delta\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\} \]
 
-Now that $\hat{K}_{eff}$ is given by a quadratic form in the creation fields $(\alpha_{\bm{k}}^\dagger, \beta_{\bm{k}}^\dagger)$ and annihilation fields $(\alpha_{\bm{k}}, \beta_{\bm{k}})$, the eigen state of $\hat{K}_{eff}$ is given by a multi particle state of these new quasic particle. 
+Now that $\hat{K}_{\text{eff}}$ is given by a quadratic form in the creation fields $(\alpha_{\bm{k}}^\dagger, \beta_{\bm{k}}^\dagger)$ and annihilation fields $(\alpha_{\bm{k}}, \beta_{\bm{k}})$, the eigen state of $\hat{K}_{\text{eff}}$ is given by a multi particle state of these new quasic particle. 
 
 Noting that these fields as well as the original fields $(c_{\bm{k},\sigma}, c_{\bm{k},\sigma}^\dagger)$ are fermion fields, the eigen state is given by 
 
@@ -309,9 +309,9 @@ where $|\Phi_0\rangle$ denotes the vacuum of $\alpha$-particle and $\beta$-parti
 \beta_{\bm{k}}|\Phi_0\rangle &= 0
 \end{cases}\]
 
-Since creating the Bogoliubov particles is always accompanied by a positive energy $(\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}>0$, the vacuum is nothing but the ground state wavefunction of $\hat{K}_{eff}$, whose energy is $V$. 
+Since creating the Bogoliubov particles is always accompanied by a positive energy $(\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}>0)$, the vacuum is nothing but the ground state wavefunction of $\hat{K}_{\text{eff}}$, whose energy is $V$. 
 
-\[\hat{K}_{eff}|\Phi_0\rangle = \overset{\sum_{\bm{k}}\xi_{\bm{k}}-\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}-\Delta\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle}{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad V}|\Phi_0\rangle \]
+\[\hat{K}_{\text{eff}}|\Phi_0\rangle = \overset{\sum_{\bm{k}}\xi_{\bm{k}}-\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}-\Delta\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle}{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad V}|\Phi_0\rangle \]
 
 A group of the lowest excited states is given by ``one-particle'' state of the Bogoliubov particle
 
@@ -320,7 +320,7 @@ A group of the lowest excited states is given by ``one-particle'' state of the B
 \beta_{\bm{k}}^\dagger|\Phi_0\rangle &= |\bm{k}, \beta\rangle
 \end{split}\]
 
-\[\hat{K}_{eff} \alpha_{\bm{k}}^\dagger|\Phi_0\rangle = (V+\sqrt{\xi_{\bm{k}}^2+|\Delta|^2})\alpha_{\bm{k}}^\dagger|\Phi_0\rangle \]
+\[\hat{K}_{\text{eff}} \alpha_{\bm{k}}^\dagger|\Phi_0\rangle = (V+\sqrt{\xi_{\bm{k}}^2+|\Delta|^2})\alpha_{\bm{k}}^\dagger|\Phi_0\rangle \]
 
 which is a \uline{gapped} excitation (See Fig. \ref{Fig6.3}) because of $\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}\ge|\Delta|$. 
 
@@ -421,13 +421,13 @@ which is called a ``gap equation'', determine $|\Delta|$.
 
 Remember that the attraction interaction in the BCS Hamiltonian applies for those two electrons which are lying within an energy shell of the thickness $\hbar \omega_D$ from the Fermi surface (see previous argument).
 
-This restriction tells us that $\hat{K}_{eff}$ with finite $|\Delta|$ holds true only for those momentum $\bm{k}$, which satisfy
+This restriction tells us that $\hat{K}_{\text{eff}}$ with finite $|\Delta|$ holds true only for those momentum $\bm{k}$, which satisfy
 
 \[|\xi_{\bm{k}}| \equiv |\frac{\hbar^2 \bm{k}^2}{2m}-\mu|<\hbar \omega_D \]
 
 For the other $\bm{k}$, the off-diagonal term connecting $c_{\bm{k}\uparrow}$ and $c_{-\bm{k}\downarrow}$ should be set to zero:
 
-\[\hat{K}_{eff}=\sum_{\bm{k},\alpha}\xi_{\bm{k}}c_{\bm{k}\alpha}^\dagger c_{\bm{k}\alpha}+\Delta^* \sum_{\bm{k},|\xi_{\bm{k}}|<\hbar\omega_D}c_{\bm{k}\uparrow}c_{-\bm{k}\downarrow}+\Delta\sum_{\bm{k},|\xi_{\bm{k}}|<\hbar\omega_D}c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger \]
+\[\hat{K}_{\text{eff}}=\sum_{\bm{k},\alpha}\xi_{\bm{k}}c_{\bm{k}\alpha}^\dagger c_{\bm{k}\alpha}+\Delta^* \sum_{\bm{k},|\xi_{\bm{k}}|<\hbar\omega_D}c_{\bm{k}\uparrow}c_{-\bm{k}\downarrow}+\Delta\sum_{\bm{k},|\xi_{\bm{k}}|<\hbar\omega_D}c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger \]
 
 which leads to
 
@@ -468,7 +468,7 @@ In usual metal, characteristic frequency scale of $N(\omega)$ (e.g. band width) 
 &\approx gN(0)\ln\left(\frac{2\hbar\omega_D}{\Delta}\right)\quad (\Delta\ll\hbar\omega_D)
 \end{split} \]
 
-\begin{align}\tag{B}
+\begin{align}\tag{B}\label{eq6B}
 |\Delta| = 2\hbar\omega_De^{-\frac{1}{gN(0)}}
 \end{align}
 
@@ -480,18 +480,18 @@ For typical metals, $N(0)g\approx0.2-0.3$ so that $|\Delta|$ can be induced rega
 
 In order to generalize the BCS mean-field theory to {\uuline{a finite temperature}}, we have only to change the interpretation of $\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})$. 
 
-Namely, the mean0field is now given by the ensemble average of the product of the creation field calculated with respect to $\hat{K}_{eff}$
+Namely, the mean0field is now given by the ensemble average of the product of the creation field calculated with respect to $\hat{K}_{\text{eff}}$
 
-\[\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x}) = \frac{\trace[e^{-\beta\hat{K}_{eff}}\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})]}{\trace[e^{-\beta\hat{K}_{eff}]}} \]
+\[\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x}) = \frac{\trace[e^{-\beta\hat{K}_{\text{eff}}}\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})]}{\trace[e^{-\beta\hat{K}_{\text{eff}}]}} \]
 
 As we will see below, the right hand side can be calculated in terms of \uline{the temperature Green's function} and it is given by the mean-field itself. 
 
 To do this, let us first introduce the Heisenberg operator in the imaginary time;\footnote{For later convenience, we will introduce the external vector potential into the mean-field Hamiltonian
-\[\hat{K}_{eff}=\int d^3{\bf x}\psi_{\alpha}^\dagger({\bf x})\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}({\bf x})}{c}\right)^2-\mu\right]\psi_{\alpha}({\bf x}) - g\int d^3{\bf x}\{\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\psi_{\uparrow}({\bf x})\psi_{\downarrow}({\bf x})+ h.c.\}+\cdots \]}
+\[\hat{K}_{\text{eff}}=\int d^3{\bf x}\psi_{\alpha}^\dagger({\bf x})\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}({\bf x})}{c}\right)^2-\mu\right]\psi_{\alpha}({\bf x}) - g\int d^3{\bf x}\{\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\psi_{\uparrow}({\bf x})\psi_{\downarrow}({\bf x})+ h.c.\}+\cdots \]}
 
 \[\begin{split}
-\hat{\psi}_{k\uparrow}({\bf x},\tau) &= e^{\hat{K}_{eff}\tau/\hbar}\hat{\psi}_{\uparrow}({\bf x})e^{-\hat{K}_{eff}\tau/\hbar}\\
-\hat{\psi}^\dagger_{k\downarrow}({\bf x},\tau) &= e^{\hat{K}_{eff}\tau/\hbar}\hat{\psi}^\dagger_{\downarrow}({\bf x})e^{-\hat{K}_{eff}\tau/\hbar}
+\hat{\psi}_{k\uparrow}({\bf x},\tau) &= e^{\hat{K}_{\text{eff}}\tau/\hbar}\hat{\psi}_{\uparrow}({\bf x})e^{-\hat{K}_{\text{eff}}\tau/\hbar}\\
+\hat{\psi}^\dagger_{k\downarrow}({\bf x},\tau) &= e^{\hat{K}_{\text{eff}}\tau/\hbar}\hat{\psi}^\dagger_{\downarrow}({\bf x})e^{-\hat{K}_{\text{eff}}\tau/\hbar}
 \end{split} \]
 
 which satisfy the following \uuline{linearized} equations of motions respectively:%956
@@ -571,19 +571,200 @@ the system becomes translationally symmetric, so that both Green's functions dep
 
 \[\begin{split}
 g({\bf x},\tau;{\bf x'},\tau')&\rightarrow g({\bf x-x'},\tau-\tau')\\
-\mathcal{F}({\bf x},\tau;{\bf x'},\tau')&\rightarrow\mathcal{F}(({\bf x-x'},\tau-\tau')\\
+\mathcal{F}({\bf x},\tau;{\bf x'},\tau')&\rightarrow\mathcal{F}({\bf x-x'},\tau-\tau')\\
 \Delta({\bf x})&\rightarrow\Delta\equiv g\mathcal{F}(0,0+)
 \end{split} \]
 
 Fourier series of these functions are introduced as
 
-%967 <-
+\[\begin{split}
+g({\bf x},\tau) = \frac{1}{\beta\hbar}\sum_{i\omega_n}\int\frac{d^3\bf k}{(2\pi)^3}e^{-i\omega_n\tau+i\bf k\cdot x}g({\bf k},i\omega_n)\\
+\ \\
+\mathcal{F}({\bf x},\tau) = \frac{1}{\beta\hbar}\sum_{i\omega_n}\int\frac{d^3\bf k}{(2\pi)^3}e^{-i\omega_n\tau+i\bf k\cdot x}\mathcal{F}({\bf k},i\omega_n)\\
+\end{split}\]
 
-%982
+whose equation of motions are given by
+
+\[\left(i\hbar\omega_n-\frac{\hbar^2{\bf k}^2}{2m}+\mu\right)g({\bf k},i\omega_n)+\Delta\mathcal{F}^\dagger({\bf k},i\omega_n)=\hbar\]
+\[\Delta^*g({\bf k},i\omega_n)+\left(i\hbar\omega_n+\frac{\hbar^2{\bf k}^2}{2m}-\mu\right)\mathcal{F}^\dagger({\bf k},i\omega_n)=\hbar\]
+
+Here, we took it for granted that $\Delta$ does not depend on the coordinate, because of the translational symmetry:
+
+\[\begin{split}
+\Delta&=g\mathcal{F}(0,0+)=g\frac{1}{\beta\hbar}\sum_{i\omega_n}\int\frac{d^3\bf k}{(2\pi)^3}e^{-i\omega_n0++i\bf k\cdot 0}\mathcal{F}({\bf k},i\omega_n)\\
+&=g\frac{1}{\beta\hbar}\sum_{i\omega_n} e^{-i\omega_n\eta}\int\frac{d^3\bf k}{(2\pi)^3}\mathcal{F}({\bf k},i\omega_n)
+\end{split}\]
+
+Remember again that the attractive interaction in the BCS Hamiltonian applies for those electrons which are within an energy shell of the thickness $\hbar\omega_D$ from the Fermi surface. 
+
+This restriction tells us that the coupled equations of $g$ and $\mathcal{F}^\dagger$ holds true only for those $\bf k$ satisfying $|\xi_{\bf k}|\equiv|\hbar^2{\bf k}^2/2m - \mu|<\hbar\omega_D$. 
+
+For the other ${\bf k}$, the `off-diagonal' term connecting $g$ and $\mathcal{F}^\dagger$ reduces to zero:
+
+\[\left(i\hbar\omega_n-\frac{\hbar^2{\bf k}^2}{2m}+\mu\right)g({\bf k},i\omega_n)=\hbar\]
+\[\left(i\hbar\omega_n+\frac{\hbar^2{\bf k}^2}{2m}-\mu\right)\mathcal{F}^\dagger({\bf k},i\omega_n)=\hbar\]
+
+which leads to
+
+\[\begin{cases}
+g({\bf k},i\omega_n)=\frac{\hbar}{i\hbar\omega_n-\frac{\hbar^2{\bf k}^2}{2m}+\mu}\\
+\ \\
+\mathcal{F}^\dagger({\bf k},i\omega_n) = 0
+\end{cases}\]
+
+For $|\xi_{\bf k}|<\hbar\omega_D$, the coupled equation of motions are readily solved in favor of $g$ \& $\mathcal{F}^\dagger$:
+
+\[\left\{-\left(i\hbar\omega_n-\frac{\hbar^2{\bf k}^2}{2m}+\mu\right)\frac{1}{\Delta^*}\left(i\hbar\omega_n+\underset{\xi_{\bf k}}{{\color{red}{\frac{\hbar^2{\bf k}^2}{2m}-\mu}}}\right)+\Delta\right\}\mathcal{F}^\dagger = \hbar\]
+\[\frac{1}{\Delta^*}\left\{-\left(-(\hbar\omega_n)^2-\xi_{\bf k}^2\right)+|\Delta|^2\right\}\mathcal{F}^\dagger({\bf k},i\omega_n) = \hbar\]
+\[\mathcal{F}^\dagger({\bf k},i\omega_n) = \frac{\hbar\Delta^*}{(\hbar\omega_n)^2+\xi_{\bf k}^2+|\Delta|^2} \]
+\[g({\bf k},i\omega_n) = -\frac{\hbar(i\hbar\omega_n+\xi_{\bf k})}{(\hbar\omega_n)^2+\xi_{\bf k}^2+|\Delta|^2} \]
+
+In terms of the anomalous Green's function, $\Delta$ is given by\footnote{this is derived by a residue, see from the figure after equations}
+
+
+
+\[\begin{split}
+\Delta &= g\frac{1}{\beta\hbar}\sum_{i\omega_n}e^{-i\omega_n\eta}\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{\Delta}{(\hbar\omega_n)^2+\xi_{\bf k}^2+|\Delta|^2}\\
+\Leftrightarrow 1&=g\oint \frac{dz}{2\pi i}\frac{1}{e^{\beta\hbar z}+1}\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{\Delta}{-z^2+\xi_{\bf k}^2+|\Delta|^2}\\
+\Leftrightarrow 1&=-g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\oint \frac{dz}{2\pi i}\frac{1}{e^{\beta\hbar z}+1}\frac{1}{[z-\sqrt{\xi_{\bf k}^2+|\Delta^2}][z+\sqrt{\xi_{\bf k}^2+|\Delta^2}]}\\
+&\text{ by def }\quad E_{\bf k} = \sqrt{\xi_{\bf k}^2+|\Delta|^2} ,\\
+&=-g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\left\{\frac{1}{e^{\beta\hbar E_{\bf k}}+1}\frac{1}{2E_{\bf k}} - \frac{1}{e^{-\beta\hbar E_{\bf k}}+1}\frac{1}{2E_{\bf k}}\right\}\\
+&=g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{1}{2E_{\bf k}}\left\{\frac{e^{\beta\hbar E_{\bf k}/2} - e^{-\beta\hbar E_{\bf k}/2}}{e^{\beta\hbar E_{\bf k}/2} + e^{-\beta\hbar E_{\bf k}/2}}\right\}\\
+\Leftrightarrow 1&=g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{1}{2E_{\bf k}}\tanh\left(\frac{\beta\hbar E_{\bf k}}{2}\right)\\
+&=g\int_{-\hbar\omega_D}^{\hbar\omega_D} d\omega N(\omega)\frac{1}{2\sqrt{\omega^2+|\Delta|^2}}\tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|\Delta|^2}}{2}\right)\\
+&\deq gN(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|\Delta|^2}}\tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|\Delta|^2}}{2}\right)
+\end{split} \]
+
+\begin{wrapfigure}{l}{6cm}
+\includegraphics[width = 4.5cm]{6-3.png}\
+\end{wrapfigure}
+
+At the zero-temperature, this gap equation reduces to that we derived before, and $|\Delta|$ was already obtained as eq.\eqref{eq6B}
+\begin{align}\tag{B}
+|\Delta \deq 2\hbar\omega_D e^{-1/gN(0)}
+\end{align}
+On increasing the temperature, $\tanh({\beta\hbar\sqrt{\omega^2+|\Delta|^2}}/{2})$ decreases for fixed $\omega$. In order to compensate this decrease in the right hand side of the gap equation, $1/\sqrt{\omega^2+|\Delta|^2}$ increases, for fixed $\omega$. Namely, $|\Delta|$ should decrease, when the temperature increases. At some finite temperature called the ``critical temperature'', $\Delta$ eventually reduces to zero, where the system transforms from the superconducting phase $(\Delta\neq0)$ to the normal metallic phase $(\Delta=0)$. The critical temperature $T_c$ can be solved by setting $\Delta$ to be zero, in the gap equation. 
+
+\[1 = gN(0)\int_0^{\hbar\omega_D}\frac{d\omega}{\omega}\tanh\left(\frac{\hbar\omega}{2k_BT_c}\right) = gN(0)\int_0^{\frac{\hbar\omega_D}{2k_BT_c}}\frac{dx}{x}\tanh x \]
+
+The superconducting critical temperature as well we the superconducting gap $\Delta$ is usually much smaller than the Debye frequency. In such a case, the right hand side is dominated by the logarithmic divergence associated with large $\displaystyle \frac{\hbar\omega_D}{2k_BT_c}$. To single out this dominant contribution, let us take the partial integral with respect $x$ in the right hand side. 
+
+\[\begin{split}
+\int_0^{x_c}\frac{dx}{x}\tanh x &= [\ln x\tanh x]\Big|_0^{x_c} - \int_0^{x_c}\ln x\frac{1}{\cosh^2 x}dx = \ln x_c - \int_0^{\infty}\ln x\frac{1}{\cosh^2 x}dx + f(x_c)\\
+&=\ln x_c + \ln \frac{4e^\gamma}{\pi}+f(x_c)
+\end{split}\]
+
+(where $\displaystyle\lim_{x_c\to+\infty} f(x_c) = 0, \gamma = 0.5772$, the Euler's constant. )
+
+Taking into account up to the next leading term in the small $T_c$ limit, we obtain $T_c$ as follows:
+
+\[\frac{1}{gN(0)}\deq\ln\left(\overset{x_c}{\fbox{${\displaystyle\frac{\hbar\omega_D}{2k_BT_c}}$}}\cdot\frac{4e^\gamma}{\pi}\right) \]
+\begin{align}\tag{D}\label{eq6D}
+\begin{split}
+k_BT_c &= \frac{2e^\gamma}{\pi}\hbar\omega_D e^{-1/gN(0)}\\
+&\deq 1.13\hbar\omega_D e^{-1/gN(0)}
+\end{split}
+\end{align}
+
+Comparing eq.\eqref{eq6B} with eq.\eqref{eq6D}, one can see that $T_c$ and the superconducting gap $\Delta$ at $T=0$ has a ``universal'' ratio, which does not depend on microscopic parameter. 
+
+\[\frac{\Delta(T=0)}{k_BT_c} = \pi e^{-\gamma} = 1.76... \]
+which is indeed satisfied by many superconducting phases observed in simple-substance metals; 
+
+\[\frac{\Delta(T=0)}{k_BT_c} = 1.6(\ce{Cd}), 1.3\sim2.1(\ce{Al}), 1.6(\ce{Sn}) \]
+
+Since the Debye frequency is inversely proportional to the square root of the ionic mass;
+
+\[\omega_D\propto c\cdot a^{-1} = \sqrt{\frac{B}{Mn_0}}\frac{1}{a} \]
+where $c$ the sound velocity for the acoustic phonon, , $a$ the mean spacing of ions, $n_0$ the mean density of ions. 
+
+Eq.\eqref{eq6D} suggests that the superconducting transition temperature is also inversely proportional to the square-root of the ionic mass; 
+
+\[T_c\propto M^{-1/2} \]
+
+which is consistent with the isotope effect in experiments. 
+
+Gap equation at $T\neq 0$ is:
+
+\[1=gN(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|\Delta|^2}}\tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|\Delta|^2}}{2}\right) \]
+
+The gap equation at $T\neq0$ can be also solved analytically in two limiting situations:
+
+\[\begin{cases}
+\Delta(T)&\deq \Delta_0 - (2\pi\Delta_0k_BT)^{1/2}e^{-\Delta_0/k_BT}, T\ll T_c\\
+&\\
+\Delta(T)&\deq k_BT_c\pi\left[\frac{8}{7\zeta(3)}\right]^{1/2}\left(1-\frac{T}{T_c}\right)^{1/2}
+\end{cases}\]
+
+\dotfill
+
+\ 
+
+Thermodynamics function:
+
+In order to evaluate \uline{the critical magnetic field} $H_c(T)$ and \uline{the specific heat $c_V$} in the BCS superconductor, let us next calculate the thermodynamic function using the formula derived in previous sections %the equation link!
+
+We begin with
+
+\[\begin{split}
+\frac{\partial \Omega^{\text{BCS}}(g)}{\partial g} &= \frac{\partial}{\partial g}\left(-\frac{1}{\beta}\ln\trace\left[e^{-\beta\hat{K}_{\text{eff}}(h)}\right]\right) \\
+&=\frac{\trace\left[\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g} e^{-\beta\hat{K}_{\text{eff}}(g)}\right]}{\trace\left[e^{-\beta\hat{K}_{\text{eff}}(h)}\right]}\equiv\left\langle\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g}\right\rangle_{\hat{K}_{\text{eff}}}\\
+&\quad\text{by such replacing}\\
+\hat{K}_{\text{eff}}(g) &= \hat{K}_0-g\int d^3{\bf x}\left\{\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle\psi_{\uparrow}({\bf x}\psi_{\downarrow}({\bf x} +\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\langle\psi_{\uparrow}({\bf x}\psi_{\downarrow}({\bf x} \rangle - \langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle\langle\psi_{\uparrow}({\bf x}\psi_{\downarrow}({\bf x} \rangle\right\}\\
+\left\langle\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g}\right\rangle_{\hat{K}_{\text{eff}}} &= ... = -\int d^3{\bf x} \langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle\langle\psi_{\uparrow}({\bf x}\psi_{\downarrow}({\bf x} \rangle\\
+&= -\int d^3{\bf x}\frac{1}{g}|\Delta({\bf x})|^2\\
+&\quad\text{where by }g\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle \equiv - \Delta^*({\bf x})
+\end{split}\]
+
+Noting that $\Omega^{\text{BCS}}(g=0)$ is nothing but the thermodynamics potential of the free electron gas, ($\Omega_n$) one can safely integrate the above equation with respect $g^{(')}$ from $0$ to $g$. 
+
+\begin{align}\tag{E}\label{eq6E}
+\Omega^{\text{BCS}}(g) - \Omega_n = \int_0^g dg' \frac{\partial \Omega^{\text{BCS}}(g')}{\partial g'} = -\int_0^g dg' \frac{1}{(g')^2}\int d^3{\bf x}|\Delta'({\bf x})|^2
+\end{align}
+
+Remember that $\Delta'({\bf x})$ in the integrate is a function of $g'$, which is clear from the above derivation. More specifically, the gap equation at finite $T$ holds true for arbitrary $g'\in[0,g]$; 
+
+\[1 = g'N(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2} }{2}\right)\]
+
+or equivalent, 
+
+\[\frac{1}{g'} = N(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2} }{2}\right)\]
+
+Taking the derivative of the gap equation with respect to $g'$, we will obtain the following formal relation:
+
+\[-\frac{1}{(g')^2} = \frac{\partial|\Delta'|}{\partial g'}N(0)\cdot\int_0^{\hbar\omega_D}d\xi\left(\frac{1}{\sqrt{\omega^2+|{{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{{\Delta'}}|^2} }{2}\right)\right) \]
+
+Substituting this into eq.\eqref{eq6E}, we can change the integral variable from $g'$ to $\Delta'$ (as a function of $g'$). 
+
+\[\Omega^{\text{BCS}}(g) - \Omega_n = VN(0)\int_0^{|\Delta|(g)}d|\Delta|'|\Delta|'^2\int_0^{\hbar\omega_D}d\xi\frac{\partial}{\partial |\Delta|'}\left(\frac{1}{\sqrt{\omega^2+|{{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{{\Delta'}}|^2} }{2}\right)\right) \]
+and take $E' = \sqrt{\omega^2+|{{\Delta'}}|^2}$. 
+
+Taking the partial integral, we have
+
+\[\begin{split}
+&=VN(0)\int_0^{\hbar\omega_D}d\xi\frac{|\Delta|^2}{E}\tanh\frac{\beta E}{2} - VN(0)\int_0^{\hbar\omega_D} d\xi\int_n^{|\Delta|}d|\Delta|'2\cdot|\Delta|'\frac{1}{E'}\tanh\frac{\beta E'}{2} \\
+&=V\cancel{N(0)}|\Delta|^2\frac{1}{\cancel{N(0)}g} - 2VN(0)\int_0^{\hbar\omega_D}d\xi\int_0^{|\Delta|}d|\Delta|'\frac{|\Delta|'}{E'}\tanh\frac{\beta E'}{2}\\
+&=V\cdot\frac{|\Delta|^2}{g}-2VN(0)\int_0^{\hbar\omega_D}d\xi\int_\xi^E dE'\tanh\frac{\beta E'}{2}\\
+&\quad \text{where we take }E' = \sqrt{\xi^2+|\Delta|'^2},\frac{dE'}{d|\Delta|'} = \frac{|\Delta|'}{E'}; \tanh\frac{\beta E'}{2} = \frac{2}{\beta}\frac{\partial}{\partial E'}\ln\left[\cosh\left(\frac{\beta E'}{2}\right)\right]\\
+&= V\frac{|\Delta|^2}{g} - 2VN(0)\int_0^{\hbar\omega_D}d\xi\frac{2}{\beta}\ln\left[\frac{\cosh\left(\frac{\beta E}{2}\right)}{\cosh\left(\frac{\beta \xi}{2}\right)}\right]\\
+\Leftrightarrow \frac{1}{V}&\left(\Omega^{\text{BCS}}(g) - \Omega_n\right) = \frac{\Delta^2}{g} - \frac{4N(0)}{\beta}\int_0^{\hbar\omega_D}d\xi\ln\left[\frac{\cosh\left(\frac{\beta E}{2}\right)}{\cosh\left(\frac{\beta \xi}{2}\right)}\right]\\
+&\left(\begin{split}
+\ln\left[\frac{\cosh\left(\frac{\beta E}{2}\right)}{\cosh\left(\frac{\beta \xi}{2}\right)}\right] &= \ln\left[\frac{e^{\frac{\beta E}{2}} + e^{\frac{-\beta E}{2}}}{e^{\frac{\beta \xi}{2}} + e^{\frac{-\beta \xi}{2}}}\right] = \ln\left[\frac{e^{\frac{\beta E}{2}}}{e^{\frac{\beta \xi}{2}}}\frac{1 + e^{{-\beta E}}}{1 + e^{{-\beta \xi}}}\right]\\
+&=\frac{\beta}{2}(E-\xi)+\ln[1+e^{-\beta E}] - \ln[1 + e^{-\beta \xi}]
+\end{split}\right)\\
+&=\frac{\Delta^2}{g} - \frac{4N(0)}{\beta}\int_0^{\hbar\omega_D}d\xi\left\{\frac{\beta}{2}(E-\xi)+\ln[1+e^{-\beta E}]\right\} + \frac{4N(0)}{\beta}\int_0^{\hbar\omega_D}d\xi\ln[1 + e^{-\beta \xi}]\\
+&=\frac{\Delta^2}{g} - 2N(0)\int_0^{\hbar\omega_D}d\xi\left\{\sqrt{\xi^2+\Delta^2}-\xi\right\} -  \frac{4N(0)}{\beta}\int_0^{\hbar\omega_D}d\xi\left\{\ln[1+e^{-\beta E}] - \ln[1 + e^{-\beta \xi}]\right\}\\
+&\left(\begin{split}
+\int_0^{\hbar\omega_D}d\xi&\left\{\sqrt{\xi^2+\Delta^2}-\xi\right\} = \left[\frac{1}{2}\left(\xi\sqrt{\xi^2+\Delta^2} + \Delta^2\ln(\xi+\sqrt{\xi^2+\Delta^2})\right) - \frac{\xi^2}{2}\right]\Big|_{\xi=0}^{\xi=\hbar\omega_D}\\
+&=\frac{1}{2}\left[(\hbar\omega_D)^2\left\{1+\left(\frac{\Delta}{\hbar\omega}\right)^2\right\}^{1/2}+\Delta^2\ln\left(\hbar\omega_D+\sqrt{(\hbar\omega_D)^2+\Delta^2}\right) - \Delta^2\ln\Delta\right] - \frac{(\hbar\omega_D)^2}{2}\\
+&=\frac{1}{4}\Delta^2+\frac{\Delta^2}{2}\ln\left(\hbar\omega_D+\hbar\omega_D\left(1+\frac{1}{2}\left(\frac{\Delta}{\hbar\omega_D}\right)^2\right)\right)-\frac{\Delta^2}{2}\ln\Delta+O\left(\Delta^2\left(\frac{\Delta}{\hbar\omega_D}\right)^2\right)\\
+&\quad\text{ by }\frac{\Delta}{\hbar\omega_D}\ll1\\
+&=\frac{\Delta^2}{4}+\frac{\Delta^2}{2}\ln\left(\frac{2\hbar\omega_d}{\Delta}\right)+O\left(\Delta^2\left(\frac{\Delta}{\hbar\omega_D}\right)^2\right)
+\end{split}\right)\\
+&=\frac{\Delta^2}{g} - 2N(0)\left\{\frac{\Delta^2}{4}+\frac{\Delta^2}{2}\ln\left(\frac{2\hbar\omega_d}{\Delta}\right)\right\}-\frac{4N(0)}{\beta}\int_0^{\cancel{\hbar\omega_D}+\infty}d\xi\left\{\ln[1+e^{-\beta E}] - \ln[1 + e^{-\beta \xi}]\right\}
+\end{split}\]
 
 Within the temperature range in question ($T\le T_c\ll\frac{\hbar\omega_D}{k_B}$), we can safely replace the upper limit of the $\xi-$ integrals by $+\infty$ due to $\hbar\omega_D/k_BT\ll1$. 
-
-
 
 \[\begin{split}
 N_S =&\int d^3{\bf x} g({\bf x},\tau;{\bf x},\tau+)\\
@@ -613,7 +794,7 @@ Now that $\Omega = F-\mu N$, we have
 
 \[\frac{1}{V}(F_S-F_n) = -\frac{1}{2}N(0)\Delta^2 - N(0)\Delta^2\ln\left(\frac{\Delta_0}{\Delta}\right) + \frac{N(0)\pi^2}{3\beta^2}-\frac{4N(0)}{\beta}\int_0^{+\infty}d\xi\ln[1+e^{-\beta E}] \]
 
-where $F_S$ denotes to $\Omega^{BCS}(g)+\mu N_S$, and $F_N$ for $\Omega_n + \mu F_N$
+where $F_S$ denotes to $\Omega^{\text{BCS}}(g)+\mu N_S$, and $F_N$ for $\Omega_n + \mu F_N$
 
 According to the thermodynamics relation discussed in previous page %need some links
 , we have the following relation: 

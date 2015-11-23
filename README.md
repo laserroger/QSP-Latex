@@ -30,7 +30,7 @@ One more sentence: you might have to click the `RAW' in order to start download;
 
 ## 4. How to report errors? 
 
-Well, you can send emails but I personally doesn't suggest you to do so. Please check where the original file went wrong, and leave a message at this github page. If you're interested in this, you can also fork this project, which have all the necessary .tex file (but without figures). You can amend the .tex file and push. I would merge the newest version. 
+Well, you can send emails but I personally doesn't suggest you to do so. Please check where the original file went wrong, and leave a message at this github page. If you're interested in this, you can also fork this project, which have all the necessary .tex file (but without figures). You can amend the .tex file and pull a request. I would merge the newest version. 
 
 ## 5. Do we have another material about QSP? 
 

@@ -404,7 +404,7 @@ To calculate $\langle\psi_{\downarrow}(\bf{x})^\dagger\psi_{\downarrow}(\bf{x})^
 &=\langle vac|vac\rangle = 1
 \end{split}\]
 
-Thus the mean-field is readily calculated as follows: %Page 952
+Thus the mean-field is readily calculated as follows: 
 
 \[\begin{split}
 \langle\psi_{\downarrow}(\bm{x})^\dagger\psi_{\uparrow}(\bm{x})^\dagger\rangle &= \frac{1}{V}\int d^3 \bm{x} \langle\psi_{\downarrow}(\bm{x})^\dagger\psi_{\uparrow}(\bm{x})^\dagger\rangle = \frac{1}{V} \sum_{\bm{k}}\langle\Phi_0|c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger|\Phi_0\rangle \\
@@ -494,7 +494,26 @@ To do this, let us first introduce the Heisenberg operator in the imaginary time
 \hat{\psi}^\dagger_{k\downarrow}({\bf x},\tau) &= e^{\hat{K}_{\text{eff}}\tau/\hbar}\hat{\psi}^\dagger_{\downarrow}({\bf x})e^{-\hat{K}_{\text{eff}}\tau/\hbar}
 \end{split} \]
 
-which satisfy the following \uuline{linearized} equations of motions respectively:%956
+which satisfy the following \uuline{linearized} equations of motions respectively:
+
+\[\begin{split}
+\hbar\frac{\partial\hat{\psi}_{k\uparrow}}{\partial \tau} &= e^{\hat{K}_{\text{eff}}\tau/\hbar}\left[\hat{K}_{\text{eff}},\hat{\psi}_{\uparrow}({\bf x})\right]e^{-\hat{K}_{\text{eff}}\tau/\hbar}\\
+&=e^{\hat{K}_{\text{eff}}\tau/\hbar}\left\{-\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\hat{\psi}_\uparrow({\bf x}) - g\int d^3{\bf x}' \left[\psi_\downarrow^\dagger({\bf x}')\underline{\psi_\uparrow^\dagger({\bf x}'),\psi_\uparrow({\bf x}')}\right]\langle\psi_\uparrow({\bf x}')\psi_\downarrow({\bf x}')\rangle\right\}e^{-\hat{K}_{\text{eff}}\tau/\hbar}\\
+&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\Rightarrow\psi_\downarrow^\dagger({\bf x}')\left\{\psi_\uparrow^\dagger({\bf x'}),\psi_\uparrow({\bf x})\right\}\\
+&=-\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\hat{\psi}_\uparrow({\bf x},\tau) - g\psi_{k\downarrow}^\dagger({\bf x},\tau)\langle\psi_\uparrow({\bf x})\psi_\downarrow({\bf x})\rangle\\
+\hbar\frac{\partial\hat\psi_{k\downarrow}^\dagger}{\partial \tau}&=e^{\hat{K}_{\text{eff}}\tau/\hbar}\left[\hat{K}_{\text{eff}},\hat{\psi}_\downarrow^\dagger({\bf x})\right]\\
+&=e^{\hat{K}_{\text{eff}}\tau/\hbar}\Bigg\{\int d^3{\bf x'}\left[\psi^\dagger_\alpha({\bf x'})\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi_\alpha({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right]\\
+&\quad - g\int d^3{\bf x}' \langle\psi^\dagger_\downarrow({\bf x}')\psi^\dagger_\uparrow({\bf x}')\rangle\left[\psi_\uparrow({\bf x}'){\psi_\downarrow({\bf x}'),\psi^\dagger_\downarrow({\bf x}')}\right]\Bigg\}e^{-\hat{K}_{\text{eff}}\tau/\hbar}\\
+&\left(
+\begin{split}
+&\ \ \ \int d^3{\bf x'}\left[\psi^\dagger_\alpha({\bf x'})\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi_\alpha({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right]\\
+&=\int d^3{\bf x'}\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi^\dagger_\alpha({\bf x'})\cdot\underset{\delta_{\alpha,\downarrow}\delta^3({\bf x-x'})}{\left\{\psi_\alpha({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right\}}\\
+&=\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi_\downarrow^\dagger({\bf x})\\
+&\ \ \ \left[\psi_\uparrow({\bf x'})\psi_{\downarrow}({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right] = \psi_\uparrow({\bf x})\delta^3({\bf x-x'})
+\end{split}
+\right)\\
+&=\left[\frac{1}{2m}\left(i\hbar\nabla_x+\frac{e\bf A}{c}\right)^2-\mu\right]\psi^\dagger_{k\downarrow}({\bf x},\tau) - g\langle\psi^\dagger_{\downarrow}({\bf x})\psi^\dagger_{\uparrow}({\bf x})\rangle\psi_{k\uparrow}({\bf x},\tau)
+\end{split} \]
 
 Using these Heisenberg operators we next define the time-ordered Green's function
 
@@ -538,9 +557,74 @@ With this assumption in mind, we have
 
 Similar, we have
 
-%961 <-
+\[\begin{split}
+\hbar\frac{\partial}{\partial\tau}\mathcal{F}({\bf x},\tau;{\bf x'},\tau') &=-\left\langle\mathcal{T}\left\{\left(\frac{\partial}{\partial\tau}\psi_{k\downarrow}^\dagger({\bf x,\tau})\right)\psi_{k\uparrow}^\dagger({\bf x'},\tau')\right\}\right\rangle\\
+&=-\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\left\langle\mathcal{T}_{\tau}\left\{\psi_{k\downarrow}^\dagger({\bf x,\tau})\psi_{k\uparrow}^\dagger({\bf x'},\tau')\right\}\right\rangle \\
+&\quad\ + g\langle\psi_\downarrow^\dagger({\bf x})\psi_\uparrow^\dagger({\bf x})\rangle\left\langle\mathcal{T}_{\tau}\left\{\psi_{k\uparrow}({\bf x,\tau})\psi^\dagger_{k\uparrow}({\bf x'},\tau')\right\}\right\rangle\\
+&= \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\mathcal{F}({\bf x},\tau;{\bf x'},\tau') - \underset{\Rightarrow\Delta^*({\bf x})}{\underline{g\langle\psi_\downarrow^\dagger({\bf x})\psi_\uparrow^\dagger({\bf x})\rangle}}g({\bf x},\tau;{\bf x'},\tau')
+\end{split}\]
 
-%965 ->
+with the definition of $\Delta({\bf x})$:
+
+\[\Delta({\bf x}) = - g\langle\psi_\uparrow({\bf x})\psi_\downarrow({\bf x})\rangle =   g\langle\psi_\downarrow({\bf x})\psi_\uparrow({\bf x})\rangle\]
+
+we have
+
+\begin{align}
+\tag{C-1}
+\left[-\hbar\partial_\tau-\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2+\mu\right]\mathcal{F}({\bf x},\tau;{\bf x'},\tau')  &= \Delta({\bf x})g({\bf x'},\tau';{\bf x},\tau)\\
+\tag{C-2}
+\left[\hbar\partial_\tau-\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2+\mu\right]\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')  &= \Delta^*({\bf x})g({\bf x},\tau;{\bf x'},\tau')
+\end{align}
+
+In terms of the so-called Nambu Vector, 
+
+\[{\bm{\Psi}}_k({\bf x},\tau)=\left[\begin{matrix}\psi_{k\uparrow}({\bf x},\tau)\\ \ \\\psi^\dagger_{k\downarrow}({\bf x},\tau)\end{matrix}\right] \]
+
+introduce a $2\times2$ matrix formed Green's function
+
+\[\begin{split}
+{g}({\bf x},\tau;{\bf x'},\tau') &= -\langle\mathcal{T}_\tau\{\bm \Psi_k({\bf x},\tau)\bm\Psi_k^\dagger({\bf x'},\tau')\}\rangle\\
+&=\left[\begin{matrix}
+-\langle\mathcal{T}_\tau\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\uparrow}^\dagger({\bf x'},\tau')\}\rangle &- \langle\mathcal{T}_\tau\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
+-\langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle &- \langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle
+\end{matrix}\right]\\
+&=\left[\begin{matrix}
+g({\bf x},\tau;{\bf x'},\tau') &\mathcal{F}({\bf x},\tau;{\bf x'},\tau')\\
+\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')& -g({\bf x'},\tau';{\bf x},\tau)
+\end{matrix}\right]
+\end{split} \]
+
+The equations of motion for the Green's function derived so fat are summarized into a following $2\times2$ matrix form:
+
+\begin{align}\tag{C-3}
+\begin{split}
+&\left[\begin{matrix}
+-\hbar\partial_\tau - \frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2+\mu &\Delta({\bf x})\\
+\Delta^*({\bf x})& -\hbar\partial_\tau + \frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2-\mu
+\end{matrix}\right] \times  \left[\begin{matrix}
+g({\bf x},\tau;{\bf x'},\tau') &\mathcal{F}({\bf x},\tau;{\bf x'},\tau')\\
+\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')& -g({\bf x'},\tau';{\bf x},\tau)
+\end{matrix}\right]\\
+ = &\left[\begin{matrix}
+\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) &0\\
+0&\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) 
+\end{matrix}\right]
+\end{split}\end{align}
+
+(where the reason is:
+
+\[\begin{split}
+\hbar\partial_\tau(-g({\bf x},\tau;{\bf x'},\tau')) &= \hbar\partial_\tau(\langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle)\\
+&=-\hbar\partial_\tau\delta(\tau-\tau')\langle\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle - \langle\mathcal{T}_\tau\{\hbar\partial_\tau(\psi^\dagger_{k\downarrow}({\bf x},\tau))\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
+&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) - \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2-\mu\right]\langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
+&\quad +\underset{-\Delta^*({\bf x})}{\underline{g\langle\psi_\downarrow^\dagger({\bf x})\psi_\uparrow^\dagger({\bf x})\rangle}}\langle\mathcal{T}_\tau\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
+&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'})  + \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2-\mu\right](-g({\bf x'},\tau';{\bf x},\tau))+\Delta^*({\bf x})\mathcal{F}({\bf x},\tau;{\bf x'},\tau')
+\end{split}\]
+
+)\ \\
+
+\ 
 
 In the remaining part of this section, we will study this Gorkov equation in several limiting case.
 

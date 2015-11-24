@@ -18,7 +18,7 @@ In real metals, the ionic background form a lattice structure, so that it is not
 
 But, when it comes to the acoustic mode, in which all the ion cores are moving in the same `phase', the discreet lattice structure is irrelevant and we can treat them as a positively charged continuous elastic media. 
 
-To describe the accoustic wave, let us first define a three-dimensional vector field $\bm d$ as a function of the spatial coordinate $\bm x$, which we call displacement vector:
+To describe the acoustic wave, let us first define a three-dimensional vector field $\bm d$ as a function of the spatial coordinate $\bm x$, which we call displacement vector:
 
 \[\bm{d}(\bm{x}):\quad\text{displacement vector} \]
 
@@ -70,7 +70,7 @@ which is not accompanied by any charge density modulation.
 
 Since electrons and positively charged background are coupled with each other by electrostatic Coulomb interaction, we usually regard that the longitudinal acoustic waves are strongly coupled with electrons, while the transverse waves are not. 
 
-For this reasoning, we will focus only on the longitudinal (compressional acoustic wave, where we enforce the displacement vector is rotation-free
+For this reasoning, we will focus only on the longitudinal (compressional) acoustic wave, where we enforce the displacement vector is rotation-free
 
 \[\nabla\times\vec{\bm{d}}(\bm{x},t) = 0,\forall\bm{x},t \]
 
@@ -128,7 +128,7 @@ When linearized with respect to a small $\delta \rho$, we have
 
 Combining these two linearized equation, we have
 
-\[\frac{\partial^2\delta\rho}{\partial t^2}= -\rho_0(\nabla\cdot\frac{\partial\vec{\bm{v}}}{\partial t} = \nabla^2 P \]
+\[\frac{\partial^2\delta\rho}{\partial t^2}= -\rho_0(\nabla\cdot\frac{\partial\vec{\bm{v}}}{\partial t}) = \nabla^2 P \]
 
 A pressure of a given fluid element is determined by the mass density of the element, so that it is quite natural to assume that the pressure depends on the spatial coordinate $\bm{x}$ only through $\rho$. 
 
@@ -207,7 +207,7 @@ Under the space integral, we can take a partial integral of the $2$nd term in th
 
 The final identity allows us to rewrite this into this
 
-\hrule
+\dotfill
 
 \ 
 
@@ -262,13 +262,13 @@ Since $\tilde{\bf d}_j({\bf x})$ \& $\tilde{\Pi}_j({\bf x})$ are both Hermite op
 \[\begin{cases}
 \tilde{\bf d}_j({\bf k}) &= \tilde{\bf d}_j({-\bf k})\\
 \ & \\
-\tilde{\Pi}_j({\bf k}) = \tilde{\Pi}_j(-\bf k)
+\tilde{\Pi}_j({\bf k}) &= \tilde{\Pi}_j(-\bf k)
 \end{cases}\]
 
 In terms of these Fourier series, the Hamiltonian can be partially diagonalized. 
 
 \[\begin{split}
-\hat{H}_0 &= \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k}) + \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3} c^2({\bf k}_j\tilde{\bf d}_j({\bf k}))({\bf k}_m\tilde{\bf d}_m(-{\bf k})\\
+\hat{H}_0 &= \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k}) + \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3} c^2({\bf k}_j\tilde{\bf d}_j({\bf k}))({\bf k}_m\tilde{\bf d}_m(-{\bf k}))\\
 &=\int\frac{d^3{\bf k}}{(2\pi)^3}[\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k})+\underset{\omega_{\bf k}^2}{c^2{\bf k}^2}(\hat{\bf k}_j\tilde{\bf d}_j({\bf k}))(\hat{\bf k}_m\tilde{\bf d}_m(-{\bf k}))]
 \end{split}\]
 
@@ -280,8 +280,147 @@ Note that
 
 So that the conjugate momentum as well as the displacement field is rotation free, 
 
-%page850
+\[\nabla\times\tilde{\Pi}({\bf x}) = \frac{\partial}{\partial t}(\nabla\times\tilde{\bf d}) = 0 \]
 
-\section{Electron-phonon interaction} \label{se5-2}
+In the momentum space, this leads to the following operator identity imposed on the Fourier series of the conjugate momentum
 
-So far, we have studied how the acoustic waves are second-quantized into a quadratic boson Hamiltonian. We next study the interaction between the longitudinal acoustic phonon and electron
+\[\epsilon_{ilm}\hat{k}_l\tilde{\Pi}_m({\bf x}) = 0 \]
+
+Using this operator identity, we can rewrite
+
+\[\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({\bf -k}) = (\hat{\bf k}_m\tilde{\Pi}_m({\bf k})) (\hat{\bf k}_j\tilde{\Pi}_j({\bf -k})) \]
+because
+\[(\epsilon_{ijm}\hat{\bf k}_j\tilde{\Pi}_m({\bf k}))(\epsilon_{inp}\hat{\bf k}_n\tilde{\Pi}_p({\bf k})) = 0 \]
+
+With this in mind, we have
+
+\[\begin{split}
+\hat{H}_0 &=\frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\left[(\hat{\bf k}_j\tilde{\Pi}_j({\bf k})) (\hat{\bf k}_m\tilde{\Pi}_m({\bf -k})) + \omega_k^2 (\hat{\bf k}_j\tilde{\bf d}_j({\bf k}))(\hat{\bf k}_m\tilde{\bf d}_m(-{\bf k}))\right]\\
+&\equiv \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\left[\Pi^\dagger({\bf k})\Pi({\bf k}) + \omega_k^2\varphi^\dagger({\bf k})\varphi({\bf k})\right]
+\end{split}\]
+
+where we define scalar-form operators
+
+
+
+
+%page852
+
+\section{Electron-phonon interaction} \label{se5-2}%867
+
+So far, we have studied how the acoustic waves are second-quantized into a quadratic boson Hamiltonian. We next study the interaction between the longitudinal acoustic phonon and electron. Such an interaction is quite natural because the longitudinal acoustic waves are accompanied by the charge density modulations of positively charged ion background, which will be coupled with electron via electrostatic Coulomb interaction. To describe such interaction, let us begin with the interaction Hamiltonian between the positively charged background and electrons. 
+
+\[H_{\text{el-p}}=\int d^3{\bf x}\int d^3{\bf x'}\frac{\rho_e({\bf x})\rho_b({\bf x'})}{|\bf x-x'|} \]
+
+where $\rho_e({\bf x})$ denotes the electron density and $\rho_b({\bf x})$ denote the charge density of the ion background. 
+
+\[\hat{\rho}_e({\bf x}) = -e\sum_\lambda\hat{\psi}_\lambda^\dagger({\bf x})\hat{\psi}_\lambda({\bf x}) \]
+where the operator denote the electron creation/annihilation operator with spin $\lambda$ a6 $\bf x$. 
+
+\[\begin{cases}
+\hat{\rho}_b({\bf x}) &= Ze\hat{\rho}({\bf x}) = Ze(\rho_0+\delta\hat{\rho}({\bf x}))\\
+&\\
+\delta\hat{\rho}({\bf x}) &\equiv-\rho_0\nabla\cdot\hat{\bf d}({\bf x})
+\end{cases}\]
+where ``$Z$'' is the valence of the ion. 
+
+Using this decomposition, the interaction Hamiltonian is decomposed into
+
+\[H_{\text{el-p}} = H_{\text{el-p}}^0 + \overset{H_{\text{el-p}}^1}{\fbox{$\displaystyle\int d^3{\bf x}d^3{\bf x'}\displaystyle\frac{\rho_e({\bf x})\delta\rho_b({\bf x'})}{|\bf x-x'|}$}} \]
+\begin{wrapfigure}{r}{6cm}
+\includegraphics[width = 4.5cm]{5-2-1.png}\
+\end{wrapfigure}
+where the first term of the right hand side was already taken into account for the purpose of ensuring the electric neutrality. 
+
+The second term stands for the Coulomb interaction between modulated charge density of the positively charge background and electron density. In actual solids, however, the characteristic time scale of the phonon dynamics, ($\omega_D^{-1}$), is much slower than the characteristic time scale of the electron dynamics ($\epsilon_F^{-1}$). 
+
+\[\hbar\epsilon_F\gg\hbar\omega_D \]
+(phonon dynamics is much slower than the electron dynamics)
+
+As a result, when the charge modulations is induced by the phonon dynamics, electrons in metal feels them as \uuline{static} charged impurities
+
+\[\delta\rho_b({\bf x}):\text{ (For electrons) ``almost'' static charged impurities} \]
+\begin{wrapfigure}{r}{6cm}
+\includegraphics[width = 4.5cm]{5-2-2.png}
+\end{wrapfigure}
+As we have already studied in section \ref{s3-1}, such charged impurities will be immediately screened by electrons. Namely, according to the argument in section \ref{s3-1}, the static impurity induced electro density modulations. Importantly, the sum of the induced electron density is equal to minus of the charged impurity at the center. As such, the ``charged impurities'' will be completely screened, which make the interaction potential between $\delta\langle\rho_b(\bf x)\rangle$ and $\hat{\rho}_{\text{el}}(\bf x')$ here to be short-ranged potential. An explicit form of the resulting short-range interaction potential can be calculated in the following:
+
+%<- 873
+
+%>- 889
+Feynman's rule for these two Green's functions can be derived exactly in the same way as we did for electron-electron interaction. I will summarize the Feynman's rule in the \uline{momentum space} representation. 
+
+First of all, the Wick's theorem suggests that the $2n$-th order in $\hat{H}_1$ contribute to these Green's function, where $n$ is integer. For the $2n$-th order contribution to $G({\bf q},q_0),\ D({\bf q},q_0)$, the rule is as follows. 
+
+\begin{wrapfigure}{l}{4cm}
+\includegraphics[width = 4cm]{5-2-l5.png}
+\end{wrapfigure}
+\noindent (a) Construct all topologically distinct Feynman diagrams, where the basis vertex is composed of two electron lines and one phonon(electron) line meeting at the vertex. 
+
+\noindent (b) Assign $G_{\alpha\beta}^0(p)$ for each electron line and assign $D^0(q)$ for each phonon line, where the non-interacting electron Green's function is given by the same function as before
+
+\[G_{\alpha\beta}^0({\bf q},q_0) = \delta_{\alpha\beta}\left[\frac{\theta(|{\bf q}|-k_F}{q_0-\epsilon_{\bf q}/\hbar+i\eta} + \frac{\theta(k_F - |{\bf q}|}{q_0-\epsilon_{\bf q}/\hbar-i\eta}\right] \]
+
+The non-interacting phonon Green's function is defined in the real space as follows 
+
+\[iD^0({\bf x},t;{\bf x'},t') = \langle vac|\mathcal{T}[\hat\varphi_I({\bf x},t)\hat\varphi_i({\bf x'},t')]|vac\rangle \]
+where
+
+\[\hat\varphi_I({\bf x},t) = e^{iH_0t/\hbar}\hat\varphi_I({\bf x})e^{-iH_0t/\hbar} = \sum_{\bf k}\sqrt{\frac{\hbar}{2V}}\left[c_{\bf k}e^{i{\bf k\cdot x} - i\omega_{\bf k}t} + c_{\bf k}^\dagger e^{-i{\bf k\cdot x} + i\omega_{\bf k}t}\right] \cdot\theta(\omega_{\bf k} - \omega_D)\]
+%<- 892
+
+
+%>- 893
+\begin{wrapfigure}{l}{3cm}
+\includegraphics[width = 3cm]{5-2-l6.png}
+\end{wrapfigure}
+\noindent (c) We impose the conservation of the momentum and energy (frequency) at each vertex
+
+These Feynman's rules are applicable for both electron's Green's function \& phonon's Green's function. Equivalent electron-electron interaction and BCS (Bardeen-Cooper-Schrieffer) Hamiltonian. 
+
+Comparing this Feynman's rule for the electron-phonon coupled system and the Feynman's rule for interacting electron system (given in section \ref{S2-5}), one can realize the ``equivalence between these two different quantum many-body systems. 
+
+\newpage
+\includegraphics[width = 15cm]{5-2-l4.png}\\
+\includegraphics[width = 15cm]{5-2-l3.png}
+\newpage
+This one-to-one correspondence suggests that, electron Green's function in e-p coupled system becomes exactly same as the electron's Green's function in an interacting electron system, where the interaction potential is given by the non-interacting phonon propagator: Namely the interaction potential is spin-independent and frequency dependent and is given by this
+
+\[\begin{split}
+\tilde{U}_{\lambda\lambda',\mu\mu'}({\bf q},q_0)&\equiv\frac{\gamma^2}{\hbar}D^0({\bf q},q_0)\delta_{\lambda\lambda'}\delta_{\mu\mu'}\\
+\frac{\gamma^2}{\cancel\hbar}\frac{\cancel{\hbar}\omega_q}{2}\left(\frac{1}{q_0-\omega_{\bf q}+i\eta} - \frac{1}{q_0+\omega_{\bf q}-i\eta}\right)\theta(\omega_D-\omega_q)\delta_{\lambda\lambda'}\delta_{\mu\mu'}\\
+&=\gamma^2\frac{\omega_q^2}{q_0^2-(\omega_{\bf q}-i\eta)^2}\theta(\omega_D-\omega_{\bf q})\delta_{\lambda\lambda'}\delta_{\mu\mu'}
+\end{split} \]
+
+where this factor $\gamma^2/\hbar$ comes from this addition factor. In the static limit, the interaction potential become attractive
+
+\[ U_0({\bf q},0) = -\gamma^2\theta(\omega_D-\omega_{\bf q})\delta_{\lambda\lambda'}\delta_{\mu\mu'}\]
+
+Since we are interested in the long wave length regime of the phonon, for ${\bf q}\ll k_F$, $\omega_{\bf q} = e{\bf q} \ll ck_F\approx\omega_D$, $\omega_{\bf q}$ is much smaller than the Debye frequency, so that we can simply replace this by a negative valued constant function in $\bf q$:
+
+\[U_0({\bf q},0)\simeq -\gamma^2\quad\text{for }{\bf q}\ll k_F \]
+
+This means that the equivalent electron-electron interaction becomes an attractive delta function
+
+\[V_{\text{eq}}({\bf x}) = \int\frac{d\bf q}{(2\pi)^3}e^{i\bf q\cdot x}U_0({\bf q},0) = -\gamma^2\delta^3(\bf x) \]
+
+As we will see in the next chapter, this attractive electron-electron interaction results in superconductivity. Remember that the equivalent interaction potential will become repulsive when the energy transfer between two electrons are greater than $\omega_D$
+
+\begin{wrapfigure}{r}{5.5cm}
+\includegraphics[width = 4.5cm]{5-2-l1.png}
+\end{wrapfigure}
+\includegraphics[width = 8cm]{5-2-l2.png}
+
+In the non-interacting ground state where electrons form a Fermi sea, $U_0({\bf q},q_0)$ can be attractive only for those electrons lying within an energy shell of the thickness $\hbar\omega_D$ belong the Fermi surface. Also, $U_0({\bf q},q_0)$ is attractive only when these two electrons are scattered into the states lying with an energy shell of the thickness $\hbar\omega_D$ above the Fermi surface. 
+
+The electron gas model with this attractive interaction potential with the delta function form is called as the BCS Hamiltonian, which is the starting Hamiltonian for the microscopic theory of superconductivity in metal. 
+
+\[\hat{K} = \int d^3{\bf x}\hat{\psi}^\dagger_\alpha({\bf x})\left[-\frac{\hbar^2\nabla^2}{2m}-\mu\right]\hat{\psi}_\alpha({\bf x}) - \frac{g}{2}\int d^3{\bf x} \hat{\psi}^\dagger_\alpha({\bf x})\hat{\psi}^\dagger_\beta({\bf x})\hat{\psi}_\beta({\bf x})\hat{\psi}_\alpha({\bf x})\]
+
+with
+
+\begin{align}\tag{C}
+g\equiv\gamma^2\equiv\frac{16\pi^2 Z^2 e^4}{q_{\text{TF}}^4}\frac{1}{c^2}\left(\frac{\rho_0}{M}\right) \end{align}
+
+
+

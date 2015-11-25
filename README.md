@@ -26,7 +26,7 @@ This file is finished by 4 students, whose name is shown in the last part of the
 ## 3. How should I use this?
 
 Actually it's quite simple 'cuz you can directly download it from the root: the file ``All.pdf'' is all you need to read. 
-One more sentence: you might have to click the `RAW' in order to start download; otherwise it's only an online readble version. 
+One more sentence: you might have to click the `RAW' in order to start download; otherwise it's only an online readble version. Or, you can click <a href = 'https://raw.githubusercontent.com/laserroger/QSP-Latex/master/All.pdf'>here</a> to download. 
 
 ## 4. How to report errors? 
 

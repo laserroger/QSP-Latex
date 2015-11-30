@@ -255,8 +255,6 @@ where the inverse is
 \tilde{\Pi}_j({\bf x}) &= \displaystyle\int d^3 {\bf k} \tilde{\Pi}_j({\bf k}) e^{i\bf k\cdot k}
 \end{cases}\]
 
-%page848
-
 Since $\tilde{\bf d}_j({\bf x})$ \& $\tilde{\Pi}_j({\bf x})$ are both Hermite operators, we have
 
 \[\begin{cases}
@@ -341,10 +339,45 @@ In fact, their commutation relations become as follows
 
 In terms of these creation and annihilation operator, the Hamiltonian is fully diagonalized: 
 
+\[\begin{split}
+a^\dagger({\bf k})a({\bf k}) + a({\bf k})a^\dagger({\bf k})
+&= \frac{1}{2}\left[\sqrt{\frac{\omega_{\bf k}}{\hbar}}\tilde\varphi^\dagger({\bf k}) - \frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde\Pi^\dagger({\bf k})\right]\times\left[\sqrt{\frac{\omega_{\bf k}}{\hbar}}\tilde\varphi({\bf k}) + \frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde\Pi({\bf k})\right]\\
+& +\frac{1}{2}\left[\sqrt{\frac{\omega_{\bf k}}{\hbar}}\tilde\varphi({\bf k}) + \frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde\Pi({\bf k})\right]\times\left[\sqrt{\frac{\omega_{\bf k}}{\hbar}}\tilde\varphi^\dagger({\bf k}) - \frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde\Pi^\dagger({\bf k})\right]\\
+&\quad [\tilde\varphi^\dagger({\bf k}),\tilde\Pi({\bf k'})] = i\hbar(2\pi)^3\delta^3({\bf k-k'}),\quad [\tilde\varphi({\bf k}),\tilde\Pi^\dagger({\bf k'})] = i\hbar(2\pi)^3\delta^3({\bf k-k'})\\
+&=\frac{\omega_{\bf k}}{\hbar}\tilde\varphi^\dagger({\bf k})\varphi({\bf k}) + \frac{1}{\omega_{\bf k}\hbar}\tilde\Pi^\dagger({\bf k})\tilde\Pi({\bf k})
+\end{split}\]
 
+so that we have
 
+\[\hbar\omega_{\bf k}(a^\dagger({\bf k})a({\bf k}) + a({\bf k})a^\dagger({\bf k})) = \tilde\Pi^\dagger({\bf k})\tilde\Pi({\bf k}) + \omega_{\bf k}^2\tilde\varphi^\dagger({\bf k})\varphi({\bf k}) \]
 
-%page 852
+Or equivalently, 
+
+\[\hat{H}_0 - \frac{1}{2}\int\frac{d^3\bf k}{(2\pi)^3}\hbar\omega_{\bf k}[a^\dagger({\bf k})a({\bf k}) + a({\bf k})a^\dagger({\bf k})] = \int\frac{d^3\bf k}{(2\pi)^3}\hbar\omega_{\bf k}a^\dagger({\bf k})a({\bf k}) + \text{const.} \]
+
+For the later usage, it is helpful to express the displacement field and its conjugate momentum field in terms of these creation and annihilation fields. 
+
+\[a({\bf k}) = \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_{\bf k}}{\hbar}}\tilde\varphi({\bf k}) + \frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde\Pi({\bf k})\right] \]
+\[a^\dagger({\bf k}) = \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_{\bf k}}{\hbar}}\tilde\varphi({\bf -k}) - \frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde\Pi^\dagger({\bf -k})\right] \]
+\[\tilde\varphi({\bf k}) = \sqrt{\frac{\hbar}{2\omega_{\bf k}}}\left[a({\bf k}) - a^\dagger({-\bf k})\right] \]
+\[\tilde\Pi({\bf k}) = -i\sqrt{\frac{\omega_{\bf k}\hbar}{2}}\left[a({\bf k}) + a^\dagger({-\bf k})\right] \]
+
+\[\begin{split}
+{\bf d}_j({\bf x}) &= \int\frac{d^3\bf k}{(2\pi)^2} {\bf d}_j({\bf k})e^{i\bf k\cdot x} = \int\frac{d^3\bf k}{(2\pi)^2}\frac{1}{\sqrt{\rho_m}}\tilde{\bf d}_j({\bf k})e^{i\bf k\cdot x}\\
+&=\int\frac{d^3\bf k}{(2\pi)^2}\frac{1}{\sqrt{\rho_m}}\frac{{\bf k}_j}{|{\bf k}|}\tilde\varphi({\bf k})e^{i\bf k\cdot x} = \int\frac{d^3\bf k}{(2\pi)^2}\frac{1}{\sqrt{\rho_m}}\frac{{\bf k}_j}{|{\bf k}|}\sqrt{\frac{\hbar}{2\omega_{\bf k}\rho_m}}\left[a({\bf k})e^{i\bf k\cdot x}-a^\dagger(-{\bf k})e^{i\bf k\cdot x}\right]\\
+&=\underset{\displaystyle\frac{1}{V}\sum_{\bf k}}{\int\frac{d^3\bf k}{(2\pi)^2}}\frac{{\bf k}_j}{|{\bf k}|}\sqrt{\frac{\hbar}{2\omega_{\bf k}\rho_m}}\left[a({\bf k})e^{i\bf k\cdot x}+a^\dagger({\bf k})e^{-i\bf k\cdot x}\right]
+\end{split}\]
+\[\begin{split}\Pi_j({\bf x}) &= \int\frac{d^3\bf k}{(2\pi)^2} {\Pi}_j({\bf k})e^{i\bf k\cdot x} = \int\frac{d^3\bf k}{(2\pi)^2}\sqrt{\rho_m}\tilde{\Pi}_j({\bf k})e^{i\bf k\cdot x}\\&=\int\frac{d^3\bf k}{(2\pi)^2}\sqrt{\rho_m}\frac{{\bf k}_j}{|{\bf k}|}\tilde\varphi({\bf k})e^{i\bf k\cdot x} = -i\int\frac{d^3\bf k}{(2\pi)^2}\sqrt{\rho_m}\frac{{\bf k}_j}{|{\bf k}|}\sqrt{\frac{\hbar\omega_{\bf k}\rho_m}{2}}\left[a({\bf k})e^{i\bf k\cdot x}+a^\dagger(-{\bf k})e^{i\bf k\cdot x}\right]\\&=-i\underset{\displaystyle\frac{1}{V}\sum_{\bf k}}{\int\frac{d^3\bf k}{(2\pi)^2}}\frac{{\bf k}_j}{|{\bf k}|}\sqrt{\frac{\hbar\omega_{\bf k}\rho_m}{2}}\left[a({\bf k})e^{i\bf k\cdot x}-a^\dagger({\bf k})e^{-i\bf k\cdot x}\right]\end{split}\]
+
+When we take a proper gauge and amplitude, 
+
+\[\begin{cases}
+ia({\bf k}) = \sqrt{V}c_{\bf k}\\
+\ \\
+-ia^\dagger({\bf k}) = \sqrt{V}c^\dagger_{\bf k}
+\end{cases}\]
+
+\[{\bf d}_j({\bf x}) = -i\sum_{\bf k}\frac{{\bf k}_j}{|{\bf k}|}\sqrt{\frac{\hbar}{2\omega_{\bf k}\rho_mV}}\left[c_{\bf k}e^{i\bf k\cdot x}-c^\dagger_{\bf k}e^{-i\bf k\cdot x}\right]\]\[\Pi_j({\bf x}) = -\sum_{\bf k}\frac{{\bf k}_j}{|{\bf k}|}\sqrt{\frac{\hbar\omega_{\bf k}\rho_m}{2V}}\left[c_{\bf k}e^{i\bf k\cdot x}+c^\dagger_{\bf k}e^{-i\bf k\cdot x}\right]\]
 
 with
 
@@ -352,8 +385,66 @@ with
 \hat{H}_0 = \sum_{\bf k}\hbar\omega_k c_{\bf k}^\dagger c_{\bf k}+\text{const}
 \end{align}
 
+and
 
-%page 858
+\[\begin{cases}
+[c_{\bf k},c^\dagger_{\bf k'}] = \frac{(2\pi)^3}{V}\delta^3({\bf k-k'}) = \delta_{\bf k,k'}\\
+\ \\
+[c_{\bf k},c_{\bf k'}] = [c^\dagger_{\bf k},c^\dagger_{\bf k'}] = 0
+\end{cases}\]
+
+To summarize, the longitudinal acoustic wave is second quantized and is described by a sum of harmonic oscillator with boson field $\{c_{\bf k},c^\dagger_{\bf k}\}$. As is clear from this formulation, the total number of the bosons or (longitudinal acoustic) phonons described how largely the elastic continuous media is deviated from the uniformly distribution of the charged ions. For example, at the zero temperature, the continuous media reduces to the uniform distribution, so that the displace field and its conjugate momentum always remain zero. This means that the total number of the phonon should be zero at the zero-temperature. At finite temperature, the positions of the ionic cores are temporally fluctuating due to the finite-temperature effect. This means that the total number of the phonon can be finite at a finite temperature. Thus, the total number of the phonon is \uline{{\bf NOT} an independent variable}, and is determined by the temperature and other variables. This situation is quite different from electrons or intrinsic boson particles whose total numbers are independent physical variable and can be in principle controlled by us. Accordingly, when it comes to the sonic description of the acoustic waves, the only independent system variables are temperature and the volume, and, we have only to consider the canonical ensemble. The partition function of the canonical ensemble is given by
+\[F = -k_BT\ln Z_f(T,V) = -k_BT\ln\trace\left[e^{-\beta\hat{H}_0}\right] = -k_BT\ln\prod_{\bf k}(1+e^{-\beta\hbar\omega_{\bf k}} + e^{-2\beta\hbar\omega_{\bf k}} + \cdots) = -k_BT\sum_{\bf k}\frac{1}{1-e^{-\beta\hbar\omega_{\bf k}}} \]
+
+The entropy as a function of temperature is given by the derivative of $F$ with respect to $T$: 
+
+\[S(T,V) = -\left(\frac{\partial F}{\partial T}\right)_V = k_B\sum_{\bf k}\frac{1}{1-e^{-\beta\hbar\omega_{\bf k}}} + k_B\sum_{\bf k}\frac{\beta\hbar\omega_{\bf k}e^{-\beta\hbar\omega_{\bf k}}}{1-e^{-\beta\hbar\omega_{\bf k}}} \]
+
+According to the thermodynamics, the free energy $F$ is given by the sum of the internal energy and minus temperature times the entropy. 
+
+\[F(T,V) = U(T,V) - TS(T,V) \]
+
+Or equivalently, 
+
+\[U(T,V) = F(T,V) +TS(T,V) = \sum_{\bf k}\frac{\hbar\omega_{\bf k}}{e^{\beta\hbar\omega_{\bf k}} - 1} \]
+
+The specific heat is given by the derivative of the internal energy $U$ with respect to the temperature 
+
+\[C_V = \left(\frac{\partial U}{\partial T}\right)_V = k_B\sum_{\bf k}\frac{({\beta\hbar\omega_{\bf k}})^2e^{\beta\hbar\omega_{\bf k}}}{[e^{\beta\hbar\omega_{\bf k}} - 1]^2} \]
+
+Now that the integrand (here) is a function of only $\omega_{\bf k}$, let us change the integral variable from the momentum ${\bf k}$ into $\omega_{\bf k}$, Since $\omega_{\bf k}$ is a linear function if $\bf k$: $\omega_{\bf k} = c\bf k$, we have
+
+\[\sum_{\bf k} = V\int\frac{d^3\bf k}{(2\pi)^3} = \frac{V}{2\pi^2}\int k^2dk = \frac{2\pi^2c^3}\int_0 \omega^2d\omega \]
+
+\begin{wrapfigure}{l}{6cm}
+\includegraphics[width = 4.5cm]{5-2-4.png}
+\end{wrapfigure}In the present model of ``elastic continuous media'', the $\omega$-integral here has no upper bound. But, in real solids, which is a discrete lattice model, the $\bf k$ integral should be taken over within the first Brillouin zone, so that the $\omega$-integral is also bounded from above at the Brillouin zone boundary. We call this upper bound of the $\omega$-integral as $\omega_D$. 
+\[\sum_{\bf k} = \frac{V}{2\pi^2c^3}\int_0^{\omega_d}\omega^2d\omega \]
+
+Since the total number of the allowed $\bf k$ points in this summation is $N$ (where $N$ is the total number of the ions), 
+\[N = \sum_{\bf k} = \frac{V}{2\pi^2c^3}\int_0^{\omega_d}\omega^2d\omega = \frac{V}{2\pi^2c^3}\frac{\omega_D^3}{3} \]
+
+From this relation, we can rewrite this into 
+
+\[\sum_{\bf k}f(\omega_{\bf k}) = \frac{V}{2\pi^2c^3}\int_0^{\omega_D} \omega^2d\omega f(\omega) = \frac{3N}{\omega_d^3}\int_0^{\omega_D} \omega^2d\omega f(\omega) \]
+
+Using this, the specific heat can be calculated as follows:
+
+\[C_V = \frac{3Nk_B}{\omega_d^3}\int_0^{\omega_D} \omega^2d\omega \frac{({\beta\hbar\omega_{\bf k}})^2e^{\beta\hbar\omega_{\bf k}}}{[e^{\beta\hbar\omega_{\bf k}} - 1]^2} = \frac{3Nk_B}{(\beta\hbar\omega_d)^3}\int_0^{\beta\hbar\omega_D} dx \frac{x^4}{[e^x - 1]^2} \]
+where $\beta\hbar\omega = x$. In the high temperature limit($\beta\to0$), this integral can be evaluated as 
+
+\[C_V \approx\frac{3Nk_B}{(\beta\hbar\omega_d)^3}\int_0^{\beta\hbar\omega_D} dx \frac{x\cancel{^4}^2}{\cancel{x^2}} = \frac{3Nk_B}{(\beta\hbar\omega_d)^3}\frac{(\beta\hbar\omega_d)^3}{3} = Nk_B \]
+
+If we further taken into account the transverse acoustic waves, the right bound side acquires another two times $Nk_B$, so that we have 
+
+\[\lim_{T\to+\infty}C_V = \lim_{T\to+\infty}\left(C_V^{longitudinal}+C_V^{transverse}\right) = Nk_B+2Nk_B = 3Nk_B \]
+
+In the low-temperature limit ($\beta\to0$) this integral can be also evaluated explicitly:
+
+\[\lim_{T\to0}C_V^{longitudinal} = \frac{3Nk_B}{(\beta\hbar\omega_D)^3}\int_0^{+\infty}\frac{x^4e^x}{[e^x-1]^2}dx = \frac{4\pi^4}{5}Nk_B\left(\frac{T}{\theta}\right)^2,\quad\quad\left(\theta \equiv \frac{\hbar\omega_D}{k_B}\right) \]
+
+which reduces to zero as a cubic function of $T$. This asymptotic behaviour is widely known as the ``Debye's $T^3$ law''. 
+
 
 \section{Electron-phonon interaction} \label{se5-2}%867
 

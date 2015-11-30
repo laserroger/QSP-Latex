@@ -9,10 +9,10 @@ For any issues about this note, contact <a href="mailto:heinsius@pku.edu.cn">Zha
 Well that's a long story; but don't worry about it, our group will still work on it to match your schedule. 
 
 #### Chap 1. All done
-#### Chap 2. All done except Section 5
+#### Chap 2. All done
 #### Chap 3. All done
 #### Chap 4. All done
-#### Chap 5. Section 1 on work 
+#### Chap 5. Section 1 done, 2 on work 
 #### Chap 6. Section 1-2 done, 3-4 lost manuscript (and frequently not taught in previous sessions)
 
 ## 1. What's this project

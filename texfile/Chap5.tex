@@ -301,17 +301,59 @@ With this in mind, we have
 
 where we define scalar-form operators
 
+\[\begin{cases}
+\tilde{\Pi}({\bf x})& = \hat{\bf k}_j\tilde{\bm \Pi}_j({\bf k})\\
+&\\
+\tilde{\varphi}({\bf k})& = \hat{\bf k}_j\tilde{\bf d}_j({\bf k})
+\end{cases} \]
+
+\[\left(\begin{split}
+\tilde{\varphi}^\dagger({\bf k})= \hat{\bf k}_j\tilde{\bf d}_j^\dagger({\bf k}) = \hat{\bf k}_j\tilde{\bf d}_j(-{\bf k}) = -\tilde{\varphi}(-\bf k)\\
+\tilde{\varphi}^\dagger({\bf k}) = \hat{\bf k}_j\tilde{\bf d}_j(-{\bf k}) = -\tilde{\Pi}({\bf k})
+\end{split}\right) \]
+
+These two operators satisfy the same commutation relation as in eq. \eqref{1.4.6}
+
+\[\begin{split}
+&[\tilde\varphi({\bf k}),\tilde\varphi({\bf k'})] = [\tilde\Pi({\bf k}),\tilde\Pi({\bf k'})] = 0\\
+&[\tilde\varphi({\bf k}),\tilde\Pi({\bf k'})] = \hat{\bf k}_j\hat{\bf k'}_m[\tilde{\bf d}_j({\bf k}),\tilde\Pi_m({+\bf k'})] = -i\hbar(2\pi)^3\delta^3({\bf k+k'})
+\end{split}\]
+
+Thus, following eq.\eqref{1.4.8}, we define the creation operator and annihilation operator as follows:
+
+\[\begin{split}
+a({\bf k}) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_k}{\hbar}}\tilde{\varphi}({\bf k})+\frac{i}{\sqrt{\omega_{\bf k}}}\tilde{\Pi}({\bf k})\right]\\
+a({\bf k})^\dagger &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_k}{\hbar}}\tilde{\varphi}^\dagger({\bf k})-\frac{i}{\sqrt{\omega_{\bf k}}}\tilde{\Pi}^\dagger({\bf k})\right]
+\end{split} \]
+
+In fact, their commutation relations become as follows
+
+\[\begin{split}
+[a({\bf k}),a({\bf k'})] &= \frac{1}{2\hbar} \left[\sqrt{\omega_{\bf k}}\tilde\varphi({\bf k}) + \frac{i}{\sqrt{\omega_{\bf k}}}\tilde\Pi({\bf k}),\sqrt{\omega_{\bf k'}}\tilde\varphi({\bf k'}) + \frac{i}{\sqrt{\omega_{\bf k'}}}\tilde\Pi({\bf k'}) \right]\\
+&=\frac{i}{2\hbar}\sqrt{\frac{{\omega_{\bf k}}}{{\omega_{\bf k'}}}}(-i\hbar)(2\pi)^3\delta^3({\bf k+k'}) - \frac{i}{2\hbar}\sqrt{\frac{{\omega_{\bf k'}}}{{\omega_{\bf k}}}}(-i\hbar)(2\pi)^3\delta^3({\bf k+k'}) = 0
+\end{split}\]
+\[[a^\dagger({\bf k}),a^\dagger({\bf k'})] = 0 \]
+\[\begin{split}
+[a({\bf k}),a^\dagger({\bf k'})]&= \frac{1}{2\hbar} \left[\sqrt{\omega_{\bf k}}\tilde\varphi({\bf k}) + \frac{i}{\sqrt{\omega_{\bf k}}}\tilde\Pi({\bf k}),\sqrt{\omega_{\bf k'}}\tilde\varphi^\dagger({\bf k'}) - \frac{i}{\sqrt{\omega_{\bf k'}}}\tilde\Pi^\dagger({\bf k'}) \right]\\
+&=\frac{-i}{2\hbar}\sqrt{\frac{{\omega_{\bf k}}}{{\omega_{\bf k'}}}}[\tilde{\varphi}({\bf k}),\tilde{\Pi}^\dagger({\bf k'})] - \frac{i}{2\hbar}\sqrt{\frac{{\omega_{\bf k'}}}{{\omega_{\bf k}}}}[\tilde{\varphi}^\dagger({\bf k}),\tilde{\Pi}({\bf k'})]\\
+&=(2\pi)^3\delta^3({\bf k-k'})
+\end{split} \]
+
+In terms of these creation and annihilation operator, the Hamiltonian is fully diagonalized: 
+
 
 
 
 %page 852
 
-%page 858
 with
 
 \begin{align}\tag{A}\label{5A}
 \hat{H}_0 = \sum_{\bf k}\hbar\omega_k c_{\bf k}^\dagger c_{\bf k}+\text{const}
 \end{align}
+
+
+%page 858
 
 \section{Electron-phonon interaction} \label{se5-2}%867
 

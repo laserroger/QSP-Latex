@@ -4,16 +4,11 @@
 
 For any issues about this note, contact <a href="mailto:heinsius@pku.edu.cn">Zhao-Yu Han</a>
 
-## 0. Why is this unfinished & what's current status?
+## 0. What's current status? I heard that the manuscipt is unfininshed. 
 
-Well that's a long story; but don't worry about it, our group will still work on it to match your schedule. 
+Well, we have done all the class material of this course (not include section 3 & 4 of Chapter 6 which are not frequently in previous sessions). The current version number is 1.1. 
 
-#### Chap 1. All done
-#### Chap 2. All done
-#### Chap 3. All done
-#### Chap 4. All done
-#### Chap 5. Section 1 done, 2 on work 
-#### Chap 6. Section 1-2 done, 3-4 lost manuscript (and frequently not taught in previous sessions)
+However, there numerous typos left for check. Contact <a href="mailto:heinsius@pku.edu.cn">Zhao-Yu Han</a> if you found any problems. 
 
 ## 1. What's this project
 

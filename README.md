@@ -6,7 +6,7 @@ For any issues about this note, contact <a href="mailto:heinsius@pku.edu.cn">Zha
 
 ## 0. What's current status? I heard that the manuscipt is unfininshed. 
 
-Well, we have done all the class material of this course (not include section 3 & 4 of Chapter 6 which are not frequently in previous sessions). The current version number is 1.1. 
+Well, we have done all the class material of this course (not include section 3 & 4 of Chapter 6 which are not frequently taught in previous sessions). The current version number is 1.1. 
 
 However, there numerous typos left for check. Contact <a href="mailto:heinsius@pku.edu.cn">Zhao-Yu Han</a> if you found any problems. 
 

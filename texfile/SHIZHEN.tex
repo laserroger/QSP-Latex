@@ -24,7 +24,7 @@ Within the self-consistent Hatree-Fock approximation, the Dyson equation is give
 G(x,y)&= G^{0}(x,y) + \int \mathrm{d}^{4}x_{1} \mathrm{d}^{4}x_{1}^{'} \ G^{0}(x,x_{1}) \Sigma^{\bigstar}% a star character
 (x_{1},x_{1}^{'})G(x_{1}^{'},y)\\
 \hbar \Sigma^{\bigstar}
-(x_{1},x_{1}^{'})&= -\imath \delta(t_{1}-t_{1}^{'}) \times 
+(x_{1},x_{1}^{'})&= -i \delta(t_{1}-t_{1}^{'}) \times 
 \left[ \delta(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \ 2 \int \mathrm{d}^{3}x_{2} \left( \begin{split} &G(\mathbf{x}_{2},t_{2};\mathbf{x}_{2},t_{2}+0) V(\mathbf{x}_{1}-\mathbf{x}_{2}) 
 \\- &G(\mathbf{x}_{1},t_{1};\mathbf{x}_{1}^{'},t_{1}+0) V(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \end{split}\right)
 \right]
@@ -33,51 +33,51 @@ Where the factor $2$ comes from the spin summations.
 
 Now, it is convenient to use a Fourier representation.
 \[ \begin{split}
-G(\mathbf{x},t;\mathbf{x}^{'},t^{'})&=\frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{-\imath \omega (t-t^{'})} G(\mathbf{x},\mathbf{x}^{'};\omega)\\
-G^{0}(\mathbf{x},t;\mathbf{x}^{'},t^{'})&=\frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{-\imath \omega (t-t^{'})} G^{0}(\mathbf{x},\mathbf{x}^{'};\omega)\\
+G(\mathbf{x},t;\mathbf{x}^{'},t^{'})&=\frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{-i \omega (t-t^{'})} G(\mathbf{x},\mathbf{x}^{'};\omega)\\
+G^{0}(\mathbf{x},t;\mathbf{x}^{'},t^{'})&=\frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{-i \omega (t-t^{'})} G^{0}(\mathbf{x},\mathbf{x}^{'};\omega)\\
 \Sigma^{\bigstar}(\mathbf{x},t;\mathbf{x}^{'},t^{'})&=
 \delta(t-t^{'})\Sigma^{\bigstar}(\mathbf{x},\mathbf{x}^{'})\\
-&=\frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{-\imath \omega (t-t^{'})}\Sigma^{\bigstar}(\mathbf{x},\mathbf{x}^{'})
+&=\frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{-i \omega (t-t^{'})}\Sigma^{\bigstar}(\mathbf{x},\mathbf{x}^{'})
 \end{split} \]
 \begin{equation}
 G(\mathbf{x},\mathbf{y};\omega)=G^{0}(\mathbf{x},\mathbf{y};\omega)+\int \mathrm{d}^{3}\mathbf{x}_{1} \mathrm{d}^{3}\mathbf{x}^{'}_{1} \ G^{0}(\mathbf{x},\mathbf{x}_{1};\omega) \times \Sigma^{\bigstar}(\mathbf{x}_{1},\mathbf{x}^{'}_{1})G(\mathbf{x}^{'}_{1},\mathbf{y},\omega)
 \label{Eqs2.6.1}\end{equation}
 \begin{equation}\begin{split}
 \hbar\Sigma^{\bigstar}(\mathbf{x}_{1},\mathbf{x}^{'}_{1})
-=&-\imath 2 \delta(\mathbf{x}_{1}-\mathbf{x}^{'}_{1}) \int \mathrm{d}^{3}\mathbf{x}_{2} \ V(\mathbf{x}_{1}-\mathbf{x}_{2}) \times \frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{\imath \omega 0 t} G(\mathbf{x}_{2},\mathbf{x}_{2};\omega)\\
-&+\imath V(\mathbf{x}_{1}-\mathbf{x}^{'}_{1}) \frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{\imath \omega 0 t} G(\mathbf{x}_{1},\mathbf{x}_{1}^{'};\omega)
+=&-i 2 \delta(\mathbf{x}_{1}-\mathbf{x}^{'}_{1}) \int \mathrm{d}^{3}\mathbf{x}_{2} \ V(\mathbf{x}_{1}-\mathbf{x}_{2}) \times \frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{i \omega 0 t} G(\mathbf{x}_{2},\mathbf{x}_{2};\omega)\\
+&+i V(\mathbf{x}_{1}-\mathbf{x}^{'}_{1}) \frac{1}{2\pi}\int \mathrm{d} \omega \mathrm{e}^{i \omega 0 t} G(\mathbf{x}_{1},\mathbf{x}_{1}^{'};\omega)
 \end{split}\label{Eqs2.6.2}\end{equation}
 Let us also introduce the orthonormal eigenfunctions of $H_{0}$.
 \[ H_{0} \ \varphi_{j}^{0}(\mathbf{x}) \equiv \left[ -\frac{\hbar^{2}\nabla^{2}}{2m} + U(\mathbf{x}) \right]\varphi_{j}^{0}(\mathbf{x}) = \epsilon_{j}\varphi_{j}^{0}(\mathbf{x}) \]
 In terms of  this eigenfunctions, the field operator in the interaction representation can be expanded as
 \[ \left \{ \begin{split}
-\psi(\mathbf{x},t) &= \sum_{j} \varphi_{j}(\mathbf{x})c_{j}\mathrm{e}^{-\imath\frac{\epsilon_{j}t}{\hbar}}\\
-\psi^{\dagger}(\mathbf{x},t) &= \sum_{j} \varphi^{*}_{j}(\mathbf{x})c_{j}^{\dagger}\mathrm{e}^{+\imath\frac{\epsilon_{j}t}{\hbar}}
+\psi(\mathbf{x},t) &= \sum_{j} \varphi_{j}(\mathbf{x})c_{j}\mathrm{e}^{-i\frac{\epsilon_{j}t}{\hbar}}\\
+\psi^{\dagger}(\mathbf{x},t) &= \sum_{j} \varphi^{*}_{j}(\mathbf{x})c_{j}^{\dagger}\mathrm{e}^{+i\frac{\epsilon_{j}t}{\hbar}}
 \end{split} \right. \]
-where we used \[\mathrm{e}^{+\imath\frac{H_{0}t}{\hbar}}c_{j}\mathrm{e}^{-\imath\frac{H_{0}t}{\hbar}}=\mathrm{e}^{-\imath\frac{\epsilon_{j}t}{\hbar}}c_{j}\]
+where we used \[\mathrm{e}^{+i\frac{H_{0}t}{\hbar}}c_{j}\mathrm{e}^{-i\frac{H_{0}t}{\hbar}}=\mathrm{e}^{-i\frac{\epsilon_{j}t}{\hbar}}c_{j}\]
 In terms of them, the non-interacting Green's function can be calculated as
 \[ \begin{split}
-\imath G^{0}(\mathbf{x},t;\mathbf{x}^{'},t^{'})=& \langle \Phi_{0} | \Gamma [ \psi_{I}(\mathbf{x},t) \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) ] | \Phi_{0} \rangle\\
+i G^{0}(\mathbf{x},t;\mathbf{x}^{'},t^{'})=& \langle \Phi_{0} | \Gamma [ \psi_{I}(\mathbf{x},t) \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) ] | \Phi_{0} \rangle\\
 =& \  \theta(t-t^{'}) \  \langle \Phi_{0} | \psi_{I}(\mathbf{x},t) \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) | \Phi_{0} \rangle \\
 &-\theta(t^{'}-t) \  \langle \Phi_{0} | \psi_{I}^{\dagger}(\mathbf{x}^{'},t^{'}) \psi_{I}(\mathbf{x},t) | \Phi_{0} \rangle \\
-=& \ \theta(t-t^{'}) \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-\imath\frac{\epsilon_{j}}{\hbar}(t-t^{'})}
+=& \ \theta(t-t^{'}) \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-i\frac{\epsilon_{j}}{\hbar}(t-t^{'})}
 \times \langle \Phi_{0} | c_{j}c_{j}^{\dagger} | \Phi_{0} \rangle \\
-&-\theta(t^{'}-t) \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-\imath\frac{\epsilon_{j}}{\hbar}(t-t^{'})}
+&-\theta(t^{'}-t) \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-i\frac{\epsilon_{j}}{\hbar}(t-t^{'})}
 \times \langle \Phi_{0} | c_{j}^{\dagger}c_{j} | \Phi_{0} \rangle\\
-=&\sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-\imath\frac{\epsilon_{j}}{\hbar}(t-t^{'})} \times \left \{ \theta(t-t^{'})\langle \Phi_{0} | c_{j}c_{j}^{\dagger} | \Phi_{0} \rangle
+=&\sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-i\frac{\epsilon_{j}}{\hbar}(t-t^{'})} \times \left \{ \theta(t-t^{'})\langle \Phi_{0} | c_{j}c_{j}^{\dagger} | \Phi_{0} \rangle
 -\theta(t^{'}-t)\langle \Phi_{0} | c_{j}^{\dagger}c_{j} | \Phi_{0} \rangle \right \}\\
-=& \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-\imath\frac{\epsilon_{j}}{\hbar}(t-t^{'})} \times \left \{ \theta(t-t^{'})\theta(\epsilon_{j}^{0}-\epsilon_{F}^{0}) - \theta(t^{'}-t)\theta(-\epsilon_{j}^{0}+\epsilon_{F}^{0}) \right \}
+=& \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \mathrm{e}^{-i\frac{\epsilon_{j}}{\hbar}(t-t^{'})} \times \left \{ \theta(t-t^{'})\theta(\epsilon_{j}^{0}-\epsilon_{F}^{0}) - \theta(t^{'}-t)\theta(-\epsilon_{j}^{0}+\epsilon_{F}^{0}) \right \}
 \end{split} \]
 where $\epsilon_{F}^{0}$ is the energy of the highest filled state.
 
 The Fourier transformation leads to
 \begin{equation}\label{Eqs2.6.3}
 G^{0}(\mathbf{x},\mathbf{x}^{'};\omega) = \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{x}^{'}) \times \left[
-\frac{\theta(\epsilon_{j}^{0}-\epsilon_{F}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}+\imath\eta} +\frac{\theta(\epsilon_{F}^{0}-\epsilon_{j}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}-\imath\eta}
+\frac{\theta(\epsilon_{j}^{0}-\epsilon_{F}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}+i\eta} +\frac{\theta(\epsilon_{F}^{0}-\epsilon_{j}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}-i\eta}
  \right]
 \end{equation}
 The particle density at $\mathbf{x}$ in the unperturbed ground state is estimated as
-\[ \begin{split} n^{0}(\mathbf{x}) =& -\imath \  2 \ \frac{1}{2\pi} \int \mathrm{d} \omega \mathrm{e}^{\imath\omega 0 t} G^{0}(\mathbf{x},\mathbf{x};\omega)\\
+\[ \begin{split} n^{0}(\mathbf{x}) =& -i \  2 \ \frac{1}{2\pi} \int \mathrm{d} \omega \mathrm{e}^{i\omega 0 t} G^{0}(\mathbf{x},\mathbf{x};\omega)\\
 =& 2 \sum_{j} |\varphi_{j}^{0}(\mathbf{x})|^{2} \theta(\epsilon_{F}^{0}-\epsilon_{j}^{0})
 \end{split}\]
 where the factor 2 comes from spin.
@@ -93,7 +93,7 @@ To solve these coupled equations in favor for G, let us apply a following differ
 If we apply this onto $G^{0}(\mathbf{x},\mathbf{y};\omega)$, we obtain the delta function in space,
 \[\begin{split} L_{1} \ G^{0}(\mathbf{x},\mathbf{y};\omega) =& \sum_{j}(\hbar\omega - \epsilon_{j}^{0})\varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{y})
  \times \left[
-\frac{\theta(\epsilon_{j}^{0}-\epsilon_{F}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}+\imath\eta} +\frac{\theta(\epsilon_{F}^{0}-\epsilon_{j}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}-\imath\eta}
+\frac{\theta(\epsilon_{j}^{0}-\epsilon_{F}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}+i\eta} +\frac{\theta(\epsilon_{F}^{0}-\epsilon_{j}^{0})}{\omega-\hbar^{-1}\epsilon_{j}^{0}-i\eta}
  \right]\\
 =& \hbar \sum_{j} \varphi_{j}^{0}(\mathbf{x})\varphi_{j}^{0*}(\mathbf{y}) = \hbar \delta^{3}(\mathbf{x}-\mathbf{y})
 \end{split} \]
@@ -109,15 +109,15 @@ Generally, such a linearized integral equation can be solved in terms of followi
  \left[ -\frac{\hbar^{2}\nabla^{2}_{\mathbf{x}}}{2m} + V(\mathbf{x}) \right]\varphi_{j}(\mathbf{x})+\int \mathrm{d}^{3} \mathbf{x}^{'} \hbar \Sigma^{\bigstar}(\mathbf{x},\mathbf{x}^{'})\varphi_{j}(\mathbf{x}^{'})=\epsilon_{j}\varphi_{j}(\mathbf{x}) \end{equation}
 
 \[ \begin{split} iG_{\alpha\beta}(\mathbf{x},t;\mathbf{x}^{'},t^{'}) =
- \sum_{n} \{ &\theta(t-t^{'}) \mathrm{e}^{\frac{-\imath(E_{n}-E)(t-t^{'})}{\hbar}} \times \langle \Psi_{0} | \psi_{\alpha}(\mathbf{x}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{0} \rangle  \\
-- \ &\theta(t^{'}-t) \mathrm{e}^{\frac{-\imath(E_{n}-E)(t-t^{'})}{\hbar}} \times \langle \Psi_{0} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\alpha}(\mathbf{x}) | \Psi_{0} \rangle \}
+ \sum_{n} \{ &\theta(t-t^{'}) \mathrm{e}^{\frac{-i(E_{n}-E)(t-t^{'})}{\hbar}} \times \langle \Psi_{0} | \psi_{\alpha}(\mathbf{x}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{0} \rangle  \\
+- \ &\theta(t^{'}-t) \mathrm{e}^{\frac{-i(E_{n}-E)(t-t^{'})}{\hbar}} \times \langle \Psi_{0} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\alpha}(\mathbf{x}) | \Psi_{0} \rangle \}
 \end{split} \]
 \[ \begin{split} G_{\alpha\beta}(\mathbf{x},\mathbf{x}^{'};\omega) = \sum_{n} [ 
-&\frac{\langle \Psi_{0} | \psi_{\alpha}(\mathbf{x}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{0} \rangle}{\omega-\hbar^{-1}(E_{n}-E)+\imath\eta} \\
-+&\frac{\langle \Psi_{0} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\alpha}(\mathbf{x}) | \Psi_{0} \rangle}{\omega-\hbar^{-1}(E_{n}-E)-\imath\eta} ]
+&\frac{\langle \Psi_{0} | \psi_{\alpha}(\mathbf{x}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{0} \rangle}{\omega-\hbar^{-1}(E_{n}-E)+i\eta} \\
++&\frac{\langle \Psi_{0} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\alpha}(\mathbf{x}) | \Psi_{0} \rangle}{\omega-\hbar^{-1}(E_{n}-E)-i\eta} ]
 \end{split} \]
-\[ \frac{1}{2\pi} \int_{-\infty}^{+\infty} \mathrm{d}\omega G_{\alpha\beta}(\mathbf{x},\mathbf{x}^{'};\omega)\mathrm{e}^{\imath\omega 0 t} = \imath \sum_{n} \langle \Psi_{0} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\alpha}(\mathbf{x}) | \Psi_{0} \rangle \]
-\[ {\left ( \imath \int_{-\infty}^{+\infty} \mathrm{d} \omega G(\mathbf{x},\mathbf{x}^{'};\omega)\mathrm{e}^{\imath \omega 0 t} \right )}^{*} = \imath \int_{-\infty}^{+\infty} \mathrm{d} \omega G(\mathbf{x}^{'},\mathbf{x};\omega)\mathrm{e}^{\imath \omega 0 t} \]
+\[ \frac{1}{2\pi} \int_{-\infty}^{+\infty} \mathrm{d}\omega G_{\alpha\beta}(\mathbf{x},\mathbf{x}^{'};\omega)\mathrm{e}^{i\omega 0 t} = i \sum_{n} \langle \Psi_{0} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\alpha}(\mathbf{x}) | \Psi_{0} \rangle \]
+\[ {\left ( i \int_{-\infty}^{+\infty} \mathrm{d} \omega G(\mathbf{x},\mathbf{x}^{'};\omega)\mathrm{e}^{i \omega 0 t} \right )}^{*} = i \int_{-\infty}^{+\infty} \mathrm{d} \omega G(\mathbf{x}^{'},\mathbf{x};\omega)\mathrm{e}^{i \omega 0 t} \]
 where $\hbar\Sigma^\bigstar$ play role of a static but no-local potential.
 
 Since $\Sigma^\bigstar$ is hermitian,\[\Sigma^{\bigstar*}(\mathbf{x},\mathbf{x}^{'}) = \Sigma^\bigstar(\mathbf{x}^{'},\mathbf{x}) \]
@@ -130,15 +130,15 @@ In terms of this eigenstates, the Green's function satisfying eq.(\ref{Eqs2.6.4}
 \[ G(\mathbf{x},\mathbf{y};\omega) \sim \sum_j \varphi_j(\mathbf{x})\varphi_j^*(\mathbf{y}) \cdot \frac{1}{\omega-\hbar^{-1}\epsilon_j} \]
 
 
-According to eq.(\ref{Eqs2.3.2.a}), the particle density and total number of the particles are given by the frequency integral of this Green's function.
-\[ n(\mathbf{x}) = - \imath \ 2 \cdot \frac{1}{2\pi} \int_{-\infty}^{+\infty} \mathrm{d} \omega \mathrm{e}^{\imath \omega  0 t} G(\mathbf{x},\mathbf{x};\omega) \]
-\[ N = -\imath \ 2 \cdot \frac{1}{2\pi} \int \mathrm{d}^3 \mathbf{x} \int_{-\infty}^{+\infty} \mathrm{d} \omega \mathrm{e}^{\imath \omega  0 t} G(\mathbf{x},\mathbf{x};\omega) \]
+According to eq.(\ref{2.3.2}), the particle density and total number of the particles are given by the frequency integral of this Green's function.
+\[ n(\mathbf{x}) = - i \ 2 \cdot \frac{1}{2\pi} \int_{-\infty}^{+\infty} \mathrm{d} \omega \mathrm{e}^{i \omega  0 t} G(\mathbf{x},\mathbf{x};\omega) \]
+\[ N = -i \ 2 \cdot \frac{1}{2\pi} \int \mathrm{d}^3 \mathbf{x} \int_{-\infty}^{+\infty} \mathrm{d} \omega \mathrm{e}^{i \omega  0 t} G(\mathbf{x},\mathbf{x};\omega) \]
 
 
 But, since the perturbation $\hat{H}_1$ conserves the total number of particles, the number of particles thus calculated should be equal to the number of particles in the unperturbed ground state. To make it possible, the denominator in the r.h.s. of this equation should acquire an infinitesimally small imaginary part like this:
 \begin{equation}\label{Eqs2.6.6}
 G(\mathbf{x},\mathbf{y};\omega) = \sum_j \varphi_j(\mathbf{x}) \varphi_j^* (\mathbf{y})
-\left[ \frac{\theta(\epsilon_j - \epsilon_F)}{\omega - \hbar^{-1}\epsilon_j + \imath \eta} + \frac{\theta(\epsilon_F - \epsilon_j)}{\omega - \hbar^{-1}\epsilon_j - \imath \eta} \right]   \quad (\eta > 0)
+\left[ \frac{\theta(\epsilon_j - \epsilon_F)}{\omega - \hbar^{-1}\epsilon_j + i \eta} + \frac{\theta(\epsilon_F - \epsilon_j)}{\omega - \hbar^{-1}\epsilon_j - i \eta} \right]   \quad (\eta > 0)
 \end{equation}
 $\epsilon_F $ here denote the energy of the highest filled state of these orthonormal eigenstates, which satisfies
 \[ \sum_j \theta(\epsilon_F - \epsilon_j) = N \equiv \sum_j \theta(\epsilon_F^0 - \epsilon_j^0) \]
@@ -200,19 +200,19 @@ For the uniform electron gas case, these four term exactly reduce to zero.
 For example, consider this diagram.
 
 The self energy part can be calculated as this.
-\[ \begin{split} & {\left(\frac{\imath}{\hbar} \right)}^2 \frac{1}{\left( 2\pi \right)^8} \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d}\epsilon \int \mathrm{d}^3 \mathbf{q}^{'} \int \mathrm{d} \epsilon^{'} \\
-& \  \times \left\{ V(\mathbf{q}-\mathbf{q}^{'})V(\mathbf{k}-\mathbf{q})\mathrm{e}^{\imath \epsilon^{'} 0 t} G_0(\mathbf{q}^{'},\epsilon^{'}) \times \left[ G_0(\mathbf{q},\epsilon) \right]^2 \right \} \end{split} \]
+\[ \begin{split} & {\left(\frac{i}{\hbar} \right)}^2 \frac{1}{\left( 2\pi \right)^8} \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d}\epsilon \int \mathrm{d}^3 \mathbf{q}^{'} \int \mathrm{d} \epsilon^{'} \\
+& \  \times \left\{ V(\mathbf{q}-\mathbf{q}^{'})V(\mathbf{k}-\mathbf{q})\mathrm{e}^{i \epsilon^{'} 0 t} G_0(\mathbf{q}^{'},\epsilon^{'}) \times \left[ G_0(\mathbf{q},\epsilon) \right]^2 \right \} \end{split} \]
 
 where
-\[ G_0(\mathbf{q},\epsilon) \equiv \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon - \epsilon_{\mathbf{q}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon - \epsilon_{\mathbf{q}}-\imath \eta} \]
+\[ G_0(\mathbf{q},\epsilon) \equiv \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon - \epsilon_{\mathbf{q}}+i \eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon - \epsilon_{\mathbf{q}}-i \eta} \]
 
 Putting this into here, this part becomes like this:
-\[ \int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \left[ \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}-\imath \eta} \right]^2 \]
+\[ \int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \left[ \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}+i \eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}-i \eta} \right]^2 \]
 
 Since $$\theta(|\mathbf{q}|-k_F)\theta(k_F-|\mathbf{q}|) = 0$$
 
  the cross term vanishes, so that we have
-\[ \int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \left[ \frac{\theta(|\mathbf{q}|-k_F)}{\left(\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}+\imath \eta\right)^2} + \frac{\theta(k_F-|\mathbf{q}|)}{\left(\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}-\imath \eta\right)^2} \right] \]
+\[ \int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \left[ \frac{\theta(|\mathbf{q}|-k_F)}{\left(\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}+i \eta\right)^2} + \frac{\theta(k_F-|\mathbf{q}|)}{\left(\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}-i \eta\right)^2} \right] \]
 
 Now we can integrate this, by closing the contour either in the upper half plane or in the lower half plane(By using the method of contour integration).
 
@@ -224,50 +224,50 @@ Therefore, this contribution always reduce to zero. Similarly, we can immediatel
 \label{Fig2.7.5} \includegraphics[width=4cm]{2-7-5.png}
 \end{wrapfigure}
 Thus, we have only to calculate these two contributions,
-\[ \begin{split} &- \left( \frac{\imath}{\hbar}\right)^2 \frac{1}{\left( 2\pi \right)^8} \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d}\epsilon \int \mathrm{d}^3 \mathbf{q}^{'} \int \mathrm{d} \epsilon^{'} \\
+\[ \begin{split} &- \left( \frac{i}{\hbar}\right)^2 \frac{1}{\left( 2\pi \right)^8} \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d}\epsilon \int \mathrm{d}^3 \mathbf{q}^{'} \int \mathrm{d} \epsilon^{'} \\
 &\times \left\{ \ V^2(\mathbf{q})G_0(\mathbf{k}-\mathbf{q},\omega-\epsilon) \times G_0(\mathbf{q} + \mathbf{q}^{'}, \epsilon + \epsilon^{'}) G_0(\mathbf{q}^{'},\mathbf{\epsilon}^{'}) \right\} \end{split} \]
 
 %Let me try this first.
 
 Let me first integrate over these internal frequencies by using the method of contour integration.
 \[ \begin{split} \int \frac{\mathrm{d}\epsilon}{2\pi} \int \frac{\mathrm{d}\epsilon^{'}}{2\pi}
-&\left[ \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}-\imath \eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}+\imath \eta} + \frac{ \theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}-\imath \eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}^{'}|-k_F)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}^{'}|)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}-\imath \eta} \right]
+&\left[ \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}+i \eta} + \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}-i \eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}+i \eta} + \frac{ \theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}-i \eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}^{'}|-k_F)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}+i \eta} + \frac{\theta(k_F-|\mathbf{q}^{'}|)}{\epsilon^{'} - \epsilon_{\mathbf{q}^{'}}-i \eta} \right]
 \end{split} \]
 I will first integrate over $\epsilon$, whose integrand is the product between these two:
-\[\left[ \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}-\imath \eta} \right]
-\times \left[ \frac{\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}+\imath \eta} + \frac{ \theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}-\imath \eta} \right] \]
+\[\left[ \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}+i \eta} + \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}}-i \eta} \right]
+\times \left[ \frac{\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}+i \eta} + \frac{ \theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}}-i \eta} \right] \]
 
 From this product, we have four terms.
 
 But these two reduce to zero, when the contour integration over $\epsilon$ is carried out.
-\[ \frac{\ldots}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} \pm \imath \eta} \cdot \frac{ \ldots}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} \mp \imath \eta} \]
+\[ \frac{\ldots}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} \pm i \eta} \cdot \frac{ \ldots}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} \mp i \eta} \]
 
 Namely these two have a pole in the upper half plane, while these two have a pole in the lower half plane. Thus, for this term, we can close the contour in the lower half plane, while for this term, we can close the contour in the upper half plane, which reduce them to zero under the integration.
 
 On the one hand, these combinations always have a pole both in the upper half plane and in the lower half plane.
-\[ \frac{\ldots}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} \pm \imath \eta} \cdot \frac{ \ldots}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} \pm \imath \eta} \]
+\[ \frac{\ldots}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} \pm i \eta} \cdot \frac{ \ldots}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} \pm i \eta} \]
 
 Thus, irrespective of how the contour is closed, these two combinations give finite contribution.
 \[\begin{split} \int \frac{\mathrm{d} \epsilon}{2\pi}
-&\left \{ \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} + \imath \eta} \cdot \frac{ \theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} + \imath \eta}
-+ \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} - \imath \eta} \cdot \frac{ \theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} - \imath \eta} \right \}\\
-& = -\imath \cdot \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}} + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} + 2 \imath \eta }
-+\imath \cdot \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)\theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}} + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} - 2 \imath \eta }
+&\left \{ \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} + i \eta} \cdot \frac{ \theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} + i \eta}
++ \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)}{\omega - \epsilon - \epsilon_{\mathbf{k}-\mathbf{q}} - i \eta} \cdot \frac{ \theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} - i \eta} \right \}\\
+& = -i \cdot \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}} + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} + 2 i \eta }
++i \cdot \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)\theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}} + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} - 2 i \eta }
 \end{split} \]
 
 Let me next integrate over $\epsilon^{'}$, by subtituting this into here. From this product, we again have four terms.
 
 Now these two have a pole in the upper half plane, while these two have a pole in the lower half plane. Due to the same reason, only these two combinations give us a finite contribution.
-\[\begin{split}  (-\imath) \{
-&\int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \  \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon^{'} + \omega - \epsilon_{\mathbf{k}-\mathbf{q}} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} + 2 \imath \eta }
-\cdot \frac{\theta(k_F-|\mathbf{q}^{'}|)}{\epsilon^{'}-\epsilon_{\mathbf{q}^{'}}-\imath \eta} \\
-&- \int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \ \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)\theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon^{'} + \omega - \epsilon_{\mathbf{k}-\mathbf{q}} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} - 2 \imath \eta }
-\cdot \frac{\theta(|\mathbf{q}^{'}|-k_F)}{\epsilon^{'}-\epsilon_{\mathbf{q}^{'}}+\imath \eta} \} \\
-=(-\imath) \{
-&\imath \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)\theta(k_F-|\mathbf{q}^{'}|)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}}-\epsilon_{\mathbf{q}+\mathbf{q}^{'}}+\epsilon_{\mathbf{q}^{'}}+3\imath \eta}\\
-&+\imath \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)\theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)\theta(|\mathbf{q}^{'}|-k_F)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}}-\epsilon_{\mathbf{q}+\mathbf{q}^{'}}+\epsilon_{\mathbf{q}^{'}}-3\imath \eta}
+\[\begin{split}  (-i) \{
+&\int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \  \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)}{\epsilon^{'} + \omega - \epsilon_{\mathbf{k}-\mathbf{q}} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} + 2 i \eta }
+\cdot \frac{\theta(k_F-|\mathbf{q}^{'}|)}{\epsilon^{'}-\epsilon_{\mathbf{q}^{'}}-i \eta} \\
+&- \int \frac{\mathrm{d}\epsilon^{'}}{2\pi} \ \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)\theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\epsilon^{'} + \omega - \epsilon_{\mathbf{k}-\mathbf{q}} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} - 2 i \eta }
+\cdot \frac{\theta(|\mathbf{q}^{'}|-k_F)}{\epsilon^{'}-\epsilon_{\mathbf{q}^{'}}+i \eta} \} \\
+=(-i) \{
+&i \frac{\theta(|\mathbf{k}-\mathbf{q}|-k_F)\theta(|\mathbf{q}+\mathbf{q}^{'}|-k_F)\theta(k_F-|\mathbf{q}^{'}|)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}}-\epsilon_{\mathbf{q}+\mathbf{q}^{'}}+\epsilon_{\mathbf{q}^{'}}+3i \eta}\\
+&+i \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)\theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)\theta(|\mathbf{q}^{'}|-k_F)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}}-\epsilon_{\mathbf{q}+\mathbf{q}^{'}}+\epsilon_{\mathbf{q}^{'}}-3i \eta}
 \}
  \end{split}\]
 
@@ -288,26 +288,26 @@ By substituting this into the original expression we obtain this:
 \label{Fig2.7.7} \includegraphics[width=3cm]{2-7-7.png}
 \end{wrapfigure}
 Similarly we can calculate the other 2nd order contribution to the proper self-energy.
-\[ \begin{split} & \left(\frac{\imath}{\hbar}\right)^2 \frac{1}{(2\pi)^8} \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d} \epsilon \int \mathrm{d}^3 \mathbf{q}^{'} \int \mathrm{d} \epsilon^{'}  \\
+\[ \begin{split} & \left(\frac{i}{\hbar}\right)^2 \frac{1}{(2\pi)^8} \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d} \epsilon \int \mathrm{d}^3 \mathbf{q}^{'} \int \mathrm{d} \epsilon^{'}  \\
 & \times \left\{ V(\mathbf{q}^{'})V(-\mathbf{q} + \mathbf{q}^{'}+\mathbf{k})
 \times G_0(\mathbf{q}-\mathbf{q}^{'},\epsilon-\epsilon^{'})G_0(\mathbf{q},\epsilon)G_0(\mathbf{q}^{'}+\mathbf{k},\epsilon^{'}+\omega) \right\} \end{split}\]
 \begin{center}---------------------------------------------\end{center}
 \[ \begin{split}
 &\quad \begin{split} \int \frac{\mathrm{d}\epsilon}{2\pi}\int \frac{\mathrm{d}\epsilon^{'}}{2\pi}
-& \left[ \frac{\theta(|\mathbf{q}-\mathbf{q}^{'}|-k_F)}{\epsilon - \epsilon^{'}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}+\imath\eta} + \frac{\theta(k_F-|\mathbf{q}-\mathbf{q}^{'}|)}{\epsilon - \epsilon^{'}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}-\imath\eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon -\epsilon_{\mathbf{q}}+\imath\eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon -\epsilon_{\mathbf{q}}-\imath\eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}^{'}+\mathbf{k}|-k_F)}{\epsilon^{'}+\omega -\epsilon_{\mathbf{q}^{'}+\mathbf{k}}+\imath\eta} + \frac{\theta(k_F-|\mathbf{q}^{'}+\mathbf{k}|)}{\epsilon^{'}+\omega -\epsilon_{\mathbf{q}^{'}+\mathbf{k}}-\imath\eta} \right]
+& \left[ \frac{\theta(|\mathbf{q}-\mathbf{q}^{'}|-k_F)}{\epsilon - \epsilon^{'}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}+i\eta} + \frac{\theta(k_F-|\mathbf{q}-\mathbf{q}^{'}|)}{\epsilon - \epsilon^{'}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}-i\eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon -\epsilon_{\mathbf{q}}+i\eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon -\epsilon_{\mathbf{q}}-i\eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}^{'}+\mathbf{k}|-k_F)}{\epsilon^{'}+\omega -\epsilon_{\mathbf{q}^{'}+\mathbf{k}}+i\eta} + \frac{\theta(k_F-|\mathbf{q}^{'}+\mathbf{k}|)}{\epsilon^{'}+\omega -\epsilon_{\mathbf{q}^{'}+\mathbf{k}}-i\eta} \right]
 \end{split}
 \\
 & \begin{split}=
-\int \frac{\mathrm{d}\epsilon}{2\pi} \{ & \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon -\epsilon_{\mathbf{q}}+\imath\eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon -\epsilon_{\mathbf{q}}-\imath\eta} \} \\
-\times(-\imath)\{ & \frac{\theta(|\mathbf{q}-\mathbf{q}^{'}|-k_F)\theta(|\mathbf{q}^{'}+\mathbf{k}|-k_F)}{\epsilon + \omega - \epsilon_{\mathbf{q}^{'}+\mathbf{k}} - \epsilon_{\mathbf{q}-\mathbf{q}^{'}} + 2 \imath \eta }\\
-&+\frac{\theta(k_F-|\mathbf{q}-\mathbf{q}^{'}|)\theta(k_F-|\mathbf{q}^{'}+\mathbf{k}|)}{\epsilon + \omega - \epsilon_{\mathbf{q}^{'}+\mathbf{k}} - \epsilon_{\mathbf{q}-\mathbf{q}^{'}} - 2 \imath \eta }
+\int \frac{\mathrm{d}\epsilon}{2\pi} \{ & \frac{\theta(|\mathbf{q}|-k_F)}{\epsilon -\epsilon_{\mathbf{q}}+i\eta} + \frac{\theta(k_F-|\mathbf{q}|)}{\epsilon -\epsilon_{\mathbf{q}}-i\eta} \} \\
+\times(-i)\{ & \frac{\theta(|\mathbf{q}-\mathbf{q}^{'}|-k_F)\theta(|\mathbf{q}^{'}+\mathbf{k}|-k_F)}{\epsilon + \omega - \epsilon_{\mathbf{q}^{'}+\mathbf{k}} - \epsilon_{\mathbf{q}-\mathbf{q}^{'}} + 2 i \eta }\\
+&+\frac{\theta(k_F-|\mathbf{q}-\mathbf{q}^{'}|)\theta(k_F-|\mathbf{q}^{'}+\mathbf{k}|)}{\epsilon + \omega - \epsilon_{\mathbf{q}^{'}+\mathbf{k}} - \epsilon_{\mathbf{q}-\mathbf{q}^{'}} - 2 i \eta }
 \}
 \end{split}\\
 & \begin{split}=  \ - \{&
-\frac{\theta(|\mathbf{q}|-k_F)\theta(k_F-|\mathbf{q}-\mathbf{q}^{'}|)\theta(k_F-|\mathbf{q}^{'}+\mathbf{k}|)}{\omega+\epsilon_{\mathbf{q}} - \epsilon_{\mathbf{q}^{'}+\mathbf{k}}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}-3\imath \eta}\\
-&+\frac{\theta(k_F-|\mathbf{q}|)\theta(|\mathbf{q}-\mathbf{q}^{'}|-k_F)\theta(|\mathbf{q}^{'}+\mathbf{k}|-k_F)}{\omega+\epsilon_{\mathbf{q}} - \epsilon_{\mathbf{q}^{'}+\mathbf{k}}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}+3\imath \eta} \} \end{split}
+\frac{\theta(|\mathbf{q}|-k_F)\theta(k_F-|\mathbf{q}-\mathbf{q}^{'}|)\theta(k_F-|\mathbf{q}^{'}+\mathbf{k}|)}{\omega+\epsilon_{\mathbf{q}} - \epsilon_{\mathbf{q}^{'}+\mathbf{k}}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}-3i \eta}\\
+&+\frac{\theta(k_F-|\mathbf{q}|)\theta(|\mathbf{q}-\mathbf{q}^{'}|-k_F)\theta(|\mathbf{q}^{'}+\mathbf{k}|-k_F)}{\omega+\epsilon_{\mathbf{q}} - \epsilon_{\mathbf{q}^{'}+\mathbf{k}}-\epsilon_{\mathbf{q}-\mathbf{q}^{'}}+3i \eta} \} \end{split}
 \end{split} \]
 
 %\begin{wrapfigure}{l}{3.5cm}
@@ -370,32 +370,32 @@ When all the interaction lines are put in the horizontal way, this Feynman diagr
 \end{center}
 
 \[ \begin{split}
--&\left(\frac{\imath}{\hbar}\right)^3 \ \frac{1}{(2\pi)^{12}} \int \mathrm{d}^3 \mathbf{q}_1 \int \mathrm{d} \epsilon_1 \int \mathrm{d}^3 \mathbf{q}_2 \int \mathrm{d} \epsilon_2 \int \mathrm{d}^3 \mathbf{q}_3 \int \mathrm{d} \epsilon_3 \\
+-&\left(\frac{i}{\hbar}\right)^3 \ \frac{1}{(2\pi)^{12}} \int \mathrm{d}^3 \mathbf{q}_1 \int \mathrm{d} \epsilon_1 \int \mathrm{d}^3 \mathbf{q}_2 \int \mathrm{d} \epsilon_2 \int \mathrm{d}^3 \mathbf{q}_3 \int \mathrm{d} \epsilon_3 \\
 &\times V(\mathbf{k}-\mathbf{q}_1)V(\mathbf{q}_1-\mathbf{q}_2)V(\mathbf{q}_2-\mathbf{k})\\
 &\times G_0(\mathbf{q}_1,\epsilon_1)G_0(\mathbf{q}_2,\epsilon_2)G_0(\mathbf{q}_3,\epsilon_3)\\
 &\times G_0(\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2,\epsilon_3-\epsilon_1+\epsilon_2)G_0(\mathbf{q}_3-\mathbf{q}_1+\mathbf{k},\epsilon_3-\epsilon_1+\omega)
 \end{split} \]
 \begin{center}---------------------------------------------\end{center}
-\[ \begin{split} &\int \frac{\mathrm{d}\epsilon_1}{2\pi} \int \frac{\mathrm{d}\epsilon_2}{2\pi} \int \frac{\mathrm{d}\epsilon_3}{2\pi}\left[ \frac{\theta(|\mathbf{q}_1|-k_F)}{\epsilon_1-\epsilon_{\mathbf{q}_1}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_1|)}{\epsilon_1-\epsilon_{\mathbf{q}_1}-\imath \eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}_2|-k_F)}{\epsilon_2-\epsilon_{\mathbf{q}_2}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_2|)}{\epsilon_2-\epsilon_{\mathbf{q}_2}-\imath \eta} \right] \times \left[ \frac{\theta(|\mathbf{q}_3|-k_F)}{\epsilon_3-\epsilon_{\mathbf{q}_3}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_3|)}{\epsilon_3-\epsilon_{\mathbf{q}_3}-\imath \eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|-k_F)}{\epsilon_3-\epsilon_1+\epsilon_2-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|)}{\epsilon_3-\epsilon_1+\epsilon_2-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}-\imath \eta} \right]\\
-& \times \left[ \frac{\theta(|\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}|-k_F)}{\epsilon_3-\epsilon_1+\omega-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}|)}{\epsilon_3-\epsilon_1+\omega-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}}-\imath \eta} \right]\\
-=& \imath \int \frac{\mathrm{d}\epsilon_1}{2\pi} \int \frac{\mathrm{d}\epsilon_3}{2\pi} \left[ \frac{\theta(|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|-k_F)\theta(k_F-|\mathbf{q}_2|)}{\epsilon_3-\epsilon_1+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}+2\imath \eta} \right. \\
-& \left. - \frac{\theta(k_F-|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|)\theta(|\mathbf{q}_2|-k_F)}{\epsilon_3-\epsilon_1+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}-2\imath \eta} \right] \times \left[ \ldots \right]
+\[ \begin{split} &\int \frac{\mathrm{d}\epsilon_1}{2\pi} \int \frac{\mathrm{d}\epsilon_2}{2\pi} \int \frac{\mathrm{d}\epsilon_3}{2\pi}\left[ \frac{\theta(|\mathbf{q}_1|-k_F)}{\epsilon_1-\epsilon_{\mathbf{q}_1}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_1|)}{\epsilon_1-\epsilon_{\mathbf{q}_1}-i \eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}_2|-k_F)}{\epsilon_2-\epsilon_{\mathbf{q}_2}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_2|)}{\epsilon_2-\epsilon_{\mathbf{q}_2}-i \eta} \right] \times \left[ \frac{\theta(|\mathbf{q}_3|-k_F)}{\epsilon_3-\epsilon_{\mathbf{q}_3}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_3|)}{\epsilon_3-\epsilon_{\mathbf{q}_3}-i \eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|-k_F)}{\epsilon_3-\epsilon_1+\epsilon_2-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|)}{\epsilon_3-\epsilon_1+\epsilon_2-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}-i \eta} \right]\\
+& \times \left[ \frac{\theta(|\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}|-k_F)}{\epsilon_3-\epsilon_1+\omega-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}|)}{\epsilon_3-\epsilon_1+\omega-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{k}}-i \eta} \right]\\
+=& i \int \frac{\mathrm{d}\epsilon_1}{2\pi} \int \frac{\mathrm{d}\epsilon_3}{2\pi} \left[ \frac{\theta(|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|-k_F)\theta(k_F-|\mathbf{q}_2|)}{\epsilon_3-\epsilon_1+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}+2i \eta} \right. \\
+& \left. - \frac{\theta(k_F-|\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2|)\theta(|\mathbf{q}_2|-k_F)}{\epsilon_3-\epsilon_1+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3-\mathbf{q}_1+\mathbf{q}_2}-2i \eta} \right] \times \left[ \ldots \right]
 \end{split} \]
 %gap
 \[ \begin{split} \xlongequal[\mathbf{q}_3-\mathbf{q}_2 \rightarrow \mathbf{q}_3]{\epsilon_3-\epsilon_1 \rightarrow \epsilon_3} &
-\imath \int \frac{\mathrm{d}\epsilon_1}{2\pi} \int \frac{\mathrm{d}\epsilon_3}{2\pi}
-\left[ \frac{\theta(|\mathbf{q}_3+\mathbf{q}_2|-k_F)\theta(k_F-|\mathbf{q}_2|)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}+2\imath \eta} \right. \\
-& \left. - \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{q}_2|)\theta(|\mathbf{q}_2|-k_F)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}-2\imath \eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}_1|-k_F)}{\epsilon_1-\epsilon_{\mathbf{q}_1}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_1|)}{\epsilon_1-\epsilon_{\mathbf{q}_1}-\imath \eta} \right]\\
-& \times \left[ \frac{\theta(|\mathbf{q}_3+\mathbf{k}|-k_F)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{k}|)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}-\imath \eta} \right]\\
-& \times \left[ \frac{\theta(|\mathbf{q}_3+\mathbf{q}_1|-k_F)}{\epsilon_3+\epsilon_1-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{q}_1|)}{\epsilon_3+\epsilon_1-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}-\imath \eta} \right] \\
-=& (\imath)^2 \int \frac{\mathrm{d}\epsilon_3}{2\pi}
-\left[ \frac{\theta(|\mathbf{q}_3+\mathbf{q}_2|-k_F)\theta(k_F-|\mathbf{q}_2|)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}+2\imath \eta} \right. \\
-& \left. - \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{q}_2|)\theta(|\mathbf{q}_2|-k_F)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}-2\imath \eta} \right] \\
-& \times \left[ -\frac{\theta(|\mathbf{q}_1|-k_F)\theta(k_F-|\mathbf{q}_3+\mathbf{q}_1|)}{\epsilon_3-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}+\epsilon_{\mathbf{q}_1}-2\imath\eta} + \frac{\theta(k_F-|\mathbf{q}_1|)\theta(|\mathbf{q}_3+\mathbf{q}_1|-k_F)}{\epsilon_3-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}+\epsilon_{\mathbf{q}_1}+2\imath\eta} \right] \\
-& \times \left[ \frac{\theta(|\mathbf{q}_3+\mathbf{k}|-k_F)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}+\imath \eta} + \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{k}|)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}-\imath \eta} \right]
+i \int \frac{\mathrm{d}\epsilon_1}{2\pi} \int \frac{\mathrm{d}\epsilon_3}{2\pi}
+\left[ \frac{\theta(|\mathbf{q}_3+\mathbf{q}_2|-k_F)\theta(k_F-|\mathbf{q}_2|)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}+2i \eta} \right. \\
+& \left. - \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{q}_2|)\theta(|\mathbf{q}_2|-k_F)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}-2i \eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}_1|-k_F)}{\epsilon_1-\epsilon_{\mathbf{q}_1}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_1|)}{\epsilon_1-\epsilon_{\mathbf{q}_1}-i \eta} \right]\\
+& \times \left[ \frac{\theta(|\mathbf{q}_3+\mathbf{k}|-k_F)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{k}|)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}-i \eta} \right]\\
+& \times \left[ \frac{\theta(|\mathbf{q}_3+\mathbf{q}_1|-k_F)}{\epsilon_3+\epsilon_1-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{q}_1|)}{\epsilon_3+\epsilon_1-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}-i \eta} \right] \\
+=& (i)^2 \int \frac{\mathrm{d}\epsilon_3}{2\pi}
+\left[ \frac{\theta(|\mathbf{q}_3+\mathbf{q}_2|-k_F)\theta(k_F-|\mathbf{q}_2|)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}+2i \eta} \right. \\
+& \left. - \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{q}_2|)\theta(|\mathbf{q}_2|-k_F)}{\epsilon_3+\epsilon_{\mathbf{q}_2}-\epsilon_{\mathbf{q}_3+\mathbf{q}_2}-2i \eta} \right] \\
+& \times \left[ -\frac{\theta(|\mathbf{q}_1|-k_F)\theta(k_F-|\mathbf{q}_3+\mathbf{q}_1|)}{\epsilon_3-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}+\epsilon_{\mathbf{q}_1}-2i\eta} + \frac{\theta(k_F-|\mathbf{q}_1|)\theta(|\mathbf{q}_3+\mathbf{q}_1|-k_F)}{\epsilon_3-\epsilon_{\mathbf{q}_3+\mathbf{q}_1}+\epsilon_{\mathbf{q}_1}+2i\eta} \right] \\
+& \times \left[ \frac{\theta(|\mathbf{q}_3+\mathbf{k}|-k_F)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}+i \eta} + \frac{\theta(k_F-|\mathbf{q}_3+\mathbf{k}|)}{\epsilon_3+\omega-\epsilon_{\mathbf{q}_3+\mathbf{k}}-i \eta} \right]
 \end{split} \]
 
 Due to these reasonings, the leading order diagrams in the low density limit are given by these ladder--type diagrams.
@@ -416,9 +416,9 @@ Where the effective two-particle interaction is given by this:
 \end{center}
 \begin{center}---------------------------------------------\end{center}
 The corresponding analytic expression are given as follows:
-\begin{equation*} \label{Eqs2.7.4'} \tag{2.7.4'} \hbar\Sigma^{\bigstar}(p) = -2 \imath \frac{1}{(2\pi)^4} \int \mathrm{d}^4 k G^0(k) \Gamma(p,k;p,k)+\imath \frac{1}{(2\pi)^4}\int \mathrm{d}^4 k G^0(k) \Gamma(k,p;p,k) \end{equation*}
+\begin{equation*} \label{Eqs2.7.4'} \tag{2.7.4'} \hbar\Sigma^{\bigstar}(p) = -2 i \frac{1}{(2\pi)^4} \int \mathrm{d}^4 k G^0(k) \Gamma(p,k;p,k)+i \frac{1}{(2\pi)^4}\int \mathrm{d}^4 k G^0(k) \Gamma(k,p;p,k) \end{equation*}
 \begin{equation} \label{Eqs2.7.6} \begin{split}
-\Gamma(p_1,p_2;p_3,p_4) = v_0(p_1-p_3) + &\imath \hbar^{-1} \frac{1}{(2\pi)^4} \int \mathrm{d}^4 q v_0(q) \\
+\Gamma(p_1,p_2;p_3,p_4) = v_0(p_1-p_3) + &i \hbar^{-1} \frac{1}{(2\pi)^4} \int \mathrm{d}^4 q v_0(q) \\
 &\times G^0(p_1-q)G^0(p_2+q)\Gamma(p_1-q,p_2+q;p_3,p_4)
 \end{split}\end{equation}
 
@@ -435,9 +435,9 @@ To do this, let us define an ``effective wavefunction" $Q$ out of the effective 
 \Gamma(p_1,p_2;p_3,p_4) \equiv \frac{1}{(2\pi)^4} \int \mathrm{d}^4 q v_0(q) Q(p_1-q,p_2+q;p_3,p_4)
 \end{equation}
 
-The B.S. equation for the effective wavefunction is given by\footnote{\[ \begin{split} \Gamma(p_1,p_2;p_3,p_4) =& (2\pi)^{-4} \int \mathrm{d}^4 q v_0(q) (2\pi)^4 \delta(p_1-q-p_3) \\&+ (2\pi)^{-4} \int \mathrm{d}^4 q v_0(q) \frac{\imath}{\hbar}G^0(p_1-q)G^0(p_2+q)\Gamma(p_1-q,p_2+q;p_3,p_4) \end{split} \]}:
+The B.S. equation for the effective wavefunction is given by\footnote{\[ \begin{split} \Gamma(p_1,p_2;p_3,p_4) =& (2\pi)^{-4} \int \mathrm{d}^4 q v_0(q) (2\pi)^4 \delta(p_1-q-p_3) \\&+ (2\pi)^{-4} \int \mathrm{d}^4 q v_0(q) \frac{i}{\hbar}G^0(p_1-q)G^0(p_2+q)\Gamma(p_1-q,p_2+q;p_3,p_4) \end{split} \]}:
 \begin{equation} \label{Eqs2.7.8}
-Q(p_1,p_2;p_3,p_4) = (2\pi)^4 \delta^4(p_1-p_3) + \left(\frac{\imath}{\hbar}\right) G^0(p_1)G^0(p_2) \times \int \frac{\mathrm{d}^4 q}{(2\pi)^4} v_0(q)\cdot Q(p_1-q,p_2+q;p_3,p_4)
+Q(p_1,p_2;p_3,p_4) = (2\pi)^4 \delta^4(p_1-p_3) + \left(\frac{i}{\hbar}\right) G^0(p_1)G^0(p_2) \times \int \frac{\mathrm{d}^4 q}{(2\pi)^4} v_0(q)\cdot Q(p_1-q,p_2+q;p_3,p_4)
 \end{equation}
 
 To study this B.S. equation, let us first introduce the total center of mass wave vector as
@@ -469,31 +469,31 @@ Namely, this part reduces to this\footnote{$q \equiv (\mathbf{q},q_0)$}:
 So that, by integrating over $p_0$, we can reduce this B.S. equation into this:
 \[ \begin{split}
 &\int \frac{\mathrm{d}p_0}{2\pi} Q(\frac{1}{2}P+p,\frac{1}{2}P-p;\frac{1}{2}P+p^{'},\frac{1}{2}P-p^{'})\\
-= &\int \frac{\mathrm{d}p_0}{2\pi} (2\pi)^4 \delta^4(p-p^{'}) + \imath \hbar^{-1} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p) \times \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3} V_0(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},p^{'},P)\\
-=&(2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \imath \hbar^{-1} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p) \times \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3} V_0(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},p^{'},P)
+= &\int \frac{\mathrm{d}p_0}{2\pi} (2\pi)^4 \delta^4(p-p^{'}) + i \hbar^{-1} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p) \times \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3} V_0(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},p^{'},P)\\
+=&(2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + i \hbar^{-1} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p) \times \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3} V_0(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},p^{'},P)
 \end{split} \]
 
 Namely, we obtain the B.S. equation for $\chi$:
 \begin{equation} \label{Eqs2.7.13}
-\chi(\mathbf{p},p^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{\imath}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p)\times\int\frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3}V_0(\mathbf{q}) \chi(\mathbf{p}-\mathbf{q},p^{'},P)
+\chi(\mathbf{p},p^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{i}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p)\times\int\frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3}V_0(\mathbf{q}) \chi(\mathbf{p}-\mathbf{q},p^{'},P)
 \end{equation}
 
 When solving this equation iteratively, one can see that $\chi(\mathbf{p},p^{'},P)$ thus given is actually independent from the frequency component of $p^{'}$:
-\[ \begin{split} \chi(\mathbf{p},p^{'},P) =& (2\pi)^3\delta^3(\mathbf{p}-\mathbf{p}^{'})+\frac{\imath}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi}G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p)V_0(\mathbf{p}-\mathbf{p}^{'})\\
-&+\left(\frac{\imath}{\hbar}\right)^2 \int \frac{\mathrm{d}p_0}{2\pi}G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p) \\
+\[ \begin{split} \chi(\mathbf{p},p^{'},P) =& (2\pi)^3\delta^3(\mathbf{p}-\mathbf{p}^{'})+\frac{i}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi}G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p)V_0(\mathbf{p}-\mathbf{p}^{'})\\
+&+\left(\frac{i}{\hbar}\right)^2 \int \frac{\mathrm{d}p_0}{2\pi}G^0(\frac{1}{2}P+p)G^0(\frac{1}{2}P-p) \\
 &\quad \times \frac{1}{(2\pi)^3} \int \mathrm{d}^3\mathbf{q}V_0(\mathbf{q}) \int \frac{\mathrm{d}(p_0-q_0)}{2\pi}G^0(\frac{1}{2}P+p-q)G^0(\frac{1}{2}P-p+q)V_0(\mathbf{p}-\mathbf{q}-\mathbf{p}^{'})\\
 &+ \ldots
 \end{split} \]
 
 Thus, we just call $\chi(\mathbf{p},p^{'},P)$ as $\chi(\mathbf{p},\mathbf{p}^{'},P)$.
 \begin{equation} \label{Eqs2.7.14}
-\chi(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \underline{\frac{\imath}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{P}{2}+p)G^0(\frac{P}{2}-p)}\times\int\frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3}V_0(\mathbf{q}) \chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
+\chi(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \underline{\frac{i}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi} G^0(\frac{P}{2}+p)G^0(\frac{P}{2}-p)}\times\int\frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3}V_0(\mathbf{q}) \chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
 \end{equation}
 
 It is now easy to evaluate the underlined part:
-\[\begin{split} =& \frac{\imath}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi} \left[ \frac{\theta(|\frac{\mathbf{P}}{2}+\mathbf{p}|-k_F)}{\hbar(\frac{P_0}{2}+p_0)-\epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}}+\imath\eta} + \frac{\theta(k_F-|\frac{\mathbf{P}}{2}+\mathbf{p}|)}{\hbar(\frac{P_0}{2}+p_0)-\epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}}-\imath\eta} \right] \\
-& \times \left[ \frac{\theta(|\frac{\mathbf{P}}{2}-\mathbf{p}|-k_F)}{\hbar(\frac{P_0}{2}-p_0)-\epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}}+\imath\eta} + \frac{\theta(k_F-|\frac{\mathbf{P}}{2}-\mathbf{p}|)}{\hbar(\frac{P_0}{2}-p_0)-\epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}}-\imath\eta} \right]\\
-=& \imath (-\imath) \left[ \frac{\theta(|\frac{\mathbf{P}}{2}+\mathbf{p}|-k_F)\theta(|\frac{\mathbf{P}}{2}-\mathbf{p}|-k_F)}{\hbar P_0 - \epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}} - \epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}} + 2\imath\eta} - \frac{\theta(k_F-|\frac{\mathbf{P}}{2}+\mathbf{p}|)\theta(k_F-|\frac{\mathbf{P}}{2}-\mathbf{p}|)}{\hbar P_0 - \epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}} - \epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}} - 2\imath\eta} \right]
+\[\begin{split} =& \frac{i}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi} \left[ \frac{\theta(|\frac{\mathbf{P}}{2}+\mathbf{p}|-k_F)}{\hbar(\frac{P_0}{2}+p_0)-\epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}}+i\eta} + \frac{\theta(k_F-|\frac{\mathbf{P}}{2}+\mathbf{p}|)}{\hbar(\frac{P_0}{2}+p_0)-\epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}}-i\eta} \right] \\
+& \times \left[ \frac{\theta(|\frac{\mathbf{P}}{2}-\mathbf{p}|-k_F)}{\hbar(\frac{P_0}{2}-p_0)-\epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}}+i\eta} + \frac{\theta(k_F-|\frac{\mathbf{P}}{2}-\mathbf{p}|)}{\hbar(\frac{P_0}{2}-p_0)-\epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}}-i\eta} \right]\\
+=& i (-i) \left[ \frac{\theta(|\frac{\mathbf{P}}{2}+\mathbf{p}|-k_F)\theta(|\frac{\mathbf{P}}{2}-\mathbf{p}|-k_F)}{\hbar P_0 - \epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}} - \epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}} + 2i\eta} - \frac{\theta(k_F-|\frac{\mathbf{P}}{2}+\mathbf{p}|)\theta(k_F-|\frac{\mathbf{P}}{2}-\mathbf{p}|)}{\hbar P_0 - \epsilon_{\frac{\mathbf{P}}{2}+\mathbf{p}} - \epsilon_{\frac{\mathbf{P}}{2}-\mathbf{p}} - 2i\eta} \right]
 \end{split} \]
 
 Now that $\epsilon_\mathbf{k} \equiv \frac{\hbar^2\mathbf{k}^2}{2m}$, we have
@@ -504,11 +504,11 @@ Using also
 N(\mathbf{P},\mathbf{p}) = 1-n^0_{\frac{\mathbf{P}}{2}+\mathbf{p}}-n^0_{\frac{\mathbf{P}}{2}-\mathbf{p}} \end{equation}
 
 with $n_\mathbf{p}^0 \equiv \theta(k_F-|\mathbf{p}|)$, the underlined part can be simplified into this:
-\[ \frac{\imath}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi}G^0(\frac{P}{2}+p)G^0(\frac{P}{2}-p) = \frac{N(\mathbf{P},\mathbf{p})}{E-\frac{\hbar^2\mathbf{p}^2}{m}+\imath\eta N(\mathbf{P},\mathbf{p})} \]
+\[ \frac{i}{\hbar} \int \frac{\mathrm{d}p_0}{2\pi}G^0(\frac{P}{2}+p)G^0(\frac{P}{2}-p) = \frac{N(\mathbf{P},\mathbf{p})}{E-\frac{\hbar^2\mathbf{p}^2}{m}+i\eta N(\mathbf{P},\mathbf{p})} \]
 
 and B.S. equation can be given as follows:
 \begin{equation} \label{Eqs2.7.16}
-\chi(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{N(\mathbf{P},\mathbf{p})}{E-\frac{\hbar^2\mathbf{p}^2}{m}+\imath\eta N(\mathbf{P},\mathbf{p})}\int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \times V_0(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P) \end{equation}
+\chi(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{N(\mathbf{P},\mathbf{p})}{E-\frac{\hbar^2\mathbf{p}^2}{m}+i\eta N(\mathbf{P},\mathbf{p})}\int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \times V_0(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P) \end{equation}
 
 In terms of $\chi$ thus given, the effective two-particle interaction is given as follows:
 \begin{equation} \label{Eqs2.7.17}
@@ -516,7 +516,7 @@ In terms of $\chi$ thus given, the effective two-particle interaction is given a
 
 To solve this Bethe-Salpeter equation, let us first consider the low density limit, in which $N(\mathbf{P},\mathbf{p})$ can be replaced by $1$.
 \begin{equation} \label{Eqs2.7.18}
-\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{1}{E-\frac{\hbar^2\mathbf{p}^2}{m}+\imath\eta}\times \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}V_0(\mathbf{q})\chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P) \end{equation}
+\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{1}{E-\frac{\hbar^2\mathbf{p}^2}{m}+i\eta}\times \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}V_0(\mathbf{q})\chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P) \end{equation}
 
 By scaling $E$ and $V_0$ by $\frac{\hbar^2}{m}$,
 \begin{equation} \label{Eqs2.7.19}
@@ -524,7 +524,7 @@ By scaling $E$ and $V_0$ by $\frac{\hbar^2}{m}$,
 
 we have:
 \begin{equation*} \label{Eqs2.7.18'} \tag{2.7.18'}
-\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3\delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{1}{\epsilon-\mathbf{p}^2+\imath\eta}\times\int\frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
+\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3\delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{1}{\epsilon-\mathbf{p}^2+i\eta}\times\int\frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
 \end{equation*}
 
 This equation can be solved closely in paralled to the scattering problem of one electron by a sperical hard core potential.
@@ -549,13 +549,13 @@ With a proper scaling, this reduces to
 \end{equation*}
 
 When $\mathbf{x}$ is far from the origin at which the hard core scattering potential is located, the eigenwavefunction become a plane-wave with the momentum $\mathbf{k}$.
-\[ \psi(\mathbf{x}) = \mathrm{e}^{\imath \mathbf{k}\cdot \mathbf{x}} + \ldots \]
+\[ \psi(\mathbf{x}) = \mathrm{e}^{i \mathbf{k}\cdot \mathbf{x}} + \ldots \]
 
 Since this requirement is nothing but the boundary condition, we put $\mathbf{k}$ as a subscript of $\psi$:
-\[ \psi_\mathbf{k}(\mathbf{x}) = \mathrm{e}^{\imath \mathbf{k}\cdot \mathbf{x}} + \ldots \]
+\[ \psi_\mathbf{k}(\mathbf{x}) = \mathrm{e}^{i \mathbf{k}\cdot \mathbf{x}} + \ldots \]
 
 When $\mathbf{x}$ becomes close to the scattering potential, we need correction to the eigenwavefunction, which can be given like this:
-\begin{equation*} \label{Eqs2.7.A.2} \tag{2.7.A.2} \psi_\mathbf{k}(\mathbf{x}) = \mathrm{e}^{\imath \mathbf{k}\cdot \mathbf{x}} - \int \mathrm{d}^3 \mathbf{y} G^{(+)}(\mathbf{x}-\mathbf{y}) v(\mathbf{y}) \psi_{\mathbf{k}}(\mathbf{y})
+\begin{equation*} \label{Eqs2.7.A.2} \tag{2.7.A.2} \psi_\mathbf{k}(\mathbf{x}) = \mathrm{e}^{i \mathbf{k}\cdot \mathbf{x}} - \int \mathrm{d}^3 \mathbf{y} G^{(+)}(\mathbf{x}-\mathbf{y}) v(\mathbf{y}) \psi_{\mathbf{k}}(\mathbf{y})
 \end{equation*}
 
 An ``out-going-wave" Green's function $G^{(+)}$ which satisfies this:
@@ -564,8 +564,8 @@ An ``out-going-wave" Green's function $G^{(+)}$ which satisfies this:
 
 is given by this:
 \begin{equation*} \label{Eqs2.7.A.4} \tag{2.7.A.4}
-G^{(+)}(\mathbf{x}-\mathbf{y}) = \int \frac{\mathrm{d}^3 \mathbf{p}}{(2 \pi)^3} \frac{\mathrm{e}^{\imath \mathbf{p} \cdot (\mathbf{x}-\mathbf{y})}}{p^2-k^2-\imath \eta}
-= \frac{1}{4 \pi} \frac{\mathrm{e}^{\imath k |\mathbf{x}-\mathbf{y}|}}{|\mathbf{x}-\mathbf{y}|}
+G^{(+)}(\mathbf{x}-\mathbf{y}) = \int \frac{\mathrm{d}^3 \mathbf{p}}{(2 \pi)^3} \frac{\mathrm{e}^{i \mathbf{p} \cdot (\mathbf{x}-\mathbf{y})}}{p^2-k^2-i \eta}
+= \frac{1}{4 \pi} \frac{\mathrm{e}^{i k |\mathbf{x}-\mathbf{y}|}}{|\mathbf{x}-\mathbf{y}|}
 \end{equation*}
 
 You can check that this set of solutions indeed satisfies this Schr\"odinger equation.
@@ -578,14 +578,14 @@ If the scattering potential has no bound state, then this eigenstate support a c
 In the momentum representation,
 \begin{equation*} \label{Eqs2.7.A.6} \tag{2.7.A.6}
 \left\{ \begin{split}
-\psi_{\mathbf{k}} (\mathbf{p}) &\equiv \int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-\imath \mathbf{p} \cdot \mathbf{x}} \psi_{\mathbf{k}} (\mathbf{x})\\
-v(\mathbf{p}) & \equiv \int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-\imath \mathbf{p} \cdot \mathbf{x}} v(\mathbf{x})
+\psi_{\mathbf{k}} (\mathbf{p}) &\equiv \int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-i \mathbf{p} \cdot \mathbf{x}} \psi_{\mathbf{k}} (\mathbf{x})\\
+v(\mathbf{p}) & \equiv \int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-i \mathbf{p} \cdot \mathbf{x}} v(\mathbf{x})
 \end{split} \right.
 \end{equation*}
 
 This equation can be rewritten as
 \begin{equation*} \label{Eqs2.7.A.7} \tag{2.7.A.7}
-\psi_{\mathbf{k}}(\mathbf{p}) = (2\pi) ^3 \delta^3(\mathbf{k}-\mathbf{p}) - \frac{1}{\mathbf{p}^2 - \mathbf{k}^2 - \imath \eta} \int \frac{ \mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q}) \psi_{\mathbf{k}}(\mathbf{p}-\mathbf{q})
+\psi_{\mathbf{k}}(\mathbf{p}) = (2\pi) ^3 \delta^3(\mathbf{k}-\mathbf{p}) - \frac{1}{\mathbf{p}^2 - \mathbf{k}^2 - i \eta} \int \frac{ \mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q}) \psi_{\mathbf{k}}(\mathbf{p}-\mathbf{q})
 \end{equation*}
 
 Then the scattering amplitude for a transition from an incident wave vector $\mathbf{k}$ to a final wave vector $\mathbf{p}$ is defined by this part:
@@ -595,7 +595,7 @@ Then the scattering amplitude for a transition from an incident wave vector $\ma
 
 In terms of the scattering amplitude, this reduces to this:
 \begin{equation*} \label{Eqs2.7.A.7'} \tag{2.7.A.7'}
-\psi_{\mathbf{k}} (\mathbf{p}) = (2\pi)^3 \delta^3(\mathbf{k}-\mathbf{p}) + \frac{\tilde{f}(\mathbf{p},\mathbf{k})}{k^2-p^2+\imath \eta}
+\psi_{\mathbf{k}} (\mathbf{p}) = (2\pi)^3 \delta^3(\mathbf{k}-\mathbf{p}) + \frac{\tilde{f}(\mathbf{p},\mathbf{k})}{k^2-p^2+i \eta}
 \end{equation*}
 
 According to this completeness relation, this satisfies the corresponding completeness relation, which is given like this:
@@ -605,7 +605,7 @@ According to this completeness relation, this satisfies the corresponding comple
 
 When the norm of the outgoing-wave momentum($|\mathbf{k}| = |\mathbf{k}^{'}|$) and that of the incident wave is same, the scattering amplitude is calculated by ``the method of partial wave":\footnote{$\mathrm{P}_l(x)$ is the Legendre polynomial.}
 \begin{equation*} \label{Eqs2.7.A.10} \tag{2.7.A.10}
-f(\mathbf{k},\mathbf{k}^{'}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} \mathrm{e}^{\imath \delta_l} sin(\delta_l) \mathrm{P}_l (cos\theta)
+f(\mathbf{k},\mathbf{k}^{'}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} \mathrm{e}^{i \delta_l} sin(\delta_l) \mathrm{P}_l (cos\theta)
 \end{equation*}
 
 where $\theta$ is angle subtended by $\mathbf{k}$ and $\mathbf{k}^{'}$ and $k = |\mathbf{k}| = |\mathbf{k}^{'}|$.
@@ -621,20 +621,20 @@ tan(\delta_l) = - \frac{(k_a)^{2l+1}}{(2l+1)[(2l-1)!!]^2} + o((k_a)^{2l+2})\end{
 These are the summary of ``scattering problem of a single electron by a spherical hard core potential", which becomes very useful for solving the Bethe-Salpeter equation in the low-density limit.
 
 \begin{equation*}  \tag{2.7.18'}
-\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3\delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{1}{\epsilon-\mathbf{p}^2+\imath\eta}\cdot\int\frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
+\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3\delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{1}{\epsilon-\mathbf{p}^2+i\eta}\cdot\int\frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
 \end{equation*}
 
 To see this, let us rewrite this as follows
 \begin{equation*} \label{Eqs2.7.18''} \tag{2.7.18''}
 \begin{split}
-(\epsilon-\mathbf{p}^2+\imath\eta)\chi_0(\mathbf{p},\mathbf{p}^{'},P) - \int\frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
-&=(2\pi)^3 (\epsilon-\mathbf{p}^2+\imath\eta) \delta^3(\mathbf{p}-\mathbf{p}^{'})\\
-&=(2\pi)^3 (\epsilon-{\mathbf{p}^{'}}^2+\imath\eta) \delta^3(\mathbf{p}-\mathbf{p}^{'})\end{split}
+(\epsilon-\mathbf{p}^2+i\eta)\chi_0(\mathbf{p},\mathbf{p}^{'},P) - \int\frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
+&=(2\pi)^3 (\epsilon-\mathbf{p}^2+i\eta) \delta^3(\mathbf{p}-\mathbf{p}^{'})\\
+&=(2\pi)^3 (\epsilon-{\mathbf{p}^{'}}^2+i\eta) \delta^3(\mathbf{p}-\mathbf{p}^{'})\end{split}
 \end{equation*}
 
 This equation can be satisfied by
 \begin{equation} \label{Eqs2.7.20}
-\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (\epsilon - {\mathbf{p}^{'}}^2 + \imath \eta) \int \frac{\mathrm{d}\mathbf{k}}{(2\pi)^3} \frac{\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}^{'}}^{*} (\mathbf{p}^{'})}{\epsilon - \mathbf{k}^2 + \imath \eta}
+\chi_0(\mathbf{p},\mathbf{p}^{'},P) = (\epsilon - {\mathbf{p}^{'}}^2 + i \eta) \int \frac{\mathrm{d}\mathbf{k}}{(2\pi)^3} \frac{\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}^{'}}^{*} (\mathbf{p}^{'})}{\epsilon - \mathbf{k}^2 + i \eta}
 \end{equation}
 
 where $\psi_{\mathbf{k}}(\mathbf{p})$ is given by eq.(\ref{Eqs2.7.A.7}), a solution of scattering problem of a single electron by hard core spherical potential.
@@ -649,71 +649,71 @@ With this replacement in mind, we then recycle all the results obtained in the s
 
 By the way, one can easily see this:
 \[ \begin{split}
-(\epsilon-\mathbf{p}^2+\imath\eta)\chi_0(\mathbf{p},\mathbf{p}^{'},P) =& (\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{(\epsilon-\mathbf{p}^2+\imath\eta)\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon-\mathbf{k}^2+\imath\eta}\\
-=&(\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})\\
-&+(\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{(\mathbf{k}^2-\mathbf{p}^2+\imath \eta)\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon-\mathbf{k}^2+\imath\eta}\\
-=&(\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\delta^3(\mathbf{p}-\mathbf{p}^{'})\\
-&+(\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\int \frac{\mathrm{d} \mathbf{q}}{(2\pi)^3} \frac{v(\mathbf{q})\psi_{\mathbf{k}}(\mathbf{p}-\mathbf{q})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon - \mathbf{k}^2+\imath \eta}\\
-=&(\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\delta^3(\mathbf{p}-\mathbf{p}^{'})+\int \frac{\mathrm{d} \mathbf{q}}{(2\pi)^3} N(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
+(\epsilon-\mathbf{p}^2+i\eta)\chi_0(\mathbf{p},\mathbf{p}^{'},P) =& (\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{(\epsilon-\mathbf{p}^2+i\eta)\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon-\mathbf{k}^2+i\eta}\\
+=&(\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})\\
+&+(\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{(\mathbf{k}^2-\mathbf{p}^2+i \eta)\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon-\mathbf{k}^2+i\eta}\\
+=&(\epsilon-{\mathbf{p}^{'}}^2+i\eta)\delta^3(\mathbf{p}-\mathbf{p}^{'})\\
+&+(\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\int \frac{\mathrm{d} \mathbf{q}}{(2\pi)^3} \frac{v(\mathbf{q})\psi_{\mathbf{k}}(\mathbf{p}-\mathbf{q})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon - \mathbf{k}^2+i \eta}\\
+=&(\epsilon-{\mathbf{p}^{'}}^2+i\eta)\delta^3(\mathbf{p}-\mathbf{p}^{'})+\int \frac{\mathrm{d} \mathbf{q}}{(2\pi)^3} N(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
 \end{split} \]
 
 Using (\ref{Eqs2.7.A.7'}), this can be rewritten as:
 \begin{equation} \label{Eqs2.7.22} \begin{split}
-\chi_0(\mathbf{p},\mathbf{p}^{'},P) =& (\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon-\mathbf{k}^2+\imath \eta}\\
-=&(\epsilon-{\mathbf{p}^{'}}^2+\imath\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{\psi_{\mathbf{k}}(\mathbf{p})}{\epsilon-\mathbf{k}^2+\imath \eta} \times \left\{ (2\pi)^3\delta^3(\mathbf{p}^{'}-\mathbf{k})+\frac{\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-\imath \eta} \right\}\\
-=&\psi_{\mathbf{p}^{'}}(\mathbf{p}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \times \frac{\epsilon-{\mathbf{p}^{'}}^2+\imath \eta}{[\epsilon-\mathbf{k}^2+\imath \eta][\mathbf{k}^2-{\mathbf{p}^{'}}^2-\imath \eta]}\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})\\
-=&\psi_{\mathbf{p}^{'}}(\mathbf{p}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \times \left[ \frac{1}{\epsilon-\mathbf{k}^2+2\imath \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-\imath \eta} \right]\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})
+\chi_0(\mathbf{p},\mathbf{p}^{'},P) =& (\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon-\mathbf{k}^2+i \eta}\\
+=&(\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{\psi_{\mathbf{k}}(\mathbf{p})}{\epsilon-\mathbf{k}^2+i \eta} \times \left\{ (2\pi)^3\delta^3(\mathbf{p}^{'}-\mathbf{k})+\frac{\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta} \right\}\\
+=&\psi_{\mathbf{p}^{'}}(\mathbf{p}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \times \frac{\epsilon-{\mathbf{p}^{'}}^2+i \eta}{[\epsilon-\mathbf{k}^2+i \eta][\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta]}\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})\\
+=&\psi_{\mathbf{p}^{'}}(\mathbf{p}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \times \left[ \frac{1}{\epsilon-\mathbf{k}^2+2i \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta} \right]\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})
 \end{split} \end{equation}
 
 substituting this into eq.(\ref{Eqs2.7.17}), we finally obtain:
 \begin{equation} \label{Eqs2.7.23} \begin{split}
 \Gamma_0(\mathbf{p},\mathbf{p}^{'},P) =& \frac{1}{(2\pi)^3} \frac{\hbar^2}{m} \int \mathrm{d}^3\mathbf{q} v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)\\
 \frac{m}{\hbar^2}\Gamma_0(\mathbf{p},\mathbf{p}^{'},P) \xlongequal{\ref{Eqs2.7.22}}&\frac{1}{(2\pi)^3} \int \mathrm{d}^3 \mathbf{q} v_0(\mathbf{q}) \psi_{\mathbf{p}^{'}}(\mathbf{p}-\mathbf{q})\\
-&+ \frac{1}{(2\pi)^3} \int \mathrm{d}^3 \mathbf{q} v_0(\mathbf{q}) \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}-\mathbf{q})\left[ \frac{1}{\epsilon-\mathbf{k}^2+\imath \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-\imath \eta} \right] \tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})\\
-\xlongequal{\ref{Eqs2.7.A.8}}& \tilde{f}(\mathbf{p},\mathbf{p}^{'}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \tilde{f}(\mathbf{p},\mathbf{k})\left[ \frac{1}{\epsilon-\mathbf{k}^2+\imath \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-\imath \eta} \right] \times \tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})
+&+ \frac{1}{(2\pi)^3} \int \mathrm{d}^3 \mathbf{q} v_0(\mathbf{q}) \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}-\mathbf{q})\left[ \frac{1}{\epsilon-\mathbf{k}^2+i \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta} \right] \tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})\\
+\xlongequal{\ref{Eqs2.7.A.8}}& \tilde{f}(\mathbf{p},\mathbf{p}^{'}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \tilde{f}(\mathbf{p},\mathbf{k})\left[ \frac{1}{\epsilon-\mathbf{k}^2+i \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta} \right] \times \tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})
 \end{split}\end{equation}
 
 This expression suggests that the effective two particle interaction in the low density limit can be expressed only by the scattering amplitude $\tilde{f}(\mathbf{k},\mathbf{k}^{'})$, which is calculated from the scattering problem of a single electron.
 
 We now try to solve eq.(\ref{Eqs2.7.16}) for finite $N(\mathbf{P},\mathbf{p})$.
 \begin{equation*} \label{Eqs2.7.16'} \tag{2.7.16'}
-\chi(\mathbf{p},\mathbf{p}^{'},P)=(2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{N(\mathbf{P},\mathbf{p})}{\epsilon - p^2 + \imath \eta N(\mathbf{P},\mathbf{p})} \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
+\chi(\mathbf{p},\mathbf{p}^{'},P)=(2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{N(\mathbf{P},\mathbf{p})}{\epsilon - p^2 + i \eta N(\mathbf{P},\mathbf{p})} \int \frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
 \end{equation*}
 
-\[\int \frac{\mathrm{d}^3\mathbf{p}^{'}}{(2\pi)^3}\left[ (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'})-\frac{v(\mathbf{p}-\mathbf{p}^{'})}{\epsilon-\mathbf{p}^2+\imath \eta} \right] \chi_0(\mathbf{p}^{'},\mathbf{p}^{''},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) \]
+\[\int \frac{\mathrm{d}^3\mathbf{p}^{'}}{(2\pi)^3}\left[ (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'})-\frac{v(\mathbf{p}-\mathbf{p}^{'})}{\epsilon-\mathbf{p}^2+i \eta} \right] \chi_0(\mathbf{p}^{'},\mathbf{p}^{''},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) \]
 
 \[ \int \mathrm{d}^3 \mathbf{p}^{'} \chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P)\chi_0(\mathbf{p}^{'},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'})\]
 
 Thus
-\[ \chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P) = \delta^3(\mathbf{p}-\mathbf{p}^{'}) - \frac{N(\mathbf{p}-\mathbf{p}^{'})}{\epsilon-\mathbf{p}^2+\imath \eta} \frac{1}{(2\pi)^3} \]
+\[ \chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P) = \delta^3(\mathbf{p}-\mathbf{p}^{'}) - \frac{N(\mathbf{p}-\mathbf{p}^{'})}{\epsilon-\mathbf{p}^2+i \eta} \frac{1}{(2\pi)^3} \]
 
 \[ \int \mathrm{d}^3 \mathbf{p} \chi_0(\mathbf{p}^{''},\mathbf{p},P)\chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}^{''}-\mathbf{p}^{'})\]
 
 We first substract the eq in the low density limit:
-\[ \begin{split} &\chi(\mathbf{p},\mathbf{p}^{'},P) - \frac{1}{\epsilon-\mathbf{p}^2+\imath \eta} \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q}) \chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)\\
-&=(2\pi)^3 \delta(\mathbf{p}-\mathbf{p}^{'}) + \left( \frac{N(\mathbf{P},\mathbf{p})}{\epsilon - \mathbf{p}^2+\imath \eta N(\mathbf{P},\mathbf{p})} - \frac{1}{\epsilon - \mathbf{p}^2+\imath \eta} \right)\times \underline{\int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)}
+\[ \begin{split} &\chi(\mathbf{p},\mathbf{p}^{'},P) - \frac{1}{\epsilon-\mathbf{p}^2+i \eta} \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q}) \chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)\\
+&=(2\pi)^3 \delta(\mathbf{p}-\mathbf{p}^{'}) + \left( \frac{N(\mathbf{P},\mathbf{p})}{\epsilon - \mathbf{p}^2+i \eta N(\mathbf{P},\mathbf{p})} - \frac{1}{\epsilon - \mathbf{p}^2+i \eta} \right)\times \underline{\int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)}
 \end{split} \]
 
 where the underlined part can be replaced by the effective two-particle interaction $\frac{m}{\hbar^2}\Gamma(\mathbf{p},\mathbf{p}^{'},P)$.
 \[ \begin{split} &\int \mathrm{d}^3 \mathbf{p}^{''} \chi_0^{-1}(\mathbf{p},\mathbf{p}^{''},P)\chi(\mathbf{p}^{''},\mathbf{p}^{'},P)\\
-&=(2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \left( \frac{N(\mathbf{P},\mathbf{p})}{\epsilon - \mathbf{p}^2+\imath \eta N(\mathbf{P},\mathbf{p})} - \frac{1}{\epsilon - \mathbf{p}^2+\imath \eta} \right)\times\frac{m}{\hbar^2}\Gamma(\mathbf{p},\mathbf{p}^{'},P)
+&=(2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) + \left( \frac{N(\mathbf{P},\mathbf{p})}{\epsilon - \mathbf{p}^2+i \eta N(\mathbf{P},\mathbf{p})} - \frac{1}{\epsilon - \mathbf{p}^2+i \eta} \right)\times\frac{m}{\hbar^2}\Gamma(\mathbf{p},\mathbf{p}^{'},P)
 \end{split} \]
 
 \[ \begin{split} &\int \mathrm{d}^3\mathbf{q} \chi_0(\mathbf{p},\mathbf{q},P) \int \mathrm{d}^3 \mathbf{p}^{''} \chi_0^{-1}(\mathbf{q},\mathbf{p}^{''},P)\chi(\mathbf{p}^{''},\mathbf{p}^{'},P)\\
-&= \int \mathrm{d}^3\mathbf{q}\chi_0(\mathbf{p},\mathbf{q},P)(2\pi)^3\delta^3(\mathbf{q}-\mathbf{p}^{'})\\&\quad+ \int \mathrm{d}^3 \mathbf{q} \chi_0(\mathbf{p},\mathbf{q},P) \left[ \frac{N(\mathbf{P},\mathbf{q})}{\epsilon - \mathbf{q}^2+\imath \eta N(\mathbf{P},\mathbf{q})} - \frac{1}{\epsilon - \mathbf{q}^2+\imath \eta} \right] \frac{m}{\hbar^2} \Gamma(\mathbf{q},\mathbf{p}^{'},P)
+&= \int \mathrm{d}^3\mathbf{q}\chi_0(\mathbf{p},\mathbf{q},P)(2\pi)^3\delta^3(\mathbf{q}-\mathbf{p}^{'})\\&\quad+ \int \mathrm{d}^3 \mathbf{q} \chi_0(\mathbf{p},\mathbf{q},P) \left[ \frac{N(\mathbf{P},\mathbf{q})}{\epsilon - \mathbf{q}^2+i \eta N(\mathbf{P},\mathbf{q})} - \frac{1}{\epsilon - \mathbf{q}^2+i \eta} \right] \frac{m}{\hbar^2} \Gamma(\mathbf{q},\mathbf{p}^{'},P)
 \end{split} \]
 
 
 \[ \begin{split} \Leftrightarrow (2\pi)^3 \chi(\mathbf{p},\mathbf{p}^{'},P) =& (2\pi)^3\chi_0(\mathbf{p},\mathbf{p}^{'},P) \\
-&+ \int \mathrm{d}^3 \mathbf{p}^{''} \chi_0(\mathbf{p},\mathbf{p}^{''},P) \left[ \frac{N(\mathbf{P},\mathbf{p}^{''})}{\epsilon - {\mathbf{p}^{''}}^2+\imath \eta N(\mathbf{P},\mathbf{p}^{''})} - \frac{1}{\epsilon - {\mathbf{p}^{''}}^2+\imath \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{p}^{''},\mathbf{p}^{'},P) \end{split}\]
+&+ \int \mathrm{d}^3 \mathbf{p}^{''} \chi_0(\mathbf{p},\mathbf{p}^{''},P) \left[ \frac{N(\mathbf{P},\mathbf{p}^{''})}{\epsilon - {\mathbf{p}^{''}}^2+i \eta N(\mathbf{P},\mathbf{p}^{''})} - \frac{1}{\epsilon - {\mathbf{p}^{''}}^2+i \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{p}^{''},\mathbf{p}^{'},P) \end{split}\]
 
 \[ \begin{split} \chi(\mathbf{p},\mathbf{p}^{'},P) =& \chi_0(\mathbf{p},\mathbf{p}^{'},P) \\
-&+ \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \chi_0(\mathbf{p},\mathbf{k},P) \times \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon - {\mathbf{k}}^2+\imath \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon - {\mathbf{k}}^2+\imath \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{k},\mathbf{p}^{'},P)\end{split}\]
+&+ \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \chi_0(\mathbf{p},\mathbf{k},P) \times \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon - {\mathbf{k}}^2+i \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon - {\mathbf{k}}^2+i \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{k},\mathbf{p}^{'},P)\end{split}\]
 
 Then, multiplying $v(\mathbf{q})$ and replacing $\mathbf{p}$ by $\mathbf{p}-\mathbf{q}$ and intergrating over $\mathbf{q}$, we can replace this by $\Gamma$ and these two by $\Gamma_0$ respectively.
 \begin{equation} \label{Eqs2.7.24} \begin{split}
 \Gamma(\mathbf{p},\mathbf{p}^{'},P) =& \Gamma_0(\mathbf{p},\mathbf{p}^{'},P) \\
-&+ \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \Gamma_0(\mathbf{p},\mathbf{k},P) \times \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon - {\mathbf{k}}^2+\imath \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon - {\mathbf{k}}^2+\imath \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{k},\mathbf{p}^{'},P)
+&+ \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \Gamma_0(\mathbf{p},\mathbf{k},P) \times \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon - {\mathbf{k}}^2+i \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon - {\mathbf{k}}^2+i \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{k},\mathbf{p}^{'},P)
 \end{split}\end{equation}
 
 A set of these two equations gives effective two-particle potential $\Gamma$ in terms of the scattering amplitude $\tilde{f}$.
@@ -733,7 +733,7 @@ Thus, the correction to $\Gamma$ due to the 2nd term can be shown to be subleadi
 Before solving eq.(\ref{Eqs2.7.24}) iteratively, please also notice that, according to eq.(\ref{Eqs2.7.4'}), the full set of variable $\mathbf{p}$,$\mathbf{p}^{'}$,$P$ is not necessary.
 
 Namely, all that is necessary is the proper self-energy, which is given by this:
-\[ \hbar \Sigma^{\bigstar}(p) = -2 \imath \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k)\Gamma(p,k;p,k) + \imath \int \frac{\mathrm{d}^4 k}{(2\pi)^4}G^0(k)\Gamma(k,p;p,k) \]
+\[ \hbar \Sigma^{\bigstar}(p) = -2 i \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k)\Gamma(p,k;p,k) + i \int \frac{\mathrm{d}^4 k}{(2\pi)^4}G^0(k)\Gamma(k,p;p,k) \]
 
 Using
 \[ \left. \begin{split}
@@ -759,7 +759,7 @@ According to eq.(\ref{Eqs2.7.17}), $\Gamma$ does not depend on the frequency com
  \]
 
 \begin{equation} \label{Eqs2.7.25}
-\hbar \Sigma^{\bigstar}(p) = -2 \imath \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k)\Gamma(\mathbf{q},\mathbf{q},P) + \imath \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k)\Gamma(\mathbf{q},-\mathbf{q},P)
+\hbar \Sigma^{\bigstar}(p) = -2 i \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k)\Gamma(\mathbf{q},\mathbf{q},P) + i \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k)\Gamma(\mathbf{q},-\mathbf{q},P)
 \end{equation}
 
 Many of the physical quantities can be calculated from self-energy, which is now given by two-particle effective interaction with a particular set of its variables.
@@ -774,30 +774,30 @@ Using eq.(\ref{Eqs2.7.23}) and eqs. (\ref{Eqs2.7.A.10}) \& (\ref{Eqs2.7.A.11}), 
 
 From eqs. (\ref{Eqs2.7.A.10}) \& (\ref{Eqs2.7.A.11}), the scattering amplitude can be expanded in small $k_F a$ as this, for the case with $|\mathbf{k}|=|\mathbf{k}^{'}|$.
 \footnote{the underlined part: see eq. (\ref{Eqs2.7.A.11}).}
-\[ \begin{split} f(\mathbf{k},\mathbf{k}^{'}) =& \sum_{l=0}^{+\infty} \frac{2l+1}{k} \mathrm{e}^{\imath \delta_l} sin \delta_l \mathrm{P}_l(cos\theta)\\
-=& k^{-1} (1+\imath \delta_0) \delta_0 + \underline{o(k^{-1} \cdot (k a)^3)}\\
-\xlongequal{\ref{Eqs2.7.A.11}}& -a + \imath k a^2 + o(k^2 a^3)
+\[ \begin{split} f(\mathbf{k},\mathbf{k}^{'}) =& \sum_{l=0}^{+\infty} \frac{2l+1}{k} \mathrm{e}^{i \delta_l} sin \delta_l \mathrm{P}_l(cos\theta)\\
+=& k^{-1} (1+i \delta_0) \delta_0 + \underline{o(k^{-1} \cdot (k a)^3)}\\
+\xlongequal{\ref{Eqs2.7.A.11}}& -a + i k a^2 + o(k^2 a^3)
 \end{split} \]
-\[ \tilde{f}(\mathbf{k},\mathbf{k}^{'}) = 4\pi a - 4\pi \imath a^2 k + o(k^2 a^3) \]
+\[ \tilde{f}(\mathbf{k},\mathbf{k}^{'}) = 4\pi a - 4\pi i a^2 k + o(k^2 a^3) \]
 
 Since $\tilde{f}$ is already at most 1st order in small $a$, we can replace $\tilde{f}$ in the 2nd term of eq.(\ref{Eqs2.7.23}) by its first order contribution, while replace $\tilde{f}$ in the first term of eq.(\ref{Eqs2.7.23}) by its expression up to the 2nd order.
 
 Such treatment gives us $\Gamma_0$ to the 2nd order in small $a$:
-\[ \begin{split} \frac{m}{\hbar^2} \Gamma_0(\mathbf{q},\mathbf{q},P) =& 4\pi a - 4\pi \imath q a^2 + \int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} 4\pi a \left( \frac{1}{\epsilon-{k^{'}}^2 + \imath \eta} + \frac{1}{{k^{'}}^2-q^2-\imath \eta} \right)4\pi a + o(a^3)\\
-=& 4\pi a - 4\pi \imath q a^2 + (4\pi a)^2 \times \int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + \imath \eta} + \frac{1}{{k^{'}}^2-q^2-\imath \eta} \right) + \ldots\\
-=& 4\pi a - 4\pi \imath q a^2 + (4\pi a)^2 \times\\
-&\int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + \imath \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} + \imath \pi \frac{1}{2q} \delta(|\mathbf{k}^{'}|-|\mathbf{q}|) \right) + \ldots\\
+\[ \begin{split} \frac{m}{\hbar^2} \Gamma_0(\mathbf{q},\mathbf{q},P) =& 4\pi a - 4\pi i q a^2 + \int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} 4\pi a \left( \frac{1}{\epsilon-{k^{'}}^2 + i \eta} + \frac{1}{{k^{'}}^2-q^2-i \eta} \right)4\pi a + o(a^3)\\
+=& 4\pi a - 4\pi i q a^2 + (4\pi a)^2 \times \int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + i \eta} + \frac{1}{{k^{'}}^2-q^2-i \eta} \right) + \ldots\\
+=& 4\pi a - 4\pi i q a^2 + (4\pi a)^2 \times\\
+&\int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + i \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} + i \pi \frac{1}{2q} \delta(|\mathbf{k}^{'}|-|\mathbf{q}|) \right) + \ldots\\
 \xlongequal{\mathrm{d}^3 \mathbf{k}^{'} \rightarrow 4\pi |\mathbf{k}^{'}|^2 \mathrm{d} |\mathbf{k}^{'}|}
-=&4\pi a - 4\pi \imath q a^2+ \imath (4\pi a)^2 \times \frac{q}{4\pi}
-\\&+ (4\pi a)^2\int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + \imath \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right) + \ldots\\
-=&4\pi a + (4\pi a)^2\int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + \imath \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right) + \ldots
+=&4\pi a - 4\pi i q a^2+ i (4\pi a)^2 \times \frac{q}{4\pi}
+\\&+ (4\pi a)^2\int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + i \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right) + \ldots\\
+=&4\pi a + (4\pi a)^2\int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + i \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right) + \ldots
 \end{split} \]
 
 subtituting this solution to eq.(\ref{Eqs2.7.24}), we obtain $\Gamma$ up to the second order in small $a$:
 \begin{equation} \label{Eqs2.7.26} \begin{split}
-\frac{m}{\hbar^2}\Gamma(\mathbf{q},\mathbf{q},P) =& 4\pi a + (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{\mathbf{k}^{'}}^2 + \imath \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right)\\
-&+ (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon-\mathbf{k}^2+\imath \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon-{\mathbf{k}}^2 + \imath \eta} \right]\\
-=& 4\pi a + (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon-\mathbf{k}^2+\imath \eta N(\mathbf{P},\mathbf{k})} + \frac{\mathscr{P}}{{\mathbf{k}}^2-\mathbf{q}^2} \right] + o(a^3)
+\frac{m}{\hbar^2}\Gamma(\mathbf{q},\mathbf{q},P) =& 4\pi a + (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{\mathbf{k}^{'}}^2 + i \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right)\\
+&+ (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon-\mathbf{k}^2+i \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon-{\mathbf{k}}^2 + i \eta} \right]\\
+=& 4\pi a + (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon-\mathbf{k}^2+i \eta N(\mathbf{P},\mathbf{k})} + \frac{\mathscr{P}}{{\mathbf{k}}^2-\mathbf{q}^2} \right] + o(a^3)
 \end{split} \end{equation}
 
 To the 2nd order in small $a$, we can also see that
@@ -807,28 +807,28 @@ To the 2nd order in small $a$, we can also see that
 
 Thus, substituting these solution into eq.(\ref{Eqs2.7.25}), we finally obtain:
 \begin{equation} \label{Eqs2.7.27} \begin{split}
-\hbar \Sigma^{\bigstar}(p) =& -\imath \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k) \Gamma(\mathbf{q},\mathbf{q},P)\\
+\hbar \Sigma^{\bigstar}(p) =& -i \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k) \Gamma(\mathbf{q},\mathbf{q},P)\\
 \equiv& \hbar \Sigma_1^{\bigstar}(p) + \hbar \Sigma_2^{\bigstar}(p) + o((k_F a)^3)
 \end{split} \end{equation}
 
 \begin{equation*} \label{Eqs2.7.27'} \tag{2.7.27'}
-\hbar \Sigma_1^{\bigstar}(p) = -\imath \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k) \mathrm{e}^{\imath k_0 0 +} \cdot \frac{4\pi a \hbar^2}{m}
+\hbar \Sigma_1^{\bigstar}(p) = -i \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k) \mathrm{e}^{i k_0 0 +} \cdot \frac{4\pi a \hbar^2}{m}
 \end{equation*}
 
 \begin{equation*} \label{Eqs2.7.27''} \tag{2.7.27''}
-\hbar \Sigma_2^{\bigstar}(p) = -\imath \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k) \mathrm{e}^{\imath k_0 0 +} \times (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}^{'}}{(2\pi)^3}\left[ \frac{N(\mathbf{P},\mathbf{k}^{'})}{\epsilon-{\mathbf{k}^{'}}^2 + \imath \eta N(\mathbf{P},\mathbf{k}^{'})} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right]
+\hbar \Sigma_2^{\bigstar}(p) = -i \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k) \mathrm{e}^{i k_0 0 +} \times (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}^{'}}{(2\pi)^3}\left[ \frac{N(\mathbf{P},\mathbf{k}^{'})}{\epsilon-{\mathbf{k}^{'}}^2 + i \eta N(\mathbf{P},\mathbf{k}^{'})} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right]
 \end{equation*}
 
 where $\Sigma_1^{\bigstar}(p)$ is the first order in $k_F a$, while $\Sigma_2^{\bigstar}(p)$ is the 2nd order in $k_F a$.
 
-We put $\mathrm{e}^{\imath k_0 0+}$ in order to this frequency integral to be well-defined.
+We put $\mathrm{e}^{i k_0 0+}$ in order to this frequency integral to be well-defined.
 
 The reason for choosing positive small number instead of negative small number is essentially same as that explained in the item \textcircled{7} of Feynman's rule in the momentum space.
 
 With this phase factor in mind, one can easily see that $\Sigma_1^{\bigstar}$ is indeed on the first order in $k_F a$.
 
 \begin{equation} \label{Eqs2.7.28} \begin{split}
-\hbar \Sigma_1^{\bigstar}(p) =& -\imath \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{4\pi a \hbar^2}{m} \int \frac{\mathrm{d}k_0}{2\pi} \mathrm{e}^{\imath k_0 0+} \left[ \frac{\theta(k-k_F)}{k_0-\omega_k + \imath \eta} + \frac{\theta(k_F-k)}{k_0-\omega_k-\imath \eta} \right]\\
+\hbar \Sigma_1^{\bigstar}(p) =& -i \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{4\pi a \hbar^2}{m} \int \frac{\mathrm{d}k_0}{2\pi} \mathrm{e}^{i k_0 0+} \left[ \frac{\theta(k-k_F)}{k_0-\omega_k + i \eta} + \frac{\theta(k_F-k)}{k_0-\omega_k-i \eta} \right]\\
 =& \frac{4\pi a \hbar^2}{m} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(k_F-k)\\
 =&\frac{4\pi a \hbar^2}{m} \cdot \frac{4\pi}{(2\pi)^3} \frac{k_F^3}{3} = \frac{\hbar^2 k_F^2}{m}\cdot\frac{2}{3\pi} k_F a
 \end{split} \end{equation}
@@ -840,11 +840,11 @@ Namely, according to eqs.(\ref{Eqs2.7.15'}) \& (\ref{Eqs2.7.19}) $\epsilon$ is g
 
 Thus we obtain $\Sigma_2$ as
 \[ \allowdisplaybreaks \begin{split}
-\hbar\Sigma_2^{\bigstar}(p)=&-\imath \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d}k_0}{2\pi}\mathrm{e}^{\imath k_0 0 +}\\
-& \times \left[ \frac{\theta(|\mathbf{k}|-k_F)}{k_0-\omega_{\mathbf{k}} +\imath \eta} + \frac{\theta(k_F-|k|)}{k_0-\omega_{\mathbf{k}}-\imath \eta} \right]\\
-&\times (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}^{'}}{(2\pi)^3}\left[ \frac{N(\mathbf{P},\mathbf{k}^{'})}{\frac{m}{\hbar}p_0 + \frac{m}{\hbar} k_0 - \frac{\mathbf{P}^2}{4} - {\mathbf{k}^{'}}^2+\imath \eta N(\mathbf{P},\mathbf{k}^{'})} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right]\\
-=& -\imath (4\pi a)^2 \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3}  \int \frac{\mathrm{d}^3\mathbf{k}^{'}}{(2\pi)^3} (-2\pi \imath) \frac{1}{2\pi}\\
-&\left\{ \frac{\theta(|\mathbf{k}|-k_F)\delta_{N,-1} N}{\frac{m}{\hbar}p_0+\frac{m}{\hbar}\omega_{\mathbf{k}}-\frac{\mathbf{P}^2}{4}-{\mathbf{k}^{'}}^2-\imath \eta} - \frac{\theta(k_F-|\mathbf{k}|)\delta_{N,1} N}{\frac{m}{\hbar}p_0+\frac{m}{\hbar}\omega_{\mathbf{k}}-\frac{\mathbf{P}^2}{4}-{\mathbf{k}^{'}}^2+\imath \eta} - \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2}\theta(k_F-|\mathbf{k}|) \right\}
+\hbar\Sigma_2^{\bigstar}(p)=&-i \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d}k_0}{2\pi}\mathrm{e}^{i k_0 0 +}\\
+& \times \left[ \frac{\theta(|\mathbf{k}|-k_F)}{k_0-\omega_{\mathbf{k}} +i \eta} + \frac{\theta(k_F-|k|)}{k_0-\omega_{\mathbf{k}}-i \eta} \right]\\
+&\times (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}^{'}}{(2\pi)^3}\left[ \frac{N(\mathbf{P},\mathbf{k}^{'})}{\frac{m}{\hbar}p_0 + \frac{m}{\hbar} k_0 - \frac{\mathbf{P}^2}{4} - {\mathbf{k}^{'}}^2+i \eta N(\mathbf{P},\mathbf{k}^{'})} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right]\\
+=& -i (4\pi a)^2 \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3}  \int \frac{\mathrm{d}^3\mathbf{k}^{'}}{(2\pi)^3} (-2\pi i) \frac{1}{2\pi}\\
+&\left\{ \frac{\theta(|\mathbf{k}|-k_F)\delta_{N,-1} N}{\frac{m}{\hbar}p_0+\frac{m}{\hbar}\omega_{\mathbf{k}}-\frac{\mathbf{P}^2}{4}-{\mathbf{k}^{'}}^2-i \eta} - \frac{\theta(k_F-|\mathbf{k}|)\delta_{N,1} N}{\frac{m}{\hbar}p_0+\frac{m}{\hbar}\omega_{\mathbf{k}}-\frac{\mathbf{P}^2}{4}-{\mathbf{k}^{'}}^2+i \eta} - \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2}\theta(k_F-|\mathbf{k}|) \right\}
 \end{split} \]
 
 using
@@ -853,8 +853,8 @@ using
 
 \begin{equation} \label{Eqs2.7.29} \begin{split}
 \hbar \Sigma_2^{\bigstar}(p)=& (4\pi a)^2 \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3}  \int \frac{\mathrm{d}^3\mathbf{k}^{'}}{(2\pi)^3} \\
-\times&\{ \frac{\theta(k_F-|\mathbf{k}|)\theta(|\frac{1}{2}\mathbf{P}+\mathbf{k}^{'}|-k_F)\theta(|\frac{1}{2}\mathbf{P}-\mathbf{k}^{'}|-k_F)}{\frac{m}{\hbar}p_0-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2+\imath \eta}\\
-&+ \frac{\theta(|\mathbf{k}|-k_F)\theta(k_F-|\frac{1}{2}\mathbf{P}+\mathbf{k}^{'}|)\theta(k_F-|\frac{1}{2}\mathbf{P}-\mathbf{k}^{'}|)}{\frac{m}{\hbar}p_0-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2-\imath \eta}\\
+\times&\{ \frac{\theta(k_F-|\mathbf{k}|)\theta(|\frac{1}{2}\mathbf{P}+\mathbf{k}^{'}|-k_F)\theta(|\frac{1}{2}\mathbf{P}-\mathbf{k}^{'}|-k_F)}{\frac{m}{\hbar}p_0-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2+i \eta}\\
+&+ \frac{\theta(|\mathbf{k}|-k_F)\theta(k_F-|\frac{1}{2}\mathbf{P}+\mathbf{k}^{'}|)\theta(k_F-|\frac{1}{2}\mathbf{P}-\mathbf{k}^{'}|)}{\frac{m}{\hbar}p_0-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2-i \eta}\\
 &+\frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2}\theta(k_F-|\mathbf{k}|) \}
 \end{split} \end{equation}
 
@@ -865,7 +865,7 @@ where the one-particle spectrum can be calculated as a pole of this Green's func
 
 The pole of this function is generally complex value:
 \begin{equation} \label{Eqs2.7.30}
-p_0 = k^{-1}\epsilon_{\mathbf{p}} +\imath \gamma_p,
+p_0 = k^{-1}\epsilon_{\mathbf{p}} +i \gamma_p,
 \end{equation}
 
 which satisfies this equation:
@@ -891,14 +891,14 @@ or
 p_0 = \frac{\hbar \mathbf{p}^2}{2m}+\frac{\hbar k_F^2}{m}\cdot\frac{2 k_F a}{3\pi} + \Sigma_2^{\bigstar}(\mathbf{p},\frac{\hbar \mathbf{p}^2}{2m})
 \end{equation}
 \[ \begin{split}=&\frac{\hbar \mathbf{p}^2}{2m}+\frac{\hbar k_F^2}{m}\cdot\frac{2 k_F a}{3\pi} + \frac{\hbar}{m}16\pi^2 a^2 \int \frac{\mathrm{d}^3 \mathbf{k} \mathrm{d}^3 \mathbf{k}^{'} }{(2\pi)^6} \\
-& [  \frac{\theta(k_F-|\mathbf{k}|)\theta(|\frac{1}{2}\mathbf{P}+\mathbf{k}|-k_F)\theta(|\frac{1}{2}\mathbf{P}-\mathbf{k}|-k_F)}{\frac{1}{2}\mathbf{p}^2-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2+\imath \eta} \\
-&+ \frac{\theta(|\mathbf{k}|-k_F)\theta(k_F-|\frac{1}{2}\mathbf{P}+\mathbf{k}|)\theta(k_F-|\frac{1}{2}\mathbf{P}-\mathbf{k}|)}{\frac{1}{2}\mathbf{p}^2-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2-\imath \eta}\\
+& [  \frac{\theta(k_F-|\mathbf{k}|)\theta(|\frac{1}{2}\mathbf{P}+\mathbf{k}|-k_F)\theta(|\frac{1}{2}\mathbf{P}-\mathbf{k}|-k_F)}{\frac{1}{2}\mathbf{p}^2-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2+i \eta} \\
+&+ \frac{\theta(|\mathbf{k}|-k_F)\theta(k_F-|\frac{1}{2}\mathbf{P}+\mathbf{k}|)\theta(k_F-|\frac{1}{2}\mathbf{P}-\mathbf{k}|)}{\frac{1}{2}\mathbf{p}^2-\frac{1}{2}\mathbf{p}^2+\mathbf{q}^2-{\mathbf{k}^{'}}^2-i \eta}\\
 &-\frac{\mathscr{P}}{\mathbf{q}^2-{\mathbf{k}^{'}}^2}\theta(k_F-|\mathbf{k}|) ]
 \end{split} \]
 \begin{equation} \label{Eqs2.7.33} \begin{split}
 =& \frac{\hbar \mathbf{p}^2}{2m} + \frac{\hbar^2 k_F^2}{m} \{ \frac{2 k_F a}{3\pi} + 16 \pi^2 (k_F a)^2 \times\\
-&\int \frac{\mathrm{d}^3 \mathbf{k} \mathrm{d}^3 \mathbf{k}^{'} }{(2\pi)^6} [ \frac{\theta(1-|\mathbf{k}|)\theta(|\frac{1}{2}\mathbf{P}+\mathbf{k}|-1)\theta(|\frac{1}{2}\mathbf{P}-\mathbf{k}|-1)}{\mathbf{q}^2-{\mathbf{k}^{'}}^2+\imath \eta} \\
-&+ \frac{\theta(|\mathbf{k}|-1)\theta(1-|\frac{1}{2}\mathbf{P}+\mathbf{k}|)\theta(1-|\frac{1}{2}\mathbf{P}-\mathbf{k}|)}{\mathbf{q}^2-{\mathbf{k}^{'}}^2-\imath \eta} \\
+&\int \frac{\mathrm{d}^3 \mathbf{k} \mathrm{d}^3 \mathbf{k}^{'} }{(2\pi)^6} [ \frac{\theta(1-|\mathbf{k}|)\theta(|\frac{1}{2}\mathbf{P}+\mathbf{k}|-1)\theta(|\frac{1}{2}\mathbf{P}-\mathbf{k}|-1)}{\mathbf{q}^2-{\mathbf{k}^{'}}^2+i \eta} \\
+&+ \frac{\theta(|\mathbf{k}|-1)\theta(1-|\frac{1}{2}\mathbf{P}+\mathbf{k}|)\theta(1-|\frac{1}{2}\mathbf{P}-\mathbf{k}|)}{\mathbf{q}^2-{\mathbf{k}^{'}}^2-i \eta} \\
 &-\frac{\mathscr{P}}{\mathbf{q}^2-{\mathbf{k}^{'}}^2}\theta(1-|\mathbf{k}|) ] + o\left( (k_F a)^3 \right)
 \}
 \end{split}\end{equation}
@@ -1068,49 +1068,49 @@ V(\mathbf{x}-\mathbf{x}^{'})\times \left[ \langle \tilde{n}(\mathbf{x})\tilde{n}
 
 To make use of the diagramatic analysis, let us introduce a time-ordered density-density correlation function.
 \begin{equation} \label{Eqs2.8.2}
-\imath D^\lambda(x,x^{'}) \equiv \frac{\langle \Psi_0(\lambda)|\Gamma[\tilde{n}_{H(\lambda)}(x)\tilde{n}_{H(\lambda)}(x^{'})]|\Psi_0(\lambda) \rangle}{\langle \Psi_0(\lambda)|\Psi_0(\lambda) \rangle}
+i D^\lambda(x,x^{'}) \equiv \frac{\langle \Psi_0(\lambda)|\Gamma[\tilde{n}_{H(\lambda)}(x)\tilde{n}_{H(\lambda)}(x^{'})]|\Psi_0(\lambda) \rangle}{\langle \Psi_0(\lambda)|\Psi_0(\lambda) \rangle}
 \end{equation}
 
 where both $x$ and $x^{'}$ are four-component coordinate vector $x\equiv(\mathbf{x},t)$, $x^{'}\equiv(\mathbf{x}^{'},t^{'})$.
 
 In terms of this, the r.h.s. can be rewritten as:
 \[= \frac{\lambda}{2}\int \mathrm{d}^3\mathbf{x}\mathrm{d}^3\mathbf{x}^{'}
-V(\mathbf{x}-\mathbf{x}^{'})\times \left[ \imath D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t) + n^2-\delta^3(\mathbf{x}-\mathbf{x}^{'}) n \right]
+V(\mathbf{x}-\mathbf{x}^{'})\times \left[ i D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t) + n^2-\delta^3(\mathbf{x}-\mathbf{x}^{'}) n \right]
 \]
 
 where this is just an equal-time density-density correlation function.
 
 We can further decompose the r.h.s. into the contribution at $\lambda=0$ and the other.
 \[ \begin{split}=& \frac{\lambda}{2}\int \mathrm{d}^3\mathbf{x}\mathrm{d}^3\mathbf{x}^{'}
-V(\mathbf{x}-\mathbf{x}^{'})\times \left[ \imath D^0(\mathbf{x},t;\mathbf{x}^{'},t) + n^2-\delta^3(\mathbf{x}-\mathbf{x}^{'}) n \right]\\
+V(\mathbf{x}-\mathbf{x}^{'})\times \left[ i D^0(\mathbf{x},t;\mathbf{x}^{'},t) + n^2-\delta^3(\mathbf{x}-\mathbf{x}^{'}) n \right]\\
 &+\frac{\lambda}{2}\int \mathrm{d}^3\mathbf{x}\mathrm{d}^3\mathbf{x}^{'}
-V(\mathbf{x}-\mathbf{x}^{'})\times \left[ \imath D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t) -  \imath D^0(\mathbf{x},t;\mathbf{x}^{'},t) \right]\\
+V(\mathbf{x}-\mathbf{x}^{'})\times \left[ i D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t) -  i D^0(\mathbf{x},t;\mathbf{x}^{'},t) \right]\\
 =& \lambda \langle \hat{H}_1 \rangle_{\lambda=0} + \frac{\lambda}{2}\int \mathrm{d}^3\mathbf{x}\mathrm{d}^3\mathbf{x}^{'}
-V(\mathbf{x}-\mathbf{x}^{'})\times \left[ \imath D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t) -  \imath D^0(\mathbf{x},t;\mathbf{x}^{'},t) \right]
+V(\mathbf{x}-\mathbf{x}^{'})\times \left[ i D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t) -  i D^0(\mathbf{x},t;\mathbf{x}^{'},t) \right]
 \end{split}\]
 
 substituting this back into eq.(\ref{Eqs2.8.1}), we obtain\footnote{The underlined part equals to $\langle \Psi_0(\lambda=0)|H|\Psi_0(\lambda=0)\rangle$.}
 \begin{equation} \label{Eqs2.8.3} \begin{split}
 E_0(\lambda=1) =& \langle H_0 \rangle_{\lambda=0} + \int_{\lambda=0}^{\lambda=1} \frac{\mathrm{d}\lambda}{\lambda} \left\{ 
-\lambda\langle H_1 \rangle_{\lambda=0} + \frac{\lambda}{2}\int \mathrm{d}^3 \mathbf{x} \mathrm{d}^3 \mathbf{x}^{'} V(\mathbf{x}-\mathbf{x}^{'})\right. \\&\left.\times \left[ \imath D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t)- \imath D^0(\mathbf{x},t;\mathbf{x}^{'},t)\right] \right\}\\
-=& \langle H \rangle_{\lambda=0} + \frac{1}{2}\int_0^1 \frac{\mathrm{d}\lambda}{\lambda} \int \mathrm{d}^3 \mathbf{x} \mathrm{d}^3 \mathbf{x}^{'} \lambda V(\mathbf{x}-\mathbf{x}^{'})\left[ \imath D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t)- \imath D^0(\mathbf{x},t;\mathbf{x}^{'},t) \right]\\
+\lambda\langle H_1 \rangle_{\lambda=0} + \frac{\lambda}{2}\int \mathrm{d}^3 \mathbf{x} \mathrm{d}^3 \mathbf{x}^{'} V(\mathbf{x}-\mathbf{x}^{'})\right. \\&\left.\times \left[ i D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t)- i D^0(\mathbf{x},t;\mathbf{x}^{'},t)\right] \right\}\\
+=& \langle H \rangle_{\lambda=0} + \frac{1}{2}\int_0^1 \frac{\mathrm{d}\lambda}{\lambda} \int \mathrm{d}^3 \mathbf{x} \mathrm{d}^3 \mathbf{x}^{'} \lambda V(\mathbf{x}-\mathbf{x}^{'})\left[ i D^\lambda(\mathbf{x},t;\mathbf{x}^{'},t)- i D^0(\mathbf{x},t;\mathbf{x}^{'},t) \right]\\
 =&\underline{\langle H \rangle_{\lambda=0}} + E_{corr}
 \end{split} \end{equation}
 
 To calculate the density-density correaltion function, let us briefly summarize the Feynman's rule for the two-particle Green's function.
 \begin{equation} \label{Eqs2.8.4}
-G_{\alpha,\beta;\gamma,\delta}(\mathbf{x}_1,t_1,\mathbf{x}_2,t_2;\mathbf{x}_1^{'},t_1^{'},\mathbf{x}_2^{'},t_2^{'}) = (-\imath)^2 \frac{\langle \Psi_0 | \Gamma[\hat{\psi}_\alpha(\mathbf{x}_1,t_1) \hat{\psi}_\beta(\mathbf{x}_2, t_2) \hat{\psi}_\gamma^\dagger(\mathbf{x}_2^{'},t_2^{'}) \hat{\psi}_\delta^\dagger(\mathbf{x}_1^{'},t_1^{'})]|\Psi_0\rangle}{\langle \Psi_0 | \Psi_0 \rangle}
+G_{\alpha,\beta;\gamma,\delta}(\mathbf{x}_1,t_1,\mathbf{x}_2,t_2;\mathbf{x}_1^{'},t_1^{'},\mathbf{x}_2^{'},t_2^{'}) = (-i)^2 \frac{\langle \Psi_0 | \Gamma[\hat{\psi}_\alpha(\mathbf{x}_1,t_1) \hat{\psi}_\beta(\mathbf{x}_2, t_2) \hat{\psi}_\gamma^\dagger(\mathbf{x}_2^{'},t_2^{'}) \hat{\psi}_\delta^\dagger(\mathbf{x}_1^{'},t_1^{'})]|\Psi_0\rangle}{\langle \Psi_0 | \Psi_0 \rangle}
 \end{equation}
 
 where $| \Psi_0 \rangle$ is the ground state wavefunction of the interacting Fermi system.
 
 So far, these fermion fields are all given in the Heisenberg picture.
 
-Using the same mathematics as we did for eq.(\ref{Eqs2.4.3}), we can reexpress this in terms of the interaction picture.
-\[ \begin{split} \imath^2 G_{\alpha,\beta;\gamma,\delta}(\mathbf{x}_1,t_1,\mathbf{x}_2,t_2;\mathbf{x}_1^{'},t_1^{'},\mathbf{x}_2^{'},t_2^{'}) =& \sum_{\nu=0}^{+\infty} \left( \frac{-\imath}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu \\
+Using the same mathematics as we did for eq.(\ref{2.4.3}), we can reexpress this in terms of the interaction picture.
+\[ \begin{split} i^2 G_{\alpha,\beta;\gamma,\delta}(\mathbf{x}_1,t_1,\mathbf{x}_2,t_2;\mathbf{x}_1^{'},t_1^{'},\mathbf{x}_2^{'},t_2^{'}) =& \sum_{\nu=0}^{+\infty} \left( \frac{-i}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu \\
 &\times \frac{\langle \Phi_0 | \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_\nu)\psi_\alpha(x_1) \psi_\beta(x_2) \psi_\gamma^\dagger(x_2^{'}) \psi_\delta^\dagger(x_1^{'})]|\Phi_0\rangle}{\langle \Phi_0 | S | \Phi_0  \rangle}
 \end{split} \]
-\[ S = \sum_{\nu=0}^{+\infty}\left( \frac{-\imath}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_\nu)] \]
+\[ S = \sum_{\nu=0}^{+\infty}\left( \frac{-i}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_\nu)] \]
 
 where $| \Phi_0 \rangle$ is the ground state wavefunction in non-interacting system.
 
@@ -1132,10 +1132,10 @@ As we did in the single-particle Green's function, $\nu$-numbers of interaction 
 The temporal arguments of the former group of interaction Hamiltonian and those of the latter are nothing to do with each other.
 
 As such, we can rewrite this as
-\[ \begin{split} &(\imath)^2\tilde{G}^{(\nu)}_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_1^{'},x_2^{'})\\
- =& \left( \frac{-\imath}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu \\
+\[ \begin{split} &(i)^2\tilde{G}^{(\nu)}_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_1^{'},x_2^{'})\\
+ =& \left( \frac{-i}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu \\
 &\times \langle \Phi_0 | \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_\nu)\hat{\psi}_\alpha(x_1) \hat{\psi}_\beta(x_2) \hat{\psi}_\gamma^\dagger(x_2^{'}) \hat{\psi}_\delta^\dagger(x_1^{'})]|\Phi_0\rangle\\
-=& \sum_{n=0}^{\nu}\left( \frac{-\imath}{\hbar} \right)^\nu \frac{1}{\nu!}\cdot\frac{\nu!}{n!(\nu-n)!}\\
+=& \sum_{n=0}^{\nu}\left( \frac{-i}{\hbar} \right)^\nu \frac{1}{\nu!}\cdot\frac{\nu!}{n!(\nu-n)!}\\
 &\times\int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_n
 \langle \Phi_0 | \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_n)\hat{\psi}_\alpha(x_1) \hat{\psi}_\beta(x_2) \hat{\psi}_\gamma^\dagger(x_2^{'}) \hat{\psi}_\delta^\dagger(x_1^{'})]|\Phi_0\rangle\\
 &\times\int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_{\nu-n}
@@ -1145,18 +1145,18 @@ As such, we can rewrite this as
 Here we put this factor, because the numbers of ways of dividing $\nu$-number of interaction Hamiltonians into $n$-numbers of interaction Hamiltonians and $(\nu-n)$-numbers of interaction Hamiltonians.
 
 When we take the summation over $\nu$, the denominator can be decomposed into two part:
-\[ \begin{split} &(\imath)^2\sum_{\nu=0}^{+\infty}\tilde{G}^{(\nu)}_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_1^{'},x_2^{'}) \\
-=& \sum_{n=0}^{+\infty}\left( \frac{-\imath}{\hbar} \right)^n \frac{1}{n!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_n\\&\times
+\[ \begin{split} &(i)^2\sum_{\nu=0}^{+\infty}\tilde{G}^{(\nu)}_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_1^{'},x_2^{'}) \\
+=& \sum_{n=0}^{+\infty}\left( \frac{-i}{\hbar} \right)^n \frac{1}{n!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_n\\&\times
 \langle \Phi_0 | \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_n)\hat{\psi}_\alpha(x_1) \hat{\psi}_\beta(x_2) \hat{\psi}_\gamma^\dagger(x_2^{'}) \hat{\psi}_\delta^\dagger(x_1^{'})]|\Phi_0\rangle\\
-&\times\sum_{m=0}^{+\infty}\left( \frac{-\imath}{\hbar} \right)^m \frac{1}{m!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_m
+&\times\sum_{m=0}^{+\infty}\left( \frac{-i}{\hbar} \right)^m \frac{1}{m!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_m
 \langle \Phi_0 | \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_m)]|\Phi_0\rangle
 \end{split} \]
 
 where the latter part can be set off by the denominator.
 
 As a result, the two-particle Green's function can be also given by the sum of all connected Feynman diagrams.
-\[ \begin{split} &(\imath)^2 G_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_1^{'},x_2^{'}) \\
-=& \sum_{\nu=0}^{+\infty}\left( \frac{-\imath}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu\\&\times
+\[ \begin{split} &(i)^2 G_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_1^{'},x_2^{'}) \\
+=& \sum_{\nu=0}^{+\infty}\left( \frac{-i}{\hbar} \right)^\nu \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1 \ldots \int_{-\infty}^{+\infty}\mathrm{d}t_\nu\\&\times
 \langle \Phi_0 | \Gamma[\hat{H}_1(t_1)\ldots\hat{H}_1(t_\nu) \psi_\alpha(x_1) \psi_\beta(x_2) \psi_\gamma^\dagger(x_2^{'}) \psi_\delta^\dagger(x_1^{'})]|\Phi_0\rangle
 \end{split} \]
 
@@ -1198,10 +1198,10 @@ The other is to connect $(\delta,x_1^{'})$ with $(\beta,x_2)$ and $(\gamma,x_2^{
 
 * This additional $(-1)$ factor simply comes from the $(-1)$ factor which we get when exchanging these two creation operators.
 
-The $n$-th order term has an explicit numerical factor $\left( \frac{-\imath}{\hbar} \right)^n$, while the $(2n+2)$ contractions of field operators contribute an additional factor $(\imath)^{2n+2}$.
+The $n$-th order term has an explicit numerical factor $\left( \frac{-i}{\hbar} \right)^n$, while the $(2n+2)$ contractions of field operators contribute an additional factor $(i)^{2n+2}$.
 
-On top of this, we have $(-\imath)^2$ factor, in the definition of the two-particle Green's function.
-\item Thus, to compute $G_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_2^{'},x_1^{'})$, we assign a factor $(-\imath)^2\cdot\left( \frac{-\imath}{\hbar} \right)^n(\imath)^{2n+2} = \left( \frac{\imath}{\hbar} \right)^n$ to every $n$-th order term.
+On top of this, we have $(-i)^2$ factor, in the definition of the two-particle Green's function.
+\item Thus, to compute $G_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_2^{'},x_1^{'})$, we assign a factor $(-i)^2\cdot\left( \frac{-i}{\hbar} \right)^n(i)^{2n+2} = \left( \frac{i}{\hbar} \right)^n$ to every $n$-th order term.
 
 \item Finally, for a Green's function with equal time variables must be interpreted as $G_{\alpha,\beta}^0 (\mathbf{x},t;\mathbf{x}^{'},t+0)$.
 \end{enumerate}
@@ -1211,12 +1211,12 @@ On top of this, we have $(-\imath)^2$ factor, in the definition of the two-parti
 These are all about the Feynman's rule for two-particle Green's function in the real space representation.
 
 With this Feynman's rule in mind, let us go back to the density-density correlation function:
-\[\imath D(x,x^{'}) = \frac{\langle \Psi_0|\Gamma[\tilde{n}_H(x)\tilde{n}_H(x^{'})]|\Psi_0\rangle} {\langle \Psi_0|\Psi_0 \rangle}\]
+\[i D(x,x^{'}) = \frac{\langle \Psi_0|\Gamma[\tilde{n}_H(x)\tilde{n}_H(x^{'})]|\Psi_0\rangle} {\langle \Psi_0|\Psi_0 \rangle}\]
 
 where we omit the fictitious mechanical parameter $\lambda$.
 
 The r.h.s. can be calculated as follows:
-\[ \begin{split} \imath D(x,x^{'})
+\[ \begin{split} i D(x,x^{'})
 =&\frac{1}{\langle \Psi_0 | \Psi_0 \rangle}\left\{
 \begin{split} \langle \Psi_0|\Gamma[&\{\sum_\alpha \psi_{H,\alpha}^\dagger(x)\psi_{H,\alpha}(x)-\langle n_H (x) \rangle\}\\
 &\{\sum_\beta \psi_{H,\beta}^\dagger(x^{'}) \psi_{H,\beta}(x^{'})-\langle n_H (x^{'}) \rangle\}]|\Psi_0 \rangle
@@ -1241,16 +1241,16 @@ Connected Feynman diagrams to $G_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'})$, 
 
 Since each of these two are described by single particle Green's functions $G_{\alpha,\alpha}(x,x)$ and $G_{\beta,\beta}(x^{'},x^{'})$ respectively, such Feynman diagrams are completely cancelled by this second term.
 
-Such a cancellation becomes possible, because any $n$-th order term in this class of diagrams are accompanied by $\left(\frac{\imath}{\hbar}\right)^n (-1)^F$ where $F$ denotes the number of fermion loop.
+Such a cancellation becomes possible, because any $n$-th order term in this class of diagrams are accompanied by $\left(\frac{i}{\hbar}\right)^n (-1)^F$ where $F$ denotes the number of fermion loop.
 
 Such a factor can be always decomposed into two part:
-\[ \left(\frac{\imath}{\hbar}\right)^n (-1)^F=\left(\frac{\imath}{\hbar}\right)^{n_1} (-1)^{F_1}\cdot\left(\frac{\imath}{\hbar}\right)^{n_2} (-1)^{F_2} \]
+\[ \left(\frac{i}{\hbar}\right)^n (-1)^F=\left(\frac{i}{\hbar}\right)^{n_1} (-1)^{F_1}\cdot\left(\frac{i}{\hbar}\right)^{n_2} (-1)^{F_2} \]
 
 each of which can be ascribed to these two part respectively.
 
 Thus.
 \[\begin{split}
--\imath D(x,x^{'})=& \sum_{\alpha,\beta} G_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'}) - \sum_{\alpha}G_{\alpha,\alpha}(x,x)\cdot\sum_{\beta}G_{\beta,\beta}(x^{'},x^{'})\\
+-i D(x,x^{'})=& \sum_{\alpha,\beta} G_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'}) - \sum_{\alpha}G_{\alpha,\alpha}(x,x)\cdot\sum_{\beta}G_{\beta,\beta}(x^{'},x^{'})\\
 =& \sum_{\alpha,\beta}G_{\alpha,\beta;\beta,\alpha}^{(C)}(x,x^{'};x^{'},x)
 \end{split}\]
 
@@ -1267,7 +1267,7 @@ As in eq.(\ref{Eqs2.8.3}), to obtain the ground state energy, we need the densit
 
 When this $\lambda$ is taken to be zero, we don't have any interaction potential. In such a case, we only have two way of contracting the fermion fields \underline{here}.
 \[\begin{split}
--\imath D^{\lambda=0}(x,x^{'})=& \sum_{\alpha,\beta} G^{\lambda=0}_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'}) - \sum_{\alpha}G^{\lambda=0}_{\alpha,\alpha}(x,x)\cdot\sum_{\beta}G^{\lambda=0}_{\beta,\beta}(x^{'},x^{'})
+-i D^{\lambda=0}(x,x^{'})=& \sum_{\alpha,\beta} G^{\lambda=0}_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'}) - \sum_{\alpha}G^{\lambda=0}_{\alpha,\alpha}(x,x)\cdot\sum_{\beta}G^{\lambda=0}_{\beta,\beta}(x^{'},x^{'})
 \end{split}\]
 
 One is {\label{Fig2.8.7} \includegraphics[width=0.05\textwidth]{2-8-7.png}} and the other is {\label{Fig2.8.8} \includegraphics[width=0.05\textwidth]{2-8-8.png}}.
@@ -1275,12 +1275,12 @@ One is {\label{Fig2.8.7} \includegraphics[width=0.05\textwidth]{2-8-7.png}} and 
 The latter one is cancelled by the 2nd term($\sum_{\beta} G^{\lambda=0}_{\beta,\beta}(x^{'},x^{'})$), so that the density-density correlation function is given by the former one.
 
 Following the Feynman's rule described so far, the analytic expression for the former one is given as follows:
-\[\begin{split}-\imath D^{\lambda=0}(x,x^{'})=&G^{\lambda=0,(C)}_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'})\\
+\[\begin{split}-i D^{\lambda=0}(x,x^{'})=&G^{\lambda=0,(C)}_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'})\\
 =& \underline{(-)} G^0_{\beta,\alpha}(x^{'},x) G^0_{\alpha,\beta}(x,x^{'})\end{split}\]
 
 where this underlined $(-)$ sign comes from the interchange between these two fields.
 
-\[D^{\lambda=0}(x,x^{'})=-\imath G^0_{\alpha,\beta}(x,x^{'}) G^0_{\beta,\alpha}(x^{'},x) \equiv \hbar \Pi^0(x,x^{'})\]
+\[D^{\lambda=0}(x,x^{'})=-i G^0_{\alpha,\beta}(x,x^{'}) G^0_{\beta,\alpha}(x^{'},x) \equiv \hbar \Pi^0(x,x^{'})\]
 
 where we call this as a bare polarization part.
 
@@ -1295,10 +1295,10 @@ Since our system is spatially and temporally homogeneous, the correlation functi
 \[D^{\lambda}(x,x^{'}) = D^{\lambda}(\mathbf{x}-\mathbf{x}^{'},t-t^{'})\]
 
 so that we can introduce its Fourier series.
-\[=\int \frac{\mathrm{d}\mathbf{q}}{(2\pi)^3}\int \frac{\mathrm{d} \omega}{2\pi} \mathrm{e}^{\imath \mathbf{q}(\mathbf{x}-\mathbf{x}^{'})-\imath \omega(t-t^{'})}D^{\lambda}(\mathbf{q},\omega)\]
+\[=\int \frac{\mathrm{d}\mathbf{q}}{(2\pi)^3}\int \frac{\mathrm{d} \omega}{2\pi} \mathrm{e}^{i \mathbf{q}(\mathbf{x}-\mathbf{x}^{'})-i \omega(t-t^{'})}D^{\lambda}(\mathbf{q},\omega)\]
 
 In the momentum representation, the bare polarization part is given as follows.
-\[ \hbar \Pi^0(\mathbf{q},\omega) = -\imath \int \frac{\mathrm{d}\mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d}\epsilon}{2\pi} G^0_{\alpha,\beta}(\mathbf{k}+\mathbf{q},\epsilon+\omega)G^0_{\beta,\alpha}(\mathbf{k},\epsilon) \]
+\[ \hbar \Pi^0(\mathbf{q},\omega) = -i \int \frac{\mathrm{d}\mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d}\epsilon}{2\pi} G^0_{\alpha,\beta}(\mathbf{k}+\mathbf{q},\epsilon+\omega)G^0_{\beta,\alpha}(\mathbf{k},\epsilon) \]
 
 and: the corresponding Feynman diagram can be described like this
 \begin{center} \label{Fig2.8.9}
@@ -1335,7 +1335,7 @@ Then, in the same way as we did for the Dyson equation for self-energy, we can a
 
 where this part denotes the proper polarization part, while this wavy line is for interaction potential.
 
-\item This description becomes possible, especially because any $n$-th order Feynman diagram is accompanied by $\left( \frac{\imath}{\hbar} \right)^n \cdot (-1)^{F^{'}}$, where $F^{'}$ stands for the number of fermion loop.
+\item This description becomes possible, especially because any $n$-th order Feynman diagram is accompanied by $\left( \frac{i}{\hbar} \right)^n \cdot (-1)^{F^{'}}$, where $F^{'}$ stands for the number of fermion loop.
 
 \item As is clear from this repetitive structure, this can be rewritten into a self-consistent equation:
 \begin{center} \label{Fig2.8.13}
@@ -1348,20 +1348,20 @@ while this doubly daded one denote a collection of all possible polarization par
 \end{itemize}
 
 This equation is called as Dyson's equation for polarization part and its analytic expression is given like this:
-\[(-\imath \hbar)\Pi(q) = (-\imath \hbar)\Pi^{\bigstar}(q)+(-\imath \hbar)\Pi^{\bigstar}(q) \cdot \frac{\imath}{\hbar} V(q) (-\imath\hbar)\Pi(q)\]
+\[(-i \hbar)\Pi(q) = (-i \hbar)\Pi^{\bigstar}(q)+(-i \hbar)\Pi^{\bigstar}(q) \cdot \frac{i}{\hbar} V(q) (-i\hbar)\Pi(q)\]
 
 Here $V(q)$ stands for the Fourier transform of the interaction potential, which corresponds to this wavy line.
 
 As I mentioned already, we assumed spin-independent interaction potential.
 \[V_{\lambda,\lambda^{'};\mu,\mu^{'}}(\mathbf{x},\mathbf{x}^{'}) = V(\mathbf{x}-\mathbf{x}^{'}) \delta_{\lambda\lambda^{'}}\delta_{\mu\mu^{'}}\]
 
-with $V(\mathbf{q})=\int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-\imath \mathbf{k} \mathbf{x}} V(\mathbf{x})$.
+with $V(\mathbf{q})=\int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-i \mathbf{k} \mathbf{x}} V(\mathbf{x})$.
 
 so that the product between $\Pi_0(q)$ and $V(\mathbf{q})$ and $V(\mathbf{q})$ and $\Pi(q)$ reduces to a single scalar product.
 
-This interaction potential is accompanied by $\left( \frac{\imath}{\hbar} \right)$, which is this. Remember also that both $\Pi_0$ and $\Pi$ are always accompanied by factor $(-\imath \hbar)$ here.
-This factor($-\imath \hbar$) comes from our definition of polarization part:\footnote{see eq.(\ref{Eqs2.8.4})}
-\[-\imath \hbar \Pi(x,x^{'})\equiv -\imath D(x,x^{'}) \equiv (-\imath)^2 \frac{\langle \Psi_0 | \Gamma[\tilde{n}_H(x)\tilde{n}_H(x^{'})]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}\]
+This interaction potential is accompanied by $\left( \frac{i}{\hbar} \right)$, which is this. Remember also that both $\Pi_0$ and $\Pi$ are always accompanied by factor $(-i \hbar)$ here.
+This factor($-i \hbar$) comes from our definition of polarization part:\footnote{see eq.(\ref{Eqs2.8.4})}
+\[-i \hbar \Pi(x,x^{'})\equiv -i D(x,x^{'}) \equiv (-i)^2 \frac{\langle \Psi_0 | \Gamma[\tilde{n}_H(x)\tilde{n}_H(x^{'})]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}\]
 
 Namely, I put this factor in front of the polarization part, in order to make this corresponding r.h.s. to be consistent with definition of two-particle Green's function, for which we can apply Feynman's rule.
 
@@ -1382,17 +1382,17 @@ Here, I put $\lambda$ in order to make explicit the $\lambda$-dependence of the 
 
 substituting this back into eq.(\ref{Eqs2.8.3}), we finally obtain
 \begin{eqnarray}
-E_{corr} =& \frac{\imath}{2} V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \lambda V(q) [D^{\lambda}(q)-D^0(q)]\nonumber\\
-=& \frac{\imath}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \frac{\lambda V(q)\Pi^{\bigstar,\lambda}(q)}{1-\lambda V(q)\Pi^{\bigstar,\lambda}(q)} - \lambda V(q)\Pi^0(q) \right] \label{Eqs2.8.7}\\
-=& \frac{\imath}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ -1 + \frac{1}{1-\lambda V(q)\Pi^{\bigstar,\lambda}(q)} - \lambda V(q)\Pi^0(q) \right] \nonumber\\
-=&\frac{\imath}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \left[ K^{\lambda}(q) \right]^{-1} - 1 - \lambda V(q)\Pi^0(q) \right] \label{Eqs2.8.8}
+E_{corr} =& \frac{i}{2} V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \lambda V(q) [D^{\lambda}(q)-D^0(q)]\nonumber\\
+=& \frac{i}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \frac{\lambda V(q)\Pi^{\bigstar,\lambda}(q)}{1-\lambda V(q)\Pi^{\bigstar,\lambda}(q)} - \lambda V(q)\Pi^0(q) \right] \label{Eqs2.8.7}\\
+=& \frac{i}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ -1 + \frac{1}{1-\lambda V(q)\Pi^{\bigstar,\lambda}(q)} - \lambda V(q)\Pi^0(q) \right] \nonumber\\
+=&\frac{i}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \left[ K^{\lambda}(q) \right]^{-1} - 1 - \lambda V(q)\Pi^0(q) \right] \label{Eqs2.8.8}
 \end{eqnarray}
 
 where $V$ here denote the total volume of the system.
 
 Eq.(\ref{Eqs2.8.8}) can be applied to any homogeneous system with spin-independent interaction.
 
-In the following, however, we specialize to a degenerate electron gas with long-range Coulomb interaction, whose Hamiltonian is already defined in eq.(\ref{Eqs1.8.14}).
+In the following, however, we specialize to a degenerate electron gas with long-range Coulomb interaction, whose Hamiltonian is already defined in eq.(\ref{eq1.8.14}).
 
 As I have already explained there, the uniform positive background precisely cancels the $\mathbf{q}=0$ term in the interaction potential $V(\mathbf{q})$, so that $V(\mathbf{q}=0)$ vanishes.
 
@@ -1429,8 +1429,8 @@ Correspondingly, we have the expansion of ground state energy as
 \[E_{corr} = E_2^r + E_2^b + E_2^c + E_2^d+\ldots\]
 
 where
-\[\begin{split}E_2^r =& \frac{1}{2}\imath V \hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \lambda V_0(q)\Pi^0(q) \right]^2\\
-E_2^{b,c,d} =& \frac{1}{2}\imath V \hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \lambda V_0(q)\Pi^\bigstar_{1,b,c,d}(q) \right]
+\[\begin{split}E_2^r =& \frac{1}{2}i V \hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \lambda V_0(q)\Pi^0(q) \right]^2\\
+E_2^{b,c,d} =& \frac{1}{2}i V \hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \lambda V_0(q)\Pi^\bigstar_{1,b,c,d}(q) \right]
  \end{split}\]
 
 where we named these 3 as $\Pi_{1,b}$, $\Pi_{1,c}$, $\Pi_{1,d}$ respectively.
@@ -1454,9 +1454,9 @@ An idea of ``ring diagram approximation" is to sum up all these singular terms u
 
 Namely, with this effective interaciton potential, these singular terms can be summed up in all order in $\lambda$ as
 \begin{equation} \label{Eqs2.8.9} \begin{split}
-E_r =& \frac{1}{2}\imath V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \sum_{n=2}^\infty [ \lambda V_0(q) \Pi^0(q) ]^n\\
-=& \frac{1}{2}\imath V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \frac{[\lambda V_0(q) \Pi^0(q)]^2}{1-\lambda V_0(q) \Pi^0(q)}\\
-=& \frac{1}{2}\imath V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \lambda V_0(q) \Pi^0(q) \underline{U_r^\lambda(q)} \Pi^0(q)
+E_r =& \frac{1}{2}i V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \sum_{n=2}^\infty [ \lambda V_0(q) \Pi^0(q) ]^n\\
+=& \frac{1}{2}i V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \frac{[\lambda V_0(q) \Pi^0(q)]^2}{1-\lambda V_0(q) \Pi^0(q)}\\
+=& \frac{1}{2}i V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \lambda V_0(q) \Pi^0(q) \underline{U_r^\lambda(q)} \Pi^0(q)
 \end{split}\end{equation}
 
 where the underlined term is the effective interaction potential.
@@ -1482,9 +1482,9 @@ Ring-diagram approximation is equivalent to employing Dyson equation with its pr
 
 Namely, when we replace $\Pi^{\bigstar,\lambda}(q)$ in eq.(\ref{Eqs2.8.7}) by its zero-th order contribution $\Pi^0(q)$, we safely have $E_r$:
 \begin{equation*} \begin{split}
-E_{corr} =&\frac{\imath}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \frac{\lambda V(q) \Pi^{\bigstar,\lambda}(q)}{1- \lambda V(q) \Pi^{\bigstar,\lambda}(q)} - \lambda V(q)\Pi^0(q) \right]\\
-\approx& \frac{\imath}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \frac{\lambda V(q) \Pi^0(q)}{1- \lambda V(q) \Pi^0(q)} - \lambda V(q)\Pi^0(q) \right]\\
-=& \frac{\imath}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \frac{[\lambda V(q) \Pi^0(q)]^2}{1- \lambda V(q) \Pi^0(q)}\\
+E_{corr} =&\frac{i}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \frac{\lambda V(q) \Pi^{\bigstar,\lambda}(q)}{1- \lambda V(q) \Pi^{\bigstar,\lambda}(q)} - \lambda V(q)\Pi^0(q) \right]\\
+\approx& \frac{i}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \left[ \frac{\lambda V(q) \Pi^0(q)}{1- \lambda V(q) \Pi^0(q)} - \lambda V(q)\Pi^0(q) \right]\\
+=& \frac{i}{2} \hbar V \int_0^1 \mathrm{d}\lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \frac{[\lambda V(q) \Pi^0(q)]^2}{1- \lambda V(q) \Pi^0(q)}\\
 =& E_r 
 \end{split}\end{equation*}
 
@@ -1498,17 +1498,17 @@ Where $K_r(q)$ can be regarded as the ring-diagram approximation to the exact di
 
 We next evaluate this lowest-order proper polarization part. $\Pi_0(q)$
 \begin{equation} \label{Eqs2.8.12}
-\Pi_0(q) = - \frac{2\imath}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d} \epsilon}{2\pi} G^0(\mathbf{k}+\mathbf{q},\epsilon+\omega) G^0(\mathbf{k},\epsilon)
+\Pi_0(q) = - \frac{2i}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d} \epsilon}{2\pi} G^0(\mathbf{k}+\mathbf{q},\epsilon+\omega) G^0(\mathbf{k},\epsilon)
 \end{equation}
 
 where this factor 2 comes from the summation over the spin index, using this
 \begin{equation} \label{Eqs2.8.13}
-G^0(\mathbf{k},\epsilon) = \frac{\theta(|\mathbf{k}|-k_F)}{\omega-\omega_{\mathbf{k}}+\imath \eta} + \frac{\theta(k_F - |\mathbf{k}|)}{\omega-\omega_{\mathbf{k}}-\imath \eta}
+G^0(\mathbf{k},\epsilon) = \frac{\theta(|\mathbf{k}|-k_F)}{\omega-\omega_{\mathbf{k}}+i \eta} + \frac{\theta(k_F - |\mathbf{k}|)}{\omega-\omega_{\mathbf{k}}-i \eta}
 \end{equation}
 
 we have
-\[\begin{split}\Pi_0(q) =&- \frac{2\imath}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int_{-\infty}^{+\infty} \frac{\mathrm{d} \epsilon}{2\pi} \times \left\{ \frac{\theta(|\mathbf{k}+\mathbf{q}|-k_F)}{\epsilon+\omega-\omega_{\mathbf{k}+\mathbf{q}} +\imath \eta} + \frac{\theta(k_F - |\mathbf{k}+\mathbf{q}|)}{\epsilon + \omega - \omega_{\mathbf{k}+\mathbf{q}}-\imath \eta} \right\}\\
-&\times \left\{ \frac{\theta(|\mathbf{k}|-k_F)}{\epsilon-\omega_{\mathbf{k}} +\imath \eta} + \frac{\theta(k_F - |\mathbf{k}|)}{\epsilon - \omega_{\mathbf{k}}-\imath \eta} \right\} \end{split}\]
+\[\begin{split}\Pi_0(q) =&- \frac{2i}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int_{-\infty}^{+\infty} \frac{\mathrm{d} \epsilon}{2\pi} \times \left\{ \frac{\theta(|\mathbf{k}+\mathbf{q}|-k_F)}{\epsilon+\omega-\omega_{\mathbf{k}+\mathbf{q}} +i \eta} + \frac{\theta(k_F - |\mathbf{k}+\mathbf{q}|)}{\epsilon + \omega - \omega_{\mathbf{k}+\mathbf{q}}-i \eta} \right\}\\
+&\times \left\{ \frac{\theta(|\mathbf{k}|-k_F)}{\epsilon-\omega_{\mathbf{k}} +i \eta} + \frac{\theta(k_F - |\mathbf{k}|)}{\epsilon - \omega_{\mathbf{k}}-i \eta} \right\} \end{split}\]
 
 Out of this integrand, we have four terms, 2 of which vanish under the integration over $\epsilon$.
 
@@ -1516,12 +1516,12 @@ Namely, product between these two and that between these two have their poles on
 
 Such terms reduce to zero, when we close the contour in the opposite side of the half plane.
 
-Accordingly, we end up a product between these two and that between these two.\[\begin{split}\Pi_0(q) =- \frac{2\imath}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int_{-\infty}^{+\infty} \frac{\mathrm{d} \epsilon}{2\pi} \times &\left\{  \frac{\theta(|\mathbf{k}+\mathbf{q}|-k_F)}{\epsilon+\omega-\omega_{\mathbf{k}+\mathbf{q}} +\imath \eta} \cdot \frac{\theta(k_F - |\mathbf{k}|)}{\epsilon - \omega_{\mathbf{k}}-\imath \eta} \right.\\
-&\left.+ \frac{\theta(k_F - |\mathbf{k}+\mathbf{q}|)}{\epsilon + \omega - \omega_{\mathbf{k}+\mathbf{q}}-\imath \eta} \cdot \frac{\theta(|\mathbf{k}|-k_F)}{\epsilon-\omega_{\mathbf{k}} +\imath \eta} \right\} 
+Accordingly, we end up a product between these two and that between these two.\[\begin{split}\Pi_0(q) =- \frac{2i}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int_{-\infty}^{+\infty} \frac{\mathrm{d} \epsilon}{2\pi} \times &\left\{  \frac{\theta(|\mathbf{k}+\mathbf{q}|-k_F)}{\epsilon+\omega-\omega_{\mathbf{k}+\mathbf{q}} +i \eta} \cdot \frac{\theta(k_F - |\mathbf{k}|)}{\epsilon - \omega_{\mathbf{k}}-i \eta} \right.\\
+&\left.+ \frac{\theta(k_F - |\mathbf{k}+\mathbf{q}|)}{\epsilon + \omega - \omega_{\mathbf{k}+\mathbf{q}}-i \eta} \cdot \frac{\theta(|\mathbf{k}|-k_F)}{\epsilon-\omega_{\mathbf{k}} +i \eta} \right\} 
  \end{split}\]
 
 \[\begin{split}=\frac{2}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}
- &\left\{  \frac{\theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|)}{\omega + \omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}} +\underline{2}\imath \eta} - \frac{\theta(k_F - |\mathbf{k}+\mathbf{q}|) \theta(|\mathbf{k}|-k_F)}{\omega + \omega_{\mathbf{k}} - \omega_{\mathbf{k}+\mathbf{q}}-\underline{2}\imath \eta} \right\} 
+ &\left\{  \frac{\theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|)}{\omega + \omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}} +\underline{2}i \eta} - \frac{\theta(k_F - |\mathbf{k}+\mathbf{q}|) \theta(|\mathbf{k}|-k_F)}{\omega + \omega_{\mathbf{k}} - \omega_{\mathbf{k}+\mathbf{q}}-\underline{2}i \eta} \right\} 
  \end{split}\]
 
 As for the 2nd term, we can define $\mathbf{k}^{'} = -\mathbf{k}-\mathbf{q}$, so that, $\mathbf{k}$ and $\mathbf{k} + \mathbf{q}$ are replaced by $-\mathbf{k}^{'}-\mathbf{q}$ and $-\mathbf{k}^{'}$ respectively.
@@ -1529,7 +1529,7 @@ As for the 2nd term, we can define $\mathbf{k}^{'} = -\mathbf{k}-\mathbf{q}$, so
 Now $\omega_\mathbf{k}$ are an even function in momentum. these two can be replaced by $\mathbf{k}^{'} + \mathbf{q}$ and $\mathbf{k}^{'}$ respectively.
 
 $\mathbf{k}^{'}$ as well as $\mathbf{k}$ are dummy index, we can replace $\mathbf{k}^{'}$ by $\mathbf{k}$.
-\[=\frac{2}{\hbar} \int \frac{\mathbf{d}^3 \mathbf{k}}{(2\pi)^3}\theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}+\imath \eta} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}-\imath \eta} \right\}\]
+\[=\frac{2}{\hbar} \int \frac{\mathbf{d}^3 \mathbf{k}}{(2\pi)^3}\theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}+i \eta} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}-i \eta} \right\}\]
 
 This clearly suggests that $\Pi^0(\mathbf{q},\omega)$ is an even function of $\omega$.
 \begin{equation} \label{Eqs2.8.14} \Pi^0(\mathbf{q},\omega) = \Pi^0(\mathbf{q},-\omega)\end{equation}
@@ -1885,7 +1885,7 @@ Using these expressions for the zero-th order proper polarization part, let us n
 Namely, using eq.(\ref{Eqs2.8.10}), we have
 \begin{equation} \label{Eqs2.8.28} \begin{split}
 K_r(k_F \mathbf{q}, \omega= \frac{\hbar k_F^2}{m}\nu) =& 1- V(k_F \mathbf{q}) \Pi^0(\mathbf{q},\nu)\\
-=& 1- \frac{4\pi e^2}{k_F^2}\frac{1}{q^2} \left( Re\Pi^0(\mathbf{q},\nu)+\imath Im\Pi^0(\mathbf{q},\nu) \right)
+=& 1- \frac{4\pi e^2}{k_F^2}\frac{1}{q^2} \left( Re\Pi^0(\mathbf{q},\nu)+i Im\Pi^0(\mathbf{q},\nu) \right)
 \end{split}\end{equation}
 
 where the real part and imaginary part are given in eq.(\ref{Eqs2.8.20}) \& eq.(\ref{Eqs2.8.24}) respectively.
@@ -1933,8 +1933,8 @@ K_r(0,\nu) =& 1- \frac{4\pi e^2}{k_F^2} \frac{1}{q^2}\frac{2 m k_F}{\hbar^2} \cd
 
 \item In the intermediate limit, the dielectric constant takes the following  asymptotic form:
 \begin{equation} \label{Eqs2.8.35} \begin{split}
-K_r(q,qx) =& 1-\frac{4\pi e^2}{k_F^2}\frac{1}{q^2} \times \left\{ - \frac{m k_F}{\hbar^2}\cdot\frac{1}{2\pi^2}\left( 2-x ln\left| \frac{1+x}{1-x} \right| \right) - \frac{m k_F}{\hbar^2}\cdot \frac{x}{2\pi} \imath \theta(1-x) \right\}\\
-=& 1+ \frac{4 \alpha r_S}{\pi q^2}\left( 1-\frac{x}{2} ln\left| \frac{1+x}{1-x} \right|  \right) + \frac{2 \imath \alpha r_S}{q} x \theta(1-x)
+K_r(q,qx) =& 1-\frac{4\pi e^2}{k_F^2}\frac{1}{q^2} \times \left\{ - \frac{m k_F}{\hbar^2}\cdot\frac{1}{2\pi^2}\left( 2-x ln\left| \frac{1+x}{1-x} \right| \right) - \frac{m k_F}{\hbar^2}\cdot \frac{x}{2\pi} i \theta(1-x) \right\}\\
+=& 1+ \frac{4 \alpha r_S}{\pi q^2}\left( 1-\frac{x}{2} ln\left| \frac{1+x}{1-x} \right|  \right) + \frac{2 i \alpha r_S}{q} x \theta(1-x)
 \end{split}\end{equation}
 
 \end{itemize}
@@ -1948,11 +1948,11 @@ In the remain part of this section, we will go back to the evaluation of correla
 
 For its comparison, we will also evaluate the second-order term.
 \begin{equation*} \tag{2.8.9}
-E_r = \frac{1}{2}\imath V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \frac{[\lambda V_0(q) \Pi^0(q)]^2}{1-\lambda V_0(q) \Pi^0(q)}
+E_r = \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \frac{[\lambda V_0(q) \Pi^0(q)]^2}{1-\lambda V_0(q) \Pi^0(q)}
 \end{equation*}
 
 \begin{equation*} \label{Eqs2.8.9.a} \tag{2.8.9.a}
-E_2^r = \frac{1}{2}\imath V \hbar\int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1}  \left[ \lambda V_0(q)\Pi^0(q) \right]^2
+E_2^r = \frac{1}{2}i V \hbar\int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1}  \left[ \lambda V_0(q)\Pi^0(q) \right]^2
 \end{equation*}
 
 Equivalently
@@ -1961,7 +1961,7 @@ Equivalently
 \end{center}
 
 Let us begin with the 2nd-order term first:
-\[E_2^r = \frac{1}{4}\imath V \hbar\int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int_{-\infty}^{+\infty} \frac{\mathrm{d} \omega}{2\pi} V_0^2(\mathbf{q})  \left[ \Pi^0(\mathbf{q},\omega) \right]^2\]
+\[E_2^r = \frac{1}{4}i V \hbar\int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int_{-\infty}^{+\infty} \frac{\mathrm{d} \omega}{2\pi} V_0^2(\mathbf{q})  \left[ \Pi^0(\mathbf{q},\omega) \right]^2\]
 
 As before, we introduce dimensionless frequency and momentum
 \begin{equation*} \tag{2.8.18}
@@ -1969,15 +1969,15 @@ As before, we introduce dimensionless frequency and momentum
 \end{equation*}
 
 In terms of these new variables, $E_2^r$ is given as follows
-\[\begin{split}E_2^r =& \frac{1}{4}\imath V \hbar \frac{k_F^3}{16\pi^4} \frac{\hbar k_F^2}{m}
+\[\begin{split}E_2^r =& \frac{1}{4}i V \hbar \frac{k_F^3}{16\pi^4} \frac{\hbar k_F^2}{m}
 \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d} \nu \cdot [V_0 \Pi^0]^2\\
-\xlongequal{k_F^3 = \frac{3\pi^2 N}{V}}& \frac{1}{4}\imath\frac{\hbar^2 k_F^2}{m e^2}\cdot \frac{3 e^2 N}{16 \pi^2}
+\xlongequal{k_F^3 = \frac{3\pi^2 N}{V}}& \frac{1}{4}i\frac{\hbar^2 k_F^2}{m e^2}\cdot \frac{3 e^2 N}{16 \pi^2}
 \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d} \nu \cdot [V_0 \Pi^0]^2\\
-\xlongequal{\frac{\hbar^2}{m e^2}=a_0}& \frac{N e^2}{2 a_0} \left( \frac{3\imath}{32\pi^2}(k_F a_0)^2 \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d} \nu \left[ V_0 \Pi^0 \right]^2 \right)
+\xlongequal{\frac{\hbar^2}{m e^2}=a_0}& \frac{N e^2}{2 a_0} \left( \frac{3i}{32\pi^2}(k_F a_0)^2 \int \mathrm{d}^3 \mathbf{q} \int \mathrm{d} \nu \left[ V_0 \Pi^0 \right]^2 \right)
 \end{split}\]
 
 \begin{equation*} \label{Eqs2.8.9.b} \tag{2.8.9.b}
-E_2^r = \frac{N e^2}{2 a_0} \left( \frac{3\imath}{16\pi^2 (\alpha r_S)^2} \int \mathrm{d}^3 \mathbf{q} \int_0^{+\infty} \mathrm{d} \nu \left[ V_0 \Pi^0 \right]^2 \right)
+E_2^r = \frac{N e^2}{2 a_0} \left( \frac{3i}{16\pi^2 (\alpha r_S)^2} \int \mathrm{d}^3 \mathbf{q} \int_0^{+\infty} \mathrm{d} \nu \left[ V_0 \Pi^0 \right]^2 \right)
 \end{equation*}
 
 expressions for the polarization part obtained in the dynamic limit and the intermediate limit.
@@ -1995,11 +1995,11 @@ Now that the energy must be always real-valued, we only focus on the real part o
 As mentioned before, $E_2^r$ diverges logarithmically due to the singular behaviour of the Coulomb potential: $V_0(q) = \frac{4\pi e^2}{q^2}$ around $q=0$.
 
 To see this situation, let us separate the momentum integral into two parts:
-\[ \epsilon_2^r = \frac{3\imath}{16\pi^2 \alpha^2 r_S^2} \left( \int_{|\mathbf{q}|<q_c} \mathrm{d}^3 \mathbf{q} + \int_{|\mathbf{q}|>q_c} \mathrm{d}^3 \mathbf{q} \right) \int_0^{+\infty} \mathrm{d} \nu \cdot V_0^2(\mathbf{q}) {\Pi^0}^2(\mathbf{q},\nu) \]
+\[ \epsilon_2^r = \frac{3i}{16\pi^2 \alpha^2 r_S^2} \left( \int_{|\mathbf{q}|<q_c} \mathrm{d}^3 \mathbf{q} + \int_{|\mathbf{q}|>q_c} \mathrm{d}^3 \mathbf{q} \right) \int_0^{+\infty} \mathrm{d} \nu \cdot V_0^2(\mathbf{q}) {\Pi^0}^2(\mathbf{q},\nu) \]
 
 and let us focus only on the first integral.
 \begin{equation*} \label{Eqs2.8.9.c} \tag{2.8.9.c}
-\epsilon_2^{r,1} = \frac{3\imath}{16\pi^2 \alpha^2 r_S^2} \int_{|\mathbf{q}|<q_c} \mathrm{d}^3 \mathbf{q} \int_0^{+\infty} \mathrm{d} \nu \cdot V_0^2(\mathbf{q}) {\Pi^0}^2(\mathbf{q},\nu)
+\epsilon_2^{r,1} = \frac{3i}{16\pi^2 \alpha^2 r_S^2} \int_{|\mathbf{q}|<q_c} \mathrm{d}^3 \mathbf{q} \int_0^{+\infty} \mathrm{d} \nu \cdot V_0^2(\mathbf{q}) {\Pi^0}^2(\mathbf{q},\nu)
 \end{equation*}
 
 When $q_c$ is chosen to be much smaller than $1$, we may approximately employ the
@@ -2030,19 +2030,19 @@ An idea of ``ring-diagram approximation" is to sum up all these singular terms u
 \includegraphics[width=0.6\textwidth]{2-8-33.png}
 \end{center}
 \begin{equation*} \tag{2.8.9}
-E_r = \frac{1}{2}\imath V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda \frac{[ V_0(q) \Pi^0(q)]^2}{1-\lambda V_0(q) \Pi^0(q)}
+E_r = \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda \frac{[ V_0(q) \Pi^0(q)]^2}{1-\lambda V_0(q) \Pi^0(q)}
 \end{equation*}
 
 Remarkably, when summed over up to all order, these singularities cancel each other, which results in a finite contribution.
 
 To see this situation, let us next calculate $E_r$:
 \[\begin{split}
-E_r =& \frac{1}{2}\imath V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda \frac{V_0^2 {\Pi^0}^2}{1-\lambda V_0\Pi^0}\\
-=& \frac{1}{2}\imath V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda V_0 \Pi^0\left( -1 + \frac{1}{1-\lambda V_0 \Pi^0} \right)\\
-=& - \frac{1}{2}\imath V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4}\left[\left( log[1-\lambda V_0 \Pi^0] \right)_{\lambda=0}^{\lambda=1} + V_0 \Pi^0 \right]\end{split}\]
+E_r =& \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda \frac{V_0^2 {\Pi^0}^2}{1-\lambda V_0\Pi^0}\\
+=& \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda V_0 \Pi^0\left( -1 + \frac{1}{1-\lambda V_0 \Pi^0} \right)\\
+=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4}\left[\left( log[1-\lambda V_0 \Pi^0] \right)_{\lambda=0}^{\lambda=1} + V_0 \Pi^0 \right]\end{split}\]
 \begin{equation*} \label{Eqs2.8.9'} \tag{2.8.9'} \begin{split}
-E_r=& - \frac{1}{2}\imath V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ log[1-V_0 \Pi^0] + V_0 \Pi^0 \right\}\\
-=& - \frac{1}{2}\imath V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ log[K_r(\mathbf{q},\omega)] + 1-K_r(\mathbf{q},\omega) \right\}
+E_r=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ log[1-V_0 \Pi^0] + V_0 \Pi^0 \right\}\\
+=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ log[K_r(\mathbf{q},\omega)] + 1-K_r(\mathbf{q},\omega) \right\}
 \end{split}\end{equation*}
 
 Using the dimensionless frequency and momentum, this can be given by the dimensionless integral.
@@ -2050,10 +2050,10 @@ Using the dimensionless frequency and momentum, this can be given by the dimensi
 E_r = \frac{N e^2}{2 a_0} \epsilon_r
 \end{equation}
 
-\[\begin{split} \epsilon_r = -\frac{3\imath}{16\pi^2 \alpha^2 r_S^2} \int \mathrm{d}^3 \mathbf{q}^{'}\int_{-\infty}^{+\infty} \mathrm{d}\nu \left\{ logK_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\\\text{(with $\mathbf{q}^{'} = \frac{\mathbf{q}}{k_F}$, $\nu = \frac{m}{\hbar k_F^2} \omega$)}\end{split} \]
+\[\begin{split} \epsilon_r = -\frac{3i}{16\pi^2 \alpha^2 r_S^2} \int \mathrm{d}^3 \mathbf{q}^{'}\int_{-\infty}^{+\infty} \mathrm{d}\nu \left\{ logK_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\\\text{(with $\mathbf{q}^{'} = \frac{\mathbf{q}}{k_F}$, $\nu = \frac{m}{\hbar k_F^2} \omega$)}\end{split} \]
 
 Since $K_r$ depends on the norm of $\mathbf{q}^{'}$ and it is an even function of $\nu$, we have
-\[ \epsilon_r = -\frac{3\imath}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} {q^{'}}^2 \cdot \mathrm{d}q^{'} \int_{0}^{+\infty} \mathrm{d}\nu \left\{ log K_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\]
+\[ \epsilon_r = -\frac{3i}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} {q^{'}}^2 \cdot \mathrm{d}q^{'} \int_{0}^{+\infty} \mathrm{d}\nu \left\{ log K_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\]
 
 The energy must be real-valued, so that we focus only on the imginary part of this parenthesis.
 \begin{equation} \label{Eqs2.8.37}
@@ -2062,7 +2062,7 @@ The energy must be real-valued, so that we focus only on the imginary part of th
 
 with
 \begin{equation} \label{Eqs2.8.38}
-log(Re K + \imath Im K) = log \sqrt{Re K^2 + Im K^2} + \imath tan^{-1} \left( \frac{Im K}{Re K} \right)
+log(Re K + i Im K) = log \sqrt{Re K^2 + Im K^2} + i tan^{-1} \left( \frac{Im K}{Re K} \right)
 \end{equation}
 
 In order to see how the singular behaviour of the integrand at $q=0$ is removed by the summation of the ring-diagrams, we separate this momentum integral into two parts:
@@ -2130,19 +2130,19 @@ In this section, we will study these properties within the ring-diagram approxim
 As a preliminary for this, let us first introduce a theory of linear response to a weak external perturbation.
 
 Consider an interacting many-particles system with a time-independent Hamiltonian
-\[ \imath \hbar \frac{\partial}{\partial t} | \Psi_S(t) \rangle = H | \Psi_S (t) \rangle \]
+\[ i \hbar \frac{\partial}{\partial t} | \Psi_S(t) \rangle = H | \Psi_S (t) \rangle \]
 
 $| \Psi_S (t) \rangle$ is a state vector in the Schr\"odinger picture, which is given by
-\[| \Psi_S (t) \rangle = \mathrm{e}^{-\imath\frac{H}{\hbar}t}| \Psi_S (0) \rangle\]
+\[| \Psi_S (t) \rangle = \mathrm{e}^{-i\frac{H}{\hbar}t}| \Psi_S (0) \rangle\]
 
 Suppose that the system is perturbed at $t=t_0$, by introducing an additional time-dependent Hamiltonian
 \begin{equation} \label{Eqs3.1.1}
-\imath \hbar \frac{\partial}{\partial t} | \overline{\Psi}_S(t) \rangle = (H + H^{ex}(t))| \overline{\Psi}_S(t) \rangle
+i \hbar \frac{\partial}{\partial t} | \overline{\Psi}_S(t) \rangle = (H + H^{ex}(t))| \overline{\Psi}_S(t) \rangle
 \end{equation}
 
 This can be also solved symbolically:
 \begin{equation} \label{Eqs3.1.2}
-| \overline{\Psi}_S(t) \rangle = \mathrm{e}^{-\imath \frac{H}{\hbar}t}\hat{A}(t)  |\Psi_S(t) \rangle
+| \overline{\Psi}_S(t) \rangle = \mathrm{e}^{-i \frac{H}{\hbar}t}\hat{A}(t)  |\Psi_S(t) \rangle
 \end{equation}
 
 Here, $\hat{A}(t)$ reduces to a unit, when $t$ is less than $t_0$.
@@ -2154,28 +2154,28 @@ because
 \[ H^{ex}(t) = 0 \quad (t \leq t_0) \]
 
 substituting this solution into this Schr\"odinger's equation, we obtain the equation of motion for $\hat{A}(t)$:
-\[ \mathrm{e}^{-\imath\frac{H}{\hbar}t}\hat{H}\hat{A}(t)|\Psi_S(0)\rangle + \mathrm{e}^{-\imath\frac{H}{\hbar}t}(\imath\hbar\frac{\partial \hat{A}(t)}{\partial t})|\Psi_S(0)\rangle = (H + H^{ex}(t))\mathrm{e}^{-\imath\frac{H}{\hbar}t}\hat{A}(t)|\Psi_S(0)\rangle \]
+\[ \mathrm{e}^{-i\frac{H}{\hbar}t}\hat{H}\hat{A}(t)|\Psi_S(0)\rangle + \mathrm{e}^{-i\frac{H}{\hbar}t}(i\hbar\frac{\partial \hat{A}(t)}{\partial t})|\Psi_S(0)\rangle = (H + H^{ex}(t))\mathrm{e}^{-i\frac{H}{\hbar}t}\hat{A}(t)|\Psi_S(0)\rangle \]
 
 These two are set off by each other. So that we have
 \begin{equation} \label{Eqs3.1.4} \begin{split}
-\imath \hbar \frac{\partial}{\partial t}\hat{A}(t) =& \mathrm{e}^{\imath\frac{H}{\hbar}t}H^{ex}(t)\mathrm{e}^{-\imath\frac{H}{\hbar}t}\hat{A}(t)\\
+i \hbar \frac{\partial}{\partial t}\hat{A}(t) =& \mathrm{e}^{i\frac{H}{\hbar}t}H^{ex}(t)\mathrm{e}^{-i\frac{H}{\hbar}t}\hat{A}(t)\\
 \overset{def}{\equiv}& H_H^{ex}(t) \cdot \hat{A}(t)
 \end{split}\end{equation}
 
 where $H_H^{ex}(t)$ is the operator in the usual Heisenberg picture.
 
 As we did many times in sec.\underline{    }, the equation of motion is solved in favor for $\hat{A}(t)$ iteratively:
-\[ \hat{A}(t) = 1-\frac{\imath}{\hbar} \int_{t_0}^{t} \mathrm{d} t^{'} \hat{H}_{H}^{ex}(t^{'}) + \left( \frac{-\imath}{\hbar} \right)^2 \int_{t_0}^{t} \mathrm{d} t^{'} \int_{t_0}^{t^{'}} \mathrm{d} t^{''} \hat{H}_H^{ex}(t^{'}) \hat{H}_H^{ex}(t^{''}) + \ldots \]
+\[ \hat{A}(t) = 1-\frac{i}{\hbar} \int_{t_0}^{t} \mathrm{d} t^{'} \hat{H}_{H}^{ex}(t^{'}) + \left( \frac{-i}{\hbar} \right)^2 \int_{t_0}^{t} \mathrm{d} t^{'} \int_{t_0}^{t^{'}} \mathrm{d} t^{''} \hat{H}_H^{ex}(t^{'}) \hat{H}_H^{ex}(t^{''}) + \ldots \]
 
 This clearly observes the boundary condition. Since $H^{ex}(t) = 0$ for $t \leq t_0$, we can also rewrite this as
 \begin{equation} \label{Eqs3.1.5}
-\hat{A}(t) = 1-\frac{\imath}{\hbar} \int_{-\infty}^{t} \mathrm{d} t^{'} \hat{H}_{H}^{ex}(t^{'}) + \left( \frac{-\imath}{\hbar} \right)^2 \int_{-\infty}^{t} \mathrm{d} t^{'} \int_{-\infty}^{t^{'}} \mathrm{d} t^{''} \hat{H}_H^{ex}(t^{'}) \hat{H}_H^{ex}(t^{''}) + \ldots
+\hat{A}(t) = 1-\frac{i}{\hbar} \int_{-\infty}^{t} \mathrm{d} t^{'} \hat{H}_{H}^{ex}(t^{'}) + \left( \frac{-i}{\hbar} \right)^2 \int_{-\infty}^{t} \mathrm{d} t^{'} \int_{-\infty}^{t^{'}} \mathrm{d} t^{''} \hat{H}_H^{ex}(t^{'}) \hat{H}_H^{ex}(t^{''}) + \ldots
 \end{equation}
 
 Correspondingly, we have
 \begin{equation*} \label{Eqs3.1.5'} \tag{3.1.5'} \begin{split}
-| \overline{\Psi}_S(t) \rangle =& \mathrm{e}^{-\imath \frac{H}{\hbar} t} | \Psi_S(0) \rangle - \frac{\imath}{\hbar}\mathrm{e}^{-\imath \frac{H}{\hbar}t} \int_{-\infty}^{t} \mathrm{d} t^{'} \hat{H}_{H}^{ex}(t^{'}) | \Psi_S(0) \rangle \\
-&+ \left( \frac{-\imath}{\hbar} \right)^2 \mathrm{e}^{-\imath \frac{H}{\hbar}t} \int_{-\infty}^{t} \mathrm{d} t^{'} \int_{-\infty}^{t^{'}} \mathrm{d} t^{''} \hat{H}_H^{ex}(t^{'}) \hat{H}_H^{ex}(t^{''}) | \Psi_S(0) \rangle + \ldots
+| \overline{\Psi}_S(t) \rangle =& \mathrm{e}^{-i \frac{H}{\hbar} t} | \Psi_S(0) \rangle - \frac{i}{\hbar}\mathrm{e}^{-i \frac{H}{\hbar}t} \int_{-\infty}^{t} \mathrm{d} t^{'} \hat{H}_{H}^{ex}(t^{'}) | \Psi_S(0) \rangle \\
+&+ \left( \frac{-i}{\hbar} \right)^2 \mathrm{e}^{-i \frac{H}{\hbar}t} \int_{-\infty}^{t} \mathrm{d} t^{'} \int_{-\infty}^{t^{'}} \mathrm{d} t^{''} \hat{H}_H^{ex}(t^{'}) \hat{H}_H^{ex}(t^{''}) | \Psi_S(0) \rangle + \ldots
 \end{split}\end{equation*}
 
 With this in mind, we can calculate an expectation value of a physical observable at any given time t:
@@ -2185,21 +2185,21 @@ With this in mind, we can calculate an expectation value of a physical observabl
 
 The numerator is calculated as follows:
 \begin{equation} \label{Eqs3.1.7}\begin{split}
-\langle \overline{\Psi}_S(t)|O_S|\overline{\Psi}_S(t)\rangle = & \langle \Psi_S(0) | \left[ 1 + \frac{\imath}{\hbar}\int_{-\infty}^{t} \mathrm{d} t^{'} H_H^{ex}(t^{'}) + \ldots \right] \times \mathrm{e}^{\imath \frac{H}{\hbar} t} \hat{O}_S \mathrm{e}^{-\imath \frac{H}{\hbar} t} \times \\
-&\left[ 1 - \frac{\imath}{\hbar}\int_{-\infty}^{t} \mathrm{d} t^{'} H_H^{ex}(t^{'}) + \ldots \right] | \Psi_S(0) \rangle\\
+\langle \overline{\Psi}_S(t)|O_S|\overline{\Psi}_S(t)\rangle = & \langle \Psi_S(0) | \left[ 1 + \frac{i}{\hbar}\int_{-\infty}^{t} \mathrm{d} t^{'} H_H^{ex}(t^{'}) + \ldots \right] \times \mathrm{e}^{i \frac{H}{\hbar} t} \hat{O}_S \mathrm{e}^{-i \frac{H}{\hbar} t} \times \\
+&\left[ 1 - \frac{i}{\hbar}\int_{-\infty}^{t} \mathrm{d} t^{'} H_H^{ex}(t^{'}) + \ldots \right] | \Psi_S(0) \rangle\\
 =&\langle \Psi_S(0)|\hat{O}_H(t)|\Psi_S(0)\rangle +\\
-& \frac{\imath}{\hbar} \int_{-\infty}^{t} \mathrm{d} t^{'} \langle \Psi_S(0) | \left[ H_H^{ex}(t^{'})\hat{O}_H(t) - \hat{O}_H(t)H_H^{ex}(t^{'}) \right] | \Psi_S(0) \rangle
+& \frac{i}{\hbar} \int_{-\infty}^{t} \mathrm{d} t^{'} \langle \Psi_S(0) | \left[ H_H^{ex}(t^{'})\hat{O}_H(t) - \hat{O}_H(t)H_H^{ex}(t^{'}) \right] | \Psi_S(0) \rangle
 \end{split}\end{equation}
 
 As far as the first order in external perturbation, we can easily see that the denominator is equal to the norm at $t=0$.
-\[\begin{split} \langle \overline{\Psi}_S(t) | \overline{\Psi}_S(t) \rangle =& \langle \Psi_S(0) | \left[ 1 + \frac{\imath}{\hbar} \int_{-\infty}^{t} H_H^{ex} (t^{'}) \mathrm{d} t^{'} + \ldots \right]
-\left[ 1 - \frac{\imath}{\hbar} \int_{-\infty}^{t} H_H^{ex} (t^{'}) \mathrm{d} t^{'} + \ldots \right] | \Psi_S(0) \rangle\\
+\[\begin{split} \langle \overline{\Psi}_S(t) | \overline{\Psi}_S(t) \rangle =& \langle \Psi_S(0) | \left[ 1 + \frac{i}{\hbar} \int_{-\infty}^{t} H_H^{ex} (t^{'}) \mathrm{d} t^{'} + \ldots \right]
+\left[ 1 - \frac{i}{\hbar} \int_{-\infty}^{t} H_H^{ex} (t^{'}) \mathrm{d} t^{'} + \ldots \right] | \Psi_S(0) \rangle\\
 =& \langle \Psi_S(0) | \Psi_S(0) \rangle + O((H^{ex})^2)
 \end{split}\]
 
 As such, the expectation value is evaluated within the first order in the external perturbation as follows.
 \begin{equation} \label{Eqs3.1.8}
-\langle O(t) \rangle_{ex} = \frac{\langle \Psi_S(0)|\hat{O}_H(t)|\Psi_S(0)\rangle}{\langle \Psi_S(0)|\Psi_S(0)\rangle} + \frac{\imath}{\hbar} \int_{-\infty}^{t} \mathrm{d}t^{'} \frac{\langle \Psi_S(0)|\left[ H_H^{ex}(t^{'}), \hat{O}_H(t) \right]|\Psi_S(0)\rangle}{\langle \Psi_S(0)|\Psi_S(0)\rangle} + o((H^{ex})^2)
+\langle O(t) \rangle_{ex} = \frac{\langle \Psi_S(0)|\hat{O}_H(t)|\Psi_S(0)\rangle}{\langle \Psi_S(0)|\Psi_S(0)\rangle} + \frac{i}{\hbar} \int_{-\infty}^{t} \mathrm{d}t^{'} \frac{\langle \Psi_S(0)|\left[ H_H^{ex}(t^{'}), \hat{O}_H(t) \right]|\Psi_S(0)\rangle}{\langle \Psi_S(0)|\Psi_S(0)\rangle} + o((H^{ex})^2)
 \end{equation}
 
 where the first term in the right hand side stands for the expectation value of the physical observale without external perturbation.
@@ -2208,7 +2208,7 @@ where the first term in the right hand side stands for the expectation value of 
 Thus, linear response of the ground state expectation value of the observable is given by
 \begin{equation} \label{3.1.9} \begin{split}
 \delta \langle \hat{O}(t) \rangle \equiv& \langle O(t) \rangle_{ex} - \langle O(t) \rangle\\
-=& \frac{\imath}{\hbar} \int_{-\infty}^{t} \mathrm{d}t^{'} \frac{\langle \Psi_0 | \left[ H_H^{ex}(t^{'}), O_H(t) \right] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}
+=& \frac{i}{\hbar} \int_{-\infty}^{t} \mathrm{d}t^{'} \frac{\langle \Psi_0 | \left[ H_H^{ex}(t^{'}), O_H(t) \right] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}
 \end{split}\end{equation}
 
 where $|\Psi_S(0) \rangle$ was replaced by the ground-state wavefunction of $H$, which we call $|\Psi_0 \rangle$.
@@ -2219,12 +2219,12 @@ For example, consider that a system with charge $e$ per particle is subjected un
 \hat{H}_H^{ex}(t) = \int \mathrm{d}^3 \mathbf{x} \hat{n}_H(\mathbf{x},t) e \varphi^{ex}(\mathbf{x},t)
 \end{equation}
 
-where $\hat{n}_H(\mathbf{x},t) \equiv \mathrm{e}^{\imath \frac{H}{\hbar} t}\hat{n}(\mathbf{x})\mathrm{e}^{-\imath \frac{H}{\hbar}t}$ and $\hat{n}(\mathbf{x})$ denotes particle density operator at $\mathbf{x}$.
+where $\hat{n}_H(\mathbf{x},t) \equiv \mathrm{e}^{i \frac{H}{\hbar} t}\hat{n}(\mathbf{x})\mathrm{e}^{-i \frac{H}{\hbar}t}$ and $\hat{n}(\mathbf{x})$ denotes particle density operator at $\mathbf{x}$.
 
 We are interested in how the particle density will be perturbed by the external scalar potential.
 
 Within the linear response theory described so far, it is given by
-\[\delta \langle \hat{n}(\mathbf{x},t) \rangle = \frac{\imath}{\hbar} \int_{-\infty}^{t}\mathrm{d} t^{'} \int \mathrm{d}^3 \mathbf{x}^{'} e \varphi^{ex}(\mathbf{x}^{'},t^{'}) \frac{\langle \Psi_0 | \left[ \hat{n}_{H}(\mathbf{x}^{'},t^{'}), \hat{n}_H(\mathbf{x},t) \right] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}\]
+\[\delta \langle \hat{n}(\mathbf{x},t) \rangle = \frac{i}{\hbar} \int_{-\infty}^{t}\mathrm{d} t^{'} \int \mathrm{d}^3 \mathbf{x}^{'} e \varphi^{ex}(\mathbf{x}^{'},t^{'}) \frac{\langle \Psi_0 | \left[ \hat{n}_{H}(\mathbf{x}^{'},t^{'}), \hat{n}_H(\mathbf{x},t) \right] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}\]
 
 Using the deviation operator,
 \begin{equation} \label{Eqs3.1.11} \begin{split}
@@ -2234,7 +2234,7 @@ Using the deviation operator,
 
 we can rewrite this into the followings
 \begin{equation} \label{Eqs3.1.12} \begin{split}
-\delta \langle \hat{n}(\mathbf{x},t) \rangle =& \frac{\imath}{\hbar} \int_{-\infty}^{t}\mathrm{d} t^{'} \int \mathrm{d}^3 \mathbf{x}^{'} e \varphi^{ex}(\mathbf{x}^{'},t^{'}) \frac{\langle \Psi_0 | \left[ \tilde{n}_{H}(\mathbf{x}^{'},t^{'}), \tilde{n}_H(\mathbf{x},t) \right] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}\\
+\delta \langle \hat{n}(\mathbf{x},t) \rangle =& \frac{i}{\hbar} \int_{-\infty}^{t}\mathrm{d} t^{'} \int \mathrm{d}^3 \mathbf{x}^{'} e \varphi^{ex}(\mathbf{x}^{'},t^{'}) \frac{\langle \Psi_0 | \left[ \tilde{n}_{H}(\mathbf{x}^{'},t^{'}), \tilde{n}_H(\mathbf{x},t) \right] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}\\
 =& \frac{1}{\hbar} \int_{-\infty}^{+\infty} \mathrm{d}t^{'} \int \mathrm{d}^3 \mathbf{x}^{'} D^R(\mathbf{x},t;\mathbf{x}^{'},t^{'}) e \varphi^{ex}(\mathbf{x}^{'},t^{'})
 \end{split}\end{equation}
 
@@ -2243,12 +2243,12 @@ where we define the retarded density-density correlation function in analogy wit
 \begin{itemize}
 \item Retarded density-density correlation function
 \begin{equation*} \label{Eqs3.1.12'} \tag{3.1.12'}
-\imath D^R(\mathbf{x},t;\mathbf{x}^{'},t^{'}) = \theta(t-t^{'}) \times \frac{\langle \Psi_0 | [\tilde{n}_H(\mathbf{x},t), \tilde{n}_H(\mathbf{x}^{'},t^{'})] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}
+i D^R(\mathbf{x},t;\mathbf{x}^{'},t^{'}) = \theta(t-t^{'}) \times \frac{\langle \Psi_0 | [\tilde{n}_H(\mathbf{x},t), \tilde{n}_H(\mathbf{x}^{'},t^{'})] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}
 \end{equation*}
 
 \item Time-ordered density-density correlation function
 \begin{equation*} \label{Eqs2.8.2'} \tag{2.8.2'}
-\imath D(\mathbf{x},t;\mathbf{x}^{'},t^{'}) = \frac{\langle \Psi_0 | \Gamma[\tilde{n}_H(\mathbf{x},t), \tilde{n}_H(\mathbf{x}^{'},t^{'})] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}
+i D(\mathbf{x},t;\mathbf{x}^{'},t^{'}) = \frac{\langle \Psi_0 | \Gamma[\tilde{n}_H(\mathbf{x},t), \tilde{n}_H(\mathbf{x}^{'},t^{'})] | \Psi_0 \rangle}{\langle \Psi_0 | \Psi_0 \rangle}
 \end{equation*}
 \end{itemize}
 
@@ -2260,9 +2260,9 @@ D^R(\mathbf{x},t;\mathbf{x}^{'},t^{'}) = D^R(\mathbf{x}-\mathbf{x}^{'},t-t^{'})
 So that we can take the Fourier transform of this(...) with
 \begin{equation} \label{Eqs3.1.14}
 \left\{ \begin{split}
-\varphi^{ex}(\mathbf{k},\omega) \equiv& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-\imath \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{\imath \omega t} \varphi^{ex}(\mathbf{x},t)\\
-\delta \langle \hat{n}(\mathbf{k},\omega) \rangle =& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-\imath \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{\imath \omega t} \delta \langle \hat{n}(\mathbf{x},t) \rangle\\
-D^R(\mathbf{k},\omega) =& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-\imath \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{\imath \omega t} D^R(\mathbf{x},t)
+\varphi^{ex}(\mathbf{k},\omega) \equiv& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-i \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{i \omega t} \varphi^{ex}(\mathbf{x},t)\\
+\delta \langle \hat{n}(\mathbf{k},\omega) \rangle =& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-i \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{i \omega t} \delta \langle \hat{n}(\mathbf{x},t) \rangle\\
+D^R(\mathbf{k},\omega) =& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-i \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{i \omega t} D^R(\mathbf{x},t)
 \end{split} \right.
 \end{equation}
 
@@ -2286,21 +2286,21 @@ In a similar way as we did for single-particle Green's function, we can do this 
 
 Lehmann representation of the time-ordered density-density correlation functon is obtained in the following way.
 \[ \begin{split}
-\imath D(\mathbf{x},t;\mathbf{x}^{'},t^{'}) =& \theta(t-t^{'}) \langle \Psi_0 | \tilde{n}_H(\mathbf{x},t) \tilde{n}_H(\mathbf{x}^{'},t^{'}) | \Psi_0 \rangle\\
+i D(\mathbf{x},t;\mathbf{x}^{'},t^{'}) =& \theta(t-t^{'}) \langle \Psi_0 | \tilde{n}_H(\mathbf{x},t) \tilde{n}_H(\mathbf{x}^{'},t^{'}) | \Psi_0 \rangle\\
 &+\theta(t^{'}-t) \langle \Psi_0 | \tilde{n}_H(\mathbf{x}^{'},t^{'}) \tilde{n}_H(\mathbf{x},t) | \Psi_0 \rangle\\
-=& \sum_n\left\{ \theta(t-t^{'})\mathrm{e}^{-\imath (E_n-E_0)(t-t^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(\mathbf{x})|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(\mathbf{x}^{'})|\Psi_0 \rangle \right.\\
-&\left. -\theta(t^{'}-t)\mathrm{e}^{\imath (E_n-E_0)(t-t^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(\mathbf{x}^{'})|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(\mathbf{x})|\Psi_0 \rangle \right\}
+=& \sum_n\left\{ \theta(t-t^{'})\mathrm{e}^{-i (E_n-E_0)(t-t^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(\mathbf{x})|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(\mathbf{x}^{'})|\Psi_0 \rangle \right.\\
+&\left. -\theta(t^{'}-t)\mathrm{e}^{i (E_n-E_0)(t-t^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(\mathbf{x}^{'})|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(\mathbf{x})|\Psi_0 \rangle \right\}
 \end{split} \]
 
 where $|\Psi_n \rangle$ is an eigenstate of $H$, which belongs an eigenvalue $E_n$.
 
 Using
-\[ \tilde{n}_H(\mathbf{x}) = \mathrm{e}^{-\imath \hat{\mathbf{P}}\cdot\hat{\mathbf{x}}/\hbar} \tilde{n}_H(0)\mathrm{e}^{\imath\hat{\mathbf{P}} \cdot \hat{\mathbf{x}}/\hbar} \]
+\[ \tilde{n}_H(\mathbf{x}) = \mathrm{e}^{-i \hat{\mathbf{P}}\cdot\hat{\mathbf{x}}/\hbar} \tilde{n}_H(0)\mathrm{e}^{i\hat{\mathbf{P}} \cdot \hat{\mathbf{x}}/\hbar} \]
 
 where $\hat{\mathbf{P}}$ denote the total momentum operator, we have
 \[ \begin{split}
-=& \sum_n\left\{ \theta(t-t^{'})\mathrm{e}^{-\imath (E_n-E_0)(t-t^{'})/\hbar} \mathrm{e}^{\imath \mathbf{P}_n \cdot (\mathbf{x}-\mathbf{x}^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(0)|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0)|\Psi_0 \rangle \right.\\
-&\left. -\theta(t^{'}-t)\mathrm{e}^{\imath (E_n-E_0)(t-t^{'})/\hbar}  \mathrm{e}^{-\imath \mathbf{P}_n \cdot (\mathbf{x}-\mathbf{x}^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(0)|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0)|\Psi_0 \rangle \right\}
+=& \sum_n\left\{ \theta(t-t^{'})\mathrm{e}^{-i (E_n-E_0)(t-t^{'})/\hbar} \mathrm{e}^{i \mathbf{P}_n \cdot (\mathbf{x}-\mathbf{x}^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(0)|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0)|\Psi_0 \rangle \right.\\
+&\left. -\theta(t^{'}-t)\mathrm{e}^{i (E_n-E_0)(t-t^{'})/\hbar}  \mathrm{e}^{-i \mathbf{P}_n \cdot (\mathbf{x}-\mathbf{x}^{'})/\hbar} \langle \Psi_0 | \tilde{n}_H(0)|\Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0)|\Psi_0 \rangle \right\}
 \end{split} \]
 
 Here, we used a fact that $|\Psi_n \rangle$ is also an eigenstate of the total momentum operator $\hat{\mathbf{P}}$, because $\hat{\mathbf{P}}$ and $\hat{\mathbf{H}}$ commute with each other.
@@ -2309,15 +2309,15 @@ $\mathbf{P}_n$ is an eigenvalue for $|\Psi_n \rangle$
 
 By taking the Fourier transformation, we obtain
 \begin{equation} \label{Eqs3.1.16} \begin{split}
-\imath D(\mathbf{k},\omega) =& \int \mathrm{d}^3 (\mathbf{x}-\mathbf{x}^{'}) \int \mathrm{d} (t-t^{'}) \mathrm{e}^{-\imath \mathbf{k} \cdot (\mathbf{x}-\mathbf{x}^{'})}\mathrm{e}^{\imath \omega (t-t^{'})} \imath D(\mathbf{x},t;\mathbf{x}^{'},t^{'})\\
-=& \imath V \sum_n \delta_{\mathbf{k},\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega - \hbar^{-1}(E_n-E_0) + \imath \eta}\\
-& -\imath V \sum_n \delta_{\mathbf{k},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) - \imath \eta}
+i D(\mathbf{k},\omega) =& \int \mathrm{d}^3 (\mathbf{x}-\mathbf{x}^{'}) \int \mathrm{d} (t-t^{'}) \mathrm{e}^{-i \mathbf{k} \cdot (\mathbf{x}-\mathbf{x}^{'})}\mathrm{e}^{i \omega (t-t^{'})} i D(\mathbf{x},t;\mathbf{x}^{'},t^{'})\\
+=& i V \sum_n \delta_{\mathbf{k},\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega - \hbar^{-1}(E_n-E_0) + i \eta}\\
+& -i V \sum_n \delta_{\mathbf{k},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) - i \eta}
 \end{split} \end{equation}
 
 In a similar way, the Fourier transform of the retarded density correlation function is obtained as follows.
 \begin{equation} \label{Eqs3.1.17} \begin{split}
-\imath D^R(\mathbf{k},\omega) =& \imath V \sum_n \delta_{\mathbf{k},\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega - \hbar^{-1}(E_n-E_0) + \imath \eta}\\
-& -\imath V \sum_n \delta_{\mathbf{k},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) - \imath \eta}
+i D^R(\mathbf{k},\omega) =& i V \sum_n \delta_{\mathbf{k},\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega - \hbar^{-1}(E_n-E_0) + i \eta}\\
+& -i V \sum_n \delta_{\mathbf{k},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) - i \eta}
 \end{split}\end{equation}
 
 Since the summation over $|\Psi_n\rangle$ is taken over an excited state of $H$, $E_n-E_0$ is always positive.
@@ -2344,9 +2344,9 @@ or equivalently
 \end{equation*}
 
 According to the linear response theory, the induced charge density is given by
-\begin{equation} \label{Eqs3.1.20}\begin{split} \delta\langle n(\mathbf{x}) \rangle =& -\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \mathrm{e}^{\imath \mathbf{k} \cdot \mathbf{x}}\mathrm{e}^{-\imath \omega t} \delta\langle n(\mathbf{k},\omega) \rangle\\
-=& -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\int \frac{\mathrm{d}\omega}{2\pi} \mathrm{e}^{\imath \mathbf{k} \cdot \mathbf{x}}\mathrm{e}^{-\imath \omega t} D^R(\mathbf{k},\omega) e \varphi^{ex}(\mathbf{k},\omega)\\
-=& - \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{\imath \mathbf{k}\cdot \mathbf{x}}\frac{4\pi Z e^2}{\hbar \mathbf{k}^2} D^R(\mathbf{k},0) \end{split}\end{equation}
+\begin{equation} \label{Eqs3.1.20}\begin{split} \delta\langle n(\mathbf{x}) \rangle =& -\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \mathrm{e}^{i \mathbf{k} \cdot \mathbf{x}}\mathrm{e}^{-i \omega t} \delta\langle n(\mathbf{k},\omega) \rangle\\
+=& -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\int \frac{\mathrm{d}\omega}{2\pi} \mathrm{e}^{i \mathbf{k} \cdot \mathbf{x}}\mathrm{e}^{-i \omega t} D^R(\mathbf{k},\omega) e \varphi^{ex}(\mathbf{k},\omega)\\
+=& - \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{i \mathbf{k}\cdot \mathbf{x}}\frac{4\pi Z e^2}{\hbar \mathbf{k}^2} D^R(\mathbf{k},0) \end{split}\end{equation}
 
 According to eq.(\ref{Eqs2.8.4'}) \& eq.(\ref{Eqs2.8.5'}), the time-ordered density-density correlation function is given by the proper polarization function in the following way.
 \[ D(\mathbf{k},\omega) = \hbar \Pi(\mathbf{k},\omega) = \frac{\hbar \Pi^{\bigstar}(\mathbf{k},\omega)}{1-\Pi^{\bigstar}(\mathbf{k},\omega)V(\mathbf{k})} \]
@@ -2357,12 +2357,12 @@ Here $V(\mathbf{k})$ denotes the bare Coulombic potential.
 so that, we have
 \begin{equation} \label{Eqs3.1.21} \begin{split}
 \frac{4\pi e^2}{\hbar k^2} D(\mathbf{k},\omega) =& \frac{\Pi^\bigstar(\mathbf{k},\omega)V(\mathbf{k})}{1-\Pi^\bigstar(\mathbf{k},\omega)V(\mathbf{k})}\\
-=& \frac{1}{K(\mathbf{k},\omega)}-1 = \frac{Re K -\imath Im K}{ Re K^2 + Im K^2} - 1
+=& \frac{1}{K(\mathbf{k},\omega)}-1 = \frac{Re K -i Im K}{ Re K^2 + Im K^2} - 1
 \end{split}\end{equation}
 
 Then, using the relation between the retarded density correlation function and time-ordered correlation function, we obtain.
 \begin{equation} \label{Eqs3.1.22}
-\frac{4\pi e^2}{\hbar k^2} D^R(\mathbf{k},\omega) = \frac{Re K(\mathbf{k},\omega) - \imath sgn(\omega) Im K(\mathbf{k},\omega)}{Re K^2(\mathbf{k},\omega) + Im K^2(\mathbf{k},\omega)} - 1
+\frac{4\pi e^2}{\hbar k^2} D^R(\mathbf{k},\omega) = \frac{Re K(\mathbf{k},\omega) - i sgn(\omega) Im K(\mathbf{k},\omega)}{Re K^2(\mathbf{k},\omega) + Im K^2(\mathbf{k},\omega)} - 1
 \end{equation}
 
 Within the ring-diagram approximation, this dielectric constant $K(\mathbf{k},\omega)$ was evaluated explicitly, such as in eq.(\ref{Eqs2.8.33}) \& eq.(\ref{Eqs2.8.34}) \& eq.(\ref{Eqs2.8.35}).
@@ -2380,9 +2380,9 @@ g(x) = \frac{1}{2} - \frac{1}{2x}\left( 1-\frac{x^2}{4} \right) ln \left| \frac{
 By substituting eq.(\ref{Eqs3.1.23}) into eq.(\ref{Eqs3.1.22}) \& eq.(\ref{Eqs3.1.20}), we obtain the induced charge density as
 \[ \begin{split}
 \delta\langle \rho(\mathbf{x}) \rangle_{ring} =& - e \delta\langle n(\mathbf{x}) \rangle_{ring}\\
-=& Z e \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{\imath \mathbf{k} \cdot \mathbf{x}}\frac{1-K_{ring}(\mathbf{k},0)}{K_{ring}(\mathbf{k},0)}\\
-=&-Z e \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{\imath \mathbf{k} \cdot \mathbf{x}}\frac{\frac{4\alpha r_S}{\pi}\left( \frac{k_F^2}{k^2} \right)g\left( \frac{k}{k_F} \right)}{1+\frac{4\alpha r_S}{\pi}\left( \frac{k_F^2}{k^2} \right)g\left( \frac{k}{k_F} \right)}\\
-=&-Z e \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{\imath \mathbf{k} \cdot \mathbf{x}}\frac{\frac{4\alpha r_S}{\pi}g\left( \frac{k}{k_F} \right)}{\left( \frac{k}{k_F} \right)^2+\frac{4\alpha r_S}{\pi}g\left( \frac{k}{k_F} \right)}
+=& Z e \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{i \mathbf{k} \cdot \mathbf{x}}\frac{1-K_{ring}(\mathbf{k},0)}{K_{ring}(\mathbf{k},0)}\\
+=&-Z e \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{i \mathbf{k} \cdot \mathbf{x}}\frac{\frac{4\alpha r_S}{\pi}\left( \frac{k_F^2}{k^2} \right)g\left( \frac{k}{k_F} \right)}{1+\frac{4\alpha r_S}{\pi}\left( \frac{k_F^2}{k^2} \right)g\left( \frac{k}{k_F} \right)}\\
+=&-Z e \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \mathrm{e}^{i \mathbf{k} \cdot \mathbf{x}}\frac{\frac{4\alpha r_S}{\pi}g\left( \frac{k}{k_F} \right)}{\left( \frac{k}{k_F} \right)^2+\frac{4\alpha r_S}{\pi}g\left( \frac{k}{k_F} \right)}
 \end{split} \]
 
 This expression has several important features.
@@ -2414,8 +2414,8 @@ q_{TF} \overset{def}{\equiv} \sqrt{\frac{4\alpha r_S}{\pi}} \cdot k_F
 \end{equation}
 
 In terms of this, the induced charge density is given by
-\[\begin{split} \delta \langle \rho(\mathbf{x}) \rangle =& -Z e \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \mathrm{e}^{\imath \mathbf{q}\cdot\mathbf{x}} \frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}\\
-=& -Z e \int \frac{\mathrm{d} q}{(2\pi)^2} \int_{-1}^{1} \mathrm{d} t q^2 \mathrm{e}^{\imath q x t} \frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}\\
+\[\begin{split} \delta \langle \rho(\mathbf{x}) \rangle =& -Z e \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \mathrm{e}^{i \mathbf{q}\cdot\mathbf{x}} \frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}\\
+=& -Z e \int \frac{\mathrm{d} q}{(2\pi)^2} \int_{-1}^{1} \mathrm{d} t q^2 \mathrm{e}^{i q x t} \frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}\\
 =&-\frac{Z e}{2\pi^2 x} \int \mathrm{d} q \cdot q sin (qx)\frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}
 \end{split} \]
 \begin{equation} \label{Eqs3.1.28}
@@ -2427,15 +2427,15 @@ Since $g(x)$ is a function of order unit, the second term in the denominator bec
 In the high-density limit where $r_S \rightarrow 0$, we can approximate $g(\frac{q}{k_F})$ by $g(0)$ for those $q$ which is much smaller than the Thomas-Fermi wavenumber.
 
 $g(0)=1$, so that we can approximately evaluate this integral as
-\[\overset{r_S \rightarrow 0}{\approx} - \frac{Z e}{4\pi^2 x} \int_{-\infty}^{+\infty}\mathrm{d}q \cdot q\left( \frac{\mathrm{e}^{\imath qx}-\mathrm{e}^{-\imath qx}}{2\imath} \right)\frac{q_{TF}^2}{q^2+q_{TF}^2}\]
+\[\overset{r_S \rightarrow 0}{\approx} - \frac{Z e}{4\pi^2 x} \int_{-\infty}^{+\infty}\mathrm{d}q \cdot q\left( \frac{\mathrm{e}^{i qx}-\mathrm{e}^{-i qx}}{2i} \right)\frac{q_{TF}^2}{q^2+q_{TF}^2}\]
 
 \begin{center} \label{Fig3.1.2}
 \includegraphics[width=0.22\textwidth]{3-1-2.png}
 \end{center}
 
 \[\begin{split}
-=& - \frac{Z e}{4\pi^2 x}\oint_{\Gamma_{upper half}} \mathrm{d}q \frac{1}{2}\frac{\mathrm{e}^{\imath q x}}{2\imath}\left\{ \frac{1}{q-\imath q_{TF}}+\frac{1}{q+\imath q_{TF}} \right\}\\
-&-\frac{Z e}{4\pi^2 x}\oint_{\Gamma_{lower half}} \mathrm{d}q \frac{1}{2}\frac{\mathrm{e}^{-\imath q x}}{2\imath}\left\{ \frac{1}{q-\imath q_{TF}}+\frac{1}{q+\imath q_{TF}} \right\}\\
+=& - \frac{Z e}{4\pi^2 x}\oint_{\Gamma_{upper half}} \mathrm{d}q \frac{1}{2}\frac{\mathrm{e}^{i q x}}{2i}\left\{ \frac{1}{q-i q_{TF}}+\frac{1}{q+i q_{TF}} \right\}\\
+&-\frac{Z e}{4\pi^2 x}\oint_{\Gamma_{lower half}} \mathrm{d}q \frac{1}{2}\frac{\mathrm{e}^{-i q x}}{2i}\left\{ \frac{1}{q-i q_{TF}}+\frac{1}{q+i q_{TF}} \right\}\\
 =& - \frac{Z e}{8 \pi x}q_{TF}^2 \mathrm{e}^{-q_{TF} x} \times 2
 \end{split}\]
 
@@ -2459,19 +2459,19 @@ log\left| \frac{q-2 k_F}{q+ 2k_F} \right| = \lim_{\eta \rightarrow 0} \frac{1}{2
 
 substituting this expression into eq.(\ref{Eqs3.1.28}), we have
 \[\begin{split}
-\delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x \imath} \lim_{\eta \rightarrow 0} \int_{-\infty}^{+\infty} \mathrm{d} q \cdot q \mathrm{e}^{\imath q x}\\
+\delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x i} \lim_{\eta \rightarrow 0} \int_{-\infty}^{+\infty} \mathrm{d} q \cdot q \mathrm{e}^{i q x}\\
 & \left(  \frac{q^2}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}} -1 \right)\\
-=& -\frac{Z e}{4\pi^2 x \imath} \lim_{\eta \rightarrow 0} \int_{-\infty}^{+\infty} \mathrm{d} q  \mathrm{e}^{\imath q x}\\
+=& -\frac{Z e}{4\pi^2 x i} \lim_{\eta \rightarrow 0} \int_{-\infty}^{+\infty} \mathrm{d} q  \mathrm{e}^{i q x}\\
 &\times \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
 \end{split}\]
 
-The integrand has a pole at $q = \pm \imath q_{TF}$, which gives rises to a Thomas-Fermi result, as described above.
+The integrand has a pole at $q = \pm i q_{TF}$, which gives rises to a Thomas-Fermi result, as described above.
 
 On top of these poles, the integrand requires us to introduce a branch cut associated with these logarithmic functions.
 
-Namely, when $q=\pm 2 k_F + \imath V$, the arguments of these logarithmic function become negative when absolute value of $V$ is greater than $\eta$, e.g.
+Namely, when $q=\pm 2 k_F + i V$, the arguments of these logarithmic function become negative when absolute value of $V$ is greater than $\eta$, e.g.
 \begin{equation} \label{Eqs3.1.31} \begin{split}
-log \left[ \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right]_{q=2 k_F + \imath V} =& log \left[ (q-2 k_F)^2 + \eta^2 \right]_{q=2 k_F + \imath V}-log \left[ (q+2 k_F)^2 + \eta^2 \right]_{q=2 k_F + \imath V}\\
+log \left[ \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right]_{q=2 k_F + i V} =& log \left[ (q-2 k_F)^2 + \eta^2 \right]_{q=2 k_F + i V}-log \left[ (q+2 k_F)^2 + \eta^2 \right]_{q=2 k_F + i V}\\
 =& log\left[ \underline{-V^2 + \eta^2} \right] - log[\ldots]
 \end{split}\end{equation}
 
@@ -2481,12 +2481,12 @@ As such, we introduce four branch cuts in the complex-$q$ plane.
 \includegraphics[width=0.6\textwidth]{3-1-3.png}
 \end{center}
 
-Correspondingly, we will deform the integral path along the real axis into this way. We choose the upper half plane, because of this $\mathrm{e}^{\imath q x}$ where $x$ is positive definite.
+Correspondingly, we will deform the integral path along the real axis into this way. We choose the upper half plane, because of this $\mathrm{e}^{i q x}$ where $x$ is positive definite.
 
 When the contour takes to be infinitely far from the origin, we have
 \begin{equation} \label{Eqs3.1.32} \begin{split}
-\delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x \imath} \lim_{\eta \rightarrow 0} \left( \oint_{|q-\imath q_{TF}| = \epsilon} + \oint_{C_1} + \oint_{C_2} \right)\\
-& \mathrm{e}^{\imath q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
+\delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x i} \lim_{\eta \rightarrow 0} \left( \oint_{|q-i q_{TF}| = \epsilon} + \oint_{C_1} + \oint_{C_2} \right)\\
+& \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
 \end{split}\end{equation}
 
 \begin{center} \label{Fig3.1.4}
@@ -2504,36 +2504,36 @@ To see this algebraic decay, let us first calculate this integral.
 \includegraphics[width=0.22\textwidth]{3-1-5.png}
 \end{center}
 
-According to this branch cut, the imaginary part of this logarithmic function takes $-\imath \pi$ on the left side of $C_1$, while takes $+\imath \pi$ on the right side of $C_1$.
+According to this branch cut, the imaginary part of this logarithmic function takes $-i \pi$ on the left side of $C_1$, while takes $+i \pi$ on the right side of $C_1$.
 
 With this in mind, we can calculate this integral as
 \begin{equation} \label{Eqs3.1.33} \begin{split}
-&\oint_{C_1} \mathrm{d} q \mathrm{e}^{\imath q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
-=& \imath \int_{+\infty}^{\eta} \mathrm{d} V \mathrm{e}^{\imath(2 k_F+\imath V) x} \frac{(2 k_F+\imath V)^3}{(2 k_F+\imath V)^2 + q_{TF}^2 g\left( \frac{2 k_F - \epsilon + \imath V}{k_F} \right)}\\
-&+\imath \int_{\eta}^{+\infty} \mathrm{d} V \mathrm{e}^{\imath(2 k_F+\imath V) x} \frac{(2 k_F+\imath V)^3}{(2 k_F+\imath V)^2 + q_{TF}^2 g\left( \frac{2 k_F + \epsilon + \imath V}{k_F} \right)}\\
-=& \imath \int_{\eta}^{+\infty} \mathrm{d}V \mathrm{e}^{\imath(2 k_F+\imath V) x} \frac{(2 k_F+\imath V)^3\left( q_{TF}^2 g_- - q_{TF}^2 g_+ \right)}{\left[(2 k_F+\imath V)^2 + q_{TF}^2 g_+ \right]\left[(2 k_F+\imath V)^2 + q_{TF}^2 g_- \right]}
+&\oint_{C_1} \mathrm{d} q \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
+=& i \int_{+\infty}^{\eta} \mathrm{d} V \mathrm{e}^{i(2 k_F+i V) x} \frac{(2 k_F+i V)^3}{(2 k_F+i V)^2 + q_{TF}^2 g\left( \frac{2 k_F - \epsilon + i V}{k_F} \right)}\\
+&+i \int_{\eta}^{+\infty} \mathrm{d} V \mathrm{e}^{i(2 k_F+i V) x} \frac{(2 k_F+i V)^3}{(2 k_F+i V)^2 + q_{TF}^2 g\left( \frac{2 k_F + \epsilon + i V}{k_F} \right)}\\
+=& i \int_{\eta}^{+\infty} \mathrm{d}V \mathrm{e}^{i(2 k_F+i V) x} \frac{(2 k_F+i V)^3\left( q_{TF}^2 g_- - q_{TF}^2 g_+ \right)}{\left[(2 k_F+i V)^2 + q_{TF}^2 g_+ \right]\left[(2 k_F+i V)^2 + q_{TF}^2 g_- \right]}
 \end{split} \end{equation}
 
-where we take $q$ to be $2 k_F +\imath V -\epsilon$ in the integral along the left side of $C_1$, while take $q$ to be $2 k_F +\imath V + \epsilon$ in the integral along the right side of $C_1$.
+where we take $q$ to be $2 k_F +i V -\epsilon$ in the integral along the left side of $C_1$, while take $q$ to be $2 k_F +i V + \epsilon$ in the integral along the right side of $C_1$.
 
 Here $\epsilon$ is a infinitesimally small real and positive quantity.
 
 $g_\pm$ stands for these two function respectively
-\[ g_\pm \equiv g\left( \frac{2 k_F + \imath V \pm \epsilon}{k_F} \right) \]
+\[ g_\pm \equiv g\left( \frac{2 k_F + i V \pm \epsilon}{k_F} \right) \]
 
 with
 \[ g(x) = \frac{1}{2} - \frac{1}{2x} \left( 1- \frac{1}{4}x^2 \right) \frac{1}{2} ln\left[ \frac{(x-2)^2 + \eta^2}{(x+2)^2+\eta^2} \right] \]
 
 As mentioned before, $g_+$ and $g_-$ differ from each other along the branch cut, because of this logarithmic part:
 \[\begin{split}
-g_+-g_- = & \frac{1}{2} \frac{k_F}{2 k_F + \imath V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +\imath V}{k_F} \right)^2 \right) \times \frac{1}{2} \left[ ln \left[ \frac{(x-2)^2+\eta^2}{(x+2)^2+\eta^2}\right] \right]_{x=\frac{2 k_F +\imath V -\imath\epsilon}{k_F}}^{x=\frac{2 k_F +\imath V +\imath\epsilon}{k_F}}\\
-=& \frac{\pi \imath}{2} \frac{k_F}{2 k_F + \imath V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +\imath V}{k_F} \right)^2 \right)
+g_+-g_- = & \frac{1}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right) \times \frac{1}{2} \left[ ln \left[ \frac{(x-2)^2+\eta^2}{(x+2)^2+\eta^2}\right] \right]_{x=\frac{2 k_F +i V -i\epsilon}{k_F}}^{x=\frac{2 k_F +i V +i\epsilon}{k_F}}\\
+=& \frac{\pi i}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right)
 \end{split}\]
 
 substituting this into eq.(\ref{Eqs3.1.33}), we have
 \[\begin{split}
-\text{eq.(\ref{Eqs3.1.33})} = &\imath \int_{\eta}^{+\infty} \mathrm{d} V \mathrm{e}^{\imath 2 k_F x} \mathrm{e}^{-V x} \frac{(2 k_F + \imath V)^3 q_{TF}^2}{\left[ (2 k_F + \imath V)^2 + q_{TF}^2 g\left( \frac{2 k_F +\imath V}{k_F}\right) \right]^2}\times\\
-&\left(- \frac{\pi \imath}{2}\right) \frac{k_F}{2 k_F + \imath V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +\imath V}{k_F} \right)^2 \right)
+\text{eq.(\ref{Eqs3.1.33})} = &i \int_{\eta}^{+\infty} \mathrm{d} V \mathrm{e}^{i 2 k_F x} \mathrm{e}^{-V x} \frac{(2 k_F + i V)^3 q_{TF}^2}{\left[ (2 k_F + i V)^2 + q_{TF}^2 g\left( \frac{2 k_F +i V}{k_F}\right) \right]^2}\times\\
+&\left(- \frac{\pi i}{2}\right) \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right)
 \end{split}\]
 
 Since this integral is a bit involved, we will expand the integrand in power of $V$. We will retain only the lowest power of $V$.
@@ -2542,26 +2542,26 @@ As will be clear soon, the power of $V$ corresponds to the power of $\frac{1}{x}
 
 As such, we have only to retain the lowest power of $V$, in order to obtain the leading asymptotic form for the larger $x$.
 \[\allowdisplaybreaks\begin{split}
-\text{eq.(\ref{Eqs3.1.33})} = &\mathrm{e}^{\imath 2 k_F x} \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \frac{\pi}{2}q_{TF}^2\times\\
-&\left\{ \frac{4 k_F^3}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \cdot \left( 1-\frac{1}{4}\left( 4 + 4 \imath \frac{V}{k_F} \right) \right) + o(V^2) \right\}\\
-=&\mathrm{e}^{\imath 2 k_F x} \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \left( -\imath \frac{V}{k_F} + o(V^2) \right) \times \frac{\pi q_{TF}^2}{2} \frac{4 k_F^3}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2}\\
-=&-\imath \mathrm{e}^{\imath 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \left( V + o(V^2) \right)\\
-=&-\imath \mathrm{e}^{\imath 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \left( \left( -\frac{\partial}{\partial x} \right) \left( \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \right) + a \frac{\partial^2}{\partial x^2} \left( \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \right) + \ldots \right)
+\text{eq.(\ref{Eqs3.1.33})} = &\mathrm{e}^{i 2 k_F x} \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \frac{\pi}{2}q_{TF}^2\times\\
+&\left\{ \frac{4 k_F^3}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \cdot \left( 1-\frac{1}{4}\left( 4 + 4 i \frac{V}{k_F} \right) \right) + o(V^2) \right\}\\
+=&\mathrm{e}^{i 2 k_F x} \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \left( -i \frac{V}{k_F} + o(V^2) \right) \times \frac{\pi q_{TF}^2}{2} \frac{4 k_F^3}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2}\\
+=&-i \mathrm{e}^{i 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \left( V + o(V^2) \right)\\
+=&-i \mathrm{e}^{i 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \left( \left( -\frac{\partial}{\partial x} \right) \left( \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \right) + a \frac{\partial^2}{\partial x^2} \left( \int_{\eta}^{+\infty} \mathrm{d} V  \mathrm{e}^{-V x} \right) + \ldots \right)
 \end{split}\]
 
 \begin{equation} \label{Eqs3.1.34}
-\text{eq.(\ref{Eqs3.1.33})} = -\imath \mathrm{e}^{\imath 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \left( \frac{1}{x^2} + o(\frac{1}{x^3}) \right)
+\text{eq.(\ref{Eqs3.1.33})} = -i \mathrm{e}^{i 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \left( \frac{1}{x^2} + o(\frac{1}{x^3}) \right)
 \end{equation}
 
 Similarly, we can also calculate the other contour integral.
 \begin{equation} \label{Eqs3.1.35} \begin{split}
-&\oint_{C_2} \mathrm{d} q \mathrm{e}^{\imath q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
-=& -\imath \mathrm{e}^{-\imath 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \left( \frac{1}{x^2} + o(\frac{1}{x^3}) \right)
+&\oint_{C_2} \mathrm{d} q \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
+=& -i \mathrm{e}^{-i 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \left( \frac{1}{x^2} + o(\frac{1}{x^3}) \right)
 \end{split}\end{equation}
 
 Then, substituting these two into eq.(\ref{Eqs3.1.32}), we finally obtain the leading-order asymptotic form of the induced charge density.
 \begin{equation} \label{Eqs3.1.36} \begin{split}
-\delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x \imath} \times \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \frac{1}{x^2} \left\{ -\imath e^{2\imath k_F x} -\imath \mathrm{e}^{-2\imath k_F x} \right\} + o(\frac{1}{x^4})\\
+\delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x i} \times \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \frac{1}{x^2} \left\{ -i e^{2i k_F x} -i \mathrm{e}^{-2i k_F x} \right\} + o(\frac{1}{x^4})\\
 =& \frac{Z e}{\pi} \frac{2 \xi}{[4+\xi]^2} \frac{cos(2 k_F x)}{x^3} + o(\frac{1}{x^4})\quad\text{(for $x \rightarrow +\infty$)}
 \end{split}\end{equation}
 
@@ -2606,8 +2606,8 @@ Physically, both of these modes describe a collective propagation of density flu
 As is clear from the Lehmann representation of the density-density correlation function given in eq.(\ref{Eqs3.1.16}), the polarization part $\Pi(\mathbf{q},\omega) \equiv \frac{1}{\hbar}D(\mathbf{q},\omega)$ has poles at the exact excitation energy of these collective modes.
 \begin{equation*} \tag{3.1.16'} \begin{split}
 \Pi(\mathbf{q},\omega)=& \hbar^{-1} D(\mathbf{q},\omega)\\
-=& \frac{V}{\imath \hbar} \sum_n \delta_{\mathbf{q},\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega - \hbar^{-1}(E_n-E_0) + \imath \eta}\\
-& -\frac{V}{\imath \hbar} \sum_n \delta_{\mathbf{q},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) - \imath \eta}
+=& \frac{V}{i \hbar} \sum_n \delta_{\mathbf{q},\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega - \hbar^{-1}(E_n-E_0) + i \eta}\\
+& -\frac{V}{i \hbar} \sum_n \delta_{\mathbf{q},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) - i \eta}
 \end{split} \end{equation*}
 
 Poles of $\Pi(\mathbf{q},\omega)$ can be detected by the zeros of the dielectric constant $K(\mathbf{q},\omega)$
@@ -2636,7 +2636,7 @@ This means that a degenerate electron gas has a collective mode at $\omega = \sq
 
 To study this collective mode in detail, let us consider that a degenerate electron gas is subjected under an impulsive perturbation.
 \begin{equation} \label{Eqs3.2.3}
-\varphi^{ex}(\mathbf{x},t) = \mathrm{e}^{\imath \mathbf{q} \cdot \mathbf{x}} \varphi_0 \delta(t)
+\varphi^{ex}(\mathbf{x},t) = \mathrm{e}^{i \mathbf{q} \cdot \mathbf{x}} \varphi_0 \delta(t)
 \end{equation}
 
 or equivalently
@@ -2646,19 +2646,19 @@ or equivalently
 
 According to the linear response theory, the induced charge density is given by
 \begin{equation} \label{Eqs3.2.4} \begin{split}
-\delta \langle \hat{n}(\mathbf{x},t) \rangle =&-\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d}\omega}{2\pi} \mathrm{e}^{\imath \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{-\imath \omega t} D^R(\mathbf{k},\omega) e \varphi_0 (2\pi)^3 \delta^3(\mathbf{q}-\mathbf{k})\\
-=& - e \varphi_0 \mathrm{e}^{\imath \mathbf{q} \cdot \mathbf{x}} \int \frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-\imath \omega t} \Pi^R(\mathbf{q},\omega)
+\delta \langle \hat{n}(\mathbf{x},t) \rangle =&-\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \int \frac{\mathrm{d}\omega}{2\pi} \mathrm{e}^{i \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{-i \omega t} D^R(\mathbf{k},\omega) e \varphi_0 (2\pi)^3 \delta^3(\mathbf{q}-\mathbf{k})\\
+=& - e \varphi_0 \mathrm{e}^{i \mathbf{q} \cdot \mathbf{x}} \int \frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-i \omega t} \Pi^R(\mathbf{q},\omega)
 \end{split}\end{equation}
 
 As is clear from the Lehmann representation of the retarded density correlation function, $\Pi^P(\mathbf{q},\omega)$ has a pole only in the lower half plane in the complex-$\omega$ plane.
 \begin{equation} \label{Eqs3.2.5}
-\Pi^R(\mathbf{q},\omega) = \frac{\imath A_{\mathbf{q}}}{\omega - (\Omega_{\mathbf{q}}-\imath \gamma_{\mathbf{q}})} + \ldots
+\Pi^R(\mathbf{q},\omega) = \frac{i A_{\mathbf{q}}}{\omega - (\Omega_{\mathbf{q}}-i \gamma_{\mathbf{q}})} + \ldots
 \end{equation}
 
 substituting this into here, we have
 \begin{equation} \label{Eqs3.2.6} \begin{split}
-=& - e \varphi_0 \mathrm{e}^{\imath \mathbf{q} \cdot \mathbf{x}} \int_{-\infty}^{+\infty} \frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-\imath \omega t} \frac{\imath A_{\mathbf{q}}}{\omega - (\Omega_{\mathbf{q}}-\imath \gamma_{\mathbf{q}})}\\
-=& - e \varphi_0 A_{\mathbf{q}} \mathrm{e}^{\imath \mathbf{q} \cdot \mathbf{x}} \mathrm{e}^{-\imath \Omega_{\mathbf{q}} t - \gamma_{\mathbf{q}} t}
+=& - e \varphi_0 \mathrm{e}^{i \mathbf{q} \cdot \mathbf{x}} \int_{-\infty}^{+\infty} \frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-i \omega t} \frac{i A_{\mathbf{q}}}{\omega - (\Omega_{\mathbf{q}}-i \gamma_{\mathbf{q}})}\\
+=& - e \varphi_0 A_{\mathbf{q}} \mathrm{e}^{i \mathbf{q} \cdot \mathbf{x}} \mathrm{e}^{-i \Omega_{\mathbf{q}} t - \gamma_{\mathbf{q}} t}
 \end{split}\end{equation}
 
 This suggests that the real part of the pole($\ldots$) determines the dispersion relation of the collective mode, while the imaginary part($\ldots$) is nothing but the inverse of the life time
@@ -2666,7 +2666,7 @@ This suggests that the real part of the pole($\ldots$) determines the dispersion
 To obtain an explicit form of $\Omega_{\mathbf{q}}$ and $\gamma_{\mathbf{q}}$, we need to calculate the polarization function.
 
 According to eq.(\ref{Eqs3.1.18}), we have
-\[\Pi^R(\mathbf{q},\omega) = Re\Pi(\mathbf{q},\omega) + \imath sgn(\omega) Im \Pi(\mathbf{q},\omega)\]
+\[\Pi^R(\mathbf{q},\omega) = Re\Pi(\mathbf{q},\omega) + i sgn(\omega) Im \Pi(\mathbf{q},\omega)\]
 
 Within the ring-diagram approximation, time-ordered polarization part is given by this:
 \begin{equation*} \label{Eqs2.8.5''} \tag{2.8.5''} \Pi(\mathbf{q},\omega) = \frac{\Pi^{0}(\mathbf{q},\omega)}{1-\Pi^{0}(\mathbf{q},\omega) V(\mathbf{q})} \end{equation*}
@@ -2677,19 +2677,19 @@ Since $V(\mathbf{q})$ is real, we have
 \end{equation}
 
 where
-\[\Pi^{0,R}(\mathbf{q},\omega) = Re\Pi^0(\mathbf{q},\omega) + \imath sgn(\omega) Im \Pi^0(\mathbf{q},\omega)\]
+\[\Pi^{0,R}(\mathbf{q},\omega) = Re\Pi^0(\mathbf{q},\omega) + i sgn(\omega) Im \Pi^0(\mathbf{q},\omega)\]
 
 where $\Pi^0(\mathbf{q},\omega)$ was already calculated in the previous section.
 
 The pole of $\Pi^R(\mathbf{q},\omega)$ can be determined by the zero of the denominator of the right hand side, so that pole satisfies the following equation:
 \begin{equation} \label{Eqs3.2.8}
-1-\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}-\imath \gamma_{\mathbf{q}})V(\mathbf{q}) = 0
+1-\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}-i \gamma_{\mathbf{q}})V(\mathbf{q}) = 0
 \end{equation}
 
 When the damping(inverse of the life time) is sufficiently smaller than the resonance frequency $\Omega_{\mathbf{q}}$, which turns out to be the case a priori, we can expand this equation is small $\gamma_{\mathbf{q}}$:
 \begin{equation} \label{Eqs3.2.9} \begin{split}
-1-&\left( Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) + \imath Im \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \right.\\
-&\left. -\imath \gamma_{\mathbf{q}} \left\{ \left[ \frac{\partial Re \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + \imath \left[ \frac{\partial Im \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} \right\} + o(\gamma_{\mathbf{q}}^2) \right)V(\mathbf{q}) = 0
+1-&\left( Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) + i Im \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \right.\\
+&\left. -i \gamma_{\mathbf{q}} \left\{ \left[ \frac{\partial Re \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + i \left[ \frac{\partial Im \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} \right\} + o(\gamma_{\mathbf{q}}^2) \right)V(\mathbf{q}) = 0
 \end{split}\end{equation}
 
 The real part of this equality is given by

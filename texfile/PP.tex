@@ -1472,7 +1472,7 @@ Generally speaking, we can expect that such an eigen wavefunction constitutes a 
 \end{equation}
 %p711
 Then using eq.(\ref{eq4.5.27}), eq.(\ref{eq4.5.28}) and eq.(\ref{eq4.5.29}), we can prove eq.(\ref{eq4.5.26}) exactly in the same way as we did in eq.(\ref{eq4.5.24}).
-To summerize, eq(\ref{4.5.22}) and eq(\ref{eq4.5.27},\ref{eq4.5.28}) comprise a set of self-consistent equation for unknown set of functions $\{ \phi_j(\mathbf{x})\}$ and unknown set of eigenvalues $\{ \epsilon_j\}$.
+To summerize, eq(\ref{eq4.5.22}) and eq(\ref{eq4.5.27},\ref{eq4.5.28}) comprise a set of self-consistent equation for unknown set of functions $\{ \phi_j(\mathbf{x})\}$ and unknown set of eigenvalues $\{ \epsilon_j\}$.
 This set of equation is a generalisation of Hartree-Fock approximation at finite temperature.
 In a spatially homogeneous system, where $U(\mathbf{x})=0$, this set of self consistent equation becomes simplified.
 %p712
@@ -1575,7 +1575,7 @@ s(T,V,\mu)=\cancelto{0}{S(T=0,V,\mu)}+\int_0^T\frac{1}{T'}\left( \frac{\partial 
 \end{equation}
 %p718
 Thus, the remaining task is to evaluate the thermodynamic function $K$ as a function of $T,\ V$ \& $\mu$.
-eq.(\ref{4.1.14}) suggests that the internal energy is given by
+eq.(\ref{eq4.1.14}) suggests that the internal energy is given by
 \[
 \langle E \rangle=-\frac{1}{2}\int d^3\mathbf{x} \lim_{\tau'\to \tau+} \lim_{\mathbf{x}'\to\mathbf{x}}\left(\hbar \partial_\tau +\frac{\hbar^2\nabla^2_\mathbf{x}}{2m}-\mu\right) Tr[g(\mathbf{x},\tau;\mathbf{x}',\tau')]
 \]
@@ -1695,7 +1695,7 @@ where
 \end{equation}
 %p726
 The thermodynamic function $K(T,V,\mu)$ can be obtained by the substitution of eq(\ref{eq4.6.15}) into eq(\ref{eq4.6.10}) 
-\begin{equation}
+\begin{equation}\label{4.6.22}
 \langle K\rangle=V\int \frac{d^3 \mathbf{k}}{(2\pi)^3} \frac{1}{\beta\hbar} \sum_n e^{i\omega_n \eta} (i\hbar \omega_n+\epsilon_k^0-\mu)\left\{ g(\mathbf{k},\omega_n,T=0) +g^2(\mathbf{k},\omega_n,T=0) \int \frac{d^3 \mathbf{q}}{(2\pi)^3} [2V(0)-V(\mathbf{k}-\mathbf{q})]\right\}
 \end{equation}
 As we did before, the summations over the Matsubara frequency are evaluated in terms of the complex integrals.
@@ -1722,7 +1722,7 @@ As we did before, the summations over the Matsubara frequency are evaluated in t
 &=\hbar\left\{ \frac{\partial n_k(T)}{\partial \epsilon_k(0)}  \left[  2(\epsilon_k(0)-\mu) -\hbar \Sigma^\star(\mathbf{k},0) \right] +n_k(T)  \right\}
 \end{aligned}
 \]
-Substituting these two into eq(\ref{eq4.6.23}), thermodynamic function is given by
+Substituting these two into eq(\ref{4.6.23}), thermodynamic function is given by
 %p728
 \[
 \begin{aligned}
@@ -1750,7 +1750,7 @@ K(T,V,\mu)-K(0,V,\mu)=&V\int \frac{d^3 \mathbf{k}}{(2\pi)^2} 2(\epsilon_k(0)-\mu
 \end{aligned}
 \]
 %p729
- Substituting eq.(\ref{eq4.6.22}) into the last term, we have
+ Substituting eq.(\ref{4.6.22}) into the last term, we have
 \[
 \begin{aligned}
 K(T,V,\mu)-K(0,V,\mu)=&V\int \frac{d^3 \mathbf{k}}{(2\pi)^2} 2(\epsilon_k(0)-\mu) (n_k(T)-n_k(0))\\
@@ -1760,7 +1760,7 @@ K(T,V,\mu)-K(0,V,\mu)=&V\int \frac{d^3 \mathbf{k}}{(2\pi)^2} 2(\epsilon_k(0)-\mu
 \]
  Using eq.(\ref{eq4.6.21}), we can rewrite this part as $\hbar \left[ \Sigma^\star (\mathbf{k},T) -  \Sigma^\star (\mathbf{k},0) \right]$
  Thus, we have
-\begin{equation}
+\begin{equation}\label{4.6.23}
 \begin{aligned}
 K(T,V,\mu)-K(0,V,\mu)=&V\int \frac{d^3 \mathbf{k}}{(2\pi)^2} 2(\epsilon_k(0)-\mu) (n_k(T)-n_k(0))\\
 &+V\int \frac{d^3 \mathbf{k}}{(2\pi)^2}  \left[\hbar \Sigma^\star (\mathbf{k},T) - \hbar \Sigma^\star (\mathbf{k},0) \right] (n_k(T)-n_k(0))\\

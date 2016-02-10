@@ -928,7 +928,7 @@ Since $\gamma_{\mathbf{p}}$ changes sign at $k_F$, the preceding general argumen
 
 Galitskii's evaluation of eq.(\ref{Eqs2.7.33}) shows that the right hand side is calculated as follows
 \begin{equation} \label{Eqs2.7.35}
-\mu = \frac{\hbar^2 k_F^2}{2m}\left[ 1+\frac{4}{3\pi}k_F a + \frac{4}{15\pi^2}(11-2 ln2)(k_F a)^2 \right]
+\mu = \frac{\hbar^2 k_F^2}{2m}\left[ 1+\frac{4}{3\pi}k_F a + \frac{4}{15\pi^2}(11-2 \ln2)(k_F a)^2 \right]
 \end{equation}
 
 up to the 2nd order in small $k_F a$,
@@ -943,7 +943,7 @@ From which we can define effective mass at the Fermi surface.
 
 A detailed calculation with eq.(\ref{Eqs2.7.24}) shows that the effective mass thus defined is given as follow to the 2nd order in small $k_F a$.
 \begin{equation} \label{Eqs2.7.37}
-\frac{m^{*}}{m} = 1+ \frac{8}{15\pi^2}(7 ln2 -1)(k_F a)^2
+\frac{m^{*}}{m} = 1+ \frac{8}{15\pi^2}(7 \ln2 -1)(k_F a)^2
 \end{equation}
 
 $m^{*}$ has no 1st order correction in $k_F a$, which is simply because $\Sigma_1^{\bigstar}$ has no momentum dependence.
@@ -977,13 +977,13 @@ As such, the ground state energy at given particle, $N$ can be calculated from t
 \end{split} \]}
 \[ \begin{split}
 E=& \int_0^N \mathrm{d}N^{'} \mu(V,N^{'})\\
-=&\int_0^N \mathrm{d}N^{'}\frac{\hbar^2 k_F^2}{2m} \times \left[ 1+\frac{4}{3\pi}k_F a + \frac{4}{15\pi^2}(11-2 ln2)(k_F a)^2 \right]\\
-=&\frac{\hbar^2 k_F^2}{2m}\cdot N\cdot \left[ \frac{3}{2+3} + \frac{3}{3+3}\cdot\frac{4}{3\pi}k_F a + \frac{3}{4+3}\cdot\frac{4}{15\pi^2}(11-2 ln2)(k_F a)^2 \right]
+=&\int_0^N \mathrm{d}N^{'}\frac{\hbar^2 k_F^2}{2m} \times \left[ 1+\frac{4}{3\pi}k_F a + \frac{4}{15\pi^2}(11-2 \ln2)(k_F a)^2 \right]\\
+=&\frac{\hbar^2 k_F^2}{2m}\cdot N\cdot \left[ \frac{3}{2+3} + \frac{3}{3+3}\cdot\frac{4}{3\pi}k_F a + \frac{3}{4+3}\cdot\frac{4}{15\pi^2}(11-2 \ln2)(k_F a)^2 \right]
 \end{split}\]
 
 From which we obtain
 \begin{equation} \label{Eqs2.7.41}
-\frac{E}{N} = \frac{\hbar^2 k_F^2}{2m}\left[ \frac{3}{5}+\frac{2}{3\pi}k_F a + \frac{4}{35\pi^2}(11-2 ln2)(k_F a)^2 + \ldots \right]
+\frac{E}{N} = \frac{\hbar^2 k_F^2}{2m}\left[ \frac{3}{5}+\frac{2}{3\pi}k_F a + \frac{4}{35\pi^2}(11-2 \ln2)(k_F a)^2 + \ldots \right]
 \end{equation}
 
 This is the ground state energy given perturbatively in small $k_F a$. Clearly the first term is just a ground state energy in the non-interacting limit, while the next two terms are correction to this.
@@ -1540,23 +1540,23 @@ so that we have only to study $\Pi^0(\mathbf{q},\omega)$ for positive $\omega$
 Let us begin with the real part of $\Pi^0(\mathbf{q},\omega)$:
 \footnote{This ``$\mathscr{P}$" stands for the principal integral(value).}
 \begin{equation} \label{Eqs2.8.15} \begin{split}
-Re \Pi^0(\mathbf{q},\omega) =& \frac{2}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|)\\
+\text{Re} \Pi^0(\mathbf{q},\omega) =& \frac{2}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|)\\
 & \times \left\{ \frac{\mathscr{P}}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}} - \frac{\mathscr{P}}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}} \right\}
 \end{split}\end{equation}
 \begin{equation} \label{Eqs2.8.16} \begin{split}
-Im \Pi^0(\mathbf{q},\omega) =& -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \\
+\text{Im} \Pi^0(\mathbf{q},\omega) =& -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \\
 &\times \left\{ \delta(\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}) + \delta(\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}) \right\}
 \end{split}\end{equation}
 
 By replacing $\theta(|\mathbf{k}+\mathbf{q}|-k_F)$ by $1-\theta(k_F - |\mathbf{k}+\mathbf{q}|)$, we have
-\[ Re \Pi^0(\mathbf{q},\omega) = \frac{2}{\hbar} \mathscr{P} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \left( 1-\theta(k_F-|\mathbf{k}+\mathbf{q}|)\right)\theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}} \right\}
+\[ \text{Re} \Pi^0(\mathbf{q},\omega) = \frac{2}{\hbar} \mathscr{P} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \left( 1-\theta(k_F-|\mathbf{k}+\mathbf{q}|)\right)\theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}} \right\}
 \]
 
 This part vanishes under the $\mathbf{k}$-integral.
 
 One can see this by introducing again $\mathbf{k}^{'}=-\mathbf{k}-\mathbf{q}$.
 
-\[ Re \Pi^0(\mathbf{q},\omega) = \frac{2}{\hbar} \mathscr{P} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}} \right\}
+\[ \text{Re} \Pi^0(\mathbf{q},\omega) = \frac{2}{\hbar} \mathscr{P} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}} \right\}
 \]
 
 $\omega_{\mathbf{k}}$ denotes the kinetic energy of electron gas;
@@ -1570,7 +1570,7 @@ so that we have
 \end{split}\end{equation}
 
 using this, the real part is given by
-\[ Re \Pi^0(\mathbf{q},\omega) = \frac{2}{\hbar} \mathscr{P} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega-\frac{\hbar}{m}(\mathbf{q}\cdot\mathbf{k}+\frac{\mathbf{q}^2}{2})} - \frac{1}{\omega+\frac{\hbar}{m}(\mathbf{q}\cdot\mathbf{k}+\frac{\mathbf{q}^2}{2})} \right\}
+\[ \text{Re} \Pi^0(\mathbf{q},\omega) = \frac{2}{\hbar} \mathscr{P} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega-\frac{\hbar}{m}(\mathbf{q}\cdot\mathbf{k}+\frac{\mathbf{q}^2}{2})} - \frac{1}{\omega+\frac{\hbar}{m}(\mathbf{q}\cdot\mathbf{k}+\frac{\mathbf{q}^2}{2})} \right\}
 \]
 
 By making $\omega$ to be dimensionless variable and measuring all wave vectors in the unit of $k_F$;
@@ -1581,11 +1581,11 @@ By making $\omega$ to be dimensionless variable and measuring all wave vectors i
 \end{equation}
 
 we have
-\[ \begin{split} &Re \Pi^0_{old}(k_F\mathbf{q},\frac{\hbar k_F^2}{m}\nu) \equiv Re \Pi^0_{new}(\mathbf{q},\nu) \\
+\[ \begin{split} &\text{Re} \Pi^0_{old}(k_F\mathbf{q},\frac{\hbar k_F^2}{m}\nu) \equiv \text{Re} \Pi^0_{new}(\mathbf{q},\nu) \\
 =& \frac{2 m k_F}{\hbar^2} \mathscr{P} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(1 - |\mathbf{k}|) \times \left\{ \frac{1}{\nu-(\mathbf{q}\cdot\mathbf{k} + \frac{\mathbf{q}^2}{2})} - \frac{1}{\nu-(-\mathbf{q}\cdot\mathbf{k}-\frac{\mathbf{q}^2}{2})} \right\}
 \end{split}\]
 
-\begin{equation} \label{Eqs2.8.19} \begin{split} Re \Pi^0(\mathbf{q},\nu)
+\begin{equation} \label{Eqs2.8.19} \begin{split} \text{Re} \Pi^0(\mathbf{q},\nu)
 = \frac{2 m k_F}{\hbar^2} \int_0^1 k^2 \cdot \mathrm{d} k \int_{-1}^{1} \mathrm{d} t \times \left\{ \frac{\mathscr{P}}{\nu-\underline{(q k t + \frac{q^2}{2})}} - \frac{\mathscr{P}}{\nu-(-q k t-\frac{q^2}{2})} \right\}
 \end{split}\end{equation}
 
@@ -1608,25 +1608,25 @@ As such, depending on $\nu$ and $q$, we have following five cases:
 
 In the case of (i), these are no possibilities of these denominators being zero, so that we can freely integrate this:
 
-\[Re \Pi^0(\mathbf{q},\nu)
+\[\text{Re} \Pi^0(\mathbf{q},\nu)
 = -\frac{2 m k_F}{\hbar^2} \frac{1}{q} \int_0^1 k \cdot \mathrm{d} k \times \left\{ 
-\left[ log(\nu-q k t-\frac{q^2}{2}) \right]_{t=-1}^{t=+1} - \left[ log(\nu+q k t+\frac{q^2}{2}) \right]_{t=-1}^{t=+1}
+\left[ \log(\nu-q k t-\frac{q^2}{2}) \right]_{t=-1}^{t=+1} - \left[ \log(\nu+q k t+\frac{q^2}{2}) \right]_{t=-1}^{t=+1}
  \right\}\]
 
 we obtain
 \footnote{Using
-\[ \int x log(\beta-\alpha x) \mathrm{d}x = \frac{x^2}{2} log(\beta - \alpha x) - \frac{\beta^2}{2 \alpha^2} log(\beta - \alpha x) - \frac{x^2}{4}- \frac{\beta}{2\alpha}x \]}
+\[ \int x \log(\beta-\alpha x) \mathrm{d}x = \frac{x^2}{2} \log(\beta - \alpha x) - \frac{\beta^2}{2 \alpha^2} \log(\beta - \alpha x) - \frac{x^2}{4}- \frac{\beta}{2\alpha}x \]}
 
-\[ \begin{split}Re \Pi^0(\mathbf{q},\nu)
-= \frac{2 m k_F}{\hbar^2} \frac{1}{4\pi^2} \times&\left\{ -1 + \frac{1}{2q}\left( 1-(\frac{\nu}{q}-\frac{q}{2})^2 \right) log\left[ \frac{\nu-\frac{q^2}{2}+q}{\nu-\frac{q^2}{2}-q} \right] \right. \\
-&\left. -\frac{1}{2q}\left( 1-(\frac{\nu}{q}+\frac{q}{2})^2 \right) log\left[ \frac{\nu+\frac{q^2}{2}+q}{\nu+\frac{q^2}{2}-q} \right] \right\}
+\[ \begin{split}\text{Re} \Pi^0(\mathbf{q},\nu)
+= \frac{2 m k_F}{\hbar^2} \frac{1}{4\pi^2} \times&\left\{ -1 + \frac{1}{2q}\left( 1-(\frac{\nu}{q}-\frac{q}{2})^2 \right) \log\left[ \frac{\nu-\frac{q^2}{2}+q}{\nu-\frac{q^2}{2}-q} \right] \right. \\
+&\left. -\frac{1}{2q}\left( 1-(\frac{\nu}{q}+\frac{q}{2})^2 \right) \log\left[ \frac{\nu+\frac{q^2}{2}+q}{\nu+\frac{q^2}{2}-q} \right] \right\}
 \end{split}\]
 
 As for other cases, we can do a similar integral, from which we obtain.
 \begin{equation} \label{Eqs2.8.20}
-\begin{split}Re \Pi^0(\mathbf{q},\nu)
-= \frac{2 m k_F}{\hbar^2} \frac{1}{4\pi^2} \times&\left\{ -1 + \frac{1}{2q}\left( 1-(\frac{\nu}{q}-\frac{q}{2})^2 \right) log\left[ \frac{|\nu-\frac{q^2}{2}+q|}{|\nu-\frac{q^2}{2}-q|} \right] \right. \\
-&\left. -\frac{1}{2q}\left( 1-(\frac{\nu}{q}+\frac{q}{2})^2 \right) log\left[ \frac{|\nu+\frac{q^2}{2}+q|}{|\nu+\frac{q^2}{2}-q|} \right] \right\}
+\begin{split}\text{Re} \Pi^0(\mathbf{q},\nu)
+= \frac{2 m k_F}{\hbar^2} \frac{1}{4\pi^2} \times&\left\{ -1 + \frac{1}{2q}\left( 1-(\frac{\nu}{q}-\frac{q}{2})^2 \right) \log\left[ \frac{|\nu-\frac{q^2}{2}+q|}{|\nu-\frac{q^2}{2}-q|} \right] \right. \\
+&\left. -\frac{1}{2q}\left( 1-(\frac{\nu}{q}+\frac{q}{2})^2 \right) \log\left[ \frac{|\nu+\frac{q^2}{2}+q|}{|\nu+\frac{q^2}{2}-q|} \right] \right\}
 \end{split}
 \end{equation}
 
@@ -1634,7 +1634,7 @@ for any cases.
 
 Let us next calculate the imginary part of $\Pi^0(\mathbf{q},\omega)$.
 \begin{equation*} \tag{2.8.16} \begin{split}
-Im \Pi^0(\mathbf{q},\omega) =& -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|)\\
+\text{Im} \Pi^0(\mathbf{q},\omega) =& -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|)\\
 & \times \left\{ \delta(\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}) + \delta(\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}) \right\}
 \end{split}\end{equation*}
 
@@ -1642,7 +1642,7 @@ Since $\Pi^0(\mathbf{q},\omega)$ is an even function of $\omega$, we consider po
 
 For $\omega > 0$, we have
 \[
-Im \Pi^0(\mathbf{q},\omega) = -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \delta(\omega-(\omega_{\mathbf{k}+\mathbf{q}} - \omega_{\mathbf{k}}))
+\text{Im} \Pi^0(\mathbf{q},\omega) = -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \delta(\omega-(\omega_{\mathbf{k}+\mathbf{q}} - \omega_{\mathbf{k}}))
 \]
 
 because, under this condition, $\omega_{\mathbf{k}+\mathbf{q}}$ is always greater than $\omega_{\mathbf{k}}$.
@@ -1775,7 +1775,7 @@ Thus
 
 To summarize, so far, the imaginary part can be given as follows
 \begin{equation} \label{Eqs2.8.24}
-Im \Pi^0(q,\nu) = \left\{ \begin{split}
+\text{Im} \Pi^0(q,\nu) = \left\{ \begin{split}
 &-\frac{m k_F}{\hbar^2} \frac{1}{4\pi q} \left[ 1-\left( \frac{\nu}{q} - \frac{q}{2} \right)^2 \right] \qquad \left( \begin{split}
 &(i) q > 2 \quad\&\quad \frac{q^2}{2} - q\leq \nu \leq \frac{q^2}{2} + q\\
 &or\\
@@ -1858,23 +1858,23 @@ This limit corresponds to this case, so that the imaginary part is given by
 &0 \quad (q \leq \nu) \end{split} \right. \]
 
 \begin{equation*} \label{Eqs2.8.27.a} \tag{2.8.27.a}
-Im \Pi^0(q,\nu=q x) = -\frac{m k_F}{\hbar^2}\frac{x}{2\pi} \theta(1-x)
+\text{Im} \Pi^0(q,\nu=q x) = -\frac{m k_F}{\hbar^2}\frac{x}{2\pi} \theta(1-x)
 \end{equation*}
 \setcounter{equation}{27}
 
 To calculate the real part, we taylor-expand these logarithmic parts in small $q$, while $\frac{\nu}{q}$ being regarded as a constant:
-\[log\left| \frac{1+\frac{\nu}{q}-\frac{q}{2}}{1-\frac{\nu}{q}+\frac{q}{2}} \right| = log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| - \frac{\frac{q}{2}\cdot 2}{1-(\frac{\nu}{q})^2} + o(q^2)\]
+\[log\left| \frac{1+\frac{\nu}{q}-\frac{q}{2}}{1-\frac{\nu}{q}+\frac{q}{2}} \right| = \log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| - \frac{\frac{q}{2}\cdot 2}{1-(\frac{\nu}{q})^2} + o(q^2)\]
 
-\[log\left| \frac{1+\frac{\nu}{q}+\frac{q}{2}}{1-\frac{\nu}{q}-\frac{q}{2}} \right| = log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| + \frac{\frac{q}{2}\cdot 2}{1-(\frac{\nu}{q})^2} + o(q^2)\]
+\[log\left| \frac{1+\frac{\nu}{q}+\frac{q}{2}}{1-\frac{\nu}{q}-\frac{q}{2}} \right| = \log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| + \frac{\frac{q}{2}\cdot 2}{1-(\frac{\nu}{q})^2} + o(q^2)\]
 
 Uing these expansions, we obtain the leading order expression for the real part as follows:
 \[ \begin{split}Re\Pi^0(\mathbf{q},\nu=q x) =& \frac{2m k_F}{\hbar^2} \frac{1}{4\pi^2} \times\\
-&\left\{ -1 + \frac{1}{2q}\left( 1-(\frac{\nu}{q})^2+\nu-\frac{q^2}{4} \right) \times \left( log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| - \frac{q}{1-(\frac{\nu}{q})^2} + o(q^2) \right) \right.\\
-&\left.-\frac{1}{2q}\left( 1-(\frac{\nu}{q})^2-\nu-\frac{q^2}{4} \right) \times \left( log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| + \frac{q}{1-(\frac{\nu}{q})^2} + o(q^2) \right)\right\}\\
+&\left\{ -1 + \frac{1}{2q}\left( 1-(\frac{\nu}{q})^2+\nu-\frac{q^2}{4} \right) \times \left( \log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| - \frac{q}{1-(\frac{\nu}{q})^2} + o(q^2) \right) \right.\\
+&\left.-\frac{1}{2q}\left( 1-(\frac{\nu}{q})^2-\nu-\frac{q^2}{4} \right) \times \left( \log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| + \frac{q}{1-(\frac{\nu}{q})^2} + o(q^2) \right)\right\}\\
 =&\frac{m k_F}{\hbar^2} \frac{1}{2\pi^2}\left\{ -1 + \frac{\nu}{2q}log\left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| \times 2 - 1 + o(q) \right\}
 \end{split}\]
 \begin{equation*} \label{Eqs2.8.27.b} \tag{2.8.27.b}
-Re\Pi^0(\mathbf{q},\nu=q x)=\frac{m k_F}{\hbar^2} \frac{1}{2\pi^2} \left\{ -2 + x\cdot log\left| \frac{1+x}{1-x} \right|+ o(q) \right\}
+Re\Pi^0(\mathbf{q},\nu=q x)=\frac{m k_F}{\hbar^2} \frac{1}{2\pi^2} \left\{ -2 + x\cdot \log\left| \frac{1+x}{1-x} \right|+ o(q) \right\}
 \end{equation*}
 \end{itemize}
 
@@ -1933,8 +1933,8 @@ K_r(0,\nu) =& 1- \frac{4\pi e^2}{k_F^2} \frac{1}{q^2}\frac{2 m k_F}{\hbar^2} \cd
 
 \item In the intermediate limit, the dielectric constant takes the following  asymptotic form:
 \begin{equation} \label{Eqs2.8.35} \begin{split}
-K_r(q,qx) =& 1-\frac{4\pi e^2}{k_F^2}\frac{1}{q^2} \times \left\{ - \frac{m k_F}{\hbar^2}\cdot\frac{1}{2\pi^2}\left( 2-x ln\left| \frac{1+x}{1-x} \right| \right) - \frac{m k_F}{\hbar^2}\cdot \frac{x}{2\pi} i \theta(1-x) \right\}\\
-=& 1+ \frac{4 \alpha r_S}{\pi q^2}\left( 1-\frac{x}{2} ln\left| \frac{1+x}{1-x} \right|  \right) + \frac{2 i \alpha r_S}{q} x \theta(1-x)
+K_r(q,qx) =& 1-\frac{4\pi e^2}{k_F^2}\frac{1}{q^2} \times \left\{ - \frac{m k_F}{\hbar^2}\cdot\frac{1}{2\pi^2}\left( 2-x \ln\left| \frac{1+x}{1-x} \right| \right) - \frac{m k_F}{\hbar^2}\cdot \frac{x}{2\pi} i \theta(1-x) \right\}\\
+=& 1+ \frac{4 \alpha r_S}{\pi q^2}\left( 1-\frac{x}{2} \ln\left| \frac{1+x}{1-x} \right|  \right) + \frac{2 i \alpha r_S}{q} x \theta(1-x)
 \end{split}\end{equation}
 
 \end{itemize}
@@ -1986,8 +1986,8 @@ One can also confirm that the expression in the intermediate limit(eq.(\ref{Eqs2
 
 Therefore, we may use the expression obtained in the intermediate limit,
 \[\left\{ \begin{split}
-Im \Pi^0(|\mathbf{q}|, \nu = |\mathbf{q}| x) =& - \frac{m k_F}{\hbar^2} \frac{x}{2\pi} \theta(1-x)\\
-Re \Pi^0(|\mathbf{q}|, \nu = |\mathbf{q}| x) =& \frac{m k_F}{\hbar^2}\frac{1}{2\pi^2}\left\{ -2 + x ln\left| \frac{1+x}{1-x} \right| \right\}
+\text{Im} \Pi^0(|\mathbf{q}|, \nu = |\mathbf{q}| x) =& - \frac{m k_F}{\hbar^2} \frac{x}{2\pi} \theta(1-x)\\
+\text{Re} \Pi^0(|\mathbf{q}|, \nu = |\mathbf{q}| x) =& \frac{m k_F}{\hbar^2}\frac{1}{2\pi^2}\left\{ -2 + x \ln\left| \frac{1+x}{1-x} \right| \right\}
 \end{split} \right.\]
 
 Now that the energy must be always real-valued, we only focus on the real part of the right hand side.
@@ -2004,12 +2004,12 @@ and let us focus only on the first integral.
 
 When $q_c$ is chosen to be much smaller than $1$, we may approximately employ the
 \footnote{$\left(\frac{m k_F}{\hbar^2}\right)^2\left( \frac{4\pi e^2}{k_F^2} \right)^2 = \left( \frac{4\pi}{k_F a_0} \right)^2 = (4\pi)^2(\alpha r_S)^2$}
-\footnote{$f(x)=\frac{2}{\pi} \left\{ 1 - \frac{x}{2} ln\left| \frac{1+x}{1-x} \right| \right\}$}
+\footnote{$f(x)=\frac{2}{\pi} \left\{ 1 - \frac{x}{2} \ln\left| \frac{1+x}{1-x} \right| \right\}$}
 
 \[\begin{split}
 \epsilon_2^{r,1} =& -\frac{3}{8\pi^2 \alpha^2 r_S^2} \int_{|\mathbf{q}|<q_c} \mathrm{d}^3 \mathbf{q} \int_0^{+\infty} \mathrm{d} \nu \cdot V_0^2(\mathbf{q}) Re\Pi^0(\mathbf{q},\nu) Im\Pi^0(\mathbf{q},\nu)\\
 =&-\frac{3}{2\pi \alpha^2 r_S^2} \int_0^{q_c} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} (q x) \cdot V_0^2(\mathbf{q}) \times Re\Pi^0(\mathbf{q},q x) Im\Pi^0(\mathbf{q},q x)\\
-=& -\frac{6}{\pi} \int_0^{q_c} q^3 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} x \cdot \frac{1}{q^4} x \frac{2}{\pi} \left\{ 1 - \frac{x}{2} ln\left| \frac{1+x}{1-x} \right| \right\} \theta(1-x)
+=& -\frac{6}{\pi} \int_0^{q_c} q^3 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} x \cdot \frac{1}{q^4} x \frac{2}{\pi} \left\{ 1 - \frac{x}{2} \ln\left| \frac{1+x}{1-x} \right| \right\} \theta(1-x)
 \end{split}\]
 
 \begin{equation*} \label{Eqs2.8.9.d} \tag{2.8.9.d}
@@ -2039,10 +2039,10 @@ To see this situation, let us next calculate $E_r$:
 \[\begin{split}
 E_r =& \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda \cdot \lambda \frac{V_0^2 {\Pi^0}^2}{1-\lambda V_0\Pi^0}\\
 =& \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \int_0^1 \mathrm{d} \lambda V_0 \Pi^0\left( -1 + \frac{1}{1-\lambda V_0 \Pi^0} \right)\\
-=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4}\left[\left( log[1-\lambda V_0 \Pi^0] \right)_{\lambda=0}^{\lambda=1} + V_0 \Pi^0 \right]\end{split}\]
+=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^4 q}{(2\pi)^4}\left[\left( \log[1-\lambda V_0 \Pi^0] \right)_{\lambda=0}^{\lambda=1} + V_0 \Pi^0 \right]\end{split}\]
 \begin{equation*} \label{Eqs2.8.9'} \tag{2.8.9'} \begin{split}
-E_r=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ log[1-V_0 \Pi^0] + V_0 \Pi^0 \right\}\\
-=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ log[K_r(\mathbf{q},\omega)] + 1-K_r(\mathbf{q},\omega) \right\}
+E_r=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ \log[1-V_0 \Pi^0] + V_0 \Pi^0 \right\}\\
+=& - \frac{1}{2}i V\hbar \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} \int \frac{\mathrm{d} \omega}{2\pi} \left\{ \log[K_r(\mathbf{q},\omega)] + 1-K_r(\mathbf{q},\omega) \right\}
 \end{split}\end{equation*}
 
 Using the dimensionless frequency and momentum, this can be given by the dimensionless integral.
@@ -2050,26 +2050,26 @@ Using the dimensionless frequency and momentum, this can be given by the dimensi
 E_r = \frac{N e^2}{2 a_0} \epsilon_r
 \end{equation}
 
-\[\begin{split} \epsilon_r = -\frac{3i}{16\pi^2 \alpha^2 r_S^2} \int \mathrm{d}^3 \mathbf{q}^{'}\int_{-\infty}^{+\infty} \mathrm{d}\nu \left\{ logK_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\\\text{(with $\mathbf{q}^{'} = \frac{\mathbf{q}}{k_F}$, $\nu = \frac{m}{\hbar k_F^2} \omega$)}\end{split} \]
+\[\begin{split} \epsilon_r = -\frac{3i}{16\pi^2 \alpha^2 r_S^2} \int \mathrm{d}^3 \mathbf{q}^{'}\int_{-\infty}^{+\infty} \mathrm{d}\nu \left\{ \log K_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\\\text{(with $\mathbf{q}^{'} = \frac{\mathbf{q}}{k_F}$, $\nu = \frac{m}{\hbar k_F^2} \omega$)}\end{split} \]
 
 Since $K_r$ depends on the norm of $\mathbf{q}^{'}$ and it is an even function of $\nu$, we have
-\[ \epsilon_r = -\frac{3i}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} {q^{'}}^2 \cdot \mathrm{d}q^{'} \int_{0}^{+\infty} \mathrm{d}\nu \left\{ log K_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\]
+\[ \epsilon_r = -\frac{3i}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} {q^{'}}^2 \cdot \mathrm{d}q^{'} \int_{0}^{+\infty} \mathrm{d}\nu \left\{ \log K_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\]
 
 The energy must be real-valued, so that we focus only on the imginary part of this parenthesis.
 \begin{equation} \label{Eqs2.8.37}
-\epsilon_r = \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} q^2 \cdot \mathrm{d}q \int_0^{+\infty} \mathrm{d}\nu \left\{ tan^{-1}\left( \frac{Im K_r(q,\nu)}{Re K_r(q,\nu)} \right) - Im K_r(q,\nu) \right\}
+\epsilon_r = \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} q^2 \cdot \mathrm{d}q \int_0^{+\infty} \mathrm{d}\nu \left\{ tan^{-1}\left( \frac{\text{Im} K_r(q,\nu)}{\text{Re} K_r(q,\nu)} \right) - \text{Im} K_r(q,\nu) \right\}
 \end{equation}
 
 with
 \begin{equation} \label{Eqs2.8.38}
-log(Re K + i Im K) = log \sqrt{Re K^2 + Im K^2} + i tan^{-1} \left( \frac{Im K}{Re K} \right)
+log(\text{Re} K + i \text{Im} K) = \log \sqrt{\text{Re} K^2 + \text{Im} K^2} + i tan^{-1} \left( \frac{\text{Im} K}{\text{Re} K} \right)
 \end{equation}
 
 In order to see how the singular behaviour of the integrand at $q=0$ is removed by the summation of the ring-diagrams, we separate this momentum integral into two parts:
 \begin{eqnarray}
 \epsilon_r =& \epsilon_{r,1} + \epsilon_{r,2} \nonumber\\
-\epsilon_{r,1} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{q_c} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ tan^{-1}\left( \frac{Im K}{Re K} \right) - Im K  \right\} \label{Eqs2.8.39}\\
-\epsilon_{r,2} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_{q_c}^{+\infty} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ tan^{-1}\left( \frac{Im K}{Re K} \right) - Im K  \right\} \label{Eqs2.8.40}
+\epsilon_{r,1} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{q_c} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ tan^{-1}\left( \frac{\text{Im} K}{\text{Re} K} \right) - \text{Im} K  \right\} \label{Eqs2.8.39}\\
+\epsilon_{r,2} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_{q_c}^{+\infty} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ tan^{-1}\left( \frac{\text{Im} K}{\text{Re} K} \right) - \text{Im} K  \right\} \label{Eqs2.8.40}
 \end{eqnarray}
 
 $\epsilon_{r,2}$ is free from infrared divergence, so that it results in a finite contribution.
@@ -2110,11 +2110,11 @@ This integral can be evaluated for small $r_S$ as follows:
 Here `constant' part means either some number which is free from $r_S$ or some function which reduces to zero in small $r_S$ limit.\footnote{W.Macke, Z.Naturforsh 5a:192(1950)}
 
 Thus, the leading order contribution in the small $r_S$ limit is given by:
-\[E_r = \frac{N e^2}{2 a_0} \left( \frac{2}{\pi^2} (1-ln 2) ln r_S + const \right)\]
+\[E_r = \frac{N e^2}{2 a_0} \left( \frac{2}{\pi^2} (1-ln 2) \ln r_S + const \right)\]
 
 Later, many people calculated the subleading order correction to the correlation energy in the high density limit:
 \begin{equation} \label{Eqs2.8.43}
-\frac{E_{corr}}{N} = \frac{e^2}{2 a_0} \left( \frac{2}{\pi^2}(1 -ln 2) ln r_S - 0.094 + o(r_S ln r_S) \right)
+\frac{E_{corr}}{N} = \frac{e^2}{2 a_0} \left( \frac{2}{\pi^2}(1 -ln 2) \ln r_S - 0.094 + o(r_S \ln r_S) \right)
 \end{equation}
 
 \chapter{Application to electron gas at the zero temperature}%chapter 3: wsz:all
@@ -2325,8 +2325,8 @@ Since the summation over $|\Psi_n\rangle$ is taken over an excited state of $H$,
 Therefore, these two expressions leads to the following general relation between $D^R(\mathbf{k},\omega)$ and $D(\mathbf{k},\omega)$.
 \footnote{$sgn \omega \overset{def}{\equiv} \frac{\omega}{|\omega|}$}
 \begin{equation} \label{Eqs3.1.18} \left\{ \begin{split}
-Re D^R(\mathbf{k},\omega) =& Re D(\mathbf{k},\omega)\\
-Im D^R(\mathbf{k},\omega) =& sgn(\omega) \cdot Im D(\mathbf{k},\omega)
+\text{Re} D^R(\mathbf{k},\omega) =& \text{Re} D(\mathbf{k},\omega)\\
+\text{Im} D^R(\mathbf{k},\omega) =& sgn(\omega) \cdot \text{Im} D(\mathbf{k},\omega)
 \end{split}\right.\end{equation}
 
 Using these relation, we can calculate the linear response function out of the time-ordered density-density correlation function.
@@ -2357,12 +2357,12 @@ Here $V(\mathbf{k})$ denotes the bare Coulombic potential.
 so that, we have
 \begin{equation} \label{Eqs3.1.21} \begin{split}
 \frac{4\pi e^2}{\hbar k^2} D(\mathbf{k},\omega) =& \frac{\Pi^\bigstar(\mathbf{k},\omega)V(\mathbf{k})}{1-\Pi^\bigstar(\mathbf{k},\omega)V(\mathbf{k})}\\
-=& \frac{1}{K(\mathbf{k},\omega)}-1 = \frac{Re K -i Im K}{ Re K^2 + Im K^2} - 1
+=& \frac{1}{K(\mathbf{k},\omega)}-1 = \frac{\text{Re} K -i \text{Im} K}{ \text{Re} K^2 + \text{Im} K^2} - 1
 \end{split}\end{equation}
 
 Then, using the relation between the retarded density correlation function and time-ordered correlation function, we obtain.
 \begin{equation} \label{Eqs3.1.22}
-\frac{4\pi e^2}{\hbar k^2} D^R(\mathbf{k},\omega) = \frac{Re K(\mathbf{k},\omega) - i sgn(\omega) Im K(\mathbf{k},\omega)}{Re K^2(\mathbf{k},\omega) + Im K^2(\mathbf{k},\omega)} - 1
+\frac{4\pi e^2}{\hbar k^2} D^R(\mathbf{k},\omega) = \frac{\text{Re} K(\mathbf{k},\omega) - i sgn(\omega) \text{Im} K(\mathbf{k},\omega)}{\text{Re} K^2(\mathbf{k},\omega) + \text{Im} K^2(\mathbf{k},\omega)} - 1
 \end{equation}
 
 Within the ring-diagram approximation, this dielectric constant $K(\mathbf{k},\omega)$ was evaluated explicitly, such as in eq.(\ref{Eqs2.8.33}) \& eq.(\ref{Eqs2.8.34}) \& eq.(\ref{Eqs2.8.35}).
@@ -2374,7 +2374,7 @@ K_r(\mathbf{k},0) = 1+ 4 \alpha r_S k_F^2 \frac{1}{\pi |\mathbf{k}|^2} g\left( \
 
 where a real-valued function $g$ is given by this.
 \begin{equation} \label{Eqs3.1.24}
-g(x) = \frac{1}{2} - \frac{1}{2x}\left( 1-\frac{x^2}{4} \right) ln \left| \frac{1-\frac{x}{2}}{1+\frac{x}{2}} \right|
+g(x) = \frac{1}{2} - \frac{1}{2x}\left( 1-\frac{x^2}{4} \right) \ln \left| \frac{1-\frac{x}{2}}{1+\frac{x}{2}} \right|
 \end{equation}
 
 By substituting eq.(\ref{Eqs3.1.23}) into eq.(\ref{Eqs3.1.22}) \& eq.(\ref{Eqs3.1.20}), we obtain the induced charge density as
@@ -2448,21 +2448,21 @@ $\delta \langle \hat{\rho}(\mathbf{x}) \rangle_{ring}$ thus calculated is called
 The Thomas-Fermi result is not quite correct, especially when $x$ become sufficiently large.
 
 To obtain accurate asymptotic behaviour of the induced charge density, notice first that $g(x)$ has singularity at $x=\pm 2$, because of this logarithmic function:
-\[ g(x) = \frac{1}{2} - \frac{1}{2x} \left( 1-\frac{x^2}{4} \right) ln \left| \frac{1-\frac{x}{2}}{1+\frac{x}{2}} \right| \]
+\[ g(x) = \frac{1}{2} - \frac{1}{2x} \left( 1-\frac{x^2}{4} \right) \ln \left| \frac{1-\frac{x}{2}}{1+\frac{x}{2}} \right| \]
 
 To put the conclusion first, this singularity gives rise to an algebraic asymptotic dependence on $x$ of $\delta\langle \rho(\mathbf{x})\rangle_{ring}$.
 
 To see this, let us rewrite this logarithmic function in this way
 \begin{equation}\label{Eqs3.1.30}
-log\left| \frac{q-2 k_F}{q+ 2k_F} \right| = \lim_{\eta \rightarrow 0} \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right)
+\log\left| \frac{q-2 k_F}{q+ 2k_F} \right| = \lim_{\eta \rightarrow 0} \frac{1}{2} \log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right)
 \end{equation}
 
 substituting this expression into eq.(\ref{Eqs3.1.28}), we have
 \[\begin{split}
 \delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x i} \lim_{\eta \rightarrow 0} \int_{-\infty}^{+\infty} \mathrm{d} q \cdot q \mathrm{e}^{i q x}\\
-& \left(  \frac{q^2}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}} -1 \right)\\
+& \left(  \frac{q^2}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} \log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}} -1 \right)\\
 =& -\frac{Z e}{4\pi^2 x i} \lim_{\eta \rightarrow 0} \int_{-\infty}^{+\infty} \mathrm{d} q  \mathrm{e}^{i q x}\\
-&\times \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
+&\times \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} \log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
 \end{split}\]
 
 The integrand has a pole at $q = \pm i q_{TF}$, which gives rises to a Thomas-Fermi result, as described above.
@@ -2471,8 +2471,8 @@ On top of these poles, the integrand requires us to introduce a branch cut assoc
 
 Namely, when $q=\pm 2 k_F + i V$, the arguments of these logarithmic function become negative when absolute value of $V$ is greater than $\eta$, e.g.
 \begin{equation} \label{Eqs3.1.31} \begin{split}
-log \left[ \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right]_{q=2 k_F + i V} =& log \left[ (q-2 k_F)^2 + \eta^2 \right]_{q=2 k_F + i V}-log \left[ (q+2 k_F)^2 + \eta^2 \right]_{q=2 k_F + i V}\\
-=& log\left[ \underline{-V^2 + \eta^2} \right] - log[\ldots]
+log \left[ \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right]_{q=2 k_F + i V} =& \log \left[ (q-2 k_F)^2 + \eta^2 \right]_{q=2 k_F + i V}-log \left[ (q+2 k_F)^2 + \eta^2 \right]_{q=2 k_F + i V}\\
+=& \log\left[ \underline{-V^2 + \eta^2} \right] - \log[\ldots]
 \end{split}\end{equation}
 
 As such, we introduce four branch cuts in the complex-$q$ plane.
@@ -2486,7 +2486,7 @@ Correspondingly, we will deform the integral path along the real axis into this 
 When the contour takes to be infinitely far from the origin, we have
 \begin{equation} \label{Eqs3.1.32} \begin{split}
 \delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x i} \lim_{\eta \rightarrow 0} \left( \oint_{|q-i q_{TF}| = \epsilon} + \oint_{C_1} + \oint_{C_2} \right)\\
-& \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
+& \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} \log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
 \end{split}\end{equation}
 
 \begin{center} \label{Fig3.1.4}
@@ -2508,7 +2508,7 @@ According to this branch cut, the imaginary part of this logarithmic function ta
 
 With this in mind, we can calculate this integral as
 \begin{equation} \label{Eqs3.1.33} \begin{split}
-&\oint_{C_1} \mathrm{d} q \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
+&\oint_{C_1} \mathrm{d} q \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} \log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
 =& i \int_{+\infty}^{\eta} \mathrm{d} V \mathrm{e}^{i(2 k_F+i V) x} \frac{(2 k_F+i V)^3}{(2 k_F+i V)^2 + q_{TF}^2 g\left( \frac{2 k_F - \epsilon + i V}{k_F} \right)}\\
 &+i \int_{\eta}^{+\infty} \mathrm{d} V \mathrm{e}^{i(2 k_F+i V) x} \frac{(2 k_F+i V)^3}{(2 k_F+i V)^2 + q_{TF}^2 g\left( \frac{2 k_F + \epsilon + i V}{k_F} \right)}\\
 =& i \int_{\eta}^{+\infty} \mathrm{d}V \mathrm{e}^{i(2 k_F+i V) x} \frac{(2 k_F+i V)^3\left( q_{TF}^2 g_- - q_{TF}^2 g_+ \right)}{\left[(2 k_F+i V)^2 + q_{TF}^2 g_+ \right]\left[(2 k_F+i V)^2 + q_{TF}^2 g_- \right]}
@@ -2522,11 +2522,11 @@ $g_\pm$ stands for these two function respectively
 \[ g_\pm \equiv g\left( \frac{2 k_F + i V \pm \epsilon}{k_F} \right) \]
 
 with
-\[ g(x) = \frac{1}{2} - \frac{1}{2x} \left( 1- \frac{1}{4}x^2 \right) \frac{1}{2} ln\left[ \frac{(x-2)^2 + \eta^2}{(x+2)^2+\eta^2} \right] \]
+\[ g(x) = \frac{1}{2} - \frac{1}{2x} \left( 1- \frac{1}{4}x^2 \right) \frac{1}{2} \ln\left[ \frac{(x-2)^2 + \eta^2}{(x+2)^2+\eta^2} \right] \]
 
 As mentioned before, $g_+$ and $g_-$ differ from each other along the branch cut, because of this logarithmic part:
 \[\begin{split}
-g_+-g_- = & \frac{1}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right) \times \frac{1}{2} \left[ ln \left[ \frac{(x-2)^2+\eta^2}{(x+2)^2+\eta^2}\right] \right]_{x=\frac{2 k_F +i V -i\epsilon}{k_F}}^{x=\frac{2 k_F +i V +i\epsilon}{k_F}}\\
+g_+-g_- = & \frac{1}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right) \times \frac{1}{2} \left[ \ln \left[ \frac{(x-2)^2+\eta^2}{(x+2)^2+\eta^2}\right] \right]_{x=\frac{2 k_F +i V -i\epsilon}{k_F}}^{x=\frac{2 k_F +i V +i\epsilon}{k_F}}\\
 =& \frac{\pi i}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right)
 \end{split}\]
 
@@ -2555,7 +2555,7 @@ As such, we have only to retain the lowest power of $V$, in order to obtain the 
 
 Similarly, we can also calculate the other contour integral.
 \begin{equation} \label{Eqs3.1.35} \begin{split}
-&\oint_{C_2} \mathrm{d} q \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
+&\oint_{C_2} \mathrm{d} q \mathrm{e}^{i q x} \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} \log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}\\
 =& -i \mathrm{e}^{-i 2 k_F x} \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \times \left( \frac{1}{x^2} + o(\frac{1}{x^3}) \right)
 \end{split}\end{equation}
 
@@ -2666,7 +2666,7 @@ This suggests that the real part of the pole($\ldots$) determines the dispersion
 To obtain an explicit form of $\Omega_{\mathbf{q}}$ and $\gamma_{\mathbf{q}}$, we need to calculate the polarization function.
 
 According to eq.(\ref{Eqs3.1.18}), we have
-\[\Pi^R(\mathbf{q},\omega) = Re\Pi(\mathbf{q},\omega) + i sgn(\omega) Im \Pi(\mathbf{q},\omega)\]
+\[\Pi^R(\mathbf{q},\omega) = Re\Pi(\mathbf{q},\omega) + i sgn(\omega) \text{Im} \Pi(\mathbf{q},\omega)\]
 
 Within the ring-diagram approximation, time-ordered polarization part is given by this:
 \begin{equation*} \label{Eqs2.8.5''} \tag{2.8.5''} \Pi(\mathbf{q},\omega) = \frac{\Pi^{0}(\mathbf{q},\omega)}{1-\Pi^{0}(\mathbf{q},\omega) V(\mathbf{q})} \end{equation*}
@@ -2677,7 +2677,7 @@ Since $V(\mathbf{q})$ is real, we have
 \end{equation}
 
 where
-\[\Pi^{0,R}(\mathbf{q},\omega) = Re\Pi^0(\mathbf{q},\omega) + i sgn(\omega) Im \Pi^0(\mathbf{q},\omega)\]
+\[\Pi^{0,R}(\mathbf{q},\omega) = Re\Pi^0(\mathbf{q},\omega) + i sgn(\omega) \text{Im} \Pi^0(\mathbf{q},\omega)\]
 
 where $\Pi^0(\mathbf{q},\omega)$ was already calculated in the previous section.
 
@@ -2688,8 +2688,8 @@ The pole of $\Pi^R(\mathbf{q},\omega)$ can be determined by the zero of the deno
 
 When the damping(inverse of the life time) is sufficiently smaller than the resonance frequency $\Omega_{\mathbf{q}}$, which turns out to be the case a priori, we can expand this equation is small $\gamma_{\mathbf{q}}$:
 \begin{equation} \label{Eqs3.2.9} \begin{split}
-1-&\left( Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) + i Im \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \right.\\
-&\left. -i \gamma_{\mathbf{q}} \left\{ \left[ \frac{\partial Re \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + i \left[ \frac{\partial Im \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} \right\} + o(\gamma_{\mathbf{q}}^2) \right)V(\mathbf{q}) = 0
+1-&\left( Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) + i \text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \right.\\
+&\left. -i \gamma_{\mathbf{q}} \left\{ \left[ \frac{\partial \text{Re} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + i \left[ \frac{\partial \text{Im} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} \right\} + o(\gamma_{\mathbf{q}}^2) \right)V(\mathbf{q}) = 0
 \end{split}\end{equation}
 
 The real part of this equality is given by
@@ -2699,15 +2699,15 @@ The real part of this equality is given by
 
 while the imaginary part is given by
 \begin{equation} \label{Eqs3.2.11}
-\left( Im \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) - \gamma_{\mathbf{q}} \left[ \frac{\partial Re \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + o(\gamma_{\mathbf{q}^2}) \right) = 0
+\left( \text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) - \gamma_{\mathbf{q}} \left[ \frac{\partial \text{Re} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + o(\gamma_{\mathbf{q}^2}) \right) = 0
 \end{equation}
 
-Regarding that $Im \Pi^{0,R}$ \& $\gamma_{\mathbf{q}}$ are same order of small quantity, we can solved these equalities in the leading order in small $\gamma_{\mathbf{q}}$
+Regarding that $\text{Im} \Pi^{0,R}$ \& $\gamma_{\mathbf{q}}$ are same order of small quantity, we can solved these equalities in the leading order in small $\gamma_{\mathbf{q}}$
 \begin{equation} \label{Eqs3.2.12}
 \left\{ \begin{split}
 &1- Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) V(\mathbf{q}) = 0\\
-&\gamma_{\mathbf{q}} = Im \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \cdot 
- \left[ \frac{\partial Re \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}}^{-1}
+&\gamma_{\mathbf{q}} = \text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \cdot 
+ \left[ \frac{\partial \text{Re} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}}^{-1}
 \end{split} \right.
 \end{equation}
 
@@ -2717,18 +2717,18 @@ Now that retarded polarization function and time-ordered one is related by eq.(\
 \begin{equation*} \label{Eqs3.2.12'} \tag{3.2.12'}
 \left\{ \begin{split}
 &1- Re\Pi^{0}(\mathbf{q},\omega) V(\mathbf{q}) = 0\\
-&\gamma_{\mathbf{q}} = sgn(\omega) Im \Pi^{0}(\mathbf{q},\omega) \cdot 
- \left[ \frac{\partial Re \Pi^{0}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}}^{-1}
+&\gamma_{\mathbf{q}} = sgn(\omega) \text{Im} \Pi^{0}(\mathbf{q},\omega) \cdot 
+ \left[ \frac{\partial \text{Re} \Pi^{0}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}}^{-1}
 \end{split} \right.
 \end{equation*}
 
 For the long-wavelength limit($|\mathbf{q}| \rightarrow 0$), we have already evaluate an explicit form of $\Pi^0$(zero-th order polarization part)
 
 According to eq.(\ref{Eqs2.8.34}), the imaginary part vanishes, while the real part is given by
-\[Re \Pi^0(\mathbf{q},\omega) = \frac{k_F^3}{3\pi^2}\frac{q^2}{m\omega^2} + o(q^4)\]
+\[\text{Re} \Pi^0(\mathbf{q},\omega) = \frac{k_F^3}{3\pi^2}\frac{q^2}{m\omega^2} + o(q^4)\]
 
 If one further study the high order connection, we have
-\[Re \Pi^0(\mathbf{q},\omega) = \frac{k_F^3}{3\pi^2}\frac{q^2}{m\omega^2}\left[ 1+\frac{3}{5}\left( \frac{\hbar k_F q}{m \omega} \right)^2+\ldots \right]\]
+\[\text{Re} \Pi^0(\mathbf{q},\omega) = \frac{k_F^3}{3\pi^2}\frac{q^2}{m\omega^2}\left[ 1+\frac{3}{5}\left( \frac{\hbar k_F q}{m \omega} \right)^2+\ldots \right]\]
 
 Using this, the dispersion relation is obtained in the following way.
 \footnote{$1 = \frac{4\pi n e^2}{m \Omega_{\mathbf{q}}^2}\left[ 1+\frac{3}{5}\left( \frac{\hbar k_F q}{m \Omega_{\mathbf{q}}} \right)^2+\ldots \right]$}
@@ -2736,15 +2736,15 @@ Using this, the dispersion relation is obtained in the following way.
 \Omega_{\mathbf{q}} = \left(\frac{4\pi n e^2}{m}\right)^{\frac{1}{2}}\left[ 1+\frac{9}{10}\left( \frac{q}{q_{TF}} \right)^2+\ldots \right]
 \end{equation}
 
-where the second term is determined by this next leading order term of $Re \Pi^0$.
+where the second term is determined by this next leading order term of $\text{Re} \Pi^0$.
 
 \begin{center} \label{Fig3.1.7}
 \includegraphics[width=0.2\textwidth]{3-1-7.png}
 \end{center}
 
-Since $Im \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}})$ vanishes in the dynamic limit, these gapped collecive mode has an infinitely long life time, within the ring-diagram approximation.
+Since $\text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}})$ vanishes in the dynamic limit, these gapped collecive mode has an infinitely long life time, within the ring-diagram approximation.
 
-As is clear from this derivation, a finite gap of the plasma oscillation mode comes from the long range Coulomb interaction. Namely, the bare Coulomb interaction has $\frac{1}{q^2}$-divergence in small $q$ region, which is cancelled by $q^2$ appearing in this part of $Re \Pi^0$. Due to this cancellation, this equation is satisfied by a finite $\omega$ in the small $q$-limit.
+As is clear from this derivation, a finite gap of the plasma oscillation mode comes from the long range Coulomb interaction. Namely, the bare Coulomb interaction has $\frac{1}{q^2}$-divergence in small $q$ region, which is cancelled by $q^2$ appearing in this part of $\text{Re} \Pi^0$. Due to this cancellation, this equation is satisfied by a finite $\omega$ in the small $q$-limit.
 
 On the one hand, the interaction potential in imperfect Fermi gas is short-ranged, where $V(\mathbf{q})$ remains finite in the small $q$-limit.
 

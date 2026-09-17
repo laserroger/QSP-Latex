@@ -1,6 +1,6 @@
-\section{(Self-Consist) Hatree-Fock Approximation}%wsz 2-6
+\section{(Self-Consist) Hartree-Fock Approximation}%wsz 2-6
 
-The first approximation scheme is the self-consistant Hartree-Fock approximation, which begins with the 1st order approximation for the proper selfenergy.
+The first approximation scheme is the self-consistent Hartree-Fock approximation, which begins with the 1st order approximation for the proper selfenergy.
 \begin{center}
 \includegraphics[width = 10cm]{2-6-1.png}\label{Fig2.6.1}
 \end{center}
@@ -19,7 +19,7 @@ To this end, we will consider a spin$=\frac{1}{2}$ fermion system in a static sp
 \end{split}\]
 Here we assumed the spin-independent interaction potential for simplicity.
 
-Within the self-consistent Hatree-Fock approximation, the Dyson equation is given by these two equations:
+Within the self-consistent Hartree-Fock approximation, the Dyson equation is given by these two equations:
 \[ \left \{ \begin{split}
 G(x,y)&= G^{0}(x,y) + \int \mathrm{d}^{4}x_{1} \mathrm{d}^{4}x_{1}^{'} \ G^{0}(x,x_{1}) \Sigma^{\bigstar}% a star character
 (x_{1},x_{1}^{'})G(x_{1}^{'},y)\\
@@ -118,7 +118,7 @@ Generally, such a linearized integral equation can be solved in terms of followi
 \end{split} \]
 \[ \frac{1}{2\pi} \int_{-\infty}^{+\infty} \mathrm{d}\omega G_{\alpha\beta}(\mathbf{x},\mathbf{x}^{'};\omega)\mathrm{e}^{i\omega 0 t} = i \sum_{n} \langle \Psi_{0} | \psi_{\beta}^{\dagger}(\mathbf{x}^{'}) | \Psi_{n} \rangle \langle \Psi_{n} | \psi_{\alpha}(\mathbf{x}) | \Psi_{0} \rangle \]
 \[ {\left ( i \int_{-\infty}^{+\infty} \mathrm{d} \omega G(\mathbf{x},\mathbf{x}^{'};\omega)\mathrm{e}^{i \omega 0 t} \right )}^{*} = i \int_{-\infty}^{+\infty} \mathrm{d} \omega G(\mathbf{x}^{'},\mathbf{x};\omega)\mathrm{e}^{i \omega 0 t} \]
-where $\hbar\Sigma^\bigstar$ play role of a static but no-local potential.
+where $\hbar\Sigma^\bigstar$ plays the role of a static but non-local potential.
 
 Since $\Sigma^\bigstar$ is hermitian,\[\Sigma^{\bigstar*}(\mathbf{x},\mathbf{x}^{'}) = \Sigma^\bigstar(\mathbf{x}^{'},\mathbf{x}) \]
 $\{\varphi_{j}\}$ comprises complete set of orthonormal eigenfunctions with
@@ -140,7 +140,7 @@ But, since the perturbation $\hat{H}_1$ conserves the total number of particles,
 G(\mathbf{x},\mathbf{y};\omega) = \sum_j \varphi_j(\mathbf{x}) \varphi_j^* (\mathbf{y})
 \left[ \frac{\theta(\epsilon_j - \epsilon_F)}{\omega - \hbar^{-1}\epsilon_j + i \eta} + \frac{\theta(\epsilon_F - \epsilon_j)}{\omega - \hbar^{-1}\epsilon_j - i \eta} \right]   \quad (\eta > 0)
 \end{equation}
-$\epsilon_F $ here denote the energy of the highest filled state of these orthonormal eigenstates, which satisfies
+$\epsilon_F $ here denotes the energy of the highest filled state of these orthonormal eigenstates, which satisfies
 \[ \sum_j \theta(\epsilon_F - \epsilon_j) = N \equiv \sum_j \theta(\epsilon_F^0 - \epsilon_j^0) \]
 substituting this solution back into eq.(\ref{Eqs2.6.2}), we obtain the self-energy itself, which is given by these orthonormal eigenstates.
 \begin{equation}\label{Eqs2.6.7} \begin{split}
@@ -150,11 +150,11 @@ substituting this solution back into eq.(\ref{Eqs2.6.2}), we obtain the self-ene
 =& \delta(\mathbf{x}_1 - \mathbf{x}_1^{'}) \int \mathrm{d}^3 \mathbf{x}_2 V(\mathbf{x}_1 - \mathbf{x}_2) n(\mathbf{x}_2) \quad \text{(Fock term)}\\
 &- V(\mathbf{x}_1 - \mathbf{x}_1^{'})\sum_j \varphi_j(\mathbf{x}_1)\varphi_j^*(\mathbf{x}_1^{'})\theta(\epsilon_F - \epsilon_j) \quad \text{(Hartree term)}
 \end{split}\end{equation}
-Within this HF approximation, the self-energy consists of two terms. One is a local term propotional to particle density, and the other is non-local exchange term. These two are often called as Hartree term and Fock term respectively.
+Within this HF approximation, the self-energy consists of two terms. One is a local term proportional to particle density, and the other is non-local exchange term. These two are often called as Hartree term and Fock term respectively.
 
-To summarize, eq.(\ref{Eqs2.6.5}) and eq.(\ref{Eqs2.6.7}) comprise a self-consistent equations for the orthonormal eigenstates $\varphi_j$ and its eigenvalue $\epsilon_j$.
+To summarize, eq.(\ref{Eqs2.6.5}) and eq.(\ref{Eqs2.6.7}) comprise self-consistent equations for the orthonormal eigenstates $\varphi_j$ and its eigenvalue $\epsilon_j$.
 
-Namely, once  $\varphi_j$ and $\epsilon_j$ are given, the self-energy $\Sigma^\bigstar$ are calculated by eq.(\ref{Eqs2.6.7}). In terms of this self-energy, the orthonormal eigenstates $\varphi_j$ and $\epsilon_j$ are recalculated. This process is repeated, until a self-consistent solution for \{$\varphi_j$\} and \{$\epsilon_j$\} is obtained.
+Namely, once  $\varphi_j$ and $\epsilon_j$ are given, the self-energy $\Sigma^\bigstar$ is calculated by eq.(\ref{Eqs2.6.7}). In terms of this self-energy, the orthonormal eigenstates $\varphi_j$ and $\epsilon_j$ are recalculated. This process is repeated, until a self-consistent solution for \{$\varphi_j$\} and \{$\epsilon_j$\} is obtained.
 
 Once the self-consistent solution is obtained, we can calculate Green's function from eq.(\ref{Eqs2.6.6}), from which we can calculate various physical quantities such as ground state energy and ground state expectation value of single particle operators.
 \begin{center}-------------------\end{center}
@@ -164,7 +164,7 @@ This is all about the Hartree-Fock approximation, which is quite commonly used i
 In the following two sections, I will describe two other standard approximation scheme commonly used in the contemporary research.
 
 \section{Imperfect Fermi Gas}%wsz 2-7
-The first system considered is a dilute Fermi gas with strong short-range repulsive interaction, which is somtimes called as ``imperfect Fermi gas".
+The first system considered is a dilute Fermi gas with strong short-range repulsive interaction, which is sometimes called as ``imperfect Fermi gas".
 
 We assume that the repulsive interaction is s-wave like, so that the potential depends only on a spatial distance between two particles.
 
@@ -183,15 +183,15 @@ whose dispersion take a parabolic form.
 
 ``dilute Fermi gas" means that the chemical potential is chosen so that the Fermi momentum is sufficiently small. $$k_F \rightarrow \text{small}$$
 
-Now $k_F a$ comprises a dimensionless quantity. The natural coupling constant for ``imperfect Fermi gas" is ``$k_F a$". Namely, we are going to analyize the ``imperfect Fermi gas" by treating ``$k_F a$" as a small parameter. Thereby, physical quantities such as ground state energy, chemical potential and quasi-particle spectrum are calculated, perturbatively in small $k_F a$.
-\[ \text{e.g.)} \quad \frac{E}{N} = \frac{\hbar^2 k_F^2}{2m} \left[ A + B(k_F a) + C{(k_F a)}^2 + \ldots \right] \]
+Now $k_F a$ comprises a dimensionless quantity. The natural coupling constant for ``imperfect Fermi gas" is ``$k_F a$". Namely, we are going to analyze the ``imperfect Fermi gas" by treating ``$k_F a$" as a small parameter. Thereby, physical quantities such as ground state energy, chemical potential and quasi-particle spectrum are calculated, perturbatively in small $k_F a$.
+\[ \text{(e.g.)} \quad \frac{E}{N} = \frac{\hbar^2 k_F^2}{2m} \left[ A + B(k_F a) + C{(k_F a)}^2 + \ldots \right] \]
 
 To do this perturbation expansion, systematically, let us begin with the 2nd order contribution to the proper self energy.
 
 According to eq.(\ref{Eqs2.6.4}), the 2nd order contribution can be enumerated as follows:
 \begin{center}\label{Fig2.7.3} \includegraphics[width=8cm]{2-7-3.png} \end{center}
 
-For the uniform electron gas case, these four term exactly reduce to zero.
+For the uniform electron gas case, these four terms exactly reduce to zero.
 \begin{center}-----------------------------\end{center}
 
 \begin{wrapfigure}{l}{3.5cm}
@@ -216,9 +216,9 @@ Since $$\theta(|\mathbf{q}|-k_F)\theta(k_F-|\mathbf{q}|) = 0$$
 
 Now we can integrate this, by closing the contour either in the upper half plane or in the lower half plane(By using the method of contour integration).
 
-But, since both of these two are the second order pole, the contour integration always reduce to zero, irrespective of whether the integration is carried out in the upper--half plane or in the lower--half plane.
+But, since both of these two are the second order pole, the contour integration always reduces to zero, irrespective of whether the integration is carried out in the upper--half plane or in the lower--half plane.
 
-Therefore, this contribution always reduce to zero. Similarly, we can immediately see that all of these also reduce to zero, because these parts give the same integration as this.
+Therefore, this contribution always reduces to zero. Similarly, we can immediately see that all of these also reduce to zero, because these parts give the same integration as this.
 
 \begin{wrapfigure}[8]{l}{4.5cm}
 \label{Fig2.7.5} \includegraphics[width=4cm]{2-7-5.png}
@@ -257,7 +257,7 @@ Thus, irrespective of how the contour is closed, these two combinations give fin
 +i \cdot \frac{\theta(k_F-|\mathbf{k}-\mathbf{q}|)\theta(k_F-|\mathbf{q}+\mathbf{q}^{'}|)}{\omega - \epsilon_{\mathbf{k}-\mathbf{q}} + \epsilon^{'} - \epsilon_{\mathbf{q}+\mathbf{q}^{'}} - 2 i \eta }
 \end{split} \]
 
-Let me next integrate over $\epsilon^{'}$, by subtituting this into here. From this product, we again have four terms.
+Let me next integrate over $\epsilon^{'}$, by substituting this into here. From this product, we again have four terms.
 
 Now these two have a pole in the upper half plane, while these two have a pole in the lower half plane. Due to the same reason, only these two combinations give us a finite contribution.
 \[\begin{split}  (-i) \{
@@ -321,7 +321,7 @@ Similarly we can calculate the other 2nd order contribution to the proper self-e
 
 \begin{center}---------------------\end{center}
 
-Observing these two expressions, notice that the integrants always contain the step function
+Observing these two expressions, notice that the integrands always contain the step function
 \[ \theta(x) = \begin{cases} 1 & x > 0\\ 0 & x < 0 \end{cases} \]
 
 which is nothing but the fermion distribution function at the zero temperature. Thus, this step function represents whether the intermediate state is particle-like excited state or hole-like excited state.
@@ -348,7 +348,7 @@ In these diagrams, \underline{these} are the ones which run in the reverse direc
 \begin{wrapfigure}[6]{l}{3.5cm}
 \label{Fig2.7.10} \includegraphics[width=3cm]{2-7-10.png}
 \end{wrapfigure}
-Due to this feature, the integrant of these diagram contains $(2n-1)$--numbers of fermi distribution function for particle times one fermi distribution function for hole.
+Due to this feature, the integrand of these diagram contains $(2n-1)$--numbers of fermi distribution function for particle times one fermi distribution function for hole.
 \[ \begin{split}
 = &\int \frac{\mathrm{d}^3 \mathbf{q}_1}{(2\pi)^3} \int \frac{\mathrm{d}^3 \mathbf{q}_2}{(2\pi)^3} \ldots \int \frac{\mathrm{d}^3 \mathbf{q}_n}{(2\pi)^3} V^n \\
 & \times \{  \frac{
@@ -527,7 +527,7 @@ we have:
 \chi_0(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3\delta^3(\mathbf{p}-\mathbf{p}^{'}) + \frac{1}{\epsilon-\mathbf{p}^2+i\eta}\times\int\frac{\mathrm{d}^3\mathbf{q}}{(2\pi)^3}v_0(\mathbf{q}) \chi_0(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)
 \end{equation*}
 
-This equation can be solved closely in paralled to the scattering problem of one electron by a sperical hard core potential.
+This equation can be solved closely in parallel to the scattering problem of one electron by a spherical hard core potential.
 
 \begin{center}---------------------\end{center}
 
@@ -545,7 +545,7 @@ Since the incident wave have momentum $\mathbf{k}$, we want find an eigenstate o
 
 With a proper scaling, this reduces to
 \begin{equation*} \label{Eqs2.7.A.1'} \tag{2.7.A.1'}
-\left[ \nabla^2+ |\mathbf{k}|^2) \right] \psi(\mathbf{x}) = v(\mathbf{x}) \psi(\mathbf{x}) \qquad \left(v(\mathbf{x})=\frac{2mV(\mathbf{x})}{\hbar^2}\right)
+\left[ \nabla^2+ |\mathbf{k}|^2 \right] \psi(\mathbf{x}) = v(\mathbf{x}) \psi(\mathbf{x}) \qquad \left(v(\mathbf{x})=\frac{2mV(\mathbf{x})}{\hbar^2}\right)
 \end{equation*}
 
 When $\mathbf{x}$ is far from the origin at which the hard core scattering potential is located, the eigenwavefunction become a plane-wave with the momentum $\mathbf{k}$.
@@ -570,9 +570,9 @@ G^{(+)}(\mathbf{x}-\mathbf{y}) = \int \frac{\mathrm{d}^3 \mathbf{p}}{(2 \pi)^3} 
 
 You can check that this set of solutions indeed satisfies this Schr\"odinger equation.
 
-If the scattering potential has no bound state, then this eigenstate support a complete set of states:
+If the scattering potential has no bound state, then this eigenstate supports a complete set of states:
 \begin{equation*} \label{Eqs2.7.A.5} \tag{2.7.A.5}
-\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}} (\mathbf{x}) \psi_{\mathbf{k}}^* (\mathbf{k}^{'}) = \delta^3 (\mathbf{x}-\mathbf{x}^{'})
+\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}} (\mathbf{x}) \psi_{\mathbf{k}}^* (\mathbf{x}^{'}) = \delta^3 (\mathbf{x}-\mathbf{x}^{'})
 \end{equation*}
 
 In the momentum representation,
@@ -603,7 +603,7 @@ According to this completeness relation, this satisfies the corresponding comple
 \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \psi_{\mathbf{k}}^* (\mathbf{p}^{'}) = (2\pi) ^3 \delta^3 (\mathbf{p} - \mathbf{p}^{'})
 \end{equation*}
 
-When the norm of the outgoing-wave momentum($|\mathbf{k}| = |\mathbf{k}^{'}|$) and that of the incident wave is same, the scattering amplitude is calculated by ``the method of partial wave":\footnote{$\mathrm{P}_l(x)$ is the Legendre polynomial.}
+When the norm of the outgoing-wave momentum($|\mathbf{k}| = |\mathbf{k}^{'}|$) and that of the incident wave is the same, the scattering amplitude is calculated by ``the method of partial wave":\footnote{$\mathrm{P}_l(x)$ is the Legendre polynomial.}
 \begin{equation*} \label{Eqs2.7.A.10} \tag{2.7.A.10}
 f(\mathbf{k},\mathbf{k}^{'}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} \mathrm{e}^{i \delta_l} sin(\delta_l) \mathrm{P}_l (cos\theta)
 \end{equation*}
@@ -612,9 +612,9 @@ where $\theta$ is angle subtended by $\mathbf{k}$ and $\mathbf{k}^{'}$ and $k = 
 
 $\delta_l$ is called a ``phase shift" associated with $l$-th partial wave.
 
-In the limit of hard core($V_0 \rightarrow +\infty$), the phase shift can be expanded with respect to small $k_a$, as:\footnote{see eq.( 19.21) in the text book by L.Schiff ``Quantum Mechanics" (3rd edition).}
+In the limit of hard core($V_0 \rightarrow +\infty$), the phase shift can be expanded with respect to small $ka$, as:\footnote{see eq.( 19.21) in the text book by L.Schiff ``Quantum Mechanics" (3rd edition).}
 \begin{equation*} \label{Eqs2.7.A.11} \tag{2.7.A.11}
-tan(\delta_l) = - \frac{(k_a)^{2l+1}}{(2l+1)[(2l-1)!!]^2} + o((k_a)^{2l+2})\end{equation*}
+tan(\delta_l) = - \frac{(ka)^{2l+1}}{(2l+1)[(2l-1)!!]^2} + o((ka)^{2l+2})\end{equation*}
 
 \begin{center}-----------------------------------\end{center}
 
@@ -662,7 +662,7 @@ Using (\ref{Eqs2.7.A.7'}), this can be rewritten as:
 \chi_0(\mathbf{p},\mathbf{p}^{'},P) =& (\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{\psi_{\mathbf{k}}(\mathbf{p})\psi_{\mathbf{k}}^{*}(\mathbf{p}^{'})}{\epsilon-\mathbf{k}^2+i \eta}\\
 =&(\epsilon-{\mathbf{p}^{'}}^2+i\eta)\int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\frac{\psi_{\mathbf{k}}(\mathbf{p})}{\epsilon-\mathbf{k}^2+i \eta} \times \left\{ (2\pi)^3\delta^3(\mathbf{p}^{'}-\mathbf{k})+\frac{\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta} \right\}\\
 =&\psi_{\mathbf{p}^{'}}(\mathbf{p}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \times \frac{\epsilon-{\mathbf{p}^{'}}^2+i \eta}{[\epsilon-\mathbf{k}^2+i \eta][\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta]}\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})\\
-=&\psi_{\mathbf{p}^{'}}(\mathbf{p}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \times \left[ \frac{1}{\epsilon-\mathbf{k}^2+2i \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta} \right]\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})
+=&\psi_{\mathbf{p}^{'}}(\mathbf{p}) + \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \psi_{\mathbf{k}}(\mathbf{p}) \times \left[ \frac{1}{\epsilon-\mathbf{k}^2+i \eta} + \frac{1}{\mathbf{k}^2-{\mathbf{p}^{'}}^2-i \eta} \right]\tilde{f}^{*}(\mathbf{p}^{'},\mathbf{k})
 \end{split} \end{equation}
 
 substituting this into eq.(\ref{Eqs2.7.17}), we finally obtain:
@@ -682,14 +682,14 @@ We now try to solve eq.(\ref{Eqs2.7.16}) for finite $N(\mathbf{P},\mathbf{p})$.
 
 \[\int \frac{\mathrm{d}^3\mathbf{p}^{'}}{(2\pi)^3}\left[ (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'})-\frac{v(\mathbf{p}-\mathbf{p}^{'})}{\epsilon-\mathbf{p}^2+i \eta} \right] \chi_0(\mathbf{p}^{'},\mathbf{p}^{''},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'}) \]
 
-\[ \int \mathrm{d}^3 \mathbf{p}^{'} \chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P)\chi_0(\mathbf{p}^{'},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{'})\]
+\[ \int \mathrm{d}^3 \mathbf{p}^{'} \chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P)\chi_0(\mathbf{p}^{'},\mathbf{p}^{''},P) = (2\pi)^3 \delta^3(\mathbf{p}-\mathbf{p}^{''})\]
 
 Thus
-\[ \chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P) = \delta^3(\mathbf{p}-\mathbf{p}^{'}) - \frac{N(\mathbf{p}-\mathbf{p}^{'})}{\epsilon-\mathbf{p}^2+i \eta} \frac{1}{(2\pi)^3} \]
+\[ \chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P) = \delta^3(\mathbf{p}-\mathbf{p}^{'}) - \frac{v(\mathbf{p}-\mathbf{p}^{'})}{\epsilon-\mathbf{p}^2+i \eta} \frac{1}{(2\pi)^3} \]
 
 \[ \int \mathrm{d}^3 \mathbf{p} \chi_0(\mathbf{p}^{''},\mathbf{p},P)\chi_0^{-1}(\mathbf{p},\mathbf{p}^{'},P) = (2\pi)^3 \delta^3(\mathbf{p}^{''}-\mathbf{p}^{'})\]
 
-We first substract the eq in the low density limit:
+We first subtract the eq in the low density limit:
 \[ \begin{split} &\chi(\mathbf{p},\mathbf{p}^{'},P) - \frac{1}{\epsilon-\mathbf{p}^2+i \eta} \int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q}) \chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)\\
 &=(2\pi)^3 \delta(\mathbf{p}-\mathbf{p}^{'}) + \left( \frac{N(\mathbf{P},\mathbf{p})}{\epsilon - \mathbf{p}^2+i \eta N(\mathbf{P},\mathbf{p})} - \frac{1}{\epsilon - \mathbf{p}^2+i \eta} \right)\times \underline{\int \frac{\mathrm{d}^3 \mathbf{q}}{(2\pi)^3} v(\mathbf{q})\chi(\mathbf{p}-\mathbf{q},\mathbf{p}^{'},P)}
 \end{split} \]
@@ -710,7 +710,7 @@ where the underlined part can be replaced by the effective two-particle interact
 \[ \begin{split} \chi(\mathbf{p},\mathbf{p}^{'},P) =& \chi_0(\mathbf{p},\mathbf{p}^{'},P) \\
 &+ \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \chi_0(\mathbf{p},\mathbf{k},P) \times \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon - {\mathbf{k}}^2+i \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon - {\mathbf{k}}^2+i \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{k},\mathbf{p}^{'},P)\end{split}\]
 
-Then, multiplying $v(\mathbf{q})$ and replacing $\mathbf{p}$ by $\mathbf{p}-\mathbf{q}$ and intergrating over $\mathbf{q}$, we can replace this by $\Gamma$ and these two by $\Gamma_0$ respectively.
+Then, multiplying $v(\mathbf{q})$ and replacing $\mathbf{p}$ by $\mathbf{p}-\mathbf{q}$ and integrating over $\mathbf{q}$, we can replace this by $\Gamma$ and these two by $\Gamma_0$ respectively.
 \begin{equation} \label{Eqs2.7.24} \begin{split}
 \Gamma(\mathbf{p},\mathbf{p}^{'},P) =& \Gamma_0(\mathbf{p},\mathbf{p}^{'},P) \\
 &+ \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \Gamma_0(\mathbf{p},\mathbf{k},P) \times \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon - {\mathbf{k}}^2+i \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon - {\mathbf{k}}^2+i \eta} \right]\frac{m}{\hbar^2} \Gamma(\mathbf{k},\mathbf{p}^{'},P)
@@ -720,11 +720,11 @@ A set of these two equations gives effective two-particle potential $\Gamma$ in 
 
 Importantly, this scattering amplitude $\tilde{f}$ can be calculated from a single-particle scattering problem due to a hard core spherical scattering potential, which corresponds to our short-range s-wave repulsive interaction potential.
 
-This set of equation are called as Galitskii's integral equation.
+This set of equations are called as Galitskii's integral equation.
 
 For a low density Fermi gas, eq.(\ref{Eqs2.7.24}) can be solved iteratively as a power series in small $k_F a(\ll1)$. Namely, the integrand of the 2nd term vanishes, when the vectors $\frac{1}{2}\mathbf{P}+\mathbf{k}$ and $\frac{1}{2}\mathbf{P}-\mathbf{k}$ are both outside the Fermi sea.
 
-In a `small-Fermi-sea' limit, the integral region of the momentum $\mathbf{k}$ is restricted, so that the 2nd term can be roughly estinated as
+In a `small-Fermi-sea' limit, the integral region of the momentum $\mathbf{k}$ is restricted, so that the 2nd term can be roughly estimated as
 \[ \Gamma_0 \cdot k_F \cdot m \Gamma \frac{1}{\hbar^2} \]
 
 Thus, the correction to $\Gamma$ due to the 2nd term can be shown to be subleading order:
@@ -745,7 +745,7 @@ we have
 \[\Gamma(p_1,p_2;p_3,p_4) \rightarrow \Gamma(p,p^{'},P)\]
 
 Thus
-\[ \Gamma(p,k;p,k) \rightarrow \Gamma(p-k,p-k,\frac{p+k}{2}) = \Gamma(q,q,P) \]
+\[ \Gamma(p,k;p,k) \rightarrow \Gamma(\frac{p-k}{2},\frac{p-k}{2},p+k) = \Gamma(q,q,P) \]
 
 where
 \[ \begin{split} \frac{1}{2}(p-k) =& q\\ p+k =& P \end{split} \]
@@ -793,7 +793,7 @@ Such treatment gives us $\Gamma_0$ to the 2nd order in small $a$:
 =&4\pi a + (4\pi a)^2\int \frac{\mathrm{d}^3 k^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{k^{'}}^2 + i \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right) + \ldots
 \end{split} \]
 
-subtituting this solution to eq.(\ref{Eqs2.7.24}), we obtain $\Gamma$ up to the second order in small $a$:
+substituting this solution to eq.(\ref{Eqs2.7.24}), we obtain $\Gamma$ up to the second order in small $a$:
 \begin{equation} \label{Eqs2.7.26} \begin{split}
 \frac{m}{\hbar^2}\Gamma(\mathbf{q},\mathbf{q},P) =& 4\pi a + (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}^{'}}{(2\pi)^3} \left( \frac{1}{\epsilon-{\mathbf{k}^{'}}^2 + i \eta} + \frac{\mathscr{P}}{{\mathbf{k}^{'}}^2-\mathbf{q}^2} \right)\\
 &+ (4\pi a)^2 \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \left[ \frac{N(\mathbf{P},\mathbf{k})}{\epsilon-\mathbf{k}^2+i \eta N(\mathbf{P},\mathbf{k})} - \frac{1}{\epsilon-{\mathbf{k}}^2 + i \eta} \right]\\
@@ -865,7 +865,7 @@ where the one-particle spectrum can be calculated as a pole of this Green's func
 
 The pole of this function is generally complex value:
 \begin{equation} \label{Eqs2.7.30}
-p_0 = k^{-1}\epsilon_{\mathbf{p}} +i \gamma_p,
+p_0 = \hbar^{-1}\epsilon_{\mathbf{p}} +i \gamma_p,
 \end{equation}
 
 which satisfies this equation:
@@ -955,7 +955,7 @@ The effective mass of quasi-particles determines the heat capacity of the system
 
 Another physical quantity which we can calculate along this line of argument is the ground state energy.
 
-According to standard theory of therodynamics($\mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V+\mu\mathrm{d}N$), the chemical potential is given by a partial derivative of the internal energy $E$ with respect to the total number of particles with fixed volume $V$ and entropy $S$.
+According to standard theory of thermodynamics($\mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V+\mu\mathrm{d}N$), the chemical potential is given by a partial derivative of the internal energy $E$ with respect to the total number of particles with fixed volume $V$ and entropy $S$.
 \begin{equation} \label{Eqs2.7.39}
 \mu = \left( \frac{\partial E}{\partial N} \right)_{S,V}
 \end{equation}
@@ -965,7 +965,7 @@ As discussed above, the ground state remains a Fermi sea filled up to the wavenu
 Thus, we can replace this by
 \[ \mu = \left( \frac{\partial E}{\partial N} \right)_{V} \]
 
-Now that the chemical potential is evaluated as a polynominal of small $k_F a$, where $k_F$ depends on $V$ and $N$ as 
+Now that the chemical potential is evaluated as a polynomial of small $k_F a$, where $k_F$ depends on $V$ and $N$ as 
 \begin{equation} \label{Eqs2.7.40}
 k_F = \left( \frac{3\pi^2 N}{V} \right)^{\frac{1}{3}} \end{equation}
 
@@ -1029,7 +1029,7 @@ so that the derivative of $E_0(\lambda)$ with respect to $\lambda$ is given by
 =& \langle \Psi_0(\lambda)  | \hat{H}_1(\lambda) |  \Psi_0(\lambda)  \rangle
 \end{split}\]
 
-Now, we want the ground state energy at $\lambda=1$, which is given by a integral of the r.h.s with respect to $\lambda$:
+Now, we want the ground state energy at $\lambda=1$, which is given by an integral of the r.h.s with respect to $\lambda$:
 \begin{equation} \label{Eqs2.8.1}
 E_0(\lambda=1) = E_0(\lambda=0) + \int_{\lambda=0}^{\lambda=1} \frac{\mathrm{d}\lambda}{\lambda}\langle \Psi_0(\lambda)|\lambda\hat{H}_1|\Psi_0(\lambda) \rangle
 \end{equation}
@@ -1066,7 +1066,7 @@ In terms of this operator, the r.h.s. can be further calculated as
 V(\mathbf{x}-\mathbf{x}^{'})\times \left[ \langle \tilde{n}(\mathbf{x})\tilde{n}(\mathbf{x}^{'}) \rangle_{\lambda} + n^2-\delta^3(\mathbf{x}-\mathbf{x}^{'}) n \right]
 \]
 
-To make use of the diagramatic analysis, let us introduce a time-ordered density-density correlation function.
+To make use of the diagrammatic analysis, let us introduce a time-ordered density-density correlation function.
 \begin{equation} \label{Eqs2.8.2}
 i D^\lambda(x,x^{'}) \equiv \frac{\langle \Psi_0(\lambda)|\Gamma[\tilde{n}_{H(\lambda)}(x)\tilde{n}_{H(\lambda)}(x^{'})]|\Psi_0(\lambda) \rangle}{\langle \Psi_0(\lambda)|\Psi_0(\lambda) \rangle}
 \end{equation}
@@ -1097,7 +1097,7 @@ E_0(\lambda=1) =& \langle H_0 \rangle_{\lambda=0} + \int_{\lambda=0}^{\lambda=1}
 =&\underline{\langle H \rangle_{\lambda=0}} + E_{corr}
 \end{split} \end{equation}
 
-To calculate the density-density correaltion function, let us briefly summarize the Feynman's rule for the two-particle Green's function.
+To calculate the density-density correlation function, let us briefly summarize the Feynman's rule for the two-particle Green's function.
 \begin{equation} \label{Eqs2.8.4}
 G_{\alpha,\beta;\gamma,\delta}(\mathbf{x}_1,t_1,\mathbf{x}_2,t_2;\mathbf{x}_1^{'},t_1^{'},\mathbf{x}_2^{'},t_2^{'}) = (-i)^2 \frac{\langle \Psi_0 | \Gamma[\hat{\psi}_\alpha(\mathbf{x}_1,t_1) \hat{\psi}_\beta(\mathbf{x}_2, t_2) \hat{\psi}_\gamma^\dagger(\mathbf{x}_2^{'},t_2^{'}) \hat{\psi}_\delta^\dagger(\mathbf{x}_1^{'},t_1^{'})]|\Psi_0\rangle}{\langle \Psi_0 | \Psi_0 \rangle}
 \end{equation}
@@ -1164,7 +1164,7 @@ Feynman's rule for the two particle Green's function can be readily derived as a
 
 For the $n$-th order contribution to the two-particle Green's function $G_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_2^{'},x_1^{'})$:
 \begin{enumerate}[(a)]
-\item Draw \underline{all topologically distict} connected diagrams with $n$ interaction lines, $\nu$ and $(2n+2)$ Green's function $G^0$.
+\item Draw \underline{all topologically distinct} connected diagrams with $n$ interaction lines, $\nu$ and $(2n+2)$ Green's function $G^0$.
 \item Label each vertex with a four dimensional space-time coordinate $x_i$.
 \item Each solid line represents a Green's function $G^0_{\alpha,\beta}(x,y)$, running from $y$ to $x$.
 \item Each wavy line represents an interaction
@@ -1203,7 +1203,7 @@ The $n$-th order term has an explicit numerical factor $\left( \frac{-i}{\hbar} 
 On top of this, we have $(-i)^2$ factor, in the definition of the two-particle Green's function.
 \item Thus, to compute $G_{\alpha,\beta;\gamma,\delta}(x_1,x_2;x_2^{'},x_1^{'})$, we assign a factor $(-i)^2\cdot\left( \frac{-i}{\hbar} \right)^n(i)^{2n+2} = \left( \frac{i}{\hbar} \right)^n$ to every $n$-th order term.
 
-\item Finally, for a Green's function with equal time variables must be interpreted as $G_{\alpha,\beta}^0 (\mathbf{x},t;\mathbf{x}^{'},t+0)$.
+\item Finally, a Green's function with equal time variables must be interpreted as $G_{\alpha,\beta}^0 (\mathbf{x},t;\mathbf{x}^{'},t+0)$.
 \end{enumerate}
 
 \begin{center}--------------------------\end{center}
@@ -1241,14 +1241,14 @@ Connected Feynman diagrams to $G_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'})$, 
 
 Since each of these two are described by single particle Green's functions $G_{\alpha,\alpha}(x,x)$ and $G_{\beta,\beta}(x^{'},x^{'})$ respectively, such Feynman diagrams are completely cancelled by this second term.
 
-Such a cancellation becomes possible, because any $n$-th order term in this class of diagrams are accompanied by $\left(\frac{i}{\hbar}\right)^n (-1)^F$ where $F$ denotes the number of fermion loop.
+Such a cancellation becomes possible, because any $n$-th order term in this class of diagrams are accompanied by $\left(\frac{i}{\hbar}\right)^n (-1)^F$ where $F$ denotes the number of fermion loops.
 
-Such a factor can be always decomposed into two part:
+Such a factor can be always decomposed into two parts:
 \[ \left(\frac{i}{\hbar}\right)^n (-1)^F=\left(\frac{i}{\hbar}\right)^{n_1} (-1)^{F_1}\cdot\left(\frac{i}{\hbar}\right)^{n_2} (-1)^{F_2} \]
 
-each of which can be ascribed to these two part respectively.
+each of which can be ascribed to these two parts respectively.
 
-Thus.
+Thus,
 \[\begin{split}
 -i D(x,x^{'})=& \sum_{\alpha,\beta} G_{\alpha,\beta;\beta,\alpha}(x,x^{'};x,x^{'}) - \sum_{\alpha}G_{\alpha,\alpha}(x,x)\cdot\sum_{\beta}G_{\beta,\beta}(x^{'},x^{'})\\
 =& \sum_{\alpha,\beta}G_{\alpha,\beta;\beta,\alpha}^{(C)}(x,x^{'};x^{'},x)
@@ -1263,7 +1263,7 @@ Examples of such Feynman diagrams include,
 
 Here, I put together two fermion fields whose arguments are same.
 
-As in eq.(\ref{Eqs2.8.3}), to obtain the ground state energy, we need the density-density correlation function as a function of $\lambda$, where $\lambda$ denotes a mechanical(fictitions) parameter we put in front of the interaction potential.
+As in eq.(\ref{Eqs2.8.3}), to obtain the ground state energy, we need the density-density correlation function as a function of $\lambda$, where $\lambda$ denotes a mechanical(fictitious) parameter we put in front of the interaction potential.
 
 When this $\lambda$ is taken to be zero, we don't have any interaction potential. In such a case, we only have two way of contracting the fermion fields \underline{here}.
 \[\begin{split}
@@ -1316,9 +1316,9 @@ This shadow region contains all possible Feynman diagrams which connect the uppe
 
 Such diagrams can be generally classified into proper part and inproper part, in the same way as we did for the self-energy.
 
-The proper part is a polarization part that \textbf{cannot} be separated into two part by cutting a single interaction line. While the improper part is a polarization part that \textbf{can} be divided into the upper part and lower part by cutting a single interaction line.
+The proper part is a polarization part that \textbf{cannot} be separated into two parts by cutting a single interaction line. While the improper part is a polarization part that \textbf{can} be divided into the upper part and lower part by cutting a single interaction line.
 
-For example, this is a proper polarization part, while this is improper, because we can cut this into two polarization part by removing this interaction line.
+For example, this is a proper polarization part, while this is improper, because we can cut this into two polarization parts by removing this interaction line.
 \begin{center} \label{Fig2.8.11}
 \includegraphics[width=0.6\textwidth]{2-8-11.png}
 \end{center}
@@ -1328,23 +1328,23 @@ For example, this is a proper polarization part, while this is improper, because
 Then, in the same way as we did for the Dyson equation for self-energy, we can also derive the Dyson equation for the polarization part:
 
 \begin{itemize}
-\item Firstly, the full polarization part consist of a sum of all possible repetitions of the proper polarization part.
+\item Firstly, the full polarization part consists of a sum of all possible repetitions of the proper polarization part.
 \begin{center} \label{Fig2.8.12}
 \includegraphics[width=0.8\textwidth]{2-8-12.png}
 \end{center}
 
 where this part denotes the proper polarization part, while this wavy line is for interaction potential.
 
-\item This description becomes possible, especially because any $n$-th order Feynman diagram is accompanied by $\left( \frac{i}{\hbar} \right)^n \cdot (-1)^{F^{'}}$, where $F^{'}$ stands for the number of fermion loop.
+\item This description becomes possible, especially because any $n$-th order Feynman diagram is accompanied by $\left( \frac{i}{\hbar} \right)^n \cdot (-1)^{F^{'}}$, where $F^{'}$ stands for the number of fermion loops.
 
 \item As is clear from this repetitive structure, this can be rewritten into a self-consistent equation:
 \begin{center} \label{Fig2.8.13}
 \includegraphics[width=0.8\textwidth]{2-8-13.png}
 \end{center}
 
-where this singly shaded one is a collection of all possible proper polarization part.
+where this singly shaded one is a collection of all possible proper polarization parts.
 
-while this doubly daded one denote a collection of all possible polarization part.
+while this doubly shaded one denotes a collection of all possible polarization parts.
 \end{itemize}
 
 This equation is called as Dyson's equation for polarization part and its analytic expression is given like this:
@@ -1355,7 +1355,7 @@ Here $V(q)$ stands for the Fourier transform of the interaction potential, which
 As I mentioned already, we assumed spin-independent interaction potential.
 \[V_{\lambda,\lambda^{'};\mu,\mu^{'}}(\mathbf{x},\mathbf{x}^{'}) = V(\mathbf{x}-\mathbf{x}^{'}) \delta_{\lambda\lambda^{'}}\delta_{\mu\mu^{'}}\]
 
-with $V(\mathbf{q})=\int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-i \mathbf{k} \mathbf{x}} V(\mathbf{x})$.
+with $V(\mathbf{q})=\int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-i \mathbf{q} \mathbf{x}} V(\mathbf{x})$.
 
 so that the product between $\Pi_0(q)$ and $V(\mathbf{q})$ and $V(\mathbf{q})$ and $\Pi(q)$ reduces to a single scalar product.
 
@@ -1437,22 +1437,22 @@ where we named these 3 as $\Pi_{1,b}$, $\Pi_{1,c}$, $\Pi_{1,d}$ respectively.
 
 One can explicitly show that the correlation energy due to these proper polarization parts are finite.
 
-On the one hand, the correlation energy dut to this improper polartization part contain the logarithmic divergence of the $q$-integral, which we will see later.
+On the one hand, the correlation energy due to this improper polarization part contains the logarithmic divergence of the $q$-integral, which we will see later.
 
-This divergence comes from the singular behaviour of the Coulomb potential $V(q)\equiv \frac{4\pi e^2}{\mathbf{q}^2}$ for small $\mathbf{q}$ region. Namely, $E_2^r$ contains two $V(q)$, which gives its intergrand with $\mathbf{q}^{-4}$ behaviour.
+This divergence comes from the singular behaviour of the Coulomb potential $V(q)\equiv \frac{4\pi e^2}{\mathbf{q}^2}$ for small $\mathbf{q}$ region. Namely, $E_2^r$ contains two $V(q)$, which gives its integrand with $\mathbf{q}^{-4}$ behaviour.
 
-A similar divergence also occurs in all orders in $\lambda$, because these is always a single $m$-th order term with the integrand $\left[ V(q) \Pi^0(q) \right]^m$.
+A similar divergence also occurs in all orders in $\lambda$, because there is always a single $m$-th order term with the integrand $\left[ V(q) \Pi^0(q) \right]^m$.
 
 \begin{center} \label{Fig2.8.17}
 \includegraphics[width=0.6\textwidth]{2-8-17.png}
 \end{center}
 
-An idea of ``ring diagram approximation" is to sum up all these singular terms up to all order in the perturbation theory by introducting an effective interaction potential as
+An idea of ``ring diagram approximation" is to sum up all these singular terms up to all order in the perturbation theory by introducing an effective interaction potential as
 \[\begin{split} U_r(q) =& V(q) + V(q)\Pi^0(q) V(q) + [V(q)\Pi^0(q)]^2 V(q) + [V(q)\Pi^0(q)]^3 V(q) + \ldots \\ 
 =& \frac{V(q)}{1-V(q)\Pi^0(q)}
 \end{split}\]
 
-Namely, with this effective interaciton potential, these singular terms can be summed up in all order in $\lambda$ as
+Namely, with this effective interaction potential, these singular terms can be summed up in all order in $\lambda$ as
 \begin{equation} \label{Eqs2.8.9} \begin{split}
 E_r =& \frac{1}{2}i V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \sum_{n=2}^\infty [ \lambda V_0(q) \Pi^0(q) ]^n\\
 =& \frac{1}{2}i V\hbar \int_0^1 \mathrm{d} \lambda \cdot \lambda^{-1} \int \frac{\mathrm{d}^4 q}{(2\pi)^4} \frac{[\lambda V_0(q) \Pi^0(q)]^2}{1-\lambda V_0(q) \Pi^0(q)}\\
@@ -1503,7 +1503,7 @@ We next evaluate this lowest-order proper polarization part. $\Pi_0(q)$
 
 where this factor 2 comes from the summation over the spin index, using this
 \begin{equation} \label{Eqs2.8.13}
-G^0(\mathbf{k},\epsilon) = \frac{\theta(|\mathbf{k}|-k_F)}{\omega-\omega_{\mathbf{k}}+i \eta} + \frac{\theta(k_F - |\mathbf{k}|)}{\omega-\omega_{\mathbf{k}}-i \eta}
+G^0(\mathbf{k},\epsilon) = \frac{\theta(|\mathbf{k}|-k_F)}{\epsilon-\omega_{\mathbf{k}}+i \eta} + \frac{\theta(k_F - |\mathbf{k}|)}{\epsilon-\omega_{\mathbf{k}}-i \eta}
 \end{equation}
 
 we have
@@ -1529,7 +1529,7 @@ As for the 2nd term, we can define $\mathbf{k}^{'} = -\mathbf{k}-\mathbf{q}$, so
 Now $\omega_\mathbf{k}$ are an even function in momentum. these two can be replaced by $\mathbf{k}^{'} + \mathbf{q}$ and $\mathbf{k}^{'}$ respectively.
 
 $\mathbf{k}^{'}$ as well as $\mathbf{k}$ are dummy index, we can replace $\mathbf{k}^{'}$ by $\mathbf{k}$.
-\[=\frac{2}{\hbar} \int \frac{\mathbf{d}^3 \mathbf{k}}{(2\pi)^3}\theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}+i \eta} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}-i \eta} \right\}\]
+\[=\frac{2}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3}\theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|) \times \left\{ \frac{1}{\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}+i \eta} - \frac{1}{\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}-i \eta} \right\}\]
 
 This clearly suggests that $\Pi^0(\mathbf{q},\omega)$ is an even function of $\omega$.
 \begin{equation} \label{Eqs2.8.14} \Pi^0(\mathbf{q},\omega) = \Pi^0(\mathbf{q},-\omega)\end{equation}
@@ -1632,7 +1632,7 @@ As for other cases, we can do a similar integral, from which we obtain.
 
 for any cases.
 
-Let us next calculate the imginary part of $\Pi^0(\mathbf{q},\omega)$.
+Let us next calculate the imaginary part of $\Pi^0(\mathbf{q},\omega)$.
 \begin{equation*} \tag{2.8.16} \begin{split}
 \text{Im} \Pi^0(\mathbf{q},\omega) =& -\frac{1}{\hbar} \int \frac{\mathrm{d}^3 \mathbf{k}}{(2\pi)^3} \theta(|\mathbf{k}+\mathbf{q}|-k_F)\theta(k_F - |\mathbf{k}|)\\
 & \times \left\{ \delta(\omega+\omega_{\mathbf{k}}- \omega_{\mathbf{k}+\mathbf{q}}) + \delta(\omega-\omega_{\mathbf{k}}+ \omega_{\mathbf{k}+\mathbf{q}}) \right\}
@@ -1656,7 +1656,7 @@ substituting this expression into this, we have
 \[\begin{split}& Im\Pi^0(k_F \mathbf{q}, \frac{\hbar k_F^2}{m}\nu) = Im\Pi^0_{new}(\mathbf{q},\nu)\\
 =& -m k_F \frac{1}{(2\pi \hbar)^2} \int \mathrm{d}^3 \mathbf{k} \theta(|\mathbf{q}+\mathbf{k}|-1) \theta(1-|\mathbf{k}|) \times \delta(\nu-(\mathbf{k}\cdot \mathbf{q}+\frac{q^2}{2})) \end{split}\]
 
-To evaluate this integral, let us introduce two unit spheres whose centers are seqarated by a vector $\mathbf{q}$.
+To evaluate this integral, let us introduce two unit spheres whose centers are separated by a vector $\mathbf{q}$.
 
 \begin{center} \label{Fig2.8.20}
 \includegraphics[width=0.6\textwidth]{2-8-20.png}
@@ -1744,7 +1744,7 @@ Im\Pi^0(q,\nu) =& -\frac{m k_F}{4\pi^2 \hbar^2} 2\pi \int_{|\frac{\nu}{q} - \fra
 =& - \frac{m k_F}{\hbar^2}\frac{1}{4\pi} \left[ 1-\left( \frac{\nu}{q}-\frac{q}{2} \right)^2 \right]
 \end{split}\end{equation}
 
-In the latter case, the integration becomes a little involved, bacause the plane also enters inside the lower unit sphere, which is the forbidden region.
+In the latter case, the integration becomes a little involved, because the plane also enters inside the lower unit sphere, which is the forbidden region.
 \[ Im\Pi^0(\mathbf{q},\nu) = -\frac{m k_F}{(2\pi \hbar)^2} \int \mathrm{d}^3 k \cdot \theta(1-|k|) \theta(|\mathbf{q}+\mathbf{k}|-1) \delta(\nu-\mathbf{q}\cdot\mathbf{k}-\frac{q^2}{2})
 \]
 
@@ -1867,7 +1867,7 @@ To calculate the real part, we taylor-expand these logarithmic parts in small $q
 
 \[log\left| \frac{1+\frac{\nu}{q}+\frac{q}{2}}{1-\frac{\nu}{q}-\frac{q}{2}} \right| = \log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| + \frac{\frac{q}{2}\cdot 2}{1-(\frac{\nu}{q})^2} + o(q^2)\]
 
-Uing these expansions, we obtain the leading order expression for the real part as follows:
+Using these expansions, we obtain the leading order expression for the real part as follows:
 \[ \begin{split}Re\Pi^0(\mathbf{q},\nu=q x) =& \frac{2m k_F}{\hbar^2} \frac{1}{4\pi^2} \times\\
 &\left\{ -1 + \frac{1}{2q}\left( 1-(\frac{\nu}{q})^2+\nu-\frac{q^2}{4} \right) \times \left( \log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| - \frac{q}{1-(\frac{\nu}{q})^2} + o(q^2) \right) \right.\\
 &\left.-\frac{1}{2q}\left( 1-(\frac{\nu}{q})^2-\nu-\frac{q^2}{4} \right) \times \left( \log \left| \frac{1+\frac{\nu}{q}}{1-\frac{\nu}{q}} \right| + \frac{q}{1-(\frac{\nu}{q})^2} + o(q^2) \right)\right\}\\
@@ -1916,7 +1916,7 @@ Thus, this coefficient is a dimensionless quantity which measures the density of
 
 Especially, the ratio between the interparticle spacing and Bohr radius is often called as $r_S$, which plays role of the most important coupling constant in a degenerate electron gas.
 
-By its definition, $r_S$ goes to zero in the high-density limit, while $r_S$ goes infinity in the low-density limit.
+By its definition, $r_S$ goes to zero in the high-density limit, while $r_S$ goes to infinity in the low-density limit.
 \[ r_S \rightarrow 0 \qquad\text{(high-density limit)} \]
 
 In terms of $r_S$, the dielectric constant in the static limit is given by
@@ -1934,7 +1934,7 @@ K_r(0,\nu) =& 1- \frac{4\pi e^2}{k_F^2} \frac{1}{q^2}\frac{2 m k_F}{\hbar^2} \cd
 \item In the intermediate limit, the dielectric constant takes the following  asymptotic form:
 \begin{equation} \label{Eqs2.8.35} \begin{split}
 K_r(q,qx) =& 1-\frac{4\pi e^2}{k_F^2}\frac{1}{q^2} \times \left\{ - \frac{m k_F}{\hbar^2}\cdot\frac{1}{2\pi^2}\left( 2-x \ln\left| \frac{1+x}{1-x} \right| \right) - \frac{m k_F}{\hbar^2}\cdot \frac{x}{2\pi} i \theta(1-x) \right\}\\
-=& 1+ \frac{4 \alpha r_S}{\pi q^2}\left( 1-\frac{x}{2} \ln\left| \frac{1+x}{1-x} \right|  \right) + \frac{2 i \alpha r_S}{q} x \theta(1-x)
+=& 1+ \frac{4 \alpha r_S}{\pi q^2}\left( 1-\frac{x}{2} \ln\left| \frac{1+x}{1-x} \right|  \right) + \frac{2 i \alpha r_S}{q^2} x \theta(1-x)
 \end{split}\end{equation}
 
 \end{itemize}
@@ -2055,7 +2055,7 @@ E_r = \frac{N e^2}{2 a_0} \epsilon_r
 Since $K_r$ depends on the norm of $\mathbf{q}^{'}$ and it is an even function of $\nu$, we have
 \[ \epsilon_r = -\frac{3i}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} {q^{'}}^2 \cdot \mathrm{d}q^{'} \int_{0}^{+\infty} \mathrm{d}\nu \left\{ \log K_r(q^{'},\nu) + 1-K_r(q^{'},\nu) \right\}\]
 
-The energy must be real-valued, so that we focus only on the imginary part of this parenthesis.
+The energy must be real-valued, so that we focus only on the imaginary part of this parenthesis.
 \begin{equation} \label{Eqs2.8.37}
 \epsilon_r = \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} q^2 \cdot \mathrm{d}q \int_0^{+\infty} \mathrm{d}\nu \left\{ tan^{-1}\left( \frac{\text{Im} K_r(q,\nu)}{\text{Re} K_r(q,\nu)} \right) - \text{Im} K_r(q,\nu) \right\}
 \end{equation}
@@ -2074,7 +2074,7 @@ In order to see how the singular behaviour of the integrand at $q=0$ is removed 
 
 $\epsilon_{r,2}$ is free from infrared divergence, so that it results in a finite contribution.
 
-Toevaluate $\epsilon_{r,1}$, we again choose $q_c$ to be sufficiently smaller than 1, so that the integrand can be evaluated in terms of eqs.
+To evaluate $\epsilon_{r,1}$, we again choose $q_c$ to be sufficiently smaller than 1, so that the integrand can be evaluated in terms of eqs.
 \begin{equation} \label{Eqs2.8.41} \begin{split}
 \epsilon_{r,1} =& \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3\cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} x \left\{ tan^{-1}\left[ \frac{2\alpha r_S x \theta(1-x)}{q^2+2\alpha r_S f(x)} \right] - \frac{2\alpha r_S x \theta(1-x)}{q^2} \right\}\\
 =& \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3 \cdot \mathrm{d} q \int_0^{1} \mathrm{d} x \left\{ tan^{-1}\left[ \frac{2\alpha r_S x}{q^2+2\alpha r_S f(x)} \right] - \frac{2\alpha r_S x}{q^2} \right\}\\
@@ -2284,7 +2284,7 @@ Thus, we next relate the retarded function with the time-ordered density correla
 
 In a similar way as we did for single-particle Green's function, we can do this by using the Lehmann representation.
 
-Lehmann representation of the time-ordered density-density correlation functon is obtained in the following way.
+Lehmann representation of the time-ordered density-density correlation function is obtained in the following way.
 \[ \begin{split}
 i D(\mathbf{x},t;\mathbf{x}^{'},t^{'}) =& \theta(t-t^{'}) \langle \Psi_0 | \tilde{n}_H(\mathbf{x},t) \tilde{n}_H(\mathbf{x}^{'},t^{'}) | \Psi_0 \rangle\\
 &+\theta(t^{'}-t) \langle \Psi_0 | \tilde{n}_H(\mathbf{x}^{'},t^{'}) \tilde{n}_H(\mathbf{x},t) | \Psi_0 \rangle\\
@@ -2317,12 +2317,12 @@ i D(\mathbf{k},\omega) =& \int \mathrm{d}^3 (\mathbf{x}-\mathbf{x}^{'}) \int \ma
 In a similar way, the Fourier transform of the retarded density correlation function is obtained as follows.
 \begin{equation} \label{Eqs3.1.17} \begin{split}
 i D^R(\mathbf{k},\omega) =& i V \sum_n \delta_{\mathbf{k},\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega - \hbar^{-1}(E_n-E_0) + i \eta}\\
-& -i V \sum_n \delta_{\mathbf{k},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) - i \eta}
+& -i V \sum_n \delta_{\mathbf{k},-\frac{\mathbf{P}_n}{\hbar}}\frac{\langle \Psi_0 | \tilde{n}_H(0) | \Psi_n \rangle \langle \Psi_n | \tilde{n}_H(0) | \Psi_0 \rangle}{ \omega + \hbar^{-1}(E_n-E_0) + i \eta}
 \end{split}\end{equation}
 
 Since the summation over $|\Psi_n\rangle$ is taken over an excited state of $H$, $E_n-E_0$ is always positive.
 
-Therefore, these two expressions leads to the following general relation between $D^R(\mathbf{k},\omega)$ and $D(\mathbf{k},\omega)$.
+Therefore, these two expressions lead to the following general relation between $D^R(\mathbf{k},\omega)$ and $D(\mathbf{k},\omega)$.
 \footnote{$sgn \omega \overset{def}{\equiv} \frac{\omega}{|\omega|}$}
 \begin{equation} \label{Eqs3.1.18} \left\{ \begin{split}
 \text{Re} D^R(\mathbf{k},\omega) =& \text{Re} D(\mathbf{k},\omega)\\
@@ -2367,7 +2367,7 @@ Then, using the relation between the retarded density correlation function and t
 
 Within the ring-diagram approximation, this dielectric constant $K(\mathbf{k},\omega)$ was evaluated explicitly, such as in eq.(\ref{Eqs2.8.33}) \& eq.(\ref{Eqs2.8.34}) \& eq.(\ref{Eqs2.8.35}).
 
-Especially, in the staic limit where $\omega=0$, the imaginary part of the dielectric constant reduces to zero, and we obtain
+Especially, in the static limit where $\omega=0$, the imaginary part of the dielectric constant reduces to zero, and we obtain
 \begin{equation} \label{Eqs3.1.23}
 K_r(\mathbf{k},0) = 1+ 4 \alpha r_S k_F^2 \frac{1}{\pi |\mathbf{k}|^2} g\left( \frac{|\mathbf{k}|}{k_F} \right)
 \end{equation}
@@ -2403,7 +2403,7 @@ which means that induced charge density screens the impurity with $+Z e$ charge 
 \end{center}
 
 \begin{equation}\label{Eqs3.1.26}
-\delta \langle \rho(\mathbf{x}) \rangle_{ring} \leq \delta \langle \rho(\mathbf{x}) \rangle_{ring} < +\infty
+\delta \langle \rho(\mathbf{x}) \rangle_{ring} \leq \delta \langle \rho(0) \rangle_{ring} < +\infty
 \end{equation}
 
 \item Thirdly, we are interested in how the induced charge density will decay when $\mathbf{x}$ goes away from the origin.
@@ -2424,7 +2424,7 @@ In terms of this, the induced charge density is given by
 
 Since $g(x)$ is a function of order unit, the second term in the denominator becomes important only when $q \ll q_{TF}$.
 
-In the high-density limit where $r_S \rightarrow 0$, we can approximate $g(\frac{q}{k_F})$ by $g(0)$ for those $q$ which is much smaller than the Thomas-Fermi wavenumber.
+In the high-density limit where $r_S \rightarrow 0$, we can approximate $g(\frac{q}{k_F})$ by $g(0)$ for those $q$ which are much smaller than the Thomas-Fermi wavenumber.
 
 $g(0)=1$, so that we can approximately evaluate this integral as
 \[\overset{r_S \rightarrow 0}{\approx} - \frac{Z e}{4\pi^2 x} \int_{-\infty}^{+\infty}\mathrm{d}q \cdot q\left( \frac{\mathrm{e}^{i qx}-\mathrm{e}^{-i qx}}{2i} \right)\frac{q_{TF}^2}{q^2+q_{TF}^2}\]
@@ -2465,7 +2465,7 @@ substituting this expression into eq.(\ref{Eqs3.1.28}), we have
 &\times \frac{q^3}{q^2 + q_{TF}^2 \left\{\frac{1}{2}-\frac{k_F}{2q}\left( 1-\frac{1}{4}(\frac{q}{k_F})^2 \right) \frac{1}{2} \log \left( \frac{(q-2 k_F)^2 + \eta^2}{(q + 2 k_F)^2 + \eta^2}\right) \right\}}
 \end{split}\]
 
-The integrand has a pole at $q = \pm i q_{TF}$, which gives rises to a Thomas-Fermi result, as described above.
+The integrand has a pole at $q = \pm i q_{TF}$, which gives rise to a Thomas-Fermi result, as described above.
 
 On top of these poles, the integrand requires us to introduce a branch cut associated with these logarithmic functions.
 
@@ -2495,7 +2495,7 @@ When the contour takes to be infinitely far from the origin, we have
 
 Where this corresponds to the Thomas-Fermi pole contribution while these two contour-integrals are taken along these two branch cuts.
 
-As we have already see above, the Thomas-Fermi pole contribution vanishes exponentially for larger $x$.
+As we have already seen above, the Thomas-Fermi pole contribution vanishes exponentially for larger $x$.
 
 On the one hand, these two contour integrals give rise to ``algebraic decay for larger x" which is much more dominant than the exponential decay.
 
@@ -2516,9 +2516,9 @@ With this in mind, we can calculate this integral as
 
 where we take $q$ to be $2 k_F +i V -\epsilon$ in the integral along the left side of $C_1$, while take $q$ to be $2 k_F +i V + \epsilon$ in the integral along the right side of $C_1$.
 
-Here $\epsilon$ is a infinitesimally small real and positive quantity.
+Here $\epsilon$ is an infinitesimally small real and positive quantity.
 
-$g_\pm$ stands for these two function respectively
+$g_\pm$ stands for these two functions respectively
 \[ g_\pm \equiv g\left( \frac{2 k_F + i V \pm \epsilon}{k_F} \right) \]
 
 with
@@ -2526,7 +2526,7 @@ with
 
 As mentioned before, $g_+$ and $g_-$ differ from each other along the branch cut, because of this logarithmic part:
 \[\begin{split}
-g_+-g_- = & \frac{1}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right) \times \frac{1}{2} \left[ \ln \left[ \frac{(x-2)^2+\eta^2}{(x+2)^2+\eta^2}\right] \right]_{x=\frac{2 k_F +i V -i\epsilon}{k_F}}^{x=\frac{2 k_F +i V +i\epsilon}{k_F}}\\
+g_+-g_- = & \frac{1}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right) \times \frac{1}{2} \left[ \ln \left[ \frac{(x-2)^2+\eta^2}{(x+2)^2+\eta^2}\right] \right]_{x=\frac{2 k_F +i V -\epsilon}{k_F}}^{x=\frac{2 k_F +i V +\epsilon}{k_F}}\\
 =& \frac{\pi i}{2} \frac{k_F}{2 k_F + i V} \left( 1- \frac{1}{4}\left( \frac{2 k_F +i V}{k_F} \right)^2 \right)
 \end{split}\]
 
@@ -2573,7 +2573,7 @@ where $\xi \equiv \frac{q_{TF}^2}{2 k_F^2}$.
 This result was first obtained by Langer \& Vosko.
 \footnote{Ref: J.S.Langer \& S.H.Vosko J.Phys.chem.Solids \underline{12} 196(1960)}
 
-This expression is clearly different from Thomas-Fermi results and exhibits long-range oscillation with a radial wavelength $\frac{\pi}{k_F}$ and an evelop proportional to $x^{-3}$.
+This expression is clearly different from Thomas-Fermi results and exhibits long-range oscillation with a radial wavelength $\frac{\pi}{k_F}$ and an envelope proportional to $x^{-3}$.
 
 From physical point of view, this long-range oscillation in the screening charge density profile comes from a Fermi surface.
 
@@ -2589,7 +2589,7 @@ Let us next discuss about collective modes in degenerate electron gas and that i
 
 \section{Collective Modes in degenerate electron gas and imperfect Fermi gas -- plasma oscillation \& zero sound mode}
 
-In section, we studied the Lehmann representation of single-particle Green's function, which tells us about a single-particle excitations, called also as a quasi-particle excitations.
+In section, we studied the Lehmann representation of single-particle Green's function, which tells us about single-particle excitations, called also as quasi-particle excitations.
 
 A single-particle excitation is accompanied by an addition of one electron outside the Fermi sea or by a removal of one electron inside the Fermi sea. Namely, a single-particle excitation changes the total number of particles.
 
@@ -2597,7 +2597,7 @@ On the one hand, most physical systems also have another type of excited states 
 
 Famous example of collective modes is ``phonon", which describes how lattice vibrations are propagating in space and time, and which we studied in sec.\underline{    }.
 
-Another example of collective modes is ``spin wave" or ``magron", which describes how magnetic excitations are propagating in magnets.
+Another example of collective modes is ``spin wave" or ``magnon", which describes how magnetic excitations are propagating in magnets.
 
 Degenerate electron gas and imperfect Fermi gas also have collective modes as their excited states, which are called as plasma oscillation mode and zero sound mode respectively.
 
@@ -2615,7 +2615,7 @@ Poles of $\Pi(\mathbf{q},\omega)$ can be detected by the zeros of the dielectric
 \frac{1}{K(\mathbf{q},\omega)} - 1 = U_0(\mathbf{q}) \Pi(\mathbf{q})
 \end{equation}
 
-According to eq.(\ref{Eqs2.8.34}), the dielectric constant evaluated within the ring-diagram approximation has one obvious zero in the long-wavelengyh limit $|\mathbf{q}| \rightarrow 0$.
+According to eq.(\ref{Eqs2.8.34}), the dielectric constant evaluated within the ring-diagram approximation has one obvious zero in the long-wavelength limit $|\mathbf{q}| \rightarrow 0$.
 
 Namely, in the dynamic limit, the dielectric constant is given by
 \begin{equation*} \tag{2.8.34}
@@ -2650,7 +2650,7 @@ According to the linear response theory, the induced charge density is given by
 =& - e \varphi_0 \mathrm{e}^{i \mathbf{q} \cdot \mathbf{x}} \int \frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-i \omega t} \Pi^R(\mathbf{q},\omega)
 \end{split}\end{equation}
 
-As is clear from the Lehmann representation of the retarded density correlation function, $\Pi^P(\mathbf{q},\omega)$ has a pole only in the lower half plane in the complex-$\omega$ plane.
+As is clear from the Lehmann representation of the retarded density correlation function, $\Pi^R(\mathbf{q},\omega)$ has a pole only in the lower half plane in the complex-$\omega$ plane.
 \begin{equation} \label{Eqs3.2.5}
 \Pi^R(\mathbf{q},\omega) = \frac{i A_{\mathbf{q}}}{\omega - (\Omega_{\mathbf{q}}-i \gamma_{\mathbf{q}})} + \ldots
 \end{equation}
@@ -2686,7 +2686,7 @@ The pole of $\Pi^R(\mathbf{q},\omega)$ can be determined by the zero of the deno
 1-\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}-i \gamma_{\mathbf{q}})V(\mathbf{q}) = 0
 \end{equation}
 
-When the damping(inverse of the life time) is sufficiently smaller than the resonance frequency $\Omega_{\mathbf{q}}$, which turns out to be the case a priori, we can expand this equation is small $\gamma_{\mathbf{q}}$:
+When the damping(inverse of the life time) is sufficiently smaller than the resonance frequency $\Omega_{\mathbf{q}}$, which turns out to be the case a priori, we can expand this equation in small $\gamma_{\mathbf{q}}$:
 \begin{equation} \label{Eqs3.2.9} \begin{split}
 1-&\left( Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) + i \text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \right.\\
 &\left. -i \gamma_{\mathbf{q}} \left\{ \left[ \frac{\partial \text{Re} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + i \left[ \frac{\partial \text{Im} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} \right\} + o(\gamma_{\mathbf{q}}^2) \right)V(\mathbf{q}) = 0
@@ -2699,10 +2699,10 @@ The real part of this equality is given by
 
 while the imaginary part is given by
 \begin{equation} \label{Eqs3.2.11}
-\left( \text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) - \gamma_{\mathbf{q}} \left[ \frac{\partial \text{Re} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + o(\gamma_{\mathbf{q}^2}) \right) = 0
+\left( \text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) - \gamma_{\mathbf{q}} \left[ \frac{\partial \text{Re} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}} + o(\gamma_{\mathbf{q}}^2) \right) = 0
 \end{equation}
 
-Regarding that $\text{Im} \Pi^{0,R}$ \& $\gamma_{\mathbf{q}}$ are same order of small quantity, we can solved these equalities in the leading order in small $\gamma_{\mathbf{q}}$
+Regarding that $\text{Im} \Pi^{0,R}$ \& $\gamma_{\mathbf{q}}$ are same order of small quantity, we can solve these equalities in the leading order in small $\gamma_{\mathbf{q}}$
 \begin{equation} \label{Eqs3.2.12}
 \left\{ \begin{split}
 &1- Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) V(\mathbf{q}) = 0\\
@@ -2713,7 +2713,7 @@ Regarding that $\text{Im} \Pi^{0,R}$ \& $\gamma_{\mathbf{q}}$ are same order of 
 
 The former equalities determines the dispersion relation of the collective mode, while the latter gives the inverse of the life time of the collective mode.
 
-Now that retarded polarization function and time-ordered one is related by eq.(\ref{Eqs3.2.8}), these two can be rewritten as follows
+Now that retarded polarization function and time-ordered one is related by eq.(\ref{Eqs3.1.18}), these two can be rewritten as follows
 \begin{equation*} \label{Eqs3.2.12'} \tag{3.2.12'}
 \left\{ \begin{split}
 &1- Re\Pi^{0}(\mathbf{q},\omega) V(\mathbf{q}) = 0\\
@@ -2742,7 +2742,7 @@ where the second term is determined by this next leading order term of $\text{Re
 \includegraphics[width=0.2\textwidth]{3-1-7.png}
 \end{center}
 
-Since $\text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}})$ vanishes in the dynamic limit, these gapped collecive mode has an infinitely long life time, within the ring-diagram approximation.
+Since $\text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}})$ vanishes in the dynamic limit, these gapped collective mode has an infinitely long life time, within the ring-diagram approximation.
 
 As is clear from this derivation, a finite gap of the plasma oscillation mode comes from the long range Coulomb interaction. Namely, the bare Coulomb interaction has $\frac{1}{q^2}$-divergence in small $q$ region, which is cancelled by $q^2$ appearing in this part of $\text{Re} \Pi^0$. Due to this cancellation, this equation is satisfied by a finite $\omega$ in the small $q$-limit.
 

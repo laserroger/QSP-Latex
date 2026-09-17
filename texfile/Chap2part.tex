@@ -1,16 +1,16 @@
 \chapter{Green's function and field theory at zero temperature}
 In most cases of interest, the first few orders of perturbation theory cannot provide an adequate description of an interacting many-particle system.
 
- For this reason, we need to develop systematic methods for solving Shrodinger equation to all orders in perturbation theory.
+ For this reason, we need to develop systematic methods for solving Schrodinger equation to all orders in perturbation theory.
 
 \section{Schrodinger, Heisenberg \& interaction picture}
 
 In most cases of interest, the first few orders of perturbation theory cannot provide an adequate description of an interacting many-particle system.
 
- For this reason, we need to develop systematic methods for solving Shrodinger equation to all orders in perturbation theory.
+ For this reason, we need to develop systematic methods for solving Schrodinger equation to all orders in perturbation theory.
 
 
-As a preliminary step, we will brief review three important representation, that are useful in analyzing the 2nd-quantized form of the schrodinger equation.
+As a preliminary step, we will briefly review three important representations, that are useful in analyzing the 2nd-quantized form of the Schrodinger equation.
 
  The usual description of quantum mechanics assumes that the state vectors are time-dependent, while the operators are time-independent.
 
@@ -34,7 +34,7 @@ or \left( \bm{i} \hbar \frac{\partial}{\partial t}  O_H(t)=[ O_H(t), \hat H] \ri
 \begin{align}
 \langle\Psi_S'(t)|O_S|\Psi_S(t)\rangle=\langle\Psi_H'|e^{\bm{i}  \frac{\hat Ht}{\hbar}}O_Se^{-\bm{i}  \frac{\hat Ht}{\hbar}}|\Psi_H\rangle \nonumber
 \end{align}
- The third description is called "interaction picture", in which bothe the state vectors and the operators are time-dependent.
+ The third description is called "interaction picture", in which both the state vectors and the operators are time-dependent.
 
  But the time-dependence of the state vectors is determined by some part of the Hamiltonian, while that of the operator is determined by the other part of the Hamiltonian.
 
@@ -46,7 +46,7 @@ or \left( \bm{i} \hbar \frac{\partial}{\partial t}  O_H(t)=[ O_H(t), \hat H] \ri
 
   where $\hat H_0$ and $\hat H_1$ generally don't commute.
 
- $\hat H_0$ alone yields a soluble problem, whose eigenstates are comletely understood.
+ $\hat H_0$ alone yields a soluble problem, whose eigenstates are completely understood.
 
  Examples of $\hat H_0$ is Eq.(1.7.13), and 1st term of Eq.(1.8.14).
 
@@ -100,7 +100,7 @@ c_{k,I}(t)&\equiv c_k e^{-\bm{i}\epsilon_kt} \nonumber \\
 c_{k,I}^{\dagger}(t)&= c^{\dagger}_k e^{-\bm{i}\epsilon_kt} \nonumber
 \end{align}
 
- Since any operators in Schrodinger picture is expressed in terms of the complete set of $c_k \& c^{\dagger}_k$, the corrsponding operator in the interaction picture is obtained with the simple replacement of $c_k \& c^{\dagger}_k$ by $c_{k,I}(t) \& c^{\dagger}_{k,I}(t)$;
+ Since any operators in Schrodinger picture is expressed in terms of the complete set of $c_k \& c^{\dagger}_k$, the corresponding operator in the interaction picture is obtained with the simple replacement of $c_k \& c^{\dagger}_k$ by $c_{k,I}(t) \& c^{\dagger}_{k,I}(t)$;
 
 \begin{align}
 \hat O_S \equiv f(\hat c_{k_1},\hat c^{\dagger}_{k_1},\hat c_{k_2},\hat c^{\dagger}_{k_2},...)\nonumber
@@ -121,7 +121,7 @@ with $\hat U(t_0,t_0)=1$
  The unitary operator can be calculated explicitly,
 \begin{align}
 |\Psi_I(t)\rangle& =e^{\bm{i}  \frac{\hat H_0t}{\hbar}}|\Psi_S(t)\rangle \nonumber \\
-&= e^{\bm{i}  \frac{\hat H_0t}{\hbar}}e^{-\bm{i}  \frac{\hat H_(t-t_0)}{\hbar}}|\Psi_S(t_0)\rangle \nonumber \\& = e^{\bm{i}  \frac{\hat H_0t}{\hbar}}e^{-\bm{i}  \frac{\hat H_(t-t_0)}{\hbar}}e^{-\bm{i}  \frac{\hat H_0t_0}{\hbar}}|\Psi_I(t_0)\rangle \nonumber
+&= e^{\bm{i}  \frac{\hat H_0t}{\hbar}}e^{-\bm{i}  \frac{\hat H(t-t_0)}{\hbar}}|\Psi_S(t_0)\rangle \nonumber \\& = e^{\bm{i}  \frac{\hat H_0t}{\hbar}}e^{-\bm{i}  \frac{\hat H(t-t_0)}{\hbar}}e^{-\bm{i}  \frac{\hat H_0t_0}{\hbar}}|\Psi_I(t_0)\rangle \nonumber
 \end{align}
 From where we obtain
 \begin{equation} \tag{2.1.6'}
@@ -158,7 +158,7 @@ so that
 \hat{U}(t,t_0)=\hat{\bm{1}}-\bm{i}/\hbar \int_{t_0}^{t} \hat{H_1}(t')\hat{U}(t',t_0) \nonumber
 \end{equation}
 
- By substituting the left-hand side into the integrant in the right hand side, one obtain an interative solution for this.
+ By substituting the left-hand side into the integrand in the right hand side, one obtains an iterative solution for this.
 \begin{align}
 \hat{U}(t,t_0)=\hat{\bm{1}} &+(-\bm{i}/\hbar) \int_{t_0}^{t} \hat{H_1}(t')\bm{d}t' \nonumber\\
 &+(-\bm{i}/\hbar)^2\int_{t_0}^{t}\bm{d}t'\int_{t_0}^{t'}\bm{d}t''\hat{H_1}(t')\hat{H_1}(t'')\nonumber\\
@@ -173,11 +173,11 @@ where I reverse the order of the integration in the last term.
 
  Then we interchange the dummy variable $t'$ \& $t''$ in the second term.
 \begin{align}
-=...+\frac{1}{2}\int_{t_0}^{t}\bm{d}t'\int_{t''}^{t}\bm{d}t''\hat{H_1}(t'')\hat{H_1}(t')\nonumber
+=...+\frac{1}{2}\int_{t_0}^{t}\bm{d}t'\int_{t'}^{t}\bm{d}t''\hat{H_1}(t'')\hat{H_1}(t')\nonumber
 \end{align}
  These two can be recombined again
 \begin{align}
-=...+\frac{1}{2}\int_{t_0}^{t}\bm{d}t'\int_{t''}^{t}\bm{d}t''[\hat{H_1}(t')\hat{H_1}(t'')\theta(t'-t'')+\hat{H_1}(t'')\hat{H_1}(t')\theta(t''-t')]\nonumber
+=...+\frac{1}{2}\int_{t_0}^{t}\bm{d}t'\int_{t_0}^{t}\bm{d}t''[\hat{H_1}(t')\hat{H_1}(t'')\theta(t'-t'')+\hat{H_1}(t'')\hat{H_1}(t')\theta(t''-t')]\nonumber
 \end{align}
 where $\theta(t)$ is the step function.
 \begin{eqnarray}
@@ -225,7 +225,7 @@ where
 \hat{O_H}(t)&=e^{\bm{i}Ht/\hbar}e^{-\bm{i}H_0t/\hbar}\hat{O_I}(t)e^{\bm{i}H_0t/\hbar}e^{-\bm{i}Ht/\hbar} \nonumber \\
 &=\hat{U}(0,t)\hat{O_I}(t)\hat{U}(t,0) \nonumber \\
 |\Psi_H\rangle&=\hat{U}(0,t)|\Psi_I(t)\rangle \nonumber \\
-&=\Psi_I(t=0)\rangle
+&=|\Psi_I(t=0)\rangle
 \end{align}
 
 
@@ -236,7 +236,7 @@ where
 
 \section{Adiabatic switching \& Gell-Mann \& Low Theorem}
 
-``Adiabatic switching'' is a gedenken experimental process, in which the interaction part of the Hamiltonian is adiabatically switched on. This process is a mathematical device that generate exact eigenstates of the interacting system from those of the non-interacting system. 
+``Adiabatic switching'' is a gedanken experimental process, in which the interaction part of the Hamiltonian is adiabatically switched on. This process is a mathematical device that generates exact eigenstates of the interacting system from those of the non-interacting system. 
 
 Specifically, we consider a new Hamiltonian:
 
@@ -244,9 +244,9 @@ Specifically, we consider a new Hamiltonian:
 
 where $\epsilon$ is a small positive value. 
 
-When the time goes $+$ infinity ot $-$ infinity, the Hamiltonian reduces to $\hat{H}_0$, which is a soluble limit. At $t=0$, $\hat{H}$ becomes the full Hamiltonian of the interacting systems. We will take $\epsilon$ to be zero at the end of the calculation, which means that the interaction part is turned on and off inginitely slowly or adiabatically. 
+When the time goes $+$ infinity to $-$ infinity, the Hamiltonian reduces to $\hat{H}_0$, which is a soluble limit. At $t=0$, $\hat{H}$ becomes the full Hamiltonian of the interacting systems. We will take $\epsilon$ to be zero at the end of the calculation, which means that the interaction part is turned on and off infinitely slowly or adiabatically. 
 
-Any meaning calculation results should be free from $\epsilon$. 
+Any meaningful calculation results should be free from $\epsilon$. 
 
 Even when $\hat{H}_1$ is time-dependent in the Schr\"{o}dinger picture, Eqs. \eqref{2-1-5} \& \eqref{2-1-7} remain correct:
 
@@ -256,8 +256,8 @@ Even when $\hat{H}_1$ is time-dependent in the Schr\"{o}dinger picture, Eqs. \eq
 
 \begin{align}\label{2-2-2}
 \hat{U}_\epsilon(t,t_0)&=\sum_{n=0}^{+\infty}\left(\frac{-i}{\hbar}\right)^n\frac{1}{n!}\int_{t_0}^t dt_1 \cdots \int_{t_0}^t dt_n\times e^{-\epsilon(|t_1|+\cdots+|t_n|)}\times\\
-\nonumber&{\color{red}{T[\hat{H}_{(t_1)}\cdot\cdots\cdot\hat{H}_1(t_n)]}}\\
-\nonumber&\left(\text{which equals to\ }\sum_P\theta(t_{p(1)}-t_{p(2)})\cdot\theta(t_{p(2)}-t_{p(3)})\cdots\theta(t_{p(n-1)}-t_{p(n)}) \hat{H}_{(t_{p(1)})}\cdot\cdots\cdot\hat{H}_1(t_{p(n)})\right)
+\nonumber&{\color{red}{T[\hat{H}_1(t_1)\cdot\cdots\cdot\hat{H}_1(t_n)]}}\\
+\nonumber&\left(\text{which equals to\ }\sum_P\theta(t_{p(1)}-t_{p(2)})\cdot\theta(t_{p(2)}-t_{p(3)})\cdots\theta(t_{p(n-1)}-t_{p(n)}) \hat{H}_1(t_{p(1)})\cdot\cdots\cdot\hat{H}_1(t_{p(n)})\right)
 \end{align}
 
 
@@ -267,17 +267,17 @@ When ``$t_0$'' approaches - infinity, $\hat{H}$ become $\hat{H}_0$, the state ve
 
 \[|\Psi_S(t_0)\rangle = e^{-i E_0 t_0/\hbar}|\Phi_0\rangle \]
 
-where $|\Psi_0\rangle$ is time-independent stationary eigenstate of the unperturbed Hamiltonian
+where $|\Phi_0\rangle$ is time-independent stationary eigenstate of the unperturbed Hamiltonian
 
-\[|H_0|\Psi_0\rangle = E_0|\Phi_0\rangle\]
+\[H_0|\Phi_0\rangle = E_0|\Phi_0\rangle\]
 
-Then, corresponding state vector in the interaction becomes interaction becomes 
+Then, corresponding state vector in the interaction becomes 
 
 \[\lim_{t_0\to-\infty}|\Psi_I(t_0)\rangle = e^{i H_0t_0/\hbar}|\Psi_S(t_0)\rangle = |\Phi_0\rangle \]
 
 Using eq. (i), we obtain
 
-\[|\Psi_I(0)\rangle = U_\epsilon (0,-\infty)|\Psi_0\rangle \]
+\[|\Psi_I(0)\rangle = U_\epsilon (0,-\infty)|\Phi_0\rangle \]
 
 Gell-Mann and Low Theorem suggests that this state is an exact eigenstate of the interacting system. 
 
@@ -287,17 +287,17 @@ If this quantity exists to all orders in perturbation theory
 
 \[\lim_{\epsilon\to0}\frac{\hat{U}_\epsilon(0,-\infty)|\Phi_0\rangle}{\langle\Phi_0|\hat{U}_\epsilon(0,-\infty)|\Phi_0\rangle} \equiv \frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle} \]
 
-then, this state is a eigenstate of $H$
+then, this state is an eigenstate of $H$
 
 \begin{align}
 H\frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle} = E\frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle}
 \end{align}
 
-An essential point of the theorem is that the numerator and the denominator of this equation do not separately exists in the limit of $\epsilon\to0$. 
+An essential point of the theorem is that the numerator and the denominator of this equation do not separately exist in the limit of $\epsilon\to0$. 
 
 In this limit, the phase of the numerator diverges like $\epsilon^{-1}$ and the denominator also does so as to set off the infinite phase in the numerator. 
 
-Namely, the theorem stats that, if the ratio exists (does not contain any infinite phase), the eigenstate is well-defined and has the eigenvalue of the interacting system. 
+Namely, the theorem states that, if the ratio exists (does not contain any infinite phase), the eigenstate is well-defined and has the eigenvalue of the interacting system. 
 
 To prove this statement, consider first the expression
 
@@ -311,7 +311,7 @@ The associated commutator is given by this
 &\quad[H_0,\hat{H}_1(t_i)\cdot\hat{H}_1(t_j)\cdot\cdots\cdot\hat{H}_1(t_k)]\\
 &=[\hat{H}_0,\hat{H}_1(t_i)]\cdot\hat{H}_1(t_j)\cdot\cdots\cdot\hat{H}_1(t_k)\\
 &\ +\hat{H}_1(t_i)\cdot[\hat{H}_0,\hat{H}_1(t_j)]\cdot\cdots\cdot\hat{H}(t_k)\\
-&\ +\cdots+\hat{H}_1(t_1)hat{H}_1(t_j)\cdot\cdots\cdot[\hat{H}_0,\hat{H}_1(t_k)]
+&\ +\cdots+\hat{H}_1(t_i)\hat{H}_1(t_j)\cdot\cdots\cdot[\hat{H}_0,\hat{H}_1(t_k)]
 \end{split}\]
 
 since
@@ -325,7 +325,7 @@ we obtain
 for arbitrary time orderings. Thus, the right hand side of this eq. becomes
 
 \[\begin{split}
-(\hat{H}_0-E)|\Psi_0\rangle =& -\sum_{n=i}^{+\infty}\left(\frac{-i}{\hbar}\right)^{n-1}\frac{1}{n!}\times\int_{-\infty}^0 dt_1\cdots\int_{-\infty}^0 dt_n e^{\epsilon(t_1+\cdots+t_n)}\\
+(\hat{H}_0-E_0)|\Psi_0\rangle =& -\sum_{n=1}^{+\infty}\left(\frac{-i}{\hbar}\right)^{n-1}\frac{1}{n!}\times\int_{-\infty}^0 dt_1\cdots\int_{-\infty}^0 dt_n e^{\epsilon(t_1+\cdots+t_n)}\\
 &\sum_P\theta(t_{p(1)}-t_{p(2)})\cdot\theta(t_{p(2)}-t_{p(3)})\cdots\theta(t_{p(n-1)}-t_{p(n)})\\
 &\left(\sum_{j=1}^n\frac{\partial}{\partial t_j}\right) \left\{H_1(t_{p(1)})\cdot H_1(t_{p(2)})\cdot\cdots\cdot H_1(t_{p(n)})\right\} |\Psi_0\rangle
 \end{split}\]
@@ -346,7 +346,7 @@ we have
 \[(H_0-E_0)|\Psi_0(t)\rangle = -\sum_{n=1}^{+\infty}\left(\frac{-i}{\hbar}\right)^{n-1}\frac{1}{n!}\times\int_{-\infty}^0dt_1\cdots\int_{-\infty}^0dt_n e^{\epsilon(t_1+\cdots+t_n)}\times\underset{=n\displaystyle\frac{\partial}{\partial t_1}}{{\color{red}{\left(\sum_{j=1}^n\frac{\partial}{\partial t_j}\right)}}}
 \{T[H_1(t_1)\cdots H_1(t_n)]\}|\Phi_0\rangle \]
 
-since all the time derivative here make the same comtribution, I will replace this by $\partial/\partial t_1$ and multiply by a factor `$n$'. I further take the particl integral with respect to $t_1$. 
+since all the time derivatives here make the same contribution, I will replace this by $\partial/\partial t_1$ and multiply by a factor `$n$'. I further take the partial integral with respect to $t_1$. 
 
 The surface term gives
 
@@ -356,7 +356,7 @@ The surface term gives
 \end{split}\]
 
 
-To rewrite the second term in a compact form, let us assume that $\hat{H}_1$ is proportional to a coupling constant ``$g$'': $H_1\to gH_1$. Then the $n$-th order term in the integrant is rewritten in terms of a derivative of the coupling constant $g$. 
+To rewrite the second term in a compact form, let us assume that $\hat{H}_1$ is proportional to a coupling constant ``$g$'': $H_1\to gH_1$. Then the $n$-th order term in the integrand is rewritten in terms of a derivative of the coupling constant $g$. 
 
 \[\left(\frac{-i}{\hbar}\right)^{(n-1)}\frac{1}{(n-1)!}g^n=i\hbar g\frac{\partial}{\partial g}\left\{\left(\frac{-i}{\hbar}\right)^n\frac{1}{n!}g^n\right\} \]
 
@@ -375,7 +375,7 @@ Or equivalently
 
 \[(\hat{H}-E_0)|\Psi_0(\epsilon)\rangle = i\hbar\epsilon g\frac{\partial}{\partial g}|\Psi_0(\epsilon)\rangle \]
 
-Let us multiply this by $\displaystyle\frac{\langle\Phi_0|}{\langle\Phi_0|\|Psi_0(\epsilon)\rangle}$ from the left: 
+Let us multiply this by $\displaystyle\frac{\langle\Phi_0|}{\langle\Phi_0|\Psi_0(\epsilon)\rangle}$ from the left: 
 
 \[\frac{\langle\Phi_0|\hat{H}_1|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle} = i\hbar\epsilon g\frac{\partial}{\partial g}\ln\langle\Phi_0|\Psi_0(\epsilon)\rangle = \tilde{E}-E_0\equiv\Delta E \]
 
@@ -389,47 +389,47 @@ But, which is not the case.
 
 In fact, $\langle\Phi_0|\Psi_0(\epsilon)\rangle$ acquires an infinite phase proportional to $i\epsilon^{-1}$
 
-\[\langle\Phi_0|\|psi_0(\epsilon)\rangle = A e^{i\epsilon^{-1}\alpha} \]
+\[\langle\Phi_0|\Psi_0(\epsilon)\rangle = A e^{i\epsilon^{-1}\alpha} \]
 
-so that $\epsilon \ln \langle\Phi_0|\|psi_0(\epsilon)\rangle$ remain finite even if $\epsilon\to0$. 
+so that $\epsilon \ln \langle\Phi_0|\Psi_0(\epsilon)\rangle$ remains finite even if $\epsilon\to0$. 
 
 To set off this infinite phase acquired by $|\Psi_0(\epsilon)\rangle$, we consider
 
 \[
 \begin{split}
-(\hat{H}_0-\hat{E}_0)\frac{|\Psi_0(\epsilon\rangle)}{\langle\Phi_0|\Psi_0(\epsilon)\rangle} &= i\hbar\epsilon g\frac{\partial}{\partial g}\left\{\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle}\right\} - i\hbar\epsilon g\frac{|\Psi_0(\epsilon)\rangle\langle\Phi_0|\frac{\partial}{\partial g}|\Psi_0(\epsilon)\rangle}{[\langle\Phi_0|\Psi_0(\epsilon)\rangle]^2}\\
+(\hat{H}_0-\hat{E}_0)\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle} &= i\hbar\epsilon g\frac{\partial}{\partial g}\left\{\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle}\right\} - i\hbar\epsilon g\frac{|\Psi_0(\epsilon)\rangle\langle\Phi_0|\frac{\partial}{\partial g}|\Psi_0(\epsilon)\rangle}{[\langle\Phi_0|\Psi_0(\epsilon)\rangle]^2}\\
 &=i\hbar\epsilon g\frac{\partial}{\partial g}\left\{\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle}\right\} - {{\color{red}{i\hbar\epsilon g}}}\frac{|\Psi_0(\epsilon)\rangle}{[\langle\Phi_0|\Psi_0(\epsilon)\rangle]^2}{{\color{red}{\frac{\partial}{\partial g}\left[\text{ln} \langle\Phi_0|\Psi_0(\epsilon)\rangle\right]}}}\\
 &\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad{\text{the red part equals to}} \tilde{E}-E_0
 \end{split}
 \]
 
-\[(\hat{H}-\tilde{E})\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle}=i\hbar\epsilon g\frac{\partial}{\partial g}\left[\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi(\epsilon)\rangle}\right] \]
+\[(\hat{H}-\tilde{E})\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle}=i\hbar\epsilon g\frac{\partial}{\partial g}\left[\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle}\right] \]
 
 By the starting assumption of the Gell-Mann \& Low Theorem, this is finite to all orders in the perturbation expansion of $g$ in the limit of $\epsilon\to 0$. 
 
 We can thus take this to be zero, which proves the theorem
 
-\[(\hat{H}-\tilde{E})\lim_{\epsilon\to0}\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi-0(\epsilon)\rangle} = 0 \]
+\[(\hat{H}-\tilde{E})\lim_{\epsilon\to0}\frac{|\Psi_0(\epsilon)\rangle}{\langle\Phi_0|\Psi_0(\epsilon)\rangle} = 0 \]
 
 The proof so far can be also applicable to the other state, which you obtain by ``coming back'' from $t=+\infty$:
 
-\[\frac{\hat{U}_\epsilon(0,+\infty)|\Phi_0\rangle}{\langle\Phi_0|\hat{u}_\epsilon(0,+\infty)|\|phi_0\rangle} \]
+\[\frac{\hat{U}_\epsilon(0,+\infty)|\Phi_0\rangle}{\langle\Phi_0|\hat{u}_\epsilon(0,+\infty)|\Phi_0\rangle} \]
 
 where
 
-\[\hat{U}_\epsilon(0,+\infty)\overset{def}{\equiv}(\hat{u}_\epsilon(+\infty,0))^\dagger \equiv = \sum_{n=0}^{+\infty}\left(\frac{+i}{n}\right)^n\frac{1}{n!}\int_0^{+\infty}dt_1\cdots\int_0^{+\infty}dt_n e^{-\epsilon(t_1+\cdots+t_n)}[\hat{H}_1(t_1)\cdots\hat{H}_1(t_n)] \]
+\[\hat{U}_\epsilon(0,+\infty)\overset{def}{\equiv}(\hat{u}_\epsilon(+\infty,0))^\dagger \equiv \sum_{n=0}^{+\infty}\left(\frac{+i}{\hbar}\right)^n\frac{1}{n!}\int_0^{+\infty}dt_1\cdots\int_0^{+\infty}dt_n e^{-\epsilon(t_1+\cdots+t_n)}\tilde{T}[\hat{H}_1(t_1)\cdots\hat{H}_1(t_n)] \]
 
 Here $\tilde{T}$ means a time-ordering product in the opposite direction. 
 
 Namely, under this ordering, the operator containing the latest time appear to the right instead of the left
 
-\[\tilde{T}[H_1(t_)1\cdot H_1(t_2)\cdot\cdots\cdot H_1(t_n)] = \sum_p\theta(t_{p(1)}-t_{p(2)})\cdot\cdots\cdot\theta(t_{p(n-1)}-t_{p(n)})H_1(t_{p(n)})\cdot H_1(t_{p(n-1)})\cdot\cdots\cdot H_1(t_{p(1)}) \]
+\[\tilde{T}[H_1(t_1)\cdot H_1(t_2)\cdot\cdots\cdot H_1(t_n)] = \sum_p\theta(t_{p(1)}-t_{p(2)})\cdot\cdots\cdot\theta(t_{p(n-1)}-t_{p(n)})H_1(t_{p(n)})\cdot H_1(t_{p(n-1)})\cdot\cdots\cdot H_1(t_{p(1)}) \]
 
 %148
 
 Since in the limit of $t=+\infty$, the Hamiltonian reduces to a non-interacting one, we ``begin with'' the same ground state wave function of the non-interacting Hamiltonian $|\Phi_0\rangle$. 
 
-Proof of this is straight forward, so that I will leave this proof as a homework problem. \footnote{The scrath of the proof is at about page 148 of Shindou's handwriting notes; a brief summary is presenting here: 
+Proof of this is straight forward, so that I will leave this proof as a homework problem. \footnote{The scratch of the proof is at about page 148 of Shindou's handwriting notes; a brief summary is presented here: 
 \[(\hat{H}_0-E_0)\hat{u}_\epsilon(0,+\infty)|\Phi_0\rangle = [\hat{H}_0,\hat{U}_\epsilon(0,\infty)]|\Phi_0\rangle = \sum_{n=1}^{+\infty}\left(\frac{i}{\hbar}\right)^{n-1} \]}
 
 %150
@@ -447,7 +447,7 @@ But, if $|\Phi_0\rangle$ is the ground state of the non-interacting system, the 
 
 \section{Green's function}
 
-I next introduce the concept of a Green's function, which play a fundamental role in our treatment of many-particle systems.
+I next introduce the concept of a Green's function, which plays a fundamental role in our treatment of many-particle systems.
 
 The single particle Green's function is defined as
 \begin{equation}\label{2.3.1}
@@ -467,7 +467,7 @@ and $\hat \psi^{
 \end{equation}
 $\alpha \& \beta$ label the components of the field operators.
 
-For spin -1/2 fermion case, $\alpha \& \beta$ take two value $\uparrow \& \downarrow$ spin.
+For spin -1/2 fermion case, $\alpha \& \beta$ take two values $\uparrow \& \downarrow$ spin.
 
 For spin-zero boson case, the field operator is described by one-component field, so that you can remove these indices.
 
@@ -491,13 +491,13 @@ Namely, when the permutation p is accompanied by the even number of the intercha
 
 This general definition of the T-product agrees with that of eq.(2.1.7), because $\hat{H_1}$ always contains an even number of fermion fields.
 
-The green's function depends only of the time difference between t and t'
+The green's function depends only on the time difference between t and t'
 \begin{align}
 &\mathrm{i}G_{\alpha\beta}(x,t;x',t') \nonumber \\
 &=\theta(t-t')e^{\mathrm{i}E(t-t')/\hbar}\frac{\langle\Psi_0|\hat \psi_{\alpha}(x)e^{-\mathrm{i}\hat{H}(t-t')/\hbar}\hat \psi^{
 \dagger}_{\beta}(x')|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber \\
 &+\theta(t'-t)e^{-\mathrm{i}E(t-t')/\hbar}\frac{\langle\Psi_0|\hat \psi^{
-\dagger}_{\beta}(x')e^{-\mathrm{i}\hat{H}(t-t')/\hbar}\hat \psi_{\alpha}(x)|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber
+\dagger}_{\beta}(x')e^{-\mathrm{i}\hat{H}(t'-t)/\hbar}\hat \psi_{\alpha}(x)|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber
 \end{align}
 
 The single particle green function contains various information of the ground state.
@@ -521,16 +521,16 @@ The ground state expectation value of the operator density is given by
 \langle\hat{\mathcal{J}}(x)\rangle&=\frac{\langle\Psi_0|\hat{\mathcal{J}}(x)|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber \\
 &= \lim_{x'\rightarrow x}\sum_{\beta\alpha}J_{\beta\alpha}(x,\mathrm{i}\nabla_x)\frac{\langle\Psi_0|\hat \psi^{
 \dagger}_{\beta}(x')\hat \psi_{\alpha}(x)|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber \\
-&=\pm \mathrm{i} \lim_{t'\rightarrow t^+} \lim_{x'\rightarrow x}\sum_{\beta\alpha}J_{\beta\alpha}(x,\mathrm{i}\nabla_x)(-\mathrm{i})\frac{\langle\Psi_0|\mathrm{T}[\hat \psi^{
-\dagger}_{H,\alpha}(x,t)\hat \psi_{H,\beta} (x',t')]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber \\
+&=\pm \mathrm{i} \lim_{t'\rightarrow t^+} \lim_{x'\rightarrow x}\sum_{\beta\alpha}J_{\beta\alpha}(x,\mathrm{i}\nabla_x)(-\mathrm{i})\frac{\langle\Psi_0|\mathrm{T}[\hat \psi_{H,\alpha}(x,t)\hat \psi^{
+\dagger}_{H,\beta}(x',t')]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber \\
 &=\pm \mathrm{i} \lim_{t'\rightarrow t^+} \lim_{x'\rightarrow x}\sum_{\beta\alpha}J_{\beta\alpha}(x,\mathrm{i}\nabla_x)G_{\alpha\beta}(x,t;x',t') \nonumber \\
 &=\pm \mathrm{i} \lim_{t'\rightarrow t^+} \lim_{x'\rightarrow x} Tr[J_{\beta\alpha}(x,\mathrm{i}\nabla_x),G_{\alpha\beta}(x,t;x',t')] \nonumber
 \end{align}
 + for boson, - for fermion.
 
-Here the operator $[J_{\beta\alpha}(x,\mathrm{i}\nabla_x)$ must act on the green's function, before the limit $x'\rightarrow x$ is taken.
+Here the operator $J_{\beta\alpha}(x,\mathrm{i}\nabla_x)$ must act on the green's function, before the limit $x'\rightarrow x$ is taken.
 
-The symbol $t^+$ denotes a time infinitesimally latter than t, which ensures that $\psi^{\dagger}$ appears to the left of $\Psi$.
+The symbol $t^+$ denotes a time infinitesimally later than t, which ensures that $\psi^{\dagger}$ appears to the left of $\psi$.
 
 The trace denotes the sum over the indices $\alpha \& \beta$.
 
@@ -539,10 +539,10 @@ For example, the number density, the spin density and the total kinetic energy a
 \begin{align}
 \langle\hat{n}(x)\rangle&=\pm\mathrm{i}Tr[G(x,t;x,t^+)] \nonumber \\
 \langle\hat{\sigma}(x)\rangle&=\pm\mathrm{i}Tr[\sigma G(x,t;x,t^+)] \nonumber \\
-\langle\hat{T}(x)\rangle&=\pm\mathrm{i}\int \mathrm{d}^3x \lim_{x'\rightarrow x}-\frac{\hbar^2\nabla^2_x}{2m}Tr[\sigma G(x,t;x,t^+)]  \nonumber
+\langle\hat{T}(x)\rangle&=\pm\mathrm{i}\int \mathrm{d}^3x \lim_{x'\rightarrow x}-\frac{\hbar^2\nabla^2_x}{2m}Tr[G(x,t;x,t^+)]  \nonumber
 \end{align}
 
-To see how the ground  state energy  of the inter acting system can be given by the single-particle green's function,
+To see how the ground  state energy  of the interacting system can be given by the single-particle green's function,
 
 Let us consider the following Hamiltonian.
 
@@ -550,7 +550,7 @@ Let us consider the following Hamiltonian.
 \hat H=\sum_{\alpha}\int \mathrm{d}^3x \hat \psi^{\dagger}_{\alpha}T(x)\hat \psi_{\alpha}+\frac{1}{2}\sum_{\alpha,\alpha',\beta,\beta'}\int \mathrm{d}^3x\mathrm{d}^3x'\hat \psi^{\dagger}_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(x')V_{\alpha\alpha'\beta\beta'}(x,x')\hat \psi_{\beta'}(x')\hat \psi_{\alpha'}(x) 
 \end{align}
 
-To obtain the expectation value of this Hamiltonian, we take the time derivative of the Heinsenberg field operator.
+To obtain the expectation value of this Hamiltonian, we take the time derivative of the Heisenberg field operator.
 
 \begin{align}
 \mathrm{i}\hbar \frac{\partial}{\partial t} \psi_{H_{\alpha}}(x,t)=e^{\mathrm{i}\hat Ht/\hbar}[\psi_{\alpha}(x),\hat H]e^{-\mathrm{i}\hat Ht/\hbar} \nonumber
@@ -575,15 +575,15 @@ so that the right hand side is calculated as
 [\psi_{\alpha}(x),\hat H]&=T(x)\psi_{\alpha}(x)+\frac{1}{2}\sum_{\beta,\beta',\gamma,\gamma'}\int \mathrm{d}^3z\mathrm{d}^3z'
 \nonumber \\
 &\bigg{(}\{\psi_{\alpha}(x),
-\hat \psi^{\dagger}_{\beta}(z)\}\hat \psi^{\dagger}_{\gamma}(z')V_{\beta\beta'\gamma}(z,z')\hat \psi_{\gamma'}(z')\hat \psi_{\beta'}(z)\nonumber \\
-&-\hat \psi^{\dagger}_{\beta}(z)\{\hat \psi^{\dagger}_{\gamma}(z'),\psi_{\alpha}(x)\}V_{\beta\beta'\gamma}(z,z')\hat \psi_{\gamma'}(z')\hat \psi_{\beta'}(z) \bigg{)}\nonumber \\
+\hat \psi^{\dagger}_{\beta}(z)\}\hat \psi^{\dagger}_{\gamma}(z')V_{\beta\beta'\gamma\gamma'}(z,z')\hat \psi_{\gamma'}(z')\hat \psi_{\beta'}(z)\nonumber \\
+&-\hat \psi^{\dagger}_{\beta}(z)\{\hat \psi^{\dagger}_{\gamma}(z'),\psi_{\alpha}(x)\}V_{\beta\beta'\gamma\gamma'}(z,z')\hat \psi_{\gamma'}(z')\hat \psi_{\beta'}(z) \bigg{)}\nonumber \\
 &=T(x)\psi_{\alpha}(x)\nonumber \\
 &+\frac{1}{2}\sum_{\beta',\gamma,\gamma'}\int \mathrm{d}^3z'\hat \psi^{\dagger}_{\gamma}(z')V_{\alpha\beta'\gamma\gamma'}(x,z')\hat \psi_{\gamma'}(z')\hat \psi_{\beta'}(x) \nonumber\\
 &+\frac{1}{2}\sum_{\beta,\beta',\gamma'}\int \mathrm{d}^3z'\hat \psi^{\dagger}_{\beta}(z)V_{\beta\beta'\alpha\gamma'}(z,x)\hat \psi_{\gamma'}(x)\hat \psi_{\beta'}(z) \nonumber\\
 &=T(x)\psi_{\alpha}(x) \nonumber \\
 &+\sum_{\beta',\gamma,\gamma'}\int \mathrm{d}^3z'\hat \psi^{\dagger}_{\gamma}(z')V_{\alpha\beta'\gamma\gamma'}(x,z')\hat \psi_{\gamma'}(z')\hat \psi_{\beta'}(x) \nonumber
 \end{align}
-Accordingly, eq. of motion for the Heinsenberg field operator becomes like 
+Accordingly, eq. of motion for the Heisenberg field operator becomes like 
 \begin{align}
 &\ \ \ [\mathrm{i}\hbar\frac{\partial}{\partial t}-T(x)]\psi_{H,\alpha}(x,t)\nonumber \\
 &=\sum_{\beta',\gamma,\gamma'}\int \mathrm{d}^3z'\hat \psi^{\dagger}_{H,\gamma}(z',t)V_{\alpha\beta'\gamma\gamma'}(x,z')\hat \psi_{H,\gamma'}(z',t)\hat \psi_{H,\beta'}(x,t) \nonumber
@@ -591,7 +591,7 @@ Accordingly, eq. of motion for the Heinsenberg field operator becomes like
 Thus, we obtain 
 \begin{align}\label{2.3.4}
 &\ \ \ [\mathrm{i}\hbar\frac{\partial}{\partial t}-T(x)]\frac{\langle\Psi_0|\hat \psi^{
-\dagger}_{H,\alpha}(x',t')\hat \psi_{H,\alpha} (x,t)]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}\nonumber \\
+\dagger}_{H,\alpha}(x',t')\hat \psi_{H,\alpha} (x,t)|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}\nonumber \\
 &=\sum_{\beta',\gamma,\gamma'}\int \mathrm{d}^3z'\frac{\langle\Psi_0|
 \hat \psi^{\dagger}_{H,\alpha}(x',t')\hat \psi^{\dagger}_{H,\gamma}(z',t)V_{\alpha\beta'\gamma\gamma'}\hat\psi_{H,\gamma'}(z',t)\hat\psi_{H,\beta'}(x,t)
 |\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} 
@@ -615,7 +615,7 @@ while the left hand side
 \begin{align}
 (l.h.s)=\pm \mathrm{i} \int \mathrm{d}x \lim_{t' \rightarrow t^+} \lim_{x' \rightarrow x} [\mathrm{i}\hbar\frac{\partial}{\partial t}-T(x)] Tr[G(x,t;x',t')] \nonumber
 \end{align}
-Thus, eq.(2.3.4) dicates that 
+Thus, eq.(2.3.4) indicates that 
 \begin{align}
 \langle \hat V\rangle=\pm \mathrm{i}/2 \int \mathrm{d}x \lim_{t' \rightarrow t^+} \lim_{x' \rightarrow x} [\mathrm{i}\hbar\frac{\partial}{\partial t}-T(x)] Tr[G(x,t;x',t')] \nonumber
 \end{align}
@@ -639,7 +639,7 @@ H_0&=\int \mathrm{d}^3x \hat\psi^{\dagger}_{\lambda}(x)(-\frac{\hbar^2\nabla^2_x
 \begin{cases}
 \hat\psi_{\lambda}(x)=\frac{1}{\sqrt{V}}\sum_{k}e^{\mathrm{i}kx}\eta_{\lambda}a_{k,\lambda} \cr
 \hat\psi^{\dagger}_{\lambda}(x)=\frac{1}{\sqrt{V}}\sum_{k}e^{-\mathrm{i}kx}\eta_{\lambda}^{\dagger}a_{k,\lambda}^{\dagger}
-\end{cases}c\nonumber \\
+\end{cases}\nonumber \\
 &=\sum_{k,\lambda}\frac{\hbar^2k^2}{2m} a_{k,\lambda}^{\dagger}a_{k,\lambda} \nonumber \\
 &=\sum_{k,\lambda}\hbar\omega_{k} a_{k,\lambda}^{\dagger}a_{k,\lambda} \nonumber
 \end{align}
@@ -648,7 +648,7 @@ The ground state of the non-interacting Hamiltonian is given by filling fermions
 \begin{align}
 |\Phi_0\rangle \equiv \prod_{\lambda=\uparrow,\downarrow}\prod_{|k|<k_F} a^{\dagger}_{k,\lambda}|vac\rangle \nonumber
 \end{align}
-without the interacting  part, the time-dependence of the Heinsenberg field operator can be calculated as
+without the interacting  part, the time-dependence of the Heisenberg field operator can be calculated as
 \begin{align}
 \hat\psi^{\dagger}_{H,\lambda}(x,t)&=\frac{1}{\sqrt{V}}\sum_{k}e^{-\mathrm{i}kx}a_{H,k,\lambda}^{\dagger}\nonumber \\
 a_{H,k,\lambda}^{\dagger}(t)&=e^{\mathrm{i}\hat{H_0}t/\hbar}a_{k,\lambda}^{\dagger}e^{-\mathrm{i}\hat{H_0}t/\hbar}\nonumber \\
@@ -701,7 +701,7 @@ To verify this, consider first the case with $t>t'$. then you can put a contour 
 \begin{center}
 \includegraphics[width = 7cm]{P171.png}
 \end{center}
-Since the contour encompasses a pole at $\omega=-\mathrm{i}\eta$ in the clockwise way, the integral gives $-2\pi\mathrm{i}$ when $t<t'$, we can put a contour in the upper-half $\omega$-plane, so that the integral here vanishes in the limit of large $|\omega|$, This contour integral doesn't encompass any pole, so that the integral fives zero.
+Since the contour encompasses a pole at $\omega=-\mathrm{i}\eta$ in the clockwise way, the integral gives $-2\pi\mathrm{i}$ when $t<t'$, we can put a contour in the upper-half $\omega$-plane, so that the integral here vanishes in the limit of large $|\omega|$, This contour integral doesn't encompass any pole, so that the integral gives zero.
 
 %pic at P172
 \begin{center}
@@ -709,16 +709,16 @@ Since the contour encompasses a pole at $\omega=-\mathrm{i}\eta$ in the clockwis
 \end{center}
 Using this integral representation, the non-interacting fermion green's function can be further calculated as.  
 \begin{align}\label{2.3.6}
-G^0_{\alpha\beta}(x,t;x',t')&=\frac{1}{2\pi V}\sum_k \int_{-\infty}^{\infty} \mathrm{d}\omega e^{\mathrm{i}k(x-x')-\mathrm{i}\omega_{k}(t-t')} \nonumber \\
+G^0_{\alpha\beta}(x,t;x',t')&=\frac{1}{2\pi V}\sum_k \int_{-\infty}^{\infty} \mathrm{d}\omega e^{\mathrm{i}k(x-x')-\mathrm{i}\omega(t-t')} \nonumber \\
 & \times \delta_{\alpha\beta}[\frac{\theta(|k|-k_F)}{\omega-\omega_k+\mathrm{i}\eta}+\frac{\theta(k_F-|k|)}{\omega-\omega_k-\mathrm{i}\eta}] \nonumber \\
-&\equiv \frac{1}{2\pi V}\sum_k \int_{-\infty}^{\infty}\mathrm{d}\omega e^{\mathrm{i}k(x-x')-\mathrm{i}\omega_{k}(t-t')} G_{\alpha\beta}(k,\omega) \nonumber \\
+&\equiv \frac{1}{2\pi V}\sum_k \int_{-\infty}^{\infty}\mathrm{d}\omega e^{\mathrm{i}k(x-x')-\mathrm{i}\omega(t-t')} G_{\alpha\beta}(k,\omega) \nonumber \\
 G_{\alpha\beta}(k,\omega)&\equiv \delta_{\alpha\beta}[\frac{\theta(|k|-k_F)}{\omega-\omega_k+\mathrm{i}\eta}+\frac{\theta(k_F-|k|)}{\omega-\omega_k-\mathrm{i}\eta}] 
 \end{align}
 
 To demonstrate how the green's function gives information about the excitation spectrum of the system, let us insert a complete set of eigenstates of H between the two field operators.
 \begin{align}\label{2.3.7}
-\mathrm{i}G^0_{\alpha\beta}(x,t;x',t')&=\frac{\langle\Psi_0|\mathrm{T}[\hat \psi^{
-\dagger}_{H,\alpha}(x,t)\hat \psi_{H,\beta} (x',t')]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber \\
+\mathrm{i}G_{\alpha\beta}(x,t;x',t')&=\frac{\langle\Psi_0|\mathrm{T}[\hat \psi_{H,\alpha}(x,t)\hat \psi^{
+\dagger}_{H,\beta}(x',t')]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle} \nonumber \\
 &=\theta(t-t')\langle\Psi_0|\hat \psi_{H,\alpha}(x,t)\hat{I}\hat \psi^{
 \dagger}_{H,\beta} (x',t')|\Psi_0\rangle \nonumber \\
 & \ \ \ -\theta(t'-t)\langle\Psi_0|\hat \psi^{
@@ -734,22 +734,22 @@ Here we assume that the g.s. wave function $|\Psi_0\rangle$ is normalized. And w
 By making the time dependence explicit, we can further calculate this as follows
 
 \begin{align}
-&=\sum_n\{\theta(t-t')e^{-\mathrm{i}(E_n-E)(t)/\hbar}\langle\Psi_0|\hat \psi_{\alpha}(x)|\Psi_n\rangle\times\langle\Psi_n|\hat \psi^{
+&=\sum_n\{\theta(t-t')e^{-\mathrm{i}(E_n-E)(t-t')/\hbar}\langle\Psi_0|\hat \psi_{\alpha}(x)|\Psi_n\rangle\times\langle\Psi_n|\hat \psi^{
 \dagger}_{\beta} (x')|\Psi_0\rangle \nonumber \\
 & \ \ \ -\theta(t'-t)e^{\mathrm{i}(E_n-E)(t-t')/\hbar}\langle\Psi_0|\hat \psi^{
 \dagger}_{\beta}(x')|\Psi_n\rangle\times\langle\Psi_n|\hat \psi_{\alpha} (x)|\Psi_0\rangle\} \nonumber
 \end{align}
-Note that the states $|\Psi_n\rangle$ here contains N+1 particles if $|\Psi_0\rangle$ contain N particles, while $|\Psi_n\rangle$ here contain N-1 particles.
+Note that the states $|\Psi_n\rangle$ here contain N+1 particles if $|\Psi_0\rangle$ contains N particles, while $|\Psi_n\rangle$ here contains N-1 particles.
 
 Now let us assume that the system considered has a translational invariance.
 
-The translational invariance means that the Hamiltonian commute with the total momentum operator $\hat{P}$
+The translational invariance means that the Hamiltonian commutes with the total momentum operator $\hat{P}$
 \begin{equation}
 [\hat{H},\hat{P}]=0\label{2.3.8}
 \end{equation}
 Where the total momentum operator $\hat{P}$ was already defined in eq(1.4.11) with boson case. But, at this time they are fermion fields.
 \begin{equation}
-\hat{P}\equiv \sum_{k,\lambda} \hbar k a^k_{k,\lambda} a_{k,\lambda} \nonumber
+\hat{P}\equiv \sum_{k,\lambda} \hbar k a^{\dagger}_{k,\lambda} a_{k,\lambda} \nonumber
 \end{equation}
 
 Irrespective of this difference, this operator is a generator of the translation.
@@ -768,9 +768,9 @@ When we use eq.\eqref{2.3.3} for $\hat{H}$, this identity means.
 
 \begin{align}
 &\sum_{\alpha}\int \mathrm{d}^3x \hat{\psi^{\dagger}_{\alpha}}(x+y)T(x)\hat{\psi_{\alpha}}(x+y)\nonumber \\
-&+\frac{1}{2}\sum_{\alpha,\alpha',\beta,\beta'}\int\mathrm{d}^3x\int\mathrm{d}^3x'\psi^{\dagger}_{\alpha}(x+y)\psi^{\dagger}_{\beta}(x'+y)V_{\alpha\alpha',\beta\beta'}(x,x')\psi^{\dagger}_{\beta'}(x'+y)\psi^{\dagger}_{\alpha}(x+y) \nonumber \\
+&+\frac{1}{2}\sum_{\alpha,\alpha',\beta,\beta'}\int\mathrm{d}^3x\int\mathrm{d}^3x'\psi^{\dagger}_{\alpha}(x+y)\psi^{\dagger}_{\beta}(x'+y)V_{\alpha\alpha',\beta\beta'}(x,x')\psi_{\beta'}(x'+y)\psi_{\alpha'}(x+y) \nonumber \\
 &=\sum_{\alpha}\int \mathrm{d}^3x \hat{\psi^{\dagger}_{\alpha}}(x)T(x)\hat{\psi_{\alpha}}(x)\nonumber \\
-&+\frac{1}{2}\sum_{\alpha,\alpha',\beta,\beta'}\int\mathrm{d}^3x\int\mathrm{d}^3x'\psi^{\dagger}_{\alpha}(x)\psi^{\dagger}_{\beta}(x')V_{\alpha\alpha',\beta\beta'}(x,x')\psi^{\dagger}_{\beta'}(x')\psi^{\dagger}_{\alpha}(x) \nonumber
+&+\frac{1}{2}\sum_{\alpha,\alpha',\beta,\beta'}\int\mathrm{d}^3x\int\mathrm{d}^3x'\psi^{\dagger}_{\alpha}(x)\psi^{\dagger}_{\beta}(x')V_{\alpha\alpha',\beta\beta'}(x,x')\psi_{\beta'}(x')\psi_{\alpha'}(x) \nonumber
 \end{align}
 which clearly represents the translation invariance of the system.
 
@@ -782,7 +782,7 @@ for any y.
 
 which gives us eq.\eqref{2.3.8}
 
-Now that the Hamiltonian commute with the total momentum operator, any eigenstate of $\hat{H}$ should be also eigenstate of $\hat{P}$.
+Now that the Hamiltonian commutes with the total momentum operator, any eigenstate of $\hat{H}$ should be also eigenstate of $\hat{P}$.
 
 \begin{equation}\label{2.3.11}
 \hat{P}|\Psi_n\rangle=P_n|\Psi_n\rangle
@@ -790,10 +790,10 @@ Now that the Hamiltonian commute with the total momentum operator, any eigenstat
 
 Then, using eq.\eqref{2.3.9} \& eq.\eqref{2.3.11}, we can also extract the x-dependence of eq.\eqref{2.3.7}
 \begin{align}
-&\mathrm{i}G^0_{\alpha\beta}(x,t;x',t') \nonumber \\
-&=\sum_n\bigg [\theta(t-t')e^{-\mathrm{i}(E_n-E)(t)/\hbar}e^{\mathrm{i}\hat{P_n}(x-x')/\hbar}\langle\Psi_0|\hat \psi_{\alpha}(0)|\Psi_n\rangle\times\langle\Psi_n|\hat \psi^{
+&\mathrm{i}G_{\alpha\beta}(x,t;x',t') \nonumber \\
+&=\sum_n\bigg [\theta(t-t')e^{-\mathrm{i}(E_n-E)(t-t')/\hbar}e^{\mathrm{i}\hat{P_n}(x-x')/\hbar}\langle\Psi_0|\hat \psi_{\alpha}(0)|\Psi_n\rangle\times\langle\Psi_n|\hat \psi^{
 \dagger}_{\beta} (0)|\Psi_0\rangle \nonumber \\
-& \ \ \ -\theta(t'-t)e^{\mathrm{i}(E_n-E)(t-t')/\hbar}e^{-\mathrm{i}\hat{P_n}(x-x')}\langle\Psi_0|\hat \psi^{
+& \ \ \ -\theta(t'-t)e^{\mathrm{i}(E_n-E)(t-t')/\hbar}e^{-\mathrm{i}\hat{P_n}(x-x')/\hbar}\langle\Psi_0|\hat \psi^{
 \dagger}_{\beta}(0)|\Psi_n\rangle\times\langle\Psi_n|\hat \psi_{\alpha} (0)|\Psi_0\rangle \bigg ] \nonumber
 \end{align}
 Here we assume that the ground state wave function has zero total momentum.
@@ -805,7 +805,7 @@ which is usually the case.
 
 Then the Fourier transform of the green's function is given by
 \begin{align}
-G_{\alpha\beta}(k,\omega)&\equiv\int \mathrm{d}^3(x-x')\int \mathrm{d}^3(t-t')e^{-\mathrm{i}k(x-x')+\mathrm{i}\omega(t-t')}G_{\alpha\beta}(x,t;x',t') \nonumber \\
+G_{\alpha\beta}(k,\omega)&\equiv\int \mathrm{d}^3(x-x')\int \mathrm{d}(t-t')e^{-\mathrm{i}k(x-x')+\mathrm{i}\omega(t-t')}G_{\alpha\beta}(x,t;x',t') \nonumber \\
 &=V\sum_n \delta_{k,\hat P_n/\hbar} \frac{\langle\Psi_0|\hat \psi_{\alpha}(0)|\Psi_n\rangle\times\langle\Psi_n|\hat \psi^{
 \dagger}_{\beta} (0)|\Psi_0\rangle}{\omega-(E_n-E)/\hbar +\mathrm{i}\eta}  \nonumber \\
 &+V\sum_n \delta_{k,-\hat P_n/\hbar} \frac{\langle\Psi_0|\hat \psi^{
@@ -834,10 +834,10 @@ Similarly, the denominator of the second term can be rewritten as
 &=\omega-\mu/\hbar+\epsilon_n(N-1)/\hbar \nonumber
 \end{align}
 
-Where, in the thermodynamics limit the difference between the former chemical potential and the latter one is negligible.
+Where, in the thermodynamic limit the difference between the former chemical potential and the latter one is negligible.
 \begin{align}
 E(N+1)-E(N)-(E(n)-E(n-1))=O(N^{-1}) \nonumber \\
-\bigg ( Ve(n+\frac{1}{V}) = Ve(n)+ V\frac{\partial e}{\partial n}\frac{1}{V} + \frac{1}{2} \frac{\partial^2 e}{\partial n^2} (\frac{1}{V})^2 \bigg) \nonumber
+\bigg ( Ve(n+\frac{1}{V}) = Ve(n)+ V\frac{\partial e}{\partial n}\frac{1}{V} + \frac{1}{2} V\frac{\partial^2 e}{\partial n^2} (\frac{1}{V})^2 \bigg) \nonumber
 \end{align}
 
 Using these two, we now obtain 
@@ -860,23 +860,23 @@ The lehmann rep. exhibits the $\omega$-dependence of the exact green's function 
 
 The function $G(k,\omega)$ is a meromorphic function of $\omega$, with simple poles at the exact excitation energy of the interacting system corresponding to a momentum $\hbar k$.
 
-For frequencies below $\mu/\hbar$, these singularities lies slightly above the real axis and for frequencies above $\mu/\hbar$, these singularities  lies slightly below the real axis.
+For frequencies below $\mu/\hbar$, these singularities lie slightly above the real axis and for frequencies above $\mu/\hbar$, these singularities  lies slightly below the real axis.
 
 %pic at P184
 \begin{center}
 \includegraphics[width = 10cm]{P184.png}
 \end{center}
-In this way, the singularities if the green's function yield the energies of those excited states for which the numerator ($\langle n,k|\hat \psi^{
+In this way, the singularities of the green's function yield the energies of those excited states for which the numerator ($\langle n,k|\hat \psi^{
 \dagger}_{\beta} (0)|\Psi_0\rangle$ or $\langle n,-k|\hat \psi_{\alpha}(0)|\Psi_0\rangle$) does not vanish. 
 
-For the non-interacting system, this representation reproduce eq.eq.\eqref{2.3.6}.
+For the non-interacting system, this representation reproduces eq.\eqref{2.3.6}.
 
 \begin{equation}
 G^0(k,\omega)=\frac{\theta(k-k_F)}{\omega-\omega_k+\mathrm{i}\eta}+\frac{\theta(k_F-k)}{\omega-\omega_k-\mathrm{i}\eta} \nonumber
 \end{equation} 
 with $\omega_k=\frac{\hbar^2k^2}{2m}$
 
-Namely, for the non-interacting system, the field operator connects only one state to the ground state, so that $G^0(k,\omega)$ has only a single pole, slightly below the real axis at $\hbar \omega=\frac{\hbar^2k^2}{2m}$ if $k>k_F$ and slightly above the real axis at the same value of $\hbar \omega$ of $k<k_F$.
+Namely, for the non-interacting system, the field operator connects only one state to the ground state, so that $G^0(k,\omega)$ has only a single pole, slightly below the real axis at $\hbar \omega=\frac{\hbar^2k^2}{2m}$ if $k>k_F$ and slightly above the real axis at the same value of $\hbar \omega$ if $k<k_F$.
 
 
 % pic at P185
@@ -886,7 +886,7 @@ Namely, for the non-interacting system, the field operator connects only one sta
 
 The green's function is analytic in neither the upper $\omega$-plane nor the lower $\omega$-plane.
 
-We define a new pair of function, known as retard and advance green's functions.
+We define a new pair of functions, known as retard and advance green's functions.
 \begin{align}\label{2.3.13}
 \mathrm{i}G^R_{\alpha\beta}(x,t;x',t')=\langle \Psi_0|\{\hat \psi_{H,\alpha}(x,t),\psi^{\dagger}_{H,\beta}(x',t')\}|\Psi_0\rangle\theta(t-t')
 \end{align}
@@ -915,7 +915,7 @@ So far, we define the single-particle green's function and show its relation to 
 
 To evaluate the green's function for nontrivial physical systems, we use perturbation theory.
 
-This procedure is mostly carried out in the interacting picture, instead of the Heinsenberg picture.
+This procedure is mostly carried out in the interacting picture, instead of the Heisenberg picture.
 
 Let me first prove a basic Theorem that relates the matrix elements of Heisenberg operators to the matrix elements of the corresponding interaction operators.
 
@@ -934,8 +934,8 @@ The proof is as follows.
 According to the Gell-Mann \& Low Theorem, $|\Psi_0\rangle$ can be given by
 
 \begin{align}
-\frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle}&=\frac{\hat{U_{\epsilon}}(+\infty,0)|\Psi_0\rangle}{\langle\Phi_0|\hat U_{\epsilon}(+\infty,0)|\Psi_0\rangle} \nonumber \\
-&=\frac{\hat{U_{\epsilon}}(0,-\infty)|\Psi_0\rangle}{\langle\Phi_0|\hat U_{\epsilon}(0,-\infty)|\Psi_0\rangle} \nonumber
+\frac{|\Psi_0\rangle}{\langle\Phi_0|\Psi_0\rangle}&=\frac{\hat{U_{\epsilon}}(+\infty,0)|\Phi_0\rangle}{\langle\Phi_0|\hat U_{\epsilon}(+\infty,0)|\Phi_0\rangle} \nonumber \\
+&=\frac{\hat{U_{\epsilon}}(0,-\infty)|\Phi_0\rangle}{\langle\Phi_0|\hat U_{\epsilon}(0,-\infty)|\Phi_0\rangle} \nonumber
 \end{align}
 
 By taking an inner product between these two, we can calculate this part
@@ -968,7 +968,7 @@ The numerator  of the r.h.s is given as
 
 On the one hand, the numerator of eq.\eqref{2.4.1} can be rewritten as follows.
 
-Firstly, suppose that we divide  $\nu$-numbers of $\hat{H_1}$ into n-numbers of $\hat{H_1}$ whose times one greater than 't' and ($\nu$-n)-numbers of $\hat{H_1}$ whose times are less than 't',
+Firstly, suppose that we divide  $\nu$-numbers of $\hat{H_1}$ into n-numbers of $\hat{H_1}$ whose times are greater than 't' and ($\nu$-n)-numbers of $\hat{H_1}$ whose times are less than 't',
 \begin{align}
 =\sum_{\nu=0}^{\infty}(\frac{-\mathrm{i}}{\hbar})^{\nu} \frac{1}{\nu!} \sum_{n=0}^{\nu}\frac{\nu!}{n!(\nu-n)!}e^{-\epsilon(|t_1|+...+|t_{\nu}|)} \int_{t}^{+\infty}\mathrm{d}t_1...\int_{t}^{+\infty}\mathrm{d}t_{n} 
 \int_{-\infty}^{t}\mathrm{d}t_{n+1}...\int_{-\infty}^{t}\mathrm{d}t_{\nu} \nonumber \\
@@ -981,7 +981,7 @@ Thus, once we choose $t_1,t_2,...,t_n$ to be greater than t while the  remaining
 
 Since 
 \begin{equation}
-\sum_{\nu=0}^{+\infty}\sum_{n=0}^{\nu} f_{n,\nu}=\sum_{m=0}^{+\infty}\sum_{n=0}^{\nu} f_{n,m+n} \nonumber
+\sum_{\nu=0}^{+\infty}\sum_{n=0}^{\nu} f_{n,\nu}=\sum_{m=0}^{+\infty}\sum_{n=0}^{+\infty} f_{n,m+n} \nonumber
 \end{equation}
 %pic at194
 \begin{center}
@@ -992,12 +992,12 @@ So that
 =&\sum_{m=0}^{+\infty}\frac{1}{m!}(\frac{-\mathrm{i}}{\hbar})^m\sum_{n=0}^{+\infty} \frac{1}{n!}(\frac{-\mathrm{i}}{\hbar})^ne^{-\epsilon(|t_1|+...+|t_{m+n}|)} \nonumber \\
 &\int_{t}^{+\infty}\mathrm{d}t_1...\int_{t}^{+\infty}\mathrm{d}t_n\int_{-\infty}^{t}\mathrm{d}t_{n+1}...\int_{-\infty}^{t}\mathrm{d}t_{n+m} \nonumber \\
 &\mathrm{T}[\hat{H_1}(t_1)...\hat{H_1}(t_n)]\hat{O_I}(t)\mathrm{T}[\hat{H_1}(t_{n+1})...\hat{H_1}(t_{n+m})] \nonumber \\
-=& \hat U_{\epsilon}(-\infty,t)\hat{O_I}(t)\hat U_{\epsilon}(t,-\infty) \nonumber
+=& \hat U_{\epsilon}(+\infty,t)\hat{O_I}(t)\hat U_{\epsilon}(t,-\infty) \nonumber
 \end{align}
 
 This proves eq.\eqref{2.4.1}
 
-In a similar way, we can show that  the expectation value of time-ordered Heinsenberg operator can be expressed in terms of the interaction picture.
+In a similar way, we can show that  the expectation value of time-ordered Heisenberg operator can be expressed in terms of the interaction picture.
 \begin{align}\label{2.4.3}
 \frac{\langle\Psi_0|\mathrm{T}[\hat{O_H}(t)\hat{O_H}(t')]|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}=&\frac{1}{\langle\Phi_0|\hat{S}|\Phi_0\rangle}\times\langle\Phi_0|\sum_{\nu=0}^{\infty}(\frac{-\mathrm{i}}{\hbar})^{\nu} \frac{1}{\nu!} \int_{-\infty}^{+\infty}\mathrm{d}t_1......\int_{-\infty}^{+\infty}\mathrm{d}t_{\nu}e^{-\epsilon(|t_1|+...+|t_{\nu}|)} \nonumber\\
 &\times \mathrm{T}[\hat{H_1}(t_1)...\hat{H_1}(t_{\nu})\hat{O_I}(t)\hat{O_I}(t')]|\Phi_0\rangle
@@ -1017,7 +1017,7 @@ So that, we can employ the same cancellation between D which comes from the nume
 \begin{align}
 \frac{\langle\Psi_0|\hat{O_H}(t)\hat{O_H}(t')|\Psi_0\rangle}{\langle\Psi_0|\Psi_0\rangle}=\frac{\langle\Phi_0|\hat{U_{\epsilon}}(+\infty,t)\hat{O_I}(t)\hat{U_{\epsilon}}(t,t')\hat{O_I}(t')\hat{U_{\epsilon}}(t',-\infty)|\Phi_0\rangle}{\langle\Phi_0|\hat{U_{\epsilon}}(+\infty,-\infty)|\Phi_0\rangle}\nonumber
 \end{align}
-for $t'>t$
+for $t>t'$
 
 On the one hand, the numerator of the r.h.s of eq.\eqref{2.4.3} can be calculated as
 \begin{align}
@@ -1045,7 +1045,7 @@ while the 2nd term reduces to
 \end{align}
 which proves eq.\eqref{2.4.3}
 
-These two formula are among the most useful results of quantum field theory.
+These two formulas are among the most useful results of quantum field theory.
 
 
 Armed with these formulas, let us consider the  single-particle green's function, which is now given in the interaction picture.
@@ -1054,7 +1054,7 @@ Armed with these formulas, let us consider the  single-particle green's function
 \frac{\langle\Phi_0|\mathrm{T[\hat H_1(t_1)...\hat H_1(t_{\nu})\hat \Psi_{I,\alpha}(x)\Psi^{\dagger}_{I,\beta}(x')]}
 |\Phi_0\rangle}{\langle\Phi_0|\hat{U_{\epsilon}}(+\infty,-\infty)|\Phi_0\rangle}
 \end{align}
-where $x\ \&\ x'$ here denotes space and temporal coordinate.$x\equiv(x,t),x\equiv (x',t')$
+where $x\ \&\ x'$ here denotes space and temporal coordinate.$x\equiv(x,t),x'\equiv (x',t')$
 \begin{align}
 \Psi_{I,\alpha}(x)&\equiv\Psi_{I,\alpha}(x,t) \nonumber \\
 &=e^{\mathrm{i}\hat{H_0}t/\hbar}\Psi_{\alpha}(x)e^{-\mathrm{i}\hat{H_0}t/\hbar} \nonumber
@@ -1066,16 +1066,16 @@ For Hamiltonian defined in eq.\eqref{2.3.3}, the numerator of this eq. becomes a
 numerator of eq.\eqref{2.4.4}
 \begin{align}\label{2.4.5}
 & numerator of eq.\eqref{2.4.4} \nonumber \\
-=&\langle \Phi_0|\mathrm{T}[\hat \psi_{\alpha }(x)\hat \psi_{\beta }^{\dagger}(x')]|\Phi\rangle \nonumber \\
+=&\langle \Phi_0|\mathrm{T}[\hat \psi_{\alpha }(x)\hat \psi_{\beta }^{\dagger}(x')]|\Phi_0\rangle \nonumber \\
 &+(\frac{-\mathrm{i}}{\hbar})\sum_{\lambda,\lambda',\mu,\mu'}\frac{1}{2}\int_{-\infty}^{+\infty}\mathrm{d}t_1\int\mathrm{d}^3x_1\int\mathrm{d}^3x_1' \nonumber \\
 &\times U_{\lambda\lambda',\mu\mu'}(x_1,x_1')\times \nonumber\\
-&\Phi_0|\mathrm{T}[\hat \psi_{I,\lambda}^{\dagger}(x_1,t_1)\hat \psi_{I,\mu}^{\dagger}(x_1',t_1)\hat \psi_{I,\mu' }(x_1',t_1) \nonumber \\
-&\ \ \ \hat \psi_{I,\lambda' }(x_1,t_1)\hat \psi_{I,\alpha}(x,t)\hat \psi^{\dagger}_{I,\beta }(x',t)]|\Phi\rangle \nonumber \\
+&\langle\Phi_0|\mathrm{T}[\hat \psi_{I,\lambda}^{\dagger}(x_1,t_1)\hat \psi_{I,\mu}^{\dagger}(x_1',t_1)\hat \psi_{I,\mu' }(x_1',t_1) \nonumber \\
+&\ \ \ \hat \psi_{I,\lambda' }(x_1,t_1)\hat \psi_{I,\alpha}(x,t)\hat \psi^{\dagger}_{I,\beta }(x',t)]|\Phi_0\rangle \nonumber \\
 &\ \ \ \ \ +......
 \end{align}
 This expression shows that, we must evaluate the expectation value in the non-interacting ground state of T-products of creation \& destruction operators of the form:
 \begin{align}
-\Phi_0|\mathrm{T}[\hat \psi_{I}^{\dagger}......\hat \psi_{I}\hat \psi_{I,\alpha}(x)\hat \psi^{\dagger}_{I,\beta }(x')]|\Phi\rangle \nonumber 
+\langle\Phi_0|\mathrm{T}[\hat \psi_{I}^{\dagger}......\hat \psi_{I}\hat \psi_{I,\alpha}(x)\hat \psi^{\dagger}_{I,\beta }(x')]|\Phi_0\rangle \nonumber 
 \end{align}
 To evaluate this form of quantities, we will rely on so-called Wick's theorem, which I will explain next.
 
@@ -1097,7 +1097,7 @@ Note also that any two pairs of destruction operators thus defined commute or an
 \end{align} 
 + for fermion case, - for boson case.
 
-Similarly, we can see that any two pairs of creation part commute of anticommute with each other.
+Similarly, we can see that any two pairs of creation part commute or anticommute with each other.
 \begin{align}
 &\{\hat \psi^{(-)}(x),\hat \psi^{(-)}(y)\}_{\pm}=\{\hat \psi^{(-)}(x),\hat \psi^{(+)\dagger}(y)\}_{\pm} \nonumber \\
 =&\{\hat \psi^{(+)\dagger}(x),\hat \psi^{(+)\dagger}(y)\}_{\pm}=0 \nonumber 
@@ -1106,27 +1106,27 @@ Similarly, we can see that any two pairs of creation part commute of anticommute
 Correspondingly, we have
 \begin{align}
 \hat \psi^{\dagger}_{I}(x)=\hat \psi^{(+)\dagger}_{I}(x)&+\hat \psi^{(-)\dagger}_{I}(x) \nonumber \\
-\hat \psi^{(-)}_{I}(x)|\Phi_0\rangle&=0 \nonumber
+\hat \psi^{(-)\dagger}_{I}(x)|\Phi_0\rangle&=0 \nonumber
 \end{align}
 Where we take the adjoint of this, so as to obtain this.
 
 As an explicit example of this decomposition, consider the free fermion field given in eq. H
 \begin{align}
-\hat \psi_I(x)=\frac{1}{\sqrt{V}}\sum_{k>k_F} e^{\mathrm{i}(kx-\mathrm{i}\omega_kt)}a_k+\frac{1}{\sqrt{V}}\sum_{k<k_F} e^{\mathrm{i}(kx-\mathrm{i}\omega_kt)}a_k \nonumber
+\hat \psi_I(x)=\frac{1}{\sqrt{V}}\sum_{k>k_F} e^{\mathrm{i}(kx-\omega_kt)}a_k+\frac{1}{\sqrt{V}}\sum_{k<k_F} e^{\mathrm{i}(kx-\omega_kt)}a_k \nonumber
 \end{align}
 Where I have omitted the spin index
 
-This satisfies $\hat \phi^{(-)}(x)|\Phi_0\rangle=\hat \phi ^{(+)}|\Phi_0\rangle=0$, because $|\Phi_0\rangle$ is a Fermi sea state with fermions being occupied up to the fermi level.
+This satisfies $\hat \psi^{(-)\dagger}(x)|\Phi_0\rangle=\hat \psi ^{(+)}(x)|\Phi_0\rangle=0$, because $|\Phi_0\rangle$ is a Fermi sea state with fermions being occupied up to the fermi level.
 
-$\circledcirc$ As was already defined in eq.\eqref{2.3.2}, time-order products orders the field operators with the latest time om the left
+$\circledcirc$ As was already defined in eq.\eqref{2.3.2}, time-order products orders the field operators with the latest time on the left
 \begin{align}
 \mathrm{T}(\hat{A}\hat{B}\hat{C}\hat{D}...)=(-1)^P\hat{B}\hat{D}\hat{C}\hat{A}... \nonumber
 \end{align}
 with $t_B>t_D>t_C>t_A>...$
 
-Where this factor become +1 if the time ordering is accompanied by the even numbers of interchange of the fermion field.
+Where this factor becomes +1 if the time ordering is accompanied by the even numbers of interchange of the fermion field.
 
-while this factor become -1 if the time ordering is accompanied by the odd numbers of interchange of the fermion field.
+while this factor becomes -1 if the time ordering is accompanied by the odd numbers of interchange of the fermion field.
 
 For boson case, this is always +1.
 
@@ -1137,7 +1137,7 @@ $\circledcirc$ The other important operator product is the "normal ordering", in
  \begin{center}
 \includegraphics[width = 12cm]{P209.png}
 \end{center}
-Here the destruction operators means a destruction part of field operator which annihilates the non-interacting groundstate. while the creation operator means a creation part which does not.
+Here the destruction operators mean a destruction part of field operator which annihilates the non-interacting groundstate. while the creation operator means a creation part which does not.
 
 Because any two pairs of destruction parts commute or anticommute with each other and also because that is the case for creation parts, the r.h.s of this is uniquely defined.
 
@@ -1158,8 +1158,8 @@ Here I have omitted the subscript 'I'. I will do so in the remaining part of tod
 A normal order product is very useful, because its expectation value in the non-interacting ground state $|\Phi_0\rangle$ always vanishes.
 
 \begin{align}
-&\langle\Psi_0|\mathrm{N}(\hat{A}\hat{B}\hat{C}\hat{D}...)|\Psi_0\rangle \nonumber \\
-=&(-1)^P\langle\Psi_0|\mathrm{N}(\hat{C}\hat{D}...||...\hat{A}\hat{B})|\Psi_0\rangle=0 \nonumber
+&\langle\Phi_0|\mathrm{N}(\hat{A}\hat{B}\hat{C}\hat{D}...)|\Phi_0\rangle \nonumber \\
+=&(-1)^P\langle\Phi_0|\mathrm{N}(\hat{C}\hat{D}...||...\hat{A}\hat{B})|\Phi_0\rangle=0 \nonumber
 \end{align}
 Using this useful feature, we will evaluate the ground-state expectation value of a T product of operators, by reducing the T product into the corresponding Normal ordered product.
 
@@ -1173,7 +1173,7 @@ Note also that the normal ordering product has a distributive feature
 $\circledcirc$ The third item I want to define before describing Wick's theorem is "contractions". 
 
 
-The contraction are defined between two fermion fields and is equal to the difference between their T-product and their N-product.
+The contraction is defined between two fermion fields and is equal to the difference between their T-product and their N-product.
 
 \begin{align}
 \hat{U^{\cdot}}\hat{V^{\cdot}} \equiv \mathrm{T}(\hat{U}\hat{V})-\mathrm{N}(\hat{U}\hat{V}) \nonumber
@@ -1217,7 +1217,7 @@ first term can be calculated as
 \end{align}
 which remains finite only when $t>t'$.
 
-Moreover the r.h.s is just a c-number instead of operator, because this is a commutator of anticommutator of two field operators in interaction picture.
+Moreover the r.h.s is just a c-number instead of operator, because this is a commutator or anticommutator of two field operators in interaction picture.
 
 By taking the expectation value of this eq. with respect to the non-interacting ground state, we can calculate this c-number as
 
@@ -1233,19 +1233,19 @@ Combining these two and noting the distributive nature of normal-ordering \& tim
 \begin{align}
 \hat{\psi^{\cdot}}(x)\hat{\psi^{\dagger\cdot}}(x')=&\theta(t-t')\langle\Phi_0|\hat \psi^{(+)}(x)\hat \psi^{(+)\dagger}(x')|\Phi_0\rangle \nonumber \\
 &\mp\theta(t'-t)\langle\Phi_0|\hat \psi^{(-)\dagger}(x')\hat \psi^{(-)}(x)|\Phi_0\rangle \nonumber \\
-=&\theta(t-t')\langle\Phi_0|\big(\hat \psi^{(+)}(x)+\hat \psi^{(-)}(x)\big)\big(\hat \psi^{(+)}(x')+\hat \psi^{(-)}(x')\big)|\Phi_0\rangle \nonumber \\
-&\mp\theta(t-t')\langle\Phi_0|\big(\hat \psi^{(+)}(x')+\hat \psi^{(-)}(x')\big)\big(\hat \psi^{(+)}(x)+\hat \psi^{(-)}(x)\big)|\Phi_0\rangle \nonumber \\ 
+=&\theta(t-t')\langle\Phi_0|\big(\hat \psi^{(+)}(x)+\hat \psi^{(-)}(x)\big)\big(\hat \psi^{(+)\dagger}(x')+\hat \psi^{(-)\dagger}(x')\big)|\Phi_0\rangle \nonumber \\
+&\mp\theta(t'-t)\langle\Phi_0|\big(\hat \psi^{(+)\dagger}(x')+\hat \psi^{(-)\dagger}(x')\big)\big(\hat \psi^{(+)}(x)+\hat \psi^{(-)}(x)\big)|\Phi_0\rangle \nonumber \\ 
 =&\langle\Phi_0|\mathrm{T}[\hat \psi(x)\hat \psi^{\dagger}(x')]|\Phi_0\rangle \nonumber\\
 \equiv&\mathrm{i}G^{(0)}(x,x')\nonumber
 \end{align}
-Namely the contraction of two fermion fields are given by the non-interacting single-particle green's function.
+Namely the contraction of two fermion fields is given by the non-interacting single-particle green's function.
 
 Recovering the spin index, we may rewrite this way.
 \begin{align}\label{2.4.6}
 \hat \psi^{\cdot}_{\alpha}(x)\hat \psi^{\dagger\cdot}_{\beta}(x')\equiv \mathrm{i}G_{\alpha\beta}^{(0)}(x,x')
 \end{align}
 
-$\circledcirc$ The final item I want to define before describing the wick's theorem is a convention for symbols and signs.
+$\circledcirc$ The final item I want to define before describing the Wick's theorem is a convention for symbols and signs.
 
 Normal ordered products of field operators with more than one contraction will have the contractions denoted by pairs of superscripts with single dots, double dots, triple dots, and so on.
 
@@ -1298,11 +1298,11 @@ If $\mathrm{N}(\hat{U}\hat{V}...\hat{X}\hat{Y})$ is a normal-ordered product and
 &+\mathrm{N}(\hat{U^{\cdot}}\hat{V}...\hat{X}\hat{Y}\hat{Z^{\cdot}})\nonumber \\
 & t_U,t_V,...,t_X,t_Y>t_Z \nonumber
 \end{align}
-If $\hat{Z}$ is a destruction operator, this lemma is trivial, because all the contractions vanish. Namely since $t_U,t_V,...,t_X,t_Y>t_Z,\mathrm{T}(\hat{A}\hat{Z})=\hat{A}\hat{Z}$ for any $\hat{A}=\hat{U}...\hat{Y}$. Since $\hat{Z}$ is destruction operator, $\mathrm{N}(\hat{A}\hat{Z})=\hat{A}\hat{Z}$for any $\hat{A}=\hat{U}...\hat{Y}$. This means $\hat{A^{\cdot}}\hat{Z^{\cdot}}=\mathrm{T}(\hat{A}\hat{Z})-\mathrm{N}(\hat{A}\hat{Z})=0$.
+If $\hat{Z}$ is a destruction operator, this lemma is trivial, because all the contractions vanish. Namely since $t_U,t_V,...,t_X,t_Y>t_Z,\mathrm{T}(\hat{A}\hat{Z})=\hat{A}\hat{Z}$ for any $\hat{A}=\hat{U}...\hat{Y}$. Since $\hat{Z}$ is destruction operator, $\mathrm{N}(\hat{A}\hat{Z})=\hat{A}\hat{Z}$ for any $\hat{A}=\hat{U}...\hat{Y}$. This means $\hat{A^{\cdot}}\hat{Z^{\cdot}}=\mathrm{T}(\hat{A}\hat{Z})-\mathrm{N}(\hat{A}\hat{Z})=0$.
 
 Thus, we suppose that $\hat{Z}$ is a creation operator in the following.
 
-Under the normal ordering, we can freely rearrange $\hat{U}\hat{V}...\hat{X}\hat{Y}$ in such a way that all the creation parts appear on the left, while all the destruct parts appear on the right.
+Under the normal ordering, we can freely rearrange $\hat{U}\hat{V}...\hat{X}\hat{Y}$ in such a way that all the creation parts appear on the left, while all the destruction parts appear on the right.
 \begin{align}
 &\mathrm{N}(\hat{U}'\hat{V}'...\hat{A}'||\hat{B}'...\hat{X}'\hat{Y}')\hat{Z} \nonumber \\
 =&\mathrm{N}(\hat{U}'\hat{V}'...\hat{A}'||\hat{B}'...\hat{X}\hat{Y}\hat{Z})\nonumber \\
@@ -1310,9 +1310,9 @@ Under the normal ordering, we can freely rearrange $\hat{U}\hat{V}...\hat{X}\hat
 &+\mathrm{N}(\hat{U}'\hat{V}'...\hat{A^{\cdot}}'||\hat{B}'...\hat{X}'\hat{Y}'\hat{Z^{\cdot}})+....\nonumber \\
 &+\mathrm{N}(\hat{U^{\cdot}}'\hat{V}'...\hat{A}'||\hat{B}'...\hat{X}\hat{Y}\hat{Z^{\cdot}})\nonumber
 \end{align}
-Now that contraction between two creation parts vanish, all of these term are zero.
+Now that contraction between two creation parts vanish, all of these terms are zero.
 
-Moreover, these creation parts can be taken out side the normal-orderings:
+Moreover, these creation parts can be taken outside the normal-orderings:
 
 \begin{align}
 &\hat{U}'\hat{V}'...\hat{A}'\mathrm{N}(\hat{B}'...\hat{X}'\hat{Y}') \hat{Z} \nonumber \\
@@ -1320,7 +1320,7 @@ Moreover, these creation parts can be taken out side the normal-orderings:
 =&\hat{U}'\hat{V}'...\hat{A}'\mathrm{N}(\hat{B^{\cdot}}'...\hat{X}'\hat{Y}'\hat{Z^{\cdot}})  \nonumber \\
 =&\hat{U}'\hat{V}'...\hat{A}'\mathrm{N}(\hat{B}'...\hat{X}'\hat{Y}'\hat{Z}) \nonumber
 \end{align}
-So that we original equality is equivalent to the following:
+So that the original equality is equivalent to the following:
 \begin{align}
 &\mathrm{N}(\hat{B}'...\hat{X}'\hat{Y}') \hat{Z}  \nonumber \\
 =&\mathrm{N}(\hat{B}'...\hat{X}'\hat{Y^{\cdot}}'\hat{Z^{\cdot}}) + ...+\mathrm{N}(\hat{B^{\cdot}}'...\hat{X}'\hat{Y}'\hat{Z^{\cdot}})+ \mathrm{N}(\hat{B}'...\hat{X}'\hat{Y}'\hat{Z}) \nonumber
@@ -1405,7 +1405,7 @@ Then, apply another operator $\Omega$ whose time is earlier than the time of any
 &+\mathrm{N}(\hat{U^{\cdot}}\hat{V^{\cdot}}\hat{W}...\hat{X}\hat{Y}\hat{Z})\hat{\Omega}+...\nonumber \\
 &+\mathrm{N}(\hat{U^{\cdot}}\hat{V}\hat{W}...\hat{X}\hat{Y}\hat{Z^{\cdot}})\hat{\Omega}+...\nonumber
 \end{align}
-Then, using these lemma, we can include $\Omega$ insider the normal-ordering with additional contraction terms.
+Then, using these lemma, we can include $\Omega$ inside the normal-ordering with additional contraction terms.
 \begin{align}
 =&\mathrm{N}(\hat{U}\hat{V}\hat{W}...\hat{X}\hat{Y}\hat{Z}\hat{\Omega})\nonumber \\
 &+\mathrm{N}(\hat{U}\hat{V}\hat{W}...\hat{X}\hat{Y}\hat{Z^{\cdot}}\hat{\Omega}^{\cdot})+...\nonumber \\
@@ -1426,7 +1426,7 @@ Thus, this proves that the theorem holds true for the case with (n+1) field oper
 
 $\circledcirc$ Note that the Wick's theorem is an operator identity.
 
-But, in reality, we use this theorem by taking the expectation value with respect the non-interacting ground state wave function.
+But, in reality, we use this theorem by taking the expectation value with respect to the non-interacting ground state wave function.
 
 \begin{align}
 &\langle \Phi_0|\mathrm{T}(\hat{U}\hat{V}...\hat{Y}\hat{Z})|\Phi_0\rangle\nonumber\\
@@ -1447,9 +1447,9 @@ With the first order in the interaction  potential, it is given like this
 \mathrm{i}\tilde G_{\alpha\beta}(x,y)=&\mathrm{i}G^0_{\alpha\beta}(x,y)+(\frac{-\mathrm{i}}{\hbar})\sum_{\lambda\lambda'\mu\mu'}\frac{1}{2} \int \mathrm{d}^4x_1\mathrm{d}^4x_1' U_{\lambda\lambda'\mu\mu'}(x_1,x_1') \times \nonumber \\
 &\langle \Phi_0|\mathrm{T}[\hat{\psi_{\lambda}^{\dagger}}(x_1)\hat{\psi_{\mu}^{\dagger}}(x_1')\hat{\psi_{\mu'}}(x_1')\hat{\psi_{\lambda'}}(x_1)\hat{\psi_{\alpha}}(x)\hat{\psi_{\beta}^{\dagger}}(y)]|\Phi_0\rangle+...... 
 \end{align}
-where $|\Psi_0\rangle$ denotes the g.s. wave function in the non-interacting system.
+where $|\Phi_0\rangle$ denotes the g.s. wave function in the non-interacting system.
 
-According to the Wick's theorem, this time-ordered product is given by the sum of many normal-ordered normal-ordered products vanish.
+According to the Wick's theorem, this time-ordered product is given by the sum of many normal-ordered products vanish.
 
 So that this is given by a sum of all possible fully contracted normal-ordered products.
 
@@ -1481,7 +1481,7 @@ Using eq.\eqref{2.4.6}, the r.h.s can be given by a product of non-interacting g
 \begin{align} \label{2.5.2}
 (r.h.s)&=\mathrm{i}G_{\alpha\beta}^0(x,y)\mathrm{i}G^0_{\mu'\mu}(x_1',x_1')\mathrm{i}G^0_{\lambda'\lambda}(x_1,x_1) \ \ (A)\nonumber\\ 
 &-\mathrm{i}G_{\alpha\beta}^0(x,y)\mathrm{i}G^0_{\mu'\lambda}(x_1',x_1)\mathrm{i}G^0_{\lambda'\mu}(x_1,x_1') \ \ (B)\nonumber \\
-&+\mathrm{i}G_{\alpha\lambda}^0(x,x_1)\mathrm{i}G^0_{\lambda'\mu}(x_1,x_1')\mathrm{i}G^0_{\mu'\lambda}(x_1',y) \ \ (C)\nonumber \\
+&+\mathrm{i}G_{\alpha\lambda}^0(x,x_1)\mathrm{i}G^0_{\lambda'\mu}(x_1,x_1')\mathrm{i}G^0_{\mu'\beta}(x_1',y) \ \ (C)\nonumber \\
 &-\mathrm{i}G_{\alpha\lambda}^0(x,x_1)\mathrm{i}G^0_{\lambda'\beta}(x_1,y)\mathrm{i}G^0_{\mu'\mu}(x_1',x_1') \ \ (D)\nonumber \\
 &+\mathrm{i}G_{\alpha\mu}^0(x,x_1')\mathrm{i}G^0_{\mu'\lambda}(x_1',x_1)\mathrm{i}G^0_{\lambda'\beta}(x_1,y) \ \ (E)\nonumber \\
 &-\mathrm{i}G_{\alpha\mu}^0(x,x_1')\mathrm{i}G^0_{\mu'\beta}(x_1',y)\mathrm{i}G^0_{\lambda'\lambda}(x_1,x_1) \ \ (F)
@@ -1504,14 +1504,14 @@ By definition, such a green function (has an ambiguity, in a sense that it) coul
 \begin{align}
 \stackrel{?}{=}
 \begin{cases}
-\langle\Phi_0|\hat \psi_{\alpha}({\bf x},t)\hat \psi_{\beta}^{\dagger}({\bf x},t)|\Phi_0\rangle  \cr \langle\Phi_0|\hat \psi_{\alpha}({\bf x},t)\hat \psi_{\beta}^{\dagger}({\bf x},t)|\Phi_0\rangle
+\langle\Phi_0|\hat \psi_{\alpha}({\bf x},t)\hat \psi_{\beta}^{\dagger}({\bf x},t)|\Phi_0\rangle  \cr -\langle\Phi_0|\hat \psi_{\beta}^{\dagger}({\bf x},t)\hat \psi_{\alpha}({\bf x},t)|\Phi_0\rangle
 \end{cases}
 \nonumber
 \end{align}
-This ambiguity comes from the interaction Hamiltonian, where two creation operators and two annihilation operator have the same time argument
+This ambiguity comes from the interaction Hamiltonian, where two creation operators and two annihilation operators have the same time argument
 $$(r.h.s)=\langle\Phi_0|\mathrm{T}[\hat \psi_{\lambda}^{\dagger}(x_1)\hat \psi_{\mu}^{\dagger}(x_1')\hat \psi_{\mu'}(x_1')\hat \psi_{\lambda'}(x_1)\hat \psi_{\alpha}(x)\psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle $$
 To remove this ambiguity, we take the time argument of the two creation fields to be infinitesimally later than the time argument of the two annihilation fields.
-$$(r.h.s)=\langle \Phi_0|\mathrm{T}[\hat \psi_{\lambda}^{\dagger}({\bf x}_1,t_1+0)\hat \psi_{\mu}^{\dagger}({\bf x}_1',t_1+0)\hat \psi_{\mu'}^{\dagger}({\bf x}_1',t_1)\hat \psi_{\lambda'}^{\dagger}({\bf x}_1,t_1)\hat \psi_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle$$
+$$(r.h.s)=\langle \Phi_0|\mathrm{T}[\hat \psi_{\lambda}^{\dagger}({\bf x}_1,t_1+0)\hat \psi_{\mu}^{\dagger}({\bf x}_1',t_1+0)\hat \psi_{\mu'}({\bf x}_1',t_1)\hat \psi_{\lambda'}({\bf x}_1,t_1)\hat \psi_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle$$
 This treatment is ok, because under the time-ordered product, this infinitesimally small factor can maintain the order of these four fields in the interaction Hamiltonian.
 
 This small factor results in a small factor here so that, the green's function at equal times must be interpreted in this way.
@@ -1526,7 +1526,7 @@ For a uniform system, this can be replaced by a constant(N/V).
 
 2. 2nd important features in this expression is that these two terms are  disconnected diagrams, in a sense that they contain subunits that are not connected to the rest of the diagrams.
 
-eq.\eqref{2.5.2}shows that such disconnected diagrams typically have green's function and interaction whose arguments close within themselves.
+eq.\eqref{2.5.2} shows that such disconnected diagrams typically have green's function and interaction whose arguments close within themselves.
 
 As a result, these disconnected subunits can be factorized in the expression for $\tilde{G}$.
 
@@ -1550,7 +1550,7 @@ On the other hand, the product between this 4 terms and this gives the 1st order
 
 One might also wonder about the product between these four \& these two.
 
-Such a product reproduce exactly some of the 2nd-order disconnected diagrams obtained from the 2nd-order expansions.
+Such a product reproduces exactly some of the 2nd-order disconnected diagrams obtained from the 2nd-order expansions.
 
 To perform this factorization more systematically, let us consider the $\nu$-th order term of the numerator of eq.\eqref{2.4.4}:
 
@@ -1566,7 +1566,7 @@ The arguments appearing in the former group and those in the latter are nothing 
 \begin{align}
 \mathrm{i}\tilde{G}_{\alpha\beta}^{(\nu)}(x,y)=& \sum_{n=0}^{\nu}\sum_{m=0}^{\nu}(\frac{-\mathrm{i}}{\hbar})^{n+m}\frac{1}{\nu!}\frac{\nu!}{n!m!} \nonumber \\
 &\int_{-\infty}^{\infty}\mathrm{d}t_1...\int_{-\infty}^{\infty}\mathrm{d}t_{m}\langle\Phi_0|\mathrm{T}[\hat H_1(t_1)...\hat H_1(t_{m})\hat \psi_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle_{connected} \nonumber \\
-&\int_{-\infty}^{\infty}\mathrm{d}t_{m+1}...\int_{-\infty}^{\infty}\mathrm{d}t_{m+n}\langle\Phi_0|\mathrm{T}[\hat H_1(t_{m+1})...\hat H_1(t_{m+n})\hat \psi_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle \nonumber 
+&\int_{-\infty}^{\infty}\mathrm{d}t_{m+1}...\int_{-\infty}^{\infty}\mathrm{d}t_{m+n}\langle\Phi_0|\mathrm{T}[\hat H_1(t_{m+1})...\hat H_1(t_{m+n})]|\Phi_0\rangle \nonumber 
 \end{align}
 Here we put subscript 'connected', in order to emphasize that the contractions here must be taken in the 'connected' way like this diagram.
 
@@ -1575,7 +1575,7 @@ We also put this factor, because the numbers of ways of dividing $\nu$-number of
 When summed over the integer $\nu$ from zero to infinite, we obtain the numerator of eq.\eqref{2.4.4} as follows
 \begin{align}
 \mathrm{i}\tilde{G}_{\alpha\beta}^{(\nu)}(x,y)=& \sum_{m=0}^{\infty}(\frac{-\mathrm{i}}{\hbar})^{m}\frac{1}{m!}\int_{-\infty}^{\infty}\mathrm{d}t_1...\int_{-\infty}^{\infty}\mathrm{d}t_{m}\langle\Phi_0|\mathrm{T}[\hat H_1(t_1)...\hat H_1(t_{m})\hat \psi_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle_{connected} \nonumber \\
-&\times\sum_{m=0}^{\infty}(\frac{-\mathrm{i}}{\hbar})^{n}\frac{1}{n!}\int_{-\infty}^{\infty}\mathrm{d}t_1...\int_{-\infty}^{\infty}\mathrm{d}t_{n}\langle\Phi_0|\mathrm{T}[\hat H_1(t_1)...\hat H_1(t_{n})\hat \psi_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle\nonumber 
+&\times\sum_{n=0}^{\infty}(\frac{-\mathrm{i}}{\hbar})^{n}\frac{1}{n!}\int_{-\infty}^{\infty}\mathrm{d}t_1...\int_{-\infty}^{\infty}\mathrm{d}t_{n}\langle\Phi_0|\mathrm{T}[\hat H_1(t_1)...\hat H_1(t_{n})]|\Phi_0\rangle\nonumber 
 \end{align}
 Here the first factor is the sum of all connected Feynman diagrams.
 
@@ -1584,7 +1584,7 @@ On the other hand, the 2nd factor is identical to the denominator of eq.\eqref{2
 \langle\Phi_0|\hat{S}|\Phi_0\rangle=&\langle\Phi_0|\hat{U}(+\infty,-\infty)|\Phi_0\rangle \nonumber \\
 =&\langle\Phi_0|\sum_{\nu=0}^{\infty}(\frac{-\mathrm{i}}{\hbar})^{\nu}\frac{1}{\nu!}\int_{-\infty}^{\infty}\mathrm{d}t_1...\int_{-\infty}^{\infty}\mathrm{d}t_{\nu}\mathrm{T}[\hat H_1(t_1)...\hat H_1(t_{\nu})]|\Phi_0\rangle\nonumber 
 \end{align}
-So that the second factor are set off by the denominator, and eq.\eqref{2.4.4} is given by the sum of all possible connected Feynman diagrams.
+So that the second factor is set off by the denominator, and eq.\eqref{2.4.4} is given by the sum of all possible connected Feynman diagrams.
 \begin{align} \label{2.5.3}
 \mathrm{i}G_{\alpha\beta}(x,y)=& \sum_{m=0}^{\infty}(\frac{-\mathrm{i}}{\hbar})^{m}\frac{1}{m!}\int_{-\infty}^{\infty}\mathrm{d}t_1...\int_{-\infty}^{\infty}\mathrm{d}t_{m}\langle\Phi_0|\mathrm{T}[\hat H_1(t_1)...\hat H_1(t_{m})\hat \psi_{\alpha}(x)\hat \psi^{\dagger}_{\beta}(y)]|\Phi_0\rangle
 \end{align}
@@ -1598,19 +1598,19 @@ For example, these two diagrams
 \end{center}
 differ from each other only in the permutation of the labels 1 \& 2 associated with the interaction Hamiltonian.
 
-When these arguments are integrated oyut, these two give an identical contribution.
+When these arguments are integrated out, these two give an identical contribution.
 
 Another example is the 3rd order connected diagram shown here.
 \begin{center}
 \includegraphics[width = 2cm]{P261.png}
 \end{center}
-Depending on how we assign three interaction Hamiltonians to these there wavy lines, we have 6 similar connected diagrams.
+Depending on how we assign three interaction Hamiltonians to these three wavy lines, we have 6 similar connected diagrams.
 
-All of these six gives an identical contribution to the green's function.
+All of these six give an identical contribution to the green's function.
 
-For a m-th ordered connected diagram, we generally have the factorial of m number of similar diagrams, which differ in the permutations and all of which give an identical contribution.
+For an m-th ordered connected diagram, we generally have the factorial of m number of similar diagrams, which differ in the permutations and all of which give an identical contribution.
 
-This, 'the factorial of m' cancel the factor here.
+This, 'the factorial of m' cancels the factor here.
 
 Thus, for a given topologically distinct connected Feynman diagram, we count only once, while omitting this prefactor.
 
@@ -1633,11 +1633,11 @@ We therefore obtain the following rules for calculating the n-th order contribut
 
 (a) Draw all topologically distinct connected Feynman diagrams, with n-interaction lines U and (2n+1) directed green's function $G^0$
 
-(b) Label each vertex with a for dimensional space-time coordinate.
+(b) Label each vertex with a four dimensional space-time coordinate.
 
-(c) Each solid line represents a green's function $G_{\alpha\beta}^0(x,y)$ running for y to x.
+(c) Each solid line represents a green's function $G_{\alpha\beta}^0(x,y)$ running from y to x.
 
-(d) Each wavy lines represents an interaction.
+(d) Each wavy line represents an interaction.
 \begin{center}
 \includegraphics[width = 10cm]{P266.png}
 \end{center}
@@ -1649,7 +1649,7 @@ Since the n-th order term in eq.\eqref{2.5.3} has an explicit numerical factor $
 
 Each contraction of two field operators gives $\mathrm{i}G^0$, so that (2n+1) contractions of the field operators gives $(\mathrm{i})^{2n+1}$
 
-(g) for each n-th order term for G, assign $(-\mathrm{i})(\mathrm{i})^{2n+1}(\frac{-\mathrm{i}}{\hbar})^n=(\frac{-\mathrm{i}}{\hbar})^n$
+(g) for each n-th order term for G, assign $(-\mathrm{i})(\mathrm{i})^{2n+1}(\frac{-\mathrm{i}}{\hbar})^n=(\frac{\mathrm{i}}{\hbar})^n$
 
 in addition to this, each Feynman diagram must be accompanied by  either (+) or (-) sign, which comes from the rearrange process of the field operators.
 
@@ -1705,7 +1705,7 @@ This concludes that, for each loop of fermion fields, we always have one minus s
 
 We can do the same procedure for the other loops which you can find within all the others.
 
-By construction, the remaining fermion fields comprise a single fermion lines which runs from y to x, where and x are associated with the external fermion fields which can be depicted like this
+By construction, the remaining fermion fields comprise a single fermion line which runs from y to x, where y and x are associated with the external fermion fields which can be depicted like this
 \begin{align}
 &\mathrm{T}[\hat H_1(t_1)...\hat H_1(t_a)...\hat H_1(t_b)...\hat H_1(t_c)...\hat H_1(t_m)\hat \psi_{\alpha}(x)\hat \psi_{\beta}^{\dagger}(y)]\nonumber \\
 =&(-1)^F\mathrm{T}[(loop1)(loop2)...(loopF)\hat \psi^{\dagger\cdot\cdot\cdot\cdot\cdot}(a)\hat \psi^{\cdot}(a)\hat \psi^{\cdot\cdot\cdot\cdot}(b)...\hat \psi^{\dagger\cdot\cdot\cdot}(c)\hat \psi^{\cdot\cdot\cdot\cdot}(c)\hat \psi_{\alpha}^{\cdot\cdot\cdot\cdot}(x)\hat \psi_{\beta}^{\dagger\cdot\cdot\cdot\cdot}(y)]\nonumber
@@ -1714,7 +1714,7 @@ With even number of permutations, all the remaining fermion fields can be rearra
 
 According to this picture, we take the contraction like this, where most of the two fields that are contracted are already brought together.
 
-except for these two field.
+except for these two fields.
 
 When we bring together these two, we need even number of permutations, because here we have even numbers of field operators.
 \begin{align}
@@ -1746,7 +1746,7 @@ Only the topologically distinct connected Feynman diagrams are just these two.
 \begin{center}
 \includegraphics[width = 12cm]{P284-1.png}
 \end{center}
-By labelling these vertex four dimensional coordinate,
+By labelling these vertices four dimensional coordinate,
 \begin{center}
 \includegraphics[width = 8cm]{P284-2.png}
 \end{center}
@@ -1767,7 +1767,7 @@ which exhaust all the 2nd-order topologically distinct connected diagrams.
 
 Writing the corresponding equations for all of these diagrams is a bit cumbersome, so that I only write down one of them.
 
-For example, consider the lase one
+For example, consider the last one
 \begin{center}
 \includegraphics[width = 2cm]{P287.png}
 \end{center}
@@ -1777,11 +1777,11 @@ G^{(2)}_{\alpha\beta}(x,y)=...&+(\frac{\mathrm{i}}{\hbar})^2\int \mathrm{d}^4x_1
 \end{align}
 Here, we don't have any (-) sign, because the diagram doesn't contain any fermion's loop.
 
-Observing this expression, one can see that actual evaluations of each terms are highly involved, in a sense that, even 2nd order term requires integral over four internal variables.
+Observing this expression, one can see that actual evaluations of each term are highly involved, in a sense that, even 2nd order term requires integral over four internal variables.
 
 To reduce these complications, let us now restrict the following discussions to a spatially uniform (and spin-isotropic) system.
 
-In such a system, the green's function take the form like this 
+In such a system, the green's function takes the form like this 
 $$G_{\alpha\beta}(x,y)=G_{\alpha\beta}(x-y)$$
 
 This form allows us to take a fourier transformation
@@ -1790,7 +1790,7 @@ G_{\alpha\beta}(x,y)\equiv\frac{1}{(2\pi)^4}\int \mathrm{d}^4ke^{\mathrm{i}k(x-y
 G^0_{\alpha\beta}(x,y)\equiv\frac{1}{(2\pi)^4}\int \mathrm{d}^4ke^{\mathrm{i}k(x-y)}G^0_{\alpha\beta}(k)
 \end{align}
 with
-$$\mathrm{d}^4k=\mathrm{d}^3\bf{k}\mathrm{f}\omega$$
+$$\mathrm{d}^4k=\mathrm{d}^3\bf{k}\mathrm{d}\omega$$
 
 $$k\cdot x=\bf{k}\cdot\bf{x}-\omega t$$
 In a spatially homogeneous system, the interaction potential depends only on the coordinate difference.
@@ -1815,16 +1815,16 @@ Using this transformation, eq.\eqref{2.5.4} can be substantially simplified:
 \begin{align}
 G_{\alpha\beta}^{(1)}(x,y)=&-\frac{\mathrm{i}}{\hbar}(\frac{1}{(2\pi)^4})^2\int \mathrm{d}^4ke^{\mathrm{i}k(x-y)}G_{\alpha\lambda}^0(k)U_{\lambda\lambda'\mu\mu'}(0)G_{\lambda'\beta}^0(k)\int \mathrm{d}^4k'e^{\mathrm{i}\omega'0+}G_{\mu'\mu}^0(k')\nonumber \\
 &+\frac{\mathrm{i}}{\hbar}(\frac{1}{(2\pi)^4})^2\int \mathrm{d}^4ke^{\mathrm{i}k(x-y)}\int \mathrm{d}^4k'G_{\alpha\lambda}^0(k)U_{\lambda\lambda'\mu\mu'}(k')G_{\lambda'\mu}^0(k-k')G_{\mu'\beta}^0(k)\nonumber \\
-\equiv & (\frac{1}{(2\pi)^4})^2\int \mathrm{d}^4ke^{\mathrm{i}k(x-y)}G_{\alpha\beta}^{(1)}(k) \nonumber
+\equiv & \frac{1}{(2\pi)^4}\int \mathrm{d}^4ke^{\mathrm{i}k(x-y)}G_{\alpha\beta}^{(1)}(k) \nonumber
 \end{align}
 where $G_{\alpha\beta}^{(1)}(k)$ contains only momentum integral.
 \begin{align}\label{2.5.8}
-G_{\alpha\beta}^{(1)}(k)\equiv &-\frac{\mathrm{i}}{\hbar}(\frac{1}{(2\pi)^4})^2G_{\alpha\lambda}^0(k)U_{\lambda\lambda'\mu\mu'}(0)G_{\lambda'\beta}^0(k)\int \mathrm{d}^4k'e^{\mathrm{i}\omega'0+}G_{\mu'\mu}^0(k') \nonumber \\
-&+\frac{\mathrm{i}}{\hbar}(\frac{1}{(2\pi)^4})^2G_{\alpha\lambda}^0(k)G_{\mu'\beta}^0(k)\int \mathrm{d}^4k'U_{\lambda\lambda'\mu\mu'}(k')G_{\lambda'\mu}^0(k-k')\ \ (F)
+G_{\alpha\beta}^{(1)}(k)\equiv &-\frac{\mathrm{i}}{\hbar}\frac{1}{(2\pi)^4}G_{\alpha\lambda}^0(k)U_{\lambda\lambda'\mu\mu'}(0)G_{\lambda'\beta}^0(k)\int \mathrm{d}^4k'e^{\mathrm{i}\omega'0+}G_{\mu'\mu}^0(k') \nonumber \\
+&+\frac{\mathrm{i}}{\hbar}\frac{1}{(2\pi)^4}G_{\alpha\lambda}^0(k)G_{\mu'\beta}^0(k)\int \mathrm{d}^4k'U_{\lambda\lambda'\mu\mu'}(k')G_{\lambda'\mu}^0(k-k')\ \ (F)
 \end{align}
 This momentum space representation can be generalized into the higher-order Feynman diagram.
 
-Any Feynman diagram comprise a vertex show like this, in which one in-coming fermion line and one out-going fermion line and interaction lines meet with on another
+Any Feynman diagram comprises a vertex shown like this, in which one in-coming fermion line and one out-going fermion line and interaction lines meet with one another
 \begin{center}
 \includegraphics[width = 3cm]{P294.png}
 \end{center}
@@ -1852,7 +1852,7 @@ while for the other case, we suppose that they provide $e^{\mathrm{i}qx},e^{-\ma
 
 Now that x here is the internal variable, we are supposed to take the integral over this.
 
-Now that, for any given Feynman diagram which have this as its submit, there is no x-dependence other than these three phase factors.
+Now that, for any given Feynman diagram which has this as its subunit, there is no x-dependence other than these three phase factors.
 
 Therefore, the integration over x gives a momentum conservation among these three.
 
@@ -1880,7 +1880,7 @@ $$k_5=k_1+q''$$$$k_3+k_1=k_4$$$$k_2+k_4=k_3$$$$q'=k_2+k_5$$$$q'=k_2+k_5=(k_3-k_4
 
 From which  we safely obtain this equality.
 
-To sumarize, the Feynman rule in the momentum space representation can be summarized as follows.
+To summarize, the Feynman rule in the momentum space representation can be summarized as follows.
 
 For the n-th order contribution to $$G_{\alpha\beta}({\bf k},\omega)\equiv G_{\alpha\beta}(k)$$
 
@@ -1913,13 +1913,13 @@ One of them should be again reserved for the external line, so that
 
 6. For the n-th order Feynman diagram for $G_{\alpha\beta}(k)$, we need to apply $(\frac{\mathrm{i}}{\hbar})^n\frac{1}{(2\pi)^{4n}}(-1)^F$ as an overall factor
 
-The final remark  is about a fermion line that form a closed loop like this or about a fermion line whose two end points are linked by the same interaction link (like this)
+The final remark  is about a fermion line that forms a closed loop like this or about a fermion line whose two end points are linked by the same interaction link (like this)
 \begin{center}
 \includegraphics[width = 9cm]{P306.png}
 \end{center}
 These fermion lines are originally green's function with equal time variables, so that we assigned these green's function to them in this way.
 
-7. When Fourie-transformed, this infinitesimally small factor is transformed with this additional factor, where $\eta$ is positive small quantity:
+7. When Fourier-transformed, this infinitesimally small factor is transformed with this additional factor, where $\eta$ is positive small quantity:
 $$e^{\mathrm{i}\omega\eta}G_{\alpha\beta}({\bf k},\omega) \ \ (\eta\rightarrow0+)$$
 
 With this Feynman rule, one can obtain eq.\eqref{2.5.8}
@@ -1950,7 +1950,7 @@ with\ \mathrm{Tr}&[\sigma_{\nu}]=0\ \ for \ \nu=1,2,3 \nonumber \\
 &+\frac{\mathrm{i}}{\hbar}\frac{1}{(2\pi)^4}\delta_{\alpha\beta}G^{0}(k)G^0(k)\int \mathrm{d}^4k'V_0(k-k')e^{\mathrm{i}\omega'0+}G^0(k')\nonumber \\
 &+\frac{\mathrm{i}}{\hbar}\frac{1}{(2\pi)^4}3\delta_{\alpha\beta}G^{0}(k)G^0(k)\int \mathrm{d}^4k'V_1(k-k')e^{\mathrm{i}\omega'0+}G^0(k')\nonumber \\
 \equiv& G^{0}(k)\Sigma^{(1)}(k)G^0(k)\delta_{\alpha\beta} \nonumber \\
-\hbar \Sigma^{(1)}(k)=& \mathrm{i}\frac{1}{(2\pi)^4}3\int \mathrm{d}^4k'[-2V_0(0)+V_0(k-k')3V_1(k-k')]e^{\mathrm{i}\omega'0+}G^0(k') \nonumber
+\hbar \Sigma^{(1)}(k)=& \mathrm{i}\frac{1}{(2\pi)^4}\int \mathrm{d}^4k'[-2V_0(0)+V_0(k-k')+3V_1(k-k')]e^{\mathrm{i}\omega'0+}G^0(k') \nonumber
 \end{align}
 Thanks to this factor, we can integrate over frequency
 
@@ -1962,24 +1962,24 @@ Thanks to this factor, we can integrate over frequency
 \end{center}
 so that
 \begin{align}\label{2.5.9}
-\hbar \Sigma^{(1)}(k)=&-\int \frac{\mathrm{d}{\bf k}'}{(2\pi)^3}[-2V_0(0)+V_0(k-k')3V_1(k-k')]\theta(k_F-|{\bf k}'|) \nonumber \\
-=& n V_0(0)-\int \frac{\mathrm{d}{\bf k}'}{(2\pi)^3}[V_0(k-k')3V_1(k-k')]\theta(k_F-|{\bf k}'|) \ \ (G) 
+\hbar \Sigma^{(1)}(k)=&-\int \frac{\mathrm{d}{\bf k}'}{(2\pi)^3}[-2V_0(0)+V_0(k-k')+3V_1(k-k')]\theta(k_F-|{\bf k}'|) \nonumber \\
+=& n V_0(0)-\int \frac{\mathrm{d}{\bf k}'}{(2\pi)^3}[V_0(k-k')+3V_1(k-k')]\theta(k_F-|{\bf k}'|) \ \ (G) 
 \end{align}
 
-As we will see soon, these gives us a renormalization of single particle energy in the non-interacting limit.
+As we will see soon, these give us a renormalization of single particle energy in the non-interacting limit.
 
 To see this, let us introduce a general argument which classify various contributions in an arbitrary Feynman diagrams.
 
-The classification leads to a so-called Dyson equation, which makes the diagramatic analysis to be very useful.
+The classification leads to a so-called Dyson equation, which makes the diagrammatic analysis to be very useful.
 
-Feynman rules suggests that the exact green's function consists of the non-interacting green's function plus all the connected terms with a free ("non-interacting") green's function at each ends.
+Feynman rules suggest that the exact green's function consists of the non-interacting green's function plus all the connected terms with a free ("non-interacting") green's function at each ends.
 
 This structure is schematically shown like this:
 \begin{center}
 \includegraphics[width = 8cm]{P314.png}
 \end{center}
 The corresponding analytic expression is given by
-$$G_{\alpha\beta}(x,y)=G_{\alpha\beta}^0(x,y)+\int \mathrm{d}^4x_1\int \mathrm{d}^4x_1'G_{\alpha\lambda}^0(x,x_1)\Sigma_{\lambda\mu}(x_1,x_1')G_{\mu\beta}^0(x_1,y)$$
+$$G_{\alpha\beta}(x,y)=G_{\alpha\beta}^0(x,y)+\int \mathrm{d}^4x_1\int \mathrm{d}^4x_1'G_{\alpha\lambda}^0(x,x_1)\Sigma_{\lambda\mu}(x_1,x_1')G_{\mu\beta}^0(x_1',y)$$
 
 $\Sigma$ corresponds to this part, which includes all the connected Feynman diagrams and is called as the self-energy
 
@@ -1989,19 +1989,19 @@ $\Sigma$ corresponds to this part, which includes all the connected Feynman diag
 \end{center}
 Generally speaking, there are two types of self energy.
 
-One is called as proper self-energy, which cannot be separated into two  pieces by cutting one fermion lines.
+One is called as proper self-energy, which cannot be separated into two  pieces by cutting one fermion line.
 
-The other is called as inproper  self-energy, which can be separated into two pieces by cutting a fermion lines.
+The other is called as improper  self-energy, which can be separated into two pieces by cutting a fermion lines.
 
-In this example, these are inproper ones, because, by cutting this line, they can be separated into two.
+In this example, these are improper ones, because, by cutting this line, they can be separated into two.
 
 Especially, we will denote by $\Sigma^{\star}_{\alpha\beta}(x_1,x_1')$ the sum of all proper self-energy terms.
 
 Then, thanks to the Feynman's rule described so far, the self-energy consists of a sum of all possible repetitions of the proper self-energy.
 \begin{align}
-\Sigma(x_1,x_1')=&\Sigma^{\star}(x_1,x_1?) \nonumber \\
-&+\int \mathrm{d}^4x_2\mathrm{d}^4x_2'\Sigma^{\star}(x_1,x_2)G^0(x_2,x_2')\Sigma^{\star}(x_2',x_1?) \nonumber \\
-&+\int \mathrm{d}^4x_2\mathrm{d}^4x_2'\int \mathrm{d}^4x_3\mathrm{d}^4x_3'\Sigma^{\star}(x_1,x_2)G^0(x_2,x_2')\Sigma^{\star}(x_2',x_1?)G^0(x_3,x_3')\Sigma^{\star}(x_3',x_1?)+... \nonumber
+\Sigma(x_1,x_1')=&\Sigma^{\star}(x_1,x_1') \nonumber \\
+&+\int \mathrm{d}^4x_2\mathrm{d}^4x_2'\Sigma^{\star}(x_1,x_2)G^0(x_2,x_2')\Sigma^{\star}(x_2',x_1') \nonumber \\
+&+\int \mathrm{d}^4x_2\mathrm{d}^4x_2'\int \mathrm{d}^4x_3\mathrm{d}^4x_3'\Sigma^{\star}(x_1,x_2)G^0(x_2,x_2')\Sigma^{\star}(x_2',x_1')G^0(x_3,x_3')\Sigma^{\star}(x_3',x_1')+... \nonumber
 \end{align}
 Which can be also described in terms of diagram as follows 
 \begin{center}
@@ -2015,15 +2015,15 @@ Namely, such a factor can be always decomposed like this
 \begin{center}
 \includegraphics[width = 12cm]{P319.png}
 \end{center}
-Where $n_1\&n_2$ have denotes the number of wavy lines included in the 1st proper self-energy and 2nd proper self energy. so that $n_1+n_2=n$
+Where $n_1\&n_2$ denote the number of wavy lines included in the 1st proper self-energy and 2nd proper self energy. so that $n_1+n_2=n$
 
-Similarly $F_1\&F_2$ denotes the numbers of fermion loops included in these two proper self-energy respectively. so that $F_1+F_2=F$
+Similarly $F_1\&F_2$ denote the numbers of fermion loops included in these two proper self-energy respectively. so that $F_1+F_2=F$
 
 Correspondingly, the single-particle green's function becomes like this
 \begin{align}
 G(x,y)=&G^0(x,y) \nonumber \\
-&+\int \mathrm{d}^4x_1\mathrm{d}^4x_1'G^0(x,x_1)\Sigma^{\star}(x_1,x_1?)G^0(x_1',y) \nonumber \\
-&+\int \mathrm{d}^4x_1\mathrm{d}^4x_1'\int \mathrm{d}^4x_2\mathrm{d}^4x_2'G^0(x,x_1)\Sigma^{\star}(x_1,x_1?)G^0(x_1',x_2)\Sigma^{\star}(x_2,x_2')G^0(x_2',y)+... \nonumber
+&+\int \mathrm{d}^4x_1\mathrm{d}^4x_1'G^0(x,x_1)\Sigma^{\star}(x_1,x_1')G^0(x_1',y) \nonumber \\
+&+\int \mathrm{d}^4x_1\mathrm{d}^4x_1'\int \mathrm{d}^4x_2\mathrm{d}^4x_2'G^0(x,x_1)\Sigma^{\star}(x_1,x_1')G^0(x_1',x_2)\Sigma^{\star}(x_2,x_2')G^0(x_2',y)+... \nonumber
 \end{align}
 or
 \begin{center}
@@ -2038,13 +2038,13 @@ where the lower fermion line is replaced by green's function itself.
 Namely, the unknown green's function itself in the left hand side is used for the expression for the green's function, so that the equation becomes a self-consistent equation
 
 This equation is called as Dyson's equation, whose analytic expression is given like this
-$$G_{\alpha\beta}(x,y)=G_{\alpha\beta}^0(x,y)+\int \mathrm{d}^4x_1\mathrm{d}^4x_1'G^0_{\alpha\lambda}(x,x_1)\Sigma_{\lambda\mu}^{\star}(x_1,x_1?)G_{\mu\beta}^0(x_1',y)$$
+$$G_{\alpha\beta}(x,y)=G_{\alpha\beta}^0(x,y)+\int \mathrm{d}^4x_1\mathrm{d}^4x_1'G^0_{\alpha\lambda}(x,x_1)\Sigma_{\lambda\mu}^{\star}(x_1,x_1')G_{\mu\beta}^0(x_1',y)$$
  
 By substituting the r.h.s into the left hand side, one can derive this equation out of this.
 
 
 %323
-In the momentum space representation, the Dyson equation become much more simpler. For spatially uniform system, the self-energy can be always Fourier transformed like this
+In the momentum space representation, the Dyson equation becomes much more simpler. For spatially uniform system, the self-energy can be always Fourier transformed like this
 
 %\begin{align}
 \[
@@ -2060,7 +2060,7 @@ For an isotropic system, $G$, $G^0$ and $\Sigma^\star$ becomes diagonal in spin 
 \[\begin{split}
 G_{\alpha\beta}(k) &= \delta_{\alpha\beta}G(k)\\
 G^0_{\alpha\beta}(k) &= \delta_{\alpha\beta}G^0(k)\\
-\Sigma^\star_{\alpha\beta}(k) &= \delta_{\alpha\beta}\Sigma^\star_(k)\\
+\Sigma^\star_{\alpha\beta}(k) &= \delta_{\alpha\beta}\Sigma^\star(k)\\
 \end{split}\]
 
 As a result, the Dyson equation can be explicitly solved;
@@ -2079,21 +2079,21 @@ with $\eta\to 0+$
 
 As such, we find
 
-\[G_{\alpha\beta}({\bf k},\omega) = \frac{\delta_{\alpha\beta}}{\omega-\omega_{\bf k}+i\eta\text{sgn}(|{\bf k}|-k_F)}-\Sigma^\star({\bf k},\omega) \]
+\[G_{\alpha\beta}({\bf k},\omega) = \frac{\delta_{\alpha\beta}}{\omega-\omega_{\bf k}+i\eta\text{sgn}(|{\bf k}|-k_F)-\Sigma^\star({\bf k},\omega)} \]
 
-According to the Lehmann representation, this Green function has a pole above the real axis of $\omega$ when $\omega$ is less than $\mu\hbar$, while it has a pole below the real axis of $\omega$ when $\omega$ is greater than $\mu/\hbar$. 
+According to the Lehmann representation, this Green function has a pole above the real axis of $\omega$ when $\omega$ is less than $\mu/\hbar$, while it has a pole below the real axis of $\omega$ when $\omega$ is greater than $\mu/\hbar$. 
 
 This general statement ensures the imaginary part of the proper self energy is positive when $\omega$ is less than $\mu/\hbar$, while it is negative otherwise
 
 \[\begin{cases}
 \text{Im}\Sigma^\star({\bf k},\omega)\ge 0 &\text{for }\omega\le\mu/\hbar\\
 & \\
-\text{Re}\Sigma^\star({\bf k},\omega)\le 0 &\text{for }\omega\ge\mu/\hbar
+\text{Im}\Sigma^\star({\bf k},\omega)\le 0 &\text{for }\omega\ge\mu/\hbar
 \end{cases}\]
 
 Thanks to this general statement, we can determine the chemical potential in interacting fermion systems as the point at which Im$\Sigma^\star({\bf k},\omega)$ changes the sign. 
 
-In an interacting system, one particle excited state ($a^\dagger_{{\bf k},\lambda}|F.S\rangle (|{\bf k}|>k_F)$) or one-hole excited state ($a_{{\bf k},\lambda}|F.S\rangle (|{\bf k}|<k_F)$) are not an eigenstate of the system, so that these excited particles have a finite life time. Imaginary part of the pole of the Green's function in $\omega<\mu/\hbar$ region describes the life time for the hole, which that in $\omega?\mu/\hbar$ region describes the life time for the particle. 
+In an interacting system, one particle excited state ($a^\dagger_{{\bf k},\lambda}|F.S\rangle (|{\bf k}|>k_F)$) or one-hole excited state ($a_{{\bf k},\lambda}|F.S\rangle (|{\bf k}|<k_F)$) are not an eigenstate of the system, so that these excited particles have a finite life time. Imaginary part of the pole of the Green's function in $\omega<\mu/\hbar$ region describes the life time for the hole, which that in $\omega>\mu/\hbar$ region describes the life time for the particle. 
 
 As an example of the proper self energy, let us consider the first-order \& second-order (Feynman Diagrams)
 
@@ -2105,15 +2105,15 @@ Within 1st order \& 2nd order, the proper self energies are given like this resp
 
 $\Sigma^\star_{(1)}({\bf k},\omega)$ has been already calculated in eq. (2-5-9):
 
-\[\hbar\Sigma^\star_{(1)} ({\bf k},\omega) = nV_0(0)-\frac{1}{(2\pi)^3}\int d^3{\bf k}'[V_0({\bf k-k}')+3V_1({\bf k-k}')]\theta(k_F-|\bf k|) \]
+\[\hbar\Sigma^\star_{(1)} ({\bf k},\omega) = nV_0(0)-\frac{1}{(2\pi)^3}\int d^3{\bf k}'[V_0({\bf k-k}')+3V_1({\bf k-k}')]\theta(k_F-|\bf k'|) \]
 
 which does not depend on frequency and which is real valued. 
 
-This means that, within the 1st-order approximation, one-particle state or one-hole state has a infinite life time and effect of the interaction is to change the one-particle spectrum $\omega_{\bf k}$ into another function of $\bf k$
+This means that, within the 1st-order approximation, one-particle state or one-hole state has an infinite life time and effect of the interaction is to change the one-particle spectrum $\omega_{\bf k}$ into another function of $\bf k$
 
 \[\omega_{\bf k}\to\tilde{\omega}_{\bf k} = \omega_{\bf k} + \Sigma^\star_{(1)}({\bf k})=\omega_{\bf k} + \frac{1}{\hbar}nV_0(0) - \frac{1}{\hbar}\int \frac{d{\bf k}'^3}{(2\pi)^3}\times[V_0({\bf k-k}')+3V_1({\bf k-k}')]\theta(k_F-|\bf k'|) \]
 
-Here $nV_0(0)$ is a constant energy shift of the one-particle spectrum, which represents the forward scattering coming from all the other particle. The latter parti represents the exchange scattering. 
+Here $nV_0(0)$ is a constant energy shift of the one-particle spectrum, which represents the forward scattering coming from all the other particle. The latter part represents the exchange scattering. 
 
-Feynman-Dyson perturbation theory developed so far enable us to evaluate the Green's function to all order in the interaction potential. In reality, however, obtaining all order exactly is impossible and we must resort to a certain approximation. As the simplest example, we retained only the first order contribution to the proper self energy. Unfortunately, such an approximation cannot capture the physics of most systems quite well, where inclusions of certain class of higher order terms are necessary. In the following three sections, I will introduce three approximation scheme which goes beyond the 1st-order approximation for the proper self-energy. 
+Feynman-Dyson perturbation theory developed so far enables us to evaluate the Green's function to all order in the interaction potential. In reality, however, obtaining all order exactly is impossible and we must resort to a certain approximation. As the simplest example, we retained only the first order contribution to the proper self energy. Unfortunately, such an approximation cannot capture the physics of most systems quite well, where inclusions of certain class of higher order terms are necessary. In the following three sections, I will introduce three approximation schemes which go beyond the 1st-order approximation for the proper self-energy. 
 

@@ -1,6 +1,6 @@
 \chapter{Application to electron-phonon systems}
 
-\section{Non-interacting phonon system and Debye theory of specific heat}
+\section[Free phonons and Debye specific heat]{Non-interacting phonon system and Debye theory of specific heat}
 
 \begin{wrapfigure}{l}{5.5cm}
 \includegraphics[width = 5cm]{5-1.png}
@@ -60,11 +60,10 @@ Namely, when these ionic charges are displaced like in this picture, we have eff
 
 On the one hand, $\nabla\times\bm{d}$ is accompanied by the shear deformation in the positively charged ionic background, e.g.,
 
-\begin{figure}
-\end{figure}
-\begin{wrapfigure}{l}{6.5cm}
+\begin{figure}[ht]
+\centering
 \includegraphics[width = 6cm]{5-3.png}
-\end{wrapfigure}
+\end{figure}
 
 which is not accompanied by any charge density modulation.
 
@@ -76,7 +75,7 @@ For this reason, we will focus only on the longitudinal (compressional) acoustic
 
 In order to introduce the equation of motion for the charge density modulation
 
-\[\nabla\cdot\vec{\bm{d}}(\bm{x},t) = \delta\rho_{ion}(\bm{x},t) \]
+\[\nabla\cdot\vec{\bm{d}}(\bm{x},t) = -\frac{\delta\rho_{ion}(\bm{x},t)}{\rho_0} \]
 
 Let us begin with Newton's equation of motion for a fluid element
 
@@ -86,7 +85,7 @@ Here $\bm{p}(\bm{x},t)$ is the momentum density field at position $\bm{x}$ at a 
 
 \[\bm{p}(\bm{x},t) = \rho(\bm{x},t)\bm{v}(\bm{x},t) \]
 
-The temporal derivative in the right hand side is a Lagrangian derivative often used in the course of fluid mechanics.
+The temporal derivative on the left hand side is a Lagrangian derivative often used in the course of fluid mechanics.
 
 \[\frac{D\bm{p}}{Dt} \overset{def}{\equiv}\lim_{\Delta t\rightarrow0}\frac{1}{\Delta t} \left\{\bm{p}(\bm{x}+\bm{v}\Delta t,t+\Delta t) - \bm{p}(\bm{x},t)\right\} = \frac{\partial\bm{p}}{\partial t}+(\bm{v}\cdot\nabla)\bm{p} \]
 
@@ -96,21 +95,21 @@ The force acting on the fluid element is a restoring force which comes from the 
 
 In equilibrium, we don't have any velocity field and the mass density is uniformly distributed and static
 
-\[\left.\begin{split}
+\[\left.\begin{aligned}
 \rho(\bm{x},t) &= \rho_0\\
 \ & \ \\
 \bm{v}(\bm{x},t) &= 0
-\end{split}\right\}\text{\quad equilibrium} \]
+\end{aligned}\right\}\text{\quad equilibrium} \]
 
 Out of equilibrium, we have finite velocity field and mass density is spatially and temporally dependent:
 
-\[\left.\begin{split}
+\[\left.\begin{aligned}
 \rho(\bm{x},t) &= \rho_0 + \delta\rho(\bm{x},t)\\
 \ & \ \\
 \bm{v}(\bm{x},t) &\neq 0
-\end{split}\right\}\text{\quad out of equilibrium} \]
+\end{aligned}\right\}\text{\quad out of equilibrium} \]
 
-When linearizing this equation of motion for a small deviation from the equilibrium, we can regard that the $2^{\text{nd}}$ term in the right hand side is the $2^{\text{nd}}$ order in $\delta\rho$ and thus negligible:
+When linearizing this equation of motion for a small deviation from the equilibrium, we can regard that the $2^{\text{nd}}$ term on the left hand side is the $2^{\text{nd}}$ order in $\delta\rho$ and thus negligible:
 
 \[\frac{\partial}{\partial t}\left((\rho_0+\delta\rho)\bm{v}\right) + (\bm{v}\cdot\nabla)\left((\rho_0+\delta\rho)\bm{v}\right) = -\nabla P \]
 
@@ -178,16 +177,16 @@ From these two, we have a pair of equations which is satisfied by the displaceme
 
 So far, we have just described a classical equation of motion for the displacement field; in order to second-quantize this classical field, let us first introduce the Lagrangian which leads to this equation of motion:
 
-\[L_0 = \frac{1}{2}\sum_{i,j=1,2,3}\int d^3\bm{x}\int dt\left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_j}\frac{\partial d_i}{\partial x_j}\right]\]
+\[L_0 = \int dt\,\tilde L_0,\qquad
+\tilde L_0 = \frac{1}{2}\int d^3\bm{x}\left[\rho_m\sum_i\dot d_i^2-B\sum_{i,j}(\partial_jd_i)^2\right]\]
 
-Notice that
+After integration by parts, with vanishing boundary terms, the variation of the action is
 
-\[\int \left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_j}\frac{\partial d_i}{\partial x_j}\right] = \delta L_0\]
-\[\rho_m\delta d_i\left[\frac{\partial^2 d_i}{\partial t^2} - c^2\sum_{j = 1,2,3}\frac{\partial^2 d_i}{\partial x_j^2}\right] = \delta L_0 \]
+\[\delta L_0 = -\int dt\int d^3\bm{x}\sum_i\delta d_i\left[\rho_m\ddot d_i-B\sum_j\partial_j^2d_i\right].\]
 
 Under the $2$nd condition of rotation-free, the Lagrangian can be rewritten into the following:
 
-\[L_0 = \frac{1}{2}\sum_{i,j}\int d^3\bm{x}\int dt \left[\rho_m\frac{\partial d_i}{\partial t}\cdot\frac{\partial d_i}{\partial t} - B\frac{\partial d_i}{\partial x_i}\frac{\partial d_j}{\partial x_j}\right] (=\int dt \tilde{L}_0) \]
+\[\tilde L_0 = \frac{1}{2}\int d^3\bm{x}\left[\rho_m\sum_i\dot d_i^2-B\left(\sum_i\partial_id_i\right)^2\right].\]
 
 To see this, let us begin with the following identity:
 
@@ -215,7 +214,7 @@ So far, we have treated the classical action. To second-quantize this classical 
 
 Namely, we first introduce a momentum variable which is conjugate to the displacement field
 
-\[\Pi_j = \frac{\delta L_0}{\delta \dot{d}_j} = \rho_m\dot{d}_j \]
+\[\Pi_j = \frac{\delta \tilde L_0}{\delta \dot{d}_j} = \rho_m\dot{d}_j \]
 
 Or equivalently
 
@@ -223,7 +222,7 @@ Or equivalently
 
 with
 
-\[\tilde{\Pi}_j = \frac{\delta L_0}{\delta\dot{\tilde{d}}_j} = \dot{\tilde{d}}_j \]
+\[\tilde{\Pi}_j = \frac{\delta \tilde L_0}{\delta\dot{\tilde{d}}_j} = \dot{\tilde{d}}_j \]
 
 Then the Hamiltonian is given by
 
@@ -237,7 +236,11 @@ To quantize these field operators we suppose that $\tilde{\bf d}(\bf x)$ and $\t
 
 \[[\tilde{\Pi}_j({\bf x}),\tilde{\Pi}_m({\bf x'})] = [\tilde{\bf d}_j({\bf x}),\tilde{\bf d}_m({\bf x'})] = 0 \]
 
-\[[\tilde{\bf d}_j({\bf x}), \tilde{\Pi}_m({\bf x'})] = i\hbar\delta_{jm}\delta^3(\bf x-x') \]
+\[[\tilde{\bf d}_j({\bf x}), \tilde{\Pi}_m({\bf x'})] = i\hbar\delta^{\parallel}_{jm}({\bf x-x'}) \]
+
+Here the longitudinal projector is
+\[\delta^{\parallel}_{jm}({\bf x-x'})=\int\frac{d^3{\bf k}}{(2\pi)^3}\frac{k_jk_m}{k^2}e^{i{\bf k}\cdot({\bf x-x'})}.\]
+Only longitudinal modes are retained, so that this replaces the unconstrained $\delta_{jm}\delta^3({\bf x-x'})$.
 
 As we did in the chapter 1, it is useful to introduce their Fourier series:
 
@@ -267,7 +270,7 @@ In terms of these Fourier series, the Hamiltonian can be partially diagonalized.
 
 \[\begin{split}
 \hat{H}_0 &= \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k}) + \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3} c^2({\bf k}_j\tilde{\bf d}_j({\bf k}))({\bf k}_m\tilde{\bf d}_m(-{\bf k}))\\
-&=\int\frac{d^3{\bf k}}{(2\pi)^3}[\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k})+\underset{\omega_{\bf k}^2}{c^2{\bf k}^2}(\hat{\bf k}_j\tilde{\bf d}_j({\bf k}))(\hat{\bf k}_m\tilde{\bf d}_m(-{\bf k}))]
+&=\frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}[\tilde{\Pi}_j({\bf k})\tilde{\Pi}_j({-\bf k})+\underset{\omega_{\bf k}^2}{c^2{\bf k}^2}(\hat{\bf k}_j\tilde{\bf d}_j({\bf k}))(\hat{\bf k}_m\tilde{\bf d}_m(-{\bf k}))]
 \end{split}\]
 
 where $\hat{\bf k}_j \equiv {\bf k}_j/k,\quad k\equiv|\bf k|$.
@@ -294,7 +297,7 @@ With this in mind, we have
 
 \[\begin{split}
 \hat{H}_0 &=\frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\left[(\hat{\bf k}_j\tilde{\Pi}_j({\bf k})) (\hat{\bf k}_m\tilde{\Pi}_m({\bf -k})) + \omega_k^2 (\hat{\bf k}_j\tilde{\bf d}_j({\bf k}))(\hat{\bf k}_m\tilde{\bf d}_m(-{\bf k}))\right]\\
-&\equiv \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\left[\Pi^\dagger({\bf k})\Pi({\bf k}) + \omega_k^2\varphi^\dagger({\bf k})\varphi({\bf k})\right]
+&\equiv \frac{1}{2}\int\frac{d^3{\bf k}}{(2\pi)^3}\left[\tilde{\Pi}^\dagger({\bf k})\tilde{\Pi}({\bf k}) + \omega_k^2\tilde{\varphi}^\dagger({\bf k})\tilde{\varphi}({\bf k})\right]
 \end{split}\]
 
 where we define scalar-form operators
@@ -305,10 +308,10 @@ where we define scalar-form operators
 \tilde{\varphi}({\bf k})& = \hat{\bf k}_j\tilde{\bf d}_j({\bf k})
 \end{cases} \]
 
-\[\left(\begin{split}
+\[\left(\begin{aligned}
 \tilde{\varphi}^\dagger({\bf k})= \hat{\bf k}_j\tilde{\bf d}_j^\dagger({\bf k}) = \hat{\bf k}_j\tilde{\bf d}_j(-{\bf k}) = -\tilde{\varphi}(-\bf k)\\
 \tilde{\Pi}^\dagger({\bf k}) = \hat{\bf k}_j\tilde{\Pi}_j(-{\bf k}) = -\tilde{\Pi}(-{\bf k})
-\end{split}\right) \]
+\end{aligned}\right) \]
 
 These two operators satisfy the same commutation relation as in eq. \eqref{1.4.6}
 
@@ -320,8 +323,8 @@ These two operators satisfy the same commutation relation as in eq. \eqref{1.4.6
 Thus, following eq.\eqref{1.4.8}, we define the creation operator and annihilation operator as follows:
 
 \[\begin{split}
-a({\bf k}) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_k}{\hbar}}\tilde{\varphi}({\bf k})+\frac{i}{\sqrt{\omega_{\bf k}}}\tilde{\Pi}({\bf k})\right]\\
-a({\bf k})^\dagger &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_k}{\hbar}}\tilde{\varphi}^\dagger({\bf k})-\frac{i}{\sqrt{\omega_{\bf k}}}\tilde{\Pi}^\dagger({\bf k})\right]
+a({\bf k}) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_k}{\hbar}}\tilde{\varphi}({\bf k})+\frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde{\Pi}({\bf k})\right]\\
+a({\bf k})^\dagger &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega_k}{\hbar}}\tilde{\varphi}^\dagger({\bf k})-\frac{i}{\sqrt{\omega_{\bf k}\hbar}}\tilde{\Pi}^\dagger({\bf k})\right]
 \end{split} \]
 
 In fact, their commutation relations become as follows
@@ -398,7 +401,7 @@ and
 [c_{\bf k},c_{\bf k'}] = [c^\dagger_{\bf k},c^\dagger_{\bf k'}] = 0
 \end{cases}\]
 
-To summarize, the longitudinal acoustic wave is second quantized and is described by a sum of harmonic oscillator with boson field $\{c_{\bf k},c^\dagger_{\bf k}\}$. As is clear from this formulation, the total number of the bosons or (longitudinal acoustic) phonons describes how largely the elastic continuous media is deviated from the uniform distribution of the charged ions. For example, at the zero temperature, the continuous media reduces to the uniform distribution, so that the displacement field and its conjugate momentum always remain zero. This means that the total number of the phonons should be zero at the zero-temperature. At finite temperature, the positions of the ionic cores are temporally fluctuating due to the finite-temperature effect. This means that the total number of the phonons can be finite at a finite temperature. Thus, the total number of the phonons is \uline{{\bf NOT} an independent variable}, and is determined by the temperature and other variables. This situation is quite different from electrons or intrinsic boson particles whose total numbers are independent physical variables and can be in principle controlled by us. Accordingly, when it comes to the sonic description of the acoustic waves, the only independent system variables are temperature and the volume, and we have only to consider the canonical ensemble. The partition function of the canonical ensemble is given by
+To summarize, the longitudinal acoustic wave is second quantized and is described by a sum of harmonic oscillator with boson field $\{c_{\bf k},c^\dagger_{\bf k}\}$. As is clear from this formulation, the total number of the bosons or (longitudinal acoustic) phonons describes how largely the elastic continuous media is deviated from the uniform distribution of the charged ions. For example, at the zero temperature, the continuous media reduces to the uniform distribution, so that the expectation values of the displacement field and its conjugate momentum vanish, while their zero-point fluctuations remain finite. This means that the total number of the phonons should be zero at the zero-temperature. At finite temperature, the positions of the ionic cores are temporally fluctuating due to the finite-temperature effect. This means that the total number of the phonons can be finite at a finite temperature. Thus, the total number of the phonons is \uline{{\bf NOT} an independent variable}, and is determined by the temperature and other variables. This situation is quite different from electrons or intrinsic boson particles whose total numbers are independent physical variables and can be in principle controlled by us. Accordingly, when it comes to the sonic description of the acoustic waves, the only independent system variables are temperature and the volume, and we have only to consider the canonical ensemble. The partition function of the canonical ensemble is given by
 \[F = -k_BT\ln Z_f(T,V) = -k_BT\ln\trace\left[e^{-\beta\hat{H}_0}\right] = -k_BT\ln\prod_{\bf k}(1+e^{-\beta\hbar\omega_{\bf k}} + e^{-2\beta\hbar\omega_{\bf k}} + \cdots) = -k_BT\sum_{\bf k}\ln\frac{1}{1-e^{-\beta\hbar\omega_{\bf k}}} \]
 
 The entropy as a function of temperature is given by the derivative of $F$ with respect to $T$:
@@ -417,7 +420,7 @@ The specific heat is given by the derivative of the internal energy $U$ with res
 
 \[C_V = \left(\frac{\partial U}{\partial T}\right)_V = k_B\sum_{\bf k}\frac{({\beta\hbar\omega_{\bf k}})^2e^{\beta\hbar\omega_{\bf k}}}{[e^{\beta\hbar\omega_{\bf k}} - 1]^2} \]
 
-Now that the integrand here is a function of only $\omega_{\bf k}$, let us change the integral variable from the momentum ${\bf k}$ into $\omega_{\bf k}$. Since $\omega_{\bf k}$ is a linear function of $\bf k$: $\omega_{\bf k} = c\bf k$, we have
+Now that the integrand here is a function of only $\omega_{\bf k}$, let us change the integral variable from the momentum ${\bf k}$ into $\omega_{\bf k}$. Since $\omega_{\bf k}$ is a linear function of $\bf k$: $\omega_{\bf k} = c|{\bf k}|$, we have
 
 \[\sum_{\bf k} = V\int\frac{d^3\bf k}{(2\pi)^3} = \frac{V}{2\pi^2}\int k^2dk = \frac{V}{2\pi^2c^3}\int_0 \omega^2d\omega \]
 
@@ -469,7 +472,7 @@ where the operator denotes the electron creation/annihilation operator with spin
 &\\
 \delta\hat{\rho}({\bf x}) &\equiv-\rho_0\nabla\cdot\hat{\bf d}({\bf x})
 \end{cases}\]
-where ``$Z$'' is the valence of the ion.
+where ``$Z$'' is the valence of the ion. In this section $\rho_0$ denotes the equilibrium ion number density, so that $\rho_m=M\rho_0$. The screened potential $\tilde\varphi_{\text{ex}}$ below is produced by a source charge $Ze$; the potential per unit source charge is $\tilde\varphi_{\text{ex}}/(Ze)$.
 
 Using this decomposition, the interaction Hamiltonian is decomposed into
 
@@ -502,9 +505,9 @@ The $2$-nd term of the right hand side is the coulomb interaction between a test
 where $e\varphi^{\text{ex}}({\bf k})$ is the Fourier series of $e\varphi^{\text{ex}}({\bf x})$ here
 
 \[\begin{cases}
-e\varphi^{\text{ex}}({\bf x}) &= \frac{Ze}{x}\\
+\varphi^{\text{ex}}({\bf x}) &= \frac{Ze}{x}\\
 &\\
-e\varphi^{\text{ex}}({\bf k}) &= \frac{4\pi Ze}{k^2}
+\varphi^{\text{ex}}({\bf k}) &= \frac{4\pi Ze}{k^2}
 \end{cases}\]
 
 As such, the Fourier series of the resulting short-range potential is readily calculated as follows:
@@ -520,9 +523,9 @@ As such, the Fourier series of the resulting short-range potential is readily ca
 \begin{wrapfigure}{l}{4cm}
 \includegraphics[width = 4cm]{5-2-5.png}
 \end{wrapfigure}
-By taking Fourier transformation of the right hand side, we can explicitly calculate the function form of $\tilde\varphi_{\text{ex}}({\bf x})$. $\tilde\varphi_{\text{ex}}({\bf x})$ here shares the same denominator as $\delta\langle n({\bf k})\rangle$, so that the $\tilde\varphi_{\text{ex}}({\bf x})$ shares the same asymptotic behavior as $\delta\langle n({\bf k})\rangle$, which is like $x^{-3}\sin(k_F|x|)$. Compared to the Coulomb interaction, which decays as $1/x$, this interaction is definitely short-ranged one. In terms of this, the electron-phonon interaction in metals becomes like this:
+By taking Fourier transformation of the right hand side, we can explicitly calculate the function form of $\tilde\varphi_{\text{ex}}({\bf x})$. $\tilde\varphi_{\text{ex}}({\bf x})$ here shares the same denominator as $\delta\langle n({\bf k})\rangle$, so that the $\tilde\varphi_{\text{ex}}({\bf x})$ shares the same asymptotic behavior as $\delta\langle n({\bf k})\rangle$, which is like $x^{-3}\cos(2k_F|x|)$. Compared to the Coulomb interaction, which decays as $1/x$, this interaction is definitely short-ranged one. In terms of this, the electron-phonon interaction in metals becomes like this:
 
-\[H_{\text{el-ph}}^1\to\tilde H_{\text{el-ph}} = \int d^3{\bf x}d^3{\bf x'} \tilde\varphi_{\text{ex}}({\bf x - x'}) n_{\text{el}}({\bf x})\delta\rho_b({\bf x'})\]
+\[H_{\text{el-ph}}^1\to\tilde H_{\text{el-ph}} = -\frac{1}{Z}\int d^3{\bf x}d^3{\bf x'} \tilde\varphi_{\text{ex}}({\bf x - x'}) n_{\text{el}}({\bf x})\delta\rho_b({\bf x'})\]
 
 Since the explicit form of $\tilde\varphi_{\text{ex}}({\bf x})$ would be a bit complicated, having this kind of asymptotic behaviour, we usually approximately replace this short-range interaction by a properly normalized delta function
 
@@ -535,16 +538,16 @@ A &=\int d^3{\bf x}\tilde\varphi_{\text{ex}}({\bf x}) = \int d^3{\bf x}\int \fra
 &=\tilde\varphi_{\text{ex}}({\bf k} = 0) = \lim_{{\bf k}\to0}\left\{\frac{1}{1 - \Pi^0({\bf k},0)V_0({\bf k})}\varphi^{\text{ex}}({\bf k}) \right\}\\
 &=\lim_{{\bf k}\to0}\frac{\varphi^{\text{ex}}({\bf k})}{K_{\text{ring}}({\bf k},0)}\\
 &\quad \text{by\eqref{Eqs2.8.33}, and }\varphi^{\text{ex}}({\bf k}) \to \frac{4\pi Ze}{{\bf k}^2}\\
-&=\lim_{{\bf k}\to0}\frac{4\pi Ze}{k^2+\frac{2\alpha r_2}{\pi}k_F^2\left[1 - \frac{k_F}{k}(1-\frac{k^2}{4k_F^2})\ln\left|\frac{k_F - \frac{k}{2}}{k_F + \frac{k}{2}}\right|\right]}\\
-&\quad \text{where }\frac{2\alpha r_2}{\pi}k_F^2 = \frac{1}{2}q_{\text{TF}}^{2},\quad \left[1 - \frac{k_F}{k}(1-\frac{k^2}{4k_F^2})\ln\left|\frac{k_F - \frac{k}{2}}{k_F + \frac{k}{2}}\right|\right] = 2\\
+&=\lim_{{\bf k}\to0}\frac{4\pi Ze}{k^2+\frac{2\alpha r_s}{\pi}k_F^2\left[1 - \frac{k_F}{k}(1-\frac{k^2}{4k_F^2})\ln\left|\frac{k_F - \frac{k}{2}}{k_F + \frac{k}{2}}\right|\right]}\\
+&\quad \text{where }\frac{2\alpha r_s}{\pi}k_F^2 = \frac{1}{2}q_{\text{TF}}^{2},\quad \left[1 - \frac{k_F}{k}(1-\frac{k^2}{4k_F^2})\ln\left|\frac{k_F - \frac{k}{2}}{k_F + \frac{k}{2}}\right|\right] = 2\\
 &=4\pi Ze\cdot q_{\text{TF}}^{-2}
 \end{split} \]
 
 In terms of this, we finally have
 
 \[\begin{split}
-\tilde H_{\text{el-ph}} &= \frac{4\pi}{q_{\text{TF}}^2}\int d^3{\bf x} n_{\text{el}}({\bf x})\delta\rho_b({\bf x})\\
-&= +\frac{4\pi Ze^2}{q_{\text{TF}}^2}\int d^3{\bf x}\hat{\varphi}_{\alpha}^\dagger({\bf x})\hat{\varphi}_{\alpha}({\bf x})\cdot\underset{=\frac{1}{c}\left(\frac{\rho_0}{M}\right)^{1/2}}{\underline{\rho_0\nabla\cdot\hat{\bf d}({\bf x})}}
+\tilde H_{\text{el-ph}} &= -\frac{4\pi e}{q_{\text{TF}}^2}\int d^3{\bf x} n_{\text{el}}({\bf x})\delta\rho_b({\bf x})\\
+&= +\frac{4\pi Ze^2}{q_{\text{TF}}^2}\int d^3{\bf x}\hat{\psi}_{\alpha}^\dagger({\bf x})\hat{\psi}_{\alpha}({\bf x})\cdot\underset{=\frac{1}{c}\left(\frac{\rho_0}{M}\right)^{1/2}\hat\varphi({\bf x})}{\underline{\rho_0\nabla\cdot\hat{\bf d}({\bf x})}}
 \end{split} \]
 
 Let us define the scalar field $\hat\varphi(\bf x)$ like this, where `$M$' is the ion mass, and $c$ is the velocity of the longitudinal acoustic wave,
@@ -558,7 +561,7 @@ Let us define the scalar field $\hat\varphi(\bf x)$ like this, where `$M$' is th
 where
 
 \begin{align}\tag{B}\label{5B}
-\hat{H}_{\text{el-ph}} = \gamma\int d^3{\bf x}\hat{\psi}_{\alpha}^\dagger({\bf x})\hat{\psi}_{\alpha}({\bf x})\hbar\varphi({\bf x})
+\hat{H}_{\text{el-ph}} = \gamma\int d^3{\bf x}\hat{\psi}_{\alpha}^\dagger({\bf x})\hat{\psi}_{\alpha}({\bf x})\hat\varphi({\bf x})
 \end{align}
 
 with
@@ -648,7 +651,7 @@ First of all, the Wick's theorem suggests that the $2n$-th order in $\hat{H}_1$ 
 \begin{wrapfigure}{l}{4cm}
 \includegraphics[width = 4cm]{5-2-l5.png}
 \end{wrapfigure}
-\noindent (a) Construct all topologically distinct Feynman diagrams, where the basis vertex is composed of two electron lines and one phonon(electron) line meeting at the vertex.
+\noindent (a) Construct all topologically distinct Feynman diagrams, where the basis vertex is composed of two electron lines and one phonon line meeting at the vertex.
 
 \noindent (b) Assign $G_{\alpha\beta}^0(p)$ for each electron line and assign $D^0(q)$ for each phonon line, where the non-interacting electron Green's function is given by the same function as before
 

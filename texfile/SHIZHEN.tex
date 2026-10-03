@@ -20,15 +20,15 @@ To this end, we will consider a spin$=\frac{1}{2}$ fermion system in a static sp
 Here we assumed the spin-independent interaction potential for simplicity.
 
 Within the self-consistent Hartree-Fock approximation, the Dyson equation is given by these two equations:
-\[ \left \{ \begin{split}
+\[ \left \{ \begin{aligned}
 G(x,y)&= G^{0}(x,y) + \int \mathrm{d}^{4}x_{1} \mathrm{d}^{4}x_{1}^{'} \ G^{0}(x,x_{1}) \Sigma^{\bigstar}% a star character
 (x_{1},x_{1}^{'})G(x_{1}^{'},y)\\
 \hbar \Sigma^{\bigstar}
 (x_{1},x_{1}^{'})&= -i \delta(t_{1}-t_{1}^{'}) \times 
-\left[ \delta(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \ 2 \int \mathrm{d}^{3}x_{2} \left( \begin{split} &G(\mathbf{x}_{2},t_{2};\mathbf{x}_{2},t_{2}+0) V(\mathbf{x}_{1}-\mathbf{x}_{2}) 
-\\- &G(\mathbf{x}_{1},t_{1};\mathbf{x}_{1}^{'},t_{1}+0) V(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \end{split}\right)
+\left[ \delta(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \ 2 \int \mathrm{d}^{3}x_{2} \left( \begin{aligned} &G(\mathbf{x}_{2},t_{2};\mathbf{x}_{2},t_{2}+0) V(\mathbf{x}_{1}-\mathbf{x}_{2})
+\\- &G(\mathbf{x}_{1},t_{1};\mathbf{x}_{1}^{'},t_{1}+0) V(\mathbf{x}_{1}-\mathbf{x}_{1}^{'}) \end{aligned}\right)
 \right]
-\end{split}\right. \]
+\end{aligned}\right. \]
 Where the factor $2$ comes from the spin summations.
 
 Now, it is convenient to use a Fourier representation.
@@ -50,10 +50,10 @@ G(\mathbf{x},\mathbf{y};\omega)=G^{0}(\mathbf{x},\mathbf{y};\omega)+\int \mathrm
 Let us also introduce the orthonormal eigenfunctions of $H_{0}$.
 \[ H_{0} \ \varphi_{j}^{0}(\mathbf{x}) \equiv \left[ -\frac{\hbar^{2}\nabla^{2}}{2m} + U(\mathbf{x}) \right]\varphi_{j}^{0}(\mathbf{x}) = \epsilon_{j}\varphi_{j}^{0}(\mathbf{x}) \]
 In terms of  this eigenfunctions, the field operator in the interaction representation can be expanded as
-\[ \left \{ \begin{split}
+\[ \left \{ \begin{aligned}
 \psi(\mathbf{x},t) &= \sum_{j} \varphi_{j}(\mathbf{x})c_{j}\mathrm{e}^{-i\frac{\epsilon_{j}t}{\hbar}}\\
 \psi^{\dagger}(\mathbf{x},t) &= \sum_{j} \varphi^{*}_{j}(\mathbf{x})c_{j}^{\dagger}\mathrm{e}^{+i\frac{\epsilon_{j}t}{\hbar}}
-\end{split} \right. \]
+\end{aligned} \right. \]
 where we used \[\mathrm{e}^{+i\frac{H_{0}t}{\hbar}}c_{j}\mathrm{e}^{-i\frac{H_{0}t}{\hbar}}=\mathrm{e}^{-i\frac{\epsilon_{j}t}{\hbar}}c_{j}\]
 In terms of them, the non-interacting Green's function can be calculated as
 \[ \begin{split}
@@ -174,7 +174,7 @@ To be specific, we assume that the repulsive interaction is described by a squar
 where positive $V_0$ means repulsive and ``$a$" represents an interaction range.
 
 ``strong short-range repulsive interaction" means that ``$V_0$" will be taken to be sufficiently large, but ``$a$" will be taken to be small.
-\[ \left \{ \begin{split} V_0 &\rightarrow \text{large} \\ a &\rightarrow \text{small} \end{split} \right. \]
+\[ \left \{ \begin{aligned} V_0 &\rightarrow \text{large} \\ a &\rightarrow \text{small} \end{aligned} \right. \]
 
 For the kinetic energy part, we simply assume the free electron Hamiltonian
 \[H_0 = \sum_\alpha \int \mathrm{d}^3 \mathbf{x} \psi_\alpha^\dagger (\mathbf{x}) \left[-\frac{\hbar^2\nabla^2_{\mathbf{x}}}{2m}\right]\psi_\alpha(\mathbf{x})\]
@@ -449,8 +449,8 @@ We also introduce the relative wave vectors as
 \begin{equation} \label{Eqs2.7.10} p \equiv \frac{1}{2}(p_1-p_2), p^{'} \equiv \frac{1}{2}(p_3-p_4) \end{equation}
 
 In terms of these three wave vectors, $p_1,p_2,p_3,p_4$ are given as follows.
-\begin{equation} \label{Eqs2.7.11} \left \{ \begin{split} &p_1 = \frac{1}{2}P+p, p_2 = \frac{1}{2}P-p \\ &p_3 = \frac{1}{2}P+p^{'} , p_4 = \frac{1}{2}P-p^{'}
-\end{split} \right. \end{equation}
+\begin{equation} \label{Eqs2.7.11} \left \{ \begin{aligned} &p_1 = \frac{1}{2}P+p, p_2 = \frac{1}{2}P-p \\ &p_3 = \frac{1}{2}P+p^{'} , p_4 = \frac{1}{2}P-p^{'}
+\end{aligned} \right. \end{equation}
 
 Let us integrate $Q(p_1,p_2;p_3,p_4)$ over the frequency component of the former relative wave vector $(p)$:\footnote{$p \equiv (\mathbf{p},p_0), p^{'} \equiv (\mathbf{p}^{'},p_0^{'})$}
 \begin{equation} \label{2.7.12} \begin{split}
@@ -577,10 +577,10 @@ If the scattering potential has no bound state, then this eigenstate supports a 
 
 In the momentum representation,
 \begin{equation*} \label{Eqs2.7.A.6} \tag{2.7.A.6}
-\left\{ \begin{split}
+\left\{ \begin{aligned}
 \psi_{\mathbf{k}} (\mathbf{p}) &\equiv \int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-i \mathbf{p} \cdot \mathbf{x}} \psi_{\mathbf{k}} (\mathbf{x})\\
 v(\mathbf{p}) & \equiv \int \mathrm{d}^3 \mathbf{x} \mathrm{e}^{-i \mathbf{p} \cdot \mathbf{x}} v(\mathbf{x})
-\end{split} \right.
+\end{aligned} \right.
 \end{equation*}
 
 This equation can be rewritten as
@@ -605,7 +605,7 @@ According to this completeness relation, this satisfies the corresponding comple
 
 When the norm of the outgoing-wave momentum($|\mathbf{k}| = |\mathbf{k}^{'}|$) and that of the incident wave is the same, the scattering amplitude is calculated by ``the method of partial wave":\footnote{$\mathrm{P}_l(x)$ is the Legendre polynomial.}
 \begin{equation*} \label{Eqs2.7.A.10} \tag{2.7.A.10}
-f(\mathbf{k},\mathbf{k}^{'}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} \mathrm{e}^{i \delta_l} sin(\delta_l) \mathrm{P}_l (cos\theta)
+f(\mathbf{k},\mathbf{k}^{'}) = \sum_{l=0}^{\infty} \frac{2l+1}{k} \mathrm{e}^{i \delta_l} \sin(\delta_l) \mathrm{P}_l (\cos\theta)
 \end{equation*}
 
 where $\theta$ is angle subtended by $\mathbf{k}$ and $\mathbf{k}^{'}$ and $k = |\mathbf{k}| = |\mathbf{k}^{'}|$.
@@ -641,8 +641,8 @@ where $\psi_{\mathbf{k}}(\mathbf{p})$ is given by eq.(\ref{Eqs2.7.A.7}), a solut
 
 Here the scattering potential $V(\mathbf{x})$ is replaced by the interaction potential between two particles $V_0(\mathbf{x})$
 \begin{equation} \label{Eqs2.7.21}
-\left\{ \begin{split} V(\mathbf{x}) &\rightarrow V_0(\mathbf{x})\\ v(\mathbf{q}) &\rightarrow v_0(\mathbf{q})
-\end{split} \right.
+\left\{ \begin{aligned} V(\mathbf{x}) &\rightarrow V_0(\mathbf{x})\\ v(\mathbf{q}) &\rightarrow v_0(\mathbf{q})
+\end{aligned} \right.
 \end{equation}
 
 With this replacement in mind, we then recycle all the results obtained in the scattering problem here.
@@ -736,11 +736,11 @@ Namely, all that is necessary is the proper self-energy, which is given by this:
 \[ \hbar \Sigma^{\bigstar}(p) = -2 i \int \frac{\mathrm{d}^4 k}{(2\pi)^4} G^0(k)\Gamma(p,k;p,k) + i \int \frac{\mathrm{d}^4 k}{(2\pi)^4}G^0(k)\Gamma(k,p;p,k) \]
 
 Using
-\[ \left. \begin{split}
+\[ \left. \begin{aligned}
 P =& p_1 + p_2 = p_3 + p_4\\
 p =& \frac{1}{2}(p_1-p_2)\\
 p^{'} =& \frac{1}{2}(p_3-p_4)
- \end{split} \right\} \ref{Eqs2.7.9} \& \ref{Eqs2.7.10} \& \ref{Eqs2.7.11} \]
+ \end{aligned} \right\} \ref{Eqs2.7.9} \& \ref{Eqs2.7.10} \& \ref{Eqs2.7.11} \]
 we have
 \[\Gamma(p_1,p_2;p_3,p_4) \rightarrow \Gamma(p,p^{'},P)\]
 
@@ -774,7 +774,7 @@ Using eq.(\ref{Eqs2.7.23}) and eqs. (\ref{Eqs2.7.A.10}) \& (\ref{Eqs2.7.A.11}), 
 
 From eqs. (\ref{Eqs2.7.A.10}) \& (\ref{Eqs2.7.A.11}), the scattering amplitude can be expanded in small $k_F a$ as this, for the case with $|\mathbf{k}|=|\mathbf{k}^{'}|$.
 \footnote{the underlined part: see eq. (\ref{Eqs2.7.A.11}).}
-\[ \begin{split} f(\mathbf{k},\mathbf{k}^{'}) =& \sum_{l=0}^{+\infty} \frac{2l+1}{k} \mathrm{e}^{i \delta_l} sin \delta_l \mathrm{P}_l(cos\theta)\\
+\[ \begin{split} f(\mathbf{k},\mathbf{k}^{'}) =& \sum_{l=0}^{+\infty} \frac{2l+1}{k} \mathrm{e}^{i \delta_l} sin \delta_l \mathrm{P}_l(\cos\theta)\\
 =& k^{-1} (1+i \delta_0) \delta_0 + \underline{o(k^{-1} \cdot (k a)^3)}\\
 \xlongequal{\ref{Eqs2.7.A.11}}& -a + i k a^2 + o(k^2 a^3)
 \end{split} \]
@@ -989,12 +989,12 @@ From which we obtain
 This is the ground state energy given perturbatively in small $k_F a$. Clearly the first term is just a ground state energy in the non-interacting limit, while the next two terms are correction to this.
 
 Especially, the 2nd order correction was originally obtained by Huang and Yang and Lee and Yang, prior to Galitskii.
-\[ \left\{ \begin{split}
+\[ \left\{ \begin{aligned}
 \text{K.Huang \& C.N.Yang Phy.Rev.\underline{105} 767 (1957)}\\
 \text{T.D.Lee \& C.N.Yang Phy.Rev.\underline{105} 1119(1957)}
-\end{split} \right. \]
+\end{aligned} \right. \]
 
-\section{Ring approximation: High density Fermi gas with long-range Coulomb interaction}%wsz 2-8
+\section[Ring approximation for the electron gas]{Ring approximation: High density Fermi gas with long-range Coulomb interaction}%wsz 2-8
 
 The 2nd system considered is a degenerate, high-density electron gas with long-range Coulomb interaction.
 The most straightforward approximation approach is to sum up all the leading order terms in the proper self-energy.
@@ -1039,10 +1039,10 @@ where the ground state energy in the non-interacting limit, $E_0(\lambda=0)$, is
 As such we have only calculate the integrand as a function of $\lambda$.
 
 To do this explicitly, let us restrict the system studied here to a spatially homogeneous Fermi system with a spin-independent static interaction potential. Namely,
-\[ \left\{ \begin{split}
+\[ \left\{ \begin{aligned}
 \hat{H}_0 =& \sum_{\alpha} \int \mathrm{d}^3 \mathbf{x} \psi_\alpha^\dagger(\mathbf{x})\left[ - \frac{\hbar^2\nabla_{\mathbf{x}}^2}{2m} \right] \psi_\alpha(\mathbf{x})\\
 \hat{H}_1 =& \frac{1}{2}\sum_{\alpha,\beta} \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d}^3 \mathbf{x}^{'} V(\mathbf{x}-\mathbf{x}^{'})\psi_\alpha^\dagger(\mathbf{x}) \psi_\beta^\dagger(\mathbf{x}^{'}) \times\psi_\beta(\mathbf{x}^{'})\psi_\alpha(\mathbf{x})
-\end{split}\right. \]
+\end{aligned}\right. \]
 
 \[ \begin{split}
 \langle \Psi_0(\lambda)  | \lambda \hat{H}_1(\lambda) |  \Psi_0(\lambda)  \rangle \equiv& \langle\hat{H}_1\rangle_\lambda\\
@@ -1576,8 +1576,8 @@ using this, the real part is given by
 By making $\omega$ to be dimensionless variable and measuring all wave vectors in the unit of $k_F$;
 \begin{equation} \label{Eqs2.8.18}
 \nu = \frac{m}{\hbar k_F^2} \omega \qquad
-\left( \begin{split} \mathbf{q}_{old} =& k_F \mathbf{q}_{new}\\
-\mathbf{k}_{old} =& k_F \mathbf{k}_{new}  \end{split}\right)
+\left( \begin{aligned} \mathbf{q}_{old} =& k_F \mathbf{q}_{new}\\
+\mathbf{k}_{old} =& k_F \mathbf{k}_{new}  \end{aligned}\right)
 \end{equation}
 
 we have
@@ -1775,16 +1775,16 @@ Thus
 
 To summarize, so far, the imaginary part can be given as follows
 \begin{equation} \label{Eqs2.8.24}
-\text{Im} \Pi^0(q,\nu) = \left\{ \begin{split}
-&-\frac{m k_F}{\hbar^2} \frac{1}{4\pi q} \left[ 1-\left( \frac{\nu}{q} - \frac{q}{2} \right)^2 \right] \qquad \left( \begin{split}
+\text{Im} \Pi^0(q,\nu) = \left\{ \begin{aligned}
+&-\frac{m k_F}{\hbar^2} \frac{1}{4\pi q} \left[ 1-\left( \frac{\nu}{q} - \frac{q}{2} \right)^2 \right] \qquad \left( \begin{aligned}
 &(i) q > 2 \quad\&\quad \frac{q^2}{2} - q\leq \nu \leq \frac{q^2}{2} + q\\
 &or\\
 &(ii) q < 2 \quad\&\quad -\frac{q^2}{2} + q \leq \nu \leq \frac{q^2}{2} + q
-\end{split}  \right)\\
+\end{aligned}  \right)\\
 &-\frac{m k_F}{\hbar^2} \frac{1}{4\pi q} 2\nu \qquad 
 \left( (iii) q < 2 \quad\&\quad 0 \leq \nu \leq -\frac{q^2}{2}+q \right)\\
 &0\qquad  (otherwise)
-\end{split} \right.
+\end{aligned} \right.
 \end{equation}
 
 When viewed as a function of $\nu$, the Imaginary part can be drawn like this:
@@ -1854,8 +1854,8 @@ More specifically, we take $q$ \& $\nu$ to be zero simultaneously, while the rat
 \begin{center}Fixed $\frac{\nu}{q} \equiv x$, while $q\rightarrow 0$ \end{center}
 
 This limit corresponds to this case, so that the imaginary part is given by
-\[ Im\Pi^0(q,v=q x) = \left\{ \begin{split}&-\frac{m k_F}{\hbar^2} \cdot \frac{1}{4\pi q} 2\nu \quad (0\leq \nu \leq q)\\
-&0 \quad (q \leq \nu) \end{split} \right. \]
+\[ Im\Pi^0(q,v=q x) = \left\{ \begin{aligned}&-\frac{m k_F}{\hbar^2} \cdot \frac{1}{4\pi q} 2\nu \quad (0\leq \nu \leq q)\\
+&0 \quad (q \leq \nu) \end{aligned} \right. \]
 
 \begin{equation*} \label{Eqs2.8.27.a} \tag{2.8.27.a}
 \text{Im} \Pi^0(q,\nu=q x) = -\frac{m k_F}{\hbar^2}\frac{x}{2\pi} \theta(1-x)
@@ -1985,10 +1985,10 @@ expressions for the polarization part obtained in the dynamic limit and the inte
 One can also confirm that the expression in the intermediate limit(eq.(\ref{Eqs2.8.27.a}) \& eq.(\ref{Eqs2.8.27.b})), includes that of the dynamic limit(eq.(\ref{Eqs2.8.26.a}) \& eq.(\ref{Eqs2.8.26.b})) as a limiting situation.
 
 Therefore, we may use the expression obtained in the intermediate limit,
-\[\left\{ \begin{split}
+\[\left\{ \begin{aligned}
 \text{Im} \Pi^0(|\mathbf{q}|, \nu = |\mathbf{q}| x) =& - \frac{m k_F}{\hbar^2} \frac{x}{2\pi} \theta(1-x)\\
 \text{Re} \Pi^0(|\mathbf{q}|, \nu = |\mathbf{q}| x) =& \frac{m k_F}{\hbar^2}\frac{1}{2\pi^2}\left\{ -2 + x \ln\left| \frac{1+x}{1-x} \right| \right\}
-\end{split} \right.\]
+\end{aligned} \right.\]
 
 Now that the energy must be always real-valued, we only focus on the real part of the right hand side.
 
@@ -2057,35 +2057,35 @@ Since $K_r$ depends on the norm of $\mathbf{q}^{'}$ and it is an even function o
 
 The energy must be real-valued, so that we focus only on the imaginary part of this parenthesis.
 \begin{equation} \label{Eqs2.8.37}
-\epsilon_r = \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} q^2 \cdot \mathrm{d}q \int_0^{+\infty} \mathrm{d}\nu \left\{ tan^{-1}\left( \frac{\text{Im} K_r(q,\nu)}{\text{Re} K_r(q,\nu)} \right) - \text{Im} K_r(q,\nu) \right\}
+\epsilon_r = \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{+\infty} q^2 \cdot \mathrm{d}q \int_0^{+\infty} \mathrm{d}\nu \left\{ \tan^{-1}\left( \frac{\text{Im} K_r(q,\nu)}{\text{Re} K_r(q,\nu)} \right) - \text{Im} K_r(q,\nu) \right\}
 \end{equation}
 
 with
 \begin{equation} \label{Eqs2.8.38}
-log(\text{Re} K + i \text{Im} K) = \log \sqrt{\text{Re} K^2 + \text{Im} K^2} + i tan^{-1} \left( \frac{\text{Im} K}{\text{Re} K} \right)
+log(\text{Re} K + i \text{Im} K) = \log \sqrt{\text{Re} K^2 + \text{Im} K^2} + i \tan^{-1} \left( \frac{\text{Im} K}{\text{Re} K} \right)
 \end{equation}
 
 In order to see how the singular behaviour of the integrand at $q=0$ is removed by the summation of the ring-diagrams, we separate this momentum integral into two parts:
 \begin{eqnarray}
 \epsilon_r =& \epsilon_{r,1} + \epsilon_{r,2} \nonumber\\
-\epsilon_{r,1} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{q_c} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ tan^{-1}\left( \frac{\text{Im} K}{\text{Re} K} \right) - \text{Im} K  \right\} \label{Eqs2.8.39}\\
-\epsilon_{r,2} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_{q_c}^{+\infty} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ tan^{-1}\left( \frac{\text{Im} K}{\text{Re} K} \right) - \text{Im} K  \right\} \label{Eqs2.8.40}
+\epsilon_{r,1} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_0^{q_c} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ \tan^{-1}\left( \frac{\text{Im} K}{\text{Re} K} \right) - \text{Im} K  \right\} \label{Eqs2.8.39}\\
+\epsilon_{r,2} =& \frac{3}{2\pi \alpha^2 r_S^2} \int_{q_c}^{+\infty} q^2 \cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} \nu \left\{ \tan^{-1}\left( \frac{\text{Im} K}{\text{Re} K} \right) - \text{Im} K  \right\} \label{Eqs2.8.40}
 \end{eqnarray}
 
 $\epsilon_{r,2}$ is free from infrared divergence, so that it results in a finite contribution.
 
 To evaluate $\epsilon_{r,1}$, we again choose $q_c$ to be sufficiently smaller than 1, so that the integrand can be evaluated in terms of eqs.
 \begin{equation} \label{Eqs2.8.41} \begin{split}
-\epsilon_{r,1} =& \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3\cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} x \left\{ tan^{-1}\left[ \frac{2\alpha r_S x \theta(1-x)}{q^2+2\alpha r_S f(x)} \right] - \frac{2\alpha r_S x \theta(1-x)}{q^2} \right\}\\
-=& \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3 \cdot \mathrm{d} q \int_0^{1} \mathrm{d} x \left\{ tan^{-1}\left[ \frac{2\alpha r_S x}{q^2+2\alpha r_S f(x)} \right] - \frac{2\alpha r_S x}{q^2} \right\}\\
+\epsilon_{r,1} =& \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3\cdot \mathrm{d} q \int_0^{+\infty} \mathrm{d} x \left\{ \tan^{-1}\left[ \frac{2\alpha r_S x \theta(1-x)}{q^2+2\alpha r_S f(x)} \right] - \frac{2\alpha r_S x \theta(1-x)}{q^2} \right\}\\
+=& \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3 \cdot \mathrm{d} q \int_0^{1} \mathrm{d} x \left\{ \tan^{-1}\left[ \frac{2\alpha r_S x}{q^2+2\alpha r_S f(x)} \right] - \frac{2\alpha r_S x}{q^2} \right\}\\
 &+\frac{3}{2\alpha^2 r_S^2} \int_0^{q_c} q^3 \cdot\mathrm{d}q \int_1^{+\infty} \mathrm{d} x \theta(-q^2-2\alpha r_S f(x))
 \end{split}\end{equation}
 
 where $\theta$ denotes the step function:
-\[\theta(x) = \left\{ \begin{split} 1 \quad x> 0\\
-0 \quad x<0 \end{split} \right.\]
+\[\theta(x) = \left\{ \begin{aligned} 1 \quad x> 0\\
+0 \quad x<0 \end{aligned} \right.\]
 
-The second term is because $tan^{-1}(\frac{K_2}{K_1})$ takes $\pi$, when $K_2=0$ and $K_1$ is negative.
+The second term is because $\tan^{-1}(\frac{K_2}{K_1})$ takes $\pi$, when $K_2=0$ and $K_1$ is negative.
 
 The singular behaviour of the integrand in small $q$ regime is expected from the former part.
 
@@ -2098,7 +2098,7 @@ In fact, when we expand the former term with respect to $\alpha r_S \propto e^2$
 where the first term is nothing but $\epsilon_2^{r,1}$(given in eq.(\ref{Eqs2.8.9.d})) which exhibits logarithmic divergence at $q=0$.
 
 However, when we sum up all the ring-type diagram, we have this:
-\[ \epsilon_{r,1} = \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3 \cdot \mathrm{d} q \int_0^1 \mathrm{d} x \underline{\left\{ tan^{-1}\left[ \frac{2\alpha r_S x}{q^2 + 2\alpha r_S f(x)} \right] -\frac{2\alpha r_S x}{q^2} \right\}} + \ldots \]
+\[ \epsilon_{r,1} = \frac{3}{2\pi \alpha^2 r_S^2}\int_0^{q_c} q^3 \cdot \mathrm{d} q \int_0^1 \mathrm{d} x \underline{\left\{ \tan^{-1}\left[ \frac{2\alpha r_S x}{q^2 + 2\alpha r_S f(x)} \right] -\frac{2\alpha r_S x}{q^2} \right\}} + \ldots \]
 
 in which the $q^{-4}$ dependence of this underlined part is cut off for $q^2 < 2 \alpha r_S f(x)$.
 
@@ -2259,11 +2259,11 @@ D^R(\mathbf{x},t;\mathbf{x}^{'},t^{'}) = D^R(\mathbf{x}-\mathbf{x}^{'},t-t^{'})
 
 So that we can take the Fourier transform of this(...) with
 \begin{equation} \label{Eqs3.1.14}
-\left\{ \begin{split}
+\left\{ \begin{aligned}
 \varphi^{ex}(\mathbf{k},\omega) \equiv& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-i \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{i \omega t} \varphi^{ex}(\mathbf{x},t)\\
 \delta \langle \hat{n}(\mathbf{k},\omega) \rangle =& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-i \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{i \omega t} \delta \langle \hat{n}(\mathbf{x},t) \rangle\\
 D^R(\mathbf{k},\omega) =& \int \mathrm{d}^3 \mathbf{x} \int \mathrm{d} t\cdot \mathrm{e}^{-i \mathbf{k} \cdot \mathbf{x}} \mathrm{e}^{i \omega t} D^R(\mathbf{x},t)
-\end{split} \right.
+\end{aligned} \right.
 \end{equation}
 
 With this, we have
@@ -2324,10 +2324,10 @@ Since the summation over $|\Psi_n\rangle$ is taken over an excited state of $H$,
 
 Therefore, these two expressions lead to the following general relation between $D^R(\mathbf{k},\omega)$ and $D(\mathbf{k},\omega)$.
 \footnote{$sgn \omega \overset{def}{\equiv} \frac{\omega}{|\omega|}$}
-\begin{equation} \label{Eqs3.1.18} \left\{ \begin{split}
+\begin{equation} \label{Eqs3.1.18} \left\{ \begin{aligned}
 \text{Re} D^R(\mathbf{k},\omega) =& \text{Re} D(\mathbf{k},\omega)\\
 \text{Im} D^R(\mathbf{k},\omega) =& sgn(\omega) \cdot \text{Im} D(\mathbf{k},\omega)
-\end{split}\right.\end{equation}
+\end{aligned}\right.\end{equation}
 
 Using these relation, we can calculate the linear response function out of the time-ordered density-density correlation function.
 
@@ -2419,7 +2419,7 @@ In terms of this, the induced charge density is given by
 =&-\frac{Z e}{2\pi^2 x} \int \mathrm{d} q \cdot q sin (qx)\frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}
 \end{split} \]
 \begin{equation} \label{Eqs3.1.28}
-\delta \langle \rho(\mathbf{x}) \rangle = -\frac{Z e}{4\pi^2 x} \int_{-\infty}^{+\infty} \mathrm{d} q \cdot q sin(qx) \frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}
+\delta \langle \rho(\mathbf{x}) \rangle = -\frac{Z e}{4\pi^2 x} \int_{-\infty}^{+\infty} \mathrm{d} q \cdot q \sin(qx) \frac{q_{TF}^2 g(q/k_F)}{q^2 + q_{TF}^2 g(q/k_F)}
 \end{equation}
 
 Since $g(x)$ is a function of order unit, the second term in the denominator becomes important only when $q \ll q_{TF}$.
@@ -2562,7 +2562,7 @@ Similarly, we can also calculate the other contour integral.
 Then, substituting these two into eq.(\ref{Eqs3.1.32}), we finally obtain the leading-order asymptotic form of the induced charge density.
 \begin{equation} \label{Eqs3.1.36} \begin{split}
 \delta \langle \rho(\mathbf{x}) \rangle =& -\frac{Z e}{4\pi^2 x i} \times \frac{2\pi q_{TF}^2 k_F^2}{\left( 4 k_F^2 + \frac{q_{TF}^2}{2} \right)^2} \frac{1}{x^2} \left\{ -i e^{2i k_F x} -i \mathrm{e}^{-2i k_F x} \right\} + o(\frac{1}{x^4})\\
-=& \frac{Z e}{\pi} \frac{2 \xi}{[4+\xi]^2} \frac{cos(2 k_F x)}{x^3} + o(\frac{1}{x^4})\quad\text{(for $x \rightarrow +\infty$)}
+=& \frac{Z e}{\pi} \frac{2 \xi}{[4+\xi]^2} \frac{\cos(2 k_F x)}{x^3} + o(\frac{1}{x^4})\quad\text{(for $x \rightarrow +\infty$)}
 \end{split}\end{equation}
 
 where $\xi \equiv \frac{q_{TF}^2}{2 k_F^2}$.
@@ -2579,7 +2579,7 @@ From physical point of view, this long-range oscillation in the screening charge
 
 This oscillation behaviour in correlation functions are also called as Friedel oscillation and have been as a broadening of nuclear magnetic resonance in dilute alloys.
 
-Similar effect is also known as the RKKY interaction in dilute magnetic alloys, where conduction electrons induce an indirect magnetic interaction between magnetic impurities of the form of $x_{ij}^{-3} cos(2 k_F x_{ij})$, where $x_{ij}$ denotes a spatial distance between the two magnetic impurities.
+Similar effect is also known as the RKKY interaction in dilute magnetic alloys, where conduction electrons induce an indirect magnetic interaction between magnetic impurities of the form of $x_{ij}^{-3} \cos(2 k_F x_{ij})$, where $x_{ij}$ denotes a spatial distance between the two magnetic impurities.
 \end{itemize}
 \begin{center}--------------------------\end{center}
 
@@ -2587,7 +2587,7 @@ So far, we have discussed about how a test charge introduced in an electron gas 
 
 Let us next discuss about collective modes in degenerate electron gas and that in imperfect Fermi gas.
 
-\section{Collective Modes in degenerate electron gas and imperfect Fermi gas -- plasma oscillation \& zero sound mode}
+\section[Plasma oscillations and zero sound]{Collective Modes in degenerate electron gas and imperfect Fermi gas -- plasma oscillation \& zero sound mode}
 
 In section, we studied the Lehmann representation of single-particle Green's function, which tells us about single-particle excitations, called also as quasi-particle excitations.
 
@@ -2704,22 +2704,22 @@ while the imaginary part is given by
 
 Regarding that $\text{Im} \Pi^{0,R}$ \& $\gamma_{\mathbf{q}}$ are same order of small quantity, we can solve these equalities in the leading order in small $\gamma_{\mathbf{q}}$
 \begin{equation} \label{Eqs3.2.12}
-\left\{ \begin{split}
+\left\{ \begin{aligned}
 &1- Re\Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) V(\mathbf{q}) = 0\\
 &\gamma_{\mathbf{q}} = \text{Im} \Pi^{0,R}(\mathbf{q},\Omega_{\mathbf{q}}) \cdot 
  \left[ \frac{\partial \text{Re} \Pi^{0,R}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}}^{-1}
-\end{split} \right.
+\end{aligned} \right.
 \end{equation}
 
 The former equalities determines the dispersion relation of the collective mode, while the latter gives the inverse of the life time of the collective mode.
 
 Now that retarded polarization function and time-ordered one is related by eq.(\ref{Eqs3.1.18}), these two can be rewritten as follows
 \begin{equation*} \label{Eqs3.2.12'} \tag{3.2.12'}
-\left\{ \begin{split}
+\left\{ \begin{aligned}
 &1- Re\Pi^{0}(\mathbf{q},\omega) V(\mathbf{q}) = 0\\
 &\gamma_{\mathbf{q}} = sgn(\omega) \text{Im} \Pi^{0}(\mathbf{q},\omega) \cdot 
  \left[ \frac{\partial \text{Re} \Pi^{0}(\mathbf{q},\omega)}{\partial \omega} \right]_{\omega=\Omega_{\mathbf{q}}}^{-1}
-\end{split} \right.
+\end{aligned} \right.
 \end{equation*}
 
 For the long-wavelength limit($|\mathbf{q}| \rightarrow 0$), we have already evaluate an explicit form of $\Pi^0$(zero-th order polarization part)

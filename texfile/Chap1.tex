@@ -12,13 +12,13 @@ Suppose that an operator $a$ satisfy the relation:
 
 The problem is to find all eigenvalues and eigenvectors of a Hermitian operator $a^{\dagger}a$.
 
-We first note that all the eigenvalues are positive.
+We first note that all the eigenvalues are non-negative.
 
 If $|\alpha\rangle$ is a normalized eigenvector,
 
 \[a^{\dagger}a|\alpha\rangle = \alpha|\alpha\rangle \]
 
-its eigenvalue $\alpha$ is always positive
+its eigenvalue $\alpha$ is always non-negative
 
 \[\alpha = \langle\alpha| a^{\dagger}a|\alpha\rangle = ||a|\alpha\rangle||^2 \ge 0 \]
 
@@ -39,11 +39,11 @@ For this, we see that $a|\alpha\rangle$ is an eigenvector with eigenvalue $\alph
 Similar, $a^{\dagger}|\alpha\rangle$ is an eigenvector with eigenvalue $\alpha + 1$
 
 \[\begin{split}
-(a^{\dagger}a)\,a^{\dagger}|\alpha\rangle &= \left(a^{\dagger}a^{\dagger}a -a^{\dagger}\right)|\alpha\rangle \\
+(a^{\dagger}a)\,a^{\dagger}|\alpha\rangle &= \left(a^{\dagger}a^{\dagger}a +a^{\dagger}\right)|\alpha\rangle \\
 &=(\alpha + 1)a^{\dagger}|\alpha\rangle
 \end{split}\]
 
-The norm of $a|\alpha\rangle$ is $\alpha$,
+The squared norm of $a|\alpha\rangle$ is $\alpha$,
 
 \[||a|\alpha\rangle||^2 = \langle\alpha|a^{\dagger}a|\alpha\rangle = \alpha \]
 
@@ -84,7 +84,7 @@ By repeatedly applying $a^{\dagger}$ to vacuum state, we see that $(a^{\dagger})
 
 \[a^{\dagger}a(a^{\dagger})^n|0\rangle = n(a^{\dagger})^n|0\rangle \]
 
-The norm of this eigenvector is the factorial of $n$.
+The squared norm of this eigenvector is the factorial of $n$.
 
 \[\begin{split}
 \langle 0|(a)^n(a^{\dagger})^n|0\rangle &=  \langle 0|a^{n-1}\cdot \underset{1+a^{\dagger}a}{aa^{\dagger}}\cdot(a^{\dagger})^{n-1}|0\rangle\\
@@ -116,7 +116,7 @@ a|n\rangle &= \frac{1}{\sqrt{n!}}a(a^{\dagger})^n|0\rangle\\
 
 \[a^{\dagger}a|n\rangle = n|n\rangle \]
 
-The operator $a^{\dagger}$ and $a$ are called ``rasing'' and ``lowering'' operators respectively, because the raise and lower the eigenvalue or $a^{\dagger}a$.
+The operator $a^{\dagger}$ and $a$ are called ``raising'' and ``lowering'' operators respectively, because they raise and lower the eigenvalue of $a^{\dagger}a$.
 In the later application, $a^{\dagger}$ and $a$ are called ``creation'' and ``annihilation'' operators respectively.
 
 You might be afraid that the ground state ``$|0\rangle$'' is not necessarily unique, so that the states do not exhaust all the possible eigenstates of $a^{\dagger}a$.
@@ -203,7 +203,7 @@ which is expressed in terms of Hermite polynomial with integer index $n$.
 Our next application is a system of many harmonic oscillators, which consists of many particles with different mass. 
 
 \begin{align}
-H = \sum_i \frac{1}{2m_i}P_i^2+\sum_{i,j}V_{ij}Q_iQ_j
+H = \sum_i \frac{1}{2m_i}P_i^2+\frac{1}{2}\sum_{i,j}V_{ij}Q_iQ_j
 \end{align}
 
 where $Q_i$ and $P_i$ are canonical coordinates and momenta
@@ -214,7 +214,7 @@ where $Q_i$ and $P_i$ are canonical coordinates and momenta
 [Q_i,P_j] = i\hbar\delta_{ij}
 \end{cases}\]
 
-Since these two momentum operators can be exchanged freely, we can regard that $V_{ij}$ is real symmetric
+Since these coordinate operators commute, we can regard that $V_{ij}$ is real symmetric
 
 \[V_{ij} = V_{ji}\text{ real } \]
 
@@ -375,9 +375,9 @@ with
 
 Since $\varphi(x)$ and $\Pi(x)$ are hermitian, we have
 
-\[\varphi^\dagger(k) = \varphi(-k) \]
+\[\tilde{\varphi}^\dagger(k) = \tilde{\varphi}(-k) \]
 
-\[\Pi^\dagger(k) = \Pi(-k) \]
+\[\tilde{\Pi}^\dagger(k) = \tilde{\Pi}(-k) \]
 
 The commutation relations are
 
@@ -409,7 +409,7 @@ We next define annihilation and creation operators as follows,
 \begin{align}\label{1.4.8}
 \begin{split}
 a(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\varphi}(k)+\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]\\
-a^\dagger(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\varphi}(k)-\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(k)\right]
+a^\dagger(k) &= \frac{1}{\sqrt{2}}\left[\sqrt{\frac{\omega(k)}{\hbar}}\tilde{\varphi}(-k)-\frac{i}{\sqrt{\omega(k)\hbar}}\tilde{\Pi}(-k)\right]
 \end{split}
 \end{align}
 
@@ -418,7 +418,7 @@ Their commutation relations are calculated as follows,
 \[\begin{split}
 [a(k),a(k')] &= \frac{1}{2\hbar}\left[\sqrt{\omega_k}\tilde{\varphi}(k)+\frac{i}{\sqrt{\omega_k}} \tilde{\Pi}(k), \sqrt{\omega_{k'}}\tilde{\varphi}(k')+\frac{i}{\sqrt{\omega_{k'}}}\tilde{\Pi}(k')\right] \\
 &= \frac{1}{2\hbar}\sqrt{\frac{\omega_k}{\omega_{k'}}}i[\tilde{\varphi}(k),\tilde{\Pi}(k')] + \frac{1}{2\hbar}\sqrt{\frac{\omega_{k'}}{\omega_k}}i[\tilde{\Pi}(k),\tilde{\varphi}(k')] \\
-&=(-1)(2\pi)^2\delta^2(k+k')+(2\pi)^2\delta^2(k+k')= 0 
+&=-\frac{1}{2}(2\pi)^2\delta^2(k+k')+\frac{1}{2}(2\pi)^2\delta^2(k+k')= 0
 \end{split}\]
 
 \[[a^\dagger(k),a^\dagger(k')] = 0 \]
@@ -432,13 +432,13 @@ Their commutation relations are calculated as follows,
 If we write $H$ in terms of $a \& a^\dagger$, we obtain
 
 \begin{align}
-H = \frac{1}{2}\int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)[a^\dagger(k)a(k)+a(k)a^\dagger(k)] = \frac{1}{2}\int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)a^\dagger(k)a(k)+C
+H = \frac{1}{2}\int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)[a^\dagger(k)a(k)+a(k)a^\dagger(k)] = \int \frac{d^2 k}{(2\pi)^2}\hbar\omega(k)a^\dagger(k)a(k)+C
 \end{align}
 
 Thus, eigenstate of $H$ is given by the repeated application of $a^\dagger(k)$ onto the ground state\footnote{Regarding these energy units as particles respectively, we can think of these excited states as one-particle state, two-particle state, and so on. }
 
-\[|k_1\rangle = a^\dagger(k_1)|0\rangle,\quad (E=\omega(k_1)) \]
-\[|k_1,k_2\rangle = a^\dagger(k_1)a^\dagger(k_2)|0\rangle,\quad (E=\omega(k_1)+\omega(k_2)) \]
+\[|k_1\rangle = a^\dagger(k_1)|0\rangle,\quad (E-E_0=\hbar\omega(k_1)) \]
+\[|k_1,k_2\rangle = a^\dagger(k_1)a^\dagger(k_2)|0\rangle,\quad (E-E_0=\hbar\omega(k_1)+\hbar\omega(k_2)) \]
 
 while the ground state satisfies
 
@@ -783,7 +783,7 @@ To see that this equality holds true for both boson and fermion cases, let us ap
 
 Here the {\color{red}{summation}} of $P$ is taken over all possible permutations of $n$-objects with duplications being excluded. 
 
-Namely, $\tilde{\sum_P}$ does count the following permutations separately. It counts one of them once and doesn't count the others. 
+Namely, $\tilde{\sum_P}$ does not count the following permutations separately. It counts one of them once and doesn't count the others.
 
 \[
 \begin{split}
@@ -825,7 +825,7 @@ where $|\psi^{(n)}\rangle$ is an $n$-particle state and $|\psi^{(0)}\rangle$ is 
 
 States of different numbers of particles are defined to be orthogonal to each other, so that
 
-\[\langle\varphi|\psi\rangle = \langle\varphi^{(0)}|\psi^{(0)}\rangle + \langle\varphi^{(1)}|\psi^{(1)}\rangle  \]
+\[\langle\varphi|\psi\rangle = \langle\varphi^{(0)}|\psi^{(0)}\rangle + \langle\varphi^{(1)}|\psi^{(1)}\rangle + \cdots \]
 
 where
 
@@ -1033,7 +1033,7 @@ Now if we change from position representation to momentum representation:
 
 \[\begin{split}
 |{\bf p}\rangle = \int d^3{\bf x} |{\bf x}\rangle\langle{\bf x}|{\bf p}\rangle = \int d^3{\bf x}|{\bf x}\rangle e^{i{\bf p}\cdot{\bf x}}\\
-|{\bf x}\rangle = \int d^3{\bf p} |{\bf p}\rangle\langle{\bf p}|{\bf x}\rangle = \int d^3{\bf p}|{\bf p}\rangle e^{-i{\bf p}\cdot{\bf x}}
+|{\bf x}\rangle = \int\frac{d^3{\bf p}}{(2\pi)^3} |{\bf p}\rangle\langle{\bf p}|{\bf x}\rangle = \int\frac{d^3{\bf p}}{(2\pi)^3}|{\bf p}\rangle e^{-i{\bf p}\cdot{\bf x}}
 \end{split}\]
 
 The respective creation operators are related to each other as 
@@ -1041,11 +1041,11 @@ The respective creation operators are related to each other as
 \begin{align}
 \begin{split}
 a^\dagger({\bf p}) = \int d^3{\bf x} a^\dagger({\bf x}) e^{i{\bf p}\cdot{\bf x}}\\
-a^\dagger({\bf x}) = \int d^3{\bf p} a^\dagger({\bf p}) e^{-i{\bf p}\cdot{\bf x}}
+a^\dagger({\bf x}) = \int\frac{d^3{\bf p}}{(2\pi)^3} a^\dagger({\bf p}) e^{-i{\bf p}\cdot{\bf x}}
 \end{split}
 \end{align}
 
-\section{Hamiltonian and other operators of creation and destruction operators}
+\section[Hamiltonian and other operators in second quantization]{Hamiltonian and other operators of creation and destruction operators}
 
 So far, we have developed a method of describing systems containing many Bose or Fermi particles, and defined creation \& destruction operators. In the following, we will see that these operators have other use than merely creating or annihilating particles. 
 
@@ -1224,9 +1224,9 @@ where
 &\langle {\bf y}|\hat{\rho}({\bf x})|{\bf y'}\rangle\\
 &=\int d^3{\bf y''}\delta^3({\bf y - y''})\delta^3({\bf y'-y''})\delta^3(\bf x - y'')\\
 &=\delta^3({\bf y - x})\delta^3(\bf y' - x)\\
-&=a^\dagger({\bf x})a(\bf x)
 \end{split}
 \end{align}
+Thus $\hat{\rho}({\bf x})=a^\dagger({\bf x})a({\bf x})$.
 
 In fact, total number of particles is defined as the integral of this over ${\bf x}_j$
 
@@ -1263,7 +1263,7 @@ We assume that the interaction potential depends only on the spatial coordinates
 \begin{align}
 \begin{split}
 \hat{V}|{\bf x}_1,\cdots,{\bf x}_n\rangle &= \sum_{i<j}V^{(2)}({\bf x}_i,{\bf x}_j)|{\bf x}_1,\cdots,{\bf x}_n\rangle\\
-&=\frac{1}{2}\sum_{i,j}V^{(2)}({\bf x}_i,{\bf x}_j)|{\bf x}_1,\cdots,{\bf x}_n\rangle
+&=\frac{1}{2}\sum_{i\ne j}V^{(2)}({\bf x}_i,{\bf x}_j)|{\bf x}_1,\cdots,{\bf x}_n\rangle
 \end{split}
 \end{align}
 
@@ -1387,12 +1387,12 @@ The periodic boundary condition determines the allowed wavelengths as
 {\bf k} = \frac{2\pi}{L}(n_x,n_y,n_z)
 \end{align}
 
-with $n_x,n_y,n_z = 0,\pm1,\pm2,\cdots,\pm\frac{L}{2}$. 
+with $n_x,n_y,n_z = 0,\pm1,\pm2,\cdots$.
 
 The total Hamiltonian of the system consists of three terms:
 
 \begin{align}
-H = H_el+H_b+H_{el-b}
+H = H_{el}+H_b+H_{el-b}
 \end{align}
 
 where $H_{el}$ is the hamiltonian for the electrons:
@@ -1449,7 +1449,7 @@ For the uniform distribution, we may again use the translation invariance to est
 \begin{align}
 \begin{split}
 H_{el-b}&=-e^2\sum_{i=1}^N\frac{N}{V}\int d^3{\bf x}\frac{e^{-\mu|{\bf x-r}_i|}}{|{\bf x-r}_i|}\\
-&=-e^2\sum_{i=1}^N\frac{N}{V}\int d^3{\bf x}\frac{e^{-\mu|{\bf x}}}{|{\bf x}|}\\
+&=-e^2\sum_{i=1}^N\frac{N}{V}\int d^3{\bf x}\frac{e^{-\mu|{\bf x}|}}{|{\bf x}|}\\
 &=-e^2\frac{N^2}{V}\frac{4\pi}{\mu^2}
 \end{split}
 \end{align}
@@ -1474,14 +1474,14 @@ Corresponding creation \& annihilation operator has momentum \& spin indices,
 \left.\begin{matrix}
 a^\dagger_{{\bf k},\lambda} \\
 \ \\
-\underset{\text{momentum,spin}\quad}{a^\dagger_{{\bf k},{\lambda}}}
+\underset{\text{momentum,spin}\quad}{a_{{\bf k},{\lambda}}}
 \end{matrix}\right\}\longrightarrow\psi_{{\bf k},\lambda}({\bf x})=\frac{1}{\sqrt{V}}e^{i\bf k\cdot x}\eta_\lambda 
 \]
 
 Moreover, the inner product between these `single-particle states' is given by
 
 \[\begin{split}
-\langle {\bf k},\lambda|{\bf k'},\lambda'\rangle&\equiv\frac{1}{V}\int_V d^3{\bf x}\psi_{{\bf k},\lambda}^*({\bf x})\psi_{{\bf k'},\lambda'}({\bf x}) \\
+\langle {\bf k},\lambda|{\bf k'},\lambda'\rangle&\equiv\int_V d^3{\bf x}\psi_{{\bf k},\lambda}^\dagger({\bf x})\psi_{{\bf k'},\lambda'}({\bf x}) \\
 &=\delta_{\lambda,\lambda'}\frac{1}{V}\int_V d^3{\bf x}e^{-i\bf (k-k')\cdot x}\\
 &=\delta_{\lambda,\lambda'}\delta_{\bf k,k'}
 \end{split}\]
@@ -1490,7 +1490,7 @@ with $\delta_{\bf k,k'}\equiv\delta_{n_x,n_x'}\delta_{n_y,n_y'}\delta_{n_z,n_z'}
 
 so that eq. \eqref{eqs1.6.5} tells that
 
-\[[a_{{\bf k},\lambda},a^\dagger_{{\bf k'},\lambda'}]\equiv\delta_{\lambda,\lambda'}\delta_{\bf k,k'} \]
+\[[a_{{\bf k},\lambda},a^\dagger_{{\bf k'},\lambda'}]_+=\delta_{\lambda,\lambda'}\delta_{\bf k,k'} \]
 
 \dotfill
 
@@ -1534,7 +1534,7 @@ a({\bf x},\tau)&=\sum_{{\bf k'}\lambda'}\psi_{{\bf k'},\lambda'}({\bf x},\tau)a_
 where
 
 \[\begin{split}
-\langle{\bf k}_1,\lambda_1,{\bf k}_2,\lambda_2|V|{\bf k}_4,\lambda_4,{\bf k}_3,\lambda_3\rangle &=\frac{e^2}{V^2}\iint d^3{\bf x}d^3{\bf y}\sum_{\tau}\sum_{\tau'}e^{-i{\bf k}_1\cdot\bf x}\eta_{\lambda_1}^\dagger(\tau)e^{i{\bf k}_2\cdot\bf y}\eta_{\lambda_2}^\dagger(\tau')\frac{e^{-\mu|\bf x-y|}}{|\bf x-y|}e^{-i{\bf k}_4\cdot\bf y}\eta_{\lambda_4}(\tau')e^{i{\bf k}_3\cdot\bf x}\eta_{\lambda_3}(\tau)\\
+\langle{\bf k}_1,\lambda_1,{\bf k}_2,\lambda_2|V|{\bf k}_4,\lambda_4,{\bf k}_3,\lambda_3\rangle &=\frac{e^2}{V^2}\iint d^3{\bf x}d^3{\bf y}\sum_{\tau}\sum_{\tau'}e^{-i{\bf k}_1\cdot\bf x}\eta_{\lambda_1}^\dagger(\tau)e^{-i{\bf k}_2\cdot\bf y}\eta_{\lambda_2}^\dagger(\tau')\frac{e^{-\mu|\bf x-y|}}{|\bf x-y|}e^{i{\bf k}_4\cdot\bf y}\eta_{\lambda_4}(\tau')e^{i{\bf k}_3\cdot\bf x}\eta_{\lambda_3}(\tau)\\
 &=\frac{e^2}{V^2}\int d^3{\bf y}e^{-i({\bf k}_1 + {\bf k}_2 - {\bf k}_3 - {\bf k}_4)\cdot\bf y}\times\int d^3{\bf x}e^{i({\bf k}_3-{\bf k}_1)\cdot\bf x}\frac{e^{-\mu|\bf x|}}{|\bf x|}\delta_{\lambda_1,\lambda_3}\delta_{\lambda_2,\lambda_4}\\
 &=\frac{e^2}{V}\delta_{\lambda_1,\lambda_3}\delta_{\lambda_2,\lambda_4}\delta_{{\bf k}_1 + {\bf k}_2,{\bf k}_3 + {\bf k}_4}\times\frac{4\pi}{({\bf k}_1 - {\bf k}_3)^2+\mu^2}
 \end{split}\]
@@ -1585,4 +1585,4 @@ We often call this model a model of degenerate electron gas or a model for Fermi
 
 \ 
 
-From the next class, I will go to $\cdots$ general theory framework for many-body systems, especially focusing on interacting fermion systems. 
+From the next class, I will go to $\cdots$ general theory framework for many-body systems, especially focusing on interacting fermion systems.

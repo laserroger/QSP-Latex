@@ -74,7 +74,7 @@ Now that the current density is proportional to the velocity of electron
 
 we might as well naively relate the time-derivative of the current with the electric field: 
 
-\[\frac{d\bm{j}}{dt} = -\frac{ne^2}{m}\bm{E} = -\frac{ne^2}{mc}\frac{d\bm{A}}{dt} \]
+\[\frac{d\bm{j}}{dt} = \frac{ne^2}{m}\bm{E} = -\frac{ne^2}{mc}\frac{d\bm{A}}{dt} \]
 
 Now that the electric field is given by the time-derivative of the vector potential, we might as well regard that the current is proportional to the vector potential
 
@@ -182,7 +182,7 @@ Based on this observation, BCS regards $\langle\psi^{\dagger}\psi^{\dagger}\rang
 The BCS Hamiltonian reads 
 
 \[\begin{split}\hat{K}& = \int d^3 \bm{x}\psi^{\dagger}_{\alpha}(\bm{x})\left(-\frac{\hbar^2\nabla^2}{2m} - \mu\right)\psi_{\alpha}(\bm{x})\\
-&-\frac{1}{2} \int d^3\bm{x} \hat{\psi}_{\alpha}^{\dagger}(\bm{x}) \hat{\psi}_{\beta}^{\dagger}(\bm{x}) \hat{\psi}_{\beta}(\bm{x})\hat{\psi}_{\alpha}(\bm{x}) \end{split}\]
+&-\frac{g}{2} \int d^3\bm{x} \hat{\psi}_{\alpha}^{\dagger}(\bm{x}) \hat{\psi}_{\beta}^{\dagger}(\bm{x}) \hat{\psi}_{\beta}(\bm{x})\hat{\psi}_{\alpha}(\bm{x}) \end{split}\]
 
 where the interaction part can be rewritten into 
 
@@ -195,18 +195,18 @@ Suppose that the fluctuation from the mean-field ($\psi^{\dagger}_{\alpha}(\bm{x
 
 \[\begin{split}
 \left(\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) - \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\right)\\
-\times \left(\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x}) - \langle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x})\rangle\right) \rightarrow 0\end{split}\]
+\times \left(\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x}) - \langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle\right) \rightarrow 0\end{split}\]
 
 The other terms are summarized as 
 
 \[\begin{split}
- =&\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\langle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x})\rangle\\
-& + \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x}) - \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\langle\psi_{\alpha}(\bm{x})\psi_{\beta}(\bm{x})\rangle \end{split} \]
+ =&\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle\\
+& + \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x}) - \langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle \end{split} \]
 
 from which we obtain a mean-field Hamiltonian 
 
 \[\begin{split}\hat{K}_{\text{eff}} =& \hat{K}_0 - \frac{g}{2} \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x})\rangle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x}) +\psi^{\dagger}_{\alpha}(\bm{x})\psi^{\dagger}_{\beta}(\bm{x}) \langle\psi_{\beta}(\bm{x})\psi_{\alpha}(\bm{x})\rangle\right\} + \text{const}\\
-=& \hat{K}_0 - \frac{g}{2} \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x})\rangle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x}) +\langle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\rangle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x}) \right\} + \text{const}\\
+=& \hat{K}_0 - g \int d^3 \bm{x} \left\{\langle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x})\rangle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x}) +\langle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\rangle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x}) \right\} + \text{const}\\
  =&\hat{K}_0 - g\int d^3\bm{x} \left\{\langle\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\rangle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x}) +\psi_{\downarrow}(\bm{x})\psi_{\uparrow}(\bm{x})\langle\psi^{\dagger}_{\uparrow}(\bm{x})\psi^{\dagger}_{\downarrow}(\bm{x})\rangle \right\}\\
 &+g\int d^3 \bm{x} \langle\psi^{\dagger}_{\downarrow}(\bm{x})\psi^{\dagger}_{\uparrow}(\bm{x})\rangle \langle\psi_{\uparrow}(\bm{x})\psi_{\downarrow}(\bm{x})\rangle
  \end{split}\]
@@ -222,18 +222,18 @@ where $|\Phi_0\rangle$ is the ground state w.f for $\hat{K}_{\text{eff}}$.
 \hat{K}_{\text{eff}}&=\int d^3\bm{x}\psi_\alpha^\dagger(\bm{x})\left(-\frac{\hbar^2\nabla_{\bm{x}}^2}{2m}-\mu\right)\psi_\alpha(\bm{x})\\
 &-g\int d^3\bm{x}\{\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\\
 &\quad+\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x}) \langle\psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\rangle\}\\
-&+g\int d^3\bm{x}\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \underset{-\Delta(\bm{x})}{\uwave{\langle\psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\rangle}}
+&+g\int d^3\bm{x}\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \underset{-\Delta(\bm{x})/g}{\uwave{\langle\psi_\uparrow(\bm{x})\psi_\downarrow(\bm{x})\rangle}}
 \end{split}
  \]
 
 Provided that the ground state wavefunction does not break the translational symmetry spontaneously, we can regard that the mean-field does not depend on the space coordinate. 
 
-\[g\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \equiv-\Delta^*\equiv|\Delta|e^{-i\theta} \]
+\[g\langle\psi_\downarrow^\dagger(\bm{x})\psi_\uparrow^\dagger(\bm{x})\rangle \equiv-\Delta^*\equiv-|\Delta|e^{-i\theta} \]
 
 With this in mind, the mean-field Hamiltonian is readily diagonalized:
 
 \[\begin{split}
-\hat{K}_{\text{eff}} &=\sum_{\bm{k}, \alpha}\left(\overset{\xi_{\bm{k}}}{\frac{\hbar^2\bm{k}^2}{2m}}-\mu\right)c_{\bm{k},\alpha}^\dagger c_{\bm{k},\alpha}\\
+\hat{K}_{\text{eff}} &=\sum_{\bm{k}, \alpha}\overset{\xi_{\bm{k}}}{\left(\frac{\hbar^2\bm{k}^2}{2m}-\mu\right)}c_{\bm{k},\alpha}^\dagger c_{\bm{k},\alpha}\\
 &+\Delta^* \sum_{\bm{k}} c_{\bm{k}\uparrow}c_{-\bm{k}\downarrow}+ \Delta\sum_{\bm{k}}c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger - \Delta\sum_{\bm{k}}\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle\\
 &=\sum_{\bm{k}}\left\{(c_{\bm{k}\uparrow}^\dagger\  c_{-\bm{k}\downarrow}) \left(\begin{matrix}
 \xi_{\bm{k}} & -e^{i\theta}|\Delta|\\
@@ -309,7 +309,7 @@ where $|\Phi_0\rangle$ denotes the vacuum of $\alpha$-particle and $\beta$-parti
 
 Since creating the Bogoliubov particles is always accompanied by a positive energy $(\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}>0)$, the vacuum is nothing but the ground state wavefunction of $\hat{K}_{\text{eff}}$, whose energy is $V$. 
 
-\[\hat{K}_{\text{eff}}|\Phi_0\rangle = \overset{\sum_{\bm{k}}\xi_{\bm{k}}-\sqrt{\xi_{\bm{k}}^2+|\Delta|^2}-\Delta\langle c_{-\bm{k}\downarrow}^\dagger c_{\bm{k}\uparrow}^\dagger\rangle}{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad V}|\Phi_0\rangle \]
+\[\hat{K}_{\text{eff}}|\Phi_0\rangle = V|\Phi_0\rangle \]
 
 A group of the lowest excited states is given by ``one-particle'' state of the Bogoliubov particle
 
@@ -382,7 +382,7 @@ In fact, one can see that
 \alpha_{\bm{k}'}|\Phi_0\rangle &= \prod_{\bm{k} \neq \bm{k}'} (u_{\bm{k}}+e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger c_{-\bm{k}\downarrow}^\dagger)\times( u_{\bm{k}'}c_{\bm{k}'\uparrow} - e^{i\theta}v_{\bm{k}'}c_{-\bm{k}'\downarrow}^\dagger)(u_{\bm{k}'}+e^{i\theta}v_{\bm{k}'}c_{\bm{k}'\uparrow}^\dagger c_{-\bm{k}'\downarrow}^\dagger)|vac\rangle \\
 &=\prod_{\bm{k}\neq\bm{k}'}(u_{\bm{k}}+e^{i\theta}v_{\bm{k}}c_{\bm{k}\uparrow}^\dagger c_{-\bm{k}\downarrow}^\dagger)\\
 &\ \ \times (u_{\bm{k}'}^2c_{\bm{k}'\uparrow}+e^{i\theta}u_{\bm{k}'}v_{\bm{k}'}(1-c_{\bm{k}'\uparrow}^\dagger c_{\bm{k}'\uparrow})c_{-\bm{k}'\downarrow}^\dagger\\
-&\quad\quad -e^{i\theta}u_{\bm{k}'}v_{\bm{k}'}c_{-\bm{k}'\downarrow}^\dagger + e^{i\theta}v_{\bm{k}'}^2c_{\bm{k}'\uparrow}^\dagger(c_{-\bm{k}'\downarrow}^\dagger)^2)|vac\rangle\\
+&\quad\quad -e^{i\theta}u_{\bm{k}'}v_{\bm{k}'}c_{-\bm{k}'\downarrow}^\dagger + e^{2i\theta}v_{\bm{k}'}^2c_{\bm{k}'\uparrow}^\dagger(c_{-\bm{k}'\downarrow}^\dagger)^2)|vac\rangle\\
 &=0
 \end{split}\]
 
@@ -442,7 +442,7 @@ Thus, the right hand side acquires a cut off:
 because
 
 \[u_k v_k = \begin{cases}
-\frac{\Delta}{\sqrt{\xi_k^2+|\Delta|^2}} & \text{for}\ |\xi_k|\le\hbar\omega_D\\
+\frac{|\Delta|}{2\sqrt{\xi_k^2+|\Delta|^2}} & \text{for}\ |\xi_k|\le\hbar\omega_D\\
 0 & \text{otherwise}
 \end{cases} \]
 
@@ -456,7 +456,7 @@ because
 
 \ 
 
-\[\cancel{|\Delta|} = g\int_{-\hbar\omega_D}^{\hbar\omega_D}d\omega N(\omega)\frac{\cancel{|\Delta|}}{\sqrt{\omega^2+|\Delta|^2}} \]
+\[\cancel{|\Delta|} = \frac{g}{2}\int_{-\hbar\omega_D}^{\hbar\omega_D}d\omega N(\omega)\frac{\cancel{|\Delta|}}{\sqrt{\omega^2+|\Delta|^2}} \]
 
 In usual metal, characteristic frequency scale of $N(\omega)$ (e.g. band width) is much larger than the band width of the acoustic phonon ($\hbar\omega_D$). As such, one might as well replace $N(\omega)$ by the density of state at the chemical potential $N(0)$.
 
@@ -492,137 +492,46 @@ To do this, let us first introduce the Heisenberg operator in the imaginary time
 \hat{\psi}^\dagger_{k\downarrow}({\bf x},\tau) &= e^{\hat{K}_{\text{eff}}\tau/\hbar}\hat{\psi}^\dagger_{\downarrow}({\bf x})e^{-\hat{K}_{\text{eff}}\tau/\hbar}
 \end{split} \]
 
-which satisfy the following \uuline{linearized} equations of motions respectively:
-
+Define the electron and hole single-particle operators
+\[h_e=\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu,\qquad
+h_h=\frac{1}{2m}\left(i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu.\]
+With $\Delta({\bf x})=-g\langle\psi_\uparrow({\bf x})\psi_\downarrow({\bf x})\rangle$, the imaginary-time equations of motion are
 \[\begin{split}
-\hbar\frac{\partial\hat{\psi}_{k\uparrow}}{\partial \tau} &= e^{\hat{K}_{\text{eff}}\tau/\hbar}\left[\hat{K}_{\text{eff}},\hat{\psi}_{\uparrow}({\bf x})\right]e^{-\hat{K}_{\text{eff}}\tau/\hbar}\\
-&=e^{\hat{K}_{\text{eff}}\tau/\hbar}\left\{-\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\hat{\psi}_\uparrow({\bf x}) - g\int d^3{\bf x}' \left[\psi_\downarrow^\dagger({\bf x}')\underline{\psi_\uparrow^\dagger({\bf x}'),\psi_\uparrow({\bf x}')}\right]\langle\psi_\uparrow({\bf x}')\psi_\downarrow({\bf x}')\rangle\right\}e^{-\hat{K}_{\text{eff}}\tau/\hbar}\\
-&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\Rightarrow\psi_\downarrow^\dagger({\bf x}')\left\{\psi_\uparrow^\dagger({\bf x'}),\psi_\uparrow({\bf x})\right\}\\
-&=-\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\hat{\psi}_\uparrow({\bf x},\tau) - g\psi_{k\downarrow}^\dagger({\bf x},\tau)\langle\psi_\uparrow({\bf x})\psi_\downarrow({\bf x})\rangle\\
-\hbar\frac{\partial\hat\psi_{k\downarrow}^\dagger}{\partial \tau}&=e^{\hat{K}_{\text{eff}}\tau/\hbar}\left[\hat{K}_{\text{eff}},\hat{\psi}_\downarrow^\dagger({\bf x})\right]\\
-&=e^{\hat{K}_{\text{eff}}\tau/\hbar}\Bigg\{\int d^3{\bf x'}\left[\psi^\dagger_\alpha({\bf x'})\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi_\alpha({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right]\\
-&\quad - g\int d^3{\bf x}' \langle\psi^\dagger_\downarrow({\bf x}')\psi^\dagger_\uparrow({\bf x}')\rangle\left[\psi_\uparrow({\bf x}'){\psi_\downarrow({\bf x}'),\psi^\dagger_\downarrow({\bf x})}\right]\Bigg\}e^{-\hat{K}_{\text{eff}}\tau/\hbar}\\
-&\left(
-\begin{split}
-&\ \ \ \int d^3{\bf x'}\left[\psi^\dagger_\alpha({\bf x'})\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi_\alpha({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right]\\
-&=\int d^3{\bf x'}\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi^\dagger_\alpha({\bf x'})\cdot\underset{\delta_{\alpha,\downarrow}\delta^3({\bf x-x'})}{\left\{\psi_\alpha({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right\}}\\
-&=\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\psi_\downarrow^\dagger({\bf x})\\
-&\ \ \ \left[\psi_\uparrow({\bf x'})\psi_{\downarrow}({\bf x'}),\psi_\downarrow^\dagger({\bf x})\right] = \psi_\uparrow({\bf x})\delta^3({\bf x-x'})
-\end{split}
-\right)\\
-&=\left[\frac{1}{2m}\left(i\hbar\nabla_x+\frac{e\bf A}{c}\right)^2-\mu\right]\psi^\dagger_{k\downarrow}({\bf x},\tau) - g\langle\psi^\dagger_{\downarrow}({\bf x})\psi^\dagger_{\uparrow}({\bf x})\rangle\psi_{k\uparrow}({\bf x},\tau)
-\end{split} \]
-
-Using these Heisenberg operators we next define the time-ordered Green's function
-
-\[g({\bf x},\tau;{\bf x}',\tau') = -\langle T_{\tau}[\hat{\psi}_{k\uparrow}({\bf x},\tau)\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')]\rangle = -\theta(\tau-\tau')\langle\hat{\psi}_{k\uparrow}({\bf x},\tau)\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\rangle + \theta(\tau'-\tau)\langle\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\hat{\psi}_{k\uparrow}({\bf x},\tau)\rangle\]
-
-Using the equations of motion for $\hat{\psi}_{k\uparrow}({\bf x},\tau)$, we can derive that for the Green's function
-
-\[\begin{split}
-\hbar\frac{\partial }{\partial \tau}g({\bf x},\tau;{\bf x'},\tau') &= -\hbar\delta(\tau-\tau')\langle\{\hat{\psi}_{k\uparrow}({\bf x},\tau),\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\}\rangle - \langle T_\tau\left\{\hbar\frac{\partial \hat{\psi}_{k\uparrow}({\bf x},\tau)}{\partial \tau}\cdot\hat{\psi}_{k\uparrow}({\bf x}',\tau')^\dagger\right\}\rangle\\
-&=-\hbar\delta(\tau-\tau')\langle\{\hat{\psi}_{k\uparrow}({\bf x},\tau),\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\}\rangle + \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\langle T_\tau\{\hat{\psi}_{k\uparrow}({\bf x},\tau)\hat{\psi}^\dagger_{k\uparrow}({\bf x}',\tau')\}\rangle\\
-&\phantom{=\ } + g\langle\psi_\uparrow({\bf x})\psi_{\downarrow}({\bf x})\rangle\langle T_\tau\{\hat{\psi}_{k\downarrow}({\bf x},\tau)\hat{\psi}^\dagger_{k\downarrow}({\bf x}',\tau')\}\rangle\\
-&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x}') + \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\langle T_\tau \{\psi_{k\uparrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle\\
-&\quad + g\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle\langle T_\tau \{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle \\
-&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) - \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]g({\bf x},\tau;{\bf x'},\tau') - \underset{\Rightarrow\Delta({\bf x})}{\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle}\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')
+\hbar\partial_\tau\psi_{k\uparrow}&=-h_e\psi_{k\uparrow}+\Delta\psi^\dagger_{k\downarrow},\\
+\hbar\partial_\tau\psi^\dagger_{k\downarrow}&=h_h\psi^\dagger_{k\downarrow}+\Delta^*\psi_{k\uparrow}.
 \end{split}\]
+The opposite signs of $i\hbar\nabla$ in $h_e$ and $h_h$ follow from conjugating the kinetic-energy operator.
 
-where we define new function, which we often call as ``anomalous'' Green's functions; 
-
-\[\mathcal{F}({\bf x},\tau;{\bf x'},\tau') \overset{\text{def}}{\equiv}-\langle T_\tau\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle \]
-\[\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau') \overset{\text{def}}{\equiv}-\langle T_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle \]
-
-Equation of motion for the anomalous Green's function and that for the (normal) Green's function comprise a \uuline{closed} set of coupled equations of motion:
-
+Define the normal and anomalous Green's functions by
 \[\begin{split}
-\hbar\frac{\partial}{\partial\tau}\mathcal{F}({\bf x},\tau;{\bf x'},\tau') &= -\langle T_\tau\{\hbar\frac{\partial\psi_{k\uparrow}({\bf x},\tau)}{\partial\tau}\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
-&= \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\langle T_\tau \{\psi_{k\uparrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle\\
-&\quad + g\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle\langle T_\tau \{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle
+g(1,2)&=-\langle T_\tau\{\psi_{k\uparrow}(1)\psi^\dagger_{k\uparrow}(2)\}\rangle,\\
+\mathcal F(1,2)&=-\langle T_\tau\{\psi_{k\uparrow}(1)\psi_{k\downarrow}(2)\}\rangle,\\
+\mathcal F^\dagger(1,2)&=-\langle T_\tau\{\psi^\dagger_{k\downarrow}(1)\psi^\dagger_{k\uparrow}(2)\}\rangle,
 \end{split}\]
+where $1=({\bf x},\tau)$ and $2=({\bf x}',\tau')$. Differentiating the time ordering produces the equal-time anticommutator in the normal function:
+\[\hbar\partial_\tau g(1,2)=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'})-h_eg(1,2)+\Delta({\bf x})\mathcal F^\dagger(1,2).\]
+There is no contact term in the anomalous functions because the corresponding equal-time anticommutators vanish.
 
-Namely, we assume that the Zeeman coupling between applied magnetic field and electron spin is negligible, so that
-
-\[\langle T_\tau\{\psi_{k\downarrow}^\dagger({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle = \langle T_\tau\{\psi_{k\uparrow}^\dagger({\bf x},\tau)\psi_{k\uparrow}({\bf x'},\tau')\}\rangle  \]
-
-With this assumption in mind, we have
-
-\[\begin{split}
-\hbar\frac{\partial}{\partial\tau}\mathcal{F}({\bf x},\tau;{\bf x'},\tau') 
-&= \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\mathcal{F}({\bf x},\tau;{\bf x'},\tau') \\
-&\quad + \underset{\Rightarrow-\Delta({\bf x})}{\sout{g\langle\psi_{k\uparrow}({\bf x})\psi_{k\downarrow}({\bf x})\rangle}} \underset{\langle T_\tau\{\psi_{k\downarrow}^\dagger({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle}{\quad g({\bf x},\tau;{\bf x'},\tau') \quad}
-\end{split}\]
-
-Similarly, we have
-
-\[\begin{split}
-\hbar\frac{\partial}{\partial\tau}\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau') &=-\left\langle\mathcal{T}\left\{\left(\frac{\partial}{\partial\tau}\psi_{k\downarrow}^\dagger({\bf x,\tau})\right)\psi_{k\uparrow}^\dagger({\bf x'},\tau')\right\}\right\rangle\\
-&=-\left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\left\langle\mathcal{T}_{\tau}\left\{\psi_{k\downarrow}^\dagger({\bf x,\tau})\psi_{k\uparrow}^\dagger({\bf x'},\tau')\right\}\right\rangle \\
-&\quad\ + g\langle\psi_\downarrow^\dagger({\bf x})\psi_\uparrow^\dagger({\bf x})\rangle\left\langle\mathcal{T}_{\tau}\left\{\psi_{k\uparrow}({\bf x,\tau})\psi^\dagger_{k\uparrow}({\bf x'},\tau')\right\}\right\rangle\\
-&= \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2-\mu\right]\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau') - \underset{\Rightarrow\Delta^*({\bf x})}{\underline{g\langle\psi_\downarrow^\dagger({\bf x})\psi_\uparrow^\dagger({\bf x})\rangle}}g({\bf x},\tau;{\bf x'},\tau')
-\end{split}\]
-
-with the definition of $\Delta({\bf x})$:
-
-\[\Delta({\bf x}) = - g\langle\psi_\uparrow({\bf x})\psi_\downarrow({\bf x})\rangle =   g\langle\psi_\downarrow({\bf x})\psi_\uparrow({\bf x})\rangle\]
-
-we have
-
+Neglecting Zeeman coupling, the two spin components have the same normal Green's function. Fermionic time ordering then gives
+\[\langle T_\tau\{\psi^\dagger_{k\downarrow}(1)\psi_{k\downarrow}(2)\}\rangle=g(2,1).\]
+Thus the anomalous equations are
 \begin{align}
 \tag{C-1}
-\left[-\hbar\partial_\tau-\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2+\mu\right]\mathcal{F}({\bf x},\tau;{\bf x'},\tau')  &= \Delta({\bf x})g({\bf x'},\tau';{\bf x},\tau)\\
+[-\hbar\partial_\tau-h_e]\mathcal F(1,2)&=\Delta({\bf x})g(2,1),\\
 \tag{C-2}
-\left[\hbar\partial_\tau-\frac{1}{2m}\left(-i\hbar\nabla+\frac{e{\bf A}}{c}\right)^2+\mu\right]\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')  &= \Delta^*({\bf x})g({\bf x},\tau;{\bf x'},\tau')
+[\hbar\partial_\tau-h_h]\mathcal F^\dagger(1,2)&=\Delta^*({\bf x})g(1,2).
 \end{align}
 
-In terms of the so-called Nambu Vector, 
-
-\[{\bm{\Psi}}_k({\bf x},\tau)=\left[\begin{matrix}\psi_{k\uparrow}({\bf x},\tau)\\ \ \\\psi^\dagger_{k\downarrow}({\bf x},\tau)\end{matrix}\right] \]
-
-introduce a $2\times2$ matrix formed Green's function
-
-\[\begin{split}
-{g}({\bf x},\tau;{\bf x'},\tau') &= -\langle\mathcal{T}_\tau\{\bm \Psi_k({\bf x},\tau)\bm\Psi_k^\dagger({\bf x'},\tau')\}\rangle\\
-&=\left[\begin{matrix}
--\langle\mathcal{T}_\tau\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\uparrow}^\dagger({\bf x'},\tau')\}\rangle &- \langle\mathcal{T}_\tau\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
--\langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi^\dagger_{k\uparrow}({\bf x'},\tau')\}\rangle &- \langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle
-\end{matrix}\right]\\
-&=\left[\begin{matrix}
-g({\bf x},\tau;{\bf x'},\tau') &\mathcal{F}({\bf x},\tau;{\bf x'},\tau')\\
-\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')& -g({\bf x'},\tau';{\bf x},\tau)
-\end{matrix}\right]
-\end{split} \]
-
-The equations of motion for the Green's function derived so far are summarized into the following $2\times2$ matrix form:
-
+In terms of the Nambu vector $\bm\Psi_k=(\psi_{k\uparrow},\psi^\dagger_{k\downarrow})^T$, introduce the matrix Green's function
+\[\bm g(1,2)=-\langle T_\tau\{\bm\Psi_k(1)\bm\Psi_k^\dagger(2)\}\rangle
+=\begin{pmatrix}g(1,2)&\mathcal F(1,2)\\\mathcal F^\dagger(1,2)&-g(2,1)\end{pmatrix}.\]
+The coupled equations become
 \begin{align}\tag{C-3}
-\begin{split}
-&\left[\begin{matrix}
--\hbar\partial_\tau - \frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2+\mu &\Delta({\bf x})\\
-\Delta^*({\bf x})& -\hbar\partial_\tau + \frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2-\mu
-\end{matrix}\right] \times  \left[\begin{matrix}
-g({\bf x},\tau;{\bf x'},\tau') &\mathcal{F}({\bf x},\tau;{\bf x'},\tau')\\
-\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')& -g({\bf x'},\tau';{\bf x},\tau)
-\end{matrix}\right]\\
- = &\left[\begin{matrix}
-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) &0\\
-0&\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) 
-\end{matrix}\right]
-\end{split}\end{align}
-
-(where the reason is:
-
-\[\begin{split}
-\hbar\partial_\tau(-g({\bf x},\tau;{\bf x'},\tau')) &= \hbar\partial_\tau(\langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle)\\
-&=-\hbar\partial_\tau\delta(\tau-\tau')\langle\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle - \langle\mathcal{T}_\tau\{\hbar\partial_\tau(\psi^\dagger_{k\downarrow}({\bf x},\tau))\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
-&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'}) - \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2-\mu\right]\langle\mathcal{T}_\tau\{\psi^\dagger_{k\downarrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
-&\quad +\underset{-\Delta^*({\bf x})}{\underline{g\langle\psi_\downarrow^\dagger({\bf x})\psi_\uparrow^\dagger({\bf x})\rangle}}\langle\mathcal{T}_\tau\{\psi_{k\uparrow}({\bf x},\tau)\psi_{k\downarrow}({\bf x'},\tau')\}\rangle\\
-&=-\hbar\delta(\tau-\tau')\delta^3({\bf x-x'})  + \left[\frac{1}{2m}\left(-i\hbar\nabla+\frac{e\bf A}{c}\right)^2-\mu\right](-g({\bf x'},\tau';{\bf x},\tau))+\Delta^*({\bf x})\mathcal{F}({\bf x},\tau;{\bf x'},\tau')
-\end{split}\]
-
-)\ \\
-
-\ 
+\begin{pmatrix}-\hbar\partial_\tau-h_e&\Delta({\bf x})\\
+\Delta^*({\bf x})&-\hbar\partial_\tau+h_h\end{pmatrix}\bm g(1,2)
+=\hbar\delta(\tau-\tau')\delta^3({\bf x-x'})\bm 1.
+\end{align}
+This form keeps the electron and hole kinetic operators, anomalous pair order, and equal-time contact terms consistent.
 
 In the remaining part of this section, we will study this Gorkov equation in several limiting cases.
 
@@ -641,13 +550,13 @@ Without the magnetic field (vector potential),
 \begin{cases}
 \left(-\hbar\partial_\tau + \frac{\hbar^2\nabla_x^2}{2m}+\mu\right)g({\bf x},\tau;{\bf x'},\tau')+\Delta({\bf x})\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau') = \hbar\delta(\tau-\tau')\delta^3({\bf x}-{\bf x}')\\
 \ \\
-\Delta^*({\bf x})g({\bf x},\tau;{\bf x'},\tau') + \left(-\hbar\partial_\tau + \frac{\hbar^2\nabla_x^2}{2m}+\mu\right)\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')  = 0
+\Delta^*({\bf x})g({\bf x},\tau;{\bf x'},\tau') + \left(-\hbar\partial_\tau - \frac{\hbar^2\nabla_x^2}{2m}-\mu\right)\mathcal{F}^\dagger({\bf x},\tau;{\bf x'},\tau')  = 0
 \end{cases}
 \]
 
 with
 
-\[\Delta({\bf x}) \equiv g\langle\psi_\downarrow({\bf x})\psi_\uparrow({\bf x})\rangle = g{F}^\dagger({\bf x},\tau+;{\bf x},\tau) \]
+\[\Delta({\bf x}) \equiv g\langle\psi_\downarrow({\bf x})\psi_\uparrow({\bf x})\rangle = g\mathcal F({\bf x},\tau+;{\bf x},\tau) \]
 
 the system becomes translationally symmetric, so that both Green's functions depend only on the relative coordinates:
 
@@ -668,7 +577,7 @@ g({\bf x},\tau) = \frac{1}{\beta\hbar}\sum_{i\omega_n}\int\frac{d^3\bf k}{(2\pi)
 whose equation of motions are given by
 
 \[\left(i\hbar\omega_n-\frac{\hbar^2{\bf k}^2}{2m}+\mu\right)g({\bf k},i\omega_n)+\Delta\mathcal{F}^\dagger({\bf k},i\omega_n)=\hbar\]
-\[\Delta^*g({\bf k},i\omega_n)+\left(i\hbar\omega_n+\frac{\hbar^2{\bf k}^2}{2m}-\mu\right)\mathcal{F}^\dagger({\bf k},i\omega_n)=\hbar\]
+\[\Delta^*g({\bf k},i\omega_n)+\left(i\hbar\omega_n+\frac{\hbar^2{\bf k}^2}{2m}-\mu\right)\mathcal{F}^\dagger({\bf k},i\omega_n)=0\]
 
 Here, we took it for granted that $\Delta$ does not depend on the coordinate, because of the translational symmetry:
 
@@ -684,7 +593,7 @@ This restriction tells us that the coupled equations of $g$ and $\mathcal{F}^\da
 For the other ${\bf k}$, the `off-diagonal' term connecting $g$ and $\mathcal{F}^\dagger$ reduces to zero:
 
 \[\left(i\hbar\omega_n-\frac{\hbar^2{\bf k}^2}{2m}+\mu\right)g({\bf k},i\omega_n)=\hbar\]
-\[\left(i\hbar\omega_n+\frac{\hbar^2{\bf k}^2}{2m}-\mu\right)\mathcal{F}^\dagger({\bf k},i\omega_n)=\hbar\]
+\[\left(i\hbar\omega_n+\frac{\hbar^2{\bf k}^2}{2m}-\mu\right)\mathcal{F}^\dagger({\bf k},i\omega_n)=0\]
 
 which leads to
 
@@ -706,16 +615,18 @@ In terms of the anomalous Green's function, $\Delta$ is given by\footnote{this i
 
 
 \[\begin{split}
-\Delta &= g\frac{1}{\beta\hbar}\sum_{i\omega_n}e^{-i\omega_n\eta}\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{\Delta}{(\hbar\omega_n)^2+\xi_{\bf k}^2+|\Delta|^2}\\
-\Leftrightarrow 1&=g\oint \frac{dz}{2\pi i}\frac{1}{e^{\beta\hbar z}+1}\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{\Delta}{-z^2+\xi_{\bf k}^2+|\Delta|^2}\\
-\Leftrightarrow 1&=-g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\oint \frac{dz}{2\pi i}\frac{1}{e^{\beta\hbar z}+1}\frac{1}{[z-\sqrt{\xi_{\bf k}^2+|\Delta|^2}][z+\sqrt{\xi_{\bf k}^2+|\Delta|^2}]}\\
-&\text{ by def }\quad E_{\bf k} = \sqrt{\xi_{\bf k}^2+|\Delta|^2} ,\\
-&=-g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\left\{\frac{1}{e^{\beta\hbar E_{\bf k}}+1}\frac{1}{2E_{\bf k}} - \frac{1}{e^{-\beta\hbar E_{\bf k}}+1}\frac{1}{2E_{\bf k}}\right\}\\
-&=g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{1}{2E_{\bf k}}\left\{\frac{e^{\beta\hbar E_{\bf k}/2} - e^{-\beta\hbar E_{\bf k}/2}}{e^{\beta\hbar E_{\bf k}/2} + e^{-\beta\hbar E_{\bf k}/2}}\right\}\\
-\Leftrightarrow 1&=g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3\bf k}{(2\pi)^3}\frac{1}{2E_{\bf k}}\tanh\left(\frac{\beta\hbar E_{\bf k}}{2}\right)\\
-&=g\int_{-\hbar\omega_D}^{\hbar\omega_D} d\omega N(\omega)\frac{1}{2\sqrt{\omega^2+|\Delta|^2}}\tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|\Delta|^2}}{2}\right)\\
-&\deq gN(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|\Delta|^2}}\tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|\Delta|^2}}{2}\right)
-\end{split} \]
+\Delta &= \frac{g}{\beta}\sum_{\omega_n}\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3{\bf k}}{(2\pi)^3}
+\frac{\Delta}{(\hbar\omega_n)^2+E_{\bf k}^2},\\
+E_{\bf k}&=\sqrt{\xi_{\bf k}^2+|\Delta|^2},\\
+\frac{1}{\beta}\sum_{\omega_n}\frac{1}{(\hbar\omega_n)^2+E_{\bf k}^2}
+&=\frac{1-2f(E_{\bf k})}{2E_{\bf k}}=\frac{1}{2E_{\bf k}}\tanh\frac{\beta E_{\bf k}}{2},\\
+1&=g\int_{|\xi_{\bf k}|<\hbar\omega_D}\frac{d^3{\bf k}}{(2\pi)^3}\frac{1}{2E_{\bf k}}\tanh\frac{\beta E_{\bf k}}{2},\\
+&=g\int_{-\hbar\omega_D}^{\hbar\omega_D}d\omega\,N(\omega)
+\frac{\tanh(\beta\sqrt{\omega^2+|\Delta|^2}/2)}{2\sqrt{\omega^2+|\Delta|^2}},\\
+&\deq gN(0)\int_0^{\hbar\omega_D}d\omega\,
+\frac{\tanh(\beta\sqrt{\omega^2+|\Delta|^2}/2)}{\sqrt{\omega^2+|\Delta|^2}}.
+\end{split}\]
+Here $f(E)=(e^{\beta E}+1)^{-1}$ and both $E_{\bf k}$ and $\omega$ in this energy integral have units of energy.
 
 \begin{wrapfigure}{l}{6cm}
 \includegraphics[width = 4.5cm]{6-3.png}\
@@ -725,11 +636,11 @@ At the zero-temperature, this gap equation reduces to that we derived before, an
 \begin{align}\tag{B}
 |\Delta| \deq 2\hbar\omega_D e^{-1/gN(0)}
 \end{align}
-On increasing the temperature, $\tanh({\beta\hbar\sqrt{\omega^2+|\Delta|^2}}/{2})$ decreases for fixed $\omega$. In order to compensate this decrease in the right hand side of the gap equation, $1/\sqrt{\omega^2+|\Delta|^2}$ increases, for fixed $\omega$. Namely, $|\Delta|$ should decrease, when the temperature increases. At some finite temperature called the ``critical temperature'', $\Delta$ eventually reduces to zero, where the system transforms from the superconducting phase $(\Delta\neq0)$ to the normal metallic phase $(\Delta=0)$. The critical temperature $T_c$ can be solved by setting $\Delta$ to be zero, in the gap equation. 
+On increasing the temperature, $\tanh({\beta\sqrt{\omega^2+|\Delta|^2}}/{2})$ decreases for fixed $\omega$. In order to compensate this decrease in the right hand side of the gap equation, $1/\sqrt{\omega^2+|\Delta|^2}$ increases, for fixed $\omega$. Namely, $|\Delta|$ should decrease, when the temperature increases. At some finite temperature called the ``critical temperature'', $\Delta$ eventually reduces to zero, where the system transforms from the superconducting phase $(\Delta\neq0)$ to the normal metallic phase $(\Delta=0)$. The critical temperature $T_c$ can be solved by setting $\Delta$ to be zero, in the gap equation.
 
-\[1 = gN(0)\int_0^{\hbar\omega_D}\frac{d\omega}{\omega}\tanh\left(\frac{\hbar\omega}{2k_BT_c}\right) = gN(0)\int_0^{\frac{\hbar\omega_D}{2k_BT_c}}\frac{dx}{x}\tanh x \]
+\[1 = gN(0)\int_0^{\hbar\omega_D}\frac{d\omega}{\omega}\tanh\left(\frac{\omega}{2k_BT_c}\right) = gN(0)\int_0^{\frac{\hbar\omega_D}{2k_BT_c}}\frac{dx}{x}\tanh x \]
 
-The superconducting critical temperature as well as the superconducting gap $\Delta$ is usually much smaller than the Debye frequency. In such a case, the right hand side is dominated by the logarithmic divergence associated with large $\displaystyle \frac{\hbar\omega_D}{2k_BT_c}$. To single out this dominant contribution, let us take the partial integral with respect to $x$ in the right hand side. 
+In the weak-coupling regime, $k_BT_c$ and $|\Delta|$ are much smaller than the Debye energy $\hbar\omega_D$. In such a case, the right hand side is dominated by the logarithmic divergence associated with large $\displaystyle \frac{\hbar\omega_D}{2k_BT_c}$. To single out this dominant contribution, let us take the partial integral with respect to $x$ in the right hand side.
 
 \[\begin{split}
 \int_0^{x_c}\frac{dx}{x}\tanh x &= [\ln x\tanh x]\Big|_0^{x_c} - \int_0^{x_c}\ln x\frac{1}{\cosh^2 x}dx = \ln x_c - \int_0^{\infty}\ln x\frac{1}{\cosh^2 x}dx + f(x_c)\\
@@ -768,7 +679,7 @@ which is consistent with the isotope effect in experiments.
 
 Gap equation at $T\neq 0$ is:
 
-\[1=gN(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|\Delta|^2}}\tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|\Delta|^2}}{2}\right) \]
+\[1=gN(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|\Delta|^2}}\tanh\left(\frac{\beta\sqrt{\omega^2+|\Delta|^2}}{2}\right) \]
 
 The gap equation at $T\neq0$ can be also solved analytically in two limiting situations:
 
@@ -782,19 +693,19 @@ The gap equation at $T\neq0$ can be also solved analytically in two limiting sit
 
 \ 
 
-Thermodynamics function:
+Thermodynamics function: We choose the uniform gap real and non-negative in the following thermodynamic expressions.
 
 In order to evaluate \uline{the critical magnetic field} $H_c(T)$ and \uline{the specific heat $c_V$} in the BCS superconductor, let us next calculate the thermodynamic function using the formula derived in previous sections %the equation link!
 
 We begin with
 
 \[\begin{split}
-\frac{\partial \Omega^{\text{BCS}}(g)}{\partial g} &= \frac{\partial}{\partial g}\left(-\frac{1}{\beta}\ln\trace\left[e^{-\beta\hat{K}_{\text{eff}}(h)}\right]\right) \\
-&=\frac{\trace\left[\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g} e^{-\beta\hat{K}_{\text{eff}}(g)}\right]}{\trace\left[e^{-\beta\hat{K}_{\text{eff}}(h)}\right]}\equiv\left\langle\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g}\right\rangle_{\hat{K}_{\text{eff}}}\\
+\frac{\partial \Omega^{\text{BCS}}(g)}{\partial g} &= \frac{\partial}{\partial g}\left(-\frac{1}{\beta}\ln\trace\left[e^{-\beta\hat{K}_{\text{eff}}(g)}\right]\right) \\
+&=\frac{\trace\left[\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g} e^{-\beta\hat{K}_{\text{eff}}(g)}\right]}{\trace\left[e^{-\beta\hat{K}_{\text{eff}}(g)}\right]}\equiv\left\langle\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g}\right\rangle_{\hat{K}_{\text{eff}}}\\
 &\quad\text{by such replacing}\\
 \hat{K}_{\text{eff}}(g) &= \hat{K}_0-g\int d^3{\bf x}\left\{\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle\psi_{\uparrow}({\bf x})\psi_{\downarrow}({\bf x}) +\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\langle\psi_{\uparrow}({\bf x})\psi_{\downarrow}({\bf x})\rangle - \langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle\langle\psi_{\uparrow}({\bf x})\psi_{\downarrow}({\bf x})\rangle\right\}\\
 \left\langle\frac{\partial \hat{K}_{\text{eff}}(g)}{\partial g}\right\rangle_{\hat{K}_{\text{eff}}} &= ... = -\int d^3{\bf x} \langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle\langle\psi_{\uparrow}({\bf x})\psi_{\downarrow}({\bf x})\rangle\\
-&= -\int d^3{\bf x}\frac{1}{g}|\Delta({\bf x})|^2\\
+&= -\int d^3{\bf x}\frac{1}{g^2}|\Delta({\bf x})|^2\\
 &\quad\text{where by }g\langle\psi_{\downarrow}^\dagger({\bf x})\psi_{\uparrow}^\dagger({\bf x})\rangle \equiv - \Delta^*({\bf x})
 \end{split}\]
 
@@ -804,22 +715,22 @@ Noting that $\Omega^{\text{BCS}}(g=0)$ is nothing but the thermodynamics potenti
 \Omega^{\text{BCS}}(g) - \Omega_n = \int_0^g dg' \frac{\partial \Omega^{\text{BCS}}(g')}{\partial g'} = -\int_0^g dg' \frac{1}{(g')^2}\int d^3{\bf x}|\Delta'({\bf x})|^2
 \end{align}
 
-Remember that $\Delta'({\bf x})$ in the integrand is a function of $g'$, which is clear from the above derivation. More specifically, the gap equation at finite $T$ holds true for arbitrary $g'\in[0,g]$; 
+Remember that $\Delta'({\bf x})$ in the integrand is a function of $g'$, which is clear from the above derivation. More specifically, the gap equation at finite $T$ holds on the nonzero-gap branch. At fixed finite $T$, weaker couplings give the normal solution $\Delta'=0$, which contributes zero to eq.\eqref{eq6E};
 
-\[1 = g'N(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2} }{2}\right)\]
+\[1 = g'N(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2}} \tanh\left(\frac{\beta\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2} }{2}\right)\]
 
 or equivalent, 
 
-\[\frac{1}{g'} = N(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2} }{2}\right)\]
+\[\frac{1}{g'} = N(0)\int_0^{\hbar\omega_D}d\omega\frac{1}{\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2}} \tanh\left(\frac{\beta\sqrt{\omega^2+|{\color{red}{\Delta'}}|^2} }{2}\right)\]
 
 Taking the derivative of the gap equation with respect to $g'$, we will obtain the following formal relation:
 
-\[-\frac{1}{(g')^2} = \frac{\partial|\Delta'|}{\partial g'}N(0)\cdot\int_0^{\hbar\omega_D}d\xi\left(\frac{1}{\sqrt{\omega^2+|{{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{{\Delta'}}|^2} }{2}\right)\right) \]
+\[-\frac{1}{(g')^2} = \frac{\partial|\Delta'|}{\partial g'}N(0)\cdot\int_0^{\hbar\omega_D}d\xi\frac{\partial}{\partial|\Delta'|}\left(\frac{1}{\sqrt{\xi^2+|{{\Delta'}}|^2}} \tanh\left(\frac{\beta\sqrt{\xi^2+|{{\Delta'}}|^2} }{2}\right)\right) \]
 
 Substituting this into eq.\eqref{eq6E}, we can change the integral variable from $g'$ to $\Delta'$ (as a function of $g'$). 
 
-\[\Omega^{\text{BCS}}(g) - \Omega_n = VN(0)\int_0^{|\Delta|(g)}d|\Delta|'|\Delta|'^2\int_0^{\hbar\omega_D}d\xi\frac{\partial}{\partial |\Delta|'}\left(\frac{1}{\sqrt{\omega^2+|{{\Delta'}}|^2}} \tanh\left(\frac{\beta\hbar\sqrt{\omega^2+|{{\Delta'}}|^2} }{2}\right)\right) \]
-and take $E' = \sqrt{\omega^2+|{{\Delta'}}|^2}$. 
+\[\Omega^{\text{BCS}}(g) - \Omega_n = VN(0)\int_0^{|\Delta|(g)}d|\Delta|'|\Delta|'^2\int_0^{\hbar\omega_D}d\xi\frac{\partial}{\partial |\Delta|'}\left(\frac{1}{\sqrt{\xi^2+|{{\Delta'}}|^2}} \tanh\left(\frac{\beta\sqrt{\xi^2+|{{\Delta'}}|^2} }{2}\right)\right) \]
+and take $E' = \sqrt{\xi^2+|{{\Delta'}}|^2}$.
 
 Taking the partial integral, we have
 
@@ -849,25 +760,24 @@ Taking the partial integral, we have
 Within the temperature range in question ($T\le T_c\ll\frac{\hbar\omega_D}{k_B}$), we can safely replace the upper limit of the $\xi-$ integrals by $+\infty$ due to $\hbar\omega_D/k_BT\gg1$. 
 
 \[\begin{split}
-N_S =&\int d^3{\bf x} g({\bf x},\tau;{\bf x},\tau+)\\
-=& V\int\frac{d^3\bf k}{(2\pi)^3}\frac{1}{\beta\hbar}\sum_{\omega_n}e^{i\omega_n 0+}g({\bf k},i\omega_n)\\
-=& V\int\frac{d^3\bf k}{(2\pi)^3}\frac{1}{\beta\hbar}\sum_{\omega_n}e^{i\omega_n 0+}(-)\frac{\hbar(i\hbar\omega_n+\xi_k)}{(\hbar\omega_n)^2+E_k^2}\\
-=& V\int\frac{d^3\bf k}{(2\pi)^3}\oint\frac{dz}{2\pi i}\frac{e^{z\eta}}{e^{\beta\hbar z}+1}\frac{z+\hbar^{-1}\xi_k}{(z+\hbar^{-1}E_k)(z-\hbar^{-1}E_k)}\\
-=& V\int\frac{d^3\bf k}{(2\pi)^3}\left\{\frac{1}{e^{-\beta E_k}+1}\frac{-\hbar^{-1}E_k+\hbar^{-1}\xi_k}{2\hbar^{-1}E_k}+\frac{1}{e^{\beta E_k}+1}\frac{\hbar^{-1}E_k+\hbar^{-1}\xi_k}{2\hbar^{-1}E_k}\right\}\\
-=& \frac{1}{2}V\int\frac{d^3\bf k}{(2\pi)^3}\left\{\left(\frac{1}{e^{-\beta E_k}+1}+\frac{1}{e^{\beta E_k}+1}\right)-\frac{\xi_k}{E_k}\left(\frac{1}{e^{-\beta E_k}+1}-\frac{1}{e^{\beta E_k}+1}\right)\right\}\\
-=&\frac{V}{2}\int d\xi N(\xi)\left\{1-\frac{\xi}{\sqrt{\xi^2+|\Delta|^2}}\times\left(\frac{1}{e^{-\beta\sqrt{\xi^2+|\Delta|^2}}+1} - \frac{1}{e^{\beta\sqrt{\xi^2+|\Delta|^2}}+1}\right)\right\}
+N_S &=2\int d^3{\bf x}\,g({\bf x},\tau;{\bf x},\tau+)\\
+&=2V\int\frac{d^3{\bf k}}{(2\pi)^3}\frac{1}{\beta\hbar}\sum_{\omega_n}e^{i\omega_n0+}g({\bf k},i\omega_n)\\
+&=2V\int\frac{d^3{\bf k}}{(2\pi)^3}\left[v_k^2+\frac{\xi_k}{E_k}f(E_k)\right]\\
+&=V\int d\xi\,N(\xi)\left[1-\frac{\xi}{\sqrt{\xi^2+|\Delta|^2}}
+\tanh\frac{\beta\sqrt{\xi^2+|\Delta|^2}}{2}\right].
 \end{split}\]
-
+The factor two accounts for spin; $N(\xi)$ is the density of states per spin.
 
 Total number of the particle in the normal phase can be also obtained by setting $|\Delta|$ to be zero. 
 
-\[N_n = \frac{V}{2}\int d\xi N(\xi)\left\{1-\frac{\xi}{|\xi|}\left(\frac{1}{e^{-\beta|\xi|}+1} - \frac{1}{e^{\beta|\xi|}+1}\right)\right\} \]
+\[N_n = V\int d\xi N(\xi)\left\{1-\frac{\xi}{|\xi|}\left(\frac{1}{e^{-\beta|\xi|}+1} - \frac{1}{e^{\beta|\xi|}+1}\right)\right\} \]
 
 The difference between these two is negligible: 
 
 \[\begin{split}
-N_s - N_n &= -\frac{V}{2}\int_{|\xi|\le \hbar\omega_D}d\xi N(\xi)\left\{ \frac{\xi}{\sqrt{\xi^2+|\Delta|^2}}\left(\frac{1}{e^{-\beta\sqrt{\xi^2+|\Delta|^2}}+1} - \frac{1}{e^{\beta\sqrt{\xi^2+|\Delta|^2}}+1}\right) - \frac{\xi}{|\xi|}\left(\frac{1}{e^{-\beta|\xi|}+1} - \frac{1}{e^{\beta|\xi|}+1}\right)\right\}\\
-&\deq-\frac{V}{2}N(0)\int_{|\xi|\le \hbar\omega_D}d\xi\ (\text{an odd function in }\xi)
+N_s - N_n &= -V\int_{|\xi|\le \hbar\omega_D}d\xi\,N(\xi)\left[\frac{\xi}{E}\tanh\frac{\beta E}{2}
+-\frac{\xi}{|\xi|}\tanh\frac{\beta|\xi|}{2}\right]\\
+&\deq-VN(0)\int_{|\xi|\le \hbar\omega_D}d\xi\ (\text{an odd function in }\xi)
 \end{split}\]
 
 Namely, when it comes to the difference between $N_s$ and $N_n$, the particle states near Fermi surface (${|\xi_k|\le \hbar\omega_D}$) become relevant, where we can replace $N(\xi)$ by $N(0)$.
@@ -895,7 +805,7 @@ where
 
 This gives us the critical field as a function of temperature:
 
-\[H_c^2(T) = 4\pi N(0)\Delta^2+8\pi N(0)\Delta^2\ln\frac{\Delta_0}{\Delta} - \frac{8N(0)\pi^2}{3\beta^2}+\frac{32\pi N(0)}{\beta}\int_0^{+\infty}d\xi\ln[1+e^{-\beta E}] \]
+\[H_c^2(T) = 4\pi N(0)\Delta^2+8\pi N(0)\Delta^2\ln\frac{\Delta_0}{\Delta} - \frac{8N(0)\pi^3}{3\beta^2}+\frac{32\pi N(0)}{\beta}\int_0^{+\infty}d\xi\ln[1+e^{-\beta E}] \]
 
 where $\Delta$ depends on the temperature according to the gap equation. 
 
@@ -907,7 +817,7 @@ that the second term and the fourth term are negligibly small (being proportiona
 
 Thus we have
 
-\[H_c^2(T) = 4\pi N(0)\Delta_0^2-\frac{8}{3}N(0)\pi^2 (k_BT)^2  = 4\pi N(0)\Delta_0^2\left[1 - \underset{\frac{2}{3(k_BT_c)^2 e^{-2\gamma}}}{\frac{2\pi^2}{3\Delta_0^2}}(k_BT)^2\right] = H_c^2(T=0)\left[ 1 - \frac{2}{3} e^{2\gamma}\left(\frac{T}{T_c}\right)^2\right]\]
+\[H_c^2(T) = 4\pi N(0)\Delta_0^2-\frac{8}{3}N(0)\pi^3 (k_BT)^2  = 4\pi N(0)\Delta_0^2\left[1 - \underset{\frac{2}{3(k_BT_c)^2 e^{-2\gamma}}}{\frac{2\pi^2}{3\Delta_0^2}}(k_BT)^2\right] = H_c^2(T=0)\left[ 1 - \frac{2}{3} e^{2\gamma}\left(\frac{T}{T_c}\right)^2\right]\]
 
 \[H_c(T) = H_c(T=0)\left[ 1 - \frac{2}{3} e^{2\gamma}\left(\frac{T}{T_c}\right)^2\right]^{1/2} \deq H_c(T=0)\left[ 1 - \frac{1}{3} e^{2\gamma}\left(\frac{T}{T_c}\right)^2\right] \]
 
@@ -924,7 +834,7 @@ For $T-T_c\ll T_c$, we have
 
 From $\Omega_S(T)$ thus obtained, we can also derive the temperature dependence of the specific heat:
 
-\[E_S=-T^2\frac{\partial}{\partial T}\left(\frac{\Omega_S}{T}\right),\quad C_S=\left(\frac{\partial E_S}{\partial T}\right)_V \]
+\[E_S=-T^2\frac{\partial}{\partial T}\left(\frac{F_S}{T}\right),\quad C_S=\left(\frac{\partial E_S}{\partial T}\right)_V \]
 
 Due to the gap in the Bogoliubov excitations, the specific heat at $T\ll T_c$ exhibits the thermal activation form:
 

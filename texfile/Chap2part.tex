@@ -16,7 +16,7 @@ As a preliminary step, we will briefly review three important representations, t
 
 \begin{align}
 \bm{i} \hbar \frac{\partial}{\partial t} | \Psi_S(t)\rangle=\hat{H}| \Psi_S(t)\rangle \nonumber \\
-or\left(| \Psi_S(t)\rangle=e^{-\bm{i}\hat H \frac{t'-t_0}{\hbar}}\right) \nonumber \\
+or\left(| \Psi_S(t)\rangle=e^{-\bm{i}\hat H \frac{t-t_0}{\hbar}}|\Psi_S(t_0)\rangle\right) \nonumber \\
 \bm{i} \hbar \frac{\partial}{\partial t} \hat O_s = 0 \nonumber
 \end{align}
  This picture is called Schrodinger picture.
@@ -61,7 +61,7 @@ or \left( \bm{i} \hbar \frac{\partial}{\partial t}  O_H(t)=[ O_H(t), \hat H] \ri
 so that its time-dependence is determined by the interaction part.
 
 \begin{align}
-\bm{i} \hbar \frac{\partial}{\partial t} |\Psi_I(t)\rangle & =  -\hat H_0 e^{\bm{i}  \frac{\hat H_0t}{\hbar}}|\Psi_S(t)\rangle+e^{\bm{i}  \frac{\hat H_0t}{\hbar}}|\Psi_S(t)\rangle \nonumber \\
+\bm{i} \hbar \frac{\partial}{\partial t} |\Psi_I(t)\rangle & =  -\hat H_0 e^{\bm{i}  \frac{\hat H_0t}{\hbar}}|\Psi_S(t)\rangle+e^{\bm{i}  \frac{\hat H_0t}{\hbar}}\hat H|\Psi_S(t)\rangle \nonumber \\
 & =  e^{\bm{i}  \frac{\hat H_0t}{\hbar}}(-\hat H_0+\hat H_0+\hat H_1)e^{-\bm{i}  \frac{\hat H_0t}{\hbar}} |\Psi_I(t)\rangle \nonumber \\
 & =  \hat H_1(t)|\Psi_I(t)\rangle  \\
 (\hat H_1(t) &  \equiv e^{\bm{i}  \frac{\hat H_0t}{\hbar}}\hat H_1 e^{-\bm{i}  \frac{\hat H_0t}{\hbar}}  ) \nonumber
@@ -97,7 +97,7 @@ the interaction picture is determined only by the non-interacting part.
 which yields
 \begin{align}
 c_{k,I}(t)&\equiv c_k e^{-\bm{i}\epsilon_kt} \nonumber \\
-c_{k,I}^{\dagger}(t)&= c^{\dagger}_k e^{-\bm{i}\epsilon_kt} \nonumber
+c_{k,I}^{\dagger}(t)&= c^{\dagger}_k e^{\bm{i}\epsilon_kt} \nonumber
 \end{align}
 
  Since any operators in Schrodinger picture is expressed in terms of the complete set of $c_k \& c^{\dagger}_k$, the corresponding operator in the interaction picture is obtained with the simple replacement of $c_k \& c^{\dagger}_k$ by $c_{k,I}(t) \& c^{\dagger}_{k,I}(t)$;
@@ -148,14 +148,14 @@ so that
 
  Integrating this from $t_0$ to $t$, we have 
 \begin{align}
-\hat{U}(t,t_0)-\hat{U}(t_0,t_0)=-\bm{i}/\hbar \int_{t_0}^{t} \hat{H_1}(t')\hat{U}(t',t_0) \nonumber
+\hat{U}(t,t_0)-\hat{U}(t_0,t_0)=-\bm{i}/\hbar \int_{t_0}^{t} \hat{H_1}(t')\hat{U}(t',t_0)\,dt' \nonumber
 \end{align}
 
  where we can replace this by $\hat{\bm{1}}$
 
  This leads to an integral equation!
 \begin{equation}
-\hat{U}(t,t_0)=\hat{\bm{1}}-\bm{i}/\hbar \int_{t_0}^{t} \hat{H_1}(t')\hat{U}(t',t_0) \nonumber
+\hat{U}(t,t_0)=\hat{\bm{1}}-\bm{i}/\hbar \int_{t_0}^{t} \hat{H_1}(t')\hat{U}(t',t_0)\,dt' \nonumber
 \end{equation}
 
  By substituting the left-hand side into the integrand in the right hand side, one obtains an iterative solution for this.
@@ -181,7 +181,7 @@ where I reverse the order of the integration in the last term.
 \end{align}
 where $\theta(t)$ is the step function.
 \begin{eqnarray}
-\theta(x)\equiv
+\theta(t)\equiv
 \begin{cases}
 1, &t>0 \cr 0, &t<0\end{cases} \nonumber
 \end{eqnarray}
@@ -203,21 +203,21 @@ where $\theta(t)$ is the step function.
 
 \begin{align}\label{2-1-7}
 &\int_{t_0}^{t}\bm{d}t_1\int_{t_0}^{t_1}\bm{d}t_2......\int_{t_0}^{t_{n-1}}\bm{d}t_n \hat{H_1}(t_1)\hat{H_1}(t_2)......\hat{H_1}(t_n)\nonumber \\
-&= \frac{1}{n!}\int_{t_0}^{t}\bm{d}t_1\int_{t_0}^{t_1}\bm{d}t_2......\int_{t_0}^{t_{n-1}}\bm{d}t_n\bm{T}[\hat{H_1}(t_1)\hat{H_1}(t_2)......\hat{H_1}(t_n)]
+&= \frac{1}{n!}\int_{t_0}^{t}\bm{d}t_1\int_{t_0}^{t}\bm{d}t_2......\int_{t_0}^{t}\bm{d}t_n\bm{T}[\hat{H_1}(t_1)\hat{H_1}(t_2)......\hat{H_1}(t_n)]
 \end{align}
 where
 \begin{align}
 &\bm{T}[\hat{A}(t_1)\hat{B}(t_2)\hat{C}(t_3)] \nonumber \\
 &=\theta(t_1-t_2)\theta(t_2-t_3)\hat{A}(t_1)\hat{B}(t_2)\hat{C}(t_3) \nonumber \\
-&=\theta(t_1-t_3)\theta(t_3-t_2)\hat{A}(t_1)\hat{B}(t_3)\hat{C}(t_2) \nonumber \\
-&=\theta(t_2-t_1)\theta(t_1-t_3)\hat{A}(t_2)\hat{B}(t_1)\hat{C}(t_3) \nonumber \\
+&+\theta(t_1-t_3)\theta(t_3-t_2)\hat{A}(t_1)\hat{C}(t_3)\hat{B}(t_2) \nonumber \\
+&+\theta(t_2-t_1)\theta(t_1-t_3)\hat{B}(t_2)\hat{A}(t_1)\hat{C}(t_3) \nonumber \\
 &+ ... \nonumber
 \end{align}
 
  Thus, this unitary operator becomes
 \begin{align}
-\hat{U}(t,t_0)&\equiv\sum_{n=0}^{\infty}(-\bm{i}/\hbar)^n\frac{1}{n!}\int_{t_0}^{t}\bm{d}t_1\int_{t_0}^{t_1}\bm{d}t_2......\int_{t_0}^{t_{n-1}}\bm{d}t_n\bm{T}[\hat{H_1}(t_1)\hat{H_1}(t_2)......\hat{H_1}(t_n)] \nonumber \\
-&=\bm{T} \{exp[(-\bm{i}/\hbar)\int_{t_0}^{t}\bm{d}t'\hat{H_1}(t')]\}
+\hat{U}(t,t_0)&\equiv\sum_{n=0}^{\infty}(-\bm{i}/\hbar)^n\frac{1}{n!}\int_{t_0}^{t}\bm{d}t_1\int_{t_0}^{t}\bm{d}t_2......\int_{t_0}^{t}\bm{d}t_n\bm{T}[\hat{H_1}(t_1)\hat{H_1}(t_2)......\hat{H_1}(t_n)] \nonumber \\
+&=\bm{T} \{\exp[(-\bm{i}/\hbar)\int_{t_0}^{t}\bm{d}t'\hat{H_1}(t')]\}
 \end{align}
 
  	Comparing eq.(2.1.5)\&(2.1.2), (2.1.3)\&(2.1.1), we can relate the Heisenberg picture \& the interaction picture.
@@ -661,8 +661,8 @@ a^{\dagger}_{H,k,\alpha}(t)=e^{\mathrm{i}\omega_{k}t}a^{\dagger}_{k,\alpha} \non
 \end{equation}
 or equivalently, we have 
 \begin{align}\label{2.3.5}
-\hat{\psi_{H,\alpha}^{\dagger}}(x',t')=\frac{1}{\sqrt{V}}\sum_{k}e^{-\mathrm{i}kx'+\mathrm{i}\omega_kt'}a^{\dagger}_{k,\alpha}(t) \nonumber \\
-\hat{\psi_{H,\alpha}}(x,t)=\frac{1}{\sqrt{V}}\sum_{k}e^{\mathrm{i}kx-\mathrm{i}\omega_kt}a_{k,\alpha}(t)
+\hat{\psi_{H,\alpha}^{\dagger}}(x',t')=\frac{1}{\sqrt{V}}\sum_{k}e^{-\mathrm{i}kx'+\mathrm{i}\omega_kt'}a^{\dagger}_{k,\alpha} \nonumber \\
+\hat{\psi_{H,\alpha}}(x,t)=\frac{1}{\sqrt{V}}\sum_{k}e^{\mathrm{i}kx-\mathrm{i}\omega_kt}a_{k,\alpha}
 \end{align}
 Using these two; we can calculate the non-interacting fermion green's function as
 \begin{align}
@@ -682,7 +682,7 @@ a^{\dagger}_{k,\alpha} |\Phi_0\rangle=0 \nonumber
 \end{equation}
 if $|k|<k_F$.
 
-Similarly, annihilating fermion outside the Fermi sea also makes $|\Phi_0\rangle=0$ to be a null state.
+Similarly, annihilating fermion outside the Fermi sea also makes $a_{k,\alpha}|\Phi_0\rangle=0$.
 
 Thus.
 \begin{align}
